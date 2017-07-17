@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "site launched"
+title: "hadithmv site launched"
 date: 2017-07-17
 ---
 
