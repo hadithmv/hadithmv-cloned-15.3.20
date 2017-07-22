@@ -160,7 +160,7 @@ input, textarea {
 }
 .copyright {
     font-size: 8pt;
-    text-align: right;
+    text-align: center;
     padding-bottom: 10px;
     color: grey;
 }
