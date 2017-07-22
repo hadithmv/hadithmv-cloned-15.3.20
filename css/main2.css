@@ -3,7 +3,7 @@ html {
     padding: 0;
 }
 body {
-    font-family: 'Handlee', cursive;
+    font-family: 'sans-serif';
     font-size: 13pt;
     background-color: #efefef;
     padding: 10px;
@@ -29,6 +29,7 @@ p {
     border-radius: 50%;
 }
 .section {
+    text-align: center;
     background-color: #fff;
     padding: 15px;
     margin-bottom: 10px;
@@ -54,7 +55,7 @@ p {
 }
 .quote {
     font-size: 12pt;
-    text-align: right;
+    
     margin-top: 10px;
 }
 table {
