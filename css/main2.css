@@ -35,7 +35,7 @@ p {
     border-radius: 10px;
 }
 #header {
-    background-image: url("https://www.sololearn.com/Uploads/header.jpg");
+    background-image: url("/img/friday-mosque-wall.jpg");
     background-size: cover;
 }
 #header img {
