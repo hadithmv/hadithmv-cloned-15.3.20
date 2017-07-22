@@ -4,36 +4,36 @@ html {
 }
 body {
     font-family: 'sans-serif';
-    font-size: 10pt;
+    font-size: 8pt;
     background-color: #efefef;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
 }
 h1 {
-    font-size: 12pt;
+    font-size: 10pt;
     color: #3289AA;
     text-align: center;
-    padding: 18px 0 18px 0;
+    padding: 10px 0 10px 0;
     margin: 0 0 10px 0;
 }
 h1 span {
     border: 4px dashed #3289AA;
-    padding: 10px;
+    padding: 5px;
 }
 p {
     padding: 0;
     margin: 0;
 }
 .img-circle {
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width: 100&;
     border: 4px solid white;
     border-radius: 30%;
 }
 .section {
     text-align: justify;
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
@@ -75,11 +75,11 @@ table, th, td {
     color: white;
 }
 li {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 progress {
-    width: 40%;
+    width: 100%;
     height: 20px;
     color: #3fb6b2;
     background: #efefef;
