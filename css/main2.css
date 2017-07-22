@@ -25,7 +25,14 @@ p {
     margin: 0;
 }
 .img-circle {
-    height: 10px
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radiusght: 10px
     weight: 10px
     border: 3px solid white;
     border-radius: 50%;
