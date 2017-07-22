@@ -17,7 +17,7 @@ h1 {
     margin: 0 0 10px 0;
 }
 h1 span {
-    border: 4px dashed #20bcd5;
+    border: 4px dashed #3289AA;
     padding: 10px;
 }
 p {
@@ -25,7 +25,7 @@ p {
     margin: 0;
 }
 .img-circle {
-    border: 3px solid white;
+    border: 5px solid white;
     border-radius: 50%;
 }
 .section {
@@ -36,7 +36,7 @@ p {
     border-radius: 10px;
 }
 #header {
-    background-image: url("img/royal-island-maldives1.jpg");
+    background-image: url("/img/royal-island-maldives1.jpg");
     background-size: cover;
 }
 #header img {
