@@ -11,7 +11,7 @@ body {
 }
 h1 {
     font-size: 15pt;
-    color: #20bcd5;
+    color: #3289AA;
     text-align: center;
     padding: 18px 0 18px 0;
     margin: 0 0 10px 0;
@@ -29,7 +29,7 @@ p {
     border-radius: 50%;
 }
 .section {
-    text-align: center;
+    text-align: justify;
     background-color: #fff;
     padding: 15px;
     margin-bottom: 10px;
