@@ -63,17 +63,7 @@ p {
 table {
     width: 100%;
 }
-table, th, td {
-    border: 2px solid #cecece;
-    border-collapse: collapse;
-    text-align: center;
-    table-layout: fixed;
-}
-.selected {
-    background-color: #f36f48;
-    font-weight: bold;
-    color: white;
-}
+
 li {
     margin-bottom: 10px;
     font-weight: bold;
@@ -147,8 +137,6 @@ input, textarea {
     height: 50px;
     width: 50px;
     margin: auto;
-    margin-left: 7px;
-    margin-right: 7px;
 }
 #contacts a {
     text-decoration: none;
