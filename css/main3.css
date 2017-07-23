@@ -106,7 +106,7 @@ progress::-moz-progress-bar {
 iframe, audio {
     display: block;
     margin: 0 auto;
-    border: 3px solid #3fb6b2;
+    border: 3px solid #3289AA;
 }
 hr {
     border: 0;
@@ -168,9 +168,9 @@ input, textarea {
     text-align: center;
 }
 .copyright {
-    font-size: 8pt;
+    font-size: 10pt;
     text-align: center;
-    padding-bottom: 10px;
+    padding: 8px;
     color: grey;
 }
 
@@ -214,9 +214,9 @@ input, textarea {
  border: 5px solid;
  border-color: #3289AA transparent;
  border-radius: 50%;
- -webkit-box-shadow: 0px 0px 40px #3289AA;
- -moz-box-shadow: 0px 0px 40px #3289AA;
- box-shadow: 0px 0px 40px #3289AA;
+ -webkit-box-shadow: 0px 0px 16px #3289AA;
+ -moz-box-shadow: 0px 0px 16px #3289AA;
+ box-shadow: 0px 0px 16px #3289AA;
  height: 80%;
  left: 10%;
  position: absolute;
