@@ -182,10 +182,15 @@ input, textarea {
  position: relative;
  width: 160px;
 }
-.spinimg {
-    content:url(/img/1500694584167.png)
-        display: block;
-    margin: auto;
+.percent {
+ color: #fff;
+ display: block;
+ font-size: 36px;
+ margin: -22px 0px;
+ position: absolute;
+ text-align: center;
+ top: 50%;
+ width: 100%;
 }
 .circle1 {
  background-color: #fff;
