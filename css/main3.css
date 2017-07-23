@@ -185,6 +185,8 @@ input, textarea {
 }
 
 .percent:after {
+    background-image: url("/img/1500694584167.png.");
+    background-size: oontain;
  content: "Hadithmv";
  color: #3289AA;
  display: block;
