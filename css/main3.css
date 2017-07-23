@@ -185,17 +185,15 @@ input, textarea {
 }
 
 .percent:after {
-    background-image: url("/img/1500694584167.png.");
-    background-size: oontain;
- content: "Hadithmv";
- color: #3289AA;
- display: block;
- font-size: 36px;
- margin: -22px 0px;
+ content: url("https://hadithmv.github.io/img/1500713626876.png");
+ transform: scale(.1);
+ display: block ;
+ margin: -95px 0px;
  position: absolute;
  text-align: center;
  top: 50%;
- width: 110%;
+ width: 42.75%;
+ height: 100px;
     }
 .circle1 {
  background-color: #efefef;
