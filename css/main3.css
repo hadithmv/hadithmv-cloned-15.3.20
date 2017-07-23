@@ -184,17 +184,19 @@ input, textarea {
  width: 160px;
 }
 
-
 .percent:after {
- content: "Hadithmv";
+ content: "Hadith
+     mv";
  color: #3289AA;
  display: block;
- font-size: 27px;
- margin: -18px 0px
+ font-size: 36px;
+ margin: -22px 0px;
  position: absolute;
  text-align: center;
  top: 50%;
- width: 100%;
+ width: 110%;
+}
+
     }
 .circle1 {
  background-color: #efefef;
