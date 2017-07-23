@@ -174,24 +174,7 @@ input, textarea {
     color: grey;
 }
 
-/*     loading animation      */
-
-* {
- -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-}
-body {
- background-color: #555;
- font-style: sans-serif;
- font-size: 16px;
- margin: 0px;
- overflow: hidden;
-}
-body,
-html {
- height: 100%;
-}
+/*========{SpinnerSpinnerSpinnerSpinner animation*/
 .outer {
  display: table;
  height: 100%;
