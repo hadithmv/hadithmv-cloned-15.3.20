@@ -186,7 +186,7 @@ input, textarea {
 
 
 .percent:after {
- content: "Hadithmv";
+ content: "Hadith<br>mv";
  color: #3289AA;
  display: block;
  font-size: 36px;
