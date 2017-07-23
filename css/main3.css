@@ -176,15 +176,18 @@ input, textarea {
 
 /*========{SpinnerSpinnerSpinnerSpinner animation*/
 
+
 .loading-circle {
  height: 160px;
  margin: 0px auto;
  position: relative;
  width: 160px;
 }
+
+
 .percent:after {
- content: "Hadithmv";
- color: #3289AA;
+ content: "test";
+ color: #fff;
  display: block;
  font-size: 36px;
  margin: -22px 0px;
@@ -193,13 +196,14 @@ input, textarea {
  top: 50%;
  width: 100%;
 }
- background-color: #fff;
+.circle1 {
+ background-color: #333;
  border: 5px solid;
- border-color: #3289AA transparent;
+ border-color: #fff transparent;
  border-radius: 50%;
- -webkit-box-shadow: 0px 0px 16px #3289AA;
- -moz-box-shadow: 0px 0px 16px #3289AA;
- box-shadow: 0px 0px 16px #3289AA;
+ -webkit-box-shadow: 0px 0px 16px #000;
+ -moz-box-shadow: 0px 0px 16px #000;
+ box-shadow: 0px 0px 16px #000;
  height: 100%;
  left: 0px;
  position: absolute;
@@ -207,19 +211,20 @@ input, textarea {
  width: 100%;
 }
 .circle2 {
- background-color: #fff;
+ background-color: #333;
  border: 5px solid;
- border-color: #3289AA transparent;
+ border-color: #fff transparent;
  border-radius: 50%;
- -webkit-box-shadow: 0px 0px 16px #3289AA;
- -moz-box-shadow: 0px 0px 16px #3289AA;
- box-shadow: 0px 0px 16px #3289AA;
+ -webkit-box-shadow: 0px 0px 16px #000;
+ -moz-box-shadow: 0px 0px 16px #000;
+ box-shadow: 0px 0px 16px #000;
  height: 80%;
  left: 10%;
  position: absolute;
  top: 10%;
  width: 80%;
 }
+
 .rotate-right {
  -webkit-animation: rotate 2s linear 0s infinite reverse;
  -moz-animation: rotate 2s linear 0s infinite reverse;
@@ -255,3 +260,4 @@ input, textarea {
   transform: rotate(360deg);
  }
 }
+ 
