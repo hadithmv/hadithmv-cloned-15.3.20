@@ -5,8 +5,8 @@ html {
 body {
     font-family: 'Calibri';
     font-size: 12pt;
-    background-color: #efefef;
-    padding: 5px;
+    background-color: #3289AA;
+    padding: 7px;
     margin: 0;
 }
 h1 {
@@ -17,8 +17,8 @@ h1 {
     margin: 0 0 10px 0;
 }
 h1 span {
-    border: 3px solid #3289AA;
-    padding: 5px;
+    border: 2px solid #3289AA;
+    padding: 7px;
 }
 p {
     padding: 0;
@@ -32,9 +32,9 @@ p {
 }
 .section {
     background-color: #fff;
-    padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    padding: 7px;
+    margin-bottom: 7px;
+    border-radius: 7px;
 }
 #header {
     background-image: url("/img/friday-mosque-wall.jpg");
@@ -49,30 +49,17 @@ p {
 #header p {
     font-size: 20pt;
     color: #3b464c;
-    padding-top: 2px;
+    padding-top: 3px;
     margin: 0;
     font-weight: bold;
     text-align: center;
 }
 .quote {
     font-style: italic;
-    font-size: 9pt;
+    font-size: 10pt;
     text-align: right;
     margin-top: 10px;
-}
-table {
-    width: 100%;
-}
-table, th, td {
-    border: 2px solid #cecece;
-    border-collapse: collapse;
-    text-align: center;
-    table-layout: fixed;
-}
-.selected {
-    background-color: #f36f48;
-    font-weight: bold;
-    color: white;
+
 }
 li {
     margin-bottom: 5px;
@@ -97,12 +84,12 @@ progress::-moz-progress-bar {
 iframe, audio {
     display: block;
     margin: 0 auto;
-    padding: 1px;
+    padding: 0px;
     border: 3px solid #3289AA;
 }
 hr {
     border: 0;
-    height: 1px;
+    height: 2px;
     background: #f36f48;
 }
 form {
@@ -160,7 +147,7 @@ input, textarea {
     text-align: center;
 }
 .copyright {
-    font-size: 8pt;
+    font-size: 10pt;
     text-align: center;
     padding: 5px;
     color: grey;
@@ -206,9 +193,9 @@ input, textarea {
  border: 5px solid;
  border-color: #3289AA transparent;
  border-radius: 50%;
- -webkit-box-shadow: 0px 0px 20px #3289AA;
- -moz-box-shadow: 0px 0px 20px #3289AA;
- box-shadow: 0px 0px 20px #3289AA;
+ -webkit-box-shadow: 0px 0px 16px #3289AA;
+ -moz-box-shadow: 0px 0px 16px #3289AA;
+ box-shadow: 0px 0px 16px #3289AA;
  height: 80%;
  left: 10%;
  position: absolute;
