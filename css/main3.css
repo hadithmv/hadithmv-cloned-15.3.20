@@ -184,7 +184,7 @@ input, textarea {
 }
 .percent:after {
     content: "test";
-   content:url (/img/1500694584167.png); 
+   content:url ("/img/1500694584167.png"); 
  display: block;
  margin: -22px 0px;
  position: absolute;
