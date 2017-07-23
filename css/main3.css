@@ -189,10 +189,10 @@ input, textarea {
  content: "ޙަދީޘް";
  color: #3289AA;
  display: block;
- font-size: 24px;
+ font-size: 34px;
  position: absolute;
  text-align: center;
- top: 50%;
+ top: 100%;
  width: 100%;
 }
 .circle1 {
