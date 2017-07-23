@@ -169,8 +169,8 @@ input, textarea {
 }
 .copyright {
     font-size: 10pt;
-    text-align: left;
-    padding: 5px;
+    text-align: right;
+    padding: 3px;
     color: grey;
 }
 
