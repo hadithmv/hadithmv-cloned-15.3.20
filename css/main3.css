@@ -4,7 +4,7 @@ html {
 }
 body {
     font-family: 'Calibri';
-    font-size: 13pt;
+    font-size: 12pt;
     background-color: #efefef;
     padding: 5px;
     margin: 0;
@@ -18,7 +18,7 @@ h1 {
 }
 h1 span {
     border: 3px solid #3289AA;
-    padding: 10px;
+    padding: 5px;
 }
 p {
     padding: 0;
@@ -32,9 +32,9 @@ p {
 }
 .section {
     background-color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 #header {
     background-image: url("/img/friday-mosque-wall.jpg");
@@ -47,9 +47,9 @@ p {
     margin: auto;
 }
 #header p {
-    font-size: 25pt;
+    font-size: 20pt;
     color: #3b464c;
-    padding-top: 3px;
+    padding-top: 2px;
     margin: 0;
     font-weight: bold;
     text-align: center;
@@ -75,12 +75,12 @@ table, th, td {
     color: white;
 }
 li {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 progress {
-    width: 70%;
-    height: 20px;
+    width: 80%;
+    height: 10px;
     color: #3289AA;
     background: #efefef;
 }
@@ -97,7 +97,8 @@ progress::-moz-progress-bar {
 iframe, audio {
     display: block;
     margin: 0 auto;
-    border: 3px solid #3fb6b2;
+    padding: 1px;
+    border: 3px solid #3289AA;
 }
 hr {
     border: 0;
@@ -110,7 +111,7 @@ form {
 }
 .submit {
     background-color: #3fb6b2;
-    padding: 10px 45px;
+    padding: 5px 25px;
     border-radius: 5px;
     cursor: pointer;
     color: #ffffff;
