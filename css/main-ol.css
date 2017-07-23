@@ -170,6 +170,7 @@ input, textarea {
 .copyright {
     font-size: 10pt;
     text-align: center;
+    margin-top: 2px
     padding: 5px;
     color: grey;
 }
