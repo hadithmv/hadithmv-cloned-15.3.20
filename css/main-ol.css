@@ -178,7 +178,7 @@ input, textarea {
  width: 160px;
 }
 
-.logo:after {
+.bottom-logo:after {
  content: url("/img/1500713626876.png");
  transform: scale(.1);
  display: block ;
@@ -260,7 +260,7 @@ input, textarea {
   height: 80px;
 
   position: relative;
-  margin: -82px auto;
+  margin: -81px auto;
 }
 
 .double-bounce1, .double-bounce2 {
