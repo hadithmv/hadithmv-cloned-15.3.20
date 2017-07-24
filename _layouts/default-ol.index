@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Hadithmv - Open Hadith Resource for Maldives</title>
-        <meta charset="UTF-8">
+       
         <meta name="description" content="Open and crowdsourced Islamic translations in dhivehi">
         <meta name="keywords" content="hadith,hadeeth,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
         <meta name="author" content="Hadithmv">    
@@ -25,7 +25,10 @@
         </div>
         <!-- About Me section end -->
         
-        
+        <div class="throbber">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
         
         <!-- Sheet section start -->
         <div class="section">
