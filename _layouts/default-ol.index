@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hadithmv - Open Islamic Translations for Maldives</title>
+        <title>Hadithmv - Open Hadith Resource for Maldives</title>
+        
+HTML <meta> Tag
+❮Reference ❯
+Example
+Describe metadata within an HTML document:
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Open and crowdsourced Islamic translations in dhivehi">
+  <meta name="keywords" content="hadith,hadeeth,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
+  <meta name="author" content="Hadithmv">
         <link rel="icon" hre<link rel="icon" href="img/1500713626876.png">
             <link rel="stylesheet" type="text/css" href="css/main-ol.css">
     </head>
