@@ -39,7 +39,7 @@ p {
 }
 #header {
     margin-top: 60px;
-    padding: 20px
+    padding: 10px
     
 }
 #header img {
@@ -216,7 +216,7 @@ input, textarea {
  position: absolute;
  top: 10%;
  width: 80%
- padding: 10px;
+ 
 }
 
 .rotate-right {
