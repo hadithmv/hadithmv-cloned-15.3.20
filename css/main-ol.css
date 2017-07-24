@@ -261,7 +261,7 @@ input, textarea {
   height: 80px;
 
   position: relative;
-  margin: -20px auto;
+  top-margin: -50px;
 }
 
 .double-bounce1, .double-bounce2 {
