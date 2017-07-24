@@ -13,12 +13,13 @@
     <body>
         <!-- header start -->
         
+        <div id="header">
+        
         <div class="throbber">
   <div class="double-bounce1"></div>
   <div class="double-bounce2"></div>
 </div>
         
-        <div id="header">
             <img alt="" class="img-circle" src="img/1500713626876.png">
         </div>
         <!-- header end -->
