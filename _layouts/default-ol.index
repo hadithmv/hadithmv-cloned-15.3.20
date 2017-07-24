@@ -20,7 +20,7 @@
   <div class="double-bounce2"></div>
 </div>
         
-            <img alt="" class="img-circle" src="img/1500713626876.png">
+            <img alt="" class="top-image" src="img/1500713626876.png">
         </div>
         <!-- header end -->
         <!-- About Me section start -->
@@ -75,7 +75,7 @@
     <div class="loading-circle">
      <div class="circle1 rotate-right"></div>
      <div class="circle2 rotate-left"></div>
-     <div class="percent" id="percent"></div>
+     <div class="bottom-icon" id="bottom-icon"></div>
         </div>
         <!-- Spinner section end -->
     
@@ -83,7 +83,7 @@
 
         <!-- Contacts section end -->
         
-        <div class="copyright">
+        <div class="footer">
             2017 Hadithmv
         </div>
         
