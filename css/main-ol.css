@@ -46,7 +46,8 @@ p {
     border-radius: 10px;
 }
 #header {
-    margin-top: 50px;
+    margin-top: 80px;
+    padding: 10px
     
 }
 #header img {
