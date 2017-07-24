@@ -1,2 +1,4 @@
 name: hadithmv
 markdown: kramdown
+gems:
+  - jekyll-sitemap
