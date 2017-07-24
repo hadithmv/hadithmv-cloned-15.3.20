@@ -260,7 +260,7 @@ input, textarea {
   width: 80px;
   height: 80px;
 
-  position: relative;
+  position: absolute;
   margin: -30px auto;
 }
 
