@@ -20,7 +20,7 @@
   <div class="double-bounce2"></div>
 </div>
         
-            <img alt="" class="top-image" src="img/1500713626876.png">
+            <img alt="" class="top-logo" src="img/1500713626876.png">
         </div>
         <!-- header end -->
         <!-- About Me section start -->
@@ -75,7 +75,7 @@
     <div class="loading-circle">
      <div class="circle1 rotate-right"></div>
      <div class="circle2 rotate-left"></div>
-     <div class="bottom-icon" id="bottom-icon"></div>
+     <div class="bottom-logo" id="bottom-logo"></div>
         </div>
         <!-- Spinner section end -->
     
