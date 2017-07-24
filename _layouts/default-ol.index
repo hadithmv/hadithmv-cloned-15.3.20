@@ -12,7 +12,13 @@
     </head>
     <body>
         <!-- header start -->
-        <div id="header" class="section">
+        
+        <div class="throbber">
+  <div class="double-bounce1"></div>
+  <div class="double-bounce2"></div>
+</div>
+        
+        <div id="header">
             <img alt="" class="img-circle" src="img/1500713626876.png">
         </div>
         <!-- header end -->
@@ -23,12 +29,7 @@
             </p>
             <p class="quote">"Indeed, it is We who bring the dead to life and record what they have put forth and what they left behind" -Yaseen 12</p>
         </div>
-        <!-- About Me section end -->
-        
-        <div class="throbber">
-  <div class="double-bounce1"></div>
-  <div class="double-bounce2"></div>
-</div>
+        <!-- About Me section end -->        
         
         <!-- Sheet section start -->
         <div class="section">
