@@ -38,7 +38,7 @@ p {
     border-radius: 10px;
 }
 #header {
-    margin-top: 60px;
+    margin-top: 63px;
     padding: 15px
     
 }
@@ -186,7 +186,7 @@ input, textarea {
  position: absolute;
  text-align: center;
  top: 50%;
- width: 44%;
+ width: 43.5%;
  height: 100px;
     }
 .circle1 {
@@ -261,7 +261,7 @@ input, textarea {
   height: 80px;
 
   position: relative;
-  margin: -80px auto;
+  margin: -78px auto;
 }
 
 .double-bounce1, .double-bounce2 {
