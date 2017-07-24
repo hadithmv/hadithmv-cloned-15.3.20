@@ -38,7 +38,7 @@ p {
     border-radius: 10px;
 }
 #header {
-    margin-top: 2px;
+    margin-top: px;
     padding: 20px
     
 }
@@ -261,7 +261,7 @@ input, textarea {
   height: 80px;
 
   position: relative;
-  margin: -40px auto;
+  margin: -30px auto;
 }
 
 .double-bounce1, .double-bounce2 {
