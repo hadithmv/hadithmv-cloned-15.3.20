@@ -204,7 +204,7 @@ input, textarea {
  width: 100%;
 }
 .circle2 {
- background-color: #eee;
+ background-color: #fff;
  border: 5px solid;
  border-color: #3289AA transparent;
  border-radius: 50%;
@@ -261,7 +261,7 @@ input, textarea {
   height: 80px;
 
   position: relative;
-  margin: -81px auto;
+  margin: -80.5px auto;
 }
 
 .double-bounce1, .double-bounce2 {
