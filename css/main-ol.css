@@ -38,8 +38,8 @@ p {
     border-radius: 10px;
 }
 #header {
-    margin-top: 80px;
-    padding: 10px
+    margin-top: 75px;
+    padding: 12px
     
 }
 #header img {
@@ -186,13 +186,13 @@ input, textarea {
  position: absolute;
  text-align: center;
  top: 50%;
- width: 43%;
+ width: 44%;
  height: 100px;
     }
 .circle1 {
  background-color: #efefef;
  border: 5px solid;
- border-color: #efefef transparent;
+ border-color: #3289AA transparent;
  border-radius: 50%;
  -webkit-box-shadow: 0px 0px 16px #3289AA;
  -moz-box-shadow: 0px 0px 16px #3289AA;
@@ -204,9 +204,9 @@ input, textarea {
  width: 100%;
 }
 .circle2 {
- background-color: #fff;
+ background-color: #efefef;
  border: 5px solid;
- border-color: #fff transparent;
+ border-color: #3289AA transparent;
  border-radius: 50%;
  -webkit-box-shadow: 0px 0px 16px #3289AA;
  -moz-box-shadow: 0px 0px 16px #3289AA;
