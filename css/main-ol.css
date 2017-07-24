@@ -273,9 +273,9 @@ input, textarea {
 .double-bounce1, .double-bounce2 {
   width: 100%;
   height: 100%;
-  border-radius: 80%;
+  border-radius: 100%;
   background-color: #3289AA;
-  opacity: 0.6;
+  opacity: 0.3;
   position: absolute;
   top: 0;
   left: 0;
