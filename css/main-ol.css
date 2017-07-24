@@ -46,8 +46,7 @@ p {
     border-radius: 10px;
 }
 #header {
-    background-image: url("/img/friday-mosque-wall.jpg");
-    background-size: cover;
+    margin-bottom:100px;
 }
 #header img {
     display: block;
