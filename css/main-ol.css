@@ -262,7 +262,9 @@ input, textarea {
 
   position: relative;
   margin: -82.5px auto;
-}
+    animation: fadein 4s;}
+
+  @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
 
 .double-bounce1, .double-bounce2 {
   width: 100%;
