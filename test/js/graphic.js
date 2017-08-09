@@ -47,7 +47,7 @@ $(document).ready(function() {
     );
       
       // Add footer to table
- $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
+ $("#mySelection").append('<tfoot><tr><th>Find</th><th>Find</th><th>Find</th><th>Find</th><th>Find</th></tr></tfoot>');
 
     // Setup - add a text input to each footer cell
     $('#mySelection tfoot th').each( function () {
