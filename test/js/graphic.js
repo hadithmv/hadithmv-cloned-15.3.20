@@ -45,22 +45,42 @@ $(document).ready(function() {
     $('#graphic').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
+      
+      / Add footer to table
+ $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
+
+    // Setup - add a text input to each footer cell
+    $('#mySelection tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
 
     //initialize the DataTable object and put settings in
     $("#mySelection").DataTable({
       "autoWidth": false,
       "data": data,
       "columns": columns,
-      "order": [
-        [0, "asc"]
-      ], //order on second column
+      "order": [[0, "asc"]], //order on column
       "pagingType": "simple",
-      "lengthMenu": [ 1, 2, 3, 5, 10 ]
-//uncomment these options to simplify your table
+      "lengthMenu": [ 1, 2, 3, 5, 10 ]
+      //uncomment these options to simplify your table
         //"paging": false,
         //"searching": false,
         //"info": false
    });
+      // Apply the footer search
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+                      }
+        } );
+            } );
+      
   }
 });
 //end of writeTable
