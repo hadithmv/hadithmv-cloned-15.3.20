@@ -62,8 +62,32 @@ $(document).ready(function() {
       "columns": columns,
       "order": [[0, "asc"]], //order on column
       "pagingType": "simple",
-      "lengthMenu": [ 1, 2, 3, 5, 10 ]
-      //uncomment these options to simplify your table
+      "lengthMenu": [ 1, 2, 3, 5, 10 ],
+      "buttons": [
+            {
+                extend: 'copy',
+                exportOptions: {
+                    columns: [':visible' ],
+                    rows: [':visible']
+                }
+            },
+            {
+                extend: 'excel',
+                exportOptions: {
+                    columns: [':visible' ],
+                    rows: [':visible']                
+                }
+            },
+            {
+                extend: 'print',
+                exportOptions: {
+                    columns: [':visible' ],
+                    rows: [':visible']
+                }
+            },
+            'colvis'
+            ],
+       //uncomment these options to simplify your table
         //"paging": false,
         //"searching": false,
         //"info": false
