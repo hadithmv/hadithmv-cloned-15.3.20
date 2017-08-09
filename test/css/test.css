@@ -5,3 +5,6 @@ tfoot input {
 tfoot {
     display: table-header-group;
 }
+table.dataTable tbody td {
+  vertical-align: top;
+}
