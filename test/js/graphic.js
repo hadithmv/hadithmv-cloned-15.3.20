@@ -46,7 +46,7 @@ $(document).ready(function() {
       '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
       
-      / Add footer to table
+      // Add footer to table
  $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
 
     // Setup - add a text input to each footer cell
