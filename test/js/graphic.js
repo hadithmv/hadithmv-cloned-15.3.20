@@ -56,7 +56,7 @@ $(document).ready(function() {
     } );
 
     //initialize the DataTable object and put settings in
-    $("#mySelection").DataTable({
+    table=$("#mySelection").DataTable({
       "autoWidth": false,
       "data": data,
       "columns": columns,
