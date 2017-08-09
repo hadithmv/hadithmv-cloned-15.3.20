@@ -92,6 +92,11 @@ $(document).ready(function() {
         //"searching": false,
         //"info": false
    });
+      
+      //Apply Buttons
+      table.buttons().container()
+        .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
+      
       // Apply the footer search
     table.columns().every( function () {
         var that = this;
