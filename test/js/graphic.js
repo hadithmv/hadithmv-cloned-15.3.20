@@ -47,12 +47,12 @@ $(document).ready(function() {
     );
       
       // Add footer to table
- $("#mySelection").append('<tfoot><tr><th>No.</th>Ref.<th>Arabic</th>English<th>Dhivehi</th><th></th><th></th></tr></tfoot>');
+ $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
 
     // Setup - add a text input to each footer cell
     $('#mySelection tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Find by'+title+'" />' );
+        $(this).html( '<input type="text" placeholder="Find by '+title+'" />' );
     } );
 
     //initialize the DataTable object and put settings in
