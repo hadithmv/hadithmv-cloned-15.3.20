@@ -11,8 +11,10 @@ table.dataTable tbody td {
 
 .dataTable tbody td.col_3 {
     text-align: right;
+    direction: rtl;
     }
 
 .dataTable tbody td.col_5 {
     text-align: right;
+    direction: rtl;
     }
