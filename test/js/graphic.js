@@ -63,33 +63,25 @@ $(document).ready(function() {
       "order": [[0, "asc"]], //order on column
       "pagingType": "simple",
       "lengthMenu": [ 1, 2, 3, 5, 10 ],
-      "language": {
-       "search": "Search hadithmv.github.io:"
-                   },
+      "columnDefs": [ { className: "col_3", "targets": [2] }, 
+                      { className: "col_5", "targets": [4] } ],
+                                
+      "language": {"search": "Search hadithmv.github.io:"},
       "buttons": [
-            {
-                extend: 'copy',
-                exportOptions: {
-                    columns: [':visible' ],
-                    rows: [':visible']
-                }
-            },
-            {
-                extend: 'excel',
-                exportOptions: {
-                    columns: [':visible' ],
-                    rows: [':visible']                
-                }
-            },
-            {
-                extend: 'print',
-                exportOptions: {
-                    columns: [':visible' ],
-                    rows: [':visible']
-                }
-            },
-               {extend: 'colvis', text: 'Select',},
-            ],
+                 {extend: 'copy',
+                  exportOptions: {columns: [':visible'],
+                                 rows: [':visible']   } 
+                 },
+                 {extend: 'excel',
+                  exportOptions: {columns: [':visible'],
+                                  rows: [':visible']  }
+                 },
+                 {extend: 'print',
+                  exportOptions: {columns: [':visible'],
+                                  rows: [':visible']  }
+                 },
+                 {extend: 'colvis', text: 'Select'}   ],
+            
        //uncomment these options to simplify your table
         //"paging": false,
         //"searching": false,
