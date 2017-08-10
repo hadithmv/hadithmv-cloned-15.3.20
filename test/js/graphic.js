@@ -1,4 +1,4 @@
-    //Edit 'key' and 'columns' to connect your spreadsheet
+//Edit 'key' and 'columns' to connect your spreadsheet
 
 //enter google sheets key here
 var key =
@@ -35,7 +35,7 @@ $(document).ready(function() {
       simpleSheet: true,
       debug: false
     });
-}
+   }
 
   initializeTabletopObject();
 
@@ -46,8 +46,8 @@ $(document).ready(function() {
       '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
       
-      // Add footer to table
- $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
+     // Add footer to table
+    $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
 
     // Setup - add a text input to each footer cell
     $('#mySelection tfoot th').each( function () {
@@ -60,17 +60,17 @@ $(document).ready(function() {
       "autoWidth": false,
       "data": data,
       "columns": columns,
-      "order": [[0, "asc"]], //order on column
+      "order": [[0, "asc"]], //display order on column
       "pagingType": "simple",
-      "lengthMenu": [ 1, 2, 3, 5, 10 ],
+      "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
       "columnDefs": [ { className: "col_3", "targets": [2] }, 
-                      { className: "col_5", "targets": [4] } ],
+                      { className: "col_5", "targets": [4] } ], //left to right column align for css
                                 
-      "language": {"search": "Search hadithmv.github.io:"},
+      "language": {"search": "Search hadithmv.github.io"},
       "buttons": [
                  {extend: 'copy',
                   exportOptions: {columns: [':visible'],
-                                 rows: [':visible']   } 
+                                 rows: [':visible']   } //copies currently displayed columns and rows
                  },
                  {extend: 'excel',
                   exportOptions: {columns: [':visible'],
@@ -80,7 +80,7 @@ $(document).ready(function() {
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']  }
                  },
-                 {extend: 'colvis', text: 'Select'}   ],
+                 {extend: 'colvis', text: 'Hide'}     ], //column visibility toggle
             
        //uncomment these options to simplify your table
         //"paging": false,
@@ -92,18 +92,18 @@ $(document).ready(function() {
       table.buttons().container()
         .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
       
-      // Apply the footer search
-    table.columns().every( function () {
+      //Apply the footer search
+    table.columns().every(function(){
         var that = this;
  
-        $( 'input', this.footer() ).on( 'keyup change', function () {
-            if ( that.search() !== this.value ) {
+        $('input', this.footer()).on('keyup change',function(){
+            if (that.search() !== this.value){
                 that
-                    .search( this.value )
+                    .search(this.value)
                     .draw();
-                      }
-        } );
-            } );
+                                             }
+                                        });
+                                   });
       
   }
 });
