@@ -85,8 +85,8 @@ $(document).ready(function() {
                     rows: [':visible']
                 }
             },
-            'colvis'
-            ],
+               {extend: 'colvis', text: 'Select',},
+            ],
        //uncomment these options to simplify your table
         //"paging": false,
         //"searching": false,
