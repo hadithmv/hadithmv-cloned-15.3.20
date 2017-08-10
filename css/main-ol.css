@@ -168,7 +168,7 @@ input, textarea {
     margin-top: 30px;
 }
 
-/*========{SpinnerSpinnerSpinnerSpinner animation*/
+/*========{Spinner animation*/
 
 
 .loading-circle {
@@ -179,7 +179,7 @@ input, textarea {
 }
 
 .bottom-logo:after {
- content: url("/img/1500713626876.png");
+ content: url("https://cdn.rawgit.com/hadithmv/hadithmv.github.io/ef927a15/img/1500713626876.png");
  transform: scale(.1);
  display: block ;
  margin: -95px 0px;
