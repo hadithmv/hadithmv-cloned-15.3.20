@@ -63,6 +63,9 @@ $(document).ready(function() {
       "order": [[0, "asc"]], //order on column
       "pagingType": "simple",
       "lengthMenu": [ 1, 2, 3, 5, 10 ],
+      "language": {
+       "search": "Search hadithmv.github.io:"
+                   },
       "buttons": [
             {
                 extend: 'copy',
