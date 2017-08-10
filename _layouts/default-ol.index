@@ -8,7 +8,10 @@
         <meta name="author" content="Hadithmv">    
  
         <link rel="icon" hre<link rel="icon" href="img/1500713626876.png">
-        <link rel="stylesheet" type="text/css" href="css/main-ol.css">
+        
+        <!-- CSS -->
+      	<link href="https://cdn.rawgit.com/hadithmv/hadithmv.github.io/6dc0b32b/css/main-ol.css" rel="stylesheet" type="text/css"/>
+
     </head>
     <body>
         <!-- header start -->
