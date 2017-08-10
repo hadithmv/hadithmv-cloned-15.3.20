@@ -43,16 +43,16 @@ $(document).ready(function() {
     //select main div and put a table there
     //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
     $('#graphic').html(
-      '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-condensed table-responsive" id="mySelection"></table>'
+      '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
       
       // Add footer to table
- $("#mySelection").append('<tfoot><tr><th></th><th></th><th></th><th></th><th></th></tr></tfoot>');
+ $("#mySelection").append('<tfoot><tr><th>No.</th>Ref.<th>Arabic</th>English<th>Dhivehi</th><th></th><th></th></tr></tfoot>');
 
     // Setup - add a text input to each footer cell
     $('#mySelection tfoot th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Find '+title+'" />' );
+        $(this).html( '<input type="text" placeholder="Find by'+title+'" />' );
     } );
 
     //initialize the DataTable object and put settings in
