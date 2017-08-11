@@ -53,7 +53,7 @@
         <div class="section">
         <!-- POPUP BUTTON -->
 <div style="text-align:center">
-<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">40 Nawawi</button></div>
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">40 Nawawi</button></div>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -84,7 +84,32 @@
         <!-- Form section start -->  
         
         <div class="section">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe79Mmq2yFKwSw0_Sn5JP8H_M5hrHHwWuJQ8ki-GmaOEEHCnA/viewform?embedded=true" width=95% height= 500 frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+<!-- FORM POPUP BUTTON -->
+<div style="text-align:center">
+<button class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#myModal2">Submissions</button></div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Submissions</h4>
+      </div>
+      <div class="modal-body">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe79Mmq2yFKwSw0_Sn5JP8H_M5hrHHwWuJQ8ki-GmaOEEHCnA/viewform?embedded=true" width="100%" height="700" frameborder="0" allowtransparency="true"></iframe>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal , END OF FORM POPUP -->
         </div>
         
         <!-- Form section end -->
