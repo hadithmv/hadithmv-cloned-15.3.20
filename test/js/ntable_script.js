@@ -21,9 +21,10 @@ $(document).ready(function() {
     Tabletop.init({
       key: key,
       callback: function(data, tabletop) {
-        writeTable(data); //call up datatables function},
-        simpleSheet: true,
-        debug: false
+          //call up datatables function
+          writeTable(data); },
+      simpleSheet: true,
+       debug: false
                  });
   }
 
