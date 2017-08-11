@@ -94,7 +94,7 @@ progress::-moz-progress-bar {
 iframe, audio {
     display: block;
     margin: 0 auto;
-    border: 2.5px solid #3289AA;
+    border: 2px solid #3289AA;
 }
 hr {
     border: 0;
