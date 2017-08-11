@@ -261,7 +261,7 @@ input, textarea {
   height: 80px;
 
   position: relative;
-  margin: -82.5px auto;
+  margin: -80px auto;
     animation: fadein 4s;}
 
   @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
