@@ -33,7 +33,7 @@ $(document).ready(function() {
     //select main div and put a table there
     //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
     
-    $('#ntable_script').html(
+    $('#ntable_insert').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
       
