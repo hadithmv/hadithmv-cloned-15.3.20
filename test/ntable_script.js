@@ -35,7 +35,7 @@ $(document).ready(function() {
     //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
     
     $('#ntable_insert').html(
-      '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table table-striped table-condensed table-responsive" id="mySelection"></table>'
+      '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table selectable blue table-condensed table-responsive" id="mySelection"></table>'
     );
       
      // Add footer to table
