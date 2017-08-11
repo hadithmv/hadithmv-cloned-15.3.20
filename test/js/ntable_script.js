@@ -7,22 +7,13 @@ var key =
 //"data" refers to the column name with no spaces and no capitals
 //punctuation or numbers in your column name
 //"title" is the column name you want to appear in the published table
-var columns = [{
-  "data": "no",
-  "title": "No:"
-}, {
-  "data": "ref",
-  "title": "Ref:"
-}, {
-  "data": "arabic",
-  "title": "Arabic"
-  }, {
-  "data": "english",
-  "title": "English"
-    }, {
-  "data": "dhivehi",
-  "title": "Dhivehi"
-}];
+
+var columns = [ {"data":"no","title":"No:"},
+                {"data":"ref","title":"Ref:"},
+                {"data":"arabic","title":"Arabic"},
+                {"data":"english","title":"English"},
+                {"data":"dhivehi","title":"Dhivehi"}
+              ];
 
 $(document).ready(function() {
 
@@ -30,18 +21,18 @@ $(document).ready(function() {
     Tabletop.init({
       key: key,
       callback: function(data, tabletop) {
-        writeTable(data); //call up datatables function
-      },
-      simpleSheet: true,
-      debug: false
-    });
-   }
+        writeTable(data); //call up datatables function},
+        simpleSheet: true,
+        debug: false
+                 });
+  }
 
   initializeTabletopObject();
 
   function writeTable(data) {
     //select main div and put a table there
     //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
+    
     $('#ntable_script').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
@@ -53,10 +44,10 @@ $(document).ready(function() {
     $('#mySelection tfoot th').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Find by '+title+'" />' );
-    } );
+    });
 
     //initialize the DataTable object and put settings in
-    table=$("#mySelection").DataTable({
+     table=$("#mySelection").DataTable({
       "autoWidth": false,
       "data": data,
       "columns": columns,
@@ -70,17 +61,17 @@ $(document).ready(function() {
       "buttons": [
                  {extend: 'copy',
                   exportOptions: {columns: [':visible'],
-                                 rows: [':visible']   } //copies currently displayed columns and rows
+                                  rows: [':visible']   } //copies currently displayed columns and rows
                  },
                  {extend: 'excel',
                   exportOptions: {columns: [':visible'],
-                                  rows: [':visible']  }
+                                  rows: [':visible']   }
                  },
                  {extend: 'print',
                   exportOptions: {columns: [':visible'],
-                                  rows: [':visible']  }
+                                  rows: [':visible']   }
                  },
-                 {extend: 'colvis', text: 'Hide'}     ], //column visibility toggle
+                 {extend: 'colvis', text: 'Hide'}      ], //column visibility toggle
             
        //uncomment these options to simplify your table
         //"paging": false,
