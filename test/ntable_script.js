@@ -55,9 +55,9 @@ $(document).ready(function() {
       "order": [[0, "asc"]], //display order on column
       "pagingType": "simple",
       "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
-      "columnDefs": [ { className: "col_3", "targets": [2] }, 
-                      { className: "col_5", "targets": [4] } ], //left to right column align for css
-                                
+      "columnDefs": [ { className: "col_3", "targets": [2] },
+                      { className: "col_4", "targets": [3] },
+                      { className: "col_5", "targets": [4] } ], //select columns to css aligns
       "language": {"search": "Search hadithmv.github.io"},
       "buttons": [
                  {extend: 'copy',
