@@ -8,7 +8,7 @@ tfoot { display: table-header-group; }
 */vertically aligns column text to top*/
 table.dataTable tbody td { vertical-align: top; }
 
-*/aligns and directs text in select columns from left to right*/
+/*aligns and directs text in select columns from left to right*/
 .dataTable tbody td.col_3 {
     text-align: right; direction: rtl; }
 .dataTable tbody td.col_5 {
