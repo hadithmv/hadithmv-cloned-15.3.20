@@ -42,7 +42,7 @@ $(document).ready(function() {
   function writeTable(data) {
     //select main div and put a table there
     //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
-    $('#graphic').html(
+    $('#ntable_script').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="ui striped table table-striped table-condensed table-responsive" id="mySelection"></table>'
     );
       
@@ -86,14 +86,15 @@ $(document).ready(function() {
         //"paging": false,
         //"searching": false,
         //"info": false
-   });
+      
+   }); //End of DataTable initialize
       
       //Apply Buttons
       table.buttons().container()
         .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
       
       //Apply the footer search
-    table.columns().every(function(){
+      table.columns().every(function(){
         var that = this;
  
         $('input', this.footer()).on('keyup change',function(){
