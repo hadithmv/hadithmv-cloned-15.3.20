@@ -1,0 +1,8 @@
+tfoot input { width: 100%; } /*fit search boxes within columns*/
+
+tfoot { display: table-header-group; } /*appends footer to header*/
+
+table.dataTable tbody td { vertical-align: top; } */vertically aligns column text to top*/
+
+.dataTable tbody td.col_3, .dataTable tbody td.col_5 {
+    text-align: right; direction: rtl; } */aligns and directs text in select columns from left to right*/
