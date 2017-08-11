@@ -61,7 +61,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">40 Nawawi</h4>
+        <h4 class="modal-title" id="myModalLabel" style="text-align:center">Nawawi</h4>
       </div>
       <div class="modal-body">
           <iframe src="https://hadithmv.github.io/test/ntable_web" width="100%" height="700" frameborder="0" allowtransparency="true"></iframe>  
@@ -95,7 +95,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Submissions</h4>
+        <h4 class="modal-title" id="myModalLabel" style="text-align:center">Submissions</h4>
       </div>
       <div class="modal-body">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe79Mmq2yFKwSw0_Sn5JP8H_M5hrHHwWuJQ8ki-GmaOEEHCnA/viewform?embedded=true" width="100%" height="700" frameborder="0" allowtransparency="true"></iframe>  
