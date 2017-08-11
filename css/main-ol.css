@@ -182,11 +182,11 @@ input, textarea {
  content: url("https://cdn.rawgit.com/hadithmv/hadithmv.github.io/ef927a15/img/1500713626876.png");
  transform: scale(.1);
  display: block ;
- margin: -95px 0px;
+ margin: -99px -10px;
  position: absolute;
  text-align: center;
  top: 50%;
- width: 43.5%;
+ width: 50%;
  height: 100px;
     }
 .circle1 {
