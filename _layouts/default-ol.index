@@ -35,14 +35,14 @@
         
         <div class="section">
             <h1><span>About</span></h1>
-            <p style="text-align:center" ><strong>السلام عليكم</strong></p>
-            <p style="text-align:center" >Welcome to <strong>Hadithmv</strong>.<hr/></p>
-            <p style="text-align:justify">  The access to Hadith via web in many languages has changed the muslim world. Yet, there is a lack of web based hadith resources in the Maldivian language <i>'Dhivehi'</i>. Help change this situation for the better, join us in this rewarding journey to make local translations of hadith available to all by the will of Allah.
+            <p style="text-align: center" ><strong>السلام عليكم</strong></p>
+            <p style="text-align: center" >Welcome to <strong>Hadithmv</strong>.<hr/></p>
+            <p style="text-align: justify">  The access to Hadith via web in many languages has changed the muslim world. Yet, there is a lack of web based hadith resources in the Maldivian language <i>'Dhivehi'</i>. Help change this situation for the better, join us in this rewarding journey to make local translations of hadith available to all by the will of Allah.
             </p>
             
-            <p style="font-style:italic"
+            <p style="font-style: italic"
                      "font-size: 9pt"
-                     "text-align:center"
+                     "text-align: justify"
                      "margin-top:10px">"Indeed, it is We who bring the dead to life and record what they have put forth and what they left behind" -Yaseen 12</p>
         </div>
         
