@@ -40,7 +40,31 @@
         
         <!-- Sheet section start -->
         <div class="section">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTBxxDAJ5DlT-jhQqc2QpWx53yzDPq_PNvvFUSp3irdWJzuGAz645A1nGInxbuzaWZ4LZKrkakL-Uti/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" height= 500 width= 90% frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        <!-- POPUP BUTTON -->
+<div style="text-align:center">
+<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">40 Nawawi</button></div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">40 Nawawi</h4>
+      </div>
+      <div class="modal-body">
+          <iframe src="https://hadithmv.github.io/test/ntable_web" width="100%" height="700" frameborder="0" allowtransparency="true"></iframe>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal , END OF POPUP -->
         </div>
         <!-- Sheet section end -->
     
@@ -55,7 +79,7 @@
             <h1><span>Progress</span></h1>
             <ul>
                 <li>Nawawi <br />
-                    <progress min="0" max="42" value="6"></progress>
+                    <progress min="0" max="42" value="10"></progress>
                 </li>
                 <li>Bukhari <br />
                     <progress min="0" max="7563" value="0"></progress>
