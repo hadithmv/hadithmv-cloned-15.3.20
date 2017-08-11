@@ -114,10 +114,11 @@
   <!-- /.modal-dialog -->
 </div>
 <!-- /.modal , END OF FORM POPUP -->
-        </div>
-        <hr/>
-        
-        <!-- Form section end -->
+        <hr/>
+        </div>
+        
+       
+        <!-- Form section end -->
         
         <!-- Progress section start -->
         
@@ -133,21 +134,23 @@
                 <li>Muslim<br/>
                     <progress min="0" max="3033" value="0"></progress>
                 </li>
-            </ul>
+            </ul>
+        <hr/>
         </div>
-        <hr/>
-        
-        <!-- Progress section end -->
+        
+       
+        <!-- Progress section end -->
       
       <!-- Media section start -->
       
         <div class="section">
             <h1><span>Media</span></h1>
            <iframe height="360" width=95% src="https://www.youtube.com/embed/STmzDuVroQI" allowfullscreen frameborder="0"></iframe>
-        </div>
-        <hr/>
-        
-        <!-- Media section end -->
+        <hr/>
+        </div>
+        
+       
+        <!-- Media section end -->
         
         <!-- Spinner section start -->
         
