@@ -56,12 +56,7 @@ p {
     font-weight: bold;
     text-align: center;
 }
-.quote {
-    font-style: italic;
-    font-size: 9pt;
-    text-align: right;
-    margin-top: 10px;
-}
+
 table {
     width: 100%;
 }
