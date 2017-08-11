@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hadithmv - Open and Crowdsourced</title>
+        <title>Hadithmv - Open Resource</title>
        
         <meta name="description" content="Open and crowdsourced Islamic translations in dhivehi">
-        <meta name="keywords" content="hadithmv,hadith,hadeeth,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
+        <meta name="keywords" content="hadithmv,hadith,hadeeth,nawawi, 40 hadith, saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
         <meta name="author" content="Hadithmv">    
  
         <link rel="icon" hre<link rel="icon" href="https://cdn.rawgit.com/hadithmv/hadithmv.github.io/ef927a15/img/1500713626876.png">
@@ -32,7 +32,7 @@
         <!-- About Me section start -->
         <div class="section">
             <h1><span>About</span></h1>
-            <p>Hi, welcome to <strong>Hadithmv</strong>. <hr/> Multilingual accessibility to Hadith via web has changed the muslim world. Yet, there is a lack of web based hadith resources in the Maldivian language <i>'Dhivehi'</i>. Help change this situation for the better, join us in this rewarding journey to make local translations of hadith available to all by the will of Allah.
+            <p>السلام عليكم<br/> Welcome to <strong>Hadithmv</strong>. <hr/> Multilingual accessibility to Hadith via web has changed the muslim world. Yet, there is a lack of web based hadith resources in the Maldivian language <i>'Dhivehi'</i>. Help change this situation for the better, join us in this rewarding journey to make local translations of hadith available to all by the will of Allah.
             </p>
             <p class="quote">"Indeed, it is We who bring the dead to life and record what they have put forth and what they left behind" -Yaseen 12</p>
         </div>
