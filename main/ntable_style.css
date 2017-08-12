@@ -5,10 +5,10 @@ tfoot input { width: 100%; }
 /*appends footer to header*/
 tfoot { display: table-header-group; }
 
-*/vertically aligns column text to top*/
+/*vertically aligns column text to top*/
 table.dataTable tbody td { vertical-align: top; }
 
-/*aligns and directs text in select columns from left to right*/
+/*aligns and directs text in select columns*/
 .dataTable tbody td.col_3 {
     text-align: justify; 
     direction: rtl; }
@@ -17,3 +17,7 @@ table.dataTable tbody td { vertical-align: top; }
 .dataTable tbody td.col_5 {
     text-align: justify;
     direction: rtl; }
+
+/*top and botton margin spacing between cells*/
+.dataTable td { 
+    margin: 15px 0;}
