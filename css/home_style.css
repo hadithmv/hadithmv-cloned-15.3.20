@@ -76,6 +76,7 @@ li {
     font-weight: bold;
 }
 progress {
+    width: 90%
     color: #3fb6b2;
     background: #efefef;
 }
