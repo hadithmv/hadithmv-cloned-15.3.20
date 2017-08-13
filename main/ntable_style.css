@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Faruma;
-    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf);
+    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf) format("opentype");
 }
 
 @font-face {
