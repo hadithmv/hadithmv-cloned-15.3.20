@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: Sehga;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_Sehga_Old.otf);
+    font-family: Iyyu;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Iyyu_Normal.otf);
 }
 
 @font-face {
@@ -34,8 +34,8 @@
 }
 
 @font-face {
-    font-family: Iyyu;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_Iyyu_Normal.otf);
+    font-family: Sehga;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Sehga_Old.otf);
 }
 
 @font-face {
@@ -65,7 +65,7 @@ df3 {
 }
 
 df4 {
-   font-family: Sehga;
+   font-family: Iyyu;
 }
 
 df5 {
@@ -80,7 +80,7 @@ df7 {
 }
 
 df8 {
-   font-family: Iyyu;
+   font-family: Sehga;
 }
 
 df9 {
