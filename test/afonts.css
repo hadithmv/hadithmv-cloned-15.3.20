@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Faruma;
+    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf);
+}
+
+@font-face {
+    font-family: MVWaheed;
+    src: url(https://dhivehi.mv/fonts/data/df/MVWaheed.otf);
+}
+
+@font-face {
+    font-family: Dhivehi;
+    src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
+}
+
+@font-face {
+    font-family: Iyyu;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Iyyu_Normal.otf);
+}
+
+@font-face {
+    font-family: MVTypewriter;
+    src: url(https://dhivehi.mv/fonts/data/df/mvtyper.ttf);
+}
+
+@font-face {
+    font-family: Kathivalhi;
+    src: url(https://dhivehi.mv/fonts/data/df/DAM_Kathivalhi.otf);
+}
+
+@font-face {
+    font-family: AvasAkuru;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_GroupX_Avas_Akuru.otf);
+}
+
+@font-face {
+    font-family: Sehga;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Sehga_Old.otf);
+}
+
+@font-face {
+    font-family: ElaafLight;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Lite.otf);
+}
+
+@font-face {
+    font-family: Elaaf;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Normal.otf);
+}
+
+
+/* === FONT FACES === */
+
+
+df1 {
+   font-family: Faruma;
+}
+
+df2 {
+   font-family: MVWaheed;
+}
+
+df3 {
+   font-family: Dhivehi;
+}
+
+df4 {
+   font-family: Iyyu;
+}
+
+df5 {
+   font-family: MVTypewriter;
+}
+
+df6 {
+   font-family: Kathivalhi;
+}
+df7 {
+   font-family: AvasAkuru;
+}
+
+df8 {
+   font-family: Sehga;
+}
+
+df9 {
+   font-family: ElaafLight;
+}
+
+df10 {
+   font-family: Elaaf;
+}
+
+
+
+
+/* ==== FONT NAMES === */
+
+
+
+a:after{
+content: "ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިސްކޮށްފައިވާ ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.";
+}
+
+
+body {
+   direction: rtl;
+   text-align: justify;
+   unicode-bidi: bidi-override;
+}
+
+.b { font-weight: bold }
