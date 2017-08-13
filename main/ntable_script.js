@@ -1,16 +1,13 @@
-//Edit 'key' and 'columns' to connect your spreadsheet
-
-//enter google sheets key here
+//google sheets key
 var key =
   "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
 
-//"data" refers to the column name with no spaces and no capitals
-//punctuation or numbers in your column name
-//"title" is the column name you want to appear in the published table
+//"data" refers to the sheets column name, no spaces,capitals, punctuation, numbers
+//"title" rendered column header text
 
-var columns = [ {"data":"no","title":"No:"},
-                {"data":"ref","title":"Ref:"},
-                {"data":"arabic","title":"Arabic"},
+var columns = [ {"data":"no",     "title":"No:"},
+                {"data":"ref",    "title":"Ref:"},
+                {"data":"arabic", "title":"Arabic"},
                 {"data":"english","title":"English"},
                 {"data":"dhivehi","title":"Dhivehi"}
               ];
@@ -31,10 +28,9 @@ $(document).ready(function() {
   initializeTabletopObject();
 
   function writeTable(data) {
-    //select main div and put a table there
-    //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
     
-    $('#ntable_insert').html(
+    //select main div and insert table  
+     $('#ntable_insert').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table definition  table-condensed table-responsive" id="mySelection"></table>'
     );
       
