@@ -38,6 +38,7 @@ table.dataTable tbody td { vertical-align: top; }
 .dataTable tbody td.col_5 {
     text-align: justify;
     direction: rtl;
+    unicode-bidi:bidi-override;
     font-family: MVWaheed, Faruma, Dhivehi;
 }
 
