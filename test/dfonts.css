@@ -108,3 +108,5 @@ body {
    text-align: justify;
    unicode-bidi: bidi-override;
 }
+
+.bold { font-weight: bold }
