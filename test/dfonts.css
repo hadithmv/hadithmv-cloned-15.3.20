@@ -9,8 +9,8 @@
 }
 
 @font-face {
-    font-family: AvasAkuru;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_GroupX_Avas_Akuru.otf);
+    font-family: Dhivehi;
+    src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
 }
 
 @font-face {
@@ -29,8 +29,8 @@
 }
 
 @font-face {
-    font-family: Dhivehi;
-    src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
+    font-family: AvasAkuru;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_GroupX_Avas_Akuru.otf);
 }
 
 @font-face {
@@ -61,7 +61,7 @@ df2 {
 }
 
 df3 {
-   font-family: AvasAkuru;
+   font-family: Dhivehi;
 }
 
 df4 {
@@ -76,7 +76,7 @@ df6 {
    font-family: Kathivalhi;
 }
 df7 {
-   font-family: Dhivehi;
+   font-family: AvasAkuru;
 }
 
 df8 {
