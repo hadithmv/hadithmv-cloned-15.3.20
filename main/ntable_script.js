@@ -71,7 +71,7 @@ $(document).ready(function() {
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
-                 {extend: 'colvis', text: 'Hide'}      ], //column visibility toggle
+                 {extend: 'colvis', text: '<i class="fa fa-eye-slash"></i> Hide'}      ], //column visibility toggle
             
        //uncomment these options to simplify your table
         //"paging": false,
