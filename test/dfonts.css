@@ -44,13 +44,13 @@
 } /* 9 */
 
 @font-face {
-    font-family: Madheeh;
-    src: url(https://dhivehi.mv/fonts/data/df/DAM_Madheeh.otf);
+    font-family: Elaaf;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Normal.otf);
 } /* 10 */
 
 @font-face {
-    font-family: Elaaf;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Normal.otf);
+    font-family: Madheeh;
+    src: url(https://dhivehi.mv/fonts/data/df/DAM_Madheeh.otf);
 } /* 11 */
 
 @font-face {
@@ -68,15 +68,7 @@
     src: url(https://dhivehi.mv/fonts/data/df/midhilibold.ttf);
 } /* 14 */
 
-@font-face {
-    font-family: Elaaf;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Normal.otf);
-} /* 15 */
 
-@font-face {
-    font-family: Elaaf;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Normal.otf);
-} /* 16 */
 
 
 
@@ -122,7 +114,20 @@ df10 {
    font-family: Elaaf;
 }
 
+df11 {
+   font-family: Madheeh;
+}
 
+df12 {
+   font-family: Galan;
+}
+
+df13 {
+   font-family: MAGBold;
+}
+df14 {
+   font-family: MidhiliBold;
+}
 
 
 /* ==== FONT NAMES === */
