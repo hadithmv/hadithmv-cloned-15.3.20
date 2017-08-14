@@ -173,10 +173,10 @@ input, textarea {
 }
 
 .bottom-logo:after {
- content: url("https://cdn.rawgit.com/hadithmv/hadithmv.github.io/ef927a15/img/1500713626876.png");
- transform: scale(.1);
+ content: url("https://cdn.rawgit.com/hadithmv/hadithmv.github.io/6046363d/img/logo2.svg");
+ transform: scale(.08);
  display: block ;
- margin: -99px -10px;
+ margin: -104px -14px;
  position: absolute;
  text-align: center;
  top: 50%;
