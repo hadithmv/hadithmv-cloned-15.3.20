@@ -57,14 +57,17 @@ $(document).ready(function() {
       "language": {"search": "Search hadithmv.github.io  "},
       "buttons": [
                  {extend: 'copy',
+                  text: '<i class="fa fa-files-o"></i> Copy',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
                  {extend: 'excel',
+                  text: '<i class="fa fa-file-excel-o"></i> Excel',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
                  {extend: 'print',
+                  text: '<i class="fa fa-print"></i> Print',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
