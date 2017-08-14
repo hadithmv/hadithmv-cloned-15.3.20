@@ -107,6 +107,7 @@ body {
    direction: rtl;
    text-align: justify;
    unicode-bidi: bidi-override;
+   unicode-range: U+0780-07BF;
 }
 
 .b { font-weight: bold }
