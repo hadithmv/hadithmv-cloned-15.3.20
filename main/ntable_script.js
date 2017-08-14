@@ -58,8 +58,7 @@ $(document).ready(function() {
       "buttons": [
                  {extend: 'copy',
                   text: '<i class="fa fa-files-o"></i>',
-                  Title: '40 Nawawi',
-                  messageBottom: '@hadithmv.github.io',
+                  messageTop: '40 Nawawi',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
