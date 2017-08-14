@@ -58,7 +58,9 @@ $(document).ready(function() {
       "buttons": [
                  {extend: 'copy',
                   text: '<i class="fa fa-files-o"></i>',
-                  exportOptions: {columns: [':visible'],
+                  Title: '40 Nawawi',
+                  messageBottom: '<a href='https://hadithmv.github.io'>@hadithmv</a>'
+                  exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
                  {extend: 'excel',
@@ -71,8 +73,9 @@ $(document).ready(function() {
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
-                 {extend: 'colvis', text: '<i class="fa fa-eye-slash"></i>'}      ], //column visibility toggle
-            
+                 {extend: 'colvis',
+                  text: '<i class="fa fa-eye-slash"></i>'}],
+            
        //uncomment these options to simplify your table
         //"paging": false,
         //"searching": false,
