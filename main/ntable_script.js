@@ -59,7 +59,7 @@ $(document).ready(function() {
                  {extend: 'copy',
                   text: '<i class="fa fa-files-o"></i>',
                   Title: '40 Nawawi',
-                  messageBottom: '<a href='https://hadithmv.github.io'>@hadithmv</a>'
+                  messageBottom: '@hadithmv.github.io',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
