@@ -57,21 +57,21 @@ $(document).ready(function() {
       "language": {"search": "Search hadithmv.github.io  "},
       "buttons": [
                  {extend: 'copy',
-                  text: '<i class="fa fa-files-o"></i> Copy',
+                  text: '<i class="fa fa-files-o"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
                  {extend: 'excel',
-                  text: '<i class="fa fa-file-excel-o"></i> Excel',
+                  text: '<i class="fa fa-file-excel-o"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
                  {extend: 'print',
-                  text: '<i class="fa fa-print"></i> Print',
+                  text: '<i class="fa fa-print"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
-                 {extend: 'colvis', text: '<i class="fa fa-eye-slash"></i> Hide'}      ], //column visibility toggle
+                 {extend: 'colvis', text: '<i class="fa fa-eye-slash"></i>'}      ], //column visibility toggle
             
        //uncomment these options to simplify your table
         //"paging": false,
