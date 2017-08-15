@@ -3,7 +3,7 @@ var key =
   "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
 
 //"data" refers to the sheets column name, no spaces,capitals, punctuation, numbers
-//"title" rendered column header text
+//"title" is rendered column header text
 
 var columns = [ {"data":"no",     "title":"No:"},
                 {"data":"ref",    "title":"Ref:"},
@@ -29,7 +29,7 @@ $(document).ready(function() {
 
   function writeTable(data) {
     
-    //select main div and insert table  
+    //select main div and insert table into html
      $('#ntable_insert').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table definition  table-condensed table-responsive" id="mySelection"></table>'
     );
@@ -59,6 +59,9 @@ $(document).ready(function() {
                  {extend: 'copy',
                   text: '<i class="fa fa-files-o"></i>',
                   messageTop: '40 Nawawi',
+                  customize: function( data ) {
+                                       data= data.replace( /\t/g, '\n\n' );
+                                       return data; }, //edits regex to add line break 
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
