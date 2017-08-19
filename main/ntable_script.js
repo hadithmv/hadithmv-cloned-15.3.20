@@ -31,7 +31,7 @@ $(document).ready(function() {
     
     //select main div and insert table into html
      $('#ntable_insert').html(
-      '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table definition  table-condensed table-responsive" id="mySelection"></table>'
+      '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table table-condensed table-responsive" id="mySelection"></table>'
     );
       
      // Add footer to table
