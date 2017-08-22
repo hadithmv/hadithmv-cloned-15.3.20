@@ -5,9 +5,9 @@ var key =
 //"data" refers to the sheets column name, no spaces,capitals, punctuation, numbers
 //"title" is rendered column header text
 
-var columns = [ {"data":"no",     "title":"No:"},
-                {"data":"ref",    "title":"Ref:"},
-                {"data":"arabic", "title":"Arabic"},
+var columns = [ {"data":"no",     "title":"No:"},
+                {"data":"ref",    "title":"Ref:"},
+                {"data":"arabic", "title":"Arabic"},
                 {"data":"english","title":"English"},
                 {"data":"dhivehi","title":"Dhivehi"}
               ];
@@ -29,79 +29,76 @@ $(document).ready(function() {
 
   function writeTable(data) {
     
-    //select main div and insert table into html
-     $('#ntable_insert').html(
-      '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table table-condensed table-responsive" id="mySelection"></table>'
-    );
+    //select main div and insert table into html
+     $('#ntable_insert').html(
+      '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table table-condensed table-responsive" id="mySelection"></table>'
+    ); //End of table insert
       
-     // Add footer to table
-    $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
+     // Add header to table
+  $("#mySelection").append('<thead><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></thead>'); //End of add header
 
-    // Setup - add a text input to each footer cell
-    $('#mySelection tfoot th').each( function () {
+
+// Setup - places the input (of each cell) in the second header row
+    $('#mySelection thead tr:eq(1) th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Find by '+title+'" />' );
-    });
+        $(this).html( '<input type="text" placeholder="Search '+title+'" class="column_search" />' );
+    }); //End of second row header input
 
     //initialize the DataTable object and put settings in
      table=$("#mySelection").DataTable({
-      "mark": true,
-      "autoWidth": false,
+      "orderCellsTop": true, //Moves the sorting icons to the first header row
+      "mark": true,
+      "autoWidth": false,
       "data": data,
       "columns": columns,
-      "order": [[0, "asc"]], //display order on column
+      "order": [[0, "asc"]], //display order on column
       "pagingType": "simple",
-      "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
+      "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
       "columnDefs": [ { className: "col_3", "targets": [2] },
                       { className: "col_4", "targets": [3] },
                       { className: "col_5", "targets": [4] } ], //select columns to css aligns
       "language": {"search": "Search hadithmv.github.io  "},
-      "buttons": [
+      "buttons": [
                  {extend: 'copy',
-                  text: '<i class="fa fa-files-o"></i>',
-                  messageTop: '40 Nawawi',
+                  text: '<i class="fa fa-files-o"></i>',
+                  messageTop: '40 Nawawi',
                   customize: function( data ) {
-                                       data= data.replace( /\t/g, '\n\n' );
-                                       return data; }, //edits regex to add line break 
-                  exportOptions: {columns: [':visible'],
+                                       data= data.replace( /\t/g, '\n\n' );
+                                       return data; }, //edits regex to add line break 
+                  exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                  },
                  {extend: 'excel',
-                  text: '<i class="fa fa-file-excel-o"></i>',
+                  text: '<i class="fa fa-file-excel-o"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
                  {extend: 'print',
-                  text: '<i class="fa fa-print"></i>',
+                  text: '<i class="fa fa-print"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                  },
-                 {extend: 'colvis',
-                  text: '<i class="fa fa-eye-slash"></i>'}],
-            
-       //uncomment these options to simplify your table
+                 {extend: 'colvis',
+                  text: '<i class="fa fa-eye-slash"></i>'}],
+            
+       //uncomment these options to simplify your table
         //"paging": false,
         //"searching": false,
         //"info": false
       
    }); //End of DataTable initialize
       
-      //Apply Buttons
+      //Apply Buttons
       table.buttons().container()
-        .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
+        .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); //End of buttons
       
-      //Apply the footer search
-      table.columns().every(function(){
-        var that = this;
- 
-        $('input', this.footer()).on('keyup change',function(){
-            if (that.search() !== this.value){
-                that
-                    .search(this.value)
-                    .draw();
-                                             }
-                                        });
-                                   });
+      //Apply the header search event handler
+    $( '#mySelection thead'  ).on( 'keyup', ".column_search",function () {
+        table
+            .column( $(this).parent().index() )
+            .search( this.value )
+            .draw();
+          }); //End of search handler
       
   }
 });
