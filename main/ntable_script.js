@@ -38,12 +38,6 @@ $(document).ready(function() {
   $("#mySelection").append('<thead><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></thead>'); //End of add header
 
 
-// Setup - places the input (of each cell) in the first header row
-    $('#mySelection thead tr:eq(0) th').each( function () {
-        var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" class="column_search" />' );
-    }); //End of second row header input
-
     //initialize the DataTable object and put settings in
      table=$("#mySelection").DataTable({
       "orderCellsTop": false, //Moves the sorting icons to the first header row
@@ -87,6 +81,12 @@ $(document).ready(function() {
         //"info": false
       
    }); //End of DataTable initialize
+    
+      // Setup - places the input (of each cell) in the first header row
+    $('#mySelection thead tr:eq(0) th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" class="column_search" />' );
+    }); //End of second row header input
       
       //Apply Buttons
       table.buttons().container()
