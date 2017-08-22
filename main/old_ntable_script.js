@@ -43,6 +43,7 @@ $(document).ready(function() {
         $(this).html( '<input type="text" placeholder="Find by '+title+'" />' );
     });
 
+    
     //initialize the DataTable object and put settings in
      table=$("#mySelection").DataTable({
       "mark": true,
