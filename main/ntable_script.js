@@ -38,15 +38,15 @@ $(document).ready(function() {
   $("#mySelection").append('<thead><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></thead>'); //End of add header
 
 
-// Setup - places the input (of each cell) in the second header row
-    $('#mySelection thead tr:eq(1) th').each( function () {
+// Setup - places the input (of each cell) in the first header row
+    $('#mySelection thead tr:eq(0) th').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" class="column_search" />' );
     }); //End of second row header input
 
     //initialize the DataTable object and put settings in
      table=$("#mySelection").DataTable({
-      "orderCellsTop": true, //Moves the sorting icons to the first header row
+      "orderCellsTop": false, //Moves the sorting icons to the first header row
       "mark": true,
       "autoWidth": false,
       "data": data,
