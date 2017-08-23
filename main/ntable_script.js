@@ -40,9 +40,10 @@ $(document).ready(function() {
 
     //initialize the DataTable object and put settings in
      table=$("#mySelection").DataTable({
+      "stateSave": true,
       "orderCellsTop": false, //Moves the sorting icons to the first header row
-      "mark": true,
-      "autoWidth": false,
+      "mark": true, //highlights searches
+      "autoWidth": false,
       "data": data,
       "columns": columns,
       "order": [[0, "asc"]], //display order on column
