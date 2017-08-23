@@ -57,6 +57,7 @@ $(document).ready(function() {
                  {extend: 'copy',
                   text: '<i class="fa fa-files-o"></i>',
                   messageTop: '40 Nawawi',
+                  title: 'hadithmv.github.io',
                   customize: function( data ) {
                                        data= data.replace( /\t/g, '\n\n' );
                                        return data; }, //edits regex to add line break 
