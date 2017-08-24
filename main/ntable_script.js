@@ -56,12 +56,8 @@ $(document).ready(function() {
                       { className: "col_3", "targets": [2] },
                       { className: "col_4", "targets": [3] }, 
                       { className: "col_5", "targets": [4] },
-                     
+                     
                       { "render": function ( data, type, row )
-                                { return 'Hadith no: '+data; },
-                        "targets": 0 }, //end of col1 render
-                     
-                     { "render": function ( data, type, row )
                                 { return 'Ref: '+data; },
                         "targets": 1 }, //end of col2 render
                       
