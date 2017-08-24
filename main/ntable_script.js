@@ -57,10 +57,12 @@ $(document).ready(function() {
                       { className: "col_5", "targets": [4] },
                      
                       //renders col 2 data in col 1 and adds text
-                      { "render": function ( data, type, row ) {
-                         //console.log(row);          
-                         return 'Hadith no: '+data +'<br/>(Ref: '+ row.ref+')'; }, //end of return
+                      { "render": function ( data, type, row )
+                         //console.log(row);         
+                        { return 'Hadith no: '+data +'<br/>(Ref: '+ row.ref+')'; }, //end of return
                         "targets": 0 }, //end of render
+                        { return 'Ref: '+data; }, //end of return
+                        "targets": 1 }, //end of render
                       
                     ], //end of columnDefs
       
