@@ -51,7 +51,8 @@ $(document).ready(function() {
       "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
       "language": {"search": "Search hadithmv.github.io  "},
        
-      "columnDefs": [ { className: "col_3", "targets": [2] }, //select columns to class for css
+      "columnDefs": [ { className: "col_1", "targets": [0] }, //classes columns for css
+                      { className: "col_3", "targets": [2] },
                       { className: "col_4", "targets": [3] }, 
                       { className: "col_5", "targets": [4] },
                      
