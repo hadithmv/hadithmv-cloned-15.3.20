@@ -113,7 +113,11 @@ $(document).ready(function() {
             .search( this.value )
             .draw();
           }); //End of search handler
-      
+    
+    $('#mySelection').DataTable( $.fn.dataTable.ext.deepLink( [
+    'search.search', 'order', 'displayStart'
+] ) ); //End of deeplink
+      
   }
 });
 //end of writeTable
