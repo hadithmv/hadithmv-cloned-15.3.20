@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     //initialize the DataTable object and put settings in
      table=$("#mySelection").DataTable({
-      "stateSave": true,
+      "stateSave": false, //restore table state on page reload
       "orderCellsTop": false, //Moves the sorting icons to the first header row
       "mark": true, //highlights searches
       "autoWidth": false,
@@ -52,11 +52,18 @@ $(document).ready(function() {
       "language": {"search": "Search hadithmv.github.io  "},
        
       "columnDefs": [ { className: "col_1", "targets": [0] }, //classes columns for css
+                      { className: "col_2", "targets": [1] },
                       { className: "col_3", "targets": [2] },
                       { className: "col_4", "targets": [3] }, 
                       { className: "col_5", "targets": [4] },
                      
-                       
+                      { "render": function ( data, type, row )
+                                { return 'Hadith no: '+data; },
+                        "targets": 0 }, //end of col1 render
+                     
+                     { "render": function ( data, type, row )
+                                { return 'Ref: '+data; },
+                        "targets": 1 }, //end of col2 render
                       
                     ], //end of columnDefs
       
