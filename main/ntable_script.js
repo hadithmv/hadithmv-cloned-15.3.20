@@ -5,7 +5,7 @@ var key =
 //"data" refers to the sheets column name, no spaces,capitals, punctuation, numbers
 //"title" is rendered column header text
 
-var columns = [ {"data":"no",     "title":"No:"},
+var columns = [ {"data":"no",     "title":"No."},
                 {"data":"ref",    "title":"Ref:"},
                 {"data":"arabic", "title":"Arabic"},
                 {"data":"english","title":"English"},
