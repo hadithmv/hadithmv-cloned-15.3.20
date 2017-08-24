@@ -57,7 +57,7 @@ $(document).ready(function() {
                      
                       //renders col 2 data in col 1 and adds text
                       { "render": function ( data, type, row ) {
-                         console.log(row);          
+                         //console.log(row);          
                          return 'Hadith no: '+data +' (Ref: '+ row.ref+')'; },
                         "targets": 0 },
                       { "visible": false,  "targets": 1 }, //hides col 2
@@ -69,8 +69,9 @@ $(document).ready(function() {
                    messageTop: '40 Nawawi',
                    title: 'hadithmv.github.io',
                    customize: function( data ) {
+                                        //console.log(JSON.stringify(data));
                                         data= data.replace( /\t/g, '\n\n' );
-                                        return data; }, //edits regex to add line break 
+                                        return data; }, //edits regex to add line break after td
                    exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
                   }, //end of copy
