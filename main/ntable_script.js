@@ -59,7 +59,7 @@ $(document).ready(function() {
                       //renders col 2 data in col 1 and adds text
                       { "render": function ( data, type, row ) {
                          //console.log(row);          
-                         return 'Hadith no: '+data +' (Ref: '+ row.ref+')'; },
+                         return 'Hadith no: '+data +'<br/>(Ref: '+ row.ref+')'; },
                         "targets": 0 },
                       { "visible": false,  "targets": 1 }, //hides col 2
                     ], //end of columnDefs
