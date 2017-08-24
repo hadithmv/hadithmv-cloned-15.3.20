@@ -53,7 +53,7 @@ $(document).ready(function() {
        
       "columnDefs": [ { className: "col_3", "targets": [2] }, //select columns to class for css
                       { className: "col_4", "targets": [3] }, 
-                      { className: "col_5", "targets": [4] }
+                      { className: "col_5", "targets": [4] },
                      
                       //renders col 2 data in col 1 and adds text
                       { "render": function ( data, type, row ) {
