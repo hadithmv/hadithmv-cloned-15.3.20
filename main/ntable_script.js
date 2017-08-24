@@ -49,33 +49,44 @@ $(document).ready(function() {
       "order": [[0, "asc"]], //display order on column
       "pagingType": "simple",
       "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
-      "columnDefs": [ { className: "col_3", "targets": [2] },
-                      { className: "col_4", "targets": [3] },
-                      { className: "col_5", "targets": [4] } ], //select columns to css aligns
       "language": {"search": "Search hadithmv.github.io  "},
+       
+      "columnDefs": [ { className: "col_3", "targets": [2] }, //select columns to class for css
+                      { className: "col_4", "targets": [3] }, 
+                      { className: "col_5", "targets": [4] }
+                     
+                      //renders col 2 data in col 1 and adds text
+                      { "render": function ( data, type, row ) {
+                         console.log(row);          
+                         return 'Hadith no: '+data +' (Ref: '+ row.ref+')'; },
+                        "targets": 0 },
+                      { "visible": false,  "targets": 1 }, //hides col 2
+                    ], //end of columnDefs
+      
       "buttons": [
-                 {extend: 'copy',
-                  text: '<i class="fa fa-files-o"></i>',
-                  messageTop: '40 Nawawi',
-                  title: 'hadithmv.github.io',
-                  customize: function( data ) {
-                                       data= data.replace( /\t/g, '\n\n' );
-                                       return data; }, //edits regex to add line break 
-                  exportOptions: {columns: [':visible'],
+                  {extend: 'copy',
+                   text: '<i class="fa fa-files-o"></i>',
+                   messageTop: '40 Nawawi',
+                   title: 'hadithmv.github.io',
+                   customize: function( data ) {
+                                        data= data.replace( /\t/g, '\n\n' );
+                                        return data; }, //edits regex to add line break 
+                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   } //copies currently displayed columns and rows
-                 },
-                 {extend: 'excel',
+                  }, //end of copy
+                  {extend: 'excel',
                   text: '<i class="fa fa-file-excel-o"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
-                 },
-                 {extend: 'print',
+                  }, //end of excel
+                  {extend: 'print',
                   text: '<i class="fa fa-print"></i>',
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
-                 },
-                 {extend: 'colvis',
-                  text: '<i class="fa fa-eye-slash"></i>'}],
+                  }, //end of print
+                  {extend: 'colvis',
+                  text: '<i class="fa fa-eye-slash"></i>'} //end of colvis
+                 ], //end of buttons
             
        //uncomment these options to simplify your table
         //"paging": false,
