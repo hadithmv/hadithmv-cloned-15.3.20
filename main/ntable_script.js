@@ -95,7 +95,7 @@ $(document).ready(function() {
       // Setup - places the input (of each cell) in the first header row
     $('#mySelection thead tr:eq(0) th').each( function () {
         var title = $(this).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" class="column_search" />' );
+        $(this).html( '<input type="text" placeholder="Find by '+title+'" class="column_search" />' );
     }); //End of second row header input
       
       //Apply Buttons
