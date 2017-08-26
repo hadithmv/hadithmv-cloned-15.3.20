@@ -47,7 +47,7 @@ $(document).ready(function() {
       "data": data,
       "columns": columns,
       "order": [[0, "asc"]], //display order on column
-      "pagingType": "simple",
+      "pagingType": "full",
       "lengthMenu": [ 1, 2, 3, 5, 10 ], //display range of pages
       "language": {"search": "Search hadithmv.github.io  "},
        
