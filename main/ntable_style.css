@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Faruma;
-    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf) format("opentype");
+    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf);
 }
 
 @font-face {
@@ -28,7 +28,7 @@ table.dataTable tbody td { vertical-align: top; }
 
 /*aligns and directs text in select columns, sets fonts*/
 .dataTable tbody td.col_1 {
-    text-align: center !important;
+    text-align: center;
     font-weight: bold; }
 .dataTable tbody td.col_2 {
     text-align: center;
