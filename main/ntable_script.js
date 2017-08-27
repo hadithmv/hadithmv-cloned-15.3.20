@@ -36,6 +36,45 @@ $(document).ready(function() {
       
      // Add header to table
   $("#mySelection").append('<thead><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></thead>'); //End of add header
+    
+    
+    //Accent neutralize
+$.fn.DataTable.ext.type.search.string = function ( data ) {
+    return ! data ?
+        '' :
+        typeof data === 'string' ?
+            data
+                .replace( /([^\u0621-\u063A\u0641-\u064A\u0660-\u0669a-zA-Z 0-9])/g, '')
+                .replace(/(آ|إ|أ)/g, 'ا')
+                .replace(/(ة)/g, 'ه')
+                .replace(/(ئ|ؤ)/g, 'ء')
+                .replace(/(ى)/g, 'ي')
+                .replace( /έ/g, 'ε' )
+                .replace( /[ύϋΰ]/g, 'υ' )
+                .replace( /ό/g, 'ο' )
+                .replace( /ώ/g, 'ω' )
+                .replace( /ά/g, 'α' )
+                .replace( /[ίϊΐ]/g, 'ι' )
+                .replace( /ή/g, 'η' )
+                .replace( /\n/g, ' ' )
+                .replace( /á/g, 'a' )
+                .replace( /é/g, 'e' )
+                .replace( /í/g, 'i' )
+                .replace( /ó/g, 'o' )
+                .replace( /ú/g, 'u' )
+                .replace( /ê/g, 'e' )
+                .replace( /î/g, 'i' )
+                .replace( /ô/g, 'o' )
+                .replace( /è/g, 'e' )
+                .replace( /ï/g, 'i' )
+                .replace( /ü/g, 'u' )
+                .replace( /ã/g, 'a' )
+                .replace( /õ/g, 'o' )
+                .replace( /ç/g, 'c' )
+                .replace( /ì/g, 'i' ) :
+            data;
+};
+//End of Accent neutralize
 
 
     //initialize the DataTable object and put settings in
