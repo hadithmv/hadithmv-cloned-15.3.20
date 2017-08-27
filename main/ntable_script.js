@@ -140,14 +140,26 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       //Apply Buttons
       table.buttons().container()
         .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); //End of buttons
-      
-      //Apply the header search event handler
+    
+      // Remove accented character from global search input 
+      $('#mySelection_filter input').keyup( function () {
+        table
+          .search(
+            $.fn.DataTable.ext.type.search.string( this.value )
+          )
+          .draw()
+      } ); 
+      // End of Remove accented characters from global search input
+      
+      //Apply the header individual column search event handler
     $( '#mySelection thead'  ).on( 'keyup', ".column_search",function () {
         table
             .column( $(this).parent().index() )
-            .search( this.value )
+            .search(
+            $.fn.DataTable.ext.type.search.string( this.value )
+          )
             .draw();
-          }); //End of search handler
+          }); //End of individual column search handler
       
   }
 });
