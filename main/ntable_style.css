@@ -35,9 +35,9 @@ table.dataTable tbody td { vertical-align: top; }
     text-align: center;
     text-style: italic; } 
 .dataTable tbody tr td:nth-child(5)  {
-    text-align: justify;
-    direction: rtl;
+    direction: rtl;
     unicode-bidi:bidi-override;
+    text-align: justify;
     font-family: MVWaheed, Faruma, Dhivehi; }
 
 /* corrects display for these particular columns  */
