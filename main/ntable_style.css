@@ -33,7 +33,14 @@ table.dataTable tbody td { vertical-align: top; }
     font-weight: bold; }
 .dataTable tbody tr td:nth-child(2)  {
     text-align: center;
-    text-style: italic; } /* corrects display for these particular columns  */
+    text-style: italic; } 
+.dataTable tbody tr td:nth-child(5)  {
+    text-align: justify;
+    direction: rtl;
+    unicode-bidi:bidi-override;
+    font-family: MVWaheed, Faruma, Dhivehi; }
+
+/* corrects display for these particular columns  */
 .dataTable tbody tr td:nth-child(3) {
     text-align: justify; 
     direction: rtl; }
