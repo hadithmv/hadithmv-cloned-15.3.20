@@ -39,7 +39,7 @@ table.dataTable tbody td { vertical-align: top; }
     unicode-bidi:bidi-override;
     text-align: justify; }
 .dataTable tbody tr td:nth-child(4)  {
-    text-align: justify;
+    text-align: justify; }
 .dataTable tbody tr td:nth-child(5)  {
     direction: rtl;
     unicode-bidi:bidi-override;
