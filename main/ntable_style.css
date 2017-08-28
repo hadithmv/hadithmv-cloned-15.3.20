@@ -39,8 +39,7 @@ table.dataTable tbody td { vertical-align: top; }
     text-align: center;
     font-weight: bold; }
 .dataTable tbody td.col_2 {
-    text-align: center;
-    text-style: italic; }
+    text-align: center; }
 .dataTable tbody td.col_3 {
     text-align: justify; 
     direction: rtl; }
