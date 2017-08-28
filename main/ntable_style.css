@@ -26,8 +26,8 @@ thead input { width: 100%; }
 /*vertically aligns column text to top*/
 table.dataTable tbody td { vertical-align: top; }
 
-/*aligns and directs text in select columns, sets fonts*/
 
+/* corrects display for these particular columns including print */
 .dataTable tbody tr td:nth-child(1)  {
     text-align: center;
     font-weight: bold; }
@@ -36,9 +36,8 @@ table.dataTable tbody td { vertical-align: top; }
     text-style: italic; } 
 .dataTable tbody tr td:nth-child(3)  {
     direction: rtl;
-    unicode-bidi:bidi-override;
-    text-align: justify;
-    font-family: MVWaheed, Faruma, Dhivehi; }
+    unicode-bidi:bidi-override;
+    text-align: justify; }
 .dataTable tbody tr td:nth-child(4)  {
     text-align: justify; }
 .dataTable tbody tr td:nth-child(5)  {
@@ -47,9 +46,9 @@ table.dataTable tbody td { vertical-align: top; }
     text-align: justify;
     font-family: MVWaheed, Faruma, Dhivehi; }
 
-/* corrects display for these particular columns  */
 
 
+/*aligns and directs text in select columns, sets fonts, did not work for print*/
 .dataTable tbody td.col_1 {
     text-align: center;
     font-weight: bold; }
