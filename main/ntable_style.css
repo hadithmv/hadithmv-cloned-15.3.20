@@ -27,6 +27,14 @@ thead input { width: 100%; }
 table.dataTable tbody td { vertical-align: top; }
 
 /*aligns and directs text in select columns, sets fonts*/
+
+.dataTable tbody tr td:nth-child(1)  {
+    text-align: center;
+    font-weight: bold; }
+.dataTable tbody tr td:nth-child(2)  {
+    text-align: center;
+    text-style: italic; } /* corrects display for these particular columns  */
+
 .dataTable tbody td.col_1 {
     text-align: center;
     font-weight: bold; }
