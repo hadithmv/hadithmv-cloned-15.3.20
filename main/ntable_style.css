@@ -26,6 +26,11 @@ thead input { width: 100%; }
 /*vertically aligns column text to top*/
 table.dataTable tbody td { vertical-align: top; }
 
+/*top and botton margin spacing between cells*/
+.dataTable td { 
+    margin: 15px 0;}
+
+
 
 /* corrects display for these particular columns including print */
 .dataTable tbody tr td:nth-child(1)  {
@@ -45,27 +50,3 @@ table.dataTable tbody td { vertical-align: top; }
     unicode-bidi:bidi-override;
     text-align: justify;
     font-family: MVWaheed, Faruma, Dhivehi; }
-
-
-
-/*aligns and directs text in select columns, sets fonts, did not work for print*/
-.dataTable tbody td.col_1 {
-    text-align: center;
-    font-weight: bold; }
-.dataTable tbody td.col_2 {
-    text-align: center; }
-.dataTable tbody td.col_3 {
-    text-align: justify; 
-    direction: rtl; }
-.dataTable tbody td.col_4 {
-    text-align: justify; }
-.dataTable tbody td.col_5 {
-    text-align: justify;
-    direction: rtl;
-    unicode-bidi:bidi-override;
-    font-family: MVWaheed, Faruma, Dhivehi;
-}
-
-/*top and botton margin spacing between cells*/
-.dataTable td { 
-    margin: 15px 0;}
