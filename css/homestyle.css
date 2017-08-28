@@ -14,3 +14,7 @@
     src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
 }
 /* === === FONT FACES END === === */
+
+body{
+    margin:0;
+}
