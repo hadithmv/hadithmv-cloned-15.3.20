@@ -117,10 +117,6 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
                   }, //end of excel
                   {extend: 'print',
                   text: '<i class="fa fa-print"></i>',
-                  customize: function (win){
-                    $(win.document.body).find(' td:nth-child(3)').css('text-align', 'right');
-                    $(win.document.body).find(' td:nth-child(5)').css('text-align', 'right');
-                  }, //fixes print right align
                   exportOptions: {columns: [':visible'],
                                   rows: [':visible']   }
                   }, //end of print
