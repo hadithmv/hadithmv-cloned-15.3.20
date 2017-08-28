@@ -18,7 +18,11 @@
 
 /* === FONT FACES END === */
 
-
+/*hides table headers*/
+thead tr:nth-child(2) {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important; }
 
 /*fit search boxes within columns*/
 thead input { width: 100%; }
