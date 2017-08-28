@@ -34,6 +34,17 @@ table.dataTable tbody td { vertical-align: top; }
 .dataTable tbody tr td:nth-child(2)  {
     text-align: center;
     text-style: italic; } /* corrects display for these particular columns  */
+.dataTable tbody tr td:nth-child(3) {
+    text-align: justify; 
+    direction: rtl; }
+.dataTable tbody tr td:nth-child(4) {
+    text-align: justify; }
+.dataTable tbody tr td:nth-child(5)
+    text-align: justify;
+    direction: rtl;
+    unicode-bidi:bidi-override;
+    font-family: MVWaheed, Faruma, Dhivehi;
+}
 
 .dataTable tbody td.col_1 {
     text-align: center;
