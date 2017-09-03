@@ -153,25 +153,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
         }, {
             key: "createDiacriticsRegExp",
-            value: function createDiacriticsRegExp(str) {
-                var sens = this.opt.caseSensitive ? "" : "i",
-                    dct = this.opt.caseSensitive ? ["aàáâãäåāąă", "AÀÁÂÃÄÅĀĄĂ", "cçćč", "CÇĆČ", "dđď", "DĐĎ", "eèéêëěēę", "EÈÉÊËĚĒĘ", "iìíîïī", "IÌÍÎÏĪ", "lł", "LŁ", "nñňń", "NÑŇŃ", "oòóôõöøō", "OÒÓÔÕÖØŌ", "rř", "RŘ", "sšśșş", "SŠŚȘŞ", "tťțţ", "TŤȚŢ", "uùúûüůū", "UÙÚÛÜŮŪ", "yÿý", "YŸÝ", "zžżź", "ZŽŻŹ"] : ["aàáâãäåāąăAÀÁÂÃÄÅĀĄĂ", "cçćčCÇĆČ", "dđďDĐĎ", "eèéêëěēęEÈÉÊËĚĒĘ", "iìíîïīIÌÍÎÏĪ", "lłLŁ", "nñňńNÑŇŃ", "oòóôõöøōOÒÓÔÕÖØŌ", "rřRŘ", "sšśșşSŠŚȘŞ", "tťțţTŤȚŢ", "uùúûüůūUÙÚÛÜŮŪ", "yÿýYŸÝ", "zžżźZŽŻŹ", "\u064b\u064c\u064d\u064e\u064f\u0650\u0651\u0652\u0653\u0654\u0655", "اآأإ", "یيئ","هةۀ", "وؤ"];
-                var handled = [];
-                str.split("").forEach(function (ch) {
-                    dct.every(function (dct) {
-                        if (dct.indexOf(ch) !== -1) {
-                            if (handled.indexOf(dct) > -1) {
-                                return false;
-                            }
-
-                            str = str.replace(new RegExp("[" + dct + "]", "gm" + sens), "[" + dct + "]");
-                            handled.push(dct);
-                        }
-                        return true;
-                    });
-                });
-                return str;
+            value: function createDiacriticsRegExp(str) 
+{
+    var sens = this.opt.caseSensitive ? "" : "i",
+        dct = this.opt.caseSensitive ? ["aàáâãäåāąă", "AÀÁÂÃÄÅĀĄĂ", "cçćč", "CÇĆČ", "dđď", "DĐĎ", "eèéêëěēę", "EÈÉÊËĚĒĘ", "iìíîïī", "IÌÍÎÏĪ", "lł", "LŁ", "nñňń", "NÑŇŃ", "oòóôõöøō", "OÒÓÔÕÖØŌ", "rř", "RŘ", "sšśșş", "SŠŚȘŞ", "tťțţ", "TŤȚŢ", "uùúûüůū", "UÙÚÛÜŮŪ", "yÿý", "YŸÝ", "zžżź", "ZŽŻŹ"] : ["aÀÁÂÃÄÅàáâãäåĀāąĄăĂ", "cÇçćĆčČ", "dđĐďĎ", "eÈÉÊËèéêëěĚĒēęĘ", "iÌÍÎÏìíîïĪī", "lłŁ", "nÑñňŇńŃ", "oÒÓÔÕÖØòóôõöøŌō", "rřŘ", "sŠšśŚșȘşŞ", "tťŤțȚţŢ", "uÙÚÛÜùúûüůŮŪū", "yŸÿýÝ", "zŽžżŻźŹ", "\u064b\u064c\u064d\u064e\u064f\u0650\u0651\u0652\u0653\u0654\u0655", "اآأإ", "یيئ","هةۀ", "وؤ","کك"];
+    var handled = [];
+    str.split("").forEach(function (ch) {
+        dct.every(function (dct) {
+            if (dct.indexOf(ch) !== -1) {
+                if (handled.indexOf(dct) > -1) {
+                    return false;
+                }
+                str = str.replace(new RegExp("[" + dct + "]", "gm" + sens), "[" + dct + "]");
+                handled.push(dct);
             }
+            return true;
+        });
+    });
+    return str;
+}
         }, {
             key: "createMergedBlanksRegExp",
             value: function createMergedBlanksRegExp(str) {
