@@ -1,0 +1,23 @@
+:root {
+  --mdc-theme-primary: #337AB7 !important;
+  --mdc-theme-secondary: #337AB7;
+  --mdc-theme-background: #000;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+ .mdc-layout-grid__cell {
+     display: flex;
+}
+
+ .mdc-card {
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     background-color: #fff;
+}
