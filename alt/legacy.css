@@ -1,0 +1,314 @@
+
+/* === FONT FACES === */
+@font-face {
+    font-family: Faruma;
+    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf) format("opentype");
+}
+
+@font-face {
+    font-family: MVWaheed;
+    src: url(https://dhivehi.mv/fonts/data/df/MVWaheed.otf);
+}
+
+@font-face {
+    font-family: Dhivehi;
+    src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
+}
+/* === FONT FACES END === */
+
+
+html{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Calibri';
+    font-size: 13pt;
+    background-color: #efefef;
+    padding: 10px;
+    margin: 0;
+}
+h1 {
+    font-size: 11pt;
+    color: #3289AA;
+    text-align: center;
+    padding: 18px 0 18px 0;
+    margin: 0 0 10px 0;
+}
+h1 span {
+    border: 3px solid #3289AA;
+    padding: 10px;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+.top-logo {
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.section {
+    background-color: #fff;
+    padding: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#header {
+    margin-top: 80px;
+    padding: 15px
+    
+}
+#header img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+#header p {
+    font-size: 25pt;
+    color: #3b464c;
+    padding-top: 5px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 2px solid #cecece;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}
+.selected {
+    background-color: #f36f48;
+    font-weight: bold;
+    color: white;
+}
+li {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+progress {
+    width: 90%
+    color: #3fb6b2;
+    background: #efefef;
+}
+progress::-webkit-progress-bar {
+    background: #efefef;
+}
+progress::-webkit-progress-value {
+    background: #3289AA;
+} 
+progress::-moz-progress-bar {
+    color: #3fb6b2;
+    background: #efefef;
+}
+iframe, audio {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #3289AA;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #f36f48;
+}
+form {
+    text-align: center;
+    margin-top: 0;
+}
+.submit {
+    background-color: #3fb6b2;
+    padding: 12px 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    margin: 0;
+    font-weight: bold;
+}
+.submit:hover {
+    background-color: #43a09d;
+}
+textarea {
+    height: 100px;
+}
+input, textarea {
+    margin-bottom: 10px;
+    font-size: 11pt;
+    padding: 15px 10px 10px;
+    border: 1px solid #cecece;
+    background-color: #efefef;
+    color: #787575;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+}
+.face {
+    transform: scale(0.4);
+    margin: 0 auto;
+    display: block;
+    margin-top: -35px;
+    margin-bottom: -25px;
+}
+#contacts img {
+    height: 50px;
+    width: 50px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+#contacts a {
+    text-decoration: none;
+}
+#contacts img:hover {
+    opacity: 0.8;
+}
+#contacts {
+    text-align: center;
+}
+.footer {
+    font-size: 10pt;
+    text-align: center;
+    padding: 3px;
+    color: grey;
+    margin-top: 30px;
+}
+
+/*========{Spinner animation*/
+
+
+.loading-circle {
+ height: 160px;
+ margin: 0px auto;
+ position: relative;
+ width: 160px;
+}
+
+.bottom-logo:after {
+ content: url("https://cdn.rawgit.com/hadithmv/hadithmv.github.io/6046363d/img/logo2.svg");
+ transform: scale(.08);
+ display: block ;
+ margin: -104px -14px;
+ position: absolute;
+ text-align: center;
+ top: 50%;
+ width: 50%;
+ height: 100px;
+    }
+.circle1 {
+ background-color: #efefef;
+ border: 5px solid;
+ border-color: #3289AA transparent;
+ border-radius: 50%;
+ -webkit-box-shadow: 0px 0px 16px #3289AA;
+ -moz-box-shadow: 0px 0px 16px #3289AA;
+ box-shadow: 0px 0px 16px #3289AA;
+ height: 100%;
+ left: 0px;
+ position: absolute;
+ top: 0px;
+ width: 100%;
+}
+.circle2 {
+ background-color: #fff;
+ border: 5px solid;
+ border-color: #3289AA transparent;
+ border-radius: 50%;
+ -webkit-box-shadow: 0px 0px 16px #3289AA;
+ -moz-box-shadow: 0px 0px 16px #3289AA;
+ box-shadow: 0px 0px 16px #3289AA;
+ height: 80%;
+ left: 10%;
+ position: absolute;
+ top: 10%;
+ width: 80%
+ 
+}
+
+.rotate-right {
+ -webkit-animation: rotate 2s linear 0s infinite reverse;
+ -moz-animation: rotate 2s linear 0s infinite reverse;
+ animation: rotate 2s linear 0s infinite reverse;
+}
+.rotate-left {
+ -webkit-animation: rotate 2s linear 0s infinite normal;
+ -moz-animation: rotate 2s linear 0s infinite normal;
+ animation: rotate 2s linear 0s infinite normal;
+}
+
+@-webkit-keyframes rotate {
+ from {
+  -webkit-transform: rotate(0deg);
+ }
+ to {
+  -webkit-transform: rotate(360deg);
+ }
+}
+@-moz-keyframes rotate {
+ from {
+  -moz-transform: rotate(0deg);
+ }
+ to {
+  -moz-transform: rotate(360deg);
+ }
+}
+@keyframes rotate {
+ from {
+  transform: rotate(0deg);
+ }
+ to {
+  transform: rotate(360deg);
+ }
+}
+
+/* ====== THROBBER ===== */
+.throbber {
+  width: 80px;
+  height: 80px;
+
+  position: relative;
+  margin: -80px auto;
+    animation: fadein 4s;}
+
+  @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #3289AA;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
