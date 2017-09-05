@@ -19,7 +19,7 @@ body {
      flex-direction: column;
      width: 100%;
      align-items: center;
-     justify-content: justify;
+     justify-content: center;
      text-align: center;
      background-color: #fff;
 }
