@@ -15,10 +15,9 @@ body {
  .mdc-card {
      display: flex;
      flex-wrap: wrap;
-   	flex: 1 0 auto;
-     flex-direction: column;
      width: 100%;
      align-items: center;
      justify-content: center;
+     text-align: center;
      background-color: #fff;
 }
