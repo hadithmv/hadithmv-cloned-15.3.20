@@ -2,9 +2,9 @@
 
 @import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/f86e731b/fonts/ar/reg/JF-Flat-regular.ttf);
 
-@import url(//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/KacstOne.ttf);
 
-@import url(//fonts.googleapis.com/earlyaccess/thabit.css);
+@import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/PDMS_Saleem_QuranFont-signed.ttf);
 
 @import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
 
@@ -49,19 +49,19 @@
 
 
 df1 {
-   font-family: 'Noto Naskh Arabic';
+   font-family: 'AraJozoor-Regular';
 }
 
 df2 {
-   font-family: 'Noto Naskh Arabic UI';
+   font-family: 'JF-Flat-regular';
 }
 
 df3 {
-   font-family: 'Droid Arabic Naskh';
+   font-family: 'KacstOne';
 }
 
 df4 {
-   font-family: 'Thabit';
+   font-family: 'PDMS_Saleem_QuranFont-signed';
 }
 
 df5 {
