@@ -4,7 +4,7 @@
 } /* 1 */
 
 @font-face {
-    font-family: JF Flat;
+    font-family: JFFlat;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/JF-Flat-regular.ttf);
 } /* 2 */
 
@@ -14,83 +14,83 @@
 } /* 3 */
 
 @font-face {
-    font-family: PDMS Saleem;
+    font-family: PDMSSaleem;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/PDMS_Saleem_QuranFont-signed.ttf);
 } /* 4 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: QURSTD;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/QUR_STD.TTF);
 } /* 5 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: UthmanicHafs1;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/UthmanicHafs1%20Ver09.otf);
 } /* 6 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: UthmanTN1;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/UthmanTN1%20Ver10.otf);
 } /* 7 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: UthmanTN1B;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/UthmanTN1B%20Ver10.otf);
 } /* 8 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: ALHAWE;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/ar-ALHAWE_QURAN.ttf);
 } /* 9 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: arOthmani;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/ar-Othmani.ttf);
 } /* 10 */
 
 
 @font-face {
-    font-family: Faruma;
+    font-family: arQuran1;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/ar-Quran1.ttf);
 } /* 11 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: arabeyesqr;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/arabeyes-qr.ttf);
 } /* 12 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: maddina;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/maddina.ttf);
 } /* 13 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: mequran;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/me_quran.ttf);
 } /* 14 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: mequranmark2;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/me_quran_volt_mark2.ttf);
 } /* 15 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: mequrannewmet;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/me_quran_volt_newmet.ttf);
 } /* 16 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: nazlib;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/nazlib.ttf);
 } /* 17 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: noorehidayat;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/noorehidayat.ttf);
 } /* 18 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: noorehira;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/noorehira.ttf);
 } /* 19 */
 
@@ -105,7 +105,7 @@ df1 {
 }
 
 df2 {
-   font-family: 'JF Flat';
+   font-family: 'JFFlat';
 }
 
 df3 {
@@ -113,83 +113,68 @@ df3 {
 }
 
 df4 {
-   font-family: 'PDMS Saleem';
+   font-family: 'PDMSSaleem';
 }
 
 df5 {
-   font-family: 'Noto Kufi Arabic';
+   font-family: 'QURSTD';
 }
 
 df6 {
-   font-family: 'Droid Arabic Kufi';
+   font-family: 'UthmanicHafs1';
 }
 df7 {
-   font-family: 'Cairo';
+   font-family: 'UthmanTN1';
 }
 
 df8 {
-   font-family: 'Amiri';
+   font-family: 'UthmanTN1B';
 }
 
 df9 {
-   font-family: 'Changa';
+   font-family: 'ALHAWE';
 }
 
 df10 {
-   font-family: 'Lateef';
+   font-family: 'arOthmani';
 }
 
 df11 {
-   font-family: 'Reem Kufi';
+   font-family: 'arQuran1';
 }
 
 df12 {
-   font-family: 'Lalezar';
+   font-family: 'arabeyesqr';
 }
 
 df13 {
-   font-family: 'Scheherazade';
+   font-family: 'maddina';
 }
 
 df14 {
-   font-family: 'Baloo Bhaijaan';
+   font-family: 'mequran';
 }
 
 df15 {
-   font-family: 'Lemonada';
+   font-family: 'mequranmark2';
 }
 
 df16 {
-   font-family: 'Mada';
+   font-family: 'mequrannewmet';
 }
 
 df17 {
-   font-family: 'El Messiri';
+   font-family: 'nazlib';
 }
 
 df18 {
-   font-family: 'Harmattan';
+   font-family: 'noorehidayat';
 }
 
 df19 {
-   font-family: 'Aref Ruqaa';
+   font-family: 'noorehira';
 }
 
-df20 {
-   font-family: 'Mirza';
-}
-
-df21 {
-   font-family: 'Rakkas';
-}
-
-df22 {
-   font-family: 'Katibeh';
-}
-
-df23 {
-   font-family: 'Jomhuria';
-}
 
 /* ==== /FONT NAMES === */
 
