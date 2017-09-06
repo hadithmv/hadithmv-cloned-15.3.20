@@ -1,20 +1,20 @@
 @font-face {
-    font-family: Faruma;
+    font-family: AraJozoor;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/f86e731b/fonts/ar/reg/AraJozoor-Regular.ttf);
 } /* 1 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: JF Flat;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/JF-Flat-regular.ttf);
 } /* 2 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: KacstOne;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/KacstOne.ttf);
 } /* 3 */
 
 @font-face {
-    font-family: Faruma;
+    font-family: PDMS Saleem;
     src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/PDMS_Saleem_QuranFont-signed.ttf);
 } /* 4 */
 
@@ -101,11 +101,11 @@
 
 
 df1 {
-   font-family: 'AraJozoor-Regular';
+   font-family: 'AraJozoor';
 }
 
 df2 {
-   font-family: 'JF-Flat-regular';
+   font-family: 'JF Flat';
 }
 
 df3 {
@@ -113,7 +113,7 @@ df3 {
 }
 
 df4 {
-   font-family: 'PDMS_Saleem_QuranFont-signed';
+   font-family: 'PDMS Saleem';
 }
 
 df5 {
