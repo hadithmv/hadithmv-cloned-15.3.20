@@ -30,6 +30,20 @@
 
 @import url('https://fonts.googleapis.com/css?family=Mada');
 
+@import url('https://fonts.googleapis.com/css?family=El+Messiri');
+
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
+
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+
+@import url('https://fonts.googleapis.com/css?family=Mirza');
+
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
+
+@import url('https://fonts.googleapis.com/css?family=Katibeh');
+
+@import url('https://fonts.googleapis.com/css?family=Jomhuria');
+
 @font-face {
     font-family: Elaaf;
     src: url(https://dhivehi.mv/fonts/data/df/Mv_Elaaf_Normal.otf);
@@ -103,15 +117,35 @@ df16 {
 }
 
 df17 {
-   font-family: 'Lalezar';
+   font-family: 'El Messiri';
 }
 
 df18 {
-   font-family: 'Lalezar';
+   font-family: 'Harmattan';
 }
 
 df19 {
-   font-family: Elaaf;
+   font-family: 'Aref Ruqaa';
+}
+
+df20 {
+   font-family: 'Mirza';
+}
+
+df21 {
+   font-family: 'Rakkas';
+}
+
+df22 {
+   font-family: 'Katibeh';
+}
+
+df21 {
+   font-family: 'Jomhuria';
+}
+
+df23 {
+   font-family: elaaf;
 }
 
 
@@ -122,7 +156,7 @@ df19 {
 
 
 a:after{
-content: "ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިސްކޮށްފައިވާ ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.";
+content: "عَنْ أَمِيرِ الْمُؤْمِنِينَ أَبِي حَفْصٍ عُمَرَ بْنِ الْخَطَّابِ رضى الله عنه قَالَ: سَمِعْت رَسُولَ اللَّهِ ﷺ يَقُولُ: إنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إلَى اللَّهِ وَرَسُولِهِ، وَمَنْ كَانَتْ هِجْرَتُهُ لِدُنْيَا يُصِيبُهَا أَوْ امْرَأَةٍ يَنْكِحُهَا فَهِجْرَتُهُ إلَى مَا هَاجَرَ إلَيْهِ.";
 }
 
 
