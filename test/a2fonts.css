@@ -1,48 +1,104 @@
-@import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/f86e731b/fonts/ar/reg/AraJozoor-Regular.ttf);
+@font-face {
+    font-family: Faruma;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/f86e731b/fonts/ar/reg/AraJozoor-Regular.ttf);
+} /* 1 */
 
-@import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/f86e731b/fonts/ar/reg/JF-Flat-regular.ttf);
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 2 */
 
-@import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/KacstOne.ttf);
+@font-face {
+    font-family: Faruma;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/KacstOne.ttf);
+} /* 3 */
 
-@import url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/PDMS_Saleem_QuranFont-signed.ttf);
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 4 */
 
-@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 5 */
 
-@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 6 */
 
-@import url('https://fonts.googleapis.com/css?family=Cairo');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 7 */
 
-@import url('https://fonts.googleapis.com/css?family=Amiri');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 7 */
 
-@import url('https://fonts.googleapis.com/css?family=Changa');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 8 */
 
-@import url('https://fonts.googleapis.com/css?family=Lateef');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 9 */
 
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
 
-@import url('https://fonts.googleapis.com/css?family=Lalezar');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 10 */
 
-@import url('https://fonts.googleapis.com/css?family=Scheherazade');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 11 */
 
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 12 */
 
-@import url('https://fonts.googleapis.com/css?family=Lemonada');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 13 */
 
-@import url('https://fonts.googleapis.com/css?family=Mada');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 14 */
 
-@import url('https://fonts.googleapis.com/css?family=El+Messiri');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 15 */
 
-@import url('https://fonts.googleapis.com/css?family=Harmattan');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 16 */
 
-@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 17 */
 
-@import url('https://fonts.googleapis.com/css?family=Mirza');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 18 */
 
-@import url('https://fonts.googleapis.com/css?family=Rakkas');
+@font-face {
+    font-family: Faruma;
+    src: url(mmm);
+} /* 19 */
 
-@import url('https://fonts.googleapis.com/css?family=Katibeh');
-
-@import url('https://fonts.googleapis.com/css?family=Jomhuria');
 
 
 /* === /FONT FACES === */
