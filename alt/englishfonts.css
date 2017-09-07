@@ -18,6 +18,36 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
 /* === /FONT FACES === */
 
 
@@ -62,55 +92,63 @@ df10 {
 }
 
 df11 {
-   font-family: 'Reem Kufi';
+   font-family: 'Montserrat';
 }
 
 df12 {
-   font-family: 'Lalezar';
+   font-family: 'Source Sans Pro';
 }
 
 df13 {
-   font-family: 'Scheherazade';
+   font-family: 'Raleway';
 }
 
 df14 {
-   font-family: 'Baloo Bhaijaan';
+   font-family: 'PT Sans';
 }
 
 df15 {
-   font-family: 'Lemonada';
+   font-family: 'Roboto Slab';
 }
 
 df16 {
-   font-family: 'Mada';
+   font-family: 'Merriweather';
 }
 
 df17 {
-   font-family: 'El Messiri';
+   font-family: 'Open Sans Condensed';
 }
 
 df18 {
-   font-family: 'Harmattan';
+   font-family: 'Lora';
 }
 
 df19 {
-   font-family: 'Aref Ruqaa';
+   font-family: 'Ubuntu';
 }
 
 df20 {
-   font-family: 'Mirza';
+   font-family: 'Arimo';
 }
 
 df21 {
-   font-family: 'Rakkas';
+   font-family: 'Titillium Web';
 }
 
 df22 {
-   font-family: 'Katibeh';
+   font-family: 'Poppins';
 }
 
 df23 {
-   font-family: 'Jomhuria';
+   font-family: 'Muli';
+}
+
+df24 {
+   font-family: 'Bitter';
+}
+
+df25 {
+   font-family: 'Dosis';
 }
 
 /* ==== /FONT NAMES === */
