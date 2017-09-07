@@ -1,90 +1,64 @@
-@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto')
 
-@import url(//fonts.googleapis.com/earlyaccess/notonaskharabicui.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-@import url(//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
-
-@import url(//fonts.googleapis.com/earlyaccess/thabit.css);
-
-@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
-
-@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
 
 @import url('https://fonts.googleapis.com/css?family=Cairo');
 
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 @import url('https://fonts.googleapis.com/css?family=Amiri');
 
-@import url('https://fonts.googleapis.com/css?family=Changa');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 
-@import url('https://fonts.googleapis.com/css?family=Lateef');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
-
-@import url('https://fonts.googleapis.com/css?family=Lalezar');
-
-@import url('https://fonts.googleapis.com/css?family=Scheherazade');
-
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
-
-@import url('https://fonts.googleapis.com/css?family=Lemonada');
-
-@import url('https://fonts.googleapis.com/css?family=Mada');
-
-@import url('https://fonts.googleapis.com/css?family=El+Messiri');
-
-@import url('https://fonts.googleapis.com/css?family=Harmattan');
-
-@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
-
-@import url('https://fonts.googleapis.com/css?family=Mirza');
-
-@import url('https://fonts.googleapis.com/css?family=Rakkas');
-
-@import url('https://fonts.googleapis.com/css?family=Katibeh');
-
-@import url('https://fonts.googleapis.com/css?family=Jomhuria');
-
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 /* === /FONT FACES === */
 
 
 df1 {
-   font-family: 'Noto Naskh Arabic';
+   font-family: 'Roboto';
 }
 
 df2 {
-   font-family: 'Noto Naskh Arabic UI';
+   font-family: 'Noto Sans';
 }
 
 df3 {
-   font-family: 'Droid Arabic Naskh';
+   font-family: 'Noto Serif';
 }
 
 df4 {
-   font-family: 'Thabit';
-}
-
-df5 {
-   font-family: 'Noto Kufi Arabic';
-}
-
-df6 {
-   font-family: 'Droid Arabic Kufi';
-}
-df7 {
    font-family: 'Cairo';
 }
 
-df8 {
+df5 {
+   font-family: 'Encode Sans Condensed';
+}
+
+df6 {
+   font-family: 'Lato';
+}
+
+df7 {
    font-family: 'Amiri';
 }
 
+df8 {
+   font-family: 'Slabo';
+}
+
 df9 {
-   font-family: 'Changa';
+   font-family: 'Roboto Condensed';
 }
 
 df10 {
-   font-family: 'Lateef';
+   font-family: 'Oswald';
 }
 
 df11 {
