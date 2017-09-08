@@ -1,8 +1,8 @@
 /* === FONT FACES === */
 
 @font-face {
-    font-family: MVAWaheed;
-    src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/mvawaheed-webfont.ttf);
+    font-family: Tharujamaanu Bold;
+    src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/Tharujamaanu-Bold.ttf);
 }
 
 @font-face {
@@ -50,4 +50,4 @@ table.dataTable tbody td { vertical-align: top; }
     direction: rtl;
     unicode-bidi:bidi-override;
     text-align: justify;
-    font-family: MVAWaheed, Faruma; }
+    font-family: Tharujamaanu Bold, Faruma; }
