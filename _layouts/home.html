@@ -33,27 +33,28 @@
 			
 @import url(//fonts.googleapis.com/earlyaccess/notonaskharabicui.css);
 		  @import url(//fonts.googleapis.com/earlyaccess/notosansthaana.css);
+			
+			
+@font-face {
+    font-family: Tharujamaanu Bold;
+    src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/Tharujamaanu-Bold.ttf);
 @font-face {
     font-family: MVAWaheed;
     src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/mvawaheed-webfont.ttf);
 }
 
-@font-face {
-    font-family: Faruma;
-    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf);
-}
 /* === === /FONT FACES === === */
 :lang(ar) {
 font-family: 'Noto Naskh Arabic UI', serif;
 direction: rtl;
 			}
 		  :lang(dv) {
-font-family: 'Noto Sans Thaana', sans-serif;
+font-family: 'Tharujamaanu Bold', 'Noto Sans Thaana', sans-serif;
 direction: rtl;
 		}
 
 body {
-font-family: 'Lato', 'Noto Naskh Arabic UI', 'Noto Sans Thaana', sans-serif;
+font-family: 'Lato', 'Noto Naskh Arabic UI', 'Tharujamaanu Bold', 'Noto Sans Thaana', sans-serif;
 }
 .flex-row {
 	display: flex;
