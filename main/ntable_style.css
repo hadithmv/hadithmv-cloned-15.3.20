@@ -2,13 +2,10 @@
 
 @font-face {
     font-family: Dhivehi;
-    src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
+    src: url(https://hadithmv.github.io/fonts/dv/Dhivehi.ttf);
 }
 
-@font-face {
-    font-family: Faruma;
-    src: url(https://dhivehi.mv/fonts/data/df/Faruma.otf);
-}
+@import url(//fonts.googleapis.com/earlyaccess/notosansthaana.css);
 
 
 /* === /FONT FACES === */
@@ -50,4 +47,4 @@ table.dataTable tbody td { vertical-align: top; }
     direction: rtl;
     unicode-bidi:bidi-override;
     text-align: justify;
-    font-family: Dhivehi, Faruma; }
+    font-family: Dhivehi, Noto Sans Thaana; }
