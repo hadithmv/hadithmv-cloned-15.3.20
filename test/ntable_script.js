@@ -131,6 +131,10 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       
    }); //End of DataTable initialize
     
+    $('#mySelection').DataTable( $.fn.dataTable.ext.deepLink( [
+    'search.search', 'order', 'displayStart'
+] ) );
+    
       // Setup - places the input (of each cell) in the first header row
     $('#mySelection thead tr:eq(0) th').each( function () {
         var title = $(this).text();
