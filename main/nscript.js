@@ -30,7 +30,7 @@ $(document).ready(function() {
   function writeTable(data) {
     
     //select main div and insert table into html
-     $('#ntableinsert').html(
+     $('#ntinsert').html(
       '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table table-condensed table-responsive" id="mySelection"></table>'
     ); //End of table insert
       
