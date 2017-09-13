@@ -26,9 +26,7 @@
 <style>
 /* === FONT FACES === */
 
-@import url(//fonts.googleapis.com/earlyaccess/notonaskharabicui.css);
-@import url(//fonts.googleapis.com/earlyaccess/notosansthaana.css);
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cairo|Lato" rel="stylesheet">
 @font-face {
     font-family: Dhivehi;
     src: url(https://hadithmv.github.io/fonts/dv/Dhivehi.ttf);
@@ -37,16 +35,20 @@
 /* === /FONT FACES === */
 
 :lang(ar) {
-    font-family: 'Noto Naskh Arabic UI', serif;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+		}
+:lang(en) {
+    font-family: 'Lato', sans-serif;
     direction: rtl;
 		}
 :lang(dv) {
-    font-family: 'Noto Sans Thaana', sans-serif;
+    font-family: 'Dhivehi', sans-serif;
     direction: rtl;
 		}
 
 body {
-    font-family: 'Lato', 'Noto Naskh Arabic UI', 'Noto Sans Thaana', sans-serif;
+    font-family: 'Lato', 'Cairo', 'Dhivehi', sans-serif;
 }
 
 .flex-row {
