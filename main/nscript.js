@@ -202,6 +202,9 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       } ); 
       // End of Remove accented characters from global search input
       
+    //Unstack Pagination
+    $('.ui, .stackable, .pagination, .menu').removeClass('stackable');
+    
       //Apply the header individual column search event handler
     $( '#mySelection thead'  ).on( 'keyup', ".column_search",function () {
         table
