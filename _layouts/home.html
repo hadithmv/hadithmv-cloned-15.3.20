@@ -101,12 +101,12 @@ table.dataTable tbody td { vertical-align: top; }
     <a class="item" data-tab="first">Home</a>
   <a class="item" data-tab="second">40 Nawawi</a>
   <a class="item" data-tab="third">Submissions</a>
-  <div class="ui dropdown item simple">
+  <div class="ui pointing dropdown link item ">
     Misc
     <i class="dropdown icon"></i>
     <div class="menu">
 
-        <div class="ui item simple">
+        <div class="ui item">
         Experimental
           <div class="menu">
            <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3</a>
@@ -306,6 +306,11 @@ table.dataTable tbody td { vertical-align: top; }
 
 /* PROGRESS */
 $('.progbar').progress();
+
+/* DROPDOWN */
+$('.ui.dropdown')
+  .dropdown()
+;
 
 /* DEFER IMAGES AND IFRAMES */
 var imgDefer = document.getElementsByTagName('img');
