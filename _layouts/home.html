@@ -25,14 +25,7 @@
 @font-face {  font-family: Tharujamaanu-Bold;  src: url(https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold.woff);  }
 /* === /FONT FACES === */
 
-.flex-text.t-ar { sans-serif;  text-align: justify; direction: rtl;  text-align-last: center; }
-
-.flex-text.t-en {  font-family: sans-serif;  text-align: justify  }
-
-.flex-text.t-dv {  font-family: 'Tharujamaanu-Bold', sans-serif;  text-align: justify;   direction: rtl;  }
-
-
-iframe { display: block;  background: #000;  border: none;  height: 95vh;  width: 100%;  text-align: center;  padding: 0;  margin: 0; }
+iframe { display: block;  border: none;  height: 95vh;  width: 100%;  padding: 0;  margin: 0; }
 
 /* === NINSERT CSS === */
 
@@ -95,18 +88,62 @@ table.dataTable tbody td { vertical-align: top; }
     font-size: 125%;
     line-height: 135%; }
 
+    .ui.inverted.top.attached.tabular.fitted.menu .item {padding: 0 10px 0 10px;}
+
 </style> <!-- === === === /EMBEDDED CSS === === === -->   
         </head>     
     <body>
-      
-<div class="ui inverted top attached tabular menu ">
+
+<div class="ui inverted top attached tabular fitted menu">
   <a class="item">
     <img class="logo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/whitelogo.svg" alt="" width="23" height="23" >
   </a>
     <a class="item" data-tab="first">Home</a>
   <a class="item" data-tab="second">40 Nawawi</a>
   <a class="item" data-tab="third">Submissions</a>
-</div> <!-- -->
+  <div class="ui dropdown item simple">
+    Misc
+    <i class="dropdown icon"></i>
+    <div class="menu">
+
+        <div class="ui item simple">
+        Experimental
+          <div class="menu">
+           <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3</a>
+           <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4</a>
+           <a class="item" href="https://hadithmv.github.io/alt/material">Material</a>
+           <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy</a>
+         </div>
+        </div> <!--/Experimental-->
+
+        <div class="ui item simple">
+        Fonts
+          <div class="menu">
+           <a class="item" href="https://hadithmv.github.io/alt/arabicfonts1">Arabic</a>
+           <a class="item" href="https://hadithmv.github.io/alt/arabicfonts2">Arabic 2</a>
+           <a class="item" href="https://hadithmv.github.io/alt/englishfonts">English</a>
+           <a class="item" href="https://hadithmv.github.io/alt/dhivehifonts">Dhivehi</a>
+         </div>
+        </div> <!--/Fonts-->
+
+                <div class="ui item simple">
+        Others
+          <div class="menu">
+           <a class="item" href="https://hadithmv.github.io/alt/atable">A Table</a>
+           <a class="item" href="https://hadithmv.github.io/alt/asheet">A Sheet</a>
+           <a class="item" href="https://hadithmv.github.io/alt/carousel">Carousel</a>
+         </div>
+        </div> <!--/Others-->
+
+      <!--disabled ==
+      <a class="item">Electronics</a>
+      <a class="item">Automotive</a>
+      <a class="item">Home</a>
+      == disabled-->
+    </div>
+  </div><!--//misc-->
+
+</div> <!--/menu-->
 
 <div class="ui bottom attached tab active" data-tab="first">
   
