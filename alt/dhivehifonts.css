@@ -9,6 +9,11 @@
 } /* 2 */
 
 @font-face {
+    font-family: MVJadheedh;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Jadheedh.ttf);
+} /* 2-0 */
+
+@font-face {
     font-family: MVAWaheed;
     src: url(https://hadithmv.github.io/fonts/dv/mvawaheed-webfont.ttf);
 } /* 2-1 */
@@ -85,7 +90,7 @@
 
 @font-face {
     font-family: AAvas;
-    src: url(https://hadithmv.github.io/fonts/dv/Faruma.otf);
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Jadheedh.ttf);
 } /* 15 */
 
 
@@ -101,6 +106,10 @@ df1 {
 
 df2 {
    font-family: MVWaheed;
+}
+
+df2-0 {
+   font-family: MVJadheedh;
 }
 
 df2-1 {
