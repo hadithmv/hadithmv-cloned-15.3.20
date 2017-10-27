@@ -151,7 +151,7 @@ min-height: 100%;
 
 </div> <!--/menu-->
 
-<div class="ui bottom attached tab active" data-tab="first">
+<div class="ui bottom attached tab active" data-tab="first" style="top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding: 0;">
   
 <div class="ui link raised centered three stackable cards" style="margin-top: 5px; padding-right: 14px; padding-left: 14px;">
 
@@ -468,7 +468,7 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       
       //append newline to end of each row. $ is column
       //subst += '\n';  //generic
-      subst = 'Hadith No: $1\n\nReference: $2\n\n$3\n\n$4\n\n$5\n\n';
+      subst = 'Hadith No: $1\n\nReference:$2\n\n$3\n\n$4\n\n$5\n\n';
       //console.log(JSON.stringify(subst));
       
       //remove trailing \t
