@@ -9,18 +9,33 @@
 } /* 2 */
 
 @font-face {
+    font-family: MVAWaheed;
+    src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/mvawaheed-webfont.ttf);
+} /* 2-1 */
+
+@font-face {
+    font-family: TharujamaanuLight;
+    src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/Tharujamaanu-Light.ttf);
+} /* 2-2 */
+
+@font-face {
+    font-family: TharujamaanuBold;
+    src: url(https://cdn.rawgit.com/maaldheefee/40-nawawi/374ce074/fonts/Tharujamaanu-Bold.ttf);
+} /* 2-3 */
+
+@font-face {
     font-family: Dhivehi;
     src: url(https://dhivehi.mv/fonts/data/df/Dhivehi.ttf);
 } /* 3 */
 
 @font-face {
-    font-family: Iyyu;
-    src: url(https://dhivehi.mv/fonts/data/df/Mv_Iyyu_Normal.otf);
+    font-family: MVTypewriter;
+    src: url(https://dhivehi.mv/fonts/data/df/mvtyper.ttf);
 } /* 4 */
 
 @font-face {
-    font-family: MVTypewriter;
-    src: url(https://dhivehi.mv/fonts/data/df/mvtyper.ttf);
+    font-family: Iyyu;
+    src: url(https://dhivehi.mv/fonts/data/df/Mv_Iyyu_Normal.otf);
 } /* 5 */
 
 @font-face {
@@ -80,16 +95,28 @@ df2 {
    font-family: MVWaheed;
 }
 
+df2-1 {
+   font-family: MVAWaheed;
+}
+
+df2-2 {
+   font-family: TharujamaanuLight;
+}
+
+df2-3 {
+   font-family: TharujamaanuBold;
+}
+
 df3 {
    font-family: Dhivehi;
 }
 
 df4 {
-   font-family: Iyyu;
+   font-family: MVTypewriter;
 }
 
 df5 {
-   font-family: MVTypewriter;
+   font-family: Iyyu;
 }
 
 df6 {
