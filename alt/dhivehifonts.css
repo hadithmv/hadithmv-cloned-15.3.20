@@ -83,9 +83,17 @@
     src: url(https://hadithmv.github.io/fonts/dv/midhilibold.ttf);
 } /* 14 */
 
+@font-face {
+    font-family: AAvas;
+    src: url(https://hadithmv.github.io/fonts/dv/A_Avas.ttf);
+} /* 15 */
+
 
 /* === /FONT FACES === */
 
+df15 {
+   font-family: AAvas;
+}
 
 df1 {
    font-family: Faruma;
@@ -149,6 +157,7 @@ df12 {
 df13 {
    font-family: MAGBold;
 }
+
 df14 {
    font-family: MidhiliBold;
 }
