@@ -264,7 +264,6 @@ min-height: 100%;
   </div> <!--/card-->
 
 
-
 </div> <!--//cards-->
 
 
@@ -327,43 +326,18 @@ if(vidDefer[i].getAttribute('data-src')) {
 vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
 } } 
 
-
-/* SEARCH ENGINE */
-  (function() {
-    var cx = '013964696037650862895:jlgz5hvcplw';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-
-/* FOCUS SEARCH INPUT */
-$('body').on('shown.bs.modal', '#searchModal', function () {
-    $('input:visible:enabled:first', this).focus();
-})
-
-
 </script>
 
 
-<!-- === NINSERT JS === -->
+<!-- === NINSERT JS === . . . -->
 <script type="text/javascript">
-//key
-var key =
-  "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
-
-//"data" is the sheets column name, no spaces, capitals, punctuation, numbers
-//"title" is rendered column header text
-
+var key="https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
 var columns =
 [ {"data":"no","title":"No."},
   {"data":"ref","title":"Ref:"},
   {"data":"arabic","title":"Arabic"},
   {"data":"english","title":"English"},
   {"data":"dhivehi","title":"Dhivehi"} ];
-
 $(document).ready(function() {
 
   function initializeTabletopObject() {
