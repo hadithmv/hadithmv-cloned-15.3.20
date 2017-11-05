@@ -287,7 +287,17 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Find by '+title+'" class="column_search" />' );
     }); // End of second row header input
-      
+
+            // Apply the header individual column search event handler
+    $( '#mySelection thead'  ).on( 'keyup', ".column_search",function () {
+        table
+            .column( $(this).parent().index() )
+            .search(
+            $.fn.DataTable.ext.type.search.string( this.value )
+          )
+            .draw();
+          }); // End of individual column search handler
+    
       // Apply Buttons
       table.buttons().container()
         .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
@@ -302,15 +312,7 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       } ); 
       // End of Remove accented characters from global search input
       
-      // Apply the header individual column search event handler
-    $( '#mySelection thead'  ).on( 'keyup', ".column_search",function () {
-        table
-            .column( $(this).parent().index() )
-            .search(
-            $.fn.DataTable.ext.type.search.string( this.value )
-          )
-            .draw();
-          }); // End of individual column search handler
+
       
   }
 }); // === === === end of writeTable
