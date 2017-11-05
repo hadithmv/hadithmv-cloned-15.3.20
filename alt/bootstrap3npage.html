@@ -141,20 +141,12 @@ background-color: #f4f7ff; }
 
 <!-- === INLINE JS === -->
 <script type="text/javascript">
-//key
-var key =
-  "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
-
-//"data" is the sheets column name, no spaces, capitals, punctuation, numbers
-//"title" is rendered column header text
-
-var columns =
+var key="https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true"; var columns =
 [ {"data":"no","title":"No."},
   {"data":"ref","title":"Ref:"},
   {"data":"arabic","title":"Arabic"},
   {"data":"english","title":"English"},
   {"data":"dhivehi","title":"Dhivehi"} ];
-
 $(document).ready(function() {
 
   function initializeTabletopObject() {
