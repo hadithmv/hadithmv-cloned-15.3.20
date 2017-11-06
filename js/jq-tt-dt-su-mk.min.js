@@ -1,5 +1,5 @@
 /*
- *   https://datatables.net/download/#se-2.2.13/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/b-html5-1.4.2/b-print-1.4.2
+ *   https://dt.net/download/#se-2.2.13/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/b-html5-1.4.2/b-print-1.4.2
  *
  *   S UI 2.2.13, jQuery 3 3.2.1, jQuery 3 3.2.1, JSZip 2.5.0, DT 1.10.16, Buttons 1.4.2, Column visibility 1.4.2, HTML5 export 1.4.2, Print view 1.4.2
  */
