@@ -38,7 +38,7 @@ thead tr:nth-child(2) {
   left: -9999px !important; }
 
 /*fit search boxes within columns*/
-thead input { width: 100%; min-width: 12px;}
+thead input { width: 100%; min-width: 12px; border-radius: .28571429rem; border: 1px solid rgba(34,36,38,.15); }
 
 /*vertically aligns column text to top*/
 table.dataTable tbody td { vertical-align: top; }
@@ -90,11 +90,18 @@ table.dataTable tbody td { vertical-align: top; }
     font-size: 125%;
     line-height: 140%; }
 
-    .ui.inverted.top.attached.link.fitted.menu .item {padding: 0 10px 0 10px;}
+    .ui.inverted.top.attached.link.fitted.menu .item {padding: 0 10px 0 10px;} /*home top and bottom*/
 
     /*
     .dataTables_filter input { width: auto }
     */
+
+    .ui.grid > .stackable.stackable.row > .column, .ui.stackable.grid > .column.grid > .column, .ui.stackable.grid > .column.row > .column, .ui.stackable.grid > .column:not(.row), .ui.stackable.grid > .row > .column, .ui.stackable.grid > .row > .wide.column, .ui.stackable.grid > .wide.column { padding: 0rem 1rem !important; } /*all round padding*/
+
+    .ui.menu {    box-shadow: none !important; } /*button menu*/
+
+    .ui.grid > .stackable.stackable.row > .column, .ui.stackable.grid > .column.grid > .column, .ui.stackable.grid > .column.row > .column, .ui.stackable.grid > .column:not(.row), .ui.stackable.grid > .row > .column, .ui.stackable.grid > .row > .wide.column, .ui.stackable.grid > .wide.column {
+    width: auto% !important; }
 
     html, body {
 width: 100%;
@@ -407,6 +414,7 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       "lengthMenu": [ 1, 3, 5, 10, 15 ], //display range of pages
       "language": {"search": "",
                   "searchPlaceholder": "Search Hadithmv . . .",
+                  "info": "Showing _START_ to _END_ of _TOTAL_ Hadith",
                    "lengthMenu": "_MENU_"}, //"search": "Search Hadithmv " //"Show _MENU_ entries" 
       "columnDefs": //classes columns for css except print
         [ { className: "col_1", "targets": [0] },
