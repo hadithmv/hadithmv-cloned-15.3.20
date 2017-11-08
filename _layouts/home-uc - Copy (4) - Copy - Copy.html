@@ -208,9 +208,9 @@ min-height: 100%;
         </div>
     <div class="content center aligned">
 
-      <div class="ui active progress" data-percent="74">
-        <div class="bar" style="width: 75%;">
-          <div class="progress">75%</div>
+      <div class="ui active progress" data-percent="80">
+        <div class="bar" style="width: 80%;">
+          <div class="progress">80%</div>
         </div>
           <div class="label">40 Nawawi</div>
         </div>
@@ -283,7 +283,7 @@ min-height: 100%;
 
 <footer style="margin-top: 2px">
     <div class="container">
-        <div class="description" style="padding-top: 5px; padding-bottom: 5px;border-top: 1px solid #eee; font-weight: bold; text-align: center;" >
+        <div onclick="myFooter()" class="description" style="padding-top: 5px; padding-bottom: 5px;border-top: 1px solid #eee; text-align: center;" >
 2017 hadithmv.github.io
   </div>
        </div>
@@ -317,6 +317,11 @@ min-height: 100%;
 <!-- === === ===INLINE JS === === === -->
 <script type="text/javascript">
 
+/*Footer ALert*/
+function myFooter() {
+    alert("صحيح البخاري 456: عَنْ عَائِشَةَ أَنَّ: رَسُولَ اللَّهِ ﷺ قال: مَا بَالُ أَقْوَامٍ يَشْتَرِطُونَ شُرُوطًا لَيْسَ فِي كِتَابِ اللَّهِ؟ مَنِ اشْتَرَطَ شَرْطًا لَيْسَ فِي كِتَابِ اللَّهِ فَلَيْسَ لَهُ، وَإِنِ اشْتَرَطَ مِائَةَ مَرَّةٍ.");
+                    }
+                    /* Narrated Aisha: Allah's Messenger ﷺ said: What is the matter witb people that they impose conditions which are not in the Book of Allah? Whoever imposes conditions which are not in the Book of Allah, his conditions will be invalid even if he imposed them a hundred times. */
 
 /* TAB */
   $('.menu .item')
@@ -410,11 +415,16 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       "columns": columns,
       "order": [[0, "asc"]], //display order on column
       "pagingType": "full",
-      "lengthMenu": [ 1, 3, 5, 10 ], //display range of pages
-      "language": {"search": "",
-                  "searchPlaceholder": "Search Hadithmv . . .",
-                  "info": "_START_ to _END_ of _TOTAL_ Hadith",
-                   "lengthMenu": "_MENU_"}, //"search": "Search Hadithmv " // "info": "Showing _START_ to _END_ of _TOTAL_ entries" //"Show _MENU_ entries" 
+      "lengthMenu": [ 1, 3, 5, 10, 15 ], //display range of pages
+      "language": {
+                  "buttons": {copyTitle: 'Copy',
+                              copySuccess: {  1: "Copied 1 Hadith",
+                                              _: "Copied %d Ahadith" }
+                             },
+                   "search": "",
+                   "searchPlaceholder": "Search Hadithmv . . .",
+                   "info": "Showing _START_ to _END_ of _TOTAL_ Hadith",
+                   "lengthMenu": "_MENU_"}, //"search": "Search Hadithmv " //"Show _MENU_ entries" 
       "columnDefs": //classes columns for css except print
         [ { className: "col_1", "targets": [0] },
           { className: "col_2", "targets": [1] },
@@ -459,6 +469,8 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
 
       "buttons": [
           {extend: 'copy',
+               key: { key: 'c',
+                      ctrlKey: true },
                text: 'Copy',
                messageTop: '40 Nawawi',
                title: 'hadithmv.github.io',
@@ -522,16 +534,22 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
      }, //end of copy
 
     {extend: 'excel',
+        key: { key: 'x',
+               shiftKey: true },
         text: 'Excel',
         exportOptions: {columns: [':visible'], rows: [':visible']}
      }, //end of excel
 
      {extend: 'print',
+        key: { key: 'p',
+               shiftKey: true },
          text: 'Print',
          exportOptions: {columns: [':visible'], rows: [':visible']}
       }, //end of print
 
      {extend: 'colvis',
+         key: { key: 'h',
+                shiftKey: true },
          text: 'Hide'} //end of colvis
 
       ], // === end of all buttons

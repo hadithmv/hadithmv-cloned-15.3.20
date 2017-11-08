@@ -410,11 +410,16 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       "columns": columns,
       "order": [[0, "asc"]], //display order on column
       "pagingType": "full",
-      "lengthMenu": [ 1, 3, 5, 10 ], //display range of pages
-      "language": {"search": "",
-                  "searchPlaceholder": "Search Hadithmv . . .",
-                  "info": "_START_ to _END_ of _TOTAL_ Hadith",
-                   "lengthMenu": "_MENU_"}, //"search": "Search Hadithmv " // "info": "Showing _START_ to _END_ of _TOTAL_ entries" //"Show _MENU_ entries" 
+      "lengthMenu": [ 1, 3, 5, 10, 15 ], //display range of pages
+      "language": {
+                  "buttons": {copyTitle: 'Copy',
+                              copySuccess: {  1: "Copied 1 Hadith",
+                                              _: "Copied %d Ahadith" }
+                             },
+                   "search": "",
+                   "searchPlaceholder": "Search Hadithmv . . .",
+                   "info": "Showing _START_ to _END_ of _TOTAL_ Hadith",
+                   "lengthMenu": "_MENU_"}, //"search": "Search Hadithmv " //"Show _MENU_ entries" 
       "columnDefs": //classes columns for css except print
         [ { className: "col_1", "targets": [0] },
           { className: "col_2", "targets": [1] },
@@ -459,6 +464,8 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
 
       "buttons": [
           {extend: 'copy',
+               key: { key: 'c',
+                      ctrlKey: true },
                text: 'Copy',
                messageTop: '40 Nawawi',
                title: 'hadithmv.github.io',
@@ -522,16 +529,22 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
      }, //end of copy
 
     {extend: 'excel',
+        key: { key: 'x',
+               shiftKey: true },
         text: 'Excel',
         exportOptions: {columns: [':visible'], rows: [':visible']}
      }, //end of excel
 
      {extend: 'print',
+        key: { key: 'p',
+               shiftKey: true },
          text: 'Print',
          exportOptions: {columns: [':visible'], rows: [':visible']}
       }, //end of print
 
      {extend: 'colvis',
+         key: { key: 'h',
+                shiftKey: true },
          text: 'Hide'} //end of colvis
 
       ], // === end of all buttons
