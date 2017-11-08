@@ -323,7 +323,7 @@ min-height: 100%;
 
 /*Help Alert*/
 function myHelp() {
-    alert("shift+c = Copy, shift+x = Excel, shift+p = Print, shift+h = Hide");
+    alert("ctrl+c = Copy, shift+x = Excel, shift+p = Print, shift+h = Hide");
                     }
 
 /*Footer Alert*/
@@ -398,14 +398,13 @@ $(document).ready(function() {
      // Add header to table
   $("#mySelection").append('<thead><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></thead>'); //End of add header
     
-    //Accent neutralize for search, latin+punc+digits  arab  thaan
-    //  .replace( /([^\u0621-\u063A\u0641-\u064A\u0660-\u0669 a-zA-Z 0-9 \u0780-\u07BF ])/g, '')
+    //Accent neutralize for search
 $.fn.DataTable.ext.type.search.string = function ( data ) {
     return ! data ?
         '' :
         typeof data === 'string' ?
             data
-                .replace( /([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
+                .replace( /([^\u0621-\u063A\u0641-\u064A\u0660-\u0669 a-zA-Z 0-9 \u0780-\u07BF ])/g, '')
                 .replace(/(آ|إ|أ)/g, 'ا')
                 .replace(/(ة)/g, 'ه')
                 .replace(/(ئ|ؤ)/g, 'ء')
@@ -480,7 +479,7 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
       "buttons": [
           {extend: 'copy',
                key: { key: 'c',
-                      shiftKey: true },
+                      ctrlKey: true },
                text: 'Copy',
                messageTop: '40 Nawawi',
                title: 'hadithmv.github.io',
