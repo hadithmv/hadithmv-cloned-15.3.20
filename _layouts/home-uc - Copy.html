@@ -332,6 +332,24 @@ function myFooter() {
                     }
                     /* Narrated Aisha: Allah's Messenger ﷺ said: What is the matter witb people that they impose conditions which are not in the Book of Allah? Whoever imposes conditions which are not in the Book of Allah, his conditions will be invalid even if he imposed them a hundred times. */
 
+/* FOCUS SEARCH INPUT */
+$('body').on('shown.bs.modal', '#mySelection_filter > label > input[type="search"]', function () {
+    $('input:visible:enabled:first', this).focus();
+})
+
+   $( document ).on( 'keydown', function ( e ) {
+      if ( e.keyCode === 119 ) { //ESC key code
+        //form.reset();
+        #mySelection_filter.value = '';
+        #mySelection_filter.focus();     
+        //aramaAlani.scrollIntoView();
+        //document.forms[ 'id_arama' ].elements[ _element ].focus();
+        //document.getElementById("id_search").focus();
+      }
+
+//
+//
+
 /* TAB */
   $('.menu .item')
   .tab()
@@ -545,7 +563,7 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
 
     {extend: 'excel',
         key: { key: 'x',
-               shiftKey: true },
+               shiftKey: true }, /*buttons.buttons.key*/
         text: 'Excel',
         exportOptions: {columns: [':visible'], rows: [':visible']}
      }, //end of excel
@@ -570,13 +588,6 @@ $.fn.DataTable.ext.type.search.string = function ( data ) {
         //"info": false
       
    }); // === === End of DataTable initialize
-
-$(document).keydown(function (event) {
-  if(event.keyCode == 37 || event.keyCode == 39) {
-    event.preventDefault();
-    $('#MyTableId').dataTable({"bRetrieve": true}).fnPageChange( event.keyCode == 37 ? 'previous' : 'next' );
-  }
-});
     
       // Setup - places the input (of each cell) in the first header row
     $('#mySelection thead tr:eq(0) th').each( function () {
