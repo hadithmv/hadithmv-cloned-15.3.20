@@ -197,10 +197,24 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             background-color: #fff;
         }
 
-        .ui.dropdown .menu .left.menu, .ui.dropdown > .left.menu {
-    border-radius: 0.285714rem !important;
-    left: auto !important;
-    right: 100% !important;
+/* Left Floated */
+.ui.menu:not(.vertical) .left.item,
+.ui.menu:not(.vertical) .left.menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto !important;
+}
+
+/* Right Floated */
+.ui.menu:not(.vertical) .right.item,
+.ui.menu:not(.vertical) .right.menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto !important;
 }
 
     </style>
