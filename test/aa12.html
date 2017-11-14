@@ -454,10 +454,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             .tab();
 
 /*S PROGRESS*/
-        $('.progbar').progress();
+        $('.progbar')
+            .progress();
 
 /*S DROPDOWN*/
-        $('.ui.dropdown').dropdown('refresh');
+        $('.ui.dropdown')
+            .dropdown('refresh');
 
 /*DEFER IMAGES AND IFRAMES*/
         var imgDefer = document.getElementsByTagName('img');
