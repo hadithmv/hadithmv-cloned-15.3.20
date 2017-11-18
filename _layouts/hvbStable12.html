@@ -7,7 +7,7 @@
     <title>Hadithmv - Accessible and Crowdsourced</title>
     <meta name="description" content="Accessible and Crowdsourced Islamic translations in Dhivehi">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
-
+    
     <meta name="keywords" content="hadithmv,hadith,hadeeth,nawawi, 40 hadith, saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
     <meta name="author" content="Hadithmv">
     <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/png-logo.png" />
@@ -167,20 +167,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 } 
 
         /*all round table padding, noticable in mobile view especially side to side*/
-
-        /*copy etc buttons padding*/
-        .ui.grid > .stackable.stackable.row > .column, .ui.stackable.grid > .column.grid > .column, .ui.stackable.grid > .column.row > .column, .ui.stackable.grid > .column:not(.row), .ui.stackable.grid > .row > .column, .ui.stackable.grid > .row > .wide.column, .ui.stackable.grid > .wide.column {
-            padding-top: 0px !important; padding-bottom: 0px !important;}
-        /*footer search padding*/
-            .ui.table:not(.unstackable) tr {padding-top: 0px !important; padding-bottom: 0px !important; }
-@media screen and (max-width: 768px) {
-        /*upper buttons group padding- 2 sets, mobile view only*/
-            .ui.grid>.row {padding-top: 0px !important; padding-bottom: 0px !important; }
-}
-        /*moves index info a little to the right*/
-.dataTables_info#mySelection_info {padding-left: 8px; }
-
-        /*PREVIOUS all round table padding, noticable in mobile view especially side to side
         .ui.grid > .stackable.stackable.row > .column3
         .ui.stackable.grid > .column.grid > .column,
         .ui.stackable.grid > .column.row > .column,
@@ -190,7 +176,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         .ui.stackable.grid > .wide.column {
             padding-top: 0px !important; padding-bottom: 0px !important; padding-right: 0px !important; padding-left: 0px !important;
         }
-}
 @media screen and (min-width: 768px) {
         .ui.grid > .stackable.stackable.row > .column3
         .ui.stackable.grid > .column.grid > .column,
@@ -201,13 +186,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         .ui.stackable.grid > .wide.column {
             padding: 0px 15px!important;
         }
-}*/
-
-        /*index button positioning fix*/
-        .ui.bottom.attached.tab .nclass {margin-top: 14px; margin-bottom: 15px;}
+}
+/*index button positioning fix*/
+    .ui.bottom.attached.tab .nclass {margin-top: 14px; margin-bottom: 15px;}
 @media screen and (min-width: 768px) {
-        .ui.bottom.attached.tab .nclass {margin-top: 0px; margin-bottom: 0px;}
-}*/
+    .ui.bottom.attached.tab .nclass {margin-top: 0px; margin-bottom: 0px;}
+}
 
         /*table buttons menu, shadow removal*/
         .ui.menu {
@@ -224,16 +208,11 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         .dataTables_length#mySelection_length {margin-bottom: -38px;}
         */
         
-        /*global search input length*/
-        .dataTables_filter input { width: 60vw;}
+        /*global search input*/
+        .dataTables_filter input { width: 70vw;}
 @media screen and (min-width: 768px) {
-    .dataTables_filter input { width: 40vw;}
+    .dataTables_filter input { width: 35vw;}
 }
-
-        /*copy etc buttons box shadow*/
-        .ui.menu {
-            box-shadow: none !important;
-        }
 
         /*iframe fit*/
         iframe {
@@ -670,38 +649,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         ], //end of columnDefs
 
                     "dom": 
-                        "<'ui unstackable grid'" + /*add celled to see grid*/
-
-                            "<'computer tablet only row'" + /*desktop view*/
-                                "<'one wide column'l>" +
-                                "<'center aligned seven wide column'f>" +
-                                "<'right aligned four wide column'B>" +
-                                "<'right aligned four wide column'p>" +
-                            ">" +
-
-                            "<'mobile only row'" + /*mobile view*/
-                                "<'four wide column'l>" +
-                                "<'ten wide column'f>" +
-                            ">" +
-
-                            "<'mobile only stackable row'" + /*mobile view*/
-                                "<'center aligned eight wide column'B>" +
-                                "<'center aligned eight wide column'p>" +
-                            ">" +
-
-                            "<'stackable row dt-table'" +
-                                "<'sixteen wide column'tr>" +
-                            ">" +
-
-                            "<'stackable row'" +
-                                "<'seven wide column'i>" +
-                                "<'right aligned nine wide column'p>" +
-                            ">" +
-
-                        ">",
-                        
- /*==previous non responsive adjusted dom
-                    "dom": 
                         "<'ui stackable grid'" +
 
                             "<'row'" +
@@ -721,8 +668,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             ">" +
 
                         ">",
-*/
- /*==default original dom
+                    /* ==DEF==
     "<'ui stackable grid'"+
       "<'row'"+
         "<'eight wide column'l>"+
