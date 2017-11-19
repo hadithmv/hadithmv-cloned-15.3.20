@@ -229,9 +229,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 @media screen and (min-width: 768px) {
     .dataTables_filter input { width: 40vw;}
 }
-@media screen and (max-width: 481px) {
-    .dataTables_filter input { width: 100%;}
-}
 
         /*copy etc buttons box shadow*/
         .ui.menu {
@@ -675,18 +672,11 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     "dom": 
                         "<'ui unstackable grid'" + /*add celled to see grid*/
 
-                            "<'computer only row'" + /*desktop view*/
+                            "<'computer tablet only row'" + /*desktop view*/
                                 "<'one wide column'l>" +
                                 "<'center aligned seven wide column'f>" +
                                 "<'right aligned four wide column'B>" +
                                 "<'right aligned four wide column'p>" +
-                            ">" +
-
-                            "<'tablet only row'" + /*tablet view*/
-                                "<'one wide column'l>" +
-                                "<'center aligned three wide column'f>" +
-                                "<'center aligned five wide column'B>" +
-                                "<'right aligned seven wide column'p>" +
                             ">" +
 
                             "<'mobile only row'" + /*mobile view*/
