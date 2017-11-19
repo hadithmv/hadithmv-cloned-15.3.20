@@ -8,7 +8,7 @@
     <meta name="description" content="Accessible and Crowdsourced Islamic translations in Dhivehi">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
 
-    <meta name="keywords" content="hadithmv,hadith,hadeeth,nawawi, 40 hadith, saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
+    <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
     <meta name="author" content="Hadithmv">
     <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/png-logo.png" />
     <meta name="theme-color" content="#1A619E" />
@@ -127,12 +127,14 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             direction: rtl;
             text-align: justify;
             line-height: 1.45;
-            font-size: 120%;
+            font-size: 150%;
         }
         
         .dataTable tbody tr td.col_4 {
             direction: ltr;
             text-align: justify;
+            line-height: 1.45;
+            font-size: 115%;
         }
         
         .dataTable tbody tr td.col_5 {
@@ -140,14 +142,14 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             text-align: justify;
             font-family: Tharujamaanu-Bold;
             line-height: 1.45;
-            font-size: 120%;
+            font-size: 135%;
         }
 @media screen and (min-width: 768px) {
             .dataTable tbody tr td.col_3 {
-                font-size: 150%;
+                font-size: 160%;
             }
             .dataTable tbody tr td.col_5 {
-                font-size: 135%;
+                font-size: 145%;
             }
 }
 
@@ -676,13 +678,20 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             { className: "col_5", "targets": [4] },
                         ], //end of columnDefs
 
+/* hides select column on start
+        columnDefs: [ {
+            targets: -1,
+            visible: false
+        } ]
+*/
+
                     "dom": 
                         "<'ui unstackable grid'" + /*add celled to see grid*/
 
                             "<'computer only row'" + /*desktop view*/
                                 "<'one wide column'l>" +
                                 "<'center aligned seven wide column'f>" +
-                                "<'right aligned four wide column'B>" +
+                                "<'four wide column'B>" +
                                 "<'right aligned four wide column'p>" +
                             ">" +
 
