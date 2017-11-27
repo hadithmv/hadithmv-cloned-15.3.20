@@ -289,14 +289,28 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         /*dhivehi font*/
         .thaana {font-family: Tharujamaanu-Bold; direction: rtl;}
 
+        /*logo transition effect*/
+        .grow
+        {                               
+            transition:all 0.25s ease; }
+        .grow:hover
+        {
+            -webkit-transform: scale(1.15);
+            -ms-transform: scale(1.15);
+            transform: scale(1.15);
+        }
+
+        /*fixes S dropdown glitch when compressed, also opens to right*/
+        .ui.inverted.top.attached.link.fitted.menu .ui.dropdown.item .menu {right: 0;left: auto;}
+
     </style>
 <!-- === === === /EMBEDDED CSS === === === -->
 
 </head>
     <body>
 
-<!--menu BREAKSCOMPRESS-->
-    <div class="BREAKSCOMPRESS ui inverted top attached link fitted menu">
+<!--menu-->
+    <div class="ui inverted top attached link fitted menu">
         <div class="item">
             <a href="https://hadithmv.github.io">
                 <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="" width="23" height="23" style="margin-bottom: -5px;"> <!--positions logo-->
@@ -307,17 +321,17 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         <a class="item" data-tab="third">Submissions</a>
         <div class="ui dropdown item" > 
             Misc
-            <div class="menu" style="right: 0;left: auto;"> <!--S dropdown fix-->
+            <div class="menu">
 
 <!--/menu items-->
                 <div class="ui item">
                     Experimental
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/lite">Lite</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/material">Material</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/lite">Lite (Desktop)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3 (Responsive)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/material">Material (Responsive)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
                     </div>
                 </div>
                 <!--/Experimental-->
@@ -358,7 +372,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         <!--//misc-->
 
     </div>
-    <!--/menu BREAKSCOMPRESS-->
+    <!--/menu-->
 
 <!--first tab-->
     <div class="BREAKSCOMPRESS ui bottom attached tab active" data-tab="first" style="background-color: #F9F9FA;"> <!--styles homepage back-->
@@ -370,7 +384,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             <div class="card">
                 <div class="content center aligned" style="text-align: center;">
                     <div class="image">
-                        <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="" width="150" width="150" style="margin-bottom: 7px;">
+                        <img class="grow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="" width="150" width="150" style="margin-bottom: 7px;">
                     </div>
                     <div class="header" >السلام عليكم</div>
                     <div class="description" style="text-align: center;">
