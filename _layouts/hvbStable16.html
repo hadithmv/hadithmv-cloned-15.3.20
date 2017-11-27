@@ -7,12 +7,10 @@
     <title>Hadithmv - Accessible and Crowdsourced</title>
     <meta name="description" content="Accessible and Crowdsourced Islamic translations in Dhivehi">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="cache-control" content="Public"/>
-    <meta http-equiv="Expires" content="604800"/>
 
     <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
     <meta name="author" content="Hadithmv">
-    <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" />
+    <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/png-logo.png" />
     <meta name="theme-color" content="#1A619E" />
     <link rel="canonical" href="https://hadithmv.github.io" />
     <link rel="author" href="https://hadithmv.github.io" />
@@ -264,9 +262,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             height: 100%;
             min-width: 100%;
             min-height: 100%;
-/*hides unwanted horizontal scroll space, PREV, ran into printn scrollbar bug
+/*hides unwanted horizontal scroll space*/
             max-width: 100%; 
-            overflow-x: hidden;*/
+            overflow-x: hidden;
 
 
             margin: 0;
@@ -279,11 +277,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
             background-color: #fff;
         }
-/*hides unwanted horizontal scroll space*/
-@media not print screen and (max-width: 481px) {
-    html, body {max-width: 100%; 
-                overflow-x: hidden;}
-}
 
         /*card content, centering, flexing, direction*/
         .card .content.center.aligned, {display: flex; text-align: justify; justify-content: center; flex-direction: column;}
@@ -296,13 +289,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         /*dhivehi font*/
         .thaana {font-family: Tharujamaanu-Bold; direction: rtl;}
 
-        /*presets largelogo size*/
-        .largeLogo {width: 150px;
-                    height:150px;
-                    margin-bottom: 7px;}
-        .miniLogo {width: 23px;
-                    height:23px;
-                    margin-bottom: -5px;}
         /*logo transition effect*/
         .grow
         {                               
@@ -327,7 +313,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
     <div class="ui inverted top attached link fitted menu">
         <div class="item">
             <a href="https://hadithmv.github.io">
-                <img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="menu logo" style="">
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="" width="23" height="23" style="margin-bottom: -5px;"> <!--positions logo-->
             </a>
         </div>
         <a class="item" data-tab="first">Home</a>
@@ -398,7 +384,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             <div class="card">
                 <div class="content center aligned" style="text-align: center;">
                     <div class="image">
-                        <img class="grow largeLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="large logo">
+                        <img class="grow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="" width="150" width="150" style="margin-bottom: 7px;">
                     </div>
                     <div class="header" >السلام عليكم</div>
                     <div class="description" style="text-align: center;">
@@ -805,19 +791,58 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             messageTop: '40 Nawawi',
                             title: 'hadithmv.github.io',
                             customize: function(data) {
-
+                                //console.log(JSON.stringify(data));
 //=== code to manipulate the data string as desired
-                            //data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //normal
-                            data = data.replace( /\nNo./g, '' );
-                            data = data.replace( /\tRef:/g, '' );
-                            data = data.replace( /\tArabic/g, '' );
-                            data = data.replace( /\tEnglish/g, '' );
-                            data = data.replace( /\tDhivehi/g, '' );
 
+                                //string to remove the headers
+                                removeHeaders = '\n';
 
-                            data = data.replace( /\t/g, '\n\n' );
+                                //string containing regex substitutions ($1, $2, etc) for the headers
+                                subst = '';
 
-                                console.log(JSON.stringify(data));
+                                //string containing search for column data  - \t(.*)
+                                substRe = '\n';
+
+                                count = 1;
+
+                                for (col in columns) {
+
+                                    //append column header + \t
+                                    removeHeaders = removeHeaders + columns[col].title + '\t';
+
+                                    //append column header + susbstitution parameter
+                                    subst = subst + columns[col].title + ': ' + '$' + count.toString() + '\n';
+                                    count += 1;
+
+                                    //append column search
+                                    substRe = substRe + '(.*)\t'
+                                }
+
+                                //remove trailing \t
+                                removeHeaders = removeHeaders.replace(/\t$/, '');
+                                //removeHeaders = \nCompany\tClaims\tTotal Awarded
+                                //console.log(JSON.stringify(removeHeaders));
+
+                                //append newline to end of each row. $ is column
+                                //subst += '\n';  //generic
+                                subst = 'Hadith No: $1\n\nReference: $2\n\n$3\n\n$4\n\n$5\n\n';
+                                //console.log(JSON.stringify(subst));
+
+                                //remove trailing \t
+                                substRe = substRe.replace(/\t$/, '');
+                                //substRe = \n(.*)\t(.*)\t(.*)
+                                //console.log(JSON.stringify(substRe));
+
+                                //construct remove headers regex
+                                re = RegExp(removeHeaders);
+                                //remove the headers and replace with newline
+                                data = data.replace(re, '\n');
+
+                                //construct substitution regex with global search option 
+                                re = RegExp(substRe, 'g');
+                                //search and replace with substitution of header names
+                                data = data.replace(re, subst);
+
                                 return data;
                             },
 //=== edits clipboard regex
@@ -912,77 +937,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 // === === === end of writeTable
 
     </script>
-
-
-<!--PREVIOUS CLIPBOARD CUSTOMIZATION
-                            text: 'Copy',
-                            messageTop: '40 Nawawi',
-                            title: 'hadithmv.github.io',
-                            customize: function(data) {
-                                //console.log(JSON.stringify(data));
-//=== code to manipulate the data string as desired
-
-                                //string to remove the headers
-                                removeHeaders = '\n';
-
-                                //string containing regex substitutions ($1, $2, etc) for the headers
-                                subst = '';
-
-                                //string containing search for column data  - \t(.*)
-                                substRe = '\n';
-
-                                count = 1;
-
-                                for (col in columns) {
-
-                                    //append column header + \t
-                                    removeHeaders = removeHeaders + columns[col].title + '\t';
-
-                                    //append column header + susbstitution parameter
-                                    subst = subst + columns[col].title + ': ' + '$' + count.toString() + '\n';
-                                    count += 1;
-
-                                    //append column search
-                                    substRe = substRe + '(.*)\t'
-                                }
-
-                                //remove trailing \t
-                                removeHeaders = removeHeaders.replace(/\t$/, '');
-                                //removeHeaders = \nCompany\tClaims\tTotal Awarded
-                                //console.log(JSON.stringify(removeHeaders));
-
-                                //append newline to end of each row. $ is column
-                                //subst += '\n';  //generic
-                                subst = 'Hadith No: $1\n\nReference: $2\n\n$3\n\n$4\n\n$5\n\n';
-                                //console.log(JSON.stringify(subst));
-
-                                //remove trailing \t
-                                substRe = substRe.replace(/\t$/, '');
-                                //substRe = \n(.*)\t(.*)\t(.*)
-                                //console.log(JSON.stringify(substRe));
-
-                                //construct remove headers regex
-                                re = RegExp(removeHeaders);
-                                //remove the headers and replace with newline
-                                data = data.replace(re, '\n');
-
-                                //construct substitution regex with global search option 
-                                re = RegExp(substRe, 'g');
-                                //search and replace with substitution of header names
-                                data = data.replace(re, subst);
-
-                                return data;
-                            },
-//=== edits clipboard regex
-
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                            //copies currently displayed columns and rows
-                        },
-//end of copy customization
-END OF PREVIOUS CLIPBOARD CUSTOMIZATION-->
 
 <!--=== === === /INLINE JS === === ===-->
 
