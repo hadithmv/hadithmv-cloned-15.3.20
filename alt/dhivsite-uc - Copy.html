@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en"><!--change languages later-->
+<html lang="dv"><!--change languages later-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>Hadithmv - Accessible and Crowdsourced</title>
+    <title>ޙަދީޘް އެމް.ވީ.</title>
     <meta name="description" content="Accessible and Crowdsourced Islamic translations in Dhivehi">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
@@ -33,6 +33,37 @@
             font-family: Tharujamaanu-Bold;
             src: url(https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff);
         }
+
+        /*maybe unneeded, previously til min height, font-family: "";*/
+        html,
+        body {
+            /*font-size: 16px; base font size*/
+
+            width: 100%;
+            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+/*hides unwanted horizontal scroll space, PREV, ran into printn scrollbar bug
+            max-width: 100%; 
+            overflow-x: hidden;*/
+            font-family: Tharujamaanu-Bold !important;
+			unicode-bidi: bidi-override;
+
+            margin: 0;
+            padding: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+
+            background-color: #fff;
+        }
+/*hides unwanted horizontal scroll space*/
+@media not print, screen {
+    html, body {max-width: 100%; 
+                overflow-x: hidden;}
+}
 
 /*=== NINSERT CSS ===*/
 
@@ -102,18 +133,13 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         }
         
         .dataTable tbody tr td:nth-child(3) {
-            direction: ltr;
-            text-align: justify;
-        }
-        
-        .dataTable tbody tr td:nth-child(4) {
             direction: rtl;
             text-align: justify;
             font-family: Tharujamaanu-Bold;
         }
 
-        .dataTable tbody tr td:nth-child(5) {
-            text-align: center; font-style: italic;
+        .dataTable tbody tr td:nth-child(4) {
+            text-align: center;
         }
 
         /* corrects web view only/none-print display for these particular columns */
@@ -129,14 +155,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             font-size: 140%;
         }
         
-        .dataTable tbody tr td.col_3 {
-            direction: ltr;
-            text-align: justify;
-            line-height: 1.4;
-            font-size: 110%;
-        }
         
-        .dataTable tbody tr td.col_4 {
+        .dataTable tbody tr td.col_3 {
             direction: rtl;
             text-align: justify;
             font-family: Tharujamaanu-Bold;
@@ -148,18 +168,17 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                 font-size: 160%;
             }
             .dataTable tbody tr td.col_3 {
-                font-size: 120%;
-            }
-            .dataTable tbody tr td.col_4 {
                 font-size: 145%;
             }
 }
 
-        .dataTable tbody tr td.col_5 {
-            text-align: center; font-style: italic;
+        .dataTable tbody tr td.col_4 {
+            text-align: center;
         }
 
+
         /*search placeholder title*/
+        #mySelection > tfoot > tr > th > input[type="text"] {direction: rtl;}
 @media screen and (min-width: 768px) {
         #mySelection > tfoot > tr > th > input[type="text"] {text-align: center;}
 }
@@ -260,42 +279,15 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             margin: 0;
         }
 
-        /*maybe unneeded, previously til min height, font-family: "";*/
-        html,
-        body {
-            /*font-size: 16px; base font size*/
-
-            width: 100%;
-            height: 100%;
-            min-width: 100%;
-            min-height: 100%;
-/*hides unwanted horizontal scroll space, PREV, ran into printn scrollbar bug
-            max-width: 100%; 
-            overflow-x: hidden;*/
-
-
-            margin: 0;
-            padding: 0;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-
-            background-color: #fff;
-        }
-/*hides unwanted horizontal scroll space*/
-@media not print, screen {
-    html, body {max-width: 100%; 
-                overflow-x: hidden;}
-}
+body > div.ui.inverted.top.attached.link.fitted.menu {font-family: Tharujamaanu-Bold; text-align: rtl;}
+body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bottom.attached.button {font-family: Tharujamaanu-Bold; text-align: rtl;}
 
         /*card content, centering, flexing, direction*/
         .card .content.center.aligned, {display: flex; text-align: justify; justify-content: center; flex-direction: column;}
         /*card content text*/
         .card .content.center.aligned .description {text-align: justify;}
         /*card content, header text*/
-        .card .ui.top.attached.button a {font-size: 140%; color: black;}
+        .card .ui.top.attached.button a {font-size: 140%; color: black; font-family: Tharujamaanu-Bold;}
         /*card content, content arabic text*/
         .content.center.aligned .description.cardarabic {font-weight: bold; font-size: 115%; padding-bottom: 10px; direction: rtl;}
         /*dhivehi font*/
@@ -330,55 +322,48 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 <!--menu-->
     <div class="ui inverted top attached link fitted menu">
-        <div class="item">
-            <a href="https://hadithmv.github.io">
-                <img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="menu logo" style="">
-            </a>
-        </div>
-        <a class="item" data-tab="first">Home</a>
-        <a class="item" data-tab="second">40 Nawawi</a>
-        <a class="item" data-tab="third">Submissions</a>
-        <div class="ui dropdown item" > 
-            Misc
+
+
+<div class="right aligned ui dropdown item" > 
+            އެހެނިހެން
             <div class="menu">
 
 <!--/menu items-->
                 <div class="ui item">
-                    Experimental
+                    އަޖުމަ
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/lite">Lite (Desktop)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/dhivsite">Dhivehi (Responsive)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3 (Responsive)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/material">Material (Responsive)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/lite">ލުއި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">ބޫޓްސްޓްރެޕް 3</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">ބޫޓްސްޓްރެޕް 4</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/material">މެޓީރިއަލް</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/legacy">ކުރީގެ</a>
                     </div>
                 </div>
                 <!--/Experimental-->
 
                 <div class="ui item">
-                    Fonts
+                    ފޮންޓު
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts1">Arabic</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts2">Arabic 2</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/englishfonts">English</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/dhivehifonts">Dhivehi</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts1">ޢަރަބި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts2">2 ޢަރަބި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/englishfonts">އިންގިރޭސި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/dhivehifonts">ދިވެހި</a>
                     </div>
                 </div>
                 <!--/Fonts-->
 
                 <div class="ui item">
-                    Others
+                    އެނޫން
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/atable">A Table</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/asheet">A Sheet</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/carousel">Carousel</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/atable">ޓޭބަލް އ</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/asheet">ޝީޓު އ</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/carousel">ކެރައުސެލް</a>
                     </div>
                 </div>
                 <!--/Others-->
 
                 <div class="ui item" onclick="myHelp()">
-                    Help
+                    އެހީ
                 </div>
                 <!--/Help alert-->
 
@@ -390,6 +375,18 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             </div>
         </div>
         <!--//misc-->
+        <a class="item" data-tab="third">ހުށަހެޅުންތައް</a>
+        <a class="item" data-tab="second">ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span></a>
+        <a class="item" data-tab="first">ފުރަތަމަ ސަފްހާ</a>    	
+        <div class="item">
+            <a href="https://hadithmv.github.io">
+                <img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="menu logo" style="">
+            </a>
+        </div>
+
+
+
+        
 
     </div>
     <!--/menu-->
@@ -408,12 +405,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     </div>
                     <div class="header" >السلام عليكم</div>
                     <div class="description" style="text-align: center;">
-                        Welcome to <strong>Hadithmv</strong>
+                        <strong>ޙަދީޘް އެމް.ވީ.</strong> އަށް މަރުހަބާ
                     </div>
                 </div>
                 <!--/content-->
                 <div class="ui bottom attached button" data-tab="second">
-                    40 Nawawi
+                     ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span>
                 </div>
             </div>
             <!--/card 1-->
@@ -421,7 +418,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 <!--card 2-->
             <div class="card">
                 <div class="ui top attached button">
-                    <a>About</a>
+                    <a>މަޢުލޫމާތު</a>
                 </div>
                 <div class="content center aligned">
                     <div class="description">
@@ -431,7 +428,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                 </div>
                 <!--/content-->
                 <div class="ui bottom attached button" data-tab="third">
-                    Submissions
+                    ހުށަހެޅުންތައް
                 </div>
             </div>
             <!--/card 3-->
@@ -439,7 +436,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 <!--card 3-->
             <div class="card">
                 <div class="ui top attached button">
-                    <a>Progress</a>
+                    <a>ކުރިއެރުން</a>
                 </div>
                 <div class="content center aligned">
 
@@ -447,21 +444,21 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         <div class="bar" style="width: 99%;">
                             <div class="progress">99%</div>
                         </div>
-                        <div class="label">40 Nawawi</div>
+                        <div class="label">ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span></div>
                     </div>
 
                     <div class="ui progress" data-percent="74">
                         <div class="bar" style="width: 0%;">
                             <div class="progress"></div>
                         </div>
-                        <div class="label">Bukhari</div>
+                        <div class="label">ބުޚާރީ</div>
                     </div>
 
                     <div class="ui progress" data-percent="74">
                         <div class="bar" style="width: 0%;">
                             <div class="progress"></div>
                         </div>
-                        <div class="label">Muslim</div>
+                        <div class="label">މުސްލިމް</div>
                     </div>
 
                 </div>
@@ -483,8 +480,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     </div>
 
                     <div class="ui animated fade basic button" tabindex="0" style="vertical-align: middle; text-align: justify; height: 85px;">
-                        <div class="visible content">Certainly, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register.</div>
-                        <div class="hidden content thaana" style="position: absolute; top: 0%; padding: 3% 5% 0 5%; line-height: 120%">ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިސްކޮށްފައިވާ ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.</div>
+                        <div class="hidden content" style="position: absolute; top: 0%; padding: 3% 5% 0 5%; line-height: 120%">Certainly, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register.</div>
+                        <div class=" visible content thaana" >ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިސްކޮށްފައިވާ ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.</div>
                     </div>
 
                 </div>
@@ -506,8 +503,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     </div>
 
                     <div class="ui animated fade basic button" tabindex="0" style="vertical-align: middle; text-align: justify; height: 185px;">
-                        <div class="visible content">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins.</div>
-                        <div class="hidden content thaana" style="text-align: justify; position: absolute; top: 0%; padding: 4% 5% 0 5%; line-height: 120%">މުންޛިރު ބިން ޖަރީރު އެކަލޭގެފާނުގެ ބައްޕާފުޅު ފަރާތުން ރިވާކުރެއްވިއެވެ. ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ވާ ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ، އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް ކުރަން) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ.</div>
+                        <div class="hidden content" style="text-align: justify; position: absolute; top: 0%; padding: 4% 5% 0 5%; line-height: 120%">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins.</div>
+                        <div class=" visible content thaana">މުންޛިރު ބިން ޖަރީރު އެކަލޭގެފާނުގެ ބައްޕާފުޅު ފަރާތުން ރިވާކުރެއްވިއެވެ. ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ވާ ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ، އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް ކުރަން) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ.</div>
                     </div>
 
                 </div>
@@ -524,7 +521,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 <!--footer-->
         <footer>
             <div onclick="myFooter()" class="description" style="padding-top: 5px; padding-bottom: 5px; border-top: 1px solid #eee; text-align: center;">
-                2017 hadithmv.github.io
+                 ޙަދީޘްއެމްވީ.ގިޓްހަބް.އައީއޯ 2017
             </div>
         </footer>
 <!--//footer-->
@@ -604,11 +601,11 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
     <script type="text/javascript">
         var key = "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
-            {"data":"no",     "title":"No."},
-            {"data":"arabic", "title":"Arabic"},
-            {"data":"english","title":"English"},
-            {"data":"dhivehi","title":"Dhivehi"},
-            {"data":"ref",    "title":"Ref:"},
+            {"data":"no",     "title":"#"},
+            {"data":"arabic", "title":"ޢަރަބި"},
+            //{"data":"english","title":"English"},
+            {"data":"dhivehi","title":"ދިވެހި"},
+            {"data":"ref",    "title":"މަޞްދަރު"},
             ];
 
         $(document).ready(function() {
@@ -672,7 +669,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 */
 
 //Add footer search to table
-                $("#mySelection").append('<tfoot><tr><th>No.</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th></tr></tfoot>');
+                $("#mySelection").append('<tfoot><tr><th>#</th><th>ޢަރަބި</th><th>ދިވެހި</th><th>މަޞްދަރު</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#mySelection tfoot th').each(function() {
@@ -695,15 +692,15 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     "lengthMenu": [1, 2, 3, 5, 7, 10, 15], //display range of pages
                     "language": {
                         "buttons": {
-                            copyTitle: 'Copy',
+                            copyTitle: 'ކޮޕީ',
                             copySuccess: {
-                                1: "Copied 1 Hadith",
-                                _: "Copied %d Ahadith"
+                                1: "ޙަދީޘް ކޮޕީ ވެއްޖެ 1",
+                                _: "ޙަދީޘް ކޮޕީ ވެއްޖެ %d"
                             }
                         },
                         "search": "",
-                        "searchPlaceholder": "Search Hadithmv . . .",
-                        "info": "_START_ to _END_ of _TOTAL_ Hadith",
+                        "searchPlaceholder": "ޙަދީޘް ންއެމް.ވީ.އިން ހޯއްދަވާ",
+                        "info": " ޖުމްލަ _TOTAL_ ޙަދީޘްގެ ތެރެއިން _START_ އަކުން _END_ އަކަށް",
                         "lengthMenu": "_MENU_"
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
                     "columnDefs": //classes columns for css in nweb view, but not print
@@ -712,7 +709,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             { className: "col_2", "targets": [1] },
                             { className: "col_3", "targets": [2] },
                             { className: "col_4", "targets": [3] }, 
-                            { className: "col_5", "targets": [4] },
+                            //{ className: "col_5", "targets": [4] },
                         ], //end of columnDefs
 
 /* hides select column on start
@@ -807,8 +804,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                                 key: 'c',
                                 shiftKey: true
                             },
-                            text: 'Copy',
-                            messageTop: '40 Nawawi',
+                            text: 'ކޮޕީ',
+                            messageTop: '40 ނަވަވީ',
                             title: 'hadithmv.github.io',
                             customize: function(data) {
 
@@ -842,7 +839,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                                 key: 'x',
                                 shiftKey: true
                             },
-                            text: 'Excel',
+                            text: 'އެކްސްއެލް',
                             exportOptions: {
                                 columns: [':visible'],
                                 rows: [':visible']
@@ -855,7 +852,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                                 key: 'p',
                                 shiftKey: true
                             },
-                            text: 'Print',
+                            text: 'ޕްރިންޓް',
                             exportOptions: {
                                 columns: [':visible'],
                                 rows: [':visible']
@@ -868,7 +865,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                                 key: 'h',
                                 shiftKey: true
                             },
-                            text: 'Hide'
+                            text: 'ފޮރުވަ'
                         } //end of colvis
 
                     ],
