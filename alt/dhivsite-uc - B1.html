@@ -292,30 +292,6 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
         .content.center.aligned .description.cardarabic {font-weight: bold; font-size: 115%; padding-bottom: 10px; direction: rtl;}
         /*dhivehi font*/
         .thaana {font-family: Tharujamaanu-Bold; direction: rtl;}
-        /*individual column search boxes dhivehi font*/
-        #mySelection > tfoot > tr > th > input[type="text"] {font-family: Tharujamaanu-Bold; direction: rtl;}
-        /*paginatiion buttons dhivehi font*/
-        #mySelection_wrapper > div > div:nth-child(6) > div.right.aligned.nine.wide.column > div > div > a,
-        #mySelection_wrapper > div > div:nth-child(6) > div.right.aligned.nine.wide.column > div > div > div,
-
-        #mySelection_wrapper > div > div.mobile.only.stackable.row > div:nth-child(2) > div > div > a,
-        #mySelection_wrapper > div > div.mobile.only.stackable.row > div:nth-child(2) > div > div > div,
-
-        #mySelection_wrapper > div > div.tablet.only.row > div.right.aligned.seven.wide.column > div > div > a,
-        #mySelection_wrapper > div > div.tablet.only.row > div.right.aligned.seven.wide.column > div > div > div,
-
-        #mySelection_next, #mySelection_previous,       #mySelection_first, #mySelection_last
-        {font-family: Tharujamaanu-Bold;}
-        /*copy etc buttons dhivehi font*/
-        #mySelection_wrapper > div > div.mobile.only.stackable.row > div:nth-child(1) > div > button.ui.button,
-        #mySelection_wrapper > div > div.computer.only.row > div:nth-child(3) > div > button.ui.button,
-        #mySelection_wrapper > div > div.tablet.only.row > div.center.aligned.five.wide.column > div > button.ui.button
-        {font-family: Tharujamaanu-Bold;}
-        /*global search box buttons dhivehi font*/
-        #mySelection_filter > label > input[type="search"],
-        #mySelection_wrapper > div > div:nth-child(3) > div.ten.wide.column > div > label > input[type="search"],
-        #mySelection_wrapper > div > div.tablet.only.row > div.center.aligned.three.wide.column > div > label > input[type="search"]
-        {font-family: Tharujamaanu-Bold; text-align: right;}
 
         /*presets largelogo size*/
         .largeLogo {width: 150px;
@@ -357,7 +333,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     އަޖުމަ
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/lite">ލުއި</a>
-                        <a class="item" href="https://hadithmv.github.io">އަސްލު</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/dhivsite">ދިވެހި</a>
                         <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">ބޫޓްސްޓްރެޕް 3</a>
                         <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">ބޫޓްސްޓްރެޕް 4</a>
                         <a class="item" href="https://hadithmv.github.io/alt/material">މެޓީރިއަލް</a>
@@ -489,7 +465,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                 </div>
                 <!--/content-->
                 <div class="ui bottom attached button">
-                    އިރާދަކުރެއްވިއްޔާ އަދި ކުރިއަށް އޮތީ
+                    More to come in sha Allah
                 </div>
             </div>
             <!--/card 3-->
@@ -630,7 +606,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
             {"data":"arabic", "title":"ޢަރަބި"},
             //{"data":"english","title":"English"},
             {"data":"dhivehi","title":"ދިވެހި"},
-            {"data":"dhiref",    "title":"މަރުޖިޢު"},
+            {"data":"ref",    "title":"މަޞްދަރު"},
             ];
 
         $(document).ready(function() {
@@ -694,7 +670,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 */
 
 //Add footer search to table
-                $("#mySelection").append('<tfoot><tr><th>#</th><th>ޢަރަބި</th><th>ދިވެހި</th><th>މަރުޖިޢު</th></tr></tfoot>');
+                $("#mySelection").append('<tfoot><tr><th>#</th><th>ޢަރަބި</th><th>ދިވެހި</th><th>މަޞްދަރު</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#mySelection tfoot th').each(function() {
@@ -723,15 +699,8 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                                 _: "ޙަދީޘް ކޮޕީ ވެއްޖެ %d"
                             }
                         },
-                        "paginate": {
-                            "first":      "&lt;&lt; ފުރަތަމަ",
-                            "last":       "ފަހު &gt;&gt;",
-                            "next":       "ކުރިއަށް &gt;",
-                            "previous":   "&lt; ފަހަތަށް"
-                            },
-                        "zeroRecords":    "ނުދެނުނު",
                         "search": "",
-                        "searchPlaceholder": "ޙަދީޘް އެމް.ވީ.އިން ހޯއްދަވާ",
+                        "searchPlaceholder": "ޙަދީޘް ންއެމް.ވީ.އިން ހޯއްދަވާ",
                         "info": " ޖުމްލަ _TOTAL_ ޙަދީޘްގެ ތެރެއިން _START_ އަކުން _END_ އަކަށް",
                         "lengthMenu": "_MENU_"
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
@@ -849,14 +818,8 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                             data = data.replace( /\tDhivehi/g, '' );
                             data = data.replace( /\tRef:/g, '' );
 
-                            data = data.replace( /\n#/g, '' );
-                            data = data.replace( /\tޢަރަބި/g, '' );
-                            data = data.replace( /\tދިވެހި/g, '' );
-                            data = data.replace( /\tމަރުޖިޢު/g, '' );
-
                             data = data.replace( /\r/g, '' ); //rids windows platform newline
                             data = data.replace( /\t/g, '\n\n' );
-
 
                                 console.log(JSON.stringify(data));
                                 return data;
@@ -903,7 +866,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                                 key: 'h',
                                 shiftKey: true
                             },
-                            text: 'ފޮރުވާ'
+                            text: 'ފޮރުވަ'
                         } //end of colvis
 
                     ],
