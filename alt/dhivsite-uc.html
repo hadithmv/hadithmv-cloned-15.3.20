@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <title>ޙަދީޘް އެމް.ވީ.</title>
-    <meta name="description" content="Accessible and Crowdsourced Islamic translations in Dhivehi">
+    <meta name="description" content="ފޯރުމާއި ޝައުޤުހުރުން">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
     <meta http-equiv="Expires" content="604800"/>
@@ -13,7 +13,7 @@
     <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
     <meta name="author" content="Hadithmv">
     <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" />
-    <meta name="theme-color" content="#1A619E" />
+    <meta name="theme-color" content="#FF4136" />
     <link rel="canonical" href="https://hadithmv.github.io" />
     <link rel="author" href="https://hadithmv.github.io" />
 
@@ -319,6 +319,12 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
         /*colvis options dhivehi font*/
         body > div.dt-button-collection.ui.basic.vertical.buttons > button
         {font-family: Tharujamaanu-Bold;}
+        /*copy alert dhivehi font*/
+        #datatables_buttons_info > h2
+        {font-family: Tharujamaanu-Bold;}
+
+        body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div:nth-child(2) > div.content.center.aligned > div
+        {direction: rtl;}
 
         /*presets largelogo size*/
         .largeLogo {width: 150px;
@@ -450,7 +456,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                 </div>
                 <div class="content center aligned">
                     <div class="description">
-                        The advent of the internet has made looking up information easier than ever before. Still, there is a pressing need to make classical islamic texts more accessible to the Maldivian people, especially in their native tongue via the web. Help us build a database of translations so that everyone can benefit by the will of Allah.
+                        އިންޓަރނެޓްގެ ކުރިއެރުމާއެކު މަޢުލޫމާތު ހޯދުން މިވަނީ ވަރަށްވެސް ފަސޭހަވެފައެވެ. ނަމަވެސް، ރަނގަޅުގޮތުގައި މީގެ ބޭނުންހިފައި، ދިވެހިންނަށް އެބައިމީހުންގެ ބަހުން އިސްލާމީ ނައްސުތައް ފޯރުކޮށްދިނުމުގައި އަދިވެސް މިއުޅެނީ ފަހަތުގައެވެ. ވީމާ ﷲ ގެ އިރާދަފުޅާއެކު، މިކަހަލަ ކަމެއްގެ ފައިދާ އެންމެންނަށް ފޯރުކޮށްދިނުމަށްޓަކައި ތަރުޖަމާތައް ހުށަހެޅުމުގައި އެހީތެރިވެދެއްވާށެވެ.
                     </div>
 
                 </div>
@@ -722,8 +728,8 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                         "buttons": {
                             copyTitle: 'ކޮޕީ',
                             copySuccess: {
-                                1: "ޙަދީޘް ކޮޕީ ވެއްޖެ 1",
-                                _: "ޙަދީޘް ކޮޕީ ވެއްޖެ %d"
+                                1: "ކޮޕީ ވީ 1 ޙަދީޘް",
+                                _: "ކޮޕީ ވީ %d ޙަދީޘް"
                             }
                         },
                         "paginate": {
