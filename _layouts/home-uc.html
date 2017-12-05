@@ -708,8 +708,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             "next":       "Next &gt;",
                             "previous":   "&lt; Previous"
                             },
-                        "infoEmpty":      "Showing 0 to 0 of 0 entries",
-                        "infoFiltered":   "(filtered from _MAX_ total entries)",
+                        "infoEmpty":      "Found 0 Hadith",
+                        "infoFiltered":   "(filtered from _MAX_ total Hadith)",
                         "zeroRecords":    "No matches found",
                         "search": "",
                         "searchPlaceholder": "Search Hadithmv . . .",
@@ -718,12 +718,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
                     "columnDefs": //classes columns for css in nweb view, but not print
                         [
-                            { className: "col_1", "targets": [0] },
-                            { className: "col_2", "targets": [1] },
-                            { className: "col_3", "targets": [2] },
-                            { className: "col_4", "targets": [3] }, 
-                            { className: "col_5", "targets": [4] },
-                        ], //end of columnDefs
+                            { className: "col_1", "targets": [0], "visible": true, "searchable": true},
+                            { className: "col_2", "targets": [1], "visible": true, "searchable": true },
+                            { className: "col_3", "targets": [2], "visible": true, "searchable": true },
+                            { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
+                            { className: "col_5", "targets": [4], "visible": true, "searchable": true },
+                        ], //end of columnDefs, previously withoyt visible and searchable options
 
 /* hides select column on start
         columnDefs: [ {
@@ -811,7 +811,43 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     // l-length changing input control, f-filtering input, t-table, i-Table information summary, p-pagination control, r-processing display element, B-Buttons
                     //< and > - div element, <"class" and > - div with a class, <"#id" and > - div with an ID, <"#id.class" and > - div with an ID and a class
 
-                    "buttons": [{
+                    "buttons": [
+                        {
+                            extend: 'colvis',
+                            key: {
+                                key: 'h',
+                                shiftKey: true
+                            },
+                            text: 'Hide'
+                        }, //end of colvis
+
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'Excel',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of excel
+
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'Print',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of print
+
+                        {
                             extend: 'copy',
                             key: {
                                 key: 'c',
@@ -845,41 +881,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             //copies currently displayed columns and rows
                         },
 //end of copy customization
-
-                        {
-                            extend: 'excel',
-                            key: {
-                                key: 'x',
-                                shiftKey: true
-                            },
-                            text: 'Excel',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of excel
-
-                        {
-                            extend: 'print',
-                            key: {
-                                key: 'p',
-                                shiftKey: true
-                            },
-                            text: 'Print',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of print
-
-                        {
-                            extend: 'colvis',
-                            key: {
-                                key: 'h',
-                                shiftKey: true
-                            },
-                            text: 'Hide'
-                        } //end of colvis
 
                     ],
 //=== end of all buttons

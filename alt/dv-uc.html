@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>ޙަދީޘް އެމް.ވީ.</title>
-    <meta name="description" content="ފޯރުމާއި ޝައުޤުހުރުން">
+    <title>ޙަދީޘް އެމް.ވީ. - އެންމެންގެ ބައިވެރިވުމުން، ބޭނުމަށް</title>
+    <meta name="description" content="އިސްލާމީ ނައްޞުތައް ފަސޭހަކަމާއެކު ފޯރުކޮށްދިނުން">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
     <meta http-equiv="Expires" content="604800"/>
@@ -367,10 +367,9 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/lite">ލުއި</a>
                         <a class="item" href="https://hadithmv.github.io">އަސްލު</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">ބޫޓްސްޓްރެޕް 3</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">ބޫޓްސްޓްރެޕް 4</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/material">މެޓީރިއަލް</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/legacy">ކުރީގެ</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/en">އިންގިރޭސި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/ar">ޢަރަބި</a>
+
                     </div>
                 </div>
                 <!--/Experimental-->
@@ -391,7 +390,10 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/atable">ޓޭބަލް އ</a>
                         <a class="item" href="https://hadithmv.github.io/alt/asheet">ޝީޓު އ</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/carousel">ކެރައުސެލް</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">ބޫޓްސްޓްރެޕް 3</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">ބޫޓްސްޓްރެޕް 4</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/material">މެޓީރިއަލް</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/legacy">ކުރީގެ</a>
                     </div>
                 </div>
                 <!--/Others-->
@@ -408,13 +410,14 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
       == disabled-->
             </div>
         </div>
+
         <!--//misc-->
         <a class="item" data-tab="third">ހުށަހެޅުންތައް</a>
         <a class="item" data-tab="second">ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span></a>
         <a class="item" data-tab="first">ފުރަތަމަ ސަފްހާ</a>        
         <div class="item">
             <a href="https://hadithmv.github.io">
-                <img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="menu logo" style="">
+                <img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="menu logo">
             </a>
         </div>
 
@@ -738,6 +741,8 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                             "next":       "ކުރިއަށް &gt;",
                             "previous":   "&lt; ފަހަތަށް"
                             },
+                        "infoEmpty":      "(ފެނުނީ 0 ޙަދީޘް",
+                        "infoFiltered":   "(ޖުމްލަ _MAX_ ޙަދީޘްގެ ތެރެއިން",
                         "zeroRecords":    "ނުފެނުނު",
                         "search": "",
                         "searchPlaceholder": "ޙަދީޘް އެމް.ވީ.އިން ހޯއްދަވާ",
@@ -746,12 +751,12 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
                     "columnDefs": //classes columns for css in nweb view, but not print
                         [
-                            { className: "col_1", "targets": [0] },
-                            { className: "col_2", "targets": [1] },
-                            { className: "col_3", "targets": [2] },
-                            { className: "col_4", "targets": [3] }, 
-                            //{ className: "col_5", "targets": [4] },
-                        ], //end of columnDefs
+                            { className: "col_1", "targets": [0], "visible": true, "searchable": true},
+                            { className: "col_2", "targets": [1], "visible": true, "searchable": true },
+                            { className: "col_3", "targets": [2], "visible": true, "searchable": true },
+                            { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
+                            //{ className: "col_5", "targets": [4], "visible": true, "searchable": true },
+                        ], //end of columnDefs, previously withoyt visible and searchable options
 
 /* hides select column on start
         columnDefs: [ {
@@ -839,7 +844,43 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     // l-length changing input control, f-filtering input, t-table, i-Table information summary, p-pagination control, r-processing display element, B-Buttons
                     //< and > - div element, <"class" and > - div with a class, <"#id" and > - div with an ID, <"#id.class" and > - div with an ID and a class
 
-                    "buttons": [{
+                    "buttons": [
+                        {
+                            extend: 'colvis',
+                            key: {
+                                key: 'h',
+                                shiftKey: true
+                            },
+                            text: 'ފޮރުވާ'
+                        }, //end of colvis
+
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'އެކްސްއެލް',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of excel
+
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'ޕްރިންޓް',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of print
+
+                        {
                             extend: 'copy',
                             key: {
                                 key: 'c',
@@ -879,41 +920,6 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                             //copies currently displayed columns and rows
                         },
 //end of copy customization
-
-                        {
-                            extend: 'excel',
-                            key: {
-                                key: 'x',
-                                shiftKey: true
-                            },
-                            text: 'އެކްސްއެލް',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of excel
-
-                        {
-                            extend: 'print',
-                            key: {
-                                key: 'p',
-                                shiftKey: true
-                            },
-                            text: 'ޕްރިންޓް',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of print
-
-                        {
-                            extend: 'colvis',
-                            key: {
-                                key: 'h',
-                                shiftKey: true
-                            },
-                            text: 'ފޮރުވާ'
-                        } //end of colvis
 
                     ],
 //=== end of all buttons
