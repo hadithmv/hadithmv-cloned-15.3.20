@@ -30,10 +30,11 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         /*fits then moves footer search to top*/
         tfoot input {
             width: 100%;
-            min-width: 12px;
+            min-width: 14px;
             border-radius: .28571429rem;
             border: 1px solid rgba(34, 36, 38, .15);
         } /*prev just width*/
+
         
         tfoot {
             display: table-header-group;
@@ -51,17 +52,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             vertical-align: top;
         }
         
-        /*bottom margin spacing between cells*/
+        /*top and bottom margin spacing between cells*/
         .dataTable td {
-            margin: 0px 0px 5px 0px;
+            margin: 3px 0px 2.5px 0px;
             padding: 0px;
         }
-@media screen and (min-width: 768px) {
-        .dataTable td {
-            margin: 0px 0px 0px 0px;
-            padding: 0px;
-        }
-}
+
         .dataTable tbody {
             margin: 0;
             padding: 0;
@@ -81,23 +77,23 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         }
         
         .dataTable tbody tr td:nth-child(2) {
-            text-align: center;
-        }
-        
-        .dataTable tbody tr td:nth-child(3) {
             direction: rtl;
             text-align: justify;
         }
         
-        .dataTable tbody tr td:nth-child(4) {
+        .dataTable tbody tr td:nth-child(3) {
             direction: ltr;
             text-align: justify;
         }
         
-        .dataTable tbody tr td:nth-child(5) {
+        .dataTable tbody tr td:nth-child(4) {
             direction: rtl;
             text-align: justify;
             font-family: Tharujamaanu-Bold;
+        }
+
+        .dataTable tbody tr td:nth-child(5) {
+            text-align: center;
         }
 
         /* corrects web view only/none-print display for these particular columns */
@@ -107,25 +103,32 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         }
         
         .dataTable tbody tr td.col_2 {
-            text-align: center;
+            direction: rtl;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 140%;
         }
         
         .dataTable tbody tr td.col_3 {
-            direction: rtl;
+            direction: ltr;
             text-align: justify;
+            line-height: 1.4;
+            font-size: 110%;
         }
         
         .dataTable tbody tr td.col_4 {
-            direction: ltr;
-            text-align: justify;
-        }
-        
-        .dataTable tbody tr td.col_5 {
             direction: rtl;
             text-align: justify;
+            font-family: Tharujamaanu-Bold;
+            line-height: 1.4;
+            font-size: 135%;
         }
 
+        .dataTable tbody tr td.col_5 {
+            text-align: center; font-style:
+        }
 
+}
 /*=== SITE CSS ===*/
 
         /*S nav menu spacing*/
@@ -453,11 +456,11 @@ _fnLog:J,_fnMap:F,_fnBindAction:Va,_fnCallbackReg:z,_fnCallbackFire:r,_fnLengthO
     <script type="text/javascript">
         var key = "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
-            {"data":"no",     "title":"No."},
-            {"data":"ref",    "title":"Ref:"},
-            {"data":"arabic", "title":"Arabic"},
-            {"data":"english","title":"English"},
-            {"data":"dhivehi","title":"Dhivehi"} 
+            {"data":"no",    "title":"#"},
+            {"data":"arab",  "title":"Arabic"},
+            {"data":"eng",   "title":"English"},
+            {"data":"dhiv",  "title":"Dhivehi"},
+            {"data":"ref",   "title":"Ref:"},
             ];
 
         $(document).ready(function() {
@@ -521,12 +524,12 @@ _fnLog:J,_fnMap:F,_fnBindAction:Va,_fnCallbackReg:z,_fnCallbackFire:r,_fnLengthO
 */
 
 //Add footer search to table
-                $("#mySelection").append('<tfoot><tr><th>No.</th><th>Ref.</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
+                $("#mySelection").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#mySelection tfoot th').each(function() {
                     var title = $(this).text();
-                    $(this).html('<input type="text" placeholder="Find by ' + title + '" />');
+                    $(this).html('<input type="text" placeholder="'+title+'"/>');
                 });
 
 //initialize the DataTable object and put settings in
@@ -541,7 +544,7 @@ _fnLog:J,_fnMap:F,_fnBindAction:Va,_fnCallbackReg:z,_fnCallbackFire:r,_fnLengthO
                         [0, "asc"]
                     ], //display order on column
                     "pagingType": "full",
-                    "lengthMenu": [1, 3, 5, 10], //display range of pages
+                    "lengthMenu": [1, 2, 3, 5, 7, 10, 15, 20], //display range of pages
                     "language": {
                         "buttons": {
                             copyTitle: 'Copy',
@@ -550,6 +553,15 @@ _fnLog:J,_fnMap:F,_fnBindAction:Va,_fnCallbackReg:z,_fnCallbackFire:r,_fnLengthO
                                 _: "Copied %d Ahadith"
                             }
                         },
+                        "paginate": {
+                            "first":      "&lt;&lt; First",
+                            "last":       "Last &gt;&gt;",
+                            "next":       "Next &gt;",
+                            "previous":   "&lt; Previous"
+                            },
+                        "infoEmpty":      "Found 0 Hadith",
+                        "infoFiltered":   "(filtered from _MAX_ total Hadith)",
+                        "zeroRecords":    "No matches found",
                         "search": "",
                         "searchPlaceholder": "Search Hadithmv . . .",
                         "info": "_START_ to _END_ of _TOTAL_ Hadith",
@@ -557,12 +569,12 @@ _fnLog:J,_fnMap:F,_fnBindAction:Va,_fnCallbackReg:z,_fnCallbackFire:r,_fnLengthO
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
                     "columnDefs": //classes columns for css in nweb view, but not print
                         [
-                            { className: "col_1", "targets": [0] },
-                            { className: "col_2", "targets": [1] },
-                            { className: "col_3", "targets": [2] },
-                            { className: "col_4", "targets": [3] }, 
-                            { className: "col_5", "targets": [4] },
-                        ], //end of columnDefs
+                            { className: "col_1", "targets": [0], "visible": true, "searchable": true},
+                            { className: "col_2", "targets": [1], "visible": true, "searchable": true },
+                            { className: "col_3", "targets": [2], "visible": true, "searchable": true },
+                            { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
+                            { className: "col_5", "targets": [4], "visible": true, "searchable": true },
+                        ], //end of columnDefs, previously withoyt visible and searchable options
             
  /*==previous non responsive adjusted dom*/
                     "dom": 
