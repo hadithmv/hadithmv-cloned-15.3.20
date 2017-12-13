@@ -6,8 +6,8 @@
     <meta name="robots" content="noindex"/>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>ޙަދީޘް އެމް.ވީ. - އެންމެންގެ ބައިވެރިވުން، އެންމެންގެ ބޭނުމަށް</title>
-    <meta name="description" content="އިސްލާމީ ނައްޞުތައް ފަސޭހަކަމާއެކު ފޯރުކޮށްދިނުން">
+    <title>ޙަދީޘް އެމް.ވީ. - އަސްލުތަކާއެކު، އެންމެންގެ ބޭނުމަށް</title>
+    <meta name="description" content="ޙަދީޘްތަކުގެ މާނަ ފަސޭހަކަމާއެކު ފޯރުކޮށްދިނުން">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
     <meta http-equiv="Expires" content="604800"/>
@@ -180,7 +180,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 
         /*search placeholder title*/
-        #mySelection > tfoot > tr > th > input[type="text"] {direction: rtl;}
+        #mySelection > tfoot > tr > th > input[type="text"] {direction: rtl; }
 @media screen and (min-width: 768px) {
         #mySelection > tfoot > tr > th > input[type="text"] {text-align: center;}
 }
@@ -313,11 +313,11 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
         #mySelection_wrapper > div > div.computer.only.row > div:nth-child(3) > div > button.ui.button,
         #mySelection_wrapper > div > div.tablet.only.row > div.center.aligned.five.wide.column > div > button.ui.button
         {font-family: Tharujamaanu-Bold;}
-        /*global search box buttons dhivehi font*/
+        /*global search box buttons dhivehi font, fixes stuck cursor*/
         #mySelection_filter > label > input[type="search"],
         #mySelection_wrapper > div > div:nth-child(3) > div.ten.wide.column > div > label > input[type="search"],
         #mySelection_wrapper > div > div.tablet.only.row > div.center.aligned.three.wide.column > div > label > input[type="search"]
-        {font-family: Tharujamaanu-Bold; text-align: right;}
+        {font-family: Tharujamaanu-Bold; direction: rtl; text-align: right;}
         /*colvis options dhivehi font*/
         body > div.dt-button-collection.ui.basic.vertical.buttons > button
         {font-family: Tharujamaanu-Bold;}
@@ -361,11 +361,11 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 
 <div class="right aligned ui dropdown item" > 
             އެހެނިހެން
-            <div class="menu">
+            <div class="menu" style="">
 
 <!--/menu items-->
                 <div class="ui item">
-                    އަޖުމަ
+                    ބަދަލު
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/lite">ލުއި</a>
                         <a class="item" href="https://hadithmv.github.io">އަސްލު</a>
@@ -379,26 +379,27 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                 <div class="ui item">
                     ފޮންޓު
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts1">ޢަރަބި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts2">2 ޢަރަބި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/englishfonts">އިންގިރޭސި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/dhivehifonts">ދިވެހި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arFonts">ޢަރަބި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arFonts2">2 ޢަރަބި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/enFonts">އިންގިރޭސި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/dvFonts">ދިވެހި</a>
                     </div>
                 </div>
                 <!--/Fonts-->
 
+<!--Others
                 <div class="ui item">
-                    އެނޫން
+                    Others
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/atable">ޓޭބަލް އ</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/asheet">ޝީޓު އ</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">ބޫޓްސްޓްރެޕް 3</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">ބޫޓްސްޓްރެޕް 4</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/material">މެޓީރިއަލް</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/legacy">ކުރީގެ</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/atable">A Table</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/asheet">A Sheet</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3 (Responsive)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/material">Material (Responsive)</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
                     </div>
                 </div>
-                <!--/Others-->
+/Others-->
 
                 <div class="ui item" onclick="myHelp()">
                     އެހީ
@@ -454,7 +455,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
             </div>
             <!--/card 1-->
 
-<!--card 2-->
+<!--card 2
             <div class="card">
                 <div class="ui top attached button">
                     <a>މަޢުލޫމާތު</a>
@@ -465,12 +466,12 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     </div>
 
                 </div>
-                <!--/content-->
+
                 <div class="ui bottom attached button" data-tab="third">
                     ހުށަހެޅުންތައް
                 </div>
             </div>
-            <!--/card 3-->
+/card 2-->
 
 <!--card 3-->
             <div class="card">
@@ -486,24 +487,26 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                         <div class="label">ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span></div>
                     </div>
 
+<!--
                     <div class="ui progress" data-percent="74">
                         <div class="bar" style="width: 0%;">
                             <div class="progress"></div>
                         </div>
-                        <div class="label">ބުޚާރީ</div>
+                        <div class="label">Bukhari</div>
                     </div>
 
                     <div class="ui progress" data-percent="74">
                         <div class="bar" style="width: 0%;">
                             <div class="progress"></div>
                         </div>
-                        <div class="label">މުސްލިމް</div>
+                        <div class="label">Muslim</div>
                     </div>
+-->
 
                 </div>
                 <!--/content-->
                 <div class="ui bottom attached button">
-                    އިރާދަކުރެއްވިއްޔާ އަދި ކުރިއަށް އޮތީ
+                    އހުށަހެޅުންތައް
                 </div>
             </div>
             <!--/card 3-->
@@ -743,12 +746,12 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                             "next":       "ކުރިއަށް &gt;",
                             "previous":   "&lt; ފަހަތަށް"
                             },
-                        "infoEmpty":      "(ފެނުނީ 0 ޙަދީޘް",
-                        "infoFiltered":   "(ޖުމްލަ _MAX_ ޙަދީޘްގެ ތެރެއިން",
+                        "infoEmpty":      "،ހޯދުނީ 0 ޙަދީޘް",
+                        "infoFiltered":   "- ބެލުނު _MAX_ ތެރެއިން",
                         "zeroRecords":    "ނުފެނުނު",
                         "search": "",
                         "searchPlaceholder": "ޙަދީޘް އެމް.ވީ.އިން ހޯއްދަވާ",
-                        "info": " ޖުމްލަ _TOTAL_ ޙަދީޘްގެ ތެރެއިން _START_ އަކުން _END_ އަކަށް",
+                        "info": "  ޖުމްލަ _TOTAL_ ، ދައްކަނީ _START_ އަކުން _END_ އަކަށް",
                         "lengthMenu": "_MENU_"
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
                     "columnDefs": //classes columns for css in nweb view, but not print
@@ -758,7 +761,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                             { className: "col_3", "targets": [2], "visible": true, "searchable": true },
                             { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
                             //{ className: "col_5", "targets": [4], "visible": true, "searchable": true },
-                        ], //end of columnDefs, previously withoyt visible and searchable options
+                        ], //end of columnDefs, previously without visible and searchable options
 
 /* hides select column on start
         columnDefs: [ {
@@ -847,40 +850,6 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     //< and > - div element, <"class" and > - div with a class, <"#id" and > - div with an ID, <"#id.class" and > - div with an ID and a class
 
                     "buttons": [
-                        {
-                            extend: 'colvis',
-                            key: {
-                                key: 'h',
-                                shiftKey: true
-                            },
-                            text: 'ފޮރުވާ'
-                        }, //end of colvis
-
-                        {
-                            extend: 'excel',
-                            key: {
-                                key: 'x',
-                                shiftKey: true
-                            },
-                            text: 'އެކްސްއެލް',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of excel
-
-                        {
-                            extend: 'print',
-                            key: {
-                                key: 'p',
-                                shiftKey: true
-                            },
-                            text: 'ޕްރިންޓް',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of print
 
                         {
                             extend: 'copy',
@@ -922,6 +891,41 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                             //copies currently displayed columns and rows
                         },
 //end of copy customization
+
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'ޕްރިންޓް',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of print
+
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'އެކްސްއެލް',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of excel
+
+                        {
+                            extend: 'colvis',
+                            key: {
+                                key: 'h',
+                                shiftKey: true
+                            },
+                            text: 'ފޮރުވާ'
+                        }, //end of colvis
 
                     ],
 //=== end of all buttons

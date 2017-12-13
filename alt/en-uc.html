@@ -2,30 +2,36 @@
 <html lang="en"><!--change languages later-->
 
 <head>
-
     <meta name="robots" content="noindex"/>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>Hadithmv - Accessible and Crowdsourced</title>
-    <meta name="description" content="Readily available islamic translations for Maldivians">
+    <title>Hadithmv - Accessible and Sourced</title>
+    <meta name="description" content="Dhivehi Hadith translations at your fingertips">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
     <meta http-equiv="Expires" content="604800"/>
 
-    <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,crowdsourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
+    <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,sourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
     <meta name="author" content="Hadithmv">
     <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" />
-    <meta name="theme-color" content="#337862" />
+    <meta name="theme-color" content="#1A619E" />
     <link rel="canonical" href="https://hadithmv.github.io" />
     <link rel="author" href="https://hadithmv.github.io" />
 
 <!--=== === === CSS === === ===-->
-
-<!--DT BT SU CSS
-<link rel="stylesheet" type="text/css" href="https://cdn.dt.net/v/se-2.2.13/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/b-html5-1.4.2/b-print-1.4.2/dt.min.css"/>
+<!--SU dtSU btSU
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css"/>
  -->
+
+<!--CONCAT
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/se-2.2.13/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.5.0/b-colvis-1.5.0/b-flash-1.5.0/b-html5-1.5.0/b-print-1.5.0/datatables.min.css"/>
+ -->
+
     <link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/css/dt-bt-su.min.css">
 <!--=== === === /CSS === === ===-->
+
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <!--=== === === EMBEDDED CSS === === ===-->
@@ -105,15 +111,15 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             direction: ltr;
             text-align: justify;
         }
-        /*
+        
         .dataTable tbody tr td:nth-child(4) {
             direction: rtl;
             text-align: justify;
-            font-family: Lato;
-        }*/
+            font-family: Tharujamaanu-Bold;
+        }
 
-        .dataTable tbody tr td:nth-child(4) {
-            text-align: center; font-style: italic;
+        .dataTable tbody tr td:nth-child(5) {
+            text-align: center;
         }
 
         /* corrects web view only/none-print display for these particular columns */
@@ -135,28 +141,28 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             line-height: 1.4;
             font-size: 110%;
         }
-        /*
+        
         .dataTable tbody tr td.col_4 {
             direction: rtl;
             text-align: justify;
-            font-family: Lato;
+            font-family: Tharujamaanu-Bold;
             line-height: 1.4;
             font-size: 135%;
-        }*/
+        }
 @media screen and (min-width: 768px) {
             .dataTable tbody tr td.col_2 {
                 font-size: 160%;
             }
             .dataTable tbody tr td.col_3 {
                 font-size: 120%;
-            }/*
+            }
             .dataTable tbody tr td.col_4 {
                 font-size: 145%;
-            }*/
+            }
 }
 
-        .dataTable tbody tr td.col_4 {
-            text-align: center; font-style: italic;
+        .dataTable tbody tr td.col_5 {
+            text-align: center;
         }
 
         /*search placeholder title*/
@@ -260,44 +266,10 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             margin: 0;
         }
 
-                /*dhivehi font*/
-        .thaana {font-family: Lato;}
-        /*individual column search boxes dhivehi font*/
-        #mySelection > tfoot > tr > th > input[type="text"] {font-family: Lato;}
-        /*paginatiion buttons dhivehi font*/
-        #mySelection_wrapper > div > div:nth-child(6) > div.right.aligned.nine.wide.column > div > div > a,
-        #mySelection_wrapper > div > div:nth-child(6) > div.right.aligned.nine.wide.column > div > div > div,
-
-        #mySelection_wrapper > div > div.mobile.only.stackable.row > div:nth-child(2) > div > div > a,
-        #mySelection_wrapper > div > div.mobile.only.stackable.row > div:nth-child(2) > div > div > div,
-
-        #mySelection_wrapper > div > div.tablet.only.row > div.right.aligned.seven.wide.column > div > div > a,
-        #mySelection_wrapper > div > div.tablet.only.row > div.right.aligned.seven.wide.column > div > div > div,
-
-        #mySelection_next, #mySelection_previous,       #mySelection_first, #mySelection_last
-        {font-family: Lato;}
-        /*copy etc buttons dhivehi font*/
-        #mySelection_wrapper > div > div.mobile.only.stackable.row > div:nth-child(1) > div > button.ui.button,
-        #mySelection_wrapper > div > div.computer.only.row > div:nth-child(3) > div > button.ui.button,
-        #mySelection_wrapper > div > div.tablet.only.row > div.center.aligned.five.wide.column > div > button.ui.button
-        {font-family: Lato;}
-        /*global search box buttons dhivehi font*/
-        #mySelection_filter > label > input[type="search"],
-        #mySelection_wrapper > div > div:nth-child(3) > div.ten.wide.column > div > label > input[type="search"],
-        #mySelection_wrapper > div > div.tablet.only.row > div.center.aligned.three.wide.column > div > label > input[type="search"]
-        {font-family: Lato;}
-        /*colvis options dhivehi font*/
-        body > div.dt-button-collection.ui.basic.vertical.buttons > button
-        {font-family: Lato;}
-        /*copy alert dhivehi font*/
-        #datatables_buttons_info > h2
-        {font-family: Lato;}
-
         /*maybe unneeded, previously til min height, font-family: "";*/
         html,
         body {
             /*font-size: 16px; base font size*/
-            font-family: Lato !important;
 
             width: 100%;
             height: 100%;
@@ -320,7 +292,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         }
 /*hides unwanted horizontal scroll space*/
 @media not print, screen {
-    html, body {max-width: 100%; 
+    html, body {max-width: 100%; font-family: Lato !important;
                 overflow-x: hidden;}
 }
 
@@ -333,7 +305,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         /*card content, content arabic text*/
         .content.center.aligned .description.cardarabic {font-weight: bold; font-size: 115%; padding-bottom: 10px; direction: rtl;}
         /*dhivehi font*/
-        .thaana {font-family: Lato;}
+        .thaana {font-family: Tharujamaanu-Bold; direction: rtl;}
 
         /*presets largelogo size*/
         .largeLogo {width: 150px;
@@ -378,11 +350,11 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 <!--/menu items-->
                 <div class="ui item">
-                    Experimental
+                    Alternatives
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/lite">Lite (Desktop)</a>
-                        <a class="item" href="https://hadithmv.github.io">Original</a>
                         <a class="item" href="https://hadithmv.github.io/alt/dv">Dhivehi Version</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/en">English Version</a>
                         <a class="item" href="https://hadithmv.github.io/alt/ar">Arabic Version</a>
                     </div>
                 </div>
@@ -391,14 +363,14 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                 <div class="ui item">
                     Fonts
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts1">Arabic</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/arabicfonts2">Arabic 2</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/englishfonts">English</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/dhivehifonts">Dhivehi</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arFonts">Arabic</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arFonts2">Arabic 2</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/enFonts">English</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/dvFonts">Dhivehi</a>
                     </div>
                 </div>
                 <!--/Fonts-->
-
+<!--Others
                 <div class="ui item">
                     Others
                     <div class="menu">
@@ -410,7 +382,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
                     </div>
                 </div>
-                <!--/Others-->
+/Others-->
 
                 <div class="ui item" onclick="myHelp()">
                     Help
@@ -451,9 +423,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     40 Nawawi
                 </div>
             </div>
-            <!--/card 1-->
+<!--/card 1-->
 
-<!--card 2-->
+<!--card 2
             <div class="card">
                 <div class="ui top attached button">
                     <a>About</a>
@@ -464,12 +436,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     </div>
 
                 </div>
-                <!--/content-->
+                
                 <div class="ui bottom attached button" data-tab="third">
                     Submissions
                 </div>
             </div>
-            <!--/card 3-->
+/card 2-->
 
 <!--card 3-->
             <div class="card">
@@ -484,7 +456,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         </div>
                         <div class="label">40 Nawawi</div>
                     </div>
-
+<!--
                     <div class="ui progress" data-percent="74">
                         <div class="bar" style="width: 0%;">
                             <div class="progress"></div>
@@ -498,14 +470,15 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         </div>
                         <div class="label">Muslim</div>
                     </div>
+-->
+                </div>
 
-                </div>
-                <!--/content-->
                 <div class="ui bottom attached button">
-                    More to come in sha Allah
+                    Submissions
                 </div>
+
             </div>
-            <!--/card 3-->
+<!--card 3-->
 
 <!--card 4-->
             <div class="card">
@@ -577,15 +550,33 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
     </div>
 <!--//third tab-->
 
+
 <!-- === === === JS === === === -->
 
-    <!--JQ TT DT SU MK JS
-<script type="text/javascript" src="https://hadithmv.github.io/js/tt.dt.min.js"></script>
+<!-- JQ SU JZ jqDT dtSU dtBT btSU btCV btH5 btPT
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+-->
+
+<!--TT
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
  -->
 
-    <!--=== MK JS ====
+<!--=== MKjs MKext====
+mark{
+    background: orange;
+    color: black;
+}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 === === ===-->
 
     <script type="text/javascript" src="https://hadithmv.github.io/js/jq-tt-dt-su-mk.min.js"></script>
@@ -639,11 +630,11 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
     <script type="text/javascript">
         var key = "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
-            {"data":"no",       "title":"#"},
-            {"data":"arab",     "title":"Arabic"},
-            {"data":"eng",      "title":"English"},
-            //{"data":"dhiv",   "title":"Dhivehi"},
-            {"data":"ref",      "title":"Ref:"},
+            {"data":"no",    "title":"#"},
+            {"data":"arab",  "title":"Arabic"},
+            {"data":"eng",   "title":"English"},
+            {"data":"dhiv",  "title":"Dhivehi"},
+            {"data":"ref",   "title":"Ref:"},
             ];
 
         $(document).ready(function() {
@@ -707,7 +698,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 */
 
 //Add footer search to table
-                $("#mySelection").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Ref.</th></tr></tfoot>');
+                $("#mySelection").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#mySelection tfoot th').each(function() {
@@ -756,8 +747,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             { className: "col_2", "targets": [1], "visible": true, "searchable": true },
                             { className: "col_3", "targets": [2], "visible": true, "searchable": true },
                             { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
-                            //{ className: "col_5", "targets": [4], "visible": true, "searchable": true },
-                        ], //end of columnDefs, previously withoyt visible and searchable options
+                            { className: "col_5", "targets": [4], "visible": true, "searchable": true },
+                        ], //end of columnDefs, previously without visible and searchable options
 
 /* hides select column on start
         columnDefs: [ {
@@ -846,40 +837,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     //< and > - div element, <"class" and > - div with a class, <"#id" and > - div with an ID, <"#id.class" and > - div with an ID and a class
 
                     "buttons": [
-                        {
-                            extend: 'colvis',
-                            key: {
-                                key: 'h',
-                                shiftKey: true
-                            },
-                            text: 'Hide'
-                        }, //end of colvis
-
-                        {
-                            extend: 'excel',
-                            key: {
-                                key: 'x',
-                                shiftKey: true
-                            },
-                            text: 'Excel',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of excel
-
-                        {
-                            extend: 'print',
-                            key: {
-                                key: 'p',
-                                shiftKey: true
-                            },
-                            text: 'Print',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of print
 
                         {
                             extend: 'copy',
@@ -915,6 +872,41 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                             //copies currently displayed columns and rows
                         },
 //end of copy customization
+
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'Print',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of print
+
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'Excel',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of excel
+
+                        {
+                            extend: 'colvis',
+                            key: {
+                                key: 'h',
+                                shiftKey: true
+                            },
+                            text: 'Hide'
+                        }, //end of colvis
 
                     ],
 //=== end of all buttons

@@ -749,7 +749,7 @@ mark{
                             { className: "col_3", "targets": [2], "visible": true, "searchable": true },
                             { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
                             { className: "col_5", "targets": [4], "visible": true, "searchable": true },
-                        ], //end of columnDefs, previously withoyt visible and searchable options
+                        ], //end of columnDefs, previously without visible and searchable options
 
 /* hides select column on start
         columnDefs: [ {
@@ -838,40 +838,6 @@ mark{
                     //< and > - div element, <"class" and > - div with a class, <"#id" and > - div with an ID, <"#id.class" and > - div with an ID and a class
 
                     "buttons": [
-                        {
-                            extend: 'colvis',
-                            key: {
-                                key: 'h',
-                                shiftKey: true
-                            },
-                            text: 'Hide'
-                        }, //end of colvis
-
-                        {
-                            extend: 'excel',
-                            key: {
-                                key: 'x',
-                                shiftKey: true
-                            },
-                            text: 'Excel',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of excel
-
-                        {
-                            extend: 'print',
-                            key: {
-                                key: 'p',
-                                shiftKey: true
-                            },
-                            text: 'Print',
-                            exportOptions: {
-                                columns: [':visible'],
-                                rows: [':visible']
-                            }
-                        }, //end of print
 
                         {
                             extend: 'copy',
@@ -907,6 +873,41 @@ mark{
                             //copies currently displayed columns and rows
                         },
 //end of copy customization
+
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'Print',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of print
+
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'Excel',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of excel
+
+                        {
+                            extend: 'colvis',
+                            key: {
+                                key: 'h',
+                                shiftKey: true
+                            },
+                            text: 'Hide'
+                        }, //end of colvis
 
                     ],
 //=== end of all buttons
