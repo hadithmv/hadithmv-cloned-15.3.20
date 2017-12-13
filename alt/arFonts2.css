@@ -1,0 +1,192 @@
+@font-face {
+    font-family: AraJozoor;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/f86e731b/fonts/ar/reg/AraJozoor-Regular.ttf);
+} /* 1 */
+
+@font-face {
+    font-family: JFFlat;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/JF-Flat-regular.ttf);
+} /* 2 */
+
+@font-face {
+    font-family: KacstOne;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e1fd16b4/fonts/ar/reg/KacstOne.ttf);
+} /* 3 */
+
+@font-face {
+    font-family: PDMSSaleem;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/PDMS_Saleem_QuranFont-signed.ttf);
+} /* 4 */
+
+@font-face {
+    font-family: QURSTD;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/QUR_STD.TTF);
+} /* 5 */
+
+@font-face {
+    font-family: UthmanicHafs1;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/UthmanicHafs1%20Ver09.otf);
+} /* 6 */
+
+@font-face {
+    font-family: UthmanTN1;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/UthmanTN1%20Ver10.otf);
+} /* 7 */
+
+@font-face {
+    font-family: UthmanTN1B;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/UthmanTN1B%20Ver10.otf);
+} /* 8 */
+
+@font-face {
+    font-family: ALHAWE;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/5c210005/fonts/ar/reg/ar-ALHAWE_QURAN.ttf);
+} /* 9 */
+
+@font-face {
+    font-family: arOthmani;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/ar-Othmani.ttf);
+} /* 10 */
+
+
+@font-face {
+    font-family: arQuran1;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/ar-Quran1.ttf);
+} /* 11 */
+
+@font-face {
+    font-family: arabeyesqr;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/arabeyes-qr.ttf);
+} /* 12 */
+
+@font-face {
+    font-family: maddina;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/maddina.ttf);
+} /* 13 */
+
+@font-face {
+    font-family: mequran;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/me_quran.ttf);
+} /* 14 */
+
+@font-face {
+    font-family: mequranmark2;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/me_quran_volt_mark2.ttf);
+} /* 15 */
+
+@font-face {
+    font-family: mequrannewmet;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/me_quran_volt_newmet.ttf);
+} /* 16 */
+
+@font-face {
+    font-family: nazlib;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/nazlib.ttf);
+} /* 17 */
+
+@font-face {
+    font-family: noorehidayat;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/noorehidayat.ttf);
+} /* 18 */
+
+@font-face {
+    font-family: noorehira;
+    src: url(https://cdn.rawgit.com/hadithmv/hadithmv.github.io/e82b98ff/fonts/ar/reg/noorehira.ttf);
+} /* 19 */
+
+
+
+
+/* === /FONT FACES === */
+
+
+df1 {
+   font-family: 'AraJozoor';
+}
+
+df2 {
+   font-family: 'JFFlat';
+}
+
+df3 {
+   font-family: 'KacstOne';
+}
+
+df4 {
+   font-family: 'PDMSSaleem';
+}
+
+df5 {
+   font-family: 'QURSTD';
+}
+
+df6 {
+   font-family: 'UthmanicHafs1';
+}
+
+df7 {
+   font-family: 'UthmanTN1';
+}
+
+df8 {
+   font-family: 'UthmanTN1B';
+}
+
+df9 {
+   font-family: 'ALHAWE';
+}
+
+df10 {
+   font-family: 'arOthmani';
+}
+
+df11 {
+   font-family: 'arQuran1';
+}
+
+df12 {
+   font-family: 'arabeyesqr';
+}
+
+df13 {
+   font-family: 'maddina';
+}
+
+df14 {
+   font-family: 'mequran';
+}
+
+df15 {
+   font-family: 'mequranmark2';
+}
+
+df16 {
+   font-family: 'mequrannewmet';
+}
+
+df17 {
+   font-family: 'nazlib';
+}
+
+df18 {
+   font-family: 'noorehidayat';
+}
+
+df19 {
+   font-family: 'noorehira';
+}
+
+
+/* ==== /FONT NAMES === */
+
+a:after{
+content: "عَنْ أَمِيرِ الْمُؤْمِنِينَ أَبِي حَفْصٍ عُمَرَ بْنِ الْخَطَّابِ رضى الله عنه قَالَ: سَمِعْت رَسُولَ اللَّهِ ﷺ يَقُولُ: إنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إلَى اللَّهِ وَرَسُولِهِ، وَمَنْ كَانَتْ هِجْرَتُهُ لِدُنْيَا يُصِيبُهَا أَوْ امْرَأَةٍ يَنْكِحُهَا فَهِجْرَتُهُ إلَى مَا هَاجَرَ إلَيْهِ.";
+}
+
+body {
+   direction: rtl;
+   text-align: justify;
+   unicode-bidi: bidi-override;
+}
+
+.b { font-weight: bold }
