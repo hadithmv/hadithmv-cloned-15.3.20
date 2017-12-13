@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <meta name="robots" content="noindex"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+  
+<!--TABLE BEGIN-->
+<table id="table_id" class="display">
+
+
+
+<!--TABLE HEAD BEGIN-->
+    <thead>
+        <tr>
+            <th>Rendering engine</th>
+            <th>Browser</th>
+            <th>Platform(s)</th>
+            <th>Engine version</th>
+            <th>CSS grade</th>
+        </tr>
+    </thead>
+<!--!TABLE HEAD END-->
+
+<!--TABLE BODY BEGIN-->
+    <tbody>
+        <tr>
+            <td>Trident</td>
+            <td>Internet
+                 Explorer 4.0</td>
+            <td>Win 95+</td>
+            <td> 4</td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Trident</td>
+            <td>Internet
+                 Explorer 5.0</td>
+            <td>Win 95+</td>
+            <td>5</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>Trident</td>
+            <td>Internet
+                 Explorer 5.5</td>
+            <td>Win 95+</td>
+            <td>5.5</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Trident</td>
+            <td>Internet
+                 Explorer 6</td>
+            <td>Win 98+</td>
+            <td>6</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Trident</td>
+            <td>Internet Explorer 7</td>
+            <td>Win XP SP2+</td>
+            <td>7</td>
+            <td>A</td>
+        </tr>
+
+
+
+
+
+    </tbody>
+    <!--/TABLE BODY ENG-->
+</table>
+<!--/TABLE END-->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+</script>
+
+
+</body>
+</html>
