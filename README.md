@@ -1,7 +1,7 @@
-# Hadithmv - Accessible and Sourced
+## Hadithmv - Accessible and Sourced
 
 Dhivehi Hadith translations at your fingertips
 
-## Links
+### Links
 
 * [hadithmv.github.io](http://hadithmv.github.io) - Web
