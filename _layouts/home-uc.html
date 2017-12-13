@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <title>Hadithmv - Accessible and Sourced</title>
-    <meta name="description" content="Dhivehi translations of hadith at your fingertips">
+    <meta name="description" content="Hadith translations in Dhivehi at your fingertips">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
     <meta http-equiv="Expires" content="604800"/>
@@ -19,14 +19,16 @@
     <link rel="author" href="https://hadithmv.github.io" />
 
 <!--=== === === CSS === === ===-->
-
-<!--DT BT SU CSS
-<link rel="stylesheet" type="text/css" href="https://cdn.dt.net/v/se-2.2.13/jq-3.2.1/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-colvis-1.4.2/b-html5-1.4.2/b-print-1.4.2/dt.min.css"/>
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/se/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.5.0/b-colvis-1.5.0/b-html5-1.5.0/b-print-1.5.0/datatables.min.css"/>
- 
- 
+<!--DT BT SU
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css"/>
  -->
+
+<!--CONCAT
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/se-2.2.13/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.5.0/b-colvis-1.5.0/b-flash-1.5.0/b-html5-1.5.0/b-print-1.5.0/datatables.min.css"/>
+ -->
+
     <link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/css/dt-bt-su.min.css">
 <!--=== === === /CSS === === ===-->
 
@@ -349,7 +351,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 <!--/menu items-->
                 <div class="ui item">
-                    Experimental
+                    Alternatives
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/lite">Lite (Desktop)</a>
                         <a class="item" href="https://hadithmv.github.io/alt/dv">Dhivehi Version</a>
@@ -369,19 +371,19 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     </div>
                 </div>
                 <!--/Fonts-->
-
+<!--Others
                 <div class="ui item">
                     Others
                     <div class="menu">
                         <a class="item" href="https://hadithmv.github.io/alt/atable">A Table</a>
                         <a class="item" href="https://hadithmv.github.io/alt/asheet">A Sheet</a>
                         <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3 (Responsive)</a>
-                    <!--<a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
+                    	<a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
                         <a class="item" href="https://hadithmv.github.io/alt/material">Material (Responsive)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>    -->
+                        <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
                     </div>
                 </div>
-                <!--/Others-->
+/Others-->
 
                 <div class="ui item" onclick="myHelp()">
                     Help
@@ -549,15 +551,33 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
     </div>
 <!--//third tab-->
 
+
 <!-- === === === JS === === === -->
 
-    <!--JQ TT DT SU MK JS
-<script type="text/javascript" src="https://hadithmv.github.io/js/tt.dt.min.js"></script>
+<!-- JQ SU JZ jqDT dtSU dtBT btSU btCV btH5 btPT
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+-->
+
+<!--TT
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
  -->
 
-    <!--=== MK JS ====
+<!--=== MKjs MKext====
+mark{
+    background: orange;
+    color: black;
+}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/datatables.mark.js/2.0.0/datatables.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 === === ===-->
 
     <script type="text/javascript" src="https://hadithmv.github.io/js/jq-tt-dt-su-mk.min.js"></script>
