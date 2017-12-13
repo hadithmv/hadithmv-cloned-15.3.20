@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="dv"><!--change languages later-->
+<html lang="ar"><!--change languages later-->
 
 <head>
 
     <meta name="robots" content="noindex"/>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>ޙަދީޘް އެމް.ވީ. - އަސްލުތަކާއެކު، އެންމެންގެ ބޭނުމަށް</title>
-    <meta name="description" content="ޙަދީޘްތަކުގެ މާނަ ފަސޭހަކަމާއެކު ފޯރުކޮށްދިނުން">
+    <title>حديث أم. وي.</title>
+    <meta name="description" content="تراجم الأحاديث بالديفيهية بين يديك">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="cache-control" content="Public"/>
     <meta http-equiv="Expires" content="604800"/>
@@ -33,7 +33,7 @@
         /*=== FONT FACES ===*/
         @font-face {
             font-family: Tharujamaanu-Bold;
-            src: url(https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff);
+            src: url(https://fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Regular.woff);
         }
 
         /*maybe unneeded, previously til min height, font-family: "";*/
@@ -132,15 +132,12 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         .dataTable tbody tr td:nth-child(2) {
             direction: rtl;
             text-align: justify;
+            font-size: 150%;
+            line-height: 1.7;
         }
         
-        .dataTable tbody tr td:nth-child(3) {
-            direction: rtl;
-            text-align: justify;
-            font-family: Tharujamaanu-Bold;
-        }
 
-        .dataTable tbody tr td:nth-child(4) {
+        .dataTable tbody tr td:nth-child(3) {
             text-align: center;
         }
 
@@ -153,28 +150,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         .dataTable tbody tr td.col_2 {
             direction: rtl;
             text-align: justify;
-            line-height: 1.4;
-            font-size: 140%;
         }
-        
         
         .dataTable tbody tr td.col_3 {
-            direction: rtl;
-            text-align: justify;
-            font-family: Tharujamaanu-Bold;
-            line-height: 1.4;
-            font-size: 135%;
-        }
-@media screen and (min-width: 768px) {
-            .dataTable tbody tr td.col_2 {
-                font-size: 160%;
-            }
-            .dataTable tbody tr td.col_3 {
-                font-size: 145%;
-            }
-}
-
-        .dataTable tbody tr td.col_4 {
             text-align: center;
         }
 
@@ -360,29 +338,29 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 
 
 <div class="right aligned ui dropdown item" > 
-            އެހެނިހެން
+            متفرقات
             <div class="menu" style="">
 
 <!--/menu items-->
                 <div class="ui item">
-                    ބަދަލު
+                    البدائل
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/lite">ލުއި</a>
-                        <a class="item" href="https://hadithmv.github.io">އަސްލު</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/en">އިންގިރޭސި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/ar">ޢަރަބި</a>
+                        <a class="item" href="https://hadithmv.github.io">الأصل</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/lite">الخفيف</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/en">الإنجليزية</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/dv">الديفيهية </a>
 
                     </div>
                 </div>
                 <!--/Experimental-->
 
                 <div class="ui item">
-                    ފޮންޓު
+                    الخطوط
                     <div class="menu">
-                        <a class="item" href="https://hadithmv.github.io/alt/arFonts">ޢަރަބި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/arFonts2">2 ޢަރަބި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/enFonts">އިންގިރޭސި</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/dvFonts">ދިވެހި</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arFonts">عربي</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/arFonts2">عربي 2</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/enFonts">إنجليزي</a>
+                        <a class="item" href="https://hadithmv.github.io/alt/dvFonts">ديفيهي</a>
                     </div>
                 </div>
                 <!--/Fonts-->
@@ -402,7 +380,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 /Others-->
 
                 <div class="ui item" onclick="myHelp()">
-                    އެހީ
+                    مساعدة
                 </div>
                 <!--/Help alert-->
 
@@ -415,9 +393,9 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
         </div>
 
         <!--//misc-->
-        <a class="item" data-tab="third">ހުށަހެޅުންތައް</a>
-        <a class="item" data-tab="second">ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span></a>
-        <a class="item" data-tab="first">ފުރަތަމަ ސަފްހާ</a>        
+        <a class="item" data-tab="third">نماذج </a>
+        <a class="item" data-tab="second">النووية&nbsp;<span style="unicode-bidi: bidi-override;">40</span></a>
+        <a class="item" data-tab="first">الرئيسية</a>        
         <div class="item">
             <a href="https://hadithmv.github.io">
                 <img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-white-logo.svg" alt="menu logo">
@@ -445,12 +423,12 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     </div>
                     <div class="header" >السلام عليكم</div>
                     <div class="description" style="text-align: center;">
-                        <strong>ޙަދީޘް އެމް.ވީ.</strong> އަށް މަރުހަބާ
+                        <strong></strong>مرحبا بكم
                     </div>
                 </div>
                 <!--/content-->
                 <div class="ui bottom attached button" data-tab="second">
-                     ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span>
+                     النووية&nbsp;<span style="unicode-bidi: bidi-override;">40</span>
                 </div>
             </div>
             <!--/card 1-->
@@ -476,7 +454,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 <!--card 3-->
             <div class="card">
                 <div class="ui top attached button">
-                    <a>ކުރިއެރުން</a>
+                    <a>التقدم</a>
                 </div>
                 <div class="content center aligned">
 
@@ -484,7 +462,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                         <div class="bar" style="width: 99%;">
                             <div class="progress">99%</div>
                         </div>
-                        <div class="label">ނަވަވީ&nbsp;<span style="unicode-bidi: bidi-override;">40</span></div>
+                        <div class="label"><span>40&nbsp;</span>النووية</div>
                     </div>
 
 <!--
@@ -506,7 +484,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                 </div>
                 <!--/content-->
                 <div class="ui bottom attached button">
-                    އހުށަހެޅުންތައް
+                    نماذج
                 </div>
             </div>
             <!--/card 3-->
@@ -517,13 +495,10 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     <a>سورة يس</a>
                 </div>
                 <div class="content center aligned">
-                    <div class="description cardarabic">
-                        إِنَّا نَحْنُ نُحْيِي الْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ ۚ وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ
-                    </div>
 
-                    <div class="ui animated fade basic button" tabindex="0" style="vertical-align: middle; text-align: justify; height: 85px;">
-                        <div class="hidden content" style="position: absolute; top: 0%; padding: 3% 5% 0 5%; line-height: 120%">Certainly, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register.</div>
-                        <div class=" visible content thaana" >ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިސްކޮށްފައިވާ ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.</div>
+                    <div class="ui animated fade basic button" tabindex="0" style="vertical-align: middle; text-align: justify; height: 105px;">
+                        <div class="hidden content" style="direction: rtl; position: absolute; top: 0%; padding: 3% 5% 0 5%; line-height: 120%">إنا نحن نحيي الأموات جميعًا ببعثهم يوم القيامة، ونكتب ما عملوا من الخير والشر، وآثارهم التي كانوا سببًا فيها في حياتهم وبعد مماتهم من خير، كالولد الصالح، والعلم النافع، والصدقة الجارية، ومن شر، كالشرك والعصيان، وكلَّ شيء أحصيناه في كتاب واضح هو أمُّ الكتب، وإليه مرجعها، وهو اللوح المحفوظ. فعلى العاقل محاسبة نفسه؛ ليكون قدوة في الخير في حياته وبعد مماته.</div>
+                        <div class=" visible content thaana" style="line-height: 150%;">إِنَّا نَحْنُ نُحْيِي الْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ ۚ وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ</div>
                     </div>
 
                 </div>
@@ -540,13 +515,11 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     <a>صحيح مسلم</a>
                 </div>
                 <div class="content center aligned">
-                    <div class="description cardarabic" style="text-align: justify; direction: rtl;">
-                        عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ.
-                    </div>
 
-                    <div class="ui animated fade basic button" tabindex="0" style="vertical-align: middle; text-align: justify; height: 185px;">
-                        <div class="hidden content" style="text-align: justify; position: absolute; top: 0%; padding: 4% 5% 0 5%; line-height: 120%">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins.</div>
-                        <div class=" visible content thaana">މުންޛިރު ބިން ޖަރީރު އެކަލޭގެފާނުގެ ބައްޕާފުޅު ފަރާތުން ރިވާކުރެއްވިއެވެ. ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ވާ ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ، އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް ކުރަން) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ.</div>
+                    <div class="ui animated fade basic button" tabindex="0" style="vertical-align: middle; text-align: justify; height: 200px;">
+                        <div class="hidden content" style="text-align: justify; direction: rtl; position: absolute; top: 0%; padding: 4% 5% 0 5%; line-height: 120%">قوله صلى الله عليه وسلم : ( من سن سنة حسنة ، ومن سن سنة سيئة ) الحديث ، وفي الحديث الآخر : " من دعا إلى هدى ، ومن دعا إلى ضلالة " ، هذان الحديثان صريحان في الحث على استحباب سن الأمور الحسنة ، وتحريم سن الأمور السيئة ، وأن من سن سنة حسنة كان له مثل أجر كل من يعمل بها إلى يوم القيامة ، ومن سن سنة سيئة كان عليه مثل وزر كل من يعمل بها إلى يوم القيامة ، وأن من دعا إلى هدى كان له مثل أجور متابعيه ، أو إلى ضلالة كان عليه مثل آثام تابعيه ، سواء كان ذلك الهدى والضلالة هو الذي ابتدأه ، أم كان مسبوقا إليه ، وسواء كان ذلك تعليم علم ، أو عبادة ، أو أدب ، أو غير ذلك . ‏قوله صلى الله عليه وسلم : ( فعمل بها بعده ) ‏معناه : إن سنها ، سواء كان العمل في حياته أو بعد موته ، والله أعلم .</div>
+                        <div class=" visible content thaana" style="line-height: 150%;">
+                        عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ.</div>
                     </div>
 
                 </div>
@@ -563,7 +536,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 <!--footer-->
         <footer>
             <div onclick="myFooter()" class="description" style="padding-top: 5px; padding-bottom: 5px; border-top: 1px solid #eee; text-align: center;">
-                 ޙަދީޘްއެމްވީ.ގިޓްހަބް.އައީއޯ 2017
+                 حديث أم. وي. 2017
             </div>
         </footer>
 <!--//footer-->
@@ -644,10 +617,11 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
         var key = "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
             {"data":"no",       "title":"#"},
-            {"data":"arab",     "title":"ޢަރަބި"},
+            {"data":"arab",     "title":"عربي"},
             //{"data":"eng",    "title":"English"},
-            {"data":"dhiv",     "title":"ދިވެހި"},
-            {"data":"dvRef",    "title":"މަރުޖިޢު"},
+            //{"data":"dhiv",     "title":"ދިވެހި"},
+            //{"data":"dvRef",    "title":"މަރުޖިޢު"},
+            {"data":"arRef",    "title":"مصدر"},
             ];
 
         $(document).ready(function() {
@@ -711,7 +685,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
 */
 
 //Add footer search to table
-                $("#mySelection").append('<tfoot><tr><th>#</th><th>ޢަރަބި</th><th>ދިވެހި</th><th>މަރުޖިޢު</th></tr></tfoot>');
+                $("#mySelection").append('<tfoot><tr><th>#</th><th>عربي</th><th>مصدر</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#mySelection tfoot th').each(function() {
@@ -734,32 +708,32 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                     "lengthMenu": [1, 2, 3, 5, 7, 10, 15, 20], //display range of pages
                     "language": {
                         "buttons": {
-                            copyTitle: 'ކޮޕީ',
+                            copyTitle: 'نسخ',
                             copySuccess: {
-                                1: "ކޮޕީ ވީ 1 ޙަދީޘް",
-                                _: "ކޮޕީ ވީ %d ޙަދީޘް"
+                                1: "نسخ 1 حديث",
+                                _: "نسخ %d أحاديث"
                             }
                         },
                         "paginate": {
-                            "first":      "&lt;&lt; ފުރަތަމަ",
-                            "last":       "ފަހު &gt;&gt;",
-                            "next":       "ކުރިއަށް &gt;",
-                            "previous":   "&lt; ފަހަތަށް"
+                            "first":      "&lt;&lt; الأول",
+                            "last":       "الأخير &gt;&gt;",
+                            "next":       "التالى &gt;",
+                            "previous":   "&lt; السابق"
                             },
-                        "infoEmpty":      "،ހޯދުނީ 0 ޙަދީޘް",
-                        "infoFiltered":   "- ބެލުނު _MAX_ ތެރެއިން",
-                        "zeroRecords":    "ނުފެނުނު",
+                        "infoEmpty":      "، وجد 0 أحاديث",
+                        "infoFiltered":   "- بحث  من _MAX_",
+                        "zeroRecords":    "ما وجد",
                         "search": "",
-                        "searchPlaceholder": "ޙަދީޘް އެމް.ވީ.އިން ހޯއްދަވާ",
-                        "info": "  ޖުމްލަ _TOTAL_ ، ދައްކަނީ _START_ އަކުން _END_ އަކަށް",
+                        "searchPlaceholder": "ابحث من حديث أم. وي",
+                        "info": " وجد _TOTAL_ ، ترى من _START_ الى _END_",
                         "lengthMenu": "_MENU_"
                     }, //"search": "Search Hadithmv "//Showing_START_ to _END_ of _TOTAL_ entries //"Show _MENU_ entries" 
                     "columnDefs": //classes columns for css in nweb view, but not print
                         [
                             { className: "col_1", "targets": [0], "visible": true, "searchable": true},
-                            { className: "col_2", "targets": [1], "visible": true, "searchable": true },
-                            { className: "col_3", "targets": [2], "visible": true, "searchable": true },
-                            { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
+                            //{ className: "col_2", "targets": [1], "visible": true, "searchable": true },
+                            //{ className: "col_3", "targets": [2], "visible": true, "searchable": true },
+                            //{ className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
                             //{ className: "col_5", "targets": [4], "visible": true, "searchable": true },
                         ], //end of columnDefs, previously without visible and searchable options
 
@@ -857,8 +831,8 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                                 key: 'c',
                                 shiftKey: true
                             },
-                            text: 'ކޮޕީ',
-                            messageTop: '40 ނަވަވީ',
+                            text: 'نسخ',
+                            messageTop: '40 النووية',
                             title: 'hadithmv.github.io',
                             customize: function(data) {
 
@@ -898,7 +872,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                                 key: 'p',
                                 shiftKey: true
                             },
-                            text: 'ޕްރިންޓް',
+                            text: 'طباعة',
                             exportOptions: {
                                 columns: [':visible'],
                                 rows: [':visible']
@@ -911,7 +885,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                                 key: 'x',
                                 shiftKey: true
                             },
-                            text: 'އެކްސްއެލް',
+                            text: 'أكسل',
                             exportOptions: {
                                 columns: [':visible'],
                                 rows: [':visible']
@@ -924,7 +898,7 @@ body > div.BREAKSCOMPRESS.ui.bottom.attached.tab.active > div > div > div.ui.bot
                                 key: 'h',
                                 shiftKey: true
                             },
-                            text: 'ފޮރުވާ'
+                            text: 'إخفاء'
                         }, //end of colvis
 
                     ],
