@@ -21,12 +21,12 @@ For CSS only a single file should be included as the styling library will provid
 
 <!--jquery-->
 
-<!--jQuery Slim 3.x snippet-->
+<!--DOESNT WORK WITH BUTTONS, jQuery Slim 3.x snippet
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
-<!--Google 3.x snippet
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 -->
+<!--Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!--Google 2.x snippet
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 -->
@@ -162,7 +162,9 @@ The first column in the table is a sequence number that provides the basis for t
 <!--=== === DataTable inline JS === ===-->
 <script type="text/javascript">
 
-//=== === Accent neutralise === ===
+$(document).ready(function() {
+
+//=== === Accent neutralise === === other half at bottom
 //When search a table with accented characters, it can be frustrating to have an input such as Zurich not match Zürich in the table (u !== ü). This type based search plug-in replaces the built-in string formatter in DataTables with a function that will remove replace the accented characters with their unaccented counterparts for fast and easy filtering.
                 /*
                   .replace(/([^\u0021-\u007E])/g, '') //https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block), punctuation and symbols, digits, Uppercase Latin alphabet, punctuation and symbols, Lowercase Latin alphabet, punctuation and symbols
@@ -214,9 +216,17 @@ The first column in the table is a sequence number that provides the basis for t
 //End of Accent neutralize and regex for search
 
 
-//DT function, previously no variable name "var table =", had to add for accent neutralize "$('#table_id').DataTable( {""
-$(document).ready(function() {
-     $('#table_id').DataTable( {
+// MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
+    // Setup - add a text input to each footer cell
+    $('#table_id tfoot th').each( function () {
+        var title = $(this).text(); //var title = $('#table_id thead th').eq( $(this).index() ).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+//DT function, previously had "$(document).ready(function() {", but turned off and moved to very top to make individual coumn filters work, also previously no variable name "var table =", had to add for accent neutralize "$('#table_id').DataTable( {"
+//$(document).ready(function() {
+
+    var table = $('#table_id').DataTable( {
 
 //columnDefs, Very similar to columns, this parameter allows you to assign specific options to columns in the table, although in this case the column options defined can be applied to one or more columns. Additionally, not every column need be specified, unlike columns.
 //The titles of columns are typically read directly from the DOM (from the cells in the THEAD element), but it can often be useful to either override existing values, or have DataTables actually construct a header with column titles for you (for example if there is not THEAD element in the table before DataTables is constructed).
@@ -271,6 +281,25 @@ B - Buttons
                      shiftKey: true },
               messageTop: '40 Nawawi',
               title: 'hadithmv.github.io',
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+                            customize: function(data) {
+
+//=== code to manipulate the data string as desired
+                            //data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //normal
+                            data = data.replace( /\n#/g, '' );
+                            data = data.replace( /\tArabic/g, '' );
+                            data = data.replace( /\tEnglish/g, '' );
+                            data = data.replace( /\tDhivehi/g, '' );
+                            data = data.replace( /\tRef:/g, '' );
+
+                            data = data.replace( /\r/g, '' ); //rids windows platform newline
+                            data = data.replace( /\t/g, '\n\n' );
+
+                                console.log(JSON.stringify(data));
+                                return data;
+                            },
+//=== edits clipboard regex
             },
 //copy button end
 
@@ -280,7 +309,7 @@ B - Buttons
               key: { key: 'p',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
-                               rows: [':visible'] }
+                               rows: [':visible'] },
             },
 //print button end
 
@@ -290,7 +319,7 @@ B - Buttons
               key: { key: 'x',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
-                               rows: [':visible'] }
+                               rows: [':visible'] },
             },
 //excel button end
 
@@ -300,7 +329,7 @@ B - Buttons
               key: { key: 'c',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
-                               rows: [':visible'] }
+                               rows: [':visible'] },
             },
 //csv button end
 
@@ -310,7 +339,7 @@ B - Buttons
               key: { key: 'h',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
-                               rows: [':visible'] }
+                               rows: [':visible'] },
             },
 //colvis button end
 
@@ -438,10 +467,13 @@ pagingType end*/
 
 
 
-    } ); //END OF "var table = $('#table_id').DataTable( {", prev without "var table"
+    } ); //END OF INITIAL DATATABLE FUNCTION "var table = $('#table_id').DataTable( {", prev without "var table"
+
+
+
 
  // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-//Remove accented character from global search input 
+//Remove accented character from global search input, other half at top, tableID followed by '_filter input'
                 $('#table_id_filter input').keyup(function() {
                     table
                         .search(
@@ -450,6 +482,27 @@ pagingType end*/
                         .draw();
                 });
 //End of Remove accented characters from global search input
+
+
+ // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+    // Apply the Individual column searching, other half at top
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+// Individual column searching end
+
+// moves individual column searching to top, header, does not break fixedcolumnheaders
+$('#table_id tfoot tr').appendTo('#table_id thead');
+// moves individual column searching to top end
+
 
 } );
 //=== === DT function end, $(document).ready(function() { === ===
@@ -481,7 +534,7 @@ container - A DOM node, or function that returns a DOM node, which the search pa
   "hover": Row highlighting on mouse over.
   "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
   "order-column": Highlight the column that the table data is currently ordered on.
-  "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be uesed togther.
+  "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
   "stripe": Row striping-->
 
 <table id="table_id" class="stripe compact row-border" cellspacing="0" width="100%">
@@ -500,7 +553,39 @@ container - A DOM node, or function that returns a DOM node, which the search pa
     </thead>
 <!--TABLE HEAD END-->
 
-<!--TABLE FOOT SEARCH
+<!--TABLE FOOT SEARCH, used for Individual column searching, prev lower two; thead input and tfoot display-->
+<style type="text/css">
+/* makes min-width a bit bigger */
+  #table_id > thead > tr > th > input[type="text"] {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+        min-width: 20px;
+  }
+/* both above and below 2 needed to work min-width, or just below 2 to work width */
+  thead input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    } 
+      tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+*/   
+/*wont work if move individual column searching to top by "$('#datatableId tfoot tr').appendTo('#datatableId thead');"  
+  tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+/* moves the individual column searching to the top, header, but breaks fixedcolumnheader
+  tfoot {
+    display: table-header-group;
+    }
+    */
+</style>
         <tfoot>
             <tr>
                <th>no</th>
@@ -512,7 +597,7 @@ container - A DOM node, or function that returns a DOM node, which the search pa
                <th>arRef</th>
             </tr>
         </tfoot>
-TABLE FOOT SEARCH END-->
+<!--TABLE FOOT SEARCH END-->
 
 
 <!--TABLE BODY BEGIN-->

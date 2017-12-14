@@ -21,12 +21,12 @@ For CSS only a single file should be included as the styling library will provid
 
 <!--jquery-->
 
-<!--jQuery Slim 3.x snippet-->
+<!--DOESNT WORK WITH BUTTONS, jQuery Slim 3.x snippet
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
-<!--Google 3.x snippet
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 -->
+<!--Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!--Google 2.x snippet
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 -->
@@ -214,10 +214,18 @@ The first column in the table is a sequence number that provides the basis for t
 //End of Accent neutralize and regex for search
 
 
+
+
+
 //DT function, previously no variable name "var table =", had to add for accent neutralize "$('#table_id').DataTable( {""
 $(document).ready(function() {
-     $('#table_id').DataTable( {
 
+     $('#table_id').DataTable( {
+    // Setup - add a text input to each footer cell
+    $('#table_id tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
 //columnDefs, Very similar to columns, this parameter allows you to assign specific options to columns in the table, although in this case the column options defined can be applied to one or more columns. Additionally, not every column need be specified, unlike columns.
 //The titles of columns are typically read directly from the DOM (from the cells in the THEAD element), but it can often be useful to either override existing values, or have DataTables actually construct a header with column titles for you (for example if there is not THEAD element in the table before DataTables is constructed).
 //columns.visible, DataTables and show and hide columns dynamically through use of this option and the column().visible() / columns().visible() methods. This option can be used to get the initial visibility state of the column, with the API methods used to alter that state at a later time.
@@ -438,7 +446,10 @@ pagingType end*/
 
 
 
-    } ); //END OF "var table = $('#table_id').DataTable( {", prev without "var table"
+    } ); //END OF INITIAL DATATABLE FUNCTION "var table = $('#table_id').DataTable( {", prev without "var table"
+
+
+
 
  // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
 //Remove accented character from global search input 
@@ -450,6 +461,22 @@ pagingType end*/
                         .draw();
                 });
 //End of Remove accented characters from global search input
+
+// MUST BE WITHIN DATATABLES FUNCTION, Individual column searching
+
+    // Apply the search
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+    // Individual column searching end
 
 } );
 //=== === DT function end, $(document).ready(function() { === ===
@@ -481,7 +508,7 @@ container - A DOM node, or function that returns a DOM node, which the search pa
   "hover": Row highlighting on mouse over.
   "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
   "order-column": Highlight the column that the table data is currently ordered on.
-  "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be uesed togther.
+  "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
   "stripe": Row striping-->
 
 <table id="table_id" class="stripe compact row-border" cellspacing="0" width="100%">
@@ -500,7 +527,14 @@ container - A DOM node, or function that returns a DOM node, which the search pa
     </thead>
 <!--TABLE HEAD END-->
 
-<!--TABLE FOOT SEARCH
+<!--TABLE FOOT SEARCH, used for Individual column searching-->
+<style type="text/css">
+  tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+</style>
         <tfoot>
             <tr>
                <th>no</th>
@@ -512,7 +546,7 @@ container - A DOM node, or function that returns a DOM node, which the search pa
                <th>arRef</th>
             </tr>
         </tfoot>
-TABLE FOOT SEARCH END-->
+<!--TABLE FOOT SEARCH END-->
 
 
 <!--TABLE BODY BEGIN-->
