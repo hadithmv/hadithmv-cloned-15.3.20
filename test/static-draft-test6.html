@@ -161,6 +161,23 @@ The first column in the table is a sequence number that provides the basis for t
 
 <!--=== === DataTable inline JS === ===-->
 <script type="text/javascript">
+
+//Accent neutralize and regex for search, latin+punc+digits  arab  thn
+//.replace( /([^\u0621-\u063A\u0641-\u064A\u0660-\u0669 a-zA-Z 0-9 \u0780-\u07BF ])/g, '')
+                $.fn.DataTable.ext.type.search.string = function(data) {
+                    return !data ?
+                        '' :
+                        typeof data === 'string' ?
+                        data
+                        .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
+                        .replace(/(آ|إ|أ)/g, 'ا')
+                        .replace(/(ة)/g, 'ه')
+                        .replace(/(ئ|ؤ)/g, 'ء')
+                        .replace(/(ى)/g, 'ي') :
+                        data;
+                };
+//End of Accent neutralize and regex for search
+
 //DT function
 $(document).ready(function() {
     $('#table_id').DataTable( {
@@ -397,15 +414,15 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
         '' :
         typeof data === 'string' ?
             data
-                              .replace(/(آ|إ|أ)/g, 'ا')
-                .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
+
+               .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
                 /*
 	                .replace(/([^\u0021-\u007E])/g, '') //https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block), punctuation and symbols, digits, Uppercase Latin alphabet, punctuation and symbols, Lowercase Latin alphabet, punctuation and symbols
 	                .replace(/([^\u0600-\u06FF])/g, '') //https://en.wikipedia.org/wiki/Arabic_(Unicode_block), everything, letters, numbers, tashkeel, symbols, etc
 	                .replace(/([^\u0780-\u07BF])/g, '') //https://en.wikipedia.org/wiki/Thaana_(Unicode_block), letters and fili
 	            */
 
-
+             //   .replace(/[\u064B-\u065F ]/g, '')
 
 
                 .replace(/(آ|إ|أ)/g, 'ا')
@@ -440,7 +457,7 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
 };
 // Code seperate
 $(document).ready(function() {
-      var table = $('#example').dataTable();
+      var table = $('#table_id').dataTable();
  
       // Remove accented character from search input as well
       $('#myInput').keyup( function () {
@@ -452,6 +469,40 @@ $(document).ready(function() {
       } );
   } );
 //=== === Accent neutralise end=== ===
+
+
+$(document).ready(function() {
+      var table = $('#table_id').dataTable();
+ 
+      // Remove accented character from search input as well
+      $('#table_id input').keyup( function () {
+        table
+          .search(
+            jQuery.fn.DataTable.ext.type.search.string( this.value )
+          )
+          .draw()
+      } );
+  } );
+
+
+//Remove accented character from global search input 
+                $('#table_id_filter input').keyup(function() {
+                    table
+                        .search(
+                            $.fn.DataTable.ext.type.search.string(this.value)
+                        )
+                        .draw()
+                });
+//End of Remove accented characters from global search input
+
+// Remove accented character from search input as well
+      $('#table_id_filter input').keyup( function () {
+        table
+          .search(
+            $.fn.DataTable.ext.type.search.string( this.value )
+          )
+          .draw()
+      } );
 
 
 </script>

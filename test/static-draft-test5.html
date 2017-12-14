@@ -397,15 +397,15 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
         '' :
         typeof data === 'string' ?
             data
-                              .replace(/(آ|إ|أ)/g, 'ا')
-                .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
+
+               .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
                 /*
 	                .replace(/([^\u0021-\u007E])/g, '') //https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block), punctuation and symbols, digits, Uppercase Latin alphabet, punctuation and symbols, Lowercase Latin alphabet, punctuation and symbols
 	                .replace(/([^\u0600-\u06FF])/g, '') //https://en.wikipedia.org/wiki/Arabic_(Unicode_block), everything, letters, numbers, tashkeel, symbols, etc
 	                .replace(/([^\u0780-\u07BF])/g, '') //https://en.wikipedia.org/wiki/Thaana_(Unicode_block), letters and fili
 	            */
 
-
+             //   .replace(/[\u064B-\u065F ]/g, '')
 
 
                 .replace(/(آ|إ|أ)/g, 'ا')

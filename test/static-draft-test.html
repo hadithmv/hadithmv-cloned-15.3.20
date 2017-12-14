@@ -109,9 +109,10 @@ The first column in the table is a sequence number that provides the basis for t
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.3/css/rowReorder.bootstrap4.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.3/js/dataTables.rowReorder.min.js"></script>
 
-<!--fixedColumns, "freezes" in place the left most columns in a scrolling DataTable, to provide a guide to the end user (for example an index column)-->
+<!--fixedColumns, "freezes" in place the left most columns in a scrolling DataTable, to provide a guide to the end user (for example an index column)
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.2.4/css/fixedColumns.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.4/js/dataTables.fixedColumns.min.js"></script>
+-->
 
 <!--FixedHeader, will freeze in place the header, footer and left and/or right most columns in a DataTable, ensuring that title information will remain always visible-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.3/css/fixedHeader.dataTables.min.css">
@@ -161,6 +162,24 @@ The first column in the table is a sequence number that provides the basis for t
 
 <!--=== === DataTable inline JS === ===-->
 <script type="text/javascript">
+
+//Accent neutralize and regex for search, latin+punc+digits  arab  thn
+//.replace( /([^\u0621-\u063A\u0641-\u064A\u0660-\u0669 a-zA-Z 0-9 \u0780-\u07BF ])/g, '')
+                $.fn.DataTable.ext.type.search.string = function(data) {
+                    return !data ?
+                        '' :
+                        typeof data === 'string' ?
+                        data
+                        .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
+                        .replace(/(آ|إ|أ)/g, 'ا')
+                        .replace(/(ة)/g, 'ه')
+                        .replace(/(ئ|ؤ)/g, 'ء')
+                        .replace(/(ى)/g, 'ي') :
+                        data;
+                };
+//End of Accent neutralize and regex for search
+
+
 //DT function
 $(document).ready(function() {
     $('#table_id').DataTable( {
@@ -301,10 +320,7 @@ B - Buttons
         "next":       "Next &gt;",
         "previous":   "&lt; Previous",
     },
-    "aria": {
-        "sortAscending":  ": activate to sort column ascending",
-        "sortDescending": ": activate to sort column descending",
-    },
+
 },
 //language options end
 
@@ -343,7 +359,7 @@ B - Buttons
         searchPane: {
         container: '.searchPanes',
         threshold: 0
-    }
+    },
 //searchPane extension end
 
 
@@ -382,76 +398,10 @@ pagingType end*/
 
 
 
-
-
-
     } );
 } );
 //=== === DT function end === ===
 
-
-//=== === Accent neutralise === ===
-//When search a table with accented characters, it can be frustrating to have an input such as Zurich not match Zürich in the table (u !== ü). This type based search plug-in replaces the built-in string formatter in DataTables with a function that will remove replace the accented characters with their unaccented counterparts for fast and easy filtering.
-jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
-    return ! data ?
-        '' :
-        typeof data === 'string' ?
-            data
-                              .replace(/(آ|إ|أ)/g, 'ا')
-                .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
-                /*
-	                .replace(/([^\u0021-\u007E])/g, '') //https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block), punctuation and symbols, digits, Uppercase Latin alphabet, punctuation and symbols, Lowercase Latin alphabet, punctuation and symbols
-	                .replace(/([^\u0600-\u06FF])/g, '') //https://en.wikipedia.org/wiki/Arabic_(Unicode_block), everything, letters, numbers, tashkeel, symbols, etc
-	                .replace(/([^\u0780-\u07BF])/g, '') //https://en.wikipedia.org/wiki/Thaana_(Unicode_block), letters and fili
-	            */
-
-
-
-
-                .replace(/(آ|إ|أ)/g, 'ا')
-                .replace(/(ة)/g, 'ه')
-                .replace(/(ئ|ؤ)/g, 'ء')
-                .replace(/(ى)/g, 'ي')
-
-                .replace( /έ/g, 'ε' )
-                .replace( /[ύϋΰ]/g, 'υ' )
-                .replace( /ό/g, 'ο' )
-                .replace( /ώ/g, 'ω' )
-                .replace( /ά/g, 'α' )
-                .replace( /[ίϊΐ]/g, 'ι' )
-                .replace( /ή/g, 'η' )
-                .replace( /\n/g, ' ' )
-                .replace( /á/g, 'a' )
-                .replace( /é/g, 'e' )
-                .replace( /í/g, 'i' )
-                .replace( /ó/g, 'o' )
-                .replace( /ú/g, 'u' )
-                .replace( /ê/g, 'e' )
-                .replace( /î/g, 'i' )
-                .replace( /ô/g, 'o' )
-                .replace( /è/g, 'e' )
-                .replace( /ï/g, 'i' )
-                .replace( /ü/g, 'u' )
-                .replace( /ã/g, 'a' )
-                .replace( /õ/g, 'o' )
-                .replace( /ç/g, 'c' )
-                .replace( /ì/g, 'i' ) :
-            data;
-};
-// Code seperate
-$(document).ready(function() {
-      var table = $('#example').dataTable();
- 
-      // Remove accented character from search input as well
-      $('#myInput').keyup( function () {
-        table
-          .search(
-            jQuery.fn.DataTable.ext.type.search.string( this.value )
-          )
-          .draw()
-      } );
-  } );
-//=== === Accent neutralise end=== ===
 
 
 </script>
