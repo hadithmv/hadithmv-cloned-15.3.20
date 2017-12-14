@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <meta name="robots" content="noindex"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
+<body>
+
+<input style="width: 100%; height:100px; text-align: center; font-size: 20px; " value="
+ثُمَّ أَنْتُمْ هَٰؤُلَاءِ تَقْتُلُونَ أَنْفُسَكُمْ وَتُخْرِجُونَ فَرِيقًا مِنْكُمْ مِنْ دِيَارِهِمْ تَظَاهَرُونَ عَلَيْهِمْ بِالْإِثْمِ وَالْعُدْوَانِ وَإِنْ يَأْتُوكُمْ أُسَارَىٰ تُفَادُوهُمْ وَهُوَ مُحَرَّمٌ عَلَيْكُمْ إِخْرَاجُهُمْ ۚ أَفَتُؤْمِنُونَ بِبَعْضِ الْكِتَابِ وَتَكْفُرُونَ بِبَعْضٍ ۚ فَمَا جَزَاءُ مَنْ يَفْعَلُ ذَٰلِكَ مِنْكُمْ إِلَّا خِزْيٌ فِي الْحَيَاةِ الدُّنْيَا ۖ وَيَوْمَ الْقِيَامَةِ يُرَدُّونَ إِلَىٰ أَشَدِّ الْعَذَابِ ۗ وَمَا اللَّهُ بِغَافِلٍ عَمَّا تَعْمَلُونَ" type="text" id="input">
+
+<button style="width: 100%; height:50px;" onclick="document.getElementById('input').value = normalize_text(document.getElementById('input').value)">Neutralize Diacritics</button>
+
+<script type="text/javascript">
+	normalize_text = function(text) {
+
+  //remove special characters
+  text = text.replace(/([^\u0621-\u063A\u0641-\u064A\u0660-\u0669a-zA-Z 0-9])/g, '');
+
+  //normalize Arabic
+ /*
+  text = text.replace(/(آ|إ|أ)/g, 'ا');
+  text = text.replace(/(ة)/g, 'ه');
+  text = text.replace(/(ئ|ؤ)/g, 'ء')
+  text = text.replace(/(ى)/g, 'ي');
+*/
+
+  //convert arabic numerals to english counterparts.
+  var starter = 0x660;
+  for (var i = 0; i < 10; i++) {
+    text.replace(String.fromCharCode(starter + i), String.fromCharCode(48 + i));
+  }
+
+  return text;
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
