@@ -634,7 +634,7 @@ mark{
             {"data":"arab",  "title":"Arabic"},
             {"data":"eng",   "title":"English"},
             {"data":"dhiv",  "title":"Dhivehi"},
-            {"data":"ref",   "title":"Ref:"},
+            {"data":"ref",   "title":"Ref."},
             ];
 
         $(document).ready(function() {
@@ -853,12 +853,12 @@ mark{
 
                             data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break
 
-                            //data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //normal
+                            //data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //normal
                             data = data.replace( /\n#/g, '' );
                             data = data.replace( /\tArabic/g, '' );
                             data = data.replace( /\tEnglish/g, '' );
                             data = data.replace( /\tDhivehi/g, '' );
-                            data = data.replace( /\tRef:/g, '' );
+                            data = data.replace( /\tRef./g, '' );
 
                             data = data.replace( /\r/g, '' ); //rids windows platform newline
                             data = data.replace( /\t/g, '\n\n' );

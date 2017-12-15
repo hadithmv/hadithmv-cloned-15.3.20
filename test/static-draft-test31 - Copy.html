@@ -151,6 +151,10 @@ The first column in the table is a sequence number that provides the basis for t
 <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.4/js/dataTables.select.min.js"></script>
 -->
 
+<!--Navigation with text input, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.-->
+
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/input.js"></script>
+
 
 <!--=== Extensions End ===-->
 
@@ -297,9 +301,22 @@ B - Buttons
                                rows: [':visible'] },
 //=== edits clipboard regex, code to manipulate the data string as desired
               customize: function(data) {
+/**/
+                      // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
+                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop only
 
+                      // data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
+                       data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tArabic/g, '' );
+                       data = data.replace( /\tEnglish/g, '' );
+                       data = data.replace( /\tDhivehi/g, '' );
+                       data = data.replace( /\tRef./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
+                       data = data.replace( /\tAr Ref./g, '' );
 
-
+                       data = data.replace( /\r/g, '' ); //rids windows platform newline
+                       data = data.replace( /\t/g, '\n\n' );
+/**/
                       console.log(JSON.stringify(data));
                       return data;
                     },
@@ -398,7 +415,7 @@ B - Buttons
 */
 
 //lengthMenu
-    lengthMenu: [ 1, 5, 10, 25, 50, 75, 100, -1 ],
+    lengthMenu: [ 1, 2, 3, 5, 10, 25, 50, 75, 100, -1 ],
 //lengthMenu end
 
 //mark.js plugin
@@ -457,8 +474,10 @@ scrollCollapseSince: Allow the table to reduce in height when a limited number o
 "full" - 'First', 'Previous', 'Next' and 'Last' buttons
 "full_numbers" - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers.
 "first_last_numbers" - 'First' and 'Last' buttons, plus page numbers.
-    pagingType: 'full_numbers'.
-pagingType end*/
+      "input" requires plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.
+*/
+    pagingType: 'input',
+//pagingType end
 
 //select extension
 /*    select: { style: 'os',

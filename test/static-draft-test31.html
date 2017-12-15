@@ -297,9 +297,22 @@ B - Buttons
                                rows: [':visible'] },
 //=== edits clipboard regex, code to manipulate the data string as desired
               customize: function(data) {
+/**/
+                      // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
+                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop only
 
+                      // data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
+                       data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tArabic/g, '' );
+                       data = data.replace( /\tEnglish/g, '' );
+                       data = data.replace( /\tDhivehi/g, '' );
+                       data = data.replace( /\tRef./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
+                       data = data.replace( /\tAr Ref./g, '' );
 
-
+                       data = data.replace( /\r/g, '' ); //rids windows platform newline
+                       data = data.replace( /\t/g, '\n\n' );
+/**/
                       console.log(JSON.stringify(data));
                       return data;
                     },
@@ -398,7 +411,7 @@ B - Buttons
 */
 
 //lengthMenu
-    lengthMenu: [ 1, 5, 10, 25, 50, 75, 100, -1 ],
+    lengthMenu: [ 1, 2, 3, 5, 10, 25, 50, 75, 100, -1 ],
 //lengthMenu end
 
 //mark.js plugin
