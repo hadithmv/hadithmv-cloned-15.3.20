@@ -669,10 +669,38 @@ mark{
                         '' :
                         typeof data === 'string' ?
                         data
-                        .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
-                        .replace(/(آ|إ|أ)/g, 'ا')
-                        .replace(/(ة)/g, 'ه')
+                        .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
+                        .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
+//ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
+                        .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
+//ف ق ك ل م ن ه و ى ي
+
+                        .replace(/٠/g, '0')
+                        .replace(/١/g, '1')
+                        .replace(/٢/g, '2')
+                        .replace(/٣/g, '3')
+                        .replace(/٤/g, '4')
+                        .replace(/٥/g, '5')
+                        .replace(/٦/g, '6')
+                        .replace(/٧/g, '7')
+                        .replace(/٨/g, '8')
+                        .replace(/٩/g, '9')
+
+                        .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
+//ٱ
+                        .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
+//ھ
+                        .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
+
+
+                      //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
+                      
+                        .replace(/(ٱ|آ|إ|أ)/g, 'ا')
+                        .replace(/(ة|ھ)/g, 'ه')
                         .replace(/(ئ|ؤ)/g, 'ء')
+                        .replace(/(ؤ)/g, 'و')
+                        .replace(/(لأ)/g, 'لا')
+                        .replace(/(لإ)/g, 'لا')
                         .replace(/(ى)/g, 'ي') :
                         data;
                 };
@@ -852,6 +880,9 @@ mark{
                             customize: function(data) {
 
 //=== code to manipulate the data string as desired
+
+                    	    data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break
+
                             //data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //normal
                             data = data.replace( /\n#/g, '' );
                             data = data.replace( /\tArabic/g, '' );

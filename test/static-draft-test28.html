@@ -286,7 +286,7 @@ B - Buttons
 //=== edits clipboard regex, code to manipulate the data string as desired
               customize: function(data) {
 
-                       data = data.replace( /0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0]/g, 'No:' ); //adds string to hadith number
+                      // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
                        data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break
 
                       // data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
