@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <meta name="robots" content="noindex"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
+
+
+<!--Google jQuery 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--DataTables Core JS-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<!--DataTables Default CSS-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css
+
+
+<body>
+
+
+<div id="container">
+    <table id="example" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+
+
+<script type="text/javascript">
+/*
+first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+then used: http://myjson.com, A simple JSON store for your web or mobile app
+
+*/
+	$(document).ready(function() {
+  $('#example').DataTable({
+    ajax: {
+      url: 'https://api.myjson.com/bins/1bl34b',
+      dataSrc: ''
+    },
+ //   data: data, previously without column titles
+    columns: [
+    {data: 'no',	title:"#"}, 
+    {data: 'arab',	title:"Arabic"},
+    {data: 'eng',	title:"English"},
+    {data: 'dhiv',	title:"Dhivehi"},
+    {data: 'ref',	title:"Ref."}, 
+    {data: 'dvRef',	title:"Dv Ref."},
+    {data: 'arRef',	title:"Ar Ref."},
+    ]
+  });
+});
+
+</script>
+
+</body>
+</html>

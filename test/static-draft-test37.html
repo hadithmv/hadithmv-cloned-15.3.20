@@ -1,41 +1,534 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<head>
 
-    <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
-    <meta charset=utf-8 />
-    <title>DataTables - JS Bin</title>
-  </head>
-  <body>
+        <meta name="robots" content="noindex"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
+<body>
 
 
+<!--=== Base ===-->
+<!--
+The main DataTables file has the name jquery.dataTables.js using the format that is common to the majority of jQuery plug-ins. There is also a styling integration file for the various styling libraries supported by DataTables, this has the format dataTables.{style}.js (dataTables.bootstrap.js for Bootstrap for example).
+
+Both of these Javascript files should be included - the main file to include the basic DataTables functionality and the styling file to set defaults as appropriate for the styling library.
+
+For CSS only a single file should be included as the styling library will provide the core styling options for the table. The CSS files have the format dataTables.{style}.css (dataTables.bootstrap.css for Bootstrap for example).
+-->
+
+<!--jquery-->
+
+<!--DOESNT WORK WITH BUTTONS, jQuery Slim 3.x snippet
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+-->
+<!--Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--Google 2.x snippet
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+-->
+<!--Google 1.x snippet
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+-->
+
+<!--TableTop
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
+-->
+
+<!--DataTables Core JS-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<!--DataTables Default CSS-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+
+<!--Bootstrap 3
+table id="table_id" class="table"
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+-->
+
+<!--Bootstrap 4
+  table id="table_id" class="table"
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+-->
+
+<!--Foundation
+  table id="table_id" class="display"
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.foundation.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.foundation.min.js"></script>
+
+
+<!--Semantic UI
+  table id="table_id" class="ui celled table"
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+
+
+<!--Material Design (Tech. preview)
+  table id="table_id" class="display"
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script>
+-->
+
+<!--UIKit (Tech. preview)
+  table id="table_id" class="display"
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/uikit.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.uikit.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.uikit.min.js"></script>
+-->
+
+
+
+<!--=== /Base end ===-->
+
+
+
+<!--=== Extensions ===-->
+<!--buttons-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+  <!--buttons Column visibility control-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+  <!--buttons HTML5 export buttons-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+      <!--buttons JSZip Excel export button-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+      <!--buttons PDFMake export button-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.34/pdfmake.min.js"></script>
+    <!--buttons PDFMake vfs fonts export button-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.34/vfs_fonts.js"></script>
+  <!--buttons Print button-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+
+<!--Mark.js, a keyword highlighter for strings, arrays or regular expressions and works in any context (not just tables). datatables.mark.js connects mark.js and DataTables, by offering a plugin for it that can be activated with just one single line of code.
+mark{
+    background: orange;
+    color: black;
+}No need to use, too simple <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.css">-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+
+<!--ColReorder, allows the end user to modify the column order of a table through drop-and-drag of column headers-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.4.1/css/colReorder.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/colreorder/1.4.1/js/dataTables.colReorder.min.js"></script>
+
+<!--RowReorder, adds the ability for rows in a DataTable to be reordered through user interaction with the table (click and drag / touch and drag)
+The first column in the table is a sequence number that provides the basis for the ordering. -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.3/css/rowReorder.bootstrap4.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.3/js/dataTables.rowReorder.min.js"></script>
+
+<!--FixedHeader, will freeze in place the header, footer and left and/or right most columns in a DataTable, ensuring that title information will remain always visible-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.3/css/fixedHeader.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.3/js/dataTables.fixedHeader.min.js"></script>
+
+<!--KeyTable, will freeze in place the header, footer and left and/or right most columns in a DataTable, ensuring that title information will remain always visible
+no need for css, small.
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.3.2/css/keyTable.dataTables.min.css">
+-->
+<style type="text/css">table.dataTable th.focus,table.dataTable td.focus{outline:3px solid #3366FF;outline-offset:-1px}</style>
+<script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
+
+<!--Responsive,  will automatically adjust the visible columns in a table to fit optimally into the available display space, with options for the end user to view any hidden data.-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.bootstrap4.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.min.js"></script>
+
+<!--SearchPane,  a column filter interface for DataTables. It presents a list of values that can be found in a column, displaying them for an end user to be able to click, searching the table for matching data. It is a column OR based filter - i.e. adding multiple options will display the rows which match any of those data points.-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
+
+<!--input pagination plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.-->
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/input.js"></script>
+
+<!--Scroller, A virtual renderer for DataTables, allowing the table to look like it scrolls for the full data set, but actually only drawing the rows required for the current display, for fast operation.
+Scroller is initialised by simply including the letter S in the dom for the table you want to have this feature enabled on. Note that the S must come after the t parameter in dom.
+Key features include: Speed! The aim of Scroller for DataTables is to make rendering large data sets fast Full compatibility with DataTables' deferred rendering for maximum speed Integration with state saving in DataTables (scrolling position is saved) Easy to use.
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/scroller/1.4.3/css/scroller.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/scroller/1.4.3/js/dataTables.scroller.min.js"></script>
+-->
+
+<!--Select, provides table item selection capabilities - rows, columns and cells. Advanced selection options are available for multi-item selection and also item selection and retrieval
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.4/css/select.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.2.4/js/dataTables.select.min.js"></script>
+-->
+
+<!--fixedColumns, "freezes" in place the left most columns in a scrolling DataTable, to provide a guide to the end user (for example an index column)
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.2.4/css/fixedColumns.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.4/js/dataTables.fixedColumns.min.js"></script>
+-->
+
+<!--Navigation with text input, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.-->
+
+<!--Select list pagination, This plug-in provides a select menu with the list of the page numbers that are available for viewing. "PaginationType": "listbox"
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/select.js"></script>
+-->
+
+
+
+
+<!--=== Extensions End ===-->
+
+
+
+<!--=== === CSS === ===-->
+
+<!--=== === /CSS END === ===-->
+
+
+
+
+
+
+<!--=== === JS === ===-->
+
+<!--=== === JS END === ===-->
+
+
+
+<!--=== === DataTable inline JS === ===-->
 <script type="text/javascript">
-  $(document).ready( function () {
- // MUST BE BEFORE DATATABLES FUNCTION  
-jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
-    return ! data ?
-        '' :
-        typeof data === 'string' ?
+
+$(document).ready(function() {
+
+//=== === Accent neutralise === === other half at bottom
+//When search a table with accented characters, it can be frustrating to have an input such as Zurich not match Zürich in the table (u !== ü). This type based search plug-in replaces the built-in string formatter in DataTables with a function that will remove replace the accented characters with their unaccented counterparts for fast and easy filtering.
+                /*
+                  .replace(/([^\u0021-\u007E])/g, '') //https://en.wikipedia.org/wiki/Basic_Latin_(Unicode_block), punctuation and symbols, digits, Uppercase Latin alphabet, punctuation and symbols, Lowercase Latin alphabet, punctuation and symbols
+                  .replace(/([^\u0600-\u06FF])/g, '') //https://en.wikipedia.org/wiki/Arabic_(Unicode_block), everything, letters, numbers, tashkeel, symbols, etc
+                  .replace(/([^\u0780-\u07BF])/g, '') //https://en.wikipedia.org/wiki/Thaana_(Unicode_block), letters and fili
+              */
+//Accent neutralize and regex for search, latin+punc+digits  arab  thn
+//.replace( /([^\u0621-\u063A\u0641-\u064A\u0660-\u0669 a-zA-Z 0-9 \u0780-\u07BF ])/g, '')
+                $.fn.DataTable.ext.type.search.string = function(data) {
+                    return !data ?
+                        '' :
+                        typeof data === 'string' ?
                         data
-                        .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669  \u0780-\u07BF ])/g, '')
-                        .replace(/(آ|إ|أ)/g, 'ا')
-                        .replace(/(ة)/g, 'ه')
+                        .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
+                        .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
+//ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
+                        .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
+//ف ق ك ل م ن ه و ى ي
+
+                        .replace(/٠/g, '0')
+                        .replace(/١/g, '1')
+                        .replace(/٢/g, '2')
+                        .replace(/٣/g, '3')
+                        .replace(/٤/g, '4')
+                        .replace(/٥/g, '5')
+                        .replace(/٦/g, '6')
+                        .replace(/٧/g, '7')
+                        .replace(/٨/g, '8')
+                        .replace(/٩/g, '9')
+
+                        .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
+//ٱ
+                        .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
+//ھ
+                        .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
+
+
+                      //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
+                      
+                        .replace(/(ٱ|آ|إ|أ)/g, 'ا')
+                        .replace(/(ة|ھ)/g, 'ه')
                         .replace(/(ئ|ؤ)/g, 'ء')
+                        .replace(/(ؤ)/g, 'و')
+                        .replace(/(لأ)/g, 'لا')
+                        .replace(/(لإ)/g, 'لا')
                         .replace(/(ى)/g, 'ي') :
                         data;
-};
-//End of Remove accented characters from global search input
-  
-  
-  
-  var table = $('#example').DataTable();
-  
-  
- // MUST BE WITHIN DATATABLES FUNCTION
-//Remove accented character from global search input 
-                $('#example_filter input').keyup(function() {
+                };
+//End of Accent neutralize and regex for search
+
+
+// MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
+    // Setup - add a text input to each footer cell
+    $('#table_id tfoot th').each( function () {
+        var title = $(this).text(); //var title = $('#table_id thead th').eq( $(this).index() ).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+//DT function, previously had "$(document).ready(function() {", but turned off and moved to very top to make individual coumn filters work, also previously no variable name "var table =", had to add for accent neutralize "$('#table_id').DataTable( {"
+//$(document).ready(function() {
+
+    var table = $('#table_id').DataTable( {
+
+//columnDefs, Very similar to columns, this parameter allows you to assign specific options to columns in the table, although in this case the column options defined can be applied to one or more columns. Additionally, not every column need be specified, unlike columns.
+//The titles of columns are typically read directly from the DOM (from the cells in the THEAD element), but it can often be useful to either override existing values, or have DataTables actually construct a header with column titles for you (for example if there is not THEAD element in the table before DataTables is constructed).
+//columns.visible, DataTables and show and hide columns dynamically through use of this option and the column().visible() / columns().visible() methods. This option can be used to get the initial visibility state of the column, with the API methods used to alter that state at a later time.
+/*columnDefs.targets, allows a column definition object to be defined and then assigned to one or more columns in a DataTable, regardless of the order of the column definitions array, or the order of the columns in the table.
+0 or a positive integer - column index counting from the left
+A negative integer - column index counting from the right
+A string - class name will be matched on the TH for the column (without a leading .)
+The string "_all" - all columns (i.e. assign a default)
+*/
+/*In addition to the full table styling options above, the DataTable stylesheet also has basic options for the styling of cells. These can be applied to class individually using HTML, or use columns.className to apply them to all cells in a column. For convenience when using columns.className, optionally you can use -head or -body in the class name to indicate if the text alignment should be applied to the cells in the thead or tbody of the table. Omit either option to have it apply to both (as columns.className is added to the header and body cells). For example:
+dt[-head|-body]-left Left aligned text
+dt[-head|-body]-center Center aligned text
+dt[-head|-body]-right Right aligned text
+dt[-head|-body]-justify Justify aligned text
+dt[-head|-body]-nowrap nowrap aligned text
+*/
+  "columnDefs": [
+    { "title": "#",       "targets": 0, "visible": true, className: "class_name dt-body-center" },
+    { "title": "Arabic",  "targets": 1, "visible": true, className: "class_name dt-body-right" },
+    { "title": "English", "targets": 2, "visible": true, className: "class_name dt-body-left" },
+    { "title": "Dhivehi", "targets": 3, "visible": true, className: "class_name dt-body-right" },
+    { "title": "Ref.",    "targets": 4, "visible": true, className: "class_name dt-body-center" },
+    { "title": "Dv Ref.", "targets": 5, "visible": true, className: "class_name dt-body-center" },
+    { "title": "Ar Ref.", "targets": 6, "visible": true, className: "class_name dt-body-center" },
+  ],
+
+
+/*DOM options, default: lpfrtip
+l - length changing input control
+f - filtering input
+t - The table
+i - Table information summary
+p - pagination control
+r - processing display element
+B - Buttons
+*/
+  "dom": 'lBpfrtip',
+
+
+        "buttons": [
+/*
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+*/
+//copy button
+            { extend: 'copy',
+              text: 'Copy',
+              key: { key: 'c',
+                     shiftKey: true },
+              messageTop: '40 Nawawi',
+              title: 'hadithmv.github.io',
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+//=== edits clipboard regex, code to manipulate the data string as desired
+              customize: function(data) {
+/**/
+                      // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
+                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop only
+
+                      // data = data.replace( /\nNo.\tRef:\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
+                       data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tArabic/g, '' );
+                       data = data.replace( /\tEnglish/g, '' );
+                       data = data.replace( /\tDhivehi/g, '' );
+                       data = data.replace( /\tRef./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
+                       data = data.replace( /\tAr Ref./g, '' );
+
+                       data = data.replace( /\r/g, '' ); //rids windows platform newline
+                       data = data.replace( /\t/g, '\n\n' );
+/**/
+                      console.log(JSON.stringify(data));
+                      return data;
+                    },
+//=== edits clipboard regex end, customize: function(data) {
+            },
+//copy button end
+
+//print button
+            { extend: 'print',
+              text: 'Print',
+              key: { key: 'p',
+                     shiftKey: true },
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+            },
+//print button end
+
+//excel button
+            { extend: 'excel',
+              text: 'Excel',
+              key: { key: 'x',
+                     shiftKey: true },
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+            },
+//excel button end
+
+//csv button
+            { extend: 'csv',
+              text: 'Csv',
+              key: { key: 'c',
+                     shiftKey: true },
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+            },
+//csv button end
+
+//colvis button
+            { extend: 'colvis',
+              text: 'Hide',
+              key: { key: 'h',
+                     shiftKey: true },
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+            },
+//colvis button end
+
+
+                    ],
+//=== end of all buttons
+
+
+//language options
+  "language":
+    {
+     "buttons": { copy: 'Copy',
+                  copySuccess: { 1: "Copied one row to clipboard",
+                                _: "Copied %d rows to clipboard",
+                               },
+                  copyTitle: 'Copy to clipboard',
+                  exportOptions: { columns: [':visible'],
+                                   rows: [':visible']
+                                 }//copies currently displayed columns and rows
+//end of copy customization
+    },
+//end of buttons language 
+
+
+    "decimal":        "",
+    "emptyTable":     "No data available in table",
+    "info":           "Showing _START_ to _END_ of _TOTAL_ entries",
+    "infoEmpty":      "Showing 0 to 0 of 0 entries",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "infoPostFix":    "",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ entries",
+    "loadingRecords": "Loading...",
+    "processing":     "Processing...",
+    "search":         "", //prev, "search": "Search:",
+    "searchPlaceholder": "Search Hadithmv . . .",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+        "first":      "&lt;&lt; First",
+        "last":       "Last &gt;&gt;",
+        "next":       "Next &gt;",
+        "previous":   "&lt; Previous",
+    },
+
+},
+//language options end
+
+/*
+    paging:   false,
+    ordering: false,
+    info:     false,
+*/
+
+//lengthMenu
+    lengthMenu: [ 1, 2, 3, 5, 10, 25, 50, 75, 100, -1 ],
+//lengthMenu end
+
+//mark.js plugin
+    mark: true,
+//mark.js plugin end
+
+//fixedHeader extension
+    fixedHeader: {
+        header: true,
+        footer: false,
+    },
+//fixedHeader extension end
+
+//KeyTable extension 
+    keys: true,
+//KeyTable extension end
+
+//colReorder extension
+    colReorder: true,
+//colReorder extension end
+
+//rowReorder extension
+    rowReorder: true,
+//rowReorder extension end
+
+//responsive extension
+    responsive: true,
+//responsive  extension end
+
+//searchPane extension
+
+        searchPane: {
+        container: '.searchPanes',
+        threshold: 0
+    },
+
+//searchPane extension end
+
+/*pagingType,
+"numbers" - Page number buttons only (1.10.8).
+"simple" - 'Previous' and 'Next' buttons only.
+"simple_numbers" - 'Previous' and 'Next' buttons, plus page numbers.
+"full" - 'First', 'Previous', 'Next' and 'Last' buttons
+"full_numbers" - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers.
+"first_last_numbers" - 'First' and 'Last' buttons, plus page numbers.
+   "input" requires plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.
+*/
+    pagingType: 'input',
+//pagingType end
+
+//processing, Enable or disable the display of a 'processing' indicator when the table is being processed (e.g. a sort).
+//    processing: true,
+//processing end
+
+/*scrollY: Enable vertical scrolling. Vertical scrolling will constrain the DataTable to the given height, and enable scrolling for any data which overflows the current viewport. This can be used as an alternative to paging to display a lot of data in a small area (although paging and scrolling can both be enabled at the same time if desired).
+The value given here can be any CSS unit, or a number (in which case it will be treated as a pixel measurement) and is applied to the table body (i.e. it does not take into account the header or footer height directly).
+scrollX: Enable horizontal scrolling. When a table is too wide to fit into a certain layout, or you have a large number of columns in the table, you can enable horizontal (x) scrolling to show the table in a viewport, which can be scrolled.
+scrollCollapseSince: Allow the table to reduce in height when a limited number of rows are shown.
+*/
+/*
+  scrollY: "85vh",
+  scrollCollapse: true,
+  paging: false,
+*/
+
+//select extension
+/*    select: { style: 'os',
+                items: 'cell', },
+*/
+//select extension end
+
+//scroller extension, statesave optional
+/*
+        deferRender:    true,
+        scrollY:        80,
+        scrollCollapse: true,
+        scroller:       true,
+
+        stateSave:      true,
+*/
+//scroller extension end
+
+
+
+
+    } ); //END OF INITIAL DATATABLE FUNCTION "var table = $('#table_id').DataTable( {", prev without "var table"
+
+
+
+
+ // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+//Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                $('#table_id_filter input').keyup(function() {
                     table
                         .search(
                             $.fn.DataTable.ext.type.search.string(this.value)
@@ -43,14 +536,35 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
                         .draw();
                 });
 //End of Remove accented characters from global search input
-  
-  
-  
+
+
+ // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+    // Apply the Individual column searching, other half at top
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+// Individual column searching end
+
+// moves individual column searching to top, header, does not break fixedcolumnheaders
+$('#table_id tfoot tr').appendTo('#table_id thead');
+// moves individual column searching to top end
+
 
 } );
-//End of whole function
+//=== === DT function end, $(document).ready(function() { === ===
+
+
 
 </script>
+<!--=== === DataTable inline JS End === ===-->
 
 
 
@@ -60,9 +574,26 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
 
 
 
-    <div class="container">
-      <table id="example" class="display nowrap" width="100%">
-       <!--TABLE HEAD BEGIN-->
+
+
+<!--SearchPanes, As with the existing extensions, SearchPane can be configured through a number of options. This initial release has only four options:
+container - A DOM node, or function that returns a DOM node, which the search panes should be added to. This allows you to insert the panes anywhere in the document. Since the search panes take up more screen space than the majority of DataTables extensions, this can be quite useful.-->
+<div class="searchPanes"></div>
+
+
+<!--TABLE BEGIN,
+  "display": Short-hand for the stripe, hover, row-border and order-column classes.
+  "cell-border": Border around all four sides of each cell.
+  "compact": Reduce the amount of white-space the default styling for the DataTable uses, increasing the information density on screen (since 1.10.1).
+  "hover": Row highlighting on mouse over.
+  "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
+  "order-column": Highlight the column that the table data is currently ordered on.
+  "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
+  "stripe": Row striping-->
+
+<table id="table_id" class="stripe compact row-border" cellspacing="0" width="100%">
+
+<!--TABLE HEAD BEGIN-->
     <thead>
   <tr>
     <th>no</th>
@@ -76,7 +607,38 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
     </thead>
 <!--TABLE HEAD END-->
 
-<!--TABLE FOOT SEARCH
+<!--TABLE FOOT SEARCH, used for Individual column searching, prev lower two; thead input and tfoot display-->
+<style type="text/css">
+/* makes min-width a bit bigger */
+  #table_id > thead > tr > th > input[type="text"] {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+        min-width: 20px;
+  }
+/* both above and below 2 needed to work min-width, or just below 2 to work width */
+  thead input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    } 
+      tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+/*wont work if move individual column searching to top by "$('#datatableId tfoot tr').appendTo('#datatableId thead');"  
+  tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+/* moves the individual column searching to the top, header, but breaks fixedcolumnheader
+  tfoot {
+    display: table-header-group;
+    }
+    */
+</style>
         <tfoot>
             <tr>
                <th>no</th>
@@ -88,7 +650,7 @@ jQuery.fn.DataTable.ext.type.search.string = function ( data ) {
                <th>arRef</th>
             </tr>
         </tfoot>
-TABLE FOOT SEARCH END-->
+<!--TABLE FOOT SEARCH END-->
 
 
 <!--TABLE BODY BEGIN-->
@@ -552,6 +1114,14 @@ TABLE FOOT SEARCH END-->
     <!--/TABLE BODY ENG-->
 </table>
 <!--/TABLE END-->
-    </div>
-  </body>
+
+
+
+
+
+
+
+
+
+</body>
 </html>
