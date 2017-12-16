@@ -5,7 +5,7 @@
         <meta name="robots" content="noindex"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title></title>
+  <title></title> <!--shows up as buttons exported data header-->
 </head>
 <body>
 
@@ -109,6 +109,8 @@ table id="table_id" class="table"
 https://datatables.net/download/release === === ===-->
 
 <!--buttons, ALL CUSTOM STYLE BUTTON CSS MUST GO BELOW DEFAULT DATATABLES CSS/JS
+  https://datatables.net/reference/button/
+  button exported data headers taken from html title.
 The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
@@ -342,11 +344,9 @@ B - Buttons
 
 
         "buttons": [
-/*
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-            'pdfHtml5'
+/* https://datatables.net/reference/button
+'copy', 'csv', 'excel', 'pdf', 'print' or
+'copyHtml5', 'excelHtml5', 'csvHtml5', 'pdfHtml5'
 */
 //copy button
             { extend: 'copy',
