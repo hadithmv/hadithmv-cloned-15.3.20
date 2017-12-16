@@ -38,10 +38,10 @@ For CSS only a single file should be included as the styling library will provid
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
 -->
 
-<!--DataTables core JS-->
+<!--DataTables Core JS-->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-<!--DataTables Default-->
+<!--DataTables Default CSS-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 
@@ -74,11 +74,18 @@ table id="table_id" class="table"
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 
 
-<!--jQuery UI
+<!--Material Design (Tech. preview)
   table id="table_id" class="display"
-<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.jqueryui.min.css"/>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.jqueryui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.material.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script>
+-->
+
+<!--UIKit (Tech. preview)
+  table id="table_id" class="display"
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.24.3/css/uikit.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.uikit.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.uikit.min.js"></script>
 -->
 
 
@@ -121,16 +128,15 @@ The first column in the table is a sequence number that provides the basis for t
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowreorder/1.2.3/css/rowReorder.bootstrap4.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/rowreorder/1.2.3/js/dataTables.rowReorder.min.js"></script>
 
-<!--fixedColumns, "freezes" in place the left most columns in a scrolling DataTable, to provide a guide to the end user (for example an index column)-->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.2.4/css/fixedColumns.dataTables.min.css">
-<script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.4/js/dataTables.fixedColumns.min.js"></script>
-
 <!--FixedHeader, will freeze in place the header, footer and left and/or right most columns in a DataTable, ensuring that title information will remain always visible-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.3/css/fixedHeader.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.1.3/js/dataTables.fixedHeader.min.js"></script>
 
-<!--KeyTable, will freeze in place the header, footer and left and/or right most columns in a DataTable, ensuring that title information will remain always visible-->
+<!--KeyTable, will freeze in place the header, footer and left and/or right most columns in a DataTable, ensuring that title information will remain always visible
+no need for css, small.
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.3.2/css/keyTable.dataTables.min.css">
+-->
+<style type="text/css">table.dataTable th.focus,table.dataTable td.focus{outline:3px solid #3366FF;outline-offset:-1px}</style>
 <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
 
 <!--Responsive,  will automatically adjust the visible columns in a table to fit optimally into the available display space, with options for the end user to view any hidden data.-->
@@ -141,7 +147,12 @@ The first column in the table is a sequence number that provides the basis for t
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/preview/searchPane/dataTables.searchPane.min.js"></script>
 
+<!--input pagination plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.-->
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/input.js"></script>
+
 <!--Scroller, A virtual renderer for DataTables, allowing the table to look like it scrolls for the full data set, but actually only drawing the rows required for the current display, for fast operation.
+Scroller is initialised by simply including the letter S in the dom for the table you want to have this feature enabled on. Note that the S must come after the t parameter in dom.
+Key features include: Speed! The aim of Scroller for DataTables is to make rendering large data sets fast Full compatibility with DataTables' deferred rendering for maximum speed Integration with state saving in DataTables (scrolling position is saved) Easy to use.
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/scroller/1.4.3/css/scroller.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/scroller/1.4.3/js/dataTables.scroller.min.js"></script>
 -->
@@ -151,9 +162,18 @@ The first column in the table is a sequence number that provides the basis for t
 <script type="text/javascript" src="https://cdn.datatables.net/select/1.2.4/js/dataTables.select.min.js"></script>
 -->
 
+<!--fixedColumns, "freezes" in place the left most columns in a scrolling DataTable, to provide a guide to the end user (for example an index column)
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.2.4/css/fixedColumns.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.4/js/dataTables.fixedColumns.min.js"></script>
+-->
+
 <!--Navigation with text input, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.-->
 
-<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/input.js"></script>
+<!--Select list pagination, This plug-in provides a select menu with the list of the page numbers that are available for viewing. "PaginationType": "listbox"
+<script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/select.js"></script>
+-->
+
+
 
 
 <!--=== Extensions End ===-->
@@ -443,7 +463,7 @@ B - Buttons
 
 //responsive extension
     responsive: true,
-//responsive  extension end
+//responsive extension end
 
 //searchPane extension
         searchPane: {
@@ -452,6 +472,10 @@ B - Buttons
     },
 //searchPane extension end
 
+//stateSave, DataTables has the option of being able to save the state of a table (its paging position, ordering state etc) so that is can be restored when the user reloads a page, or comes back to the page after visiting a sub-page. The built in state saving method uses the HTML5 localStorage and sessionStorage APIs for efficient storage of the data. The duration for which the saved state is valid and can be used to restore the table state can be set using the stateDuration initialisation parameter (2 hours by default, 7200). This parameter also controls if localStorage (0 or greater) or sessionStorage (-1) is used to store the data. This option is also used to indicate to DataTables if localStorage or sessionStorage should be used for storing the table's state. When set to -1 sessionStorage will be used, while for 0 or greater localStorage will be used. Please note that the value is given in seconds. The value 0 is a special value as it indicates that the state can be stored and retrieved indefinitely with no time limit. 1 Day: "stateDuration": 60 * 60 * 24, use session storage: "stateDuration": -1
+//    stateSave: true,
+//stateSave end
+
 /*pagingType,
 "numbers" - Page number buttons only (1.10.8).
 "simple" - 'Previous' and 'Next' buttons only.
@@ -459,7 +483,7 @@ B - Buttons
 "full" - 'First', 'Previous', 'Next' and 'Last' buttons
 "full_numbers" - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers.
 "first_last_numbers" - 'First' and 'Last' buttons, plus page numbers.
-      "input" requires plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.
+   "input" requires plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.
 */
     pagingType: 'input',
 //pagingType end
@@ -485,8 +509,15 @@ scrollCollapseSince: Allow the table to reduce in height when a limited number o
 */
 //select extension end
 
-//scroller extension
-//   scroller:    true,
+//scroller extension, statesave optional
+/*
+        deferRender:    true,
+        scrollY:        80,
+        scrollCollapse: true,
+        scroller:       true,
+
+        stateSave:      true,
+*/
 //scroller extension end
 
 
@@ -562,6 +593,7 @@ container - A DOM node, or function that returns a DOM node, which the search pa
   "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
   "stripe": Row striping-->
 
+<!--Flexible table width Often you may want to have your table resize dynamically with the page. Typically this is done by assigning width:100% in your CSS, but this presents a problem for Javascript since it can be very hard to get that relative size rather than the absolute pixels. As such, if you apply the width attribute to the HTML table tag or inline width style (style="width:100%"), it will be used as the width for the table (overruling any CSS styles) eg: div.container { width: 80%; }.-->
 <table id="table_id" class="stripe compact row-border" cellspacing="0" width="100%">
 
 <!--TABLE HEAD BEGIN-->
@@ -598,7 +630,6 @@ container - A DOM node, or function that returns a DOM node, which the search pa
         padding: 3px;
         box-sizing: border-box;
     }
-*/   
 /*wont work if move individual column searching to top by "$('#datatableId tfoot tr').appendTo('#datatableId thead');"  
   tfoot input {
         width: 100%;
@@ -625,7 +656,9 @@ container - A DOM node, or function that returns a DOM node, which the search pa
 <!--TABLE FOOT SEARCH END-->
 
 
-<!--TABLE BODY BEGIN-->
+<!--TABLE BODY BEGIN
+https://www.tablesgenerator.com/html_tables
+-->
     <tbody>
         <tr>
     <td>01</td>
