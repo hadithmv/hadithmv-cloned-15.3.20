@@ -5,7 +5,7 @@
         <meta name="robots" content="noindex"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title></title>
+  <title></title> <!--shows up as buttons exported data header-->
 </head>
 <body>
 
@@ -19,7 +19,7 @@ Both of these Javascript files should be included - the main file to include the
 For CSS only a single file should be included as the styling library will provide the core styling options for the table. The CSS files have the format dataTables.{style}.css (dataTables.bootstrap.css for Bootstrap for example).
 -->
 
-<!--jquery-->
+<!--jQuery, ABSOLUTELY NEEDED-->
 
 <!--DOESNT WORK WITH BUTTONS, jQuery Slim 3.x snippet
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -38,10 +38,10 @@ For CSS only a single file should be included as the styling library will provid
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
 -->
 
-<!--DataTables Core JS-->
+<!--DataTables Core JS, ABSOLUTELY NEEDED-->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-<!--DataTables Default CSS-->
+<!--DataTables Default CSS, replace if using custom styling, https://datatables.net/manual/styling-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 
@@ -54,6 +54,7 @@ table id="table_id" class="table"
 
 <!--Bootstrap 4
   table id="table_id" class="table"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/bootstrap4.html
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
@@ -61,16 +62,26 @@ table id="table_id" class="table"
 
 <!--Foundation
   table id="table_id" class="display"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/foundation.html
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.foundation.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.foundation.min.js"></script>
 -->
 
-<!--Semantic UI
-  table id="table_id" class="ui celled table"
+<!--jQuery UI
+  table id="table_id" class="display"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/jqueryui.html
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.jqueryui.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.jqueryui.min.js"></script>
+-->
 
+<!--Semantic UI, REQUIRES core js file as well, other styles dont. seperate components: https://cdnjs.com/libraries/semantic-ui
+  table id="table_id" class="ui celled table"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/semanticui.html
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 -->
 
@@ -94,8 +105,13 @@ table id="table_id" class="table"
 
 
 
-<!--=== Extensions ===-->
-<!--buttons-->
+<!--=== === === Extensions, Plugins,
+https://datatables.net/download/release === === ===-->
+
+<!--buttons, ALL CUSTOM STYLE BUTTON CSS MUST GO BELOW DEFAULT DATATABLES CSS/JS
+  https://datatables.net/reference/button
+  button exported data headers taken from html title.
+The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
   <!--buttons Column visibility control-->
@@ -110,6 +126,29 @@ table id="table_id" class="table"
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.34/vfs_fonts.js"></script>
   <!--buttons Print button-->
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+
+  <!--Custom style buttons, THIS CSS MUST GO BELOW DEFAULT DATATABLES BUTTONS CSS/JS
+      https://datatables.net/extensions/buttons/examples/styling/index.html-->
+        <!--Bootstrap 3 buttons, table.buttons().container() .appendTo( '#example_wrapper .col-sm-6:eq(0)' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.bootstrap.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.bootstrap.min.js"></script>
+        -->
+        <!--Bootstrap 4 buttons, table.buttons().container() .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.bootstrap4.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.bootstrap4.min.js"></script>
+        -->
+        <!--Foundation buttons, table.buttons().container() .appendTo( '#example_wrapper .small-6.columns:eq(0)' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.foundation.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.foundation.min.js"></script>
+        -->
+        <!--jQuery UI buttons, table.buttons().container() .insertBefore( '#example_filter' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.jqueryui.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.jqueryui.min.js"></script>
+        -->
+        <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+        -->
 
 <!--Mark.js, a keyword highlighter for strings, arrays or regular expressions and works in any context (not just tables). datatables.mark.js connects mark.js and DataTables, by offering a plugin for it that can be activated with just one single line of code.
 mark{
@@ -291,7 +330,8 @@ dt[-head|-body]-nowrap nowrap aligned text
   ],
 
 
-/*DOM options, default: lpfrtip
+/*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
+ default: lpfrtip
 l - length changing input control
 f - filtering input
 t - The table
@@ -300,23 +340,35 @@ p - pagination control
 r - processing display element
 B - Buttons
 */
-  "dom": 'lBpfrtip',
+  dom: 'lBpfrtip',
 
 
-        "buttons": [
-/*
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
-            'pdfHtml5'
+
+//previously without outer buttons and extend collection, just inner buttons
+        buttons: [
+            {
+                extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+                text: 'Options',
+                autoClose: true, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+                buttons: [
+/* https://datatables.net/reference/button
+'copy', 'csv', 'excel', 'pdf', 'print' or
+'copyHtml5', 'excelHtml5', 'csvHtml5', 'pdfHtml5'
+
+The export button types have the ability to include information in addition to that shown in the DataTable - specifically they can show the page title, table captions or custom messages.
+https://datatables.net/extensions/buttons/examples/html5/titleMessage.html
 */
 //copy button
-            { extend: 'copy',
+            { extend: 'copy', //https://datatables.net/reference/button/copyHtml5
               text: 'Copy',
               key: { key: 'c',
                      shiftKey: true },
               messageTop: '40 Nawawi',
-              title: 'hadithmv.github.io',
+              title: 'hadithmv.github.io',  //File name, default is document's title
+              //messageBottom: '',
+              fieldSeparator: '\t', //The character(s) used to separate fields in the plain text representation of the table that is copied to the system's clipboard.
+              fieldBoundary: '', //The character(s) used to enclose each field in the plain text representation of the table that is copied to the system's clipboard. This is automatically added at the start and end of each cell's data.
+              newline: '\n', //The character(s) used to separate the lines of data. Please note that on Windows client's the default is \r\n. All other platforms have a default or \n only.
               exportOptions: { columns: [':visible'],
                                rows: [':visible'] },
 //=== edits clipboard regex, code to manipulate the data string as desired
@@ -347,6 +399,9 @@ B - Buttons
 //print button
             { extend: 'print',
               text: 'Print',
+              //messageTop: '40 Nawawi',
+              title: 'hadithmv.github.io', //File name, default is document's title
+              //messageBottom: '',
               key: { key: 'p',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
@@ -355,8 +410,11 @@ B - Buttons
 //print button end
 
 //excel button
-            { extend: 'excel',
+            { extend: 'excel', //requires JSZip
               text: 'Excel',
+              //messageTop: '40 Nawawi',
+              title: 'hadithmv.github.io', //File name, default is document's title
+              //messageBottom: '',
               key: { key: 'x',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
@@ -366,13 +424,41 @@ B - Buttons
 
 //csv button
             { extend: 'csv',
-              text: 'Csv',
+              text: 'Csv', //File name, default is document's title
               key: { key: 'c',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
                                rows: [':visible'] },
             },
 //csv button end
+
+//pdf button
+            { extend: 'pdf', //requires font css
+              text: 'Pdf',
+              //messageTop: '40 Nawawi',
+              title: 'hadithmv.github.io', //File name, default is document's title
+              //messageBottom: '',
+              //orientation: 'portrait', https://datatables.net/extensions/buttons/examples/html5/pdfPage.html
+              //pageSize: 'A4'
+              key: { key: 'd',
+                     shiftKey: true },
+              exportOptions: { columns: [':visible'],
+                               rows: [':visible'] },
+            },
+//pdf button end
+
+//json button (export all)
+            {
+              text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
+                action: function ( e, dt, button, config ) {
+                    var data = dt.buttons.exportData();
+ 
+                    $.fn.dataTable.fileSave(
+                        new Blob( [ JSON.stringify( data ) ] ),
+                        'Export.json'
+                    );
+                },
+//json button end
 
 //colvis button
             { extend: 'colvis',
@@ -382,21 +468,41 @@ B - Buttons
               exportOptions: { columns: [':visible'],
                                rows: [':visible'] },
             },
-//colvis button end
 
 
-                    ],
+                ] //extend buttons end
+            }
+        ], //buttons end
+
+
+
+
+
+
+//        buttons: [
+
+/* https://datatables.net/reference/button
+'copy', 'csv', 'excel', 'pdf', 'print' or
+'copyHtml5', 'excelHtml5', 'csvHtml5', 'pdfHtml5'
+*/
+//copy button
+
+
+
+//                    ],
 //=== end of all buttons
+
+
 
 
 //language options
   "language":
     {
      "buttons": { copy: 'Copy',
-                  copySuccess: { 1: "Copied one row to clipboard",
+                  copyTitle: 'Copy to clipboard', //the title text of the info box
+                  copySuccess: { 1: "Copied one row to clipboard", //message to display when the copy is complete
                                 _: "Copied %d rows to clipboard",
                                },
-                  copyTitle: 'Copy to clipboard',
                   exportOptions: { columns: [':visible'],
                                    rows: [':visible']
                                  }//copies currently displayed columns and rows
@@ -476,7 +582,7 @@ B - Buttons
 //    stateSave: true,
 //stateSave end
 
-/*pagingType,
+/*pagingType, https://datatables.net/plug-ins/pagination/
 "numbers" - Page number buttons only (1.10.8).
 "simple" - 'Previous' and 'Next' buttons only.
 "simple_numbers" - 'Previous' and 'Next' buttons, plus page numbers.

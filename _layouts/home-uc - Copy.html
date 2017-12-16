@@ -18,66 +18,18 @@
     <link rel="canonical" href="https://hadithmv.github.io" />
     <link rel="author" href="https://hadithmv.github.io" />
 
-<!--=== === === BASES === === ===-->
-<!--Google 3.x snippet-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!--TableTop-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
-
-<!--DataTables Core JS, ABSOLUTELY NEEDED-->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-<!--Semantic UI, REQUIRES core js file as well, other styles dont. seperate components: https://cdnjs.com/libraries/semantic-ui
-  table id="table_id" class="ui celled table"
-  buttons styling: https://datatables.net/extensions/buttons/examples/styling/semanticui.html-->
+<!--=== === === CSS === === ===-->
+<!--SU dtSU btSU
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css"/>
+ -->
 
+<!--CONCAT
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/se-2.2.13/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.5.0/b-colvis-1.5.0/b-flash-1.5.0/b-html5-1.5.0/b-print-1.5.0/datatables.min.css"/>
+ -->
 
-<!--=== === === BASES END === === ===-->
-
-<!--=== === === Extensions, Plugins,
-https://datatables.net/download/release === === ===-->
-
-<!--buttons,
-https://datatables.net/extensions/buttons/examples/styling/index.html
-The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.-->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js">
-<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
-  <!--buttons Column visibility control-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
-  <!--buttons HTML5 export buttons-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
-      <!--buttons JSZip Excel export button-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-  <!--buttons Print button-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
-
-        <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );-->
-            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
-            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
-
-<!--Mark.js, a keyword highlighter for strings, arrays or regular expressions and works in any context (not just tables). datatables.mark.js connects mark.js and DataTables, by offering a plugin for it that can be activated with just one single line of code.
-mark{
-    background: orange;
-    color: black;
-}No need to use, too simple <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.css">-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
-<!--=== === === Extensions, Plugins End === === ===-->
-
-
-
-
-
-
-
-<!--=== === === CSS === === ===
-    <link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/css/dt-bt-su.min.css">-->
+    <link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/css/dt-bt-su.min.css">
 <!--=== === === /CSS === === ===-->
 
 <!--=== === === EMBEDDED CSS === === ===-->
@@ -606,10 +558,35 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 <!--//third tab-->
 
 
-<!-- === === === JS === === ===
-    <script type="text/javascript" src="https://hadithmv.github.io/js/jq-tt-dt-su-mk.min.js"></script>
-=== === === JS === === ===-->
+<!-- === === === JS === === === -->
 
+<!-- JQ SU JZ jqDT dtSU dtBT btSU btCV btH5 btPT
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+-->
+
+<!--TT
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+ -->
+
+<!--=== MKjs MKext====
+mark{
+    background: orange;
+    color: black;
+}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+=== === ===-->
+
+    <script type="text/javascript" src="https://hadithmv.github.io/js/jq-tt-dt-su-mk.min.js"></script>
 
 <!--=== === ===INLINE JS=== === ===-->
     <script type="text/javascript">

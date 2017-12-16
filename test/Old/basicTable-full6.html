@@ -359,13 +359,16 @@ The export button types have the ability to include information in addition to t
 https://datatables.net/extensions/buttons/examples/html5/titleMessage.html
 */
 //copy button
-            { extend: 'copy',
+            { extend: 'copy', //https://datatables.net/reference/button/copyHtml5
               text: 'Copy',
               key: { key: 'c',
                      shiftKey: true },
               messageTop: '40 Nawawi',
               title: 'hadithmv.github.io',  //File name, default is document's title
               //messageBottom: '',
+              fieldSeparator: '\t', //The character(s) used to separate fields in the plain text representation of the table that is copied to the system's clipboard.
+              fieldBoundary: '', //The character(s) used to enclose each field in the plain text representation of the table that is copied to the system's clipboard. This is automatically added at the start and end of each cell's data.
+              newline: '\n', //The character(s) used to separate the lines of data. Please note that on Windows client's the default is \r\n. All other platforms have a default or \n only.
               exportOptions: { columns: [':visible'],
                                rows: [':visible'] },
 //=== edits clipboard regex, code to manipulate the data string as desired
@@ -435,6 +438,8 @@ https://datatables.net/extensions/buttons/examples/html5/titleMessage.html
               //messageTop: '40 Nawawi',
               title: 'hadithmv.github.io', //File name, default is document's title
               //messageBottom: '',
+              //orientation: 'portrait', https://datatables.net/extensions/buttons/examples/html5/pdfPage.html
+              //pageSize: 'A4'
               key: { key: 'd',
                      shiftKey: true },
               exportOptions: { columns: [':visible'],
@@ -481,10 +486,10 @@ https://datatables.net/extensions/buttons/examples/html5/titleMessage.html
   "language":
     {
      "buttons": { copy: 'Copy',
-                  copySuccess: { 1: "Copied one row to clipboard",
+                  copyTitle: 'Copy to clipboard', //the title text of the info box
+                  copySuccess: { 1: "Copied one row to clipboard", //message to display when the copy is complete
                                 _: "Copied %d rows to clipboard",
                                },
-                  copyTitle: 'Copy to clipboard',
                   exportOptions: { columns: [':visible'],
                                    rows: [':visible']
                                  }//copies currently displayed columns and rows
