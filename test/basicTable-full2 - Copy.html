@@ -108,8 +108,7 @@ table id="table_id" class="table"
 <!--=== === === Extensions, Plugins,
 https://datatables.net/download/release === === ===-->
 
-<!--buttons
-https://datatables.net/extensions/buttons/examples/styling/index.html
+<!--buttons, ALL CUSTOM STYLE BUTTON CSS MUST GO BELOW DEFAULT DATATABLES CSS/JS
 The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
@@ -125,6 +124,29 @@ The Buttons library, like all DataTables extensions provides extensive styling o
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.34/vfs_fonts.js"></script>
   <!--buttons Print button-->
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+
+  <!--Custom style buttons, THIS CSS MUST GO BELOW DEFAULT DATATABLES BUTTONS CSS/JS
+      https://datatables.net/extensions/buttons/examples/styling/index.html-->
+        <!--Bootstrap 3 buttons, table.buttons().container() .appendTo( '#example_wrapper .col-sm-6:eq(0)' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.bootstrap.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.bootstrap.min.js"></script>
+        -->
+        <!--Bootstrap 4 buttons, table.buttons().container() .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.bootstrap4.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.bootstrap4.min.js"></script>
+        -->
+        <!--Foundation buttons, table.buttons().container() .appendTo( '#example_wrapper .small-6.columns:eq(0)' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.foundation.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.foundation.min.js"></script>
+        -->
+        <!--jQuery UI buttons, table.buttons().container() .insertBefore( '#example_filter' );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.jqueryui.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.jqueryui.min.js"></script>
+        -->
+        <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+        -->
 
 <!--Mark.js, a keyword highlighter for strings, arrays or regular expressions and works in any context (not just tables). datatables.mark.js connects mark.js and DataTables, by offering a plugin for it that can be activated with just one single line of code.
 mark{
@@ -306,7 +328,8 @@ dt[-head|-body]-nowrap nowrap aligned text
   ],
 
 
-/*DOM options, default: lpfrtip
+/*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
+ default: lpfrtip
 l - length changing input control
 f - filtering input
 t - The table
