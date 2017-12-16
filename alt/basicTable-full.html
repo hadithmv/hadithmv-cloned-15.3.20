@@ -41,7 +41,7 @@ For CSS only a single file should be included as the styling library will provid
 <!--DataTables Core JS, ABSOLUTELY NEEDED-->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-<!--DataTables Default CSS, replace if using custom styling-->
+<!--DataTables Default CSS, replace if using custom styling, https://datatables.net/manual/styling-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 
@@ -54,6 +54,7 @@ table id="table_id" class="table"
 
 <!--Bootstrap 4
   table id="table_id" class="table"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/bootstrap4.html
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
@@ -61,16 +62,26 @@ table id="table_id" class="table"
 
 <!--Foundation
   table id="table_id" class="display"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/foundation.html
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.foundation.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.foundation.min.js"></script>
 -->
 
-<!--Semantic UI
-  table id="table_id" class="ui celled table"
+<!--jQuery UI
+  table id="table_id" class="display"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/jqueryui.html
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.jqueryui.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.jqueryui.min.js"></script>
+-->
 
+<!--Semantic UI, REQUIRES core js file as well, other styles dont. seperate components: https://cdnjs.com/libraries/semantic-ui
+  table id="table_id" class="ui celled table"
+  buttons styling: https://datatables.net/extensions/buttons/examples/styling/semanticui.html
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 -->
 
@@ -94,8 +105,12 @@ table id="table_id" class="table"
 
 
 
-<!--=== Extensions ===-->
-<!--buttons-->
+<!--=== === === Extensions, Plugins,
+https://datatables.net/download/release === === ===-->
+
+<!--buttons
+https://datatables.net/extensions/buttons/examples/styling/index.html
+The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
   <!--buttons Column visibility control-->
