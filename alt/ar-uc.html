@@ -33,7 +33,12 @@
         /*=== FONT FACES ===*/
         @font-face {
             font-family: Tharujamaanu-Bold;
-            src: url(https://fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Regular.woff);
+                src: url('https://fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://fonts.gstatic.com/ea/notokufiarabic/v2/NotoKufiArabic-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
         }
 
         /*maybe unneeded, previously til min height, font-family: "";*/
