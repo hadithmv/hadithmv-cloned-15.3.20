@@ -111,7 +111,9 @@ https://datatables.net/download/release === === ===-->
 <!--buttons, ALL CUSTOM STYLE BUTTON CSS MUST GO BELOW DEFAULT DATATABLES CSS/JS
   https://datatables.net/reference/button
   button exported data headers taken from html title.
-The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.-->
+The Buttons library, like all DataTables extensions provides extensive styling options and the ability to be styled by the styling frameworks supported by DataTables core. This section shows Buttons being styling using external CSS frameworks.
+
+Replace Default Buttons Css with custom styling buttons css-->
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
   <!--buttons Column visibility control-->
@@ -146,6 +148,8 @@ The Buttons library, like all DataTables extensions provides extensive styling o
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.jqueryui.min.js"></script>
         -->
         <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
+        		remove 'stackable' from datatables semantic UI JS integration code, https://github.com/DataTables/DataTablesSrc/blob/2b7c6705489fb30aefc5d25612e3860b781120b7/js/integration/dataTables.semanticui.js#L182:
+        		"$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""
             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
         -->

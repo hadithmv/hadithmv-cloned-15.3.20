@@ -23,9 +23,7 @@
 <!--=== Base Ext CSS ===-->
 <!--Semantic UI
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>-->
-<link rel="stylesheet" type="text/css" href="hmv-mod.css"/>
-<style type="text/css">
-    /*
+<link rel="stylesheet" type="text/css" href="SUI-mod-uc.css"/>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.min.css"/><!--buttons-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.min.css"/><!--cards-->
@@ -45,16 +43,10 @@
         <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );-->
             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
 
-    */
-</style>
-
-
 <!--=== Base Ext CSS End ===-->
 
+
 <!--=== Base Ext Js ===-->
-<script type="text/javascript" src="hmv-mod.js"></script>
-<style type="text/css">
-/*
 <!--Google 3.x snippet-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--TableTop-->
@@ -74,6 +66,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
 
 
+
+
+
+
+
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 <!--buttons-->
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
@@ -83,15 +80,13 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
       <!--buttons JSZip Excel export button-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-  <!--buttons Print button-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
-        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
+        <!--Semantic UI buttons,
+                remove 'stackable' from datatables semantic UI JS integration code, https://github.com/DataTables/DataTablesSrc/blob/2b7c6705489fb30aefc5d25612e3860b781120b7/js/integration/dataTables.semanticui.js#L182:
+                "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
 <!--Mark.js-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
-*/
-</style>
 <!--=== Base Ext Js End ===-->
 
 
@@ -450,7 +445,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         <a class="item" href="https://hadithmv.github.io/alt/atable">A Table</a>
                         <a class="item" href="https://hadithmv.github.io/alt/asheet">A Sheet</a>
                         <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3 (Responsive)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
+                    	<a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
                         <a class="item" href="https://hadithmv.github.io/alt/material">Material (Responsive)</a>
                         <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
                     </div>

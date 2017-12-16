@@ -21,15 +21,12 @@
 
 
 <!--=== Base Ext CSS ===-->
-<!--Semantic UI
+<!--Semantic UI-->
+<!--<link rel="stylesheet" type="text/css" href="SUI-mod2.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>-->
-<link rel="stylesheet" type="text/css" href="hmv-mod.css"/>
-<style type="text/css">
-    /*
-
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.min.css"/><!--buttons-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.min.css"/><!--cards-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css"/><!--dropdown, nav-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.css"/><!--dropdown, nav-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/grid.min.css"/><!--responsive layout mobile-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/input.min.css"/><!--input search box-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/menu.min.css"/><!--navbar menu-->
@@ -44,17 +41,10 @@
 <!--buttons-->
         <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );-->
             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
-
-    */
-</style>
-
-
 <!--=== Base Ext CSS End ===-->
 
+
 <!--=== Base Ext Js ===-->
-<script type="text/javascript" src="hmv-mod.js"></script>
-<style type="text/css">
-/*
 <!--Google 3.x snippet-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--TableTop-->
@@ -74,6 +64,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
 
 
+
+
+
+
+
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 <!--buttons-->
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
@@ -85,13 +80,11 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
   <!--buttons Print button-->
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
-        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
+        <!--Semantic UI buttons-->
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
 <!--Mark.js-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
-*/
-</style>
 <!--=== Base Ext Js End ===-->
 
 
@@ -415,7 +408,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         </div>
         <a class="item" data-tab="first">Home</a>
         <a class="item" data-tab="second">40 Nawawi</a>
-        <a class="item" href="https://goo.gl/forms/ttg365FucM099jZj1">Submissions</a> <!--prev: data-tab="third"-->
+        <a class="item" data-tab="third">Submissions</a>
         <div class="ui dropdown item" > 
             Misc
             <div class="menu">
@@ -450,7 +443,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         <a class="item" href="https://hadithmv.github.io/alt/atable">A Table</a>
                         <a class="item" href="https://hadithmv.github.io/alt/asheet">A Sheet</a>
                         <a class="item" href="https://hadithmv.github.io/alt/bootstrap3">Bootstrap 3 (Responsive)</a>
-                        <a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
+                    	<a class="item" href="https://hadithmv.github.io/alt/bootstrap4">Bootstrap 4 (Mobile)</a>
                         <a class="item" href="https://hadithmv.github.io/alt/material">Material (Responsive)</a>
                         <a class="item" href="https://hadithmv.github.io/alt/legacy">Legacy (Mobile)</a>
                     </div>
@@ -492,9 +485,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     </div>
                 </div>
                 <!--/content-->
-                <a class="ui bottom attached button" data-tab="second">
+                <div class="ui bottom attached button" data-tab="second">
                     40 Nawawi
-                </a>
+                </div>
             </div>
 <!--/card 1-->
 
@@ -546,9 +539,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 -->
                 </div>
 
-                <a class="ui bottom attached button" href="https://goo.gl/forms/ttg365FucM099jZj1">
+                <div class="ui bottom attached button">
                     Submissions
-                </a>
+                </div>
 
             </div>
 <!--card 3-->
@@ -570,9 +563,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
                 </div>
                 <!--/content-->
-                <a class="ui bottom attached button">
+                <div class="ui bottom attached button">
                     12:36
-                </a>
+                </div>
             </div>
             <!--/card 4-->
 
@@ -593,9 +586,9 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
                 </div>
                 <!--/content-->
-                <a class="ui bottom attached button">
+                <div class="ui bottom attached button">
                     1017
-                </a>
+                </div>
             </div>
             <!--/card 5-->
 
@@ -618,11 +611,10 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
     </div>
 <!--//second tab-->
 
-<!--
     <div class="ui bottom attached tab" data-tab="third">
         <iframe src="" data-src="https://docs.google.com/forms/d/e/1FAIpQLSe79Mmq2yFKwSw0_Sn5JP8H_M5hrHHwWuJQ8ki-GmaOEEHCnA/viewform?embedded=true"></iframe>
     </div>
-//third tab-->
+<!--//third tab-->
 
 
 
