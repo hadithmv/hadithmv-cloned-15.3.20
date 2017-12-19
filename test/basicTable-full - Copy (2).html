@@ -148,8 +148,8 @@ Replace Default Buttons Css with custom styling buttons css-->
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.jqueryui.min.js"></script>
         -->
         <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );
-        		remove 'stackable' from datatables semantic UI JS integration code, https://github.com/DataTables/DataTablesSrc/blob/2b7c6705489fb30aefc5d25612e3860b781120b7/js/integration/dataTables.semanticui.js#L182:
-        		"$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""
+            remove 'stackable' from datatables semantic UI JS integration code, https://github.com/DataTables/DataTablesSrc/blob/2b7c6705489fb30aefc5d25612e3860b781120b7/js/integration/dataTables.semanticui.js#L182:
+            "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""
             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
         -->
@@ -289,6 +289,22 @@ $(document).ready(function() {
                         .replace(/(ؤ)/g, 'و')
                         .replace(/(لأ)/g, 'لا')
                         .replace(/(لإ)/g, 'لا')
+
+//https://en.wikipedia.org/wiki/Thaana_(Unicode_block), replace regular thaana with thiki jehi
+                .replace( /\u0780/g, '\u0799' ) //.replace( /ހ/g, 'ޙ' )
+                .replace( /\u0780/g, '\u079A' ) //.replace( /ހ/g, 'ޚ' )
+                .replace( /\u0792/g, '\u079B' ) //.replace( /ޒ/g, 'ޛ' )
+                .replace( /\u0792/g, '\u079F' ) //.replace( /ޒ/g, 'ޟ' )
+                .replace( /\u0792/g, '\u07A1' ) //.replace( /ޒ/g, 'ޡ' )
+                .replace( /\u0787/g, '\u07A2' ) //.replace( /އ/g, 'ޢ' )
+                .replace( /\u0788/g, '\u07A5' ) //.replace( /ވ/g, 'ޥ' )
+                .replace( /\u078C/g, '\u07A0' ) //.replace( /ތ/g, 'ޠ' )
+                .replace( /\u0790/g, '\u0798' ) //.replace( /ސ/g, 'ޘ' )
+                .replace( /\u0790/g, '\u079E' ) //.replace( /ސ/g, 'ޞ' )
+                .replace( /\u0780/g, '\u07A4' ) //.replace( /ގ/g, 'ޤ' )
+                .replace( /\u0780/g, '\u07A3' ) //.replace( /ގ/g, 'ޢ' )
+
+                        
                         .replace(/(ى)/g, 'ي') :
                         data;
                 };
@@ -461,7 +477,8 @@ https://datatables.net/extensions/buttons/examples/html5/titleMessage.html
                         new Blob( [ JSON.stringify( data ) ] ),
                         'Export.json'
                     );
-                },
+                }
+            },
 //json button end
 
 //colvis button

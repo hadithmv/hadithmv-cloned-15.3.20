@@ -23,7 +23,9 @@
 <!--=== Base Ext CSS ===-->
 <!--Semantic UI
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>-->
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/hmv-mod.css"/>
+<!--<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/hmv-mod.css"/>-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hadithmv/hadithmv.github.io@1.0/alt/hmv-mod.css"/>
+
 <style type="text/css">
     /*
 
@@ -52,7 +54,8 @@
 <!--=== Base Ext CSS End ===-->
 
 <!--=== Base Ext Js ===-->
-<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>
+<!--<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hadithmv/hadithmv.github.io@1.0/alt/hmv-mod.js"></script>
 <style type="text/css">
 /*
 <!--Google 3.x snippet-->
@@ -686,6 +689,8 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             {"data":"eng",   "title":"English"},
             {"data":"dhiv",  "title":"Dhivehi"},
             {"data":"ref",   "title":"Ref."},
+            //{"data":"dvRef",   "title":"Dv Ref."},
+            //{"data":"arRef",   "title":"Ar Ref."},
             ];
 
         $(document).ready(function() {
@@ -750,7 +755,22 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                         .replace(/(ؤ)/g, 'و')
                         .replace(/(لأ)/g, 'لا')
                         .replace(/(لإ)/g, 'لا')
-                        .replace(/(ى)/g, 'ي') :
+                        .replace(/(ى)/g, 'ي')
+
+//https://en.wikipedia.org/wiki/Thaana_(Unicode_block)
+                .replace( /\u0780/g, '\u0799' ) //.replace( /ހ/g, 'ޙ' )
+                .replace( /\u0780/g, '\u079A' ) //.replace( /ހ/g, 'ޚ' )
+                .replace( /\u0792/g, '\u079B' ) //.replace( /ޒ/g, 'ޛ' )
+                .replace( /\u0792/g, '\u079F' ) //.replace( /ޒ/g, 'ޟ' )
+                .replace( /\u0792/g, '\u07A1' ) //.replace( /ޒ/g, 'ޡ' )
+                .replace( /\u0787/g, '\u07A2' ) //.replace( /އ/g, 'ޢ' )
+                .replace( /\u0788/g, '\u07A5' ) //.replace( /ވ/g, 'ޥ' )
+                .replace( /\u078C/g, '\u07A0' ) //.replace( /ތ/g, 'ޠ' )
+                .replace( /\u0790/g, '\u0798' ) //.replace( /ސ/g, 'ޘ' )
+                .replace( /\u0790/g, '\u079E' ) //.replace( /ސ/g, 'ޞ' )
+                .replace( /\u0780/g, '\u07A4' ) //.replace( /ގ/g, 'ޤ' )
+                .replace( /\u0780/g, '\u07A3' ) //.replace( /ގ/g, 'ޢ' )
+                                                :
                         data;
                 };
 //End of Accent neutralize and regex for search
