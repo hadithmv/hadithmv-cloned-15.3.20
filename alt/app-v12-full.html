@@ -1,4 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+        <meta name="robots" content="noindex"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
+
+
+<!--=== Base Ext CSS ===-->
+<style type="text/css">
 /*!
  * # Semantic UI 2.2.12 - Button
  * http://github.com/semantic-org/semantic-ui/
@@ -91,3 +103,522 @@ body,html{height:100%}html{font-size:14px}body{margin:0;padding:0;overflow-x:hid
  table.dataTable.table{margin:0}table.dataTable.table thead th,table.dataTable.table thead td{position:relative}table.dataTable.table thead th.sorting,table.dataTable.table thead th.sorting_asc,table.dataTable.table thead th.sorting_desc,table.dataTable.table thead td.sorting,table.dataTable.table thead td.sorting_asc,table.dataTable.table thead td.sorting_desc{padding-right:20px}table.dataTable.table thead th.sorting:after,table.dataTable.table thead th.sorting_asc:after,table.dataTable.table thead th.sorting_desc:after,table.dataTable.table thead td.sorting:after,table.dataTable.table thead td.sorting_asc:after,table.dataTable.table thead td.sorting_desc:after{position:absolute;top:12px;right:8px;display:block;font-family:Icons}table.dataTable.table thead th.sorting:after,table.dataTable.table thead td.sorting:after{content:"\f0dc";color:#ddd;font-size:0.8em}table.dataTable.table thead th.sorting_asc:after,table.dataTable.table thead td.sorting_asc:after{content:"\f0de"}table.dataTable.table thead th.sorting_desc:after,table.dataTable.table thead td.sorting_desc:after{content:"\f0dd"}table.dataTable.table td,table.dataTable.table th{-webkit-box-sizing:content-box;box-sizing:content-box}table.dataTable.table td.dataTables_empty,table.dataTable.table th.dataTables_empty{text-align:center}table.dataTable.table.nowrap th,table.dataTable.table.nowrap td{white-space:nowrap}div.dataTables_wrapper div.dataTables_length select{vertical-align:middle;min-height:2.7142em}div.dataTables_wrapper div.dataTables_length .ui.selection.dropdown{min-width:0}div.dataTables_wrapper div.dataTables_filter input{margin-left:0.5em}div.dataTables_wrapper div.dataTables_info{padding-top:13px;white-space:nowrap}div.dataTables_wrapper div.dataTables_processing{position:absolute;top:50%;left:50%;width:200px;margin-left:-100px;text-align:center}div.dataTables_wrapper div.row.dt-table{padding:0}div.dataTables_wrapper div.dataTables_scrollHead table.dataTable{border-bottom-right-radius:0;border-bottom-left-radius:0;border-bottom:none}div.dataTables_wrapper div.dataTables_scrollBody thead .sorting:after,div.dataTables_wrapper div.dataTables_scrollBody thead .sorting_asc:after,div.dataTables_wrapper div.dataTables_scrollBody thead .sorting_desc:after{display:none}div.dataTables_wrapper div.dataTables_scrollBody table.dataTable{border-radius:0;border-top:none;border-bottom-width:0}div.dataTables_wrapper div.dataTables_scrollBody table.dataTable.no-footer{border-bottom-width:1px}div.dataTables_wrapper div.dataTables_scrollFoot table.dataTable{border-top-right-radius:0;border-top-left-radius:0;border-top:none}
 
  @keyframes dtb-spinner{100%{transform:rotate(360deg)}}@-o-keyframes dtb-spinner{100%{-o-transform:rotate(360deg);transform:rotate(360deg)}}@-ms-keyframes dtb-spinner{100%{-ms-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes dtb-spinner{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-moz-keyframes dtb-spinner{100%{-moz-transform:rotate(360deg);transform:rotate(360deg)}}div.dt-button-info{position:fixed;top:50%;left:50%;width:400px;margin-top:-100px;margin-left:-200px;background-color:white;border:2px solid #111;box-shadow:3px 3px 8px rgba(0,0,0,0.3);border-radius:3px;text-align:center;z-index:21}div.dt-button-info h2{padding:0.5em;margin:0;font-weight:normal;border-bottom:1px solid #ddd;background-color:#f3f3f3}div.dt-button-info>div{padding:1em}div.dt-button-collection{position:absolute;top:0;left:0;width:150px;margin-top:3px !important;z-index:2002;background:white;-webkit-column-gap:8px;-moz-column-gap:8px;-ms-column-gap:8px;-o-column-gap:8px;column-gap:8px}div.dt-button-collection.fixed{position:fixed;top:50%;left:50%;margin-left:-75px;border-radius:0}div.dt-button-collection.fixed.two-column{margin-left:-150px}div.dt-button-collection.fixed.three-column{margin-left:-225px}div.dt-button-collection.fixed.four-column{margin-left:-300px}div.dt-button-collection>*{-webkit-column-break-inside:avoid;break-inside:avoid}div.dt-button-collection.two-column{width:300px;padding-bottom:1px;-webkit-column-count:2;-moz-column-count:2;-ms-column-count:2;-o-column-count:2;column-count:2}div.dt-button-collection.three-column{width:450px;padding-bottom:1px;-webkit-column-count:3;-moz-column-count:3;-ms-column-count:3;-o-column-count:3;column-count:3}div.dt-button-collection.four-column{width:600px;padding-bottom:1px;-webkit-column-count:4;-moz-column-count:4;-ms-column-count:4;-o-column-count:4;column-count:4}div.dt-button-collection .dt-button{border-radius:0}button.buttons-collection.ui.button span:after{display:inline-block;content:"▾";padding-left:0.5em}div.dt-button-background{position:fixed;top:0;left:0;width:100%;height:100%;z-index:2001}@media screen and (max-width: 767px){div.dt-buttons{float:none;width:100%;text-align:center;margin-bottom:0.5em}div.dt-buttons a.btn{float:none}}div.dt-buttons button.button.processing,div.dt-buttons div.button.processing,div.dt-buttons a.button.processing{position:relative;color:rgba(0,0,0,0.2)}div.dt-buttons button.button.processing:after,div.dt-buttons div.button.processing:after,div.dt-buttons a.button.processing:after{position:absolute;top:50%;left:50%;width:16px;height:16px;margin:-8px 0 0 -8px;box-sizing:border-box;display:block;content:' ';border:2px solid #282828;border-radius:50%;border-left-color:transparent;border-right-color:transparent;animation:dtb-spinner 1500ms infinite linear;-o-animation:dtb-spinner 1500ms infinite linear;-ms-animation:dtb-spinner 1500ms infinite linear;-webkit-animation:dtb-spinner 1500ms infinite linear;-moz-animation:dtb-spinner 1500ms infinite linear}
+</style>
+
+
+
+<!--=== Base Ext CSS End ===-->
+
+
+<!--=== Base Ext JS ===-->
+
+<script src="https://hadithmv.github.io/alt/app.js"></script>
+
+<style type="text/css">
+/*
+<!--Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--DataTables Core JS-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<!--Semantic UI
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<!--buttons-->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+  <!--buttons Column visibility control-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+  <!--buttons HTML5 export buttons-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+<!--Mark.js-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+*/
+</style>
+<!--=== Base Ext JS End ===-->
+
+
+
+<style type="text/css">
+  
+        @font-face {
+            font-family: 'Tharujamaanu-Bold';
+                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype');
+
+                      /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
+
+
+
+
+
+
+
+
+
+        /*vertically aligns column text to top*/
+        table.dataTable tbody td {
+            vertical-align: top;
+        }
+
+        /* corrects web view only/none-print display for these particular columns */
+        .dataTable tbody tr td.col1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .dataTable tbody tr td.col2 {
+            direction: rtl;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 140%;
+        }
+        
+        .dataTable tbody tr td.col3 {
+            direction: ltr;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 110%;
+        }
+        
+        .dataTable tbody tr td.col4 {
+            direction: rtl;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 135%;
+            font-family: "Tharujamaanu-Bold" !important;
+        }
+        .dataTable tbody tr td.col5 {
+            text-align: center;
+            font-weight: bold;
+        }
+        .dataTable tbody tr td.col6 {
+            text-align: center;
+            font-weight: bold;
+            font-family: "Tharujamaanu-Bold" !important;
+        }
+        .dataTable tbody tr td.col7 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /*hides table headers even on mobile, prev nth-child(2)*/
+        thead tr:nth-child(1) {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+        }
+/* makes min-width a bit bigger */
+        #example > thead > tr > th > input[type="text"] {
+          width: 100%;
+          padding: 3px;
+          box-sizing: border-box;
+          min-width: 20px;
+          border-radius: .28571429rem;
+          border: 1px solid rgba(34, 36, 38, .15);
+        }
+/* both above and below 2 needed to work min-width, or just below 2 to work width */
+        thead input {
+          width: 100%;
+          padding: 3px;
+            min-width: 20px;
+          box-sizing: border-box;
+                      border-radius: .28571429rem;
+          border: 1px solid rgba(34, 36, 38, .15);
+        } 
+        tfoot input {
+          width: 100%;
+          padding: 3px;
+          box-sizing: border-box;
+                      border-radius: .28571429rem;
+          border: 1px solid rgba(34, 36, 38, .15);
+        }
+
+
+
+
+        #table_id_wrapper > div > div:nth-child(3) > div.six.wide.column {
+          padding: 0px !important; padding-left: 1px !important;}
+        #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+          padding: 0px !important;}
+        #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+          margin: 0px !important; width: 43vw !important;}
+
+
+        html,
+        body {
+            /*font-size: 16px; base font size*/
+
+            width: 100%;
+            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+/*hides unwanted horizontal scroll space, PREV, ran into printn scrollbar bug
+            max-width: 100%; 
+            overflow-x: hidden;*/
+
+            margin: 0;
+            padding: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+
+            background-color: #fff;
+        }
+/*hides unwanted horizontal scroll space*/
+@media not print, screen {
+    html, body {max-width: 100%; 
+                overflow-x: hidden;}
+}
+
+
+        #table_id_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+        #table_id_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+        #table_id_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+        #table_id_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+        #table_id > thead > tr:nth-child(2) {padding: 0px !important;}
+        #table_id_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+        #table_id_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+        #table_id > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+/*hides individual column search
+        #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+*/
+</style>
+
+
+
+
+
+
+
+<body>
+
+
+    <table id="table_id" class="ui celled striped table" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+
+
+
+
+<script type="text/javascript">
+/*
+first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+Remove trailing empty cells.
+then used: http://myjson.com, A simple JSON store for your web or mobile app
+
+*/
+$(document).ready(function() {
+
+//=== === Accent neutralise === === other half at bottom
+                $.fn.DataTable.ext.type.search.string = function(data) {
+                    return !data ?
+                        '' :
+                        typeof data === 'string' ?
+                        data
+                        .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
+                        .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
+//ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
+                        .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
+//ف ق ك ل م ن ه و ى ي
+
+                        .replace(/٠/g, '0')
+                        .replace(/١/g, '1')
+                        .replace(/٢/g, '2')
+                        .replace(/٣/g, '3')
+                        .replace(/٤/g, '4')
+                        .replace(/٥/g, '5')
+                        .replace(/٦/g, '6')
+                        .replace(/٧/g, '7')
+                        .replace(/٨/g, '8')
+                        .replace(/٩/g, '9')
+
+                        .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
+//ٱ
+                        .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
+//ھ
+                        .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
+
+
+                      //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
+                      
+                        .replace(/(ٱ|آ|إ|أ)/g, 'ا')
+                        .replace(/(ة|ھ)/g, 'ه')
+                        .replace(/(ئ|ؤ)/g, 'ء')
+                        .replace(/(ؤ)/g, 'و')
+                        .replace(/(لأ)/g, 'لا')
+                        .replace(/(لإ)/g, 'لا')
+                        .replace(/(ى)/g, 'ي') :
+                        data;
+                };
+//End of Accent neutralize and regex for search
+
+// MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
+    // Setup - add a text input to each footer cell
+    $('#table_id tfoot th').each( function () {
+        var title = $(this).text(); //var title = $('#table_id thead th').eq( $(this).index() ).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+
+//Add footer search to table
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th><th>dvRef.</th><th>arRef.</th></tr></tfoot>');
+
+//Setup - add a text input to each search footer cell
+                $('#table_id tfoot th').each(function() {
+                    var title = $(this).text();
+                    $(this).html('<input type="text" placeholder="'+title+'"/>');
+                });
+
+/*https://datatables.net/examples/data_sources/js_array.html
+
+first use: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json third option output "CSV to JSON ARRAY", copy between square brackets, leave: { "fields": [" "], "data": [ ]
+}.
+Remove trailing empty cells.
+
+then use: http://myjson.com, A simple JSON store for your web or mobile app
+
+minify with: http://minifycode.com/html-minifier
+*/
+//  $(document).ready(function() {
+  var table = $('#table_id').DataTable({
+    ajax:'https://hadithmv.github.io/alt/nJson.json',
+//    url: "file:///android_asset/nJson.json" //https://api.myjson.com/bins/qennz
+
+ //   data: data, previously without column titles
+    columns: [
+      {title:"#"}, 
+      {title:"Arabic"},
+      {title:"English"},
+      {title:"Dhivehi"},
+      {title:"Ref."}, 
+      {title:"Dv Ref."},
+      {title:"Ar Ref."},
+    ],
+
+    columnDefs: [  //classes columns for css in nweb view, but not print
+      { className: "col1", "targets": [0], "visible": true, "searchable": true},
+      { className: "col2", "targets": [1], "visible": true, "searchable": true },
+      { className: "col3", "targets": [2], "visible": true, "searchable": true },
+      { className: "col4", "targets": [3], "visible": true, "searchable": true }, 
+      { className: "col5", "targets": [4], "visible": true, "searchable": true },
+      { className: "col6", "targets": [5], "visible": false, "searchable": true },
+      { className: "col7", "targets": [6], "visible": false, "searchable": true },
+   ], //end of columnDefs, previously without visible and searchable options
+
+    stateSave: false, //restore table state on page reload
+    orderCellsTop: false, //Moves the sorting icons to the first header row
+    mark: true, //highlights searches
+    autoWidth: false,
+    order: [
+           [0, "asc"]
+           ],
+    pagingType: "full",
+    lengthMenu: [1, 2, 3, 5, 7, 10, 15, 20], //display range of pages
+    language: {
+        buttons: {
+            copyTitle: 'Copy',
+            copySuccess: {
+                1: "Copied 1 Hadith",
+                _: "Copied %d Ahadith"
+            }
+        },
+        paginate: {
+            first:      "&lt;&lt; First",
+            last:       "Last &gt;&gt;",
+            next:       "Next &gt;",
+            previous:   "&lt; Previous"
+            },
+        infoEmpty:      "Found 0 Hadith",
+        infoFiltered:   "(filtered from _MAX_ total Hadith)",
+        zeroRecords:    "No matches found",
+        search: "",
+        searchPlaceholder: "Search Hadithmv . . .",
+        info: "_START_ to _END_ of _TOTAL_ Hadith",
+        lengthMenu: "_MENU_"
+    }, //end of language
+
+    dom: 
+        "<'ui unstackable grid'" + /*add celled to see grid*/
+
+            "<'computer only row'" + /*desktop view*/
+                "<'one wide column'l>" +
+                "<'four wide column'B>" +
+                "<'center aligned seven wide column'f>" +
+                "<'right aligned four wide column'p>" +
+            ">" +
+
+            "<'tablet only row'" + /*tablet view*/
+                "<'one wide column'l>" +
+                "<'center aligned three wide column'B>" +
+                "<'center aligned five wide column'f>" +
+                "<'right aligned seven wide column'p>" +
+            ">" +
+
+
+            "<'mobile only row'" + /*mobile view*/
+                "<'three wide column'l>" +
+                "<'six wide column'B>" +
+                "<'seven wide column'f>" +
+            ">" +
+            "<'mobile only stackable row'" + /*mobile view*/
+                "<'center aligned sixteen wide column'p>" +
+            ">" +
+
+            "<'stackable row dt-table'" +
+                "<'sixteen wide column'tr>" +
+            ">" +
+
+            "<'stackable row'" +
+                "<'seven wide column'i>" +
+                "<'right aligned nine wide column'p>" +
+            ">" +
+
+        ">",
+
+    buttons: [
+        {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+         text: 'Options',
+         autoClose: true, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+         buttons: [
+
+              {extend: 'copy',
+               key: {key: 'c', shiftKey: true},
+               text: 'Copy',
+               messageTop: '40 Nawawi',
+               title: 'hadithmv.github.io',
+
+//=== edits clipboard regex, code to manipulate the data string as desired
+              customize: function(data) {
+/**/
+                      // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
+//                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
+
+                      // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
+                       data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tArabic/g, '' );
+                       data = data.replace( /\tEnglish/g, '' );
+                       data = data.replace( /\tDhivehi/g, '' );
+                       data = data.replace( /\tRef./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
+                       data = data.replace( /\tAr Ref./g, '' );
+
+                       data = data.replace( /\r/g, '' ); //rids windows platform newline
+                       data = data.replace( /\t/g, '\n\n' );
+/**/
+                      console.log(JSON.stringify(data));
+                      return data;
+                    },
+//=== edits clipboard regex end, customize: function(data) {
+
+              exportOptions: {columns: [':visible'],
+                              rows: [':visible'] } //copies currently displayed columns and rows
+            },
+//end of copy customization
+/*
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'Print',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of print
+
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'Excel',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
+                        }, //end of excel
+*/
+                        {extend: 'colvis',
+                         key: {key: 'h', shiftKey: true},
+                         text: 'Hide'
+                        }, //end of colvis
+
+
+                ] }//end of inner end
+
+          ],
+//=== end of outer buttons
+
+  });
+
+   // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+//Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                $('#table_id_filter input').keyup(function() {
+                    table
+                        .search(
+                            $.fn.DataTable.ext.type.search.string(this.value)
+                        )
+                        .draw();
+                });
+//End of Remove accented characters from global search input
+
+
+ // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+    // Apply the Individual column searching, other half at top
+    table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+    } );
+// Individual column searching end
+
+// moves individual column searching to top, header, does not break fixedcolumnheaders
+$('#table_id tfoot tr').appendTo('#table_id thead');
+// moves individual column searching to top end
+
+// Apply S Buttons
+                table.buttons().container()
+                table.buttons(0, null).containers();
+                /*table.buttons().container()
+                  .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
+                */
+
+});
+
+
+</script>
+
+</body>
+</html>
