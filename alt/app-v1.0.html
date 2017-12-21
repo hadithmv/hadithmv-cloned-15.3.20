@@ -1,22 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><!--change languages later-->
-
+<html>
 <head>
-<!--<meta name="robots" content="noindex"/> -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>Hadithmv - Accessible and Sourced</title>
-    <meta name="description" content="Dhivehi Hadith translations at your fingertips">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="cache-control" content="Public"/>
-    <meta http-equiv="Expires" content="604800"/>
 
-    <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,sourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
-    <meta name="author" content="Hadithmv">
-    <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" />
-    <meta name="theme-color" content="#1A619E" />
-    <link rel="canonical" href="https://hadithmv.github.io" />
-    <link rel="author" href="https://hadithmv.github.io" />
+        <meta name="robots" content="noindex"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+</head>
 
 
 <!--=== Base Ext CSS ===-->
@@ -43,12 +33,6 @@
 
 <!--=== Base Ext JS ===-->
 <script src="https://hadithmv.github.io/alt/app.js"></script>
-
-
-      <!--buttons JSZip Excel export button-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-  <!--buttons Print button-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
 <style type="text/css">
 /*
 <!--Google 3.x snippet-->
@@ -79,13 +63,13 @@
 
 
 <style type="text/css">
-  
+
         @font-face {
             font-family: 'Tharujamaanu-Bold';
-                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype');
-
-                      /* Safari, Android, iOS */
+                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype'); /* Safari, Android, iOS */
         /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
         /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
         /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
@@ -228,7 +212,7 @@
 
 
 
-</head>
+
 
 
 
@@ -363,7 +347,7 @@ minify with: http://minifycode.com/html-minifier
     order: [
            [0, "asc"]
            ],
-    pagingType: "full_numbers",
+    pagingType: "full",
     lengthMenu: [1, 2, 3, 5, 7, 10, 15, 20], //display range of pages
     language: {
         buttons: {
@@ -461,25 +445,40 @@ minify with: http://minifycode.com/html-minifier
                     },
 //=== edits clipboard regex end, customize: function(data) {
 
-              exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
+              exportOptions: {columns: [':visible'],
+                              rows: [':visible'] } //copies currently displayed columns and rows
             },
 //end of copy customization
-
-                        { extend: 'print',
-                          key: { key: 'p', shiftKey: true },
-                          text: 'Print',
-                          exportOptions: { columns: [':visible'], rows: [':visible'] }
+/*
+                        {
+                            extend: 'print',
+                            key: {
+                                key: 'p',
+                                shiftKey: true
+                            },
+                            text: 'Print',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
                         }, //end of print
 
-                        { extend: 'excel',
-                          key: { key: 'x', shiftKey: true },
-                          text: 'Excel',
-                          exportOptions: { columns: [':visible'], rows: [':visible'] }
+                        {
+                            extend: 'excel',
+                            key: {
+                                key: 'x',
+                                shiftKey: true
+                            },
+                            text: 'Excel',
+                            exportOptions: {
+                                columns: [':visible'],
+                                rows: [':visible']
+                            }
                         }, //end of excel
-
-                        { extend: 'colvis',
-                          key: {key: 'h', shiftKey: true},
-                          text: 'Hide'
+*/
+                        {extend: 'colvis',
+                         key: {key: 'h', shiftKey: true},
+                         text: 'Hide'
                         }, //end of colvis
 /*
                         //json button (export all)
