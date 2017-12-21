@@ -21,6 +21,8 @@
 
 <!--=== Base Ext CSS ===-->
 <link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/app.css"/>
+<link rel="stylesheet" type="text/css" href="file:///android_asset/app.css"/>
+
 <style type="text/css">
   /*
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.min.css"/><!--buttons-->
@@ -43,6 +45,7 @@
 
 <!--=== Base Ext JS ===-->
 <script src="https://hadithmv.github.io/alt/app.js"></script>
+<script type="text/javascript" src="file:///android_asset/app.js"></script>
 
 
       <!--buttons JSZip Excel export button-->
@@ -79,13 +82,13 @@
 
 
 <style type="text/css">
-  
+
         @font-face {
             font-family: 'Tharujamaanu-Bold';
-                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype');
-
-                      /* Safari, Android, iOS */
+                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype'); /* Safari, Android, iOS */
         /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
         /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
         /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
@@ -175,7 +178,7 @@
 
 
         #table_id_wrapper > div > div:nth-child(3) > div.six.wide.column {
-          padding: 0px !important; padding-left: 1px !important;}
+          padding: 0px !important; padding-left: 1.5px !important;}
         #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column {
           padding: 0px !important;}
         #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
@@ -215,6 +218,8 @@
         #table_id_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
         #table_id_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
         #table_id_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+        #table_id > thead > tr:nth-child(2) > th {padding-bottom: 2px !important; padding-top: 2px !important;}
 
         #table_id > thead > tr:nth-child(2) {padding: 0px !important;}
         #table_id_wrapper > div > div:nth-child(6) {padding: 0px !important;}
@@ -363,7 +368,7 @@ minify with: http://minifycode.com/html-minifier
     order: [
            [0, "asc"]
            ],
-    pagingType: "full_numbers",
+    pagingType: "full",
     lengthMenu: [1, 2, 3, 5, 7, 10, 15, 20], //display range of pages
     language: {
         buttons: {
