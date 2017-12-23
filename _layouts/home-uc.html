@@ -103,7 +103,8 @@
 
         /* corrects web view only/none-print display for these particular columns */
         .dataTable tbody tr td.col1 {
-            font-size: 115%;
+        	margin-top: 7px;
+            font-size: 125%;
             text-align: center;
             font-weight: bold;
         }
@@ -227,10 +228,12 @@
         #table_id_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
         #table_id > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
 
-/*hides individual column search
-        #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
-*/
 
+/*hides individual column search, mobile view only*/
+@media screen and (max-width: 768px) {
+        #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+}
+		/*moves show index a little to the right*/
         #table_id_info { margin-left: 10px; }
 </style>
 
@@ -385,13 +388,13 @@ minify with: http://minifycode.com/html-minifier
             first:      "&lt;&lt; First",
             last:       "Last &gt;&gt;",
             next:       "Next &gt;",
-            previous:   "&lt; Previous"
+            previous:   "&lt; Back"
             },
         infoEmpty:      "Found 0 Hadith",
         infoFiltered:   "(filtered from _MAX_ total Hadith)",
         zeroRecords:    "No matches found",
         search: "",
-        searchPlaceholder: "Search Hadithmv . . .",
+        searchPlaceholder: "Search Hmv . . . ",
         info: "_START_ to _END_ of _TOTAL_ Hadith",
         lengthMenu: "_MENU_"
     }, //end of language
