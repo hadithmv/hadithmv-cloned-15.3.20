@@ -49,9 +49,9 @@
 
 <!--CHANGE123-->
 <!--buttons JSZip Excel export button-->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 <!--buttons Print button-->
-	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
 <style type="text/css">
 /*
 <!--Google 3.x snippet-->
@@ -82,7 +82,7 @@
 
 
 <style type="text/css">
-		/* Tharujamaanu-Bold */
+
         @font-face {
             font-family: 'Tharujamaanu-Bold';
                 src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
@@ -94,14 +94,6 @@
         /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
         }
 
-		/* latin */
-		@font-face {
-  			font-family: 'Lato';
-  			font-style: normal;
-  			font-weight: 400;
-  			src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
-  		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-		}
 
 
         /*vertically aligns column text to top*/
@@ -111,7 +103,7 @@
 
         /* corrects web view only/none-print display for these particular columns */
         .dataTable tbody tr td.col1 {
-        	margin-top: 7px;
+            margin-top: 7px;
             font-size: 125%;
             text-align: center;
             font-weight: bold;
@@ -129,7 +121,6 @@
             text-align: justify;
             line-height: 1.4;
             font-size: 110%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
         
         .dataTable tbody tr td.col4 {
@@ -142,7 +133,6 @@
         .dataTable tbody tr td.col5 {
             text-align: center;
             font-weight: bold;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
         .dataTable tbody tr td.col6 {
             text-align: center;
@@ -199,8 +189,6 @@
 
         html,
         body {
-        	 font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-
             /*font-size: 16px; base font size*/
 
             width: 100%;
@@ -245,7 +233,7 @@
 @media screen and (max-width: 768px) {
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
-		/*moves show index a little to the right*/
+        /*moves show index a little to the right*/
         #table_id_info { margin-left: 10px; }
 </style>
 
@@ -355,8 +343,8 @@ minify with: http://minifycode.com/html-minifier
 */
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
-    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
-//    ajax:'file:///android_asset/nJson.json', CHANGE123
+    ajax:'https://hadithmv.github.io/alt/nJson.json',
+//    url: "file:///android_asset/nJson.json" //https://api.myjson.com/bins/qennz
 
  //   data: data, previously without column titles
     columns: [
