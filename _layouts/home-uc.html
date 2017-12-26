@@ -399,7 +399,7 @@ minify with: http://minifycode.com/html-minifier
 */
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
-    ajax:'https://hadithmv.github.io/alt/json/nJson-uc.json',
+    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
 
 //            data: dataSet,  //CHANGE123
 
@@ -520,18 +520,35 @@ minify with: http://minifycode.com/html-minifier
                       // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
 //                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
 
+                       data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
+
+                       data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
+
                       // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
                        data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tAr Title/g, '' );
+                       data = data.replace( /\tEn Title/g, '' );
+                       data = data.replace( /\tDv Title/g, '' );
                        data = data.replace( /\tArabic/g, '' );
                        data = data.replace( /\tEnglish/g, '' );
                        data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tRef./g, '' );
-                       data = data.replace( /\tDv Ref./g, '' );
                        data = data.replace( /\tAr Ref./g, '' );
+                       data = data.replace( /\tEn Ref./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
 
+                       
+
+                       data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
+                       data = data.replace( /\t/g, '\n\n' ); //seperates rows
+
+                       data = data.replace( /hadithmv.github.io\n/g, 'hadithmv.github.io\n\n' ); //adds new line on android
+
+/*
                        data = data.replace( /\r/g, '' ); //rids windows platform newline
                        data = data.replace( /\t/g, '\n\n' );
 /**/
+
+
                       console.log(JSON.stringify(data));
                       return data;
                     },
