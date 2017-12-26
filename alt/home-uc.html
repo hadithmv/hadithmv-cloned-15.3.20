@@ -20,8 +20,8 @@
 
 
 <!--=== Base Ext CSS ===-->
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/app.css"/>
 <link rel="stylesheet" type="text/css" href="file:///android_asset/app.css"/>
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/app.css"/>
 
 <style type="text/css">
   /*
@@ -44,14 +44,14 @@
 
 
 <!--=== Base Ext JS ===-->
-<script src="https://hadithmv.github.io/alt/app.js"></script>
 <script type="text/javascript" src="file:///android_asset/app.js"></script>
+<script src="https://hadithmv.github.io/alt/app.js"></script>
 
-
-      <!--buttons JSZip Excel export button-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-  <!--buttons Print button-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+<!--CHANGE123-->
+<!--buttons JSZip Excel export button-->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+<!--buttons Print button-->
+	<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
 <style type="text/css">
 /*
 <!--Google 3.x snippet-->
@@ -82,7 +82,7 @@
 
 
 <style type="text/css">
-
+		/* Tharujamaanu-Bold */
         @font-face {
             font-family: 'Tharujamaanu-Bold';
                 src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
@@ -94,6 +94,27 @@
         /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
         }
 
+    /* Tharujamaanu-Light */
+        @font-face {
+            font-family: 'Tharujamaanu-Light';
+                src: url('file:///android_asset/Tharujamaanu-Light.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Lightfix.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
+
+		/* Lato - Latin */
+		@font-face {
+  			font-family: 'Lato';
+  			font-style: normal;
+  			font-weight: 400;
+            src: url('file:///android_asset/Lato-Regular.woff') format('woff'),
+  				 local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+  		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+		}
 
 
         /*vertically aligns column text to top*/
@@ -103,45 +124,76 @@
 
         /* corrects web view only/none-print display for these particular columns */
         .dataTable tbody tr td.col1 {
-            font-size: 115%;
+        	/*margin-bottom: -1px;*/
+            font-size: 110%;
             text-align: center;
-            font-weight: bold;
+
         }
-        
         .dataTable tbody tr td.col2 {
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+
+        }
+        .dataTable tbody tr td.col3 {
+            font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+        }
+        .dataTable tbody tr td.col4 {
+            direction: rtl;
+            font-size: 125%;
+            font-family: "Tharujamaanu-Bold";
+            text-align: center;
+
+        }
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: "Tharujamaanu-Light";}
+}
+        .dataTable tbody tr td.col5 {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 140%;
         }
-        
-        .dataTable tbody tr td.col3 {
+        .dataTable tbody tr td.col6 {
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
             font-size: 110%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
-        
-        .dataTable tbody tr td.col4 {
+        .dataTable tbody tr td.col7 {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 135%;
-            font-family: "Tharujamaanu-Bold" !important;
+            font-family: "Tharujamaanu-Bold";
         }
-        .dataTable tbody tr td.col5 {
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col7 {font-family: "Tharujamaanu-Light";}
+}
+        .dataTable tbody tr td.col8 {
+            direction: rtl;
             text-align: center;
-            font-weight: bold;
+            font-size: 120%;
+            font-family: none;
         }
-        .dataTable tbody tr td.col6 {
+        .dataTable tbody tr td.col9 {
             text-align: center;
-            font-weight: bold;
-            font-family: "Tharujamaanu-Bold" !important;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-size: 100%;
         }
-        .dataTable tbody tr td.col7 {
+        .dataTable tbody tr td.col10 {
+            direction: rtl;
             text-align: center;
-            font-weight: bold;
+            font-family: "Tharujamaanu-Bold";
+            font-size: 115%;
         }
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col10 {font-family: "Tharujamaanu-Light";}
+}
 
         /*hides table headers even on mobile, prev nth-child(2)*/
         thead tr:nth-child(1) {
@@ -187,7 +239,9 @@
 
 
         html,
-        body {
+        body {             font-size: 105%;
+        	 font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
             /*font-size: 16px; base font size*/
 
             width: 100%;
@@ -227,10 +281,12 @@
         #table_id_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
         #table_id > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
 
-/*hides individual column search
-        #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
-*/
 
+/*hides individual column search, mobile view only*/
+@media screen and (max-width: 768px) {
+        #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+}
+		/*moves show index a little to the right*/
         #table_id_info { margin-left: 10px; }
 </style>
 
@@ -246,6 +302,9 @@
     <table id="table_id" class="ui celled striped table" cellspacing="0" width="100%">
       <thead>
         <tr>
+          <th></th>
+          <th></th>
+          <th></th>
           <th></th>
           <th></th>
           <th></th>
@@ -300,14 +359,14 @@ $(document).ready(function() {
 
 
                       //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
-                      
+/*
                         .replace(/(ٱ|آ|إ|أ)/g, 'ا')
                         .replace(/(ة|ھ)/g, 'ه')
                         .replace(/(ئ|ؤ)/g, 'ء')
                         .replace(/(ؤ)/g, 'و')
                         .replace(/(لأ)/g, 'لا')
                         .replace(/(لإ)/g, 'لا')
-                        .replace(/(ى)/g, 'ي') :
+                        .replace(/(ى)/g, 'ي') */  :
                         data;
                 };
 //End of Accent neutralize and regex for search
@@ -320,7 +379,7 @@ $(document).ready(function() {
     } );
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th><th>dvRef.</th><th>arRef.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>arRef.</th><th>enRef.</th><th>dvRef.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#table_id tfoot th').each(function() {
@@ -340,28 +399,37 @@ minify with: http://minifycode.com/html-minifier
 */
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
-    ajax:'https://hadithmv.github.io/alt/nJson.json',
-//    url: "file:///android_asset/nJson.json" //https://api.myjson.com/bins/qennz
+    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
+
+//            data: dataSet,  //CHANGE123
+
+//    ajax:'file:///android_asset/nJson.json',
 
  //   data: data, previously without column titles
     columns: [
       {title:"#"}, 
+      {title:"Ar Title"},
+      {title:"En Title"},
+      {title:"Dv Title"},
       {title:"Arabic"},
       {title:"English"},
       {title:"Dhivehi"},
-      {title:"Ref."}, 
-      {title:"Dv Ref."},
       {title:"Ar Ref."},
+      {title:"En Ref."},
+      {title:"Dv Ref."},
     ],
 
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
-      { className: "col2", "targets": [1], "visible": true, "searchable": true },
-      { className: "col3", "targets": [2], "visible": true, "searchable": true },
-      { className: "col4", "targets": [3], "visible": true, "searchable": true }, 
-      { className: "col5", "targets": [4], "visible": true, "searchable": false },
-      { className: "col6", "targets": [5], "visible": false, "searchable": false },
-      { className: "col7", "targets": [6], "visible": false, "searchable": false },
+      { className: "col2", "targets": [1], "visible": true, "searchable": false },
+      { className: "col3", "targets": [2], "visible": false, "searchable": false },
+      { className: "col4", "targets": [3], "visible": false, "searchable": false },
+      { className: "col5", "targets": [4], "visible": true, "searchable": true },
+      { className: "col6", "targets": [5], "visible": true, "searchable": true },
+      { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
+      { className: "col8", "targets": [7], "visible": true, "searchable": false },
+      { className: "col9", "targets": [8], "visible": false, "searchable": false },
+      { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
     stateSave: false, //restore table state on page reload
@@ -372,7 +440,7 @@ minify with: http://minifycode.com/html-minifier
            [0, "asc"]
            ],
     pagingType: "full",
-    lengthMenu: [1, 2, 3, 5, 7, 10, 15, 20], //display range of pages
+    lengthMenu: [10, 2, 3, 5, 7, 10, 15, 20], //display range of pages
     language: {
         buttons: {
             copyTitle: 'Copy',
@@ -385,13 +453,13 @@ minify with: http://minifycode.com/html-minifier
             first:      "&lt;&lt; First",
             last:       "Last &gt;&gt;",
             next:       "Next &gt;",
-            previous:   "&lt; Previous"
+            previous:   "&lt; Back"
             },
         infoEmpty:      "Found 0 Hadith",
         infoFiltered:   "(filtered from _MAX_ total Hadith)",
         zeroRecords:    "No matches found",
         search: "",
-        searchPlaceholder: "Search Hadithmv . . .",
+        searchPlaceholder: "Search Hmv . . . ",
         info: "_START_ to _END_ of _TOTAL_ Hadith",
         lengthMenu: "_MENU_"
     }, //end of language
@@ -452,18 +520,35 @@ minify with: http://minifycode.com/html-minifier
                       // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
 //                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
 
+                       data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
+
+                       data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
+
                       // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
                        data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tAr Title/g, '' );
+                       data = data.replace( /\tEn Title/g, '' );
+                       data = data.replace( /\tDv Title/g, '' );
                        data = data.replace( /\tArabic/g, '' );
                        data = data.replace( /\tEnglish/g, '' );
                        data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tRef./g, '' );
-                       data = data.replace( /\tDv Ref./g, '' );
                        data = data.replace( /\tAr Ref./g, '' );
+                       data = data.replace( /\tEn Ref./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
 
+                       
+
+                       data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
+                       data = data.replace( /\t/g, '\n\n' ); //seperates rows
+
+                       data = data.replace( /hadithmv.github.io\n/g, 'hadithmv.github.io\n\n' ); //adds new line on android
+
+/*
                        data = data.replace( /\r/g, '' ); //rids windows platform newline
                        data = data.replace( /\t/g, '\n\n' );
 /**/
+
+
                       console.log(JSON.stringify(data));
                       return data;
                     },
@@ -472,7 +557,7 @@ minify with: http://minifycode.com/html-minifier
               exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
             },
 //end of copy customization
-
+/*CHANGE123*/
                         { extend: 'print',
                           key: { key: 'p', shiftKey: true },
                           text: 'Print',

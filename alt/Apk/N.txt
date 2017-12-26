@@ -1,0 +1,4 @@
+Install AS with A SDK
+
+To change the build variant Android Studio uses, select Build > Select Build Variant in the menu bar (or click Build Variants in the tool windows bar), and then select a build variant from the drop-down menu. By default, new projects are set up with two build variants: a debug and release variant
+
