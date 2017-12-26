@@ -269,6 +269,9 @@
           <th></th>
           <th></th>
           <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
     </table>
@@ -316,14 +319,14 @@ $(document).ready(function() {
 
 
                       //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
-                      
+/*
                         .replace(/(ٱ|آ|إ|أ)/g, 'ا')
                         .replace(/(ة|ھ)/g, 'ه')
                         .replace(/(ئ|ؤ)/g, 'ء')
                         .replace(/(ؤ)/g, 'و')
                         .replace(/(لأ)/g, 'لا')
                         .replace(/(لإ)/g, 'لا')
-                        .replace(/(ى)/g, 'ي') :
+                        .replace(/(ى)/g, 'ي') */  :
                         data;
                 };
 //End of Accent neutralize and regex for search
@@ -336,7 +339,7 @@ $(document).ready(function() {
     } );
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th><th>dvRef.</th><th>arRef.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>arRef.</th><th>enRef.</th><th>dvRef.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#table_id tfoot th').each(function() {
@@ -356,7 +359,7 @@ minify with: http://minifycode.com/html-minifier
 */
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
-    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
+    ajax:'https://hadithmv.github.io/alt/json/nJson-uc.json',
 
 //            data: dataSet,  //CHANGE123
 
@@ -365,22 +368,28 @@ minify with: http://minifycode.com/html-minifier
  //   data: data, previously without column titles
     columns: [
       {title:"#"}, 
+      {title:"Ar Title"},
+      {title:"En Title"},
+      {title:"Dv Title"},
       {title:"Arabic"},
       {title:"English"},
       {title:"Dhivehi"},
-      {title:"Ref."}, 
-      {title:"Dv Ref."},
       {title:"Ar Ref."},
+      {title:"En Ref."},
+      {title:"Dv Ref."},
     ],
 
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
-      { className: "col2", "targets": [1], "visible": true, "searchable": true },
-      { className: "col3", "targets": [2], "visible": true, "searchable": true },
-      { className: "col4", "targets": [3], "visible": true, "searchable": true }, 
-      { className: "col5", "targets": [4], "visible": true, "searchable": false },
-      { className: "col6", "targets": [5], "visible": false, "searchable": false },
-      { className: "col7", "targets": [6], "visible": false, "searchable": false },
+      { className: "col2", "targets": [1], "visible": true, "searchable": false },
+      { className: "col3", "targets": [2], "visible": false, "searchable": false },
+      { className: "col4", "targets": [3], "visible": false, "searchable": false },
+      { className: "col5", "targets": [4], "visible": true, "searchable": true },
+      { className: "col6", "targets": [5], "visible": true, "searchable": true },
+      { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
+      { className: "col8", "targets": [7], "visible": true, "searchable": false },
+      { className: "col9", "targets": [8], "visible": false, "searchable": false },
+      { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
     stateSave: false, //restore table state on page reload
