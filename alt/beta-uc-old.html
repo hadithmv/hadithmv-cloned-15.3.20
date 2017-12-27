@@ -23,8 +23,7 @@
 <!--=== Base Ext CSS ===-->
 <!--Semantic UI
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>-->
-<!--<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/hmv-mod.css"/>-->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hadithmv/hadithmv.github.io@1.0/alt/hmv-mod.css"/>
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/hmv-mod.css"/>
 
 <style type="text/css">
     /*
@@ -49,12 +48,52 @@
 
     */
 </style>
-
-
 <!--=== Base Ext CSS End ===-->
 
 
 
+<!--=== Base Ext Js ===-->
+<script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/hmv-mod.js"></script>
+<style type="text/css">
+/*
+<!--Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--TableTop-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
+<!--DataTables Core JS-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+<!--Semantic UI
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/progress.min.js"></script><!-- progress, apparently makes no difference except you lose sight of deferred images without it-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.js"></script>      site, apparently makes no difference-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/tab.min.js"></script><!--tabs-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<!--buttons-->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+  <!--buttons Column visibility control-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+  <!--buttons HTML5 export buttons-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+      <!--buttons JSZip Excel export button-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+  <!--buttons Print button-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+<!--Mark.js-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+*/
+</style>
+<!--=== Base Ext Js End ===-->
 
 
 
@@ -128,53 +167,74 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 /* !!!!FIX THIS LATER - COLVIS BUG */
         /*corrects print display for these particular columns*/
-        
         .dataTable tbody tr td:nth-child(1) {
             text-align: center;
             font-weight: bold;
         }
-        
         .dataTable tbody tr td:nth-child(2) {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .dataTable tbody tr td:nth-child(3) {
             direction: rtl;
             text-align: justify;
         }
         
-        .dataTable tbody tr td:nth-child(3) {
+        .dataTable tbody tr td:nth-child(4) {
             direction: ltr;
             text-align: justify;
         }
         
-        .dataTable tbody tr td:nth-child(4) {
+        .dataTable tbody tr td:nth-child(5) {
             direction: rtl;
             text-align: justify;
             font-family: Tharujamaanu-Bold;
         }
 
-        .dataTable tbody tr td:nth-child(5) {
+        .dataTable tbody tr td:nth-child(6) {
             text-align: center;
         }
 
-        /* corrects web view only/none-print display for these particular columns */
+        /* corrects web view only/non-print display for these particular columns */
         .dataTable tbody tr td.col_1 {
             text-align: center;
             font-weight: bold;
         }
-        
+
         .dataTable tbody tr td.col_2 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 130%;
+        }
+        
+        .dataTable tbody tr td.col_3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 100%;
+        }
+        
+        .dataTable tbody tr td.col_4 {
+            text-align: center;
+            font-weight: bold;
+            font-family: Tharujamaanu-Bold;
+            font-size: 125%;
+        }
+        
+        .dataTable tbody tr td.col_5 {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 140%;
         }
         
-        .dataTable tbody tr td.col_3 {
+        .dataTable tbody tr td.col_6 {
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
             font-size: 110%;
         }
-        
-        .dataTable tbody tr td.col_4 {
+        .dataTable tbody tr td.col_7 {
             direction: rtl;
             text-align: justify;
             font-family: Tharujamaanu-Bold;
@@ -182,19 +242,29 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
             font-size: 135%;
         }
 @media screen and (min-width: 768px) {
-            .dataTable tbody tr td.col_2 {
+            .dataTable tbody tr td.col_5 {
                 font-size: 160%;
             }
-            .dataTable tbody tr td.col_3 {
+            .dataTable tbody tr td.col_6 {
                 font-size: 120%;
             }
-            .dataTable tbody tr td.col_4 {
+            .dataTable tbody tr td.col_7 {
                 font-size: 145%;
             }
 }
 
-        .dataTable tbody tr td.col_5 {
+        .dataTable tbody tr td.col_8 {
             text-align: center;
+            font-size: 130%;
+        }
+        .dataTable tbody tr td.col_9 {
+            text-align: center;
+            font-size: 100%;
+        }
+        .dataTable tbody tr td.col_10 {
+            text-align: center;
+            font-family: Tharujamaanu-Bold;
+            font-size: 125%;
         }
 
         /*search placeholder title*/
@@ -590,49 +660,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 
 
-<!--=== Base Ext Js ===-->
-<!--<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hadithmv/hadithmv.github.io@1.0/alt/hmv-mod.js"></script>
-<style type="text/css">
-/*
-<!--Google 3.x snippet-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--TableTop-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
-<!--DataTables Core JS-->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-
-<!--Semantic UI
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
--->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/progress.min.js"></script><!-- progress, apparently makes no difference except you lose sight of deferred images without it-->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.js"></script>      site, apparently makes no difference-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/tab.min.js"></script><!--tabs-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
-
-
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
-<!--buttons-->
-<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
-  <!--buttons Column visibility control-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
-  <!--buttons HTML5 export buttons-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
-      <!--buttons JSZip Excel export button-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-  <!--buttons Print button-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
-        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
-            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
-<!--Mark.js-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
-*/
-</style>
-<!--=== Base Ext Js End ===-->
 
 
 
@@ -689,12 +716,16 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
         var key = "https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
             {"data":"no",    "title":"#"},
+            {"data":"arTitle",  "title":"Ar Title"},
+            {"data":"enTitle",  "title":"En Title"},
+            {"data":"dvTitle",  "title":"Dv Title"},
             {"data":"arab",  "title":"Arabic"},
             {"data":"eng",   "title":"English"},
             {"data":"dhiv",  "title":"Dhivehi"},
-            {"data":"enRef",   "title":"Ref."},
-            //{"data":"dvRef",   "title":"Dv Ref."},
-            //{"data":"arRef",   "title":"Ar Ref."},
+            {"data":"arRef",   "title":"Ar Ref."},
+            {"data":"enRef",   "title":"En Ref."},
+            {"data":"dvRef",   "title":"Dv Ref."},
+
             ];
 
         $(document).ready(function() {
@@ -841,7 +872,7 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 */
 
 //Add footer search to table
-                $("#mySelection").append('<tfoot><tr><th>#</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ref.</th></tr></tfoot>');
+                $("#mySelection").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>D Ref.</th><th>Dv Ref.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#mySelection tfoot th').each(function() {
@@ -887,10 +918,15 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
                     "columnDefs": //classes columns for css in nweb view, but not print
                         [
                             { className: "col_1", "targets": [0], "visible": true, "searchable": true},
-                            { className: "col_2", "targets": [1], "visible": true, "searchable": true },
-                            { className: "col_3", "targets": [2], "visible": true, "searchable": true },
-                            { className: "col_4", "targets": [3], "visible": true, "searchable": true }, 
+                            { className: "col_2", "targets": [1], "visible": true, "searchable": false },
+                            { className: "col_3", "targets": [2], "visible": false, "searchable": false },
+                            { className: "col_4", "targets": [3], "visible": false, "searchable": false }, 
                             { className: "col_5", "targets": [4], "visible": true, "searchable": true },
+                            { className: "col_6", "targets": [5], "visible": true, "searchable": true },
+                            { className: "col_7", "targets": [6], "visible": true, "searchable": true },
+                            { className: "col_8", "targets": [7], "visible": true, "searchable": false },
+                            { className: "col_9", "targets": [8], "visible": false, "searchable": false },  
+                            { className: "col_10", "targets": [9], "visible": false, "searchable": false }, 
                         ], //end of columnDefs, previously without visible and searchable options
 
 /* hides select column on start
@@ -999,12 +1035,16 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
                       // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
                        data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tAr Title/g, '' );
+                       data = data.replace( /\tEn Title/g, '' );
+                       data = data.replace( /\tDv Title/g, '' );
                        data = data.replace( /\tArabic/g, '' );
                        data = data.replace( /\tEnglish/g, '' );
                        data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tRef./g, '' );
-                       data = data.replace( /\tDv Ref./g, '' );
                        data = data.replace( /\tAr Ref./g, '' );
+                       data = data.replace( /\tEn Ref./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
+
 
                        data = data.replace( /\r/g, '' ); //rids windows platform newline
                        data = data.replace( /\t/g, '\n\n' );
