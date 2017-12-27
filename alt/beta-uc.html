@@ -23,8 +23,7 @@
 <!--=== Base Ext CSS ===-->
 <!--Semantic UI
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>-->
-<!--<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/hmv-mod.css"/>-->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hadithmv/hadithmv.github.io@1.0/alt/hmv-mod.css"/>
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/hmv-mod.css"/>
 
 <style type="text/css">
     /*
@@ -49,12 +48,52 @@
 
     */
 </style>
-
-
 <!--=== Base Ext CSS End ===-->
 
 
 
+<!--=== Base Ext Js ===-->
+<script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/hmv-mod.js"></script>
+<style type="text/css">
+/*
+<!--Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--TableTop-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
+<!--DataTables Core JS-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+<!--Semantic UI
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/progress.min.js"></script><!-- progress, apparently makes no difference except you lose sight of deferred images without it-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.js"></script>      site, apparently makes no difference-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/tab.min.js"></script><!--tabs-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
+
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+<!--buttons-->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
+  <!--buttons Column visibility control-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
+  <!--buttons HTML5 export buttons-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
+      <!--buttons JSZip Excel export button-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+  <!--buttons Print button-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
+            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
+<!--Mark.js-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+*/
+</style>
+<!--=== Base Ext Js End ===-->
 
 
 
@@ -621,49 +660,6 @@ $('.paginate_button, .pagination').removeClass('stackable').addClass('unstackabl
 
 
 
-<!--=== Base Ext Js ===-->
-<!--<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hadithmv/hadithmv.github.io@1.0/alt/hmv-mod.js"></script>
-<style type="text/css">
-/*
-<!--Google 3.x snippet-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--TableTop-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
-<!--DataTables Core JS-->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-
-<!--Semantic UI
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
--->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/progress.min.js"></script><!-- progress, apparently makes no difference except you lose sight of deferred images without it-->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.js"></script>      site, apparently makes no difference-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/tab.min.js"></script><!--tabs-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
-
-
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
-<!--buttons-->
-<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
-  <!--buttons Column visibility control-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
-  <!--buttons HTML5 export buttons-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
-      <!--buttons JSZip Excel export button-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-  <!--buttons Print button-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
-        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
-            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
-<!--Mark.js-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
-*/
-</style>
-<!--=== Base Ext Js End ===-->
 
 
 
