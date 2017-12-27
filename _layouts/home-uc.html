@@ -47,6 +47,9 @@
 <script type="text/javascript" src="file:///android_asset/app.js"></script>
 <script src="https://hadithmv.github.io/alt/app.js"></script>
 
+<script type="text/javascript" src="file:///android_asset/nJson.js"></script>
+<script src="https://hadithmv.github.io/alt/json/nJson.js"></script>
+
 <!--CHANGE123-->
 <!--buttons JSZip Excel export button-->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
@@ -399,7 +402,9 @@ minify with: http://minifycode.com/html-minifier
 */
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
-    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
+            data: dataSet,
+
+//    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
 
 //            data: dataSet,  //CHANGE123
 
