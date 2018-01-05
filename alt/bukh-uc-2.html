@@ -169,9 +169,6 @@
 
 
 
-
-
-
         /* corrects web view only/none-print display for these particular columns */
         .dataTable tbody tr td.col1 {
             /*margin-bottom: -1px;*/
@@ -179,6 +176,8 @@
             text-align: center;
 
         }
+
+
         .dataTable tbody tr td.col2 {
             direction: rtl;
             font-size: 130%;
@@ -201,20 +200,46 @@
 @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: "Tharujamaanu-Light";}
 }
+
+
         .dataTable tbody tr td.col5 {
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+
+        }
+        .dataTable tbody tr td.col6 {
+            font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+        }
+        .dataTable tbody tr td.col7 {
+            direction: rtl;
+            font-size: 125%;
+            font-family: "Tharujamaanu-Bold";
+            text-align: center;
+
+        }
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col7 {font-family: "Tharujamaanu-Light";}
+}
+
+
+        .dataTable tbody tr td.col11 {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 140%;
         }
-        .dataTable tbody tr td.col6 {
+        .dataTable tbody tr td.col12 {
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
             font-size: 110%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
-        .dataTable tbody tr td.col7 {
+        .dataTable tbody tr td.col13 {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
@@ -222,20 +247,20 @@
             font-family: "Tharujamaanu-Bold";
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col7 {font-family: "Tharujamaanu-Light";}
+        .dataTable tbody tr td.col3 {font-family: "Tharujamaanu-Light";}
 }
-        .dataTable tbody tr td.col8 {
+        .dataTable tbody tr td.col5 {
             direction: rtl;
             text-align: center;
             font-size: 120%;
             font-family: none;
         }
-        .dataTable tbody tr td.col9 {
+        .dataTable tbody tr td.col5 {
             text-align: center;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
         }
-        .dataTable tbody tr td.col10 {
+        .dataTable tbody tr td.col16 {
             direction: rtl;
             text-align: center;
             font-family: "Tharujamaanu-Bold";
@@ -364,20 +389,24 @@
 
 <!--===NINSERT JS===. . . -->
     <script type="text/javascript">
-        var key = "1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs";
-        //"https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
+        var key = "1BpU_s2TZAdkP0wBGZBWSRakgq1c4F8Ls2e7Xr7uMxM0";
         var columns = [
             {"data":"no",       "title":"#"},
-            {"data":"arTitle",  "title":"Ar Title"},
-            {"data":"enTitle",  "title":"En Title"},
-            {"data":"dvTitle",  "title":"Dv Title"},
+            {"data":"arKitab",  "title":"Ar Book"},
+            {"data":"arBab",    "title":"Ar Chapter"},
+            {"data":"arTarj",   "title":"Ar Expl."},
+            {"data":"enKitab",  "title":"En Book"},
+            {"data":"enBab",    "title":"En Chapter"},
+            {"data":"enTarj",   "title":"En Expl."},
+            {"data":"dvKitab",  "title":"Dv Book"},
+            {"data":"dvBab",    "title":"Dv Chapter"},
+            {"data":"dvTarj",   "title":"Dv Expl."},
             {"data":"arab",     "title":"Arabic"},
             {"data":"eng",      "title":"English"},
             {"data":"dhiv",     "title":"Dhivehi"},
-            {"data":"arRef",    "title":"Ar Ref."},
-            {"data":"enRef",    "title":"En Ref."},
-            {"data":"dvRef",    "title":"Dv Ref."},
-
+            {"data":"enTakh",    "title":"Ar Ref."},
+            {"data":"dvTakh",    "title":"Dv Ref."},
+            {"data":"arTakh",    "title":"Ar Ref."},
             ];
 
 
@@ -450,7 +479,7 @@
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Expl.</th><th>En Book</th><th>En Chapter</th><th>En Expl.</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Expl.</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#table_id tfoot th').each(function() {
@@ -466,14 +495,20 @@
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
       { className: "col2", "targets": [1], "visible": true, "searchable": false },
-      { className: "col3", "targets": [2], "visible": false, "searchable": false },
-      { className: "col4", "targets": [3], "visible": false, "searchable": false },
-      { className: "col5", "targets": [4], "visible": true, "searchable": true },
-      { className: "col6", "targets": [5], "visible": true, "searchable": true },
-      { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
-      { className: "col8", "targets": [7], "visible": true, "searchable": false },
+      { className: "col3", "targets": [2], "visible": true, "searchable": false },
+      { className: "col4", "targets": [3], "visible": true, "searchable": false },
+      { className: "col5", "targets": [4], "visible": false, "searchable": false },
+      { className: "col6", "targets": [5], "visible": false, "searchable": false },
+      { className: "col7", "targets": [6], "visible": false, "searchable": false }, 
+      { className: "col8", "targets": [7], "visible": false, "searchable": false },
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
+      { className: "col11", "targets": [10], "visible": true, "searchable": true },
+      { className: "col12", "targets": [11], "visible": true, "searchable": true },
+      { className: "col13", "targets": [12], "visible": true, "searchable": true },
+      { className: "col14", "targets": [13], "visible": true, "searchable": false },
+      { className: "col15", "targets": [14], "visible": false, "searchable": false },
+      { className: "col16", "targets": [15], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
     stateSave: false, //restore table state on page reload
