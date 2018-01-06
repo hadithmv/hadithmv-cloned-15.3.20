@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+   
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+/* === /FONT FACES === */
+
+
+df1 {
+   font-family: 'Roboto';
+}
+
+df2 {
+   font-family: 'Noto Sans';
+}
+
+df3 {
+   font-family: 'Noto Serif';
+}
+
+df4 {
+   font-family: 'Cairo';
+}
+
+df5 {
+   font-family: 'Encode Sans Condensed';
+}
+
+df6 {
+   font-family: 'Lato';
+}
+
+df7 {
+   font-family: 'Amiri';
+}
+
+df8 {
+   font-family: 'Slabo';
+}
+
+df9 {
+   font-family: 'Roboto Condensed';
+}
+
+df10 {
+   font-family: 'Oswald';
+}
+
+df11 {
+   font-family: 'Montserrat';
+}
+
+df12 {
+   font-family: 'Source Sans Pro';
+}
+
+df13 {
+   font-family: 'Raleway';
+}
+
+df14 {
+   font-family: 'PT Sans';
+}
+
+df15 {
+   font-family: 'Roboto Slab';
+}
+
+df16 {
+   font-family: 'Merriweather';
+}
+
+df17 {
+   font-family: 'Open Sans Condensed';
+}
+
+df18 {
+   font-family: 'Lora';
+}
+
+df19 {
+   font-family: 'Ubuntu';
+}
+
+df20 {
+   font-family: 'Arimo';
+}
+
+df21 {
+   font-family: 'Titillium Web';
+}
+
+df22 {
+   font-family: 'Poppins';
+}
+
+df23 {
+   font-family: 'Muli';
+}
+
+df24 {
+   font-family: 'Bitter';
+}
+
+df25 {
+   font-family: 'Dosis';
+}
+
+/* ==== /FONT NAMES === */
+
+a:after{
+content: "Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him without reducing anything from their sins.";
+}
+
+body {
+   text-align: justify;
+}
+
+.b { font-weight: bold }

@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Faruma;
+    src: url(https://hadithmv.github.io/fonts/dv/Faruma.otf);
+} /* 1 */
+
+@font-face {
+    font-family: MVJadheedh;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Jadheedh.ttf);
+} /* 2 */
+
+@font-face {
+    font-family: MVWaheed;
+    src: url(https://hadithmv.github.io/fonts/dv/MVWaheed.otf);
+} /* 3 */
+
+@font-face {
+    font-family: MVAWaheed;
+    src: url(https://hadithmv.github.io/fonts/dv/mvawaheed-webfont.ttf);
+} /* 4 */
+
+@font-face {
+    font-family: TharujamaanuLight;
+    src: url(https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.ttf);
+} /* 5 */
+
+@font-face {
+    font-family: TharujamaanuBold;
+    src: url(https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold.ttf);
+} /* 6 */
+
+@font-face {
+    font-family: MVFaseyha;
+    src: url(https://hadithmv.github.io/fonts/dv/mv_Faseyha.otf);
+} /* 7 */
+
+@font-face {
+    font-family: Dhivehi;
+    src: url(https://hadithmv.github.io/fonts/dv/Dhivehi.ttf);
+} /* 8 */
+
+@font-face {
+    font-family: MVTypewriter;
+    src: url(https://hadithmv.github.io/fonts/dv/mvtyper.ttf);
+} /* 9 */
+
+@font-face {
+    font-family: Iyyu;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Iyyu_Normal.otf);
+} /* 10 */
+
+@font-face {
+    font-family: ElaafLight;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Elaaf_Lite.otf);
+} /* 11 */
+
+@font-face {
+    font-family: Elaaf;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Elaaf_Normal.otf);
+} /* 12 */
+
+@font-face {
+    font-family: Madheeh;
+    src: url(https://hadithmv.github.io/fonts/dv/DAM_Madheeh.otf);
+} /* 13 */
+
+@font-face {
+    font-family: Galan;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Galan_Normal.otf);
+} /* 14 */
+
+@font-face {
+    font-family: MAGBold;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_MAG_Round_Bold.otf);
+} /* 15 */
+
+@font-face {
+    font-family: Kathivalhi;
+    src: url(https://hadithmv.github.io/fonts/dv/DAM_Kathivalhi.otf);
+} /* 16 */
+
+@font-face {
+    font-family: AvasAkuru;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_GroupX_Avas_Akuru.otf);
+} /* 17 */
+
+@font-face {
+    font-family: Sehga;
+    src: url(https://hadithmv.github.io/fonts/dv/Mv_Sehga_Old.otf);
+} /* 18 */
+
+@font-face {
+    font-family: MidhiliBold;
+    src: url(https://hadithmv.github.io/fonts/dv/midhilibold.ttf);
+} /* 19 */
+/* === /FONT FACES === */
+
+df1 {
+   font-family: Faruma;
+}
+
+df2 {
+   font-family: MVJadheedh;
+}
+
+df3 {
+   font-family: MVWaheed;
+}
+
+df4 {
+   font-family: MVAWaheed;
+}
+
+df5 {
+   font-family: TharujamaanuLight;
+}
+
+df6 {
+   font-family: TharujamaanuBold;
+}
+
+df7 {
+   font-family: MVFaseyha;
+}
+
+df8 {
+   font-family: Dhivehi;
+}
+
+df9 {
+   font-family: MVTypewriter;
+}
+
+df10 {
+   font-family: Iyyu;
+}
+
+df11 {
+   font-family: ElaafLight;
+}
+
+df12 {
+   font-family: Elaaf;
+}
+
+df13 {
+   font-family: Madheeh;
+}
+
+df14 {
+   font-family: Galan;
+}
+
+df15 {
+   font-family: MAGBold;
+}
+
+df16 {
+   font-family: Kathivalhi;
+}
+
+df17 {
+   font-family: AvasAkuru;
+}
+
+df18 {
+   font-family: Sehga;
+}
+
+df19 {
+   font-family: MidhiliBold;
+}
+/* ==== /FONT NAMES === */
+
+
+a:after{
+content: "ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިސްކޮށްފައިވާ ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.";
+}
+
+
+body {
+   direction: rtl;
+   text-align: justify;
+   unicode-bidi: bidi-override;
+}
+
+.b { font-weight: bold }

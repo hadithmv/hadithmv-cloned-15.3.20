@@ -1,0 +1,155 @@
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabicui.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/thabit.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+
+@import url('https://fonts.googleapis.com/css?family=Changa');
+
+@import url('https://fonts.googleapis.com/css?family=Lateef');
+
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+
+@import url('https://fonts.googleapis.com/css?family=Lalezar');
+
+@import url('https://fonts.googleapis.com/css?family=Scheherazade');
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan');
+
+@import url('https://fonts.googleapis.com/css?family=Lemonada');
+
+@import url('https://fonts.googleapis.com/css?family=Mada');
+
+@import url('https://fonts.googleapis.com/css?family=El+Messiri');
+
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
+
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa');
+
+@import url('https://fonts.googleapis.com/css?family=Mirza');
+
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
+
+@import url('https://fonts.googleapis.com/css?family=Katibeh');
+
+@import url('https://fonts.googleapis.com/css?family=Jomhuria');
+
+
+/* === /FONT FACES === */
+
+
+df1 {
+   font-family: 'Noto Naskh Arabic';
+}
+
+df2 {
+   font-family: 'Noto Naskh Arabic UI';
+}
+
+df3 {
+   font-family: 'Droid Arabic Naskh';
+}
+
+df4 {
+   font-family: 'Thabit';
+}
+
+df5 {
+   font-family: 'Noto Kufi Arabic';
+}
+
+df6 {
+   font-family: 'Droid Arabic Kufi';
+}
+
+df7 {
+   font-family: 'Cairo';
+}
+
+df8 {
+   font-family: 'Amiri';
+}
+
+df9 {
+   font-family: 'Changa';
+}
+
+df10 {
+   font-family: 'Lateef';
+}
+
+df11 {
+   font-family: 'Reem Kufi';
+}
+
+df12 {
+   font-family: 'Lalezar';
+}
+
+df13 {
+   font-family: 'Scheherazade';
+}
+
+df14 {
+   font-family: 'Baloo Bhaijaan';
+}
+
+df15 {
+   font-family: 'Lemonada';
+}
+
+df16 {
+   font-family: 'Mada';
+}
+
+df17 {
+   font-family: 'El Messiri';
+}
+
+df18 {
+   font-family: 'Harmattan';
+}
+
+df19 {
+   font-family: 'Aref Ruqaa';
+}
+
+df20 {
+   font-family: 'Mirza';
+}
+
+df21 {
+   font-family: 'Rakkas';
+}
+
+df22 {
+   font-family: 'Katibeh';
+}
+
+df23 {
+   font-family: 'Jomhuria';
+}
+
+/* ==== /FONT NAMES === */
+
+a:after{
+content: "عَنْ أَمِيرِ الْمُؤْمِنِينَ أَبِي حَفْصٍ عُمَرَ بْنِ الْخَطَّابِ رضى الله عنه قَالَ: سَمِعْت رَسُولَ اللَّهِ ﷺ يَقُولُ: إنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى، فَمَنْ كَانَتْ هِجْرَتُهُ إلَى اللَّهِ وَرَسُولِهِ فَهِجْرَتُهُ إلَى اللَّهِ وَرَسُولِهِ، وَمَنْ كَانَتْ هِجْرَتُهُ لِدُنْيَا يُصِيبُهَا أَوْ امْرَأَةٍ يَنْكِحُهَا فَهِجْرَتُهُ إلَى مَا هَاجَرَ إلَيْهِ.";
+}
+
+body {
+   direction: rtl;
+   text-align: justify;
+   unicode-bidi: bidi-override;
+}
+
+.b { font-weight: bold }
