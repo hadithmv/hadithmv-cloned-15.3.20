@@ -86,12 +86,51 @@
 
 <style type="text/css">
 
-    /* App */
+    /* Tharujamaanu-Bold */
         @font-face {
-            font-family: 'App';
+            font-family: 'KFGQPCUthmanTahaNaskh';
                 src: url('file:///android_asset/KFGQPCUthmanTahaNaskh.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/Hmv5.woff');
+                     url('https://hadithmv.github.io/fonts/ar/reg/KFGQPCUthmanTahaNaskh.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/ar/reg/KFGQPCUthmanTahaNaskh.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/ar/reg/KFGQPCUthmanTahaNaskh.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
         }
+
+    /* Tharujamaanu-Bold */
+        @font-face {
+            font-family: 'Tharujamaanu-Bold';
+                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
+
+    /* Tharujamaanu-Light */
+        @font-face {
+            font-family: 'Tharujamaanu-Light';
+                src: url('file:///android_asset/Tharujamaanu-Light.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Lightfix.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
+
+    /* Lato - Latin */
+    @font-face {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+            src: url('file:///android_asset/Lato-Regular.woff') format('woff'),
+           local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+    }
 
 
         /*vertically aligns column text to top*/
@@ -112,23 +151,23 @@
             text-align: center;
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col2 {font-family: "App";}
+        .dataTable tbody tr td.col2 {font-family: "KFGQPCUthmanTahaNaskh";}
 }
 
         .dataTable tbody tr td.col3 {
             font-size: 100%;
-            font-family: 'App' !important; /*'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;*/
+            font-family: 'none' !important; /*'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;*/
             text-align: center;
         }
 
         .dataTable tbody tr td.col4 {
             direction: rtl;
             font-size: 125%;
-            font-family: "App";
+            font-family: "Tharujamaanu-Bold";
             text-align: center;
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: "App";}
+        .dataTable tbody tr td.col4 {font-family: "Tharujamaanu-Light";}
 }
 
         .dataTable tbody tr td.col5 {
@@ -138,7 +177,7 @@
             font-size: 140%;
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col5 {font-family: "App";}
+        .dataTable tbody tr td.col5 {font-family: "KFGQPCUthmanTahaNaskh";}
 }
 
         .dataTable tbody tr td.col6 {
@@ -146,40 +185,40 @@
             text-align: justify;
             line-height: 1.4;
             font-size: 110%;
-            font-family: 'App', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
         .dataTable tbody tr td.col7 {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 135%;
-            font-family: "App";
+            font-family: "Tharujamaanu-Bold";
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col7 {font-family: "App";}
+        .dataTable tbody tr td.col7 {font-family: "Tharujamaanu-Light";}
 }
         .dataTable tbody tr td.col8 {
             direction: rtl;
             text-align: center;
             font-size: 120%;
-            font-family: App;
+            font-family: none;
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col8 {font-family: "App";}
+        .dataTable tbody tr td.col8 {font-family: "KFGQPCUthmanTahaNaskh";}
 }
         .dataTable tbody tr td.col9 {
             text-align: center;
-            font-family: 'App', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
         }
         .dataTable tbody tr td.col10 {
             direction: rtl;
             text-align: center;
-            font-family: "App";
+            font-family: "Tharujamaanu-Bold";
             font-size: 115%;
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col10 {font-family: "App";}
+        .dataTable tbody tr td.col10 {font-family: "Tharujamaanu-Light";}
 }
 
         /*hides table headers even on mobile, prev nth-child(2)*/
@@ -227,7 +266,7 @@
 
         html,
         body {
-           font-family: 'App';
+           font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
             /*font-size: 16px; base font size*/
 
