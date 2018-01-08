@@ -103,43 +103,16 @@
 
 
 <style type="text/css">
-        /* Tharujamaanu-Bold */
+
+
+    /* Tharujamaanu-B-Regular-mod */
         @font-face {
-            font-family: 'Tharujamaanu-Bold';
-                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff2') format('woff2'), /* Super Modern Browsers */
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype'); /* Safari, Android, iOS */
-        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
-        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
-        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+            font-family: 'Tharujamaanu-B-Regular-mod';
+                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Faruma.woff2') format('woff2'),
+                     url('https://hadithmv.github.io/fonts/dv/Faruma.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Faruma.ttf') format('truetype');
         }
-
-    /* Tharujamaanu-Light */
-        @font-face {
-            font-family: 'Tharujamaanu-Light';
-                src: url('file:///android_asset/Tharujamaanu-Light.woff') format('woff'),
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff2') format('woff2'), /* Super Modern Browsers */
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff') format('woff'), /* Pretty Modern Browsers */
-                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Lightfix.ttf') format('truetype'); /* Safari, Android, iOS */
-        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
-        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
-        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-        }
-
-        /* Lato - Latin */
-        @font-face {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            src: url('file:///android_asset/Lato-Regular.woff') format('woff'),
-                 local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-        }
-
-
-
-
 
 
         /*fits then moves footer search to top*/
@@ -182,23 +155,19 @@
             text-align: center;
         }
         .dataTable tbody tr td.col3 {   /* ar chapt */
-            font-size: 100%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            direction: rtl;
+            font-size: 130%;
             text-align: center;
         }
         .dataTable tbody tr td.col4 {   /* ar expl */
             direction: rtl;
-            font-size: 125%;
-            font-family: "Tharujamaanu-Bold";
-            text-align: center;
+            font-size: 130%;
+            text-align: justify;
         }
-@media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: "Tharujamaanu-Light";}
-}
 
         .dataTable tbody tr td.col5 {   /* en book */
-            direction: rtl;
-            font-size: 130%;
+            font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: center;
         }
         .dataTable tbody tr td.col6 {   /* en chapt */
@@ -207,34 +176,34 @@
             text-align: center;
         }
         .dataTable tbody tr td.col7 {   /* en expl */
-            direction: rtl;
-            font-size: 125%;
-            font-family: "Tharujamaanu-Bold";
-            text-align: center;
+            font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            text-align: justify;
         }
 
         .dataTable tbody tr td.col8 {   /* dv book */
             direction: rtl;
-            font-size: 130%;
+            font-size: 125%;
+            font-family: "Tharujamaanu-B-Regular-mod";
             text-align: center;
         }
         .dataTable tbody tr td.col9 {   /* dv chapt */
-            font-size: 100%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            direction: rtl;
+            font-size: 125%;
+            font-family: "Tharujamaanu-B-Regular-mod";
             text-align: center;
         }
         .dataTable tbody tr td.col10 {   /* dv expl */
             direction: rtl;
             font-size: 125%;
-            font-family: "Tharujamaanu-Bold";
-            text-align: center;
+            font-family: "Tharujamaanu-B-Regular-mod";
+            text-align: justify;
         }
 
         .dataTable tbody tr td.col11 {  /* ar text */
             direction: rtl;
             text-align: justify;
-            line-height: 1.4;
-            font-size: 140%;
+            font-size: 130%;
         }
         .dataTable tbody tr td.col12  {  /* en text */
             direction: ltr;
@@ -248,18 +217,18 @@
             text-align: justify;
             line-height: 1.4;
             font-size: 135%;
-            font-family: "Tharujamaanu-Bold";
+            font-family: "Tharujamaanu-B-Regular-mod";
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col3 {font-family: "Tharujamaanu-Light";}
+        .dataTable tbody tr td.col3 {font-family: "Tharujamaanu-B-Regular-mod";}
 }
-        .dataTable tbody tr td.col5 {   /* ar ref */
+        .dataTable tbody tr td.col14 {   /* ar ref */
             direction: rtl;
             text-align: center;
             font-size: 120%;
             font-family: none;
         }
-        .dataTable tbody tr td.col5 {   /* en ref */
+        .dataTable tbody tr td.col15 {   /* en ref */
             text-align: center;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
@@ -267,11 +236,11 @@
         .dataTable tbody tr td.col16 {  /* dv ref */
             direction: rtl;
             text-align: center;
-            font-family: "Tharujamaanu-Bold";
+            font-family: "Tharujamaanu-B-Regular-mod";
             font-size: 115%;
         }
 @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col10 {font-family: "Tharujamaanu-Light";}
+        .dataTable tbody tr td.col10 {font-family: "Tharujamaanu-B-Regular-mod";}
 }
 
         /*hides table headers even on mobile, prev nth-child(2)*/
