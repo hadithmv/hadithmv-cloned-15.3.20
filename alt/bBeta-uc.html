@@ -2,7 +2,7 @@
 <html lang="en"><!--change languages later-->
 
 <head>
-<!--<meta name="robots" content="noindex"/> -->
+        <meta name="robots" content="noindex"/>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <title>Hadithmv - Accessible and Sourced</title>
@@ -19,54 +19,64 @@
     <link rel="author" href="https://hadithmv.github.io" />
 
 
+
 <!--=== Base Ext CSS ===-->
-<link rel="stylesheet" type="text/css" href="file:///android_asset/app.css"/>
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app.css"/>
+<!--Semantic UI
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>-->
+<!--<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/hmv-mod.css"/>-->
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/hmv-mod.css"/>
 
 <style type="text/css">
-  /*
+    /*
+
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.min.css"/><!--buttons-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.min.css"/><!--cards-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css"/><!--dropdown, nav-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/grid.min.css"/><!--responsive layout mobile-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/input.min.css"/><!--input search box-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/menu.min.css"/><!--navbar menu-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/reset.min.css"/><!--keeps alignments and edges in place-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/progress.min.css"/><!--progress-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.css"/><!--site, keeps layout in check-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/tab.min.css"/><!--tab-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/table.min.css"/><!--table-->
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.css"/><!--dropdowns-->
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
 <!--buttons-->
         <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );-->
             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
-  */
+
+    */
 </style>
 <!--=== Base Ext CSS End ===-->
 
 
-<!--=== Base Ext JS ===-->
-<script type="text/javascript" src="file:///android_asset/app.js"></script>
-<script src="https://hadithmv.github.io/alt/Resc/app.js"></script>
 
-<script type="text/javascript" src="file:///android_asset/40nJson.js"></script>
-<script src="https://hadithmv.github.io/alt/json/40nJson.js"></script>
-
-<!--CHANGE123-->
-<!--buttons JSZip Excel export button-->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-<!--buttons Print button-->
-  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+<!--=== Base Ext Js ===-->
+<!--<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>-->
+<script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/hmv-mod.js"></script>
 <style type="text/css">
 /*
 <!--Google 3.x snippet-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--TableTop-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
 <!--DataTables Core JS-->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
 <!--Semantic UI
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
 -->
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/progress.min.js"></script><!-- progress, apparently makes no difference except you lose sight of deferred images without it-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.js"></script>      site, apparently makes no difference-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/tab.min.js"></script><!--tabs-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
+
+
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
 <!--buttons-->
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
@@ -74,148 +84,195 @@
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
   <!--buttons HTML5 export buttons-->
     <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
-
+      <!--buttons JSZip Excel export button-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+  <!--buttons Print button-->
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+        <!--Semantic UI buttons, remove 'stackable' from datatables s ui integration code: "$(host).empty().html('<div class="ui stackable pagination menu"/>').children(),""-->
             <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
 <!--Mark.js-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 */
 </style>
-<!--=== Base Ext JS End ===-->
+<!--=== Base Ext Js End ===-->
+
+
+
+
 
 
 <style type="text/css">
-
-    /* Ubuntu-mod */
+        /* Tharujamaanu-Bold */
         @font-face {
-            font-family: 'Ubuntu-mod';
-                src: url('file:///android_asset/LatoLatin-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.ttf') format('truetype');
-        }
-    /* KFGQPCUthmanTahaNaskh-mod */
-        @font-face {
-            font-family: 'KFGQPCUthmanTahaNaskh-mod';
-                src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.ttf') format('truetype');
-        }
-    /* Tharujamaanu-B-Regular-mod */
-        @font-face {
-            font-family: 'Tharujamaanu-Regular-mod';
-                src: url('file:///android_asset/Tharujamaanu-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.ttf') format('truetype');
+            font-family: 'Tharujamaanu-Bold';
+                src: url('file:///android_asset/Tharujamaanu-Bold-fix.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Bold-fix.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
         }
 
+    /* Tharujamaanu-Light */
+        @font-face {
+            font-family: 'Tharujamaanu-Light';
+                src: url('file:///android_asset/Tharujamaanu-Light.woff') format('woff'),
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Light.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('https://hadithmv.github.io/fonts/dv/Tharujamaanu-Lightfix.ttf') format('truetype'); /* Safari, Android, iOS */
+        /*    src: url('webfont.eot');  These two should go at the top if supporting IE olders browsers, IE9 Compat Modes */
+        /*    src: url('webfont.eot?#iefix') format('embedded-opentype'),  IE6-IE8 */
+        /*         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+        }
 
-/* Reset CSS v2.0 | 20110126
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
- */
+        /* Lato - Latin */
+        @font-face {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            src: url('file:///android_asset/Lato-Regular.woff') format('woff'),
+                 local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/1YwB1sO8YE1Lyjf12WNiUA.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+        }
 
- /*
- * {font-family: ;}
- */
+
+
+
+
+
+        /*fits then moves footer search to top*/
+        tfoot input {
+            width: 100%;
+            min-width: 14px;
+            border-radius: .28571429rem;
+            border: 1px solid rgba(34, 36, 38, .15);
+        } /*prev just width*/
+
+        
+        tfoot {
+            display: table-header-group;
+        }
+
+        /*hides table headers even on mobile, prev nth-child(2)*/
+        thead tr:nth-child(1) {
+            position: absolute !important;
+            top: -9999px !important;
+            left: -9999px !important;
+        }
 
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
             vertical-align: top;
         }
 
+
+
         /* corrects web view only/none-print display for these particular columns */
-        .dataTable tbody tr td.col1 { /* # number */
-          /*margin-bottom: -1px;*/
+        .dataTable tbody tr td.col1 {   /* # number */
+            /*margin-bottom: -1px;*/
             font-size: 110%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
         }
 
-        .dataTable tbody tr td.col2 { /* ar title */
+        .dataTable tbody tr td.col2 {   /* ar book */
             direction: rtl;
-            font-size: 140%;
+            font-size: 130%;
             text-align: center;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod','Ubuntu-mod';
         }
-
-        .dataTable tbody tr td.col3 { /* en title */
+        .dataTable tbody tr td.col3 {   /* ar chapt */
             font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
         }
-
-        .dataTable tbody tr td.col4 { /* dv title */
+        .dataTable tbody tr td.col4 {   /* ar expl */
             direction: rtl;
             font-size: 125%;
+            font-family: "Tharujamaanu-Bold";
             text-align: center;
-            font-family: 'Tharujamaanu-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
         }
-/* @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-} above mobile breakpoint */
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: "Tharujamaanu-Light";}
+}
 
-        .dataTable tbody tr td.col5 { /* ar text */
+        .dataTable tbody tr td.col5 {   /* en book */
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+        }
+        .dataTable tbody tr td.col6 {   /* en chapt */
+            font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .dataTable tbody tr td.col7 {   /* en expl */
+            direction: rtl;
+            font-size: 125%;
+            font-family: "Tharujamaanu-Bold";
+            text-align: center;
+        }
+
+        .dataTable tbody tr td.col8 {   /* dv book */
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+        }
+        .dataTable tbody tr td.col9 {   /* dv chapt */
+            font-size: 100%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .dataTable tbody tr td.col10 {   /* dv expl */
+            direction: rtl;
+            font-size: 125%;
+            font-family: "Tharujamaanu-Bold";
+            text-align: center;
+        }
+
+        .dataTable tbody tr td.col11 {  /* ar text */
             direction: rtl;
             text-align: justify;
-            line-height: 1.45;
-            font-size: 160%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod','Ubuntu-mod';
+            line-height: 1.4;
+            font-size: 140%;
         }
-
-        .dataTable tbody tr td.col6 { /* en text */
+        .dataTable tbody tr td.col12  {  /* en text */
             direction: ltr;
             text-align: justify;
-            line-height: 1.37;
-            font-size: 105%;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+            line-height: 1.4;
+            font-size: 110%;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
-        .dataTable tbody tr td.col7 { /* dv text */
+        .dataTable tbody tr td.col13 {  /* dv text */
             direction: rtl;
             text-align: justify;
-            line-height: 1.37;
+            line-height: 1.4;
             font-size: 135%;
-            font-family: 'Tharujamaanu-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: "Tharujamaanu-Bold";
         }
-
-        .dataTable tbody tr td.col8 { /* ar ref */
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col3 {font-family: "Tharujamaanu-Light";}
+}
+        .dataTable tbody tr td.col5 {   /* ar ref */
             direction: rtl;
             text-align: center;
-            font-size: 140%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod','Ubuntu-mod';
+            font-size: 120%;
+            font-family: none;
         }
-        }
-        .dataTable tbody tr td.col9 {   /* en ref */
+        .dataTable tbody tr td.col5 {   /* en ref */
             text-align: center;
-            font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
         }
-        .dataTable tbody tr td.col10 { /* dv ref */
+        .dataTable tbody tr td.col16 {  /* dv ref */
             direction: rtl;
             text-align: center;
+            font-family: "Tharujamaanu-Bold";
             font-size: 115%;
-            font-family: 'Tharujamaanu-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
         }
+@media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col10 {font-family: "Tharujamaanu-Light";}
+}
 
         /*hides table headers even on mobile, prev nth-child(2)*/
         thead tr:nth-child(1) {
@@ -261,8 +318,8 @@ time, mark, audio, video {
 
 
         html,
-        body, {
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+        body {
+             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
             /*font-size: 16px; base font size*/
 
@@ -306,51 +363,81 @@ time, mark, audio, video {
 
 /*hides individual column search, mobile view only*/
 @media screen and (max-width: 768px) {
-        #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+        #table_id > tfoot > tr {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
-    /*moves show index a little to the right*/
+        /*moves show index a little to the right*/
         #table_id_info { margin-left: 10px; }
 </style>
 
 
 
+
 </head>
-
-
-
-<body>
-
-
-    <table id="table_id" class="ui celled striped table" cellspacing="0" width="100%">
-      <thead>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-    </table>
+    <body>
 
 
 
 
-<script type="text/javascript">
-/*
-first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
-Remove trailing empty cells.
-then used: http://myjson.com, A simple JSON store for your web or mobile app
 
-*/
-$(document).ready(function() {
 
-//=== === Accent neutralise === === other half at bottom
+
+
+        <div id="nInsert" class="nclass"></div>
+
+
+
+
+
+
+
+
+<!--===NINSERT JS===. . . -->
+    <script type="text/javascript">
+        var key = "1BpU_s2TZAdkP0wBGZBWSRakgq1c4F8Ls2e7Xr7uMxM0";
+        var columns = [
+            {"data":"no",       "title":"#"},
+            {"data":"arKitab",  "title":"Ar Book"},
+            {"data":"arBab",    "title":"Ar Chapter"},
+            {"data":"arTarj",   "title":"Ar Expl."},
+            {"data":"enKitab",  "title":"En Book"},
+            {"data":"enBab",    "title":"En Chapter"},
+            {"data":"enTarj",   "title":"En Expl."},
+            {"data":"dvKitab",  "title":"Dv Book"},
+            {"data":"dvBab",    "title":"Dv Chapter"},
+            {"data":"dvTarj",   "title":"Dv Expl."},
+            {"data":"arab",     "title":"Arabic"},
+            {"data":"eng",      "title":"English"},
+            {"data":"dhiv",     "title":"Dhivehi"},
+            {"data":"enTakh",    "title":"Ar Ref."},
+            {"data":"dvTakh",    "title":"Dv Ref."},
+            {"data":"arTakh",    "title":"Ar Ref."},
+            ];
+
+
+        $(document).ready(function() {
+
+            function initializeTabletopObject() {
+                Tabletop.init({
+                    key: key,
+                    callback: function(data, tabletop) {
+                        //call up dt function
+                        writeTable(data);
+                    },
+                    simpleSheet: true,
+                    debug: false
+                });
+            }
+
+            initializeTabletopObject();
+
+            function writeTable(data) {
+
+//select main div and insert table into html
+                $('#nInsert').html(
+                    '<table cellpadding="0" cellspacing="0" border="0" class="ui very basic small striped table table-condensed table-responsive" id="table_id"></table>'
+                ); //End of table insert
+
+//Accent neutralize and regex for search, latin+punc+digits  arab  thn
                 $.fn.DataTable.ext.type.search.string = function(data) {
                     return !data ?
                         '' :
@@ -393,15 +480,10 @@ $(document).ready(function() {
                 };
 //End of Accent neutralize and regex for search
 
-// MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
-    // Setup - add a text input to each footer cell
-    $('#table_id tfoot th').each( function () {
-        var title = $(this).text(); //var title = $('#table_id thead th').eq( $(this).index() ).text();
-        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-    } );
+
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>arRef.</th><th>enRef.</th><th>dvRef.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Expl.</th><th>En Book</th><th>En Chapter</th><th>En Expl.</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Expl.</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#table_id tfoot th').each(function() {
@@ -409,51 +491,28 @@ $(document).ready(function() {
                     $(this).html('<input type="text" placeholder="'+title+'"/>');
                 });
 
-/*https://datatables.net/examples/data_sources/js_array.html
-
-first use: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json third option output "CSV to JSON ARRAY", copy between square brackets, leave: { "fields": [" "], "data": [ ]
-}.
-Remove trailing empty cells.
-
-then use: http://myjson.com, A simple JSON store for your web or mobile app
-
-minify with: http://minifycode.com/html-minifier
-*/
-//  $(document).ready(function() {
-  var table = $('#table_id').DataTable({
-            data: dataSet,
-
-//    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
-
-//            data: dataSet,  //CHANGE123
-
-//    ajax:'file:///android_asset/nJson.json',
-
- //   data: data, previously without column titles
-    columns: [
-      {title:"#"}, 
-      {title:"Ar Title"},
-      {title:"En Title"},
-      {title:"Dv Title"},
-      {title:"Arabic"},
-      {title:"English"},
-      {title:"Dhivehi"},
-      {title:"Ar Ref."},
-      {title:"En Ref."},
-      {title:"Dv Ref."},
-    ],
+//initialize the DataTable object and put settings in
+                table = $("#table_id").DataTable({
+                    data: data,
+                    columns: columns, //absolutely necessary to fetch, do not quote
 
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
       { className: "col2", "targets": [1], "visible": true, "searchable": false },
-      { className: "col3", "targets": [2], "visible": false, "searchable": false },
-      { className: "col4", "targets": [3], "visible": false, "searchable": false },
-      { className: "col5", "targets": [4], "visible": true, "searchable": true },
-      { className: "col6", "targets": [5], "visible": true, "searchable": true },
-      { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
-      { className: "col8", "targets": [7], "visible": true, "searchable": false },
+      { className: "col3", "targets": [2], "visible": true, "searchable": false },
+      { className: "col4", "targets": [3], "visible": true, "searchable": false },
+      { className: "col5", "targets": [4], "visible": false, "searchable": false },
+      { className: "col6", "targets": [5], "visible": false, "searchable": false },
+      { className: "col7", "targets": [6], "visible": false, "searchable": false }, 
+      { className: "col8", "targets": [7], "visible": false, "searchable": false },
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
+      { className: "col11", "targets": [10], "visible": true, "searchable": true },
+      { className: "col12", "targets": [11], "visible": true, "searchable": true },
+      { className: "col13", "targets": [12], "visible": true, "searchable": true },
+      { className: "col14", "targets": [13], "visible": true, "searchable": false },
+      { className: "col15", "targets": [14], "visible": false, "searchable": false },
+      { className: "col16", "targets": [15], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
     stateSave: false, //restore table state on page reload
@@ -537,7 +596,7 @@ minify with: http://minifycode.com/html-minifier
               {extend: 'copy',
                key: {key: 'c', shiftKey: true},
                text: 'Copy',
-               messageTop: '40 Nawawi',
+               messageTop: 'Bukhari',
                title: 'hadithmv.github.io',
 
 //=== edits clipboard regex, code to manipulate the data string as desired
@@ -552,9 +611,15 @@ minify with: http://minifycode.com/html-minifier
 
                       // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
                        data = data.replace( /\n#/g, '' );
-                       data = data.replace( /\tAr Title/g, '' );
+                       data = data.replace( /\tAr Book/g, '' );
+                       data = data.replace( /\tAr Chapter/g, '' );
+                       data = data.replace( /\tAr Expl./g, '' );
                        data = data.replace( /\tEn Title/g, '' );
+                       data = data.replace( /\tEn Chapter/g, '' );
+                       data = data.replace( /\tEn Expl./g, '' );
                        data = data.replace( /\tDv Title/g, '' );
+                       data = data.replace( /\tDv Chapter/g, '' );
+                       data = data.replace( /\tDv Expl./g, '' );
                        data = data.replace( /\tArabic/g, '' );
                        data = data.replace( /\tEnglish/g, '' );
                        data = data.replace( /\tDhivehi/g, '' );
@@ -619,50 +684,52 @@ minify with: http://minifycode.com/html-minifier
           ],
 //=== end of outer buttons
 
-  });
 
-   // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-//Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                });
+// === === End of DataTable initialize
+
+// Apply S Buttons
+                table.buttons().container()
+                table.buttons(0, null).containers();
+
+                /*table.buttons().container()
+                  .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
+                */
+
+//Apply the footer search
+                table.columns().every(function() {
+                    var that = this;
+
+                    $('input', this.footer()).on('keyup change', function() {
+                        if (that.search() !== this.value) {
+                            that
+//                                .search(this.value)
+                        .search(
+                            $.fn.DataTable.ext.type.search.string(this.value)
+                        )
+                                .draw();
+                        }
+                    });
+                });
+
+//Remove accented character from global search input 
                 $('#table_id_filter input').keyup(function() {
                     table
                         .search(
                             $.fn.DataTable.ext.type.search.string(this.value)
                         )
-                        .draw();
+                        .draw()
                 });
 //End of Remove accented characters from global search input
 
-
- // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-    // Apply the Individual column searching, other half at top
-    table.columns().every( function () {
-        var that = this;
- 
-        $( 'input', this.footer() ).on( 'keyup change', function () {
-            if ( that.search() !== this.value ) {
-                that
-                    .search( this.value )
-                    .draw();
             }
-        } );
-    } );
-// Individual column searching end
+        });
+// === === === end of writeTable
 
-// moves individual column searching to top, header, does not break fixedcolumnheaders
-$('#table_id tfoot tr').appendTo('#table_id thead');
-// moves individual column searching to top end
-
-// Apply S Buttons
-                table.buttons().container()
-                table.buttons(0, null).containers();
-                /*table.buttons().container()
-                  .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
-                */
-
-});
+    </script>
 
 
-</script>
+<!--=== === === /INLINE JS === === ===-->
 
-</body>
+    </body>
 </html>
