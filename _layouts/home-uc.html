@@ -143,6 +143,12 @@ time, mark, audio, video {
  * {font-family: ;}
  */
 
+/*The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements.*/
+ input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+
+
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
             vertical-align: top;
