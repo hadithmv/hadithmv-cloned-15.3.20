@@ -55,6 +55,12 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 <!--buttons Print button-->
   <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
+
+<!--Keep Conditions - can set filtering, ordering and page of the demo table by using unique URL hash - https://www.gyrocode.com/articles/jquery-datatables-save-and-restore-table-state-using-unique-url/ -->
+  <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
+
 <style type="text/css">
 /*
 <!--Google 3.x snippet-->
@@ -422,8 +428,38 @@ then use: http://myjson.com, A simple JSON store for your web or mobile app
 minify with: http://minifycode.com/html-minifier
 */
 //  $(document).ready(function() {
+     var dataSrc = [];
+
   var table = $('#table_id').DataTable({
+
             data: dataSet,
+
+                  'initComplete': function(){
+         var api = this.api();
+
+         // Populate a dataset for autocomplete functionality
+         // using data from first, second and third columns
+         api.cells('tr', [0, 1, 2]).every(function(){
+            // Get cell data as plain text
+            var data = $('<div>').html(this.data()).text();           
+            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+         });
+         
+         // Sort dataset alphabetically
+         dataSrc.sort();
+        
+         // Initialize Typeahead plug-in
+         $('.dataTables_filter input[type="search"]', api.table().container())
+            .typeahead({
+               source: dataSrc,
+               afterSelect: function(value){
+                  api.search(value).draw();
+               }
+            }
+         );
+
+            
+      },
 
 //    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
 
@@ -458,6 +494,7 @@ minify with: http://minifycode.com/html-minifier
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
+    keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
     stateSave: false, //restore table state on page reload
     orderCellsTop: false, //Moves the sorting icons to the first header row
     mark: true, //highlights searches
@@ -621,10 +658,15 @@ minify with: http://minifycode.com/html-minifier
           ],
 //=== end of outer buttons
 
-  });
 
 
-// If the user changes the page, scroll to the top
+
+
+  }); //  END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
+
+
+
+    // ScrollTop - If the user changes the page, scroll to the top
     $(".dataTable").on("page.dt", function () {
         $("html, body").animate({ scrollTop: 0 }, "fast");
         $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
