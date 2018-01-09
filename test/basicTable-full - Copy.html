@@ -289,22 +289,6 @@ $(document).ready(function() {
                         .replace(/(ؤ)/g, 'و')
                         .replace(/(لأ)/g, 'لا')
                         .replace(/(لإ)/g, 'لا')
-
-//https://en.wikipedia.org/wiki/Thaana_(Unicode_block), replace regular thaana with thiki jehi
-                .replace( /\u0780/g, '\u0799' ) //.replace( /ހ/g, 'ޙ' )
-                .replace( /\u0780/g, '\u079A' ) //.replace( /ހ/g, 'ޚ' )
-                .replace( /\u0792/g, '\u079B' ) //.replace( /ޒ/g, 'ޛ' )
-                .replace( /\u0792/g, '\u079F' ) //.replace( /ޒ/g, 'ޟ' )
-                .replace( /\u0792/g, '\u07A1' ) //.replace( /ޒ/g, 'ޡ' )
-                .replace( /\u0787/g, '\u07A2' ) //.replace( /އ/g, 'ޢ' )
-                .replace( /\u0788/g, '\u07A5' ) //.replace( /ވ/g, 'ޥ' )
-                .replace( /\u078C/g, '\u07A0' ) //.replace( /ތ/g, 'ޠ' )
-                .replace( /\u0790/g, '\u0798' ) //.replace( /ސ/g, 'ޘ' )
-                .replace( /\u0790/g, '\u079E' ) //.replace( /ސ/g, 'ޞ' )
-                .replace( /\u0780/g, '\u07A4' ) //.replace( /ގ/g, 'ޤ' )
-                .replace( /\u0780/g, '\u07A3' ) //.replace( /ގ/g, 'ޢ' )
-
-                        
                         .replace(/(ى)/g, 'ي') :
                         data;
                 };
@@ -650,15 +634,7 @@ scrollCollapseSince: Allow the table to reduce in height when a limited number o
 
 
 
-  }); //  END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
-
-
-
-    // ScrollTop - If the user changes the page, scroll to the top
-    $(".dataTable").on("page.dt", function () {
-        $("html, body").animate({ scrollTop: 0 }, "fast");
-        $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
-    });
+    } ); //END OF INITIAL DATATABLE FUNCTION "var table = $('#table_id').DataTable( {", prev without "var table"
 
 
 

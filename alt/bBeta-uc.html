@@ -669,8 +669,15 @@
 //=== end of outer buttons
 
 
-                });
-// === === End of DataTable initialize
+  }); //  END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
+
+
+
+    // ScrollTop - If the user changes the page, scroll to the top
+    $(".dataTable").on("page.dt", function () {
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+        $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
+    });
 
 // Apply S Buttons
                 table.buttons().container()

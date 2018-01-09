@@ -393,6 +393,8 @@ $(document).ready(function() {
                 };
 //End of Accent neutralize and regex for search
 
+
+
 // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
     // Setup - add a text input to each footer cell
     $('#table_id tfoot th').each( function () {
@@ -619,7 +621,18 @@ minify with: http://minifycode.com/html-minifier
           ],
 //=== end of outer buttons
 
-  });
+
+
+  }); //  END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
+
+
+
+    // ScrollTop - If the user changes the page, scroll to the top
+    $(".dataTable").on("page.dt", function () {
+        $("html, body").animate({ scrollTop: 0 }, "fast");
+        $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
+    });
+
 
    // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
 //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
