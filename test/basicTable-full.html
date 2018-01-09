@@ -193,6 +193,9 @@ no need for css, small.
 <!--input pagination plugin, enter which page to jump to manually. paging control uses a text input box to accept new paging numbers (arrow keys allowed), and four standard navigation buttons present.-->
 <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/input.js"></script>
 
+<!--Keep Conditions - can set filtering, ordering and page of the demo table by using unique URL hash - https://www.gyrocode.com/articles/jquery-datatables-save-and-restore-table-state-using-unique-url/ -->
+  <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
+
 <!--Scroller, A virtual renderer for DataTables, allowing the table to look like it scrolls for the full data set, but actually only drawing the rows required for the current display, for fast operation.
 Scroller is initialised by simply including the letter S in the dom for the table you want to have this feature enabled on. Note that the S must come after the t parameter in dom.
 Key features include: Speed! The aim of Scroller for DataTables is to make rendering large data sets fast Full compatibility with DataTables' deferred rendering for maximum speed Integration with state saving in DataTables (scrolling position is saved) Easy to use.
@@ -582,6 +585,10 @@ https://datatables.net/extensions/buttons/examples/html5/titleMessage.html
         threshold: 0
     },
 //searchPane extension end
+
+//Store the DataTable conditions within the URL hash every time a condition is changed
+        keepConditions: true, 
+//keep conditions end
 
 //stateSave, DataTables has the option of being able to save the state of a table (its paging position, ordering state etc) so that is can be restored when the user reloads a page, or comes back to the page after visiting a sub-page. The built in state saving method uses the HTML5 localStorage and sessionStorage APIs for efficient storage of the data. The duration for which the saved state is valid and can be used to restore the table state can be set using the stateDuration initialisation parameter (2 hours by default, 7200). This parameter also controls if localStorage (0 or greater) or sessionStorage (-1) is used to store the data. This option is also used to indicate to DataTables if localStorage or sessionStorage should be used for storing the table's state. When set to -1 sessionStorage will be used, while for 0 or greater localStorage will be used. Please note that the value is given in seconds. The value 0 is a special value as it indicates that the state can be stored and retrieved indefinitely with no time limit. 1 Day: "stateDuration": 60 * 60 * 24, use session storage: "stateDuration": -1
 //    stateSave: true,
