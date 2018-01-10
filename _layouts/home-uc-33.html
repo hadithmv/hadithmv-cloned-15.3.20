@@ -73,8 +73,6 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 <!--Keep Conditions -->
 <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
-<!--Search input with autocomplete using Typeahead and Bootstrap -->
-<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.js"></script>
 <!--=== === Base Ext JS End === ===-->
 
 
@@ -157,22 +155,10 @@ time, mark, audio, video {
 }
 
 
-/* Mark JS */
-mark {background: #add1f2; color: black;}
-/* Keytable */
-table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
-/* Autocomplete Typeahead */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(6) > div > label > ul {overflow: auto;}
-
-
-
-/* adjusts search input height to match rest */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 34px;}
-#table_id_filter > label > input {height: 34px;}
-
-
-
-
+ /* Mark JS */
+mark {background: #add1f2; color:black;}
+ /* Keytable */
+table.dataTable th.focus,table.dataTable td.focus{outline:3px solid #337ab7;outline-offset:-2px}
 
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
@@ -456,9 +442,6 @@ then use: http://myjson.com, A simple JSON store for your web or mobile app
 
 minify with: http://minifycode.com/html-minifier
 */
-
-                                  var dataSrc = []; //needed for autocomplete
-
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
             data: dataSet,
@@ -468,37 +451,6 @@ minify with: http://minifycode.com/html-minifier
 //            data: dataSet,  //CHANGE123
 
 //    ajax:'file:///android_asset/nJson.json',
-
-
-//autocomplete typeahead
-      'initComplete': function(){
-         var api = this.api();
-         
-
-         // Populate a dataset for autocomplete functionality
-         // using data from first, second and third columns
-         api.cells('tr', [0, 4, 5, 6, 7, 8, 9]).every(function(){
-            // Get cell data as plain text
-            var data = $('<div>').html(this.data()).text();           
-            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
-         });
-         
-         // Sort dataset alphabetically
-         //dataSrc.sort();
-        
-         // Initialize Typeahead plug-in
-         $('.dataTables_filter input[type="search"]', api.table().container())
-            .typeahead({
-               source: dataSrc,
-               afterSelect: function(value){
-                  api.search(value).draw();
-               }
-            }
-         );
-
-      },
-
-
 
  //   data: data, previously without column titles
     columns: [
@@ -589,9 +541,9 @@ B - Buttons
   dom:
 
 "<'row'"+
-        "<'hidden-xs hidden-sm col-sm-1'f><'hidden-xs hidden-sm col-sm-2'B><'hidden-xs hidden-sm col-sm-2'l><'hidden-xs hidden-sm col-sm-7'p>"+
+        "<'hidden-xs hidden-sm col-sm-1'l><'hidden-xs hidden-sm col-sm-2'f><'hidden-xs hidden-sm col-sm-2'B><'hidden-xs hidden-sm col-sm-7'p>"+
 
-        "<'hidden-md hidden-lg col-xs-4'f><'hidden-md hidden-lg col-xs-4'B><'hidden-md hidden-lg col-xs-4'l>"+
+        "<'hidden-md hidden-lg col-xs-4'l><'hidden-md hidden-lg col-xs-4'f><'hidden-md hidden-lg col-xs-4'B>"+
 ">" +
         "<'row hidden-md hidden-lg'<'col-sm-12'p>>" +
 
@@ -686,47 +638,8 @@ B - Buttons
                                                                       }
                         }, //json button end
 */
-                        //custom button
-                        {text: 'Submissions',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://goo.gl/forms/O0SLwVntIGRdhVGv2';}
-                        }, //custom button end
 
-                        //share collection
-        {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
-         text: 'Share',
-         autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
-         buttons: [
-                        {text: 'Playstore',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                        }, //custom button end
-                        {text: 'Facebook',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://www.facebook.com/sharer.php?u={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
-                        }, //custom button end
-                        {text: 'Twitter',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://twitter.com/intent/tweet?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
-                        }, //custom button end
-                        {text: 'Telegram',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
-                        }, //custom button end
-                        {text: 'Whatsapp',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'whatsapp://send?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
-                        }, //custom button end
-                        {text: 'Viber',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'viber://forward?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
-                        }, //custom button end
-
-                ] }//end of share collection
-
-
-
-                ] }//end of inner buttons
+                ] }//end of inner end
 
           ],
 //=== end of outer buttons

@@ -19,81 +19,89 @@
     <link rel="author" href="https://hadithmv.github.io" />
 
 
-<!--=== Base Ext CSS ===-->
-<link rel="stylesheet" type="text/css" href="file:///android_asset/app.css"/>
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app.css"/>
 
-<style type="text/css">
-  /*
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.min.css"/><!--buttons-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css"/><!--dropdown, nav-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/grid.min.css"/><!--responsive layout mobile-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/input.min.css"/><!--input search box-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/menu.min.css"/><!--navbar menu-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/reset.min.css"/><!--keeps alignments and edges in place-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/site.min.css"/><!--site, keeps layout in check-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/table.min.css"/><!--table-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.css"/><!--dropdowns-->
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
-<!--buttons-->
-        <!--Semantic UI buttons, table.buttons().container() .appendTo( $('div.eight.column:eq(0)', table.table().container()) );-->
-            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.semanticui.min.css">
-  */
-</style>
-<!--=== Base Ext CSS End ===-->
-
-
-<!--=== Base Ext JS ===-->
-<script type="text/javascript" src="file:///android_asset/app.js"></script>
-<script src="https://hadithmv.github.io/alt/Resc/app.js"></script>
-
+<!--  === === Base Json === === -->
 <script type="text/javascript" src="file:///android_asset/40nJson.js"></script>
 <script src="https://hadithmv.github.io/alt/json/40nJson.js"></script>
+<!--  === === Base Json  End=== === -->
 
-<!--CHANGE123-->
-<!--buttons JSZip Excel export button-->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-<!--buttons Print button-->
-  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.print.min.js"></script>
 
-<!--Keep Conditions - can set filtering, ordering and page of the demo table by using unique URL hash - https://www.gyrocode.com/articles/jquery-datatables-save-and-restore-table-state-using-unique-url/ -->
-  <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
 
-<style type="text/css">
-/*
-<!--Google 3.x snippet-->
+<!--=== === Base Ext CSS === ===-
+<link rel="stylesheet" type="text/css" href="file:///android_asset/app.css"/>
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app.css"/>-->
+<!--Bootstrap 3-->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<!--Datatables - Bootstrap 3 Integration -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"/>
+<!--Datatables - Buttons - Bootstrap 3 Integration -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css"/>
+<!--SUI table only component - NO JS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/table.min.css"/>
+<!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+<!--Replace Default Buttons Css with custom styling buttons css
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">-->
+<!--Mark JS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.css">
+<!--=== === Base Ext CSS End === ===-->
+
+
+
+<!--=== === Base Ext JS === ===
+<link rel="stylesheet" type="text/css" href="file:///android_asset/app.js"/>
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app.js"/>-->
+<!--jQuery - Google 3.x snippet-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Bootstrap 3-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--DataTables Core JS-->
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<!--Semantic UI
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
--->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/api.min.js"></script>      api, apparently makes no difference-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js"></script><!--dropdown-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/transition.min.js"></script><!--transitions, dropdown animate-->
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
-<!--buttons-->
-<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/dataTables.buttons.min.js"></script>
-  <!--buttons Column visibility control-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.colVis.min.js"></script>
-  <!--buttons HTML5 export buttons-->
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.html5.min.js"></script>
-
-            <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.0/js/buttons.semanticui.min.js"></script>
-<!--Mark.js-->
+<!--Datatables - Bootstrap 3 Integration -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<!--Datatables - Semantic UI Integration NO NEED FOR THIS, TABLE STACKS FINE WITHOUT IT, BREAKS PAGINATION STYLING
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>-->
+<!--Datatables - Buttons -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<!--Datatables - Buttons - Bootstrap 3 Integration -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+<!--Datatables - Buttons - colvis, html5 -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+<!--Mark JS -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+<!--Keep Conditions -->
+<script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
+<!--Search input with autocomplete using Typeahead and Bootstrap -->
+<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.js"></script>
+<!--=== === Base Ext JS End === ===-->
+
+
+<!--  === === Web only plugins ===  === -->
+<!--Datatables - KeyTables - Bootstrap 3 Integration - CSS small - embedded
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.3.2/css/keyTable.bootstrap.min.css"/>-->
+<script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
+<!--Datatables - Buttons - print (Must go below other related JS), excel -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+<!--=== === Web only plugins End === ===-->
+
+
+<script type="text/javascript">
+/*
 */
-</style>
-<!--=== Base Ext JS End ===-->
+</script>
+        
 
 
+<!--=== Embedded CSS ===-->
 <style type="text/css">
 
     /* Ubuntu-mod */
         @font-face {
             font-family: 'Ubuntu-mod';
-                src: url('file:///android_asset/LatoLatin-Regular-mod.woff') format('woff'),
+                src: url('file:///android_asset/Ubuntu-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff2') format('woff2'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.ttf') format('truetype');
@@ -108,8 +116,8 @@
         }
     /* Tharujamaanu-B-Regular-mod */
         @font-face {
-            font-family: 'Tharujamaanu-Regular-mod';
-                src: url('file:///android_asset/Tharujamaanu-Regular-mod.woff') format('woff'),
+            font-family: 'Tharujamaanu-B-Regular-mod';
+                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff2') format('woff2'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.ttf') format('truetype');
@@ -149,6 +157,23 @@ time, mark, audio, video {
 }
 
 
+/* Mark JS */
+mark {background: #add1f2; color: black;}
+/* Keytable */
+table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
+/* Autocomplete Typeahead */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(6) > div > label > ul {overflow: auto;}
+
+
+
+/* adjusts search input height to match rest */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 34px;}
+#table_id_filter > label > input {height: 34px;}
+
+/* centers headers */
+#table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center; font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';}
+
+
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
             vertical-align: top;
@@ -159,27 +184,27 @@ time, mark, audio, video {
           /*margin-bottom: -1px;*/
             font-size: 110%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
         }
 
         .dataTable tbody tr td.col2 { /* ar title */
             direction: rtl;
             font-size: 140%;
             text-align: center;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
         }
 
         .dataTable tbody tr td.col3 { /* en title */
             font-size: 100%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
         }
 
         .dataTable tbody tr td.col4 { /* dv title */
             direction: rtl;
             font-size: 125%;
             text-align: center;
-            font-family: 'Tharujamaanu-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
         }
 /* @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
@@ -190,7 +215,7 @@ time, mark, audio, video {
             text-align: justify;
             line-height: 1.45;
             font-size: 160%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
         }
 
         .dataTable tbody tr td.col6 { /* en text */
@@ -198,33 +223,33 @@ time, mark, audio, video {
             text-align: justify;
             line-height: 1.37;
             font-size: 105%;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
         }
         .dataTable tbody tr td.col7 { /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.37;
             font-size: 135%;
-            font-family: 'Tharujamaanu-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
         }
 
         .dataTable tbody tr td.col8 { /* ar ref */
             direction: rtl;
             text-align: center;
             font-size: 140%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
         }
         }
         .dataTable tbody tr td.col9 {   /* en ref */
             text-align: center;
-            font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+            font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
             font-size: 100%;
         }
         .dataTable tbody tr td.col10 { /* dv ref */
             direction: rtl;
             text-align: center;
             font-size: 115%;
-            font-family: 'Tharujamaanu-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
         }
 
         /*hides table headers even on mobile, prev nth-child(2)*/
@@ -272,7 +297,7 @@ time, mark, audio, video {
 
         html,
         body, {
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Regular-mod';
+           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
 
             /*font-size: 16px; base font size*/
 
@@ -431,6 +456,9 @@ then use: http://myjson.com, A simple JSON store for your web or mobile app
 
 minify with: http://minifycode.com/html-minifier
 */
+
+                                  var dataSrc = []; //needed for autocomplete
+
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
             data: dataSet,
@@ -440,6 +468,37 @@ minify with: http://minifycode.com/html-minifier
 //            data: dataSet,  //CHANGE123
 
 //    ajax:'file:///android_asset/nJson.json',
+
+
+//autocomplete typeahead
+      'initComplete': function(){
+         var api = this.api();
+         
+
+         // Populate a dataset for autocomplete functionality
+         // using data from first, second and third columns
+         api.cells('tr', [0, 4, 5, 6, 7, 8, 9]).every(function(){
+            // Get cell data as plain text
+            var data = $('<div>').html(this.data()).text();           
+            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+         });
+         
+         // Sort dataset alphabetically
+         //dataSrc.sort();
+        
+         // Initialize Typeahead plug-in
+         $('.dataTables_filter input[type="search"]', api.table().container())
+            .typeahead({
+               source: dataSrc,
+               afterSelect: function(value){
+                  api.search(value).draw();
+               }
+            }
+         );
+
+      },
+
+
 
  //   data: data, previously without column titles
     columns: [
@@ -471,6 +530,7 @@ minify with: http://minifycode.com/html-minifier
     keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
     stateSave: false, //restore table state on page reload
     orderCellsTop: false, //Moves the sorting icons to the first header row
+    keys: true, //KeyTable extension 
     mark: true, //highlights searches
     autoWidth: false,
     ordering: false, //disables column sorting
@@ -503,48 +563,48 @@ minify with: http://minifycode.com/html-minifier
         lengthMenu: "_MENU_"
     }, //end of language
 
-    dom: 
-        "<'ui unstackable grid'" + /*add celled to see grid*/
-
-            "<'computer only row'" + /*desktop view*/
-                "<'one wide column'l>" +
-                "<'four wide column'B>" +
-                "<'center aligned seven wide column'f>" +
-                "<'right aligned four wide column'p>" +
-            ">" +
-
-            "<'tablet only row'" + /*tablet view*/
-                "<'one wide column'l>" +
-                "<'center aligned three wide column'B>" +
-                "<'center aligned five wide column'f>" +
-                "<'right aligned seven wide column'p>" +
-            ">" +
 
 
-            "<'mobile only row'" + /*mobile view*/
-                "<'three wide column'l>" +
-                "<'six wide column'B>" +
-                "<'seven wide column'f>" +
-            ">" +
-            "<'mobile only stackable row'" + /*mobile view*/
-                "<'center aligned sixteen wide column'p>" +
-            ">" +
+/*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
+ default: lpfrtip
+l - length changing input control
+f - filtering input
+t - The table
+i - Table information summary
+p - pagination control
+r - processing display element
+B - Buttons
 
-            "<'stackable row dt-table'" +
-                "<'sixteen wide column'tr>" +
-            ">" +
+ 'lBpfrtip',
 
-            "<'stackable row'" +
-                "<'seven wide column'i>" +
-                "<'right aligned nine wide column'p>" +
-            ">" +
+"<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+"<'row'<'col-sm-12'tr>>" +
+"<'row'<'col-sm-5'i><'col-sm-7'p>>",
 
-        ">",
+"<'row'<'col-sm-4'l><'col-sm-4'f><'col-sm-4'B>>" +
+"<'row'<'col-sm-12'tr>>" +
+"<'row'<'col-sm-5'i><'col-sm-7'p>>"
+*/
+//https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
+  dom:
+
+"<'row'"+
+        "<'hidden-xs hidden-sm col-sm-1'f><'hidden-xs hidden-sm col-sm-2'B><'hidden-xs hidden-sm col-sm-2'l><'hidden-xs hidden-sm col-sm-7'p>"+
+
+        "<'hidden-md hidden-lg col-xs-4'f><'hidden-md hidden-lg col-xs-4'B><'hidden-md hidden-lg col-xs-4'l>"+
+">" +
+        "<'row hidden-md hidden-lg'<'col-sm-12'p>>" +
+
+
+"<'row'<'col-sm-12'tr>>" +
+"<'row'<'col-sm-5'i><'col-sm-7'p>>"
+    ,
+
 
     buttons: [
         {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
          text: 'Options',
-         autoClose: true, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+         autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
          buttons: [
 
               {extend: 'copy',
@@ -626,8 +686,47 @@ minify with: http://minifycode.com/html-minifier
                                                                       }
                         }, //json button end
 */
+                        //custom button
+                        {text: 'Submissions',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://goo.gl/forms/O0SLwVntIGRdhVGv2';}
+                        }, //custom button end
 
-                ] }//end of inner end
+                        //share collection
+        {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+         text: 'Share',
+         autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+         buttons: [
+                        {text: 'Playstore',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                        }, //custom button end
+                        {text: 'Facebook',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://www.facebook.com/sharer.php?u={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
+                        }, //custom button end
+                        {text: 'Twitter',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://twitter.com/intent/tweet?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
+                        }, //custom button end
+                        {text: 'Telegram',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
+                        }, //custom button end
+                        {text: 'Whatsapp',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'whatsapp://send?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
+                        }, //custom button end
+                        {text: 'Viber',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'viber://forward?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
+                        }, //custom button end
+
+                ] }//end of share collection
+
+
+
+                ] }//end of inner buttons
 
           ],
 //=== end of outer buttons
