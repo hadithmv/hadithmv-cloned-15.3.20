@@ -155,13 +155,18 @@ time, mark, audio, video {
 }
 
 
-/* Mark JS */
-mark {background: #add1f2; color: black;}
-/* Keytable */
-table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
+/* Mark JS - padding: 0; removes useless padding */
+mark {background: #add1f2; color: black; padding: 0;}
+/* Keytable - Desktop only MQ */
+@media screen and (min-width: 768px) {
+  table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
+}
 
 
 
+#table_id_wrapper > div.row.hidden-md.hidden-lg > div > div {
+
+  ;}
 
 
 
@@ -189,9 +194,14 @@ body { position: relative;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
   background-color: #efefef;
-  text-align: center;}
+  text-align: center;
+  border-top: 1px solid rgba(34,36,38,.1);
+  padding: 1rem;}
+/*makes footer space smaller, mobile view only*/
+@media screen and (max-width: 768px) {
+        .footer {padding: .5rem;}
+}
 /*==================FOOTER STICK*/
 
 #datatables_buttons_info > h2 {background: #add1f2;}
@@ -211,6 +221,9 @@ body { position: relative;
 /* centers table headers */
 #table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
 
+/* lessens table header bold line */
+#table_id > thead > tr:nth-child(2) > th {border-top: 0;}
+
 
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
@@ -227,7 +240,7 @@ body { position: relative;
 
         .dataTable tbody tr td.col2 { /* ar title */
             direction: rtl;
-            font-size: 140%;
+            font-size: 125%;
             text-align: center;
             font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
         }
@@ -252,7 +265,7 @@ body { position: relative;
             direction: rtl;
             text-align: justify;
             line-height: 1.45;
-            font-size: 160%;
+            font-size: 150%;
             font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
         }
 
@@ -274,7 +287,7 @@ body { position: relative;
         .dataTable tbody tr td.col8 { /* ar ref */
             direction: rtl;
             text-align: center;
-            font-size: 140%;
+            font-size: 125%;
             font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
         }
         }
@@ -382,7 +395,10 @@ body { position: relative;
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
     /*moves show index a little to the right*/
-        #table_id_info { margin-left: 10px; }
+        #table_id_info { margin-left: 10px;}
+    /*moves show index a little to the bottom*/
+        #table_id_info { padding-top: 6.5px;}
+
 </style>
 
 
@@ -416,7 +432,7 @@ body { position: relative;
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="menu logo" width="23" height="40" top="0" right="0" left="o" bottom="0"></a>
+      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="menu logo" width="23" height="23" top="0" right="0" left="o" bottom="0"></a>
 
       <h4 class="navbar-text" style="text-align:center; ">hadithmv.github.io</h4>
   </div>
@@ -427,7 +443,7 @@ body { position: relative;
 
 <li class="active"><a data-toggle="modal" href="#nawawiModal"><span class="glyphicon glyphicon-book"></span>&nbsp; 40 Nawawi<span class="sr-only">(current)</span></a></li>
 
-<li><a data-toggle="modal" href="#submissionsModal"><span class="glyphicon glyphicon-edit"></span>&nbsp; Submissions</a></li>
+<li><a data-toggle="modal" href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank"><span class="glyphicon glyphicon-edit"></span>&nbsp; Submissions</a></li>
 
       </ul>
 
@@ -461,6 +477,7 @@ body { position: relative;
           </ul>
         </li>
 
+<!-- Experimental BEGIN
         <li class="dropdown">
 
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-wrench"></span>&nbsp; Experimental <span class="caret"></span></a>
@@ -485,6 +502,7 @@ body { position: relative;
 
           </ul>
         </li>
+  Experimental End -->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -529,7 +547,7 @@ body { position: relative;
 
 
 <div class="footer" ><strong>
-  <span onclick="myFooter()">2017</span>
+  <span onclick="myFooter()">2017&nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</strong></span>
 </div>
 
@@ -830,16 +848,31 @@ B - Buttons
 //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
   dom:
 
-"<'row'"+
-        "<'hidden-xs hidden-sm col-sm-1'f><'hidden-xs hidden-sm col-sm-2 pull-right text-right'B><'hidden-xs hidden-sm col-sm-2'l><'hidden-xs hidden-sm col-sm-7'p>"+
-
-        "<'hidden-md hidden-lg col-xs-4'f><'hidden-md hidden-lg col-xs-4 pull-right text-right'B><'hidden-md hidden-lg col-xs-4'l>"+
+//mobile
+"<'row hidden-md hidden-lg hidden-sm '"+
+        "<' col-xs-4'f><'col-xs-4 pull-right text-right'B><'col-xs-4 pull-right text-right'l>"+
 ">" +
-        "<'row hidden-md hidden-lg'<'col-sm-12'p>>" +
+"<'row hidden-md hidden-lg hidden-sm'"+
+        "<'row'<'col-sm-12'p>>" +
+">" +
+//desktop
+"<'row-fluid hidden-xs'"+
+    "<'row'<'col-sm-1'l><'col-sm-2'f><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
+">" +
 
-
+//both
 "<'row'<'col-sm-12'tr>>" +
-"<'row'<'col-sm-5'i><'col-sm-7'p>>"
+
+
+//mobile
+"<'row hidden-md hidden-lg hidden-sm'"+
+        "<'col-sm-7'p><'col-sm-5'i>"+
+">" +
+//desktop
+"<'row hidden-xs'"+
+        "<'col-sm-12'p>"+
+">" 
+
     ,
 
 
