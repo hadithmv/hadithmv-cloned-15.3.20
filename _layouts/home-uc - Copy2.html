@@ -200,11 +200,11 @@ body { position: relative;
   background-color: #efefef;
   text-align: center;
   border-top: 1px solid rgba(34,36,38,.1);
-  padding: 1.1rem;}
-/*makes footer space smaller, mobile view only*/
+  padding: 10px;}
+/*makes footer space smaller, mobile view only
 @media screen and (max-width: 768px) {
         .footer {padding: .8rem;}
-}
+}*/
 /*==================FOOTER STICK*/
 
 #datatables_buttons_info > h2 {background: #add1f2;}
@@ -393,6 +393,10 @@ body { position: relative;
         #table_id > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
 
 
+
+#table_id_wrapper > div:nth-child(4) > div {padding-left: 9px; padding-right: 9px;}
+
+
 /*hides individual column search, mobile view only*/
 @media screen and (max-width: 768px) {
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
@@ -401,6 +405,19 @@ body { position: relative;
         #table_id_info { margin-left: 10px;}
     /*moves show index a little to the bottom*/
         #table_id_info { padding-top: 6.5px;}
+
+
+    /*reduces navbar height
+.navbar-xs { min-height:28px; height: 40px; }
+.navbar-xs .navbar-brand{ padding: 0px; padding-left: 12px; font-size: 16px; line-height: 0px; }
+.navbar-xs .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; }*/
+    /*reduces navbar heigh -mobile*//*
+.navbar-toggle {
+     padding: 0 0;
+     margin-top: 12px; 
+     margin: 0;
+}hamburger*/
+
 
 </style>
 
@@ -424,7 +441,7 @@ body { position: relative;
 
       
 <!-- === === NAV BAR === === -->
-<nav class="navbar navbar-default navbar-fixed-top " style="margin-top:0px" >
+<nav class="navbar navbar-xs navbar-default navbar-fixed-top " style="margin-top: 0px;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -436,8 +453,8 @@ body { position: relative;
       </button>
 
       <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="menu logo" width="23" height="23" top="0" right="0" left="o" bottom="0"></a>
-
-      <h4 class="navbar-text" style="text-align:center; ">hadithmv.github.io</h4>
+<!--prev navbar-text-->
+      <h4 class="navbar-text" style="text-align: center;">hadithmv.github.io</h4>
   </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -516,15 +533,22 @@ body { position: relative;
 
 
 
-      <div class="tab-content clearfix"> 
-        <div class="tab-pane fade in active" id="40n"> <!-- === === /40n tab === === -->
+
 
 
 
 
 <!-- === === CONTAINER === === -->
-<div class="container-fluid" style="margin-top: 55px; " >
+<div class="container-fluid" style="" >
   <div class="flex-row row">
+
+
+
+
+      <div class="tab-content clearfix" style="margin-top: 50px;"> 
+        <div class="tab-pane fade in active" id="40n"> <!-- === === /40n tab === === -->
+
+
 
 
 
@@ -547,15 +571,11 @@ body { position: relative;
 
 
 
-</div> <!-- === /FLEX-ROW === -->
-</div> <!-- === === /CONTAINER === === -->    
-
-
-
 
 
         </div> <!-- === === /tab-pane active" id="40n" === === -->
 
+   
 
 
 
@@ -575,6 +595,11 @@ body { position: relative;
 
         </div> <!-- === === /tab-content clearfix === === -->
 
+
+
+
+</div> <!-- === /FLEX-ROW === -->
+</div> <!-- === === /CONTAINER === === --> 
 
 
 
