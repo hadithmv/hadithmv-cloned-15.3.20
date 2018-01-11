@@ -160,7 +160,8 @@ time, mark, audio, video {
 
 /*The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements.*/
  input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: searchfield-cancel-button;
+    -webkit-appearance: searchfield-cancel-button; /* adds x */
+    border:4px solid transparent; /*makes x a bit bigger*/
 }
 
 
@@ -170,8 +171,6 @@ mark {background: #add1f2; color: black; padding: 0;}
 @media screen and (min-width: 768px) {
   table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
 }
-
-
 
 
 /* NAVBAR 
@@ -201,11 +200,11 @@ body { position: relative;
   background-color: #efefef;
   text-align: center;
   border-top: 1px solid rgba(34,36,38,.1);
-  padding: 1rem;}
-/*makes footer space smaller, mobile view only*/
+  padding: 10px;}
+/*makes footer space smaller, mobile view only
 @media screen and (max-width: 768px) {
-        .footer {padding: .7rem;}
-}
+        .footer {padding: .8rem;}
+}*/
 /*==================FOOTER STICK*/
 
 #datatables_buttons_info > h2 {background: #add1f2;}
@@ -394,6 +393,10 @@ body { position: relative;
         #table_id > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
 
 
+/*table sides padding*/
+#table_id_wrapper > div:nth-child(4) > div {padding-left: 9px; padding-right: 9px;}
+
+
 /*hides individual column search, mobile view only*/
 @media screen and (max-width: 768px) {
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
@@ -402,6 +405,21 @@ body { position: relative;
         #table_id_info { margin-left: 10px;}
     /*moves show index a little to the bottom*/
         #table_id_info { padding-top: 6.5px;}
+
+
+    /*reduces navbar height
+.navbar-xs { min-height:28px; height: 40px; }
+.navbar-xs .navbar-brand{ padding: 0px; padding-left: 12px; font-size: 16px; line-height: 0px; }
+.navbar-xs .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; }*/
+    /*reduces navbar heigh -mobile*//*
+.navbar-toggle {
+     padding: 0 0;
+     margin-top: 12px; 
+     margin: 0;
+}hamburger*/
+
+
+
 
 </style>
 
@@ -425,7 +443,7 @@ body { position: relative;
 
       
 <!-- === === NAV BAR === === -->
-<nav class="navbar navbar-default navbar-fixed-top " style="margin-top:0px" >
+<nav class="navbar navbar-xs navbar-default navbar-fixed-top " style="margin-top: 0px;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -437,17 +455,19 @@ body { position: relative;
       </button>
 
       <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.github.io/img/svg-logo.svg" alt="menu logo" width="23" height="23" top="0" right="0" left="o" bottom="0"></a>
-
-      <h4 class="navbar-text" style="text-align:center; ">hadithmv.github.io</h4>
+<!--prev navbar-text-->
+      <h4 class="navbar-text" style="text-align: center;">hadithmv.github.io</h4>
   </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-<li class="active"><a data-toggle="modal" href="#nawawiModal"><span class="glyphicon glyphicon-book"></span>&nbsp; 40 Nawawi<span class="sr-only">(current)</span></a></li>
+<li class="active"><a data-toggle="tab" href="#40n"><span class="glyphicon glyphicon-book"></span>&nbsp; 40 Nawawi<span class="sr-only">(current)</span></a></li>
 
-<li><a data-toggle="modal" href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank"><span class="glyphicon glyphicon-edit"></span>&nbsp; Submissions</a></li>
+<li><a data-toggle="" href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank"><span class="glyphicon glyphicon-edit"></span>&nbsp; Submissions</a></li>
+
+<li><a data-toggle="tab" href="#bukh"><span class="glyphicon glyphicon-book"></span>&nbsp; Bukhari<span class="sr-only">(current)</span></a></li>
 
       </ul>
 <!-- === Search engine 
@@ -513,12 +533,22 @@ body { position: relative;
 </nav> <!-- === === /NAV BAR === === -->
 
 
+
+
+
+
+
+
+
 <!-- === === CONTAINER === === -->
-<div class="container-fluid" style="margin-top: 55px; " >
+<div class="container-fluid" style="" >
   <div class="flex-row row">
 
 
 
+
+      <div class="tab-content clearfix" style="margin-top: 50px;"> 
+        <div class="tab-pane fade in active" id="40n"> <!-- === === /40n tab === === -->
 
 
 
@@ -545,8 +575,35 @@ body { position: relative;
 
 
 
+        </div> <!-- === === /tab-pane active" id="40n" === === -->
+
+   
+
+
+
+
+
+
+        <div class="tab-pane fade" id="bukh"> <!-- === === /bukh tab === === -->
+            <h3>Bukhari</h3>
+            <p>Coming Soon</p>
+            <p>Insha Allah</p>
+        </div> <!-- === === /tab-pane active" id="t2" === === -->
+
+
+
+
+
+
+        </div> <!-- === === /tab-content clearfix === === -->
+
+
+
+
 </div> <!-- === /FLEX-ROW === -->
-</div> <!-- === === /CONTAINER === === -->    
+</div> <!-- === === /CONTAINER === === --> 
+
+
 
 
 
@@ -562,7 +619,7 @@ body { position: relative;
 
 /*Help Alert*/
         function myHelp() {
-            alert("Keyboard Controls: [Tab] =Tab navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+p] = Print");
+            alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+p] = Print");
         }
 
 /*Footer Alert*/
@@ -589,11 +646,34 @@ $('body').bind('click', function(e) {
     }
 });
 
-/* ACTIVE STATE ON NAV */
+/* close mobile view navbar on click */
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+});
+/* ACTIVE STATE ON NAV - breaks tabs
     $(".nav li").on("click", function() {
       $(".nav li").removeClass("active");
       $(this).addClass("active");
     });
+*/
+
+/* close mobile view navbar on click - both of these break dropdowns
+$(function() {
+    $('.nav a').on('click', function(){ 
+        if($('.navbar-toggle').css('display') !='none'){
+            $(".navbar-toggle").trigger( "click" );
+        }
+    });
+});
+
+$('.navbar-nav a').on('click', function () {
+        if (window.innerWidth <= 768) {
+            $(".navbar-toggle").click();
+        }
+    });
+*/
 
 /* SEARCH ENGINE 
   (function() {
@@ -703,7 +783,7 @@ $(document).ready(function() {
     } );
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>arRef.</th><th>enRef.</th><th>dvRef.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>ar Ref.</th><th>en Ref.</th><th>dv Ref.</th></tr></tfoot>');
 
 //Setup - add a text input to each search footer cell
                 $('#table_id tfoot th').each(function() {
@@ -791,11 +871,11 @@ minify with: http://minifycode.com/html-minifier
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
-
+/*
     stateSave: true, //TURN OFF TO TEST OFFLINE 123 - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
                     "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
                     "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
-
+*/
     keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
 
     orderCellsTop: false, //Moves the sorting icons to the first header row
@@ -806,9 +886,11 @@ minify with: http://minifycode.com/html-minifier
     order: [
            [0, "asc"]
            ],
+
     pagingType: "full",
+    
     //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-    lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20 -1], ["Show", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
+    lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
     
     language: {
         buttons: {
@@ -825,7 +907,7 @@ minify with: http://minifycode.com/html-minifier
             previous:   "&lt; Back"
             },
         infoEmpty:      "Found 0 Hadith",
-        infoFiltered:   "(filtered from _MAX_ total Hadith)",
+        infoFiltered:   "(filtered from _MAX_ total)",
         zeroRecords:    "No matches found",
         search: "",
         searchPlaceholder: "Search Hmv . . . ",
@@ -876,7 +958,7 @@ B - Buttons
 
 //mobile
 "<'row hidden-md hidden-lg hidden-sm'"+
-        "<'col-sm-7'p><'col-sm-5'i>"+
+        "<'col-sm-5'i><'col-sm-7'p>"+
 ">" +
 //desktop
 "<'row hidden-xs'"+
