@@ -797,12 +797,8 @@ minify with: http://minifycode.com/html-minifier
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
-    stateSave: true, //TURN OFF TO TEST OFFLINE 123 - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
-                    "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
-                    "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
-
     keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
-
+    stateSave: true, //restore table state on page reload
     orderCellsTop: false, //Moves the sorting icons to the first header row
     keys: true, //KeyTable extension 
     mark: true, //highlights searches
