@@ -417,6 +417,13 @@ body { position: relative;
 
     /* removes margin around table, especially top-bottom */
         #table_id {margin: 0 !important;}
+    /* increases the bottom height of show/length -prev 30 */
+        #table_id_length > label > select {height: 34px; }
+/* desktop page buttons height - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 35px;}
+}       /* desktop page buttons height*/
+        #table_id_paginate {height: 36px;}
         
 
     /*reduces navbar height
@@ -987,7 +994,7 @@ B - Buttons
 
 //mobile
 "<'row hidden-md hidden-lg hidden-sm '"+
-        "<'col-xs-2'f><'col-xs-4'><'col-xs-3 'B><'col-xs-1'><'col-xs-2'l>"+
+        "<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>"+
 ">" +
 "<'row hidden-md hidden-lg hidden-sm'"+
         "<'row'<'col-sm-12'p>>" +

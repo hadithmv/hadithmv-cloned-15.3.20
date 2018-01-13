@@ -164,24 +164,6 @@ time, mark, audio, video {
 }
  */
 
-
-/* Paste this css to your style sheet file or under head tag */
-/* This only works with JavaScript, 
-if it's not present, don't show loader */
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url(https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_1.gif) center no-repeat #fff;
-}
-
-
-
  * {font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';}
 
 /*The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements.*/
@@ -435,6 +417,11 @@ body { position: relative;
 
     /* removes margin around table, especially top-bottom */
         #table_id {margin: 0 !important;}
+    /* increases the bottom height of show/length -prev 30 */
+        #table_id_length > label > select {height: 34px; }
+    /* desktop page buttons height */
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 20px;}
+        #table_id_paginate 
         
 
     /*reduces navbar height
@@ -476,7 +463,7 @@ body { position: relative;
 
 
 <body>
-<div class="se-pre-con"></div>
+
 
 
 
@@ -678,15 +665,6 @@ Bukhari === -->
 
 <!--=== === ===INLINE JS=== === ===-->
 <script type="text/javascript">
-
-
-//paste this code under the head tag or in a separate js file.
-  // Wait for window load
-  $(window).load(function() {
-    // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");;
-  });
-
 
 /*Help Alert*/
         function myHelp() {
@@ -1014,7 +992,7 @@ B - Buttons
 
 //mobile
 "<'row hidden-md hidden-lg hidden-sm '"+
-        "<'col-xs-2'f><'col-xs-4'><'col-xs-3 'B><'col-xs-1'><'col-xs-2'l>"+
+        "<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>"+
 ">" +
 "<'row hidden-md hidden-lg hidden-sm'"+
         "<'row'<'col-sm-12'p>>" +
