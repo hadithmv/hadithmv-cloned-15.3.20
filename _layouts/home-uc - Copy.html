@@ -173,9 +173,9 @@ mark {background: #add1f2; color: black; padding: 0;}
 }
 
 
-/* NAVBAR 
+/* NAVBAR Color  /NAVBAR */
 .navbar-default,.navbar-default .navbar-toggle{border-color:#1a619e!important}.navbar-default{background-color:#337ab7!important}.navbar-default .navbar-brand{color:#fff!important}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#99e0ff!important}.navbar-default .navbar-nav>li>a,.navbar-default .navbar-text{color:#fff!important}.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#99e0ff!important}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#99e0ff!important;background-color:#1a619e!important}.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#1a619e!important}.navbar-default .navbar-toggle .icon-bar{background-color:#fff!important}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#fff!important}.navbar-default .navbar-link{color:#fff!important}.navbar-default .navbar-link:hover{color:#99e0ff!important}@media (max-width:767px){.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#fff!important}.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#99e0ff!important}.navbar-default .navbar-nav .open .dropdown-menu>.active>a,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover{color:#99e0ff!important;background-color:#1a619e!important}}
- /NAVBAR */
+
 
 
 
@@ -197,7 +197,8 @@ body { position: relative;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #efefef;
+  color: white; /*prev none*/
+  background-color: #1a619e; /*efefef*/
   text-align: center;
   border-top: 1px solid rgba(34,36,38,.1);
   padding: 10px;}
@@ -572,7 +573,10 @@ body { position: relative;
     </table>
 
 
-
+<div class="footer">
+  <span onclick="myFooter()">2017 &nbsp;</span>
+  <span onclick="myHelp()">hadithmv.github.io</span>
+</div>
 
 
         </div> <!-- === === /tab-pane active" id="40n" === === -->
@@ -593,7 +597,10 @@ body { position: relative;
 
 
 
-
+<div class="footer">
+  <span onclick="myFooter()">2017 &nbsp;</span>
+  <span onclick="myHelp()">hadithmv.github.io</span>
+</div>
 
         </div> <!-- === === /tab-content clearfix === === -->
 
@@ -607,10 +614,7 @@ body { position: relative;
 
 
 
-<div class="footer" ><strong>
-  <span onclick="myFooter()">2017&nbsp;</span>
-  <span onclick="myHelp()">hadithmv.github.io</strong></span>
-</div>
+
 
 
 
@@ -890,7 +894,7 @@ minify with: http://minifycode.com/html-minifier
     pagingType: "full",
     
     //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-    lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
+    lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
     
     language: {
         buttons: {
