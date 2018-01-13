@@ -190,7 +190,7 @@ html {height: 100%; box-sizing: border-box;}
 
 body { position: relative;
   margin: 0;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem; /* footer height*/
   min-height: 100%;}
 
 .footer { position: absolute;
@@ -395,7 +395,7 @@ body { position: relative;
 
 
 /*table sides padding*/
-#table_id_wrapper > div:nth-child(4) > div {padding-left: 9px; padding-right: 9px;}
+#table_id_wrapper > div:nth-child(4) > div {padding-left: 8.5px; padding-right: 8.5px;}
 
 
 /*hides individual column search, mobile view only*/
@@ -407,17 +407,21 @@ body { position: relative;
     /*moves show index a little to the bottom*/
         #table_id_info { padding-top: 6.5px;}
 
+    /* removes margin around table, especially top-bottom */
+        #table_id {margin: 0 !important;}
+        
 
     /*reduces navbar height
-.navbar-xs { min-height:28px; height: 40px; }
-.navbar-xs .navbar-brand{ padding: 0px; padding-left: 12px; font-size: 16px; line-height: 0px; }
-.navbar-xs .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; }*/
-    /*reduces navbar heigh -mobile*//*
+.navbar-xs { min-height:28px; height: 28px; }
+.navbar-xs .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 28px; }
+.navbar-xs .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 28px; }*/
+    /*reduces navbar heigh -mobile
 .navbar-toggle {
      padding: 0 0;
-     margin-top: 12px; 
-     margin: 0;
-}hamburger*/
+     margin-top: 7px;
+     margin-bottom: 0;
+}*/
+/* change this: <div class="tab-content clearfix" style="margin-top: 40px;"> */
 
 
 
@@ -465,11 +469,13 @@ body { position: relative;
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-<li class="active"><a data-toggle="tab" href="#40n"><span class="glyphicon glyphicon-book"></span>&nbsp; 40 Nawawi<span class="sr-only">(current)</span></a></li>
+<li class="active"><a data-toggle="tab" href="#40n">40 Nawawi</a></li>
 
-<li><a data-toggle="" href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank"><span class="glyphicon glyphicon-edit"></span>&nbsp; Submissions</a></li>
+<li><a data-toggle="" href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank">Submissions</a>
 
+<!-- === Bukhari
 <li><a data-toggle="tab" href="#bukh"><span class="glyphicon glyphicon-book"></span>&nbsp; Bukhari<span class="sr-only">(current)</span></a></li>
+Bukhari === -->
 
       </ul>
 <!-- === Search engine 
@@ -479,6 +485,8 @@ body { position: relative;
         </div>
       </form>
    === Search engine === -->
+
+<!-- === Share DISABLED ===      
       <ul class="nav navbar-nav navbar-right">
 
         <li class="dropdown">
@@ -486,24 +494,22 @@ body { position: relative;
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-send"></span>&nbsp; Share <span class="caret"></span></a>
           <ul class="dropdown-menu" >
 
-<!-- === DISABLED ===          
+       
 <li><a href="https://telegram.me/share/url?url=https://hadithmv.github.io&text=TEXT">Telegram</a></li>
 <li><a href="whatsapp://send?text=https://hadithmv.github.com">WhatsApp</a></li>
 <li><a href="facebook.com/sharer.php?u=https://hadithmv.github.io">Facebook</a></li>
-<li><a href="http://www.twitter.com/share?url=https://hadithmv.github.io">Twitter</a></li>
-<li><a href="viber://forward?text=https://hadithmv.github.io">Viber</a></li>
-=== DISABLED === -->
+
+
 
 <li>
-<!-- AddToAny BEGIN -->
-
-<!-- AddToAny END -->
+<li><a href="http://www.twitter.com/share?url=https://hadithmv.github.io">Twitter</a></li>
+<li><a href="viber://forward?text=https://hadithmv.github.io">Viber</a></li>
 </li>
 
           </ul>
         </li>
 
-<!-- Experimental BEGIN
+
         <li class="dropdown">
 
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-wrench"></span>&nbsp; Experimental <span class="caret"></span></a>
@@ -528,8 +534,10 @@ body { position: relative;
 
           </ul>
         </li>
-  Experimental End -->
-      </ul>
+
+      </ul>      Share DISABLED ===   -->
+
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav> <!-- === === /NAV BAR === === -->
@@ -876,11 +884,11 @@ minify with: http://minifycode.com/html-minifier
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
-
+/*
     stateSave: true, //TURN OFF TO TEST OFFLINE 123 - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
                     "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
                     "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
-/**/
+*/
     keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
 
     orderCellsTop: false, //Moves the sorting icons to the first header row
@@ -947,14 +955,14 @@ B - Buttons
 
 //mobile
 "<'row hidden-md hidden-lg hidden-sm '"+
-        "<' col-xs-4'f><'col-xs-4 pull-right text-right'B><'col-xs-4 pull-right text-right'l>"+
+        "<'col-xs-2'f><'col-xs-4'><'col-xs-3 'B><'col-xs-1'><'col-xs-2'l>"+
 ">" +
 "<'row hidden-md hidden-lg hidden-sm'"+
         "<'row'<'col-sm-12'p>>" +
 ">" +
 //desktop
 "<'row-fluid hidden-xs'"+
-    "<'row'<'col-sm-1'l><'col-sm-2'f><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
+    "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
 ">" +
 
 //both
