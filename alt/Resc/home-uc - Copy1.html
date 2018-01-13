@@ -206,9 +206,9 @@ body { position: relative;
   bottom: 0;
   left: 0;
   color: white; /*prev none*/
-  background-color: #1a619e; /*efefef*/
+  background-color: #337ab7; /*efefef*/
   text-align: center;
-  border-top: 1px solid rgba(34,36,38,.1);
+  border-top: 1px solid #1a619e;
   padding: 10px;}
 /*makes footer space smaller, mobile view only
 @media screen and (max-width: 768px) {
@@ -403,7 +403,7 @@ body { position: relative;
 
 
 /*table sides padding*/
-#table_id_wrapper > div:nth-child(4) > div {padding-left: 8.5px; padding-right: 8.5px;}
+#table_id_wrapper > div:nth-child(4) > div {padding-left: 8px; padding-right: 8px;}
 
 
 /*hides individual column search, mobile view only*/
@@ -419,10 +419,17 @@ body { position: relative;
         #table_id {margin: 0 !important;}
     /* increases the bottom height of show/length -prev 30 */
         #table_id_length > label > select {height: 34px; }
-    /* desktop page buttons height */
-        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 20px;}
-        #table_id_paginate 
-        
+/* desktop page buttons height - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+}       /* desktop page buttons height*/
+        #table_id_paginate {height: 36px;}
+
+        /*moves logo a little to the right*/
+        body > nav > div > div.navbar-header > a {margin-left: 5px !important;}
+        /*moves heading title a little lower*/
+
+        #table_id_paginate {display: inline;}
 
     /*reduces navbar height
 .navbar-xs { min-height:28px; height: 28px; }
