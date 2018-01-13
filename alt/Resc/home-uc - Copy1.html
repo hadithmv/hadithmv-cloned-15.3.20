@@ -32,8 +32,6 @@
 
 <style type="text/css">/*
 <!--=== === Base Ext CSS === ===-
-<link rel="stylesheet" type="text/css" href="file:///android_asset/app.css"/>
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app.css"/>-->
 <!--Bootstrap 3-->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 <!--Datatables - Bootstrap 3 Integration -->
@@ -54,8 +52,6 @@
 
 <style type="text/css">/*
 <!--=== === Base Ext JS === ===
-<link rel="stylesheet" type="text/css" href="file:///android_asset/app.js"/>
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app.js"/>-->
 <!--jQuery - Google 3.x snippet-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--Bootstrap 3-->
@@ -73,6 +69,8 @@
 <!--Datatables - Buttons - colvis, html5 -->
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+<!--Datatables - Buttons - print (Must go below other related JS), excel -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 <!--Mark JS -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
@@ -85,16 +83,12 @@
 <!--Datatables - KeyTables - Bootstrap 3 Integration - CSS small - embedded
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.3.2/css/keyTable.bootstrap.min.css"/>-->
 <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
-<!--Datatables - Buttons - print (Must go below other related JS), excel -->
-<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 <!--Keep Conditions -->
 <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
-<!--Search input with autocomplete using Typeahead and Bootstrap -->
-<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.js"></script>
 <!--=== === Web only plugins End === ===-->
-
-
+<!--Search input with autocomplete using Typeahead and Bootstrap - FIX LATER
+<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>-->
 
 
 <!--  === === Base Json === === -->
@@ -117,7 +111,7 @@
 
     /* Ubuntu-mod */
         @font-face {
-            font-family: 'Ubuntu-mod';
+            font-family: 'Ubuntu';
                 src: url('file:///android_asset/Ubuntu-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff2') format('woff2'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff') format('woff'),
@@ -125,19 +119,19 @@
         }
     /* KFGQPCUthmanTahaNaskh-mod */
         @font-face {
-            font-family: 'KFGQPCUthmanTahaNaskh-mod';
-                src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.ttf') format('truetype');
+            font-family: 'KFGQPCUthmanTahaNaskh';
+                src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.woff2') format('woff2'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.ttf') format('truetype');
         }
     /* Tharujamaanu-B-Regular-mod */
         @font-face {
-            font-family: 'Tharujamaanu-B-Regular-mod';
-                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.ttf') format('truetype');
+            font-family: 'Tharujamaanu';
+                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.woff2') format('woff2'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
         }
 
 
@@ -164,7 +158,7 @@ time, mark, audio, video {
 }
  */
 
- * {font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';}
+ * {font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';}
 
 /*The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements.*/
  input[type="search"]::-webkit-search-cancel-button {
@@ -228,13 +222,44 @@ body { position: relative;
 /* options button */
 #table_id_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
 #table_id_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-
+/* page length -show button height */
+#table_id_length > label > select {height: 33px !important;}
+/* options button height */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+/* moves pagination buttons a little higher */
+#table_id_paginate {margin-top: -5px !important;}
+/* moves page lenght button a little to the left */
+#table_id_length > label > select {margin-left: -6px !important;}
 
 /* centers table headers */
 #table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
 
 /* lessens table header bold line */
 #table_id > thead > tr:nth-child(2) > th {border-top: 0;}
+
+
+/*hides table top border, mobile view only*/
+@media screen and (max-width: 768px) {
+    .ui.table {border: none;}
+}
+    /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+    #table_id_wrapper > div:nth-child(1) > div:nth-child(3),
+    #table_id_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+
+    /*moves show index a little to the right*/
+        #table_id_info { margin-left: 10px;}
+    /*moves show index a little to the bottom*/
+        #table_id_info { padding-top: 6.5px;}
+
+    /* removes margin around table, especially top-bottom */
+        #table_id {margin: 0 !important;}
+    /* increases the bottom height of show/length -prev 30 */
+        #table_id_length > label > select {height: 34px; }
+/* desktop page buttons height - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+}       /* desktop page buttons height*/
+        #table_id_paginate {height: 36px;}
 
 
         /*vertically aligns column text to top*/
@@ -247,27 +272,27 @@ body { position: relative;
           /*margin-bottom: -1px;*/
             font-size: 110%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
         .dataTable tbody tr td.col2 { /* ar title */
             direction: rtl;
             font-size: 125%;
             text-align: center;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
 
         .dataTable tbody tr td.col3 { /* en title */
             font-size: 100%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
         .dataTable tbody tr td.col4 { /* dv title */
             direction: rtl;
             font-size: 125%;
             text-align: center;
-            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
         }
 /* @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
@@ -278,7 +303,7 @@ body { position: relative;
             text-align: justify;
             line-height: 1.45;
             font-size: 150%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
 
         .dataTable tbody tr td.col6 { /* en text */
@@ -286,33 +311,33 @@ body { position: relative;
             text-align: justify;
             line-height: 1.37;
             font-size: 105%;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
         .dataTable tbody tr td.col7 { /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.37;
             font-size: 135%;
-            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
         }
 
         .dataTable tbody tr td.col8 { /* ar ref */
             direction: rtl;
             text-align: center;
             font-size: 125%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
         }
         .dataTable tbody tr td.col9 {   /* en ref */
             text-align: center;
-            font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
             font-size: 100%;
         }
         .dataTable tbody tr td.col10 { /* dv ref */
             direction: rtl;
             text-align: center;
             font-size: 115%;
-            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
         }
 
         /*hides table headers even on mobile, prev nth-child(2)*/
@@ -360,7 +385,6 @@ body { position: relative;
 
         html,
         body, {
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
 
             /*font-size: 16px; base font size*/
 
@@ -403,31 +427,13 @@ body { position: relative;
 
 
 /*table sides padding*/
-#table_id_wrapper > div:nth-child(4) > div {padding-left: 8px; padding-right: 8px;}
+#table_id_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
 
 
 /*hides individual column search, mobile view only*/
 @media screen and (max-width: 768px) {
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
-    /*moves show index a little to the right*/
-        #table_id_info { margin-left: 10px;}
-    /*moves show index a little to the bottom*/
-        #table_id_info { padding-top: 6.5px;}
-
-    /* removes margin around table, especially top-bottom */
-        #table_id {margin: 0 !important;}
-    /* increases the bottom height of show/length -prev 30 */
-        #table_id_length > label > select {height: 34px; }
-/* desktop page buttons height - Desktop only MQ */
-@media screen and (min-width: 768px) {
-        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-}       /* desktop page buttons height*/
-        #table_id_paginate {height: 36px;}
-
-        /*moves logo a little to the right*/
-        body > nav > div > div.navbar-header > a {margin-left: 5px !important;}
-        /*moves heading title a little lower*/
 
 
     /*reduces navbar height
@@ -493,7 +499,7 @@ body { position: relative;
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/ic_launcher_round.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important;"></a>
+      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/ic_launcher_round.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important"></a>
 
 <!--prev navbar-text-->
       <h4 class="navbar-text" style="text-align: center;">hadithmv</h4>
@@ -671,6 +677,9 @@ Bukhari === -->
 
 <!--=== === ===INLINE JS=== === ===-->
 <script type="text/javascript">
+
+
+  
 
 /*Help Alert*/
         function myHelp() {
@@ -858,7 +867,7 @@ then use: http://myjson.com, A simple JSON store for your web or mobile app
 minify with: http://minifycode.com/html-minifier
 */
 
-                                  var dataSrc = []; //needed for autocomplete
+//                                  var dataSrc = []; //needed for autocomplete typeahead
 
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
@@ -870,7 +879,7 @@ minify with: http://minifycode.com/html-minifier
 
 //    ajax:'file:///android_asset/nJson.json',
 
-
+/*
 //autocomplete typeahead
       'initComplete': function(){
          var api = this.api();
@@ -898,7 +907,7 @@ minify with: http://minifycode.com/html-minifier
          );
 
       },
-
+*///autocomplete typeahead
 
 
  //   data: data, previously without column titles
