@@ -87,7 +87,7 @@
 <!--Keep Conditions -->
 <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
 <!--Search input with autocomplete using Typeahead and Bootstrap -->
-<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.js"></script>
+<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>
 <!--=== === Web only plugins End === ===-->
 
 
@@ -224,13 +224,44 @@ body { position: relative;
 /* options button */
 #table_id_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
 #table_id_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-
+/* page length -show button height */
+#table_id_length > label > select {height: 33px !important;}
+/* options button height */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+/* moves pagination buttons a little higher */
+#table_id_paginate {margin-top: -5px !important;}
+/* moves page lenght button a little to the left */
+#table_id_length > label > select {margin-left: -6px !important;}
 
 /* centers table headers */
 #table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
 
 /* lessens table header bold line */
 #table_id > thead > tr:nth-child(2) > th {border-top: 0;}
+
+
+/*hides table top border, mobile view only*/
+@media screen and (max-width: 768px) {
+		.ui.table {border: none;}
+}
+		/* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+		#table_id_wrapper > div:nth-child(1) > div:nth-child(3),
+		#table_id_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+
+    /*moves show index a little to the right*/
+        #table_id_info { margin-left: 10px;}
+    /*moves show index a little to the bottom*/
+        #table_id_info { padding-top: 6.5px;}
+
+    /* removes margin around table, especially top-bottom */
+        #table_id {margin: 0 !important;}
+    /* increases the bottom height of show/length -prev 30 */
+        #table_id_length > label > select {height: 34px; }
+/* desktop page buttons height - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+}       /* desktop page buttons height*/
+        #table_id_paginate {height: 36px;}
 
 
         /*vertically aligns column text to top*/
@@ -399,31 +430,13 @@ body { position: relative;
 
 
 /*table sides padding*/
-#table_id_wrapper > div:nth-child(4) > div {padding-left: 8px; padding-right: 8px;}
+#table_id_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
 
 
 /*hides individual column search, mobile view only*/
 @media screen and (max-width: 768px) {
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
-    /*moves show index a little to the right*/
-        #table_id_info { margin-left: 10px;}
-    /*moves show index a little to the bottom*/
-        #table_id_info { padding-top: 6.5px;}
-
-    /* removes margin around table, especially top-bottom */
-        #table_id {margin: 0 !important;}
-    /* increases the bottom height of show/length -prev 30 */
-        #table_id_length > label > select {height: 34px; }
-/* desktop page buttons height - Desktop only MQ */
-@media screen and (min-width: 768px) {
-        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-}       /* desktop page buttons height*/
-        #table_id_paginate {height: 36px;}
-
-        /*moves logo a little to the right*/
-        body > nav > div > div.navbar-header > a {margin-left: 5px !important;}
-        /*moves heading title a little lower*/
 
 
     /*reduces navbar height
@@ -489,7 +502,7 @@ body { position: relative;
         <span class="icon-bar"></span>
       </button>
 
-      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/ic_launcher_round.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important;"></a>
+      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/ic_launcher_round.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important"></a>
 
 <!--prev navbar-text-->
       <h4 class="navbar-text" style="text-align: center;">hadithmv</h4>
