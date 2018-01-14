@@ -284,11 +284,14 @@ body { position: relative;
             font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
         }
-        .dataTable tbody tr td.col9 {   /* en ref */
+        #table_id > tbody > tr > td.col9 {   /* en ref */
+            direction: ltr;
             text-align: center;
             font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
             font-size: 100%;
         }
+        #table_id > tbody > tr > td.col9 {text-align: center;} /* center does not work without this for some reason */
+
         .dataTable tbody tr td.col10 { /* dv ref */
             direction: rtl;
             text-align: center;
@@ -1138,10 +1141,6 @@ B - Buttons
                         }, //json button end
 */
                         //custom button
-                        {text: 'Submissions',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://goo.gl/forms/O0SLwVntIGRdhVGv2';}
-                        }, //custom button end
 
                         //share collection
         {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
@@ -1174,8 +1173,12 @@ B - Buttons
                                 window.location = 'viber://forward?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
                         }, //custom button end
 
-                ] }//end of share collection
-
+                ] },//end of share collection
+                
+                        {text: 'Submissions',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://goo.gl/forms/O0SLwVntIGRdhVGv2';}
+                        }, //custom button end
 
 
                 ] }//end of inner buttons
