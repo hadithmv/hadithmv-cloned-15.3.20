@@ -174,7 +174,7 @@ time, mark, audio, video {
 /* Mark JS - padding: 0; removes useless padding */
 mark {background: #add1f2; color: black; padding: 0;}
 /* Keytable - Desktop only MQ */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
 }
 
@@ -524,12 +524,12 @@ href="file:///android_asset/round-logo-small.png">-->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 
-<li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
+<li class="active NavClick"><a data-toggle="tab" href="#40n">40 Nawawi</a></li>
 
-<li><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank">Submissions</a>
+<li><a data-toggle="" href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank">Submissions</a>
 
 <!-- === Bukhari
-<li class="NavClick"><a data-toggle="tab" href="#bukh">Bukhari</a></li>
+<li class="NavClick"><a data-toggle="tab" href="#bukh"><span class="glyphicon glyphicon-book"></span>&nbsp; Bukhari<span class="sr-only">(current)</span></a></li>
 Bukhari === -->
 
       </ul>
@@ -541,12 +541,9 @@ Bukhari === -->
       </form>
    === Search engine === -->
 
-
+<!-- === Share DISABLED ===      
       <ul class="nav navbar-nav navbar-right">
 
-<li class="NavClick" data-toggle="tab" href="#about"><a href="">About</a></li>
-
-<!-- === Share DISABLED ===      
         <li class="dropdown">
 
 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-send"></span>&nbsp; Share <span class="caret"></span></a>
@@ -616,11 +613,10 @@ Bukhari === -->
 
 
       <div class="tab-content clearfix" style="margin-top: 54px;"> 
-
-
-
-
         <div class="tab-pane fade in active" id="40n"> <!-- === === /40n tab === === -->
+
+
+
 
 <!--TABLE BEGIN,
   "display": Short-hand for the stripe, hover, row-border and order-column classes.
@@ -668,109 +664,15 @@ Bukhari === -->
             <h3>Bukhari</h3>
             <p>Coming Soon</p>
             <p>Insha Allah</p>
-
-<div class="footer">
-  <span onclick="myFooter()">2018 &nbsp;</span>
-  <span onclick="myHelp()">hadithmv.github.io</span>
-</div>
-
         </div> <!-- === === /tab-pane active" id="t2" === === -->
 
 
 
 
-
-        <div class="tab-pane fade" id="about" style=""> <!-- === === /about tab === === -->
-
-
-
-<div class="jumbotron jumbotron text-center" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
-<div class="container">
-  <div class="col-lg-6">  <!-- CHANGE123 file:///android_asset/svg-logo.svg -->
-    <img class="img-responsive center-block" src="file:///android_asset/svg-logo.svg" width="250" />
-</div>
-<div class="col-lg-6">
-<h2>السلام عليكم</h2>
-<br>
-<p class="lead">Welcome to <strong>Hadithmv</strong></p>
-<a href='https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="img-responsive center-block" width="300px" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
-<br>
-</div>
-</div>
-</div>
-
-
-<div class="jumbotron jumbotron text-center">
-<div class="container">
-<div class="col-lg-6">
-<h2>سورة يس</h2>
-<br>
-<p class="lead text-justify" style="direction: rtl;">إِنَّا نَحْنُ نُحْيِي الْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ ۚ وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ</p>
-<br>
-<p class="lead text-justify" style="direction: ltr; font-size: 18px">Indeed, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register</p>
-<br>
-<p class="lead text-justify" style="direction: rtl;">ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިހުކުރި ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.</p>
-<br>
-<p class="lead text-center">[12:36]</p>
-</div>
-<!--
-<div class="col-lg-6">
-    <img class="grow img-responsive center-block" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b2ab9.png" />
-</div>
--->
-</div>
-</div>
-
-
-<div class="jumbotron jumbotron text-center pull" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
-<div class="container">
-<!--
-<div class="col-lg-6">
-    <img class="grow img-responsive center-block " src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.shopify.com/s/files/1/1221/9418/products/A03a-Sahih_Muslim_3D.jpeg" width="200px" style="" />
-</div>
--->
-<div class="col-lg-6 pull-right">
-<h2>صحيح مسلم</h2>
-<br>
-<p class="lead text-justify" style="direction: rtl;">عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ.</p>
-<br>
-<p class="lead text-justify" style="direction: ltr; font-size: 18px">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins.</p>
-<br>
-<p class="lead text-justify" style="direction: rtl;">މުންޛިރު ބިން ޖަރީރު އެކަލޭގެފާނުގެ ބައްޕާފުޅު ފަރާތުން ރިވާކުރެއްވިއެވެ: ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ.</p>
-<br>
-<p class="lead text-center">[1017]</p>
-</div>
-</div>
-</div>
-
-<!--
-<div class="jumbotron jumbotron text-center" style="margin-top: -5px; margin-bottom: -15px;">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-    <p>V 1.2.2</p>
-</div>
-</div>
-</div>
-</div>
--->
-
-
-
-
-
 <div class="footer">
   <span onclick="myFooter()">2018 &nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</span>
 </div>
-
-        </div> <!-- === === /tab-pane active" id="about" === === -->
-
-
-
-
-
-
 
         </div> <!-- === === /tab-content clearfix === === -->
 
@@ -779,6 +681,11 @@ Bukhari === -->
 
 </div> <!-- === /FLEX-ROW === -->
 </div> <!-- === === /CONTAINER === === --> 
+
+
+
+
+
 
 
 
@@ -798,19 +705,15 @@ Bukhari === -->
         /* Narrated Aisha: Allah's Messenger ﷺ said: What is the matter with people that they impose conditions which are not in the Book of Allah? Whoever imposes conditions which are not in the Book of Allah, his conditions will be invalid even if he imposed them a hundred times. */
 
 
-/* removes right tab click active */
-$(".nav li").click(function() {
-    $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
-});
-
 /* NavClick scroll to top - tabs */
 $('.NavClick').click(function(){
-    $("html").animate({ scrollTop: 0 }, "fast");
+    $("html, body").animate({ scrollTop: 0 }, "fast");
+    return false;
  });
 
 
 /* CLOSE NAV ON EXT CLICK */
-$('body').bind('click', function(e) { 
+$('body').bind('click', function(e) {
     if(jQuery(e.target).closest('.navbar').length == 0) {
         // click happened outside of .navbar, so hide
         var opened = $('.navbar-collapse').hasClass('collapse in');
@@ -978,40 +881,6 @@ minify with: http://minifycode.com/html-minifier
 
 //                                  var dataSrc = []; //autocomplete typeahead
 
-
-
-
-
-
-
-//=================== PagingType Media Query
-if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
-
-    $.extend( true, $.fn.dataTable.defaults, {
-    "pagingType": "full_numbers",
-    } );
-
-} else { /* js media query on mobile, tablet */
-
-    $.extend( true, $.fn.dataTable.defaults, {
-    "pagingType": "full",
-    } );
-
-} //===================end if else
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
             data: dataSet,
@@ -1095,7 +964,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on de
            [0, "asc"]
            ],
 
-
+    pagingType: "full",
     
     //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
     lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
@@ -1157,7 +1026,7 @@ B - Buttons
 ">" +
 //desktop
 "<'row-fluid hidden-xs'"+
-    "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-1 text-right'B><'col-sm-6'p>>" +
+    "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
 ">" +
 
 //both
@@ -1285,23 +1154,23 @@ B - Buttons
                         }, //custom button end
                         {text: 'Telegram',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv&text=Hadithmv';}
+                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
                         }, //custom button end
                         {text: 'Facebook',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'https://www.facebook.com/sharer.php?u=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                                window.location = 'https://www.facebook.com/sharer.php?u={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
                         }, //custom button end
                         {text: 'Twitter',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'https://twitter.com/intent/tweet?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv&text=Hadithmv';}
+                                window.location = 'https://twitter.com/intent/tweet?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
                         }, //custom button end
                         {text: 'Whatsapp',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'whatsapp://send?text=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                                window.location = 'whatsapp://send?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
                         }, //custom button end
                         {text: 'Viber',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'viber://forward?text=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                                window.location = 'viber://forward?text={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
                         }, //custom button end
 
                 ] },//end of share collection
@@ -1322,23 +1191,14 @@ B - Buttons
   }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
 
 
-    //======================================== HammerJS - Swipe
-    delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
-
-
-if (window.matchMedia("(min-width: 768px)").matches) {  /* js media query on desktop */
- /* empty */
-} else { /* js media query on mobile, tablet */
-
-              Hammer(table_id).on("swipeleft", function() {
-                    table.page( 'next' ).draw( 'page' );  
-              });
-              Hammer(document.getElementById("table_id")).on("swiperight", function() {
-                    table.page( 'previous' ).draw( 'page' );  
-              });
-
-} //===================end if else
-
+    // HammerJS - Swipe
+    Hammer(table_id).on("swipeleft", function() {
+          table.page( 'next' ).draw( 'page' );  
+    });
+    Hammer(document.getElementById("table_id")).on("swiperight", function() {
+          table.page( 'previous' ).draw( 'page' );  
+    });
+    // HammerJS - Swipe End
 
 
     // ScrollTop - If the user changes the page, scroll to the top
