@@ -86,10 +86,9 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 <!--Keep Conditions -->
 <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
-<!--Search input with autocomplete using Typeahead and Bootstrap -->
-<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>
 <!--=== === Web only plugins End === ===-->
-
+<!--Search input with autocomplete using Typeahead and Bootstrap - FIX LATER
+<script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>-->
 
 
 
@@ -113,7 +112,7 @@
 
     /* Ubuntu-mod */
         @font-face {
-            font-family: 'Ubuntu-mod';
+            font-family: 'Ubuntu';
                 src: url('file:///android_asset/Ubuntu-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff2') format('woff2'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff') format('woff'),
@@ -121,20 +120,21 @@
         }
     /* KFGQPCUthmanTahaNaskh-mod */
         @font-face {
-            font-family: 'KFGQPCUthmanTahaNaskh-mod';
-                src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-mod.ttf') format('truetype');
+            font-family: 'KFGQPCUthmanTahaNaskh';
+                src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.woff2') format('woff2'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.ttf') format('truetype');
         }
     /* Tharujamaanu-B-Regular-mod */
         @font-face {
-            font-family: 'Tharujamaanu-B-Regular-mod';
-                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod.ttf') format('truetype');
+            font-family: 'Tharujamaanu';
+                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.woff2') format('woff2'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+                     url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
         }
+
 
 
 /* Reset CSS v2.0 | 20110126
@@ -160,7 +160,7 @@ time, mark, audio, video {
 }
  */
 
- * {font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';}
+ * {font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';}
 
 /*The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements.*/
  input[type="search"]::-webkit-search-cancel-button {
@@ -216,54 +216,6 @@ body { position: relative;
 
 
 
-
-
-/* adjusts search input height to match rest */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
-#table_id_filter > label > input {height: 33px;}
-/* options button */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
-#table_id_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-/* page length -show button height */
-#table_id_length > label > select {height: 33px !important;}
-/* options button height */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
-/* moves pagination buttons a little higher */
-#table_id_paginate {margin-top: -5px !important;}
-/* moves page lenght button a little to the left */
-#table_id_length > label > select {margin-left: -6px !important;}
-
-/* centers table headers */
-#table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
-
-/* lessens table header bold line */
-#table_id > thead > tr:nth-child(2) > th {border-top: 0;}
-
-
-/*hides table top border, mobile view only*/
-@media screen and (max-width: 768px) {
-		.ui.table {border: none;}
-}
-		/* moves buttons and page length a little to right, by removing right padding of filler grid columns */
-		#table_id_wrapper > div:nth-child(1) > div:nth-child(3),
-		#table_id_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-
-    /*moves show index a little to the right*/
-        #table_id_info { margin-left: 10px;}
-    /*moves show index a little to the bottom*/
-        #table_id_info { padding-top: 6.5px;}
-
-    /* removes margin around table, especially top-bottom */
-        #table_id {margin: 0 !important;}
-    /* increases the bottom height of show/length -prev 30 */
-        #table_id_length > label > select {height: 34px; }
-/* desktop page buttons height - Desktop only MQ */
-@media screen and (min-width: 768px) {
-        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-}       /* desktop page buttons height*/
-        #table_id_paginate {height: 36px;}
-
-
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
             vertical-align: top;
@@ -274,27 +226,27 @@ body { position: relative;
           /*margin-bottom: -1px;*/
             font-size: 110%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
         .dataTable tbody tr td.col2 { /* ar title */
             direction: rtl;
             font-size: 125%;
             text-align: center;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
 
         .dataTable tbody tr td.col3 { /* en title */
             font-size: 100%;
             text-align: center;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
         .dataTable tbody tr td.col4 { /* dv title */
             direction: rtl;
             font-size: 125%;
             text-align: center;
-            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
         }
 /* @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
@@ -305,41 +257,41 @@ body { position: relative;
             text-align: justify;
             line-height: 1.45;
             font-size: 150%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
 
         .dataTable tbody tr td.col6 { /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.37;
-            font-size: 105%;
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+            font-size: 107%;
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
         .dataTable tbody tr td.col7 { /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.37;
             font-size: 135%;
-            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
         }
 
         .dataTable tbody tr td.col8 { /* ar ref */
             direction: rtl;
             text-align: center;
             font-size: 125%;
-            font-family: 'KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod','Ubuntu-mod';
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
         }
         .dataTable tbody tr td.col9 {   /* en ref */
             text-align: center;
-            font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
             font-size: 100%;
         }
         .dataTable tbody tr td.col10 { /* dv ref */
             direction: rtl;
             text-align: center;
             font-size: 115%;
-            font-family: 'Tharujamaanu-B-Regular-mod','Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod';
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
         }
 
         /*hides table headers even on mobile, prev nth-child(2)*/
@@ -387,7 +339,7 @@ body { position: relative;
 
         html,
         body, {
-           font-family: 'Ubuntu-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-B-Regular-mod';
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
 
             /*font-size: 16px; base font size*/
 
@@ -438,6 +390,58 @@ body { position: relative;
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
 
+
+/* adjusts search input height to match rest */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
+#table_id_filter > label > input {height: 33px;}
+/* options button */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
+#table_id_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
+/* page length -show button height */
+#table_id_length > label > select {height: 33px !important;}
+/* options button height */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+/* moves pagination buttons a little higher */
+#table_id_paginate {margin-top: -5px !important;}
+/* moves page lenght button a little to the left */
+#table_id_length > label > select {margin-left: -6px !important;}
+
+/* centers table headers */
+#table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
+
+/* lessens table header bold line */
+#table_id > thead > tr:nth-child(2) > th {border-top: 0;}
+
+
+/*hides table top border, mobile view only*/
+@media screen and (max-width: 768px) {
+		.ui.table {border: none;}
+}
+		/* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+		#table_id_wrapper > div:nth-child(1) > div:nth-child(3),
+		#table_id_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+
+    /*moves show index a little to the right*/
+        #table_id_info { margin-left: 10px;}
+    /*moves show index a little to the bottom*/
+        #table_id_info { padding-top: 6.5px;}
+
+    /* removes margin around table, especially top-bottom */
+        #table_id {margin: 0 !important;}
+    /* increases the bottom height of show/length -prev 30 */
+        #table_id_length > label > select {height: 34px; }
+/* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+}       /* desktop page buttons height - buttons row - mobile */
+        #table_id_paginate {height: 40px;}
+
+        /* dont forget tab height - margin for whole table */
+        /*       <div class="tab-content clearfix" style="margin-top: 54px;">  */
+/* moves pagination buttons a bit higher - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+}  
 
     /*reduces navbar height
 .navbar-xs { min-height:28px; height: 28px; }
@@ -600,7 +604,7 @@ Bukhari === -->
 
 
 
-      <div class="tab-content clearfix" style="margin-top: 50px;"> 
+      <div class="tab-content clearfix" style="margin-top: 54px;"> 
         <div class="tab-pane fade in active" id="40n"> <!-- === === /40n tab === === -->
 
 
@@ -634,7 +638,7 @@ Bukhari === -->
 
 
 <div class="footer">
-  <span onclick="myFooter()">2017 &nbsp;</span>
+  <span onclick="myFooter()">2018 &nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</span>
 </div>
 
@@ -658,7 +662,7 @@ Bukhari === -->
 
 
 <div class="footer">
-  <span onclick="myFooter()">2017 &nbsp;</span>
+  <span onclick="myFooter()">2018 &nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</span>
 </div>
 
@@ -683,7 +687,7 @@ Bukhari === -->
 
 /*Help Alert*/
         function myHelp() {
-            alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+p] = Print");
+            alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
         }
 
 /*Footer Alert*/
@@ -752,11 +756,11 @@ $('.navbar-nav a').on('click', function () {
   })();
 */
 
-/* FOCUS SEARCH INPUT */
+/* FOCUS SEARCH INPUT 
 $('body').on('shown.bs.modal', '#searchModal', function () {
     $('input:visible:enabled:first', this).focus();
 })
-
+*/
 /* DEFER IMAGES AND IFRAMES */
 var imgDefer = document.getElementsByTagName('img');
 for (var i=0; i<imgDefer.length; i++) {
@@ -867,7 +871,7 @@ then use: http://myjson.com, A simple JSON store for your web or mobile app
 minify with: http://minifycode.com/html-minifier
 */
 
-                                  var dataSrc = []; //needed for autocomplete
+//                                  var dataSrc = []; //autocomplete typeahead
 
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
@@ -879,8 +883,8 @@ minify with: http://minifycode.com/html-minifier
 
 //    ajax:'file:///android_asset/nJson.json',
 
-
-//autocomplete typeahead
+/*
+//====================================================autocomplete typeahead
       'initComplete': function(){
          var api = this.api();
          
@@ -907,7 +911,7 @@ minify with: http://minifycode.com/html-minifier
          );
 
       },
-
+*///====================================================autocomplete typeahead
 
 
  //   data: data, previously without column titles
@@ -1101,10 +1105,20 @@ B - Buttons
                           exportOptions: { columns: [':visible'], rows: [':visible'] }
                         }, //end of excel
 
+                        { extend: 'csv',
+                          key: { key: 'v', shiftKey: true },
+                          text: 'Csv',
+                          exportOptions: { columns: [':visible'], rows: [':visible'] }
+                        }, //end of csv
+
                         { extend: 'colvis',
                           key: {key: 'h', shiftKey: true},
                           text: 'Hide'
                         }, //end of colvis
+                        {text: 'Site',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://hadithmv.github.io';}
+                        }, //custom button end
 /*
                         //json button (export all)
                         { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
@@ -1134,6 +1148,10 @@ B - Buttons
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                         }, //custom button end
+                        {text: 'Telegram',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
+                        }, //custom button end
                         {text: 'Facebook',
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://www.facebook.com/sharer.php?u={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
@@ -1141,10 +1159,6 @@ B - Buttons
                         {text: 'Twitter',
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://twitter.com/intent/tweet?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
-                        }, //custom button end
-                        {text: 'Telegram',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
                         }, //custom button end
                         {text: 'Whatsapp',
                                 action: function ( e, dt, button, config ) {
