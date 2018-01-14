@@ -941,6 +941,7 @@ minify with: http://minifycode.com/html-minifier
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
+/* CHANGE123 */
     bstateSave: true, //Seems to work even offline - restore table state on page reload
                     "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
                     "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
@@ -1189,10 +1190,10 @@ B - Buttons
 
     // HammerJS - Swipe
     Hammer(table_id).on("swipeleft", function() {
-          table.page( 'previous' ).draw( 'page' );  
+          table.page( 'next' ).draw( 'page' );  
     });
     Hammer(document.getElementById("table_id")).on("swiperight", function() {
-          table.page( 'next' ).draw( 'page' );  
+          table.page( 'previous' ).draw( 'page' );  
     });
     // HammerJS - Swipe End
 
