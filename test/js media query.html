@@ -1195,17 +1195,27 @@ B - Buttons
     delete Hammer.defaults.cssProps.userSelect;		//enables text selection, but that conflicts with swipe
 
 
-var mq = window.matchMedia('@media all and (max-width: 700px)');
-if(mq.matches) {
-
-  	Hammer(table_id).on("swipeleft", function() {
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        document.body.style.backgroundColor = "yellow";
+    } else {
+        Hammer(table_id).on("swipeleft", function() {
           table.page( 'next' ).draw( 'page' );  
     });
     Hammer(document.getElementById("table_id")).on("swiperight", function() {
           table.page( 'previous' ).draw( 'page' );  
     });
+    }
+}
 
-};
+var x = window.matchMedia("(min-width: 768px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+
+  	
+
+
  
 
 
