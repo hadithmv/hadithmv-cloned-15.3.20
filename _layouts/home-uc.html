@@ -896,7 +896,9 @@ if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on de
 
 } else { /* js media query on mobile, tablet */
 
-    $.fn.dataTable.defaults.pagingType = "full";
+    $.extend( true, $.fn.dataTable.defaults, {
+    "pagingType": "full",
+    } );
 
 } //===================end if else
 
@@ -1058,7 +1060,7 @@ B - Buttons
 ">" +
 //desktop
 "<'row-fluid hidden-xs'"+
-    "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
+    "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-1 text-right'B><'col-sm-6'p>>" +
 ">" +
 
 //both
