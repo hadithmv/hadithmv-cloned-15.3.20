@@ -1195,9 +1195,9 @@ B - Buttons
     delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
 
 
-if (window.matchMedia("(min-width: 768px)").matches) {
+if (window.matchMedia("(min-width: 768px)").matches) {  /* js media query on desktop */
  /* empty */
-} else {
+} else { /* js media query on mobile */
 
               Hammer(table_id).on("swipeleft", function() {
                     table.page( 'next' ).draw( 'page' );  
