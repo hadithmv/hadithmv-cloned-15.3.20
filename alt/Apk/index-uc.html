@@ -22,10 +22,10 @@
 
 <!--  === === Base C CSS JS === === -->
 <link rel="stylesheet" type="text/css" href="file:///android_asset/app2.css">
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Resc/app2.css">
+<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Apk/Resc/app2.css">
 
 <script type="text/javascript" src="file:///android_asset/app2.js"></script>
-<script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/app2.js"></script>
+<script type="text/javascript" src="https://hadithmv.github.io/alt/Apk/Resc/app2.js"></script>
 <!--  === === Base C CSS JS End=== === -->
 
 
@@ -74,6 +74,8 @@
 <!--Mark JS -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+<!--HammerJS -->
+<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 <!--=== === Base Ext JS End === ===-->
 */</style>
 
@@ -93,9 +95,9 @@
 
 
 <!--  === === Base Json === === -->
-<script type="text/javascript" src="file:///android_asset/40nJson.js"></script>
-<script src="https://hadithmv.github.io/alt/json/40nJson.js"></script>
-<!--  === === Base Json  End=== === -->
+<script src="file:///android_asset/40nJson.js"></script>
+<script src="https://hadithmv.github.io/alt/Apk/json/40nJson.js"></script>
+<!--  === === Base Json End=== === -->
 
 
 
@@ -506,8 +508,9 @@ body { position: relative;
         <span class="icon-bar"></span>
       </button>
 
-<!--https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/round-logo-small.png"
-  href="file:///android_asset/round-logo-small.png">-->
+<!-- CHANGE123
+https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/round-logo-small.png"
+href="file:///android_asset/round-logo-small.png">-->
       <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="file:///android_asset/round-logo-small.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important"></a>
 
 <!--prev navbar-text-->
@@ -937,7 +940,12 @@ minify with: http://minifycode.com/html-minifier
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
-/*
+
+/* CHANGE123 
+    bstateSave: true, //Seems to work even offline - restore table state on page reload
+                    "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
+                    "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
+*//*
     stateSave: true, //TURN OFF TO TEST OFFLINE 123 - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
                     "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
                     "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
@@ -1177,8 +1185,17 @@ B - Buttons
 
 
 
-  }); //  END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
+  }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#table_id').DataTable({
 
+
+    // HammerJS - Swipe
+    Hammer(table_id).on("swipeleft", function() {
+          table.page( 'next' ).draw( 'page' );  
+    });
+    Hammer(document.getElementById("table_id")).on("swiperight", function() {
+          table.page( 'previous' ).draw( 'page' );  
+    });
+    // HammerJS - Swipe End
 
 
     // ScrollTop - If the user changes the page, scroll to the top
