@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;gBACiB;EACb,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,CAAC",
-"sources": ["../scss/demo-styles.scss"],
-"names": [],
-"file": "demo-styles.css"
-}
