@@ -896,9 +896,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on de
 
 } else { /* js media query on mobile, tablet */
 
-    $.extend( true, $.fn.dataTable.defaults, {
-    "pagingType": "full",
-    } );
+    $.fn.dataTable.defaults.pagingType = "full";
 
 } //===================end if else
 
