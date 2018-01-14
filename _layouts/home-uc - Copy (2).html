@@ -27,7 +27,7 @@
 <script type="text/javascript" src="file:///android_asset/app2.js"></script>
 <script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/app2.js"></script>
 <!--  === === Base C CSS JS End=== === -->
-
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css"/>
 
 
 <style type="text/css">/*
@@ -438,8 +438,10 @@ body { position: relative;
 
         /* dont forget tab height - margin for whole table */
         /*       <div class="tab-content clearfix" style="margin-top: 54px;">  */
-
-        
+/* moves pagination buttons a bit higher - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+}  
 
     /*reduces navbar height
 .navbar-xs { min-height:28px; height: 28px; }
@@ -754,11 +756,11 @@ $('.navbar-nav a').on('click', function () {
   })();
 */
 
-/* FOCUS SEARCH INPUT */
+/* FOCUS SEARCH INPUT 
 $('body').on('shown.bs.modal', '#searchModal', function () {
     $('input:visible:enabled:first', this).focus();
 })
-
+*/
 /* DEFER IMAGES AND IFRAMES */
 var imgDefer = document.getElementsByTagName('img');
 for (var i=0; i<imgDefer.length; i++) {
