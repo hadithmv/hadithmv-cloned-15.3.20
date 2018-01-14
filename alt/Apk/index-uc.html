@@ -91,6 +91,7 @@
 <script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>-->
 
 
+
 <!--  === === Base Json === === -->
 <script type="text/javascript" src="file:///android_asset/40nJson.js"></script>
 <script src="https://hadithmv.github.io/alt/json/40nJson.js"></script>
@@ -133,6 +134,7 @@
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
         }
+
 
 
 /* Reset CSS v2.0 | 20110126
@@ -214,54 +216,6 @@ body { position: relative;
 
 
 
-
-
-/* adjusts search input height to match rest */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
-#table_id_filter > label > input {height: 33px;}
-/* options button */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
-#table_id_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-/* page length -show button height */
-#table_id_length > label > select {height: 33px !important;}
-/* options button height */
-#table_id_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
-/* moves pagination buttons a little higher */
-#table_id_paginate {margin-top: -5px !important;}
-/* moves page lenght button a little to the left */
-#table_id_length > label > select {margin-left: -6px !important;}
-
-/* centers table headers */
-#table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
-
-/* lessens table header bold line */
-#table_id > thead > tr:nth-child(2) > th {border-top: 0;}
-
-
-/*hides table top border, mobile view only*/
-@media screen and (max-width: 768px) {
-    .ui.table {border: none;}
-}
-    /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
-    #table_id_wrapper > div:nth-child(1) > div:nth-child(3),
-    #table_id_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-
-    /*moves show index a little to the right*/
-        #table_id_info { margin-left: 10px;}
-    /*moves show index a little to the bottom*/
-        #table_id_info { padding-top: 6.5px;}
-
-    /* removes margin around table, especially top-bottom */
-        #table_id {margin: 0 !important;}
-    /* increases the bottom height of show/length -prev 30 */
-        #table_id_length > label > select {height: 34px; }
-/* desktop page buttons height - Desktop only MQ */
-@media screen and (min-width: 768px) {
-        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-}       /* desktop page buttons height*/
-        #table_id_paginate {height: 36px;}
-
-
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
             vertical-align: top;
@@ -310,7 +264,7 @@ body { position: relative;
             direction: ltr;
             text-align: justify;
             line-height: 1.37;
-            font-size: 105%;
+            font-size: 107%;
            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
         .dataTable tbody tr td.col7 { /* dv text */
@@ -385,6 +339,7 @@ body { position: relative;
 
         html,
         body, {
+           font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
 
             /*font-size: 16px; base font size*/
 
@@ -435,6 +390,58 @@ body { position: relative;
         #table_id > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
 }
 
+
+/* adjusts search input height to match rest */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
+#table_id_filter > label > input {height: 33px;}
+/* options button */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
+#table_id_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
+/* page length -show button height */
+#table_id_length > label > select {height: 33px !important;}
+/* options button height */
+#table_id_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+/* moves pagination buttons a little higher */
+#table_id_paginate {margin-top: -5px !important;}
+/* moves page lenght button a little to the left */
+#table_id_length > label > select {margin-left: -6px !important;}
+
+/* centers table headers */
+#table_id > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
+
+/* lessens table header bold line */
+#table_id > thead > tr:nth-child(2) > th {border-top: 0;}
+
+
+/*hides table top border, mobile view only*/
+@media screen and (max-width: 768px) {
+    .ui.table {border: none;}
+}
+    /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+    #table_id_wrapper > div:nth-child(1) > div:nth-child(3),
+    #table_id_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+
+    /*moves show index a little to the right*/
+        #table_id_info { margin-left: 10px;}
+    /*moves show index a little to the bottom*/
+        #table_id_info { padding-top: 6.5px;}
+
+    /* removes margin around table, especially top-bottom */
+        #table_id {margin: 0 !important;}
+    /* increases the bottom height of show/length -prev 30 */
+        #table_id_length > label > select {height: 34px; }
+/* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+}       /* desktop page buttons height - buttons row - mobile */
+        #table_id_paginate {height: 40px;}
+
+        /* dont forget tab height - margin for whole table */
+        /*       <div class="tab-content clearfix" style="margin-top: 54px;">  */
+/* moves pagination buttons a bit higher - Desktop only MQ */
+@media screen and (min-width: 768px) {
+        #table_id_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+}  
 
     /*reduces navbar height
 .navbar-xs { min-height:28px; height: 28px; }
@@ -499,8 +506,7 @@ body { position: relative;
         <span class="icon-bar"></span>
       </button>
 
-<!--
-  https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/round-logo-small.png"
+<!--https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/round-logo-small.png"
   href="file:///android_asset/round-logo-small.png">-->
       <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="file:///android_asset/round-logo-small.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important"></a>
 
@@ -600,7 +606,7 @@ Bukhari === -->
 
 
 
-      <div class="tab-content clearfix" style="margin-top: 50px;"> 
+      <div class="tab-content clearfix" style="margin-top: 54px;"> 
         <div class="tab-pane fade in active" id="40n"> <!-- === === /40n tab === === -->
 
 
@@ -634,7 +640,7 @@ Bukhari === -->
 
 
 <div class="footer">
-  <span onclick="myFooter()">2017 &nbsp;</span>
+  <span onclick="myFooter()">2018 &nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</span>
 </div>
 
@@ -658,7 +664,7 @@ Bukhari === -->
 
 
 <div class="footer">
-  <span onclick="myFooter()">2017 &nbsp;</span>
+  <span onclick="myFooter()">2018 &nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</span>
 </div>
 
@@ -681,12 +687,9 @@ Bukhari === -->
 <!--=== === ===INLINE JS=== === ===-->
 <script type="text/javascript">
 
-
-  
-
 /*Help Alert*/
         function myHelp() {
-            alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+p] = Print");
+            alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
         }
 
 /*Footer Alert*/
@@ -755,11 +758,11 @@ $('.navbar-nav a').on('click', function () {
   })();
 */
 
-/* FOCUS SEARCH INPUT */
+/* FOCUS SEARCH INPUT 
 $('body').on('shown.bs.modal', '#searchModal', function () {
     $('input:visible:enabled:first', this).focus();
 })
-
+*/
 /* DEFER IMAGES AND IFRAMES */
 var imgDefer = document.getElementsByTagName('img');
 for (var i=0; i<imgDefer.length; i++) {
@@ -870,20 +873,15 @@ then use: http://myjson.com, A simple JSON store for your web or mobile app
 minify with: http://minifycode.com/html-minifier
 */
 
-//                                  var dataSrc = []; //needed for autocomplete typeahead
+//                                  var dataSrc = []; //autocomplete typeahead
 
 //  $(document).ready(function() {
   var table = $('#table_id').DataTable({
             data: dataSet,
 
-//    ajax:'https://hadithmv.github.io/alt/json/nJson.json',
-
-//            data: dataSet,  //CHANGE123
-
-//    ajax:'file:///android_asset/nJson.json',
 
 /*
-//autocomplete typeahead
+//====================================================autocomplete typeahead
       'initComplete': function(){
          var api = this.api();
          
@@ -910,7 +908,7 @@ minify with: http://minifycode.com/html-minifier
          );
 
       },
-*///autocomplete typeahead
+*///====================================================autocomplete typeahead
 
 
  //   data: data, previously without column titles
@@ -1103,11 +1101,21 @@ B - Buttons
                           text: 'Excel',
                           exportOptions: { columns: [':visible'], rows: [':visible'] }
                         }, //end of excel
+
+                        { extend: 'csv',
+                          key: { key: 'v', shiftKey: true },
+                          text: 'Csv',
+                          exportOptions: { columns: [':visible'], rows: [':visible'] }
+                        }, //end of csv
 */
                         { extend: 'colvis',
                           key: {key: 'h', shiftKey: true},
                           text: 'Hide'
                         }, //end of colvis
+                        {text: 'Site',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://hadithmv.github.io';}
+                        }, //custom button end
 /*
                         //json button (export all)
                         { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
@@ -1137,6 +1145,10 @@ B - Buttons
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                         }, //custom button end
+                        {text: 'Telegram',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
+                        }, //custom button end
                         {text: 'Facebook',
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://www.facebook.com/sharer.php?u={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}';}
@@ -1144,10 +1156,6 @@ B - Buttons
                         {text: 'Twitter',
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://twitter.com/intent/tweet?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
-                        }, //custom button end
-                        {text: 'Telegram',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://telegram.me/share/url?url={https://play.google.com/store/apps/details?id=com.hadithmv.hmv}&text={Hadithmv}';}
                         }, //custom button end
                         {text: 'Whatsapp',
                                 action: function ( e, dt, button, config ) {
