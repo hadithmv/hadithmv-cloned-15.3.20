@@ -112,7 +112,7 @@
 <!--=== Embedded CSS ===-->
 <style type="text/css">
 
-/*================================================ */html, body {font-size: 130%;} /*CHANGE12345*/
+/*================================================ */html, body {font-size: 130% !important;} /*CHANGE12345*/
 
 
     /* Ubuntu-mod */
@@ -177,7 +177,7 @@ time, mark, audio, video {
 /* Mark JS - padding: 0; removes useless padding */
 mark {background: #add1f2; color: black; padding: 0;}
 /* Keytable - Desktop only MQ */
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
   table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
 }
 
@@ -990,7 +990,7 @@ minify with: http://minifycode.com/html-minifier
 
 
 //=================== PagingType Media Query
-if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+if (window.matchMedia("(min-width: 1300px)").matches) {  /* js media query on desktop */
 
     $.extend( true, $.fn.dataTable.defaults, {
     "pagingType": "full_numbers",
