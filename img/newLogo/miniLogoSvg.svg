@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+	<style>
+		.shp0 { fill: #337ab7 } 
+		.shp1 { fill: none;stroke: #fff; paint-order: stroke fill markers; stroke-width: 20 } 
+		.txt2 { font-size: 99px; fill: rgb(0,0,0);font-family: Arial Black, georgia, times, serif; } 
+		.txt3 { font-size: 110px; fill: rgb(0,0,0);font-family: Arial Black, georgia, times, serif; } 
+		.shp4, .txt2, .txt3 { fill: #fff } 
+
+	</style>
+	<path id="Shape 1" class="shp0" d="M150.73,873.27h722.53v-722.53h-722.53z" />
+	<path id="Shape 1" class="shp0" d="M1.09,512l510.91,510.91l510.91,-510.91l-510.91,-510.91z" />
+	<path id="Shape 3" class="shp1" d="M773.81,512c0,-145.37 -117.51,-262.87 -262.87,-262.87c-145.37,0 -262.87,117.5 -262.87,262.87c0,145.37 117.51,262.87 262.87,262.87c145.37,0 262.87,-117.5 262.87,-262.87z" />
+	<text id="Text layer 12" style="transform: matrix(1.246,0,0,1.246,410,645.294)" >
+		<tspan x="0" y="0" class="txt2">mv</tspan>
+	</text>
+	<text id="Text layer 12" style="transform: matrix(1.220,0,0,1.220,271,515.737)" >
+		<tspan x="0" y="0" class="txt3">Hadith</tspan>
+	</text>
+	<path id="Shape 4" class="shp4" d="M724.28,294.68l103.53,0v-103.53h-103.53z" />
+	<path id="Shape 4" class="shp4" d="M438.76,146.96l73.21,73.21l73.21,-73.21l-73.21,-73.21z" />
+	<path id="Shape 4" class="shp4" d="M805,510.72l73.21,73.21l73.21,-73.21l-73.21,-73.21z" />
+	<path id="Shape 4" class="shp4" d="M72.51,510.72l73.21,73.21l73.21,-73.21l-73.21,-73.21z" />
+	<path id="Shape 4" class="shp4" d="M438.76,876.96l73.21,73.21l73.21,-73.21l-73.21,-73.21z" />
+	<path id="Shape 4" class="shp4" d="M194.84,297.18l103.53,0v-103.53h-103.53z" />
+	<path id="Shape 4" class="shp4" d="M193.59,830.35h103.53v-103.53h-103.53z" />
+	<path id="Shape 4" class="shp4" d="M726.77,830.35h103.53v-103.53h-103.53z" />
+</svg>
