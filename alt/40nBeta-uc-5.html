@@ -72,9 +72,6 @@
 <!--Keep Conditions - can set filtering, ordering and page of the demo table by using unique URL hash - https://www.gyrocode.com/articles/jquery-datatables-save-and-restore-table-state-using-unique-url/ -->
   <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
 
-<!--HammerJS -->
-<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-
 <!--<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>
 <script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/hmv-mod.js"></script>-->
 <style type="text/css">
@@ -257,7 +254,7 @@ time, mark, audio, video {
 
         .dataTable tbody tr td.col8 {   /* ar ref */
             direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
+            text-align: center;
             font-size: 120%;
             font-family: none;
         }
@@ -675,31 +672,12 @@ time, mark, audio, video {
 
 
 
-    //======================================== HammerJS - Swipe
-    delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
-
-
-if (window.matchMedia("(min-width: 768px)").matches) {  /* js media query on desktop */
- /* empty */
-} else { /* js media query on mobile, tablet */
-
-              Hammer(table_id).on("swipeleft", function() {
-                    table.page( 'next' ).draw( 'page' );  
-              });
-              Hammer(document.getElementById("table_id")).on("swiperight", function() {
-                    table.page( 'previous' ).draw( 'page' );  
-              });
-              
-$table.dataTable().fnDraw();
-} //===================end if else
-
-/*
     // ScrollTop - If the user changes the page, scroll to the top
     $(".dataTable").on("page.dt", function () {
         $("html, body").animate({ scrollTop: 0 }, "fast");
         $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
     });
-*/
+
 // Apply S Buttons
                 table.buttons().container()
                 table.buttons(0, null).containers();
