@@ -2,7 +2,7 @@
 <html lang="en"><!--change languages later-->
 
 <head>
-<!--<meta name="robots" content="noindex"/> -->
+<meta name="robots" content="noindex"/>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
     <title>Hadithmv - Accessible and Sourced</title>
@@ -136,9 +136,13 @@ mark {background: #add1f2; color: black; padding: 0;}
 .navbar-default,.navbar-default .navbar-toggle{border-color:#1a619e!important}.navbar-default{background-color:#337ab7!important}.navbar-default .navbar-brand{color:#fff!important}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#99e0ff!important}.navbar-default .navbar-nav>li>a,.navbar-default .navbar-text{color:#fff!important}.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#99e0ff!important}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#99e0ff!important;background-color:#1a619e!important}.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#1a619e!important}.navbar-default .navbar-toggle .icon-bar{background-color:#fff!important}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#fff!important}.navbar-default .navbar-link{color:#fff!important}.navbar-default .navbar-link:hover{color:#99e0ff!important}@media (max-width:767px){.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#fff!important}.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#99e0ff!important}.navbar-default .navbar-nav .open .dropdown-menu>.active>a,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover{color:#99e0ff!important;background-color:#1a619e!important}}
 
 
-
-
-
+        /*logo transition effect*/
+        .imgGrow
+        {    transition:all 0.25s ease; }
+        .imgGrow:hover
+        {   -webkit-transform: scale(1.15);
+            -ms-transform: scale(1.15);
+            transform: scale(1.15); }
 
 
 
@@ -467,9 +471,8 @@ body { position: relative;
       </button>
 
 <!-- CHANGE123
-https://hadithmv.github.io/img/ic_launcher_round/res/mipmap-hdpi/round-logo-small.png"
-href="file:///android_asset/round-logo-small.png">-->
-      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo" src="https://hadithmv.github.io/alt/Apk/round-logo-small.png" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important"></a>
+href="file:///android_asset/newLogo2-Use.svg">-->
+      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo imgGrow" src="https://hadithmv.github.io/img/newLogo2/newLogo2-Use.svg" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important; background-color: white; border-radius: 50%;"></a>
 
 <!--prev navbar-text-->
       <h4 class="navbar-text" style="text-align: center;">hadithmv</h4>
@@ -641,14 +644,14 @@ Bukhari === -->
 
 <div class="jumbotron jumbotron text-center" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
 <div class="container">
-  <div class="col-lg-6">  <!-- CHANGE123 "file:///android_asset/svg-logo.svg" -->
-    <img class="img-responsive center-block" src="https://hadithmv.github.io/img/svg-logo.svg" width="250" />
+  <div class="col-lg-6">  <!-- CHANGE123 "file:///android_asset/newLogo2-Use.svg" -->
+    <img class="img-responsive center-block imgGrow" src="https://hadithmv.github.io/img/newLogo2/newLogo2-Use.svg" width="250" />
 </div>
 <div class="col-lg-6">
 <h2>السلام عليكم</h2>
 <br>
 <p class="lead">Welcome to <strong>Hadithmv</strong></p> <!-- CHANGE123 "file:///android_asset/en_badge_web_generic.png" -->
-<a href='https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="img-responsive center-block" width="300px" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+<a href='https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank"><img class="img-responsive center-block imgGrow" width="300px" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 <br>
 </div>
 </div>
