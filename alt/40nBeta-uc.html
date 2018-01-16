@@ -13,10 +13,16 @@
 
     <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,sourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
     <meta name="author" content="Hadithmv">
-    <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" />
     <meta name="theme-color" content="#1A619E" />
     <link rel="canonical" href="https://hadithmv.github.io" />
     <link rel="author" href="https://hadithmv.github.io" />
+<!-- favicons
+    <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hadithmv.github.io/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.github.io/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.github.io/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://hadithmv.github.io/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://hadithmv.github.io/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
 
 
 
@@ -500,7 +506,7 @@ time, mark, audio, video {
       { className: "col5", "targets": [4], "visible": true, "searchable": true },
       { className: "col6", "targets": [5], "visible": true, "searchable": true },
       { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
-      { className: "col8", "targets": [7], "visible": true, "searchable": false },
+      { className: "col8", "targets": [7], "visible": true, "searchable": true },
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
@@ -689,8 +695,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {  /* js media query on des
               Hammer(document.getElementById("table_id")).on("swiperight", function() {
                     table.page( 'previous' ).draw( 'page' );  
               });
-              
-$table.dataTable().fnDraw();
+
 } //===================end if else
 
 /*
