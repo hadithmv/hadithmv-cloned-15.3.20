@@ -1277,9 +1277,18 @@ B - Buttons
                           key: {key: 'h', shiftKey: true},
                           text: 'Hide'
                         }, //end of colvis
-                        {text: 'Site',
+                        {key: { key: 's', shiftKey: true },
+                        text: 'Android Version',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                        }, //custom button end
+                        {text: 'Web Version',
                                 action: function ( e, dt, button, config ) {
                                 window.location = 'https://hadithmv.github.io';}
+                        }, //custom button end
+                        {text: 'Desktop Version',
+                                action: function ( e, dt, button, config ) {
+                                window.location = 'https://hadithmv.github.io/alt/Desktop/Hadithmv-Win.zip';}
                         }, //custom button end
 /*
                         //json button (export all)
@@ -1298,17 +1307,12 @@ B - Buttons
 
                         //share collection
         {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
-         text: 'Share',
+         text: 'Share App',
          autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
          buttons: [
-                        {key: { key: 's', shiftKey: true },
-                        text: 'Playstore',
-                                action: function ( e, dt, button, config ) {
-                                window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                        }, //custom button end
                         {text: 'Telegram',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv&text=Hadithmv';}
+                                window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                         }, //custom button end
                         {text: 'Facebook',
                                 action: function ( e, dt, button, config ) {
@@ -1316,7 +1320,7 @@ B - Buttons
                         }, //custom button end
                         {text: 'Twitter',
                                 action: function ( e, dt, button, config ) {
-                                window.location = 'https://twitter.com/intent/tweet?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv&text=Hadithmv';}
+                                window.location = 'https://twitter.com/intent/tweet?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                         }, //custom button end
                         {text: 'Whatsapp',
                                 action: function ( e, dt, button, config ) {
