@@ -48,10 +48,14 @@
 
 <!--  === === Base C CSS JS === === -->
 <link rel="stylesheet" type="text/css" href="file:///android_asset/app2.css">
-<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Apk/Resc/app2.css">
+<!--<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Apk/Resc/app2.css">-->
+<!-- JSDELIVR123 -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/app2.css">
 
 <script type="text/javascript" src="file:///android_asset/app2.js"></script>
-<script type="text/javascript" src="https://hadithmv.github.io/alt/Apk/Resc/app2.js"></script>
+<!--<script type="text/javascript" src="https://hadithmv.github.io/alt/Apk/Resc/app2.js"></script>-->
+<!-- JSDELIVR123 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/app2.js"></script>
 <!--  === === Base C CSS JS End=== === -->
 
 
@@ -124,7 +128,9 @@
 
 <!--  === === Base Json === === -->
 <script src="file:///android_asset/40nJson.js"></script>
-<script src="https://hadithmv.github.io/alt/Apk/json/40nJson.js"></script>
+<!--<script src="https://hadithmv.github.io/alt/Apk/json/40nJson.js"></script>-->
+<!-- JSDELIVR123 -->
+<script src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/40nJson.js"></script>
 <!--  === === Base Json End=== === -->
 
 
@@ -139,8 +145,34 @@
 
 <!--=== Embedded CSS ===-->
 <style type="text/css">
-
+/* JSDELIVR123 */
     /* Ubuntu-mod */
+        @font-face {
+            font-family: 'Ubuntu';
+                src: url('file:///android_asset/Ubuntu-mod.woff') format('woff'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Ubuntu-mod.woff2') format('woff2'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Ubuntu-mod.woff') format('woff'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Ubuntu-mod.ttf') format('truetype');
+        }
+    /* KFGQPCUthmanTahaNaskh-mod */
+        @font-face {
+            font-family: 'KFGQPCUthmanTahaNaskh';
+                src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/KFGQPCUthmanTahaNaskh-B-mod.woff2') format('woff2'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/KFGQPCUthmanTahaNaskh-B-mod.ttf') format('truetype');
+        }
+    /* Tharujamaanu-B-Regular-mod */
+        @font-face {
+            font-family: 'Tharujamaanu';
+                src: url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff2') format('woff2'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+                     url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
+        }
+
+
+/*
         @font-face {
             font-family: 'Ubuntu';
                 src: url('file:///android_asset/Ubuntu-mod.woff') format('woff'),
@@ -148,7 +180,7 @@
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Ubuntu-mod.ttf') format('truetype');
         }
-    /* KFGQPCUthmanTahaNaskh-mod */
+
         @font-face {
             font-family: 'KFGQPCUthmanTahaNaskh';
                 src: url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
@@ -156,7 +188,7 @@
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod.ttf') format('truetype');
         }
-    /* Tharujamaanu-B-Regular-mod */
+
         @font-face {
             font-family: 'Tharujamaanu';
                 src: url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
@@ -164,8 +196,7 @@
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
                      url('https://hadithmv.github.io/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
         }
-
-
+*/
 
 /* Reset CSS v2.0 | 20110126
 html, body, div, span, applet, object, iframe,
@@ -489,6 +520,11 @@ body { position: relative;
         /* about jumbotron text direction */
         .righty {direction: rtl;}	.lefty {direction: ltr; font-size: 18px;}
 
+        /* first and third jumbo */
+        #about > div:nth-child(1), #about > div:nth-child(3)  {margin-top: -5px; background-color: transparent; margin-bottom: -5px;}
+        /* second jumbo */ {}
+        /* fourth jumbo */
+        #about > div:nth-child(4) {margin-top: -5px; margin-bottom: -15px;}
 
     /*reduces navbar height
 .navbar-xs { min-height:28px; height: 28px; }
@@ -554,8 +590,9 @@ body { position: relative;
       </button>
 
 <!-- CHANGE123
-href="file:///android_asset/newLogo4.svg">-->
-      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo imgGrow" src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="menu logo"></a>
+href="file:///android_asset/newLogo4.svg">
+"https://hadithmv.github.io/img/newLogo4/newLogo4.svg"-->		<!-- JSDELIVR123 -->
+      <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo imgGrow" src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/newLogo4.svg" alt="menu logo"></a>
 
 <!--prev navbar-text-->
       <h4 class="navbar-text text-center">hadithmv</h4>
@@ -725,10 +762,10 @@ Bukhari === -->
 
 
 
-<div class="jumbotron text-center" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
+<div class="jumbotron text-center">
 <div class="container">
-  <div class="col-lg-6">  <!-- CHANGE123 "file:///android_asset/newLogo4.svg" -->
-    <img class="img-responsive center-block imgGrow" src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" width="250" />
+  <div class="col-lg-6">  <!-- CHANGE123 "file:///android_asset/newLogo4.svg"  https://hadithmv.github.io/img/newLogo4/newLogo4.svg-->				<!-- JSDELIVR123 -->
+    <img class="img-responsive center-block imgGrow" src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/newLogo4.svg" width="250" />
 </div>
 <div class="col-lg-6">
 <h2>السلام عليكم</h2>
@@ -763,7 +800,7 @@ Bukhari === -->
 </div>
 
 
-<div class="jumbotron text-center" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
+<div class="jumbotron text-center">
 <div class="container">
 <!--
 <div class="col-lg-6">
@@ -785,7 +822,7 @@ Bukhari === -->
 </div>
 
 
-<div class="jumbotron jumbotron text-center" style="margin-top: -5px; margin-bottom: -15px;">
+<div class="jumbotron jumbotron text-center">
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
