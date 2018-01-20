@@ -18,25 +18,28 @@
     <link rel="author" href="https://hadithmv.github.io" />
 <!-- favicons
     <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/favicon-16x16.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.github.io/img/newLogo4/newLogo4-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.github.io/img/newLogo4/newLogo4-32.png">
+
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://hadithmv.github.io/img/newLogo4/newLogo4-57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://hadithmv.github.io/img/newLogo4/newLogo4-60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.github.io/img/newLogo4/newLogo4-72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://hadithmv.github.io/img/newLogo4/newLogo4-76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hadithmv.github.io/img/newLogo4/newLogo4-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://hadithmv.github.io/img/newLogo4/newLogo4-120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.github.io/img/newLogo4/newLogo4-144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://hadithmv.github.io/img/newLogo4/newLogo4-152.png" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://hadithmv.github.io/img/newLogo4/newLogo4-180.png">
+
 <link rel="manifest" href="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/manifest.json">
-<link rel="mask-icon" href="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/safari-pinned-tab.svg" color="#5bbad5">
+
 <link rel="shortcut icon" href="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/favicon.ico">
 <meta name="apple-mobile-web-app-title" content="Hadithmv">
 <meta name="application-name" content="Hadithmv">
 <meta name="msapplication-config" content="https://hadithmv.github.io/img/newLogo4/favicon/realfavicongenerator.net/browserconfig.xml">
 
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-144x144.png" />
-<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-60x60.png" />
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-120x120.png" />
-<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-76x76.png" />
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/apple-touch-icon-152x152.png" />
-<meta name="application-name" content="&nbsp;"/>
 <meta name="msapplication-TileImage" content="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/mstile-144x144.png" />
 <meta name="msapplication-square70x70logo" content="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/mstile-70x70.png" />
 <meta name="msapplication-square150x150logo" content="https://hadithmv.github.io/img/newLogo4/favicon/favicomatic.com/mstile-150x150.png" />
@@ -198,6 +201,9 @@ time, mark, audio, video {
 
 /* Mark JS - padding: 0; removes useless padding */
 mark {background: #add1f2; color: black; padding: 0;}
+
+/* Keytable mobile padding jump fix */
+table.dataTable th.focus, table.dataTable td.focus{outline: 0px; outline-offset:0px;}
 /* Keytable - Desktop only MQ */
 @media screen and (min-width: 1200px) {
   table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
@@ -228,7 +234,7 @@ body { position: relative;
   padding-bottom: 4rem; /* footer height*/
   min-height: 100%;}
 
-.footer { position: absolute;
+.footer { position: absolute; 
   right: 0;
   bottom: 0;
   left: 0;
@@ -479,6 +485,13 @@ body { position: relative;
         /* moves copied info in front */
         #datatables_buttons_info {z-index: 9999 !important;}
 
+        /* tab-content clearfix */
+        body > div > div > div {margin-top: 54px !important;}
+
+        /* about jumbotron text direction */
+        .righty {direction: rtl;}	.lefty {direction: ltr; font-size: 18px;}
+
+
     /*reduces navbar height
 .navbar-xs { min-height:28px; height: 28px; }
 .navbar-xs .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 28px; }
@@ -547,7 +560,7 @@ href="file:///android_asset/newLogo4.svg">-->
       <a class="navbar-brand" href="https://hadithmv.github.io"><img class="miniLogo imgGrow" src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="menu logo" width="40" height="40" top="0" right="0" left="o" bottom="0" style="margin:-10px !important; margin-left: 1px !important; margin-right: -1px!important; background-color: white; border-radius: 50%;"></a>
 
 <!--prev navbar-text-->
-      <h4 class="navbar-text" style="text-align: center;">hadithmv</h4>
+      <h4 class="navbar-text text-center">hadithmv</h4>
   </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -639,13 +652,13 @@ Bukhari === -->
 
 
 <!-- === === CONTAINER === === -->
-<div class="container-fluid" style="" >
+<div class="container-fluid">
   <div class="flex-row row">
 
 
 
 
-      <div class="tab-content clearfix" style="margin-top: 54px;"> 
+      <div class="tab-content clearfix"> 
 
 
 
@@ -679,8 +692,8 @@ Bukhari === -->
     </table>
 
 
-<div class="footer">
-  <span onclick="myFooter()">2018 &nbsp;</span>
+<div class="footer imgGrow">
+  <p onclick="myFooter()">2018 &nbsp;</span>
   <span onclick="myHelp()">hadithmv.github.io</span>
 </div>
 
@@ -710,11 +723,11 @@ Bukhari === -->
 
 
 
-        <div class="tab-pane fade" id="about" style=""> <!-- === === /about tab === === -->
+        <div class="tab-pane fade" id="about"> <!-- === === /about tab === === -->
 
 
 
-<div class="jumbotron jumbotron text-center" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
+<div class="jumbotron text-center">
 <div class="container">
   <div class="col-lg-6">  <!-- CHANGE123 "file:///android_asset/newLogo4.svg" -->
     <img class="img-responsive center-block imgGrow" src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" width="250" />
@@ -730,16 +743,16 @@ Bukhari === -->
 </div>
 
 
-<div class="jumbotron jumbotron text-center">
+<div class="jumbotron text-center">
 <div class="container">
 <div class="col-lg-6">
 <h2>سورة يس</h2>
 <br>
-<p class="lead text-justify" style="direction: rtl;">إِنَّا نَحْنُ نُحْيِي الْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ ۚ وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ</p>
+<p class="lead text-justify righty">إِنَّا نَحْنُ نُحْيِي الْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ ۚ وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ</p>
 <br>
-<p class="lead text-justify" style="direction: ltr; font-size: 18px">Indeed, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register</p>
+<p class="lead text-justify lefty">Indeed, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register</p>
 <br>
-<p class="lead text-justify" style="direction: rtl;">ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިހުކުރި ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.</p>
+<p class="lead text-justify righty">ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިހުކުރި ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.</p>
 <br>
 <p class="lead text-center">[12:36]</p>
 </div>
@@ -752,7 +765,7 @@ Bukhari === -->
 </div>
 
 
-<div class="jumbotron jumbotron text-center pull" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
+<div class="jumbotron text-center" style="margin-top: -5px; background-color: transparent; margin-bottom: -5px;">
 <div class="container">
 <!--
 <div class="col-lg-6">
@@ -762,11 +775,11 @@ Bukhari === -->
 <div class="col-lg-6 pull-right">
 <h2>صحيح مسلم</h2>
 <br>
-<p class="lead text-justify" style="direction: rtl;">عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ.</p>
+<p class="lead text-justify righty">عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ.</p>
 <br>
-<p class="lead text-justify" style="direction: ltr; font-size: 18px">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins.</p>
+<p class="lead text-justify lefty">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins.</p>
 <br>
-<p class="lead text-justify" style="direction: rtl;">މުންޛިރު ބިން ޖަރީރު އެކަލޭގެފާނުގެ ބައްޕާފުޅު ފަރާތުން ރިވާކުރެއްވިއެވެ: ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ.</p>
+<p class="lead text-justify righty">މުންޛިރު ބިން ޖަރީރު އެކަލޭގެފާނުގެ ބައްޕާފުޅު ފަރާތުން ރިވާކުރެއްވިއެވެ: ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ.</p>
 <br>
 <p class="lead text-center">[1017]</p>
 </div>
@@ -902,25 +915,11 @@ for (var i=0; i<imgDefer.length; i++) {
 if(imgDefer[i].getAttribute('data-src')) {
 imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
 } }
-
 var vidDefer = document.getElementsByTagName('iframe');
 for (var i=0; i<vidDefer.length; i++) {
 if(vidDefer[i].getAttribute('data-src')) {
 vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
 } } 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
