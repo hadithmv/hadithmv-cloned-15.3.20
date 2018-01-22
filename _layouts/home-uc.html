@@ -354,14 +354,14 @@
          #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
          margin: 0px !important; width: 43vw !important;}
 
-         html, body {
+         html, body, {
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          /*font-size: 16px; base font size*/
          width: 100%;
          height: 100%;
          min-width: 100%;
          min-height: 100%;
-         /*hides unwanted horizontal scroll space, PREV, ran into printn scrollbar bug
+         /*hides unwanted horizontal scroll space, but affects print
          max-width: 100%; 
          overflow-x: hidden;*/
          margin: 0;
@@ -374,9 +374,9 @@
          background-color: #fff;
          }
 
-         /*hides unwanted horizontal scroll space, makes scrll not show on print*/
+         /*hides unwanted horizontal scroll space, makes scroll not show on print*/
          @media not print, screen {
-         html, body {max-width: 100%; 
+         html, body, {max-width: 100%; 
          overflow-x: hidden;}
          }
 
