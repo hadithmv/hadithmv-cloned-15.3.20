@@ -1,24 +1,13 @@
 {
-  // Required
-  "manifest_version": 2,
   "name": "Hadithmv",
   "short_name": "Hmv",
-  "version": "1.2.3",
-
-  //hide the browser's UI, other stuff
-  "display": "standalone",
   "dir": "ltr",
+  "lang": "en",
+  "start_url": ".",
+  "display": "standalone",
   "theme_color": "#1A619E",
-  "start_url": "https://hadithmv.github.io?launcher=true?utm_source=homescreen",
-  "related_applications": [{
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.hadithmv.hmv"
-  }],
-
-
-  // Recommended
-  "default_locale": "en",
-  "description": "Dhivehi Hadith translations at your fingertips",
+  "background_color": "#fff",
+  "description": "Dhivehi Hadith translations at your fingetips",
   "icons": [
     {
       "src": "https://hadithmv.github.io/img/newLogo4/newLogo4-57.png",
@@ -46,77 +35,8 @@
       "sizes": "180x180"
     }
   ],
-
-  // Pick one (or none)
-//  "browser_action": {...},
-//  "page_action": {...},
-
-  // Optional
-//  "action": ...,
-  "author": "Hadithmv",
-//  "automation": ...,
-  "background_color": "#fff",
-  "background": {
-    // Recommended
-    "persistent": false
-  },
-//  "background_page": ...,
-//  "chrome_settings_overrides": {...},
-  "chrome_ui_overrides": {
-    "bookmarks_ui": {
-      "remove_bookmark_shortcut": true,
-      "remove_button": true
-    }
-  },
-//  "chrome_url_overrides": {...},
-//  "commands": {...},
-//  "content_capabilities": ...,
-//  "content_scripts": [{...}],
-//  "content_security_policy": "policyString",
-//  "converted_from_user_script": ...,
-//  "current_locale": ...,
-//  "declarative_net_request": ...,
-//  "devtools_page": "devtools.html",
-//  "event_rules": [{...}],
-//  "externally_connectable": {
-//    "matches": ["*://*.example.com/*"]
-//  },
-//  "file_browser_handlers": [...],
-  "file_system_provider_capabilities": {
-    "configurable": true,
-    "multiple_mounts": true,
-    "source": "network"
-  },
-  "homepage_url": "https://hadithmv.github.io",
-//  "import": [{"id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}],
-//  "incognito": "spanning, split, or not_allowed",
-//  "input_components": ...,
-//  "key": "publicKey",
-//  "minimum_chrome_version": "versionString",
-//  "nacl_modules": [...],
-//  "oauth2": ...,
-  "offline_enabled": true,
-//  "omnibox": {
-//    "keyword": "aString"
-//  },
-//  "optional_permissions": ["tabs"],
-//  "options_page": "options.html",
-//  "options_ui": {
-//    "chrome_style": true,
-//    "page": "options.html"
-//  },
-    "permissions": ["tabs"],
-//  "platforms": ...,
-//  "requirements": {...},
-//  "sandbox": [...],
-//  "signature": ...,
-//  "spellcheck": ...,
-//  "storage": {
-//    "managed_schema": "schema.json"
-//  },
-//  "system_indicator": ...,
-//  "tts_engine": {...},
-//  "update_url": "http://path/to/updateInfo.xml",
-//  "version_name": "aString",
-//  "web_accessible_resources": [...]
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=com.hadithmv.hmv"
+  }]
 }
