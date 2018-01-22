@@ -354,7 +354,7 @@
          #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
          margin: 0px !important; width: 43vw !important;}
 
-         html, body, {
+         html, body, { /* removing comma from body makes footer break */
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          /*font-size: 16px; base font size*/
          width: 100%;
@@ -374,7 +374,7 @@
          background-color: #fff;
          }
 
-         /*hides unwanted horizontal scroll space, makes scroll not show on print*/
+         /*hides unwanted horizontal scroll space, makes scroll not show on print, adding comma to body makes it fail*/
          @media not print, screen {
          html, body {max-width: 100%; 
          overflow-x: hidden;}
