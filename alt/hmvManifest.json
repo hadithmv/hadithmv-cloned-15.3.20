@@ -3,7 +3,7 @@
   "short_name": "Hmv",
   "dir": "ltr",
   "lang": "en",
-  "start_url": ".",
+  "start_url": "https://hadithmv.github.io",
   "display": "standalone",
   "theme_color": "#1A619E",
   "background_color": "#fff",
