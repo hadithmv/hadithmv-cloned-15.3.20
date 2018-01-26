@@ -36,6 +36,6 @@
 
 -   **Responsiveness.**<br>
     Provide a friendly and functional user experience over varying devices and configurations. Interfaces should be adaptable and features should be progressive.
-<br>
+
 ## Milestones
 -   **40 Nawawi**
