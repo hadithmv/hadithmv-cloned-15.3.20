@@ -2,15 +2,12 @@
   <a href="https://hadithmv.com/">
     <img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=150 height=150>
   </a>
-
   <h3 align="center">Hadithmv - Accessible and Sourced</h3>
-
   <p align="center">
     Dhivehi Hadith translations at your fingertips
     <br>
     <a href="http://hadithmv.com"><strong>Web Version »</strong></a>
     <br>
-  
 <!--
     <br>
     <a href="http://hadithmv.com">Web Version</a>
