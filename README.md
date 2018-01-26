@@ -8,6 +8,7 @@
     <br>
     <a href="http://hadithmv.com"><strong>Web Version »</strong></a>
     <br>
+  
 <!--
     <br>
     <a href="http://hadithmv.com">Web Version</a>
@@ -21,7 +22,7 @@
   <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv">
     <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width=250>
   </a>
-  </p> <!-- end of top <p align="center"> -->
+  </p> <!-- end of top <p align="center"> --> <br>
 
 # Hadithmv - Developing a Hadith App for Maldivians
    The **Hmv** project is a collaborated effort in making Hadith translations as accessible and understandable as can be for the Muslim Maldivian community in their native language, Dhivehi. Once this work is complete, the people will have a Maldivian Hadith collection for them to use with ease, in sha Allah.
