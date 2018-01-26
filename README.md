@@ -26,7 +26,7 @@
 
 # Hadithmv - Developing a Hadith App for Maldivians
    The **Hmv** project is a collaborated effort in making Hadith translations as accessible and understandable as can be for the Muslim Maldivian community in their native language, Dhivehi. Once this work is complete, the people will have a Maldivian Hadith collection for them to use with ease, in sha Allah.
-
+<br>
 ## Goals
 -   **Accessibility.**<br>
     Bring the Hadith of the Prophet ﷺ within reach of everyone, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And using the platform of modern technology to aid the spread of the Sunnah, as today's maldivians are closer to their personal devices than they are to books.
@@ -36,6 +36,6 @@
 
 -   **Responsiveness.**<br>
     Provide a friendly and functional user experience over varying devices and configurations. Interfaces should be adaptable and features should be progressive.
-  
+<br>
 ## Milestones
 -   **40 Nawawi**
