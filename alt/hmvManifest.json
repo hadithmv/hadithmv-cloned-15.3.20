@@ -10,12 +10,12 @@
   "description": "Dhivehi Hadith translations at your fingetips",
   "icons": [
     {
-      "src": "https://hadithmv.github.io/img/newLogo4/newLogo4-57.png",
+      "src": "https://hadithmv.com/img/newLogo4/newLogo4-57.png",
       "type": "image/png",
       "sizes": "57x57"
     },
     {
-      "src": "https://hadithmv.github.io/img/newLogo4/newLogo4-512.png",
+      "src": "https://hadithmv.com/img/newLogo4/newLogo4-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
