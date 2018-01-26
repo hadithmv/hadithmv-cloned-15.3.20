@@ -3,21 +3,16 @@
 
 <head>
         <meta name="robots" content="noindex"/>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-    <title>Hadithmv - Accessible and Sourced</title>
-    <meta name="description" content="Dhivehi Hadith translations at your fingertips">
+      <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Hadithmv - Beta</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
-    <meta http-equiv="cache-control" content="Public"/>
-    <meta http-equiv="Expires" content="604800"/>
 
-    <meta name="keywords" content="hadithmv.gihub.io,hadithmv,hadith,hadeeth,nawawi,40 hadith,saalhees,bas,language,open,sourced,translate,translations,tharujama,tarujama,tharjama,tarjama,islam,islamic,dhivehi,maldives,maldivian,raajje,deen,dheen,deeny,dheeny,deeni,dheeni,deenee,dheenee">
-    <meta name="author" content="Hadithmv">
-    <meta name="theme-color" content="#1A619E" />
-    <link rel="canonical" href="https://hadithmv.github.io" />
-    <link rel="author" href="https://hadithmv.github.io" />
-<!-- favicons
-    <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
+      <meta name="author" content="Hadithmv">
+      <link rel="canonical" href="https://hadithmv.com" />  <!-- to define a preferred url for search engines to index -->
+      <link rel="author" href="https://hadithmv.com" />
+      <link rel="publisher" href="https://hadithmv.com">
+
       <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo4/newLogo4-16.png">
       <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.com/img/newLogo4/newLogo4-32.png">
 
@@ -135,9 +130,9 @@
             @font-face {
             font-family: 'Tharujamaanu-B-Regular-mod';
                 src: url('file:///android_asset/Tharujamaanu-B-Regular-mod.woff') format('woff'),
-                     url('https://hadithmv.github.io/fonts/dv/Faruma.woff2') format('woff2'),
-                     url('https://hadithmv.github.io/fonts/dv/Faruma.woff') format('woff'),
-                     url('https://hadithmv.github.io/fonts/dv/Faruma.ttf') format('truetype');
+                     url('https://hadithmv.com/fonts/dv/Faruma.woff2') format('woff2'),
+                     url('https://hadithmv.com/fonts/dv/Faruma.woff') format('woff'),
+                     url('https://hadithmv.com/fonts/dv/Faruma.ttf') format('truetype');
         }
 /*
         @font-face {
@@ -592,7 +587,7 @@ time, mark, audio, video {
                key: {key: 'c', shiftKey: true},
                text: 'Copy',
                messageTop: '40 Nawawi',
-               title: 'hadithmv.github.io',
+               title: 'hadithmv.com',
 
 //=== edits clipboard regex, code to manipulate the data string as desired
               customize: function(data) {
@@ -621,7 +616,7 @@ time, mark, audio, video {
                        data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                        data = data.replace( /\t/g, '\n\n' ); //seperates rows
 
-                       data = data.replace( /hadithmv.github.io\n/g, 'hadithmv.github.io\n\n' ); //adds new line on android
+                       data = data.replace( /hadithmv.com\n/g, 'hadithmv.com\n\n' ); //adds new line on android
 
 /*
                        data = data.replace( /\r/g, '' ); //rids windows platform newline
