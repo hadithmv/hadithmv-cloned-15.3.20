@@ -30,7 +30,7 @@
 
 ## Goals
 -   **Accessibility.**<br>
-    Bring the Hadith of the Prophet ﷺ within reach of everyone, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And using the platform of modern technology to aid the spread of the Sunnah, as today's maldivians are closer to their personal devices than they are to books.
+    Bring the Hadith of the Prophet ﷺ within reach of everyone, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And using the platform of modern technology to aid the spread of the Sunnah, as today's Maldivians are closer to their personal devices than they are to books.
 
 -   **Education.**<br>
     The reason for most of the problems we have in this community is due to people being uneducated about Islam. To solve this redundant issue, a way for them to access  Islamic material they can look up for themselves needs to be opened up. Teachers and students alike will be able to benefit from these references, without the need to repeat the process of translating material every single time.
