@@ -45,7 +45,7 @@
 <ul align="justify">
 	<li>
 	<h3><b>Accessibility</b></h3>
-	<p>Bring the Hadith of Allah's Prophet ﷺ within reach of everyone, everywhere, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And use the platform of modern technology to aid the spread of the Sunnah, as today's Maldivians are closer to their personal devices than they are to books.</p>
+	<p>Bring the Hadith of Allah's Prophet ﷺ within reach of everyone, everywhere, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And use the platform of modern technology to help spread and instill the love of the Sunnah in the hearts, as today's Maldivians are closer to their personal devices than they are to books.</p>
 	</li>
 	<li>
 	<h3><b>Education</b></h3>
