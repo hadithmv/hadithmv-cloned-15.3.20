@@ -1,21 +1,5 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-<style>
-	.markdown-body {
-		box-sizing: border-box;
-		min-width: 200px;
-		max-width: 980px;
-		margin: 0 auto;
-		padding: 45px;
-	}
-
-	@media (max-width: 767px) {
-		.markdown-body {
-			padding: 15px;
-		}
-	}
-
+<!---->
+<style type="text/css">
 	         @font-face {
          font-family: 'Tharujamaanu';
          src: 
@@ -27,13 +11,6 @@
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
          }
 </style>
-
-
-
-
-<article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
-
-
 
 
   <p align="center"><a href="https://hadithmv.com"><img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=200 height=200></a></p>
@@ -131,6 +108,3 @@
 	</li>
 </ul>
 					</div> <!-- END OF DHIV FONT -->
-
-
-</article>	<!-- END OF ARTICLE -->
