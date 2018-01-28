@@ -13,26 +13,11 @@
 </style>
 -->
 
-  <p align="center"><a href="https://hadithmv.com"><img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=200 height=200></a></p>
-
-  <h3 align="center">Hadithmv - Accessible and Sourced</h3>
-
-  <p align="center">Dhivehi Hadith translations at your fingertips</p>
-
-  <p align="center"><a href="http://hadithmv.com"><strong>Web Version »</strong></a></p>
-<!--
-    <br>
-    <a href="http://hadithmv.com">Web Version</a>
-    ·
-    <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv">Android Version</a>
-    ·
-    <a href="https://hadithmv.github.io/alt/Desktop/Hadithmv-Win.zip">Desktop Version</a>
-    <br>
--->
   <p align="center"><a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width=250></a></p> 
 
+<br><br>
 
-<h3><b>Developing a Hadith App for Maldivians</b></h3><hr/>
+<h2><b>Developing a Hadith App for Maldivians</b></h2>
 
 <p align="center"><i>In the Name of Allah, the Entirely Merciful, the Especially Merciful.</i></p>
 
@@ -70,8 +55,7 @@
 
 <br><br><br>
 
-
-<h2 dir="rtl"><b>ޙަދީޘް އެމް.ވީ. - ދިވެހިންނަށް ޙަދީޘް އެޕްލިކޭށަނެއް އުފެއްދުން. </b></h2><hr/>
+<h2 dir="rtl"><b>ޙަދީޘް އެމް.ވީ. - ދިވެހިންނަށް ޙަދީޘް އެޕްލިކޭށަނެއް އުފެއްދުން</b></h2>
 
 <p align="center" dir="rtl">ރަޙްމާން ވަންތަ ރަޙީމް ވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ.</p>
 
