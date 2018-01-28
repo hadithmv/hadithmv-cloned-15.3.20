@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://hadithmv.com/">
-    <img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=150 height=150>
+    <img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=170 height=170>
   </a>
   <h3 align="center">Hadithmv - Accessible and Sourced</h3>
   <p align="center">
@@ -24,19 +24,22 @@
   </a>
   </p> <!-- end of top <p align="center"> --> <br>
 
-# Hadithmv - Developing a Hadith App for Maldivians
-   The **Hmv** project is a collaborated effort in making Hadith translations as accessible and understandable as can be for the Muslim Maldivian community in their native language, Dhivehi. Once this work is complete, the people will have a Maldivian Hadith collection for them to use with ease, in sha Allah.
+# Developing a Hadith App for Maldivians
+
+<i>In the Name of Allah, the Entirely Merciful, the Especially Merciful.</i>
+
+    The <b>Hmv</b> project is a collaborated effort in making the sayings and teachings of Muhammad  ﷺ as accessible and understandable as possible for the Muslim Maldivian community. Once this work is complete, they will have a Hadith collection in their native language, Dhivehi. Any good is from Allah, and any shortcomings are from ourselves and shaithan.
 <br><br>
 
 ## Goals
--   **Accessibility.**<br>
-    Bring the Hadith of the Prophet ﷺ within reach of everyone, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And using the platform of modern technology to aid the spread of the Sunnah, as today's Maldivians are closer to their personal devices than they are to books.
+-   <b>Accessibility.</b><br>
+Bring the Hadith of the Allah's Prophet ﷺ within reach of everyone, everywhere, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And use the platform of modern technology to aid the spread of the Sunnah, as today's Maldivians are closer to their personal devices than they are to books.
 
--   **Education.**<br>
-    The reason for most of the problems we have in this community is due to people being uneducated about Islam. To solve this redundant issue, a way for them to access  Islamic material they can look up for themselves needs to be opened up. Teachers and students alike will be able to benefit from these references, without the need to repeat the process of translating material every single time.
+-   **Education.**<br>
+    The cause of most of our society's problems is due to people being uneducated about Islam. To solve this redundant issue, they need a way to access Islamic material they can look up for themselves. Also, teachers and students alike can benefit from these references, without having to repeat the translation process every time.
 
--   **Responsiveness.**<br>
-    Provide a friendly and functional user experience over varying devices and configurations. Interfaces should be adaptable and features should be progressive.
+-   **Progressive.**<br>
+    Provide a feature-rich yet user-friendly product for all to use, while maintaining a compatible user experience over varying devices and configurations. Interfaces should be responsive and functionality should be integrated. Hmv is designed to be mobile-first with minimal bloat. Currently supports both web and Android.
 <br>
 
 ## Milestones
