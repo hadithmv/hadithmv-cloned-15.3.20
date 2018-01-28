@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://hadithmv.com/">
-    <img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=170 height=170>
+    <img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=200 height=200>
   </a>
   <h3 align="center">Hadithmv - Accessible and Sourced</h3>
   <p align="center">
@@ -39,7 +39,8 @@ Bring the Hadith of the Allah's Prophet ﷺ within reach of everyone, everywhere
     The cause of most of our society's problems is due to people being uneducated about Islam. To solve this redundant issue, they need a way to access Islamic material they can look up for themselves. Also, teachers and students alike can benefit from these references, without having to repeat the translation process every time.
 
 -   **Progressive.**<br>
-    Provide a feature-rich yet user-friendly product for all to use, while maintaining a compatible user experience over varying devices and configurations. Interfaces should be responsive and functionality should be integrated. Hmv is designed to be mobile-first with minimal bloat. Currently supports both web and Android.
+    Allah has subjected technology for us to use. We aim to provide a feature-rich yet user-friendly product for everyone, while maintaining a compatible user experience over varying devices and configurations. Hmv is designed to be mobile-first with minimal bloat. Currently supports both web and Android.
+
 <br>
 
 ## Milestones
