@@ -53,7 +53,7 @@
 	</li>
 	<li>
 	<h3><b>Progressive</b></h3>
-	<p>It is Allah who has subjected technology for us to use. We aim to provide a feature-rich yet at the same time a user-friendly product for everyone, while maintaining a compatible user experience over varying devices and configurations. Hmv is designed to be mobile-first with minimal bloat. Currently supports both web and Android.</p>
+	<p>It is Allah who has subjected technology for us to use. We aim to provide a feature-rich yet user-friendly product for everyone, while maintaining a compatible user experience over varying devices and configurations. Hmv is designed to be mobile-first with minimal bloat. Currently both web and Android are supported.</p>
 	</li>
 </ul>
 
@@ -92,7 +92,7 @@
 	</li>
 	<li>
 	<h3><b>ތަރައްޤީވުން</b></h3>
-	<p>އަޅުގަނޑުމެންނަށް ޓަކައި ޓެކްނޮލޮޖީ ޚިދުމަތްތެރި ކުރެއްވީ ﷲ އެވެ. އަޅުގަނޑުމެންގެ އަމާޒަކީ ގިނަގުނަ ބޭނުންތައް ހިފޭ އަދި ބޭނުން ކުރަން ފަސޭހަ އެޕްލިކޭޝަނެއް އެންމެންނަށް ފޯރުކޮށް ދިނުމެވެ. ހަމަ އެއާއެކު، ގެންގުޅޭ ވަސީލަތްތަކާއި ބޭނުން ކުރާ އުސްލޫބު ތަފާތު ވިޔެއްކަމަކު، ބޭނުން ކުރާ ފަރާތްތަކަށް އެކަށީގެންވާ މާހައުލަކާއި ހިތްގައިމު ތަޖުރިބާއެއް ޤާއިމުކޮށް ދިނުމެވެ. ޙަދީޘް އެމް.ވީ. ފަރުމާ ކުރެވިފައި ވަނީ ފޯނަށް އަހަންމިއްޔަތުކަން ދެވި، ޖާގައަށް ބުރަ ނުވާ ގޮތަށެވެ. މި ވަގުތު އިންޓަރނެޓު އަދި އެންޑުރޮއިޑު ވަޞީލަތްތަކުގައި ބޭނުން ކުރެވޭނެއެވެ.</p>
+	<p>އަޅުގަނޑުމެންނަށް ޓަކައި ޓެކްނޮލޮޖީ ޚިދުމަތްތެރި ކުރެއްވީ ﷲ އެވެ. އަޅުގަނޑުމެންގެ އަމާޒަކީ ގިނަގުނަ ބޭނުންތައް ހިފޭ، ބޭނުން ކުރަން ފަސޭހަ އެޕްލިކޭޝަނެއް އެންމެންނަށް ފޯރުކޮށް ދިނުމެވެ. ހަމަ އެއާއެކު، ގެންގުޅޭ ވަސީލަތްތަކާއި ބޭނުން ކުރާ އުސްލޫބު ތަފާތު ވިޔެއްކަމަކު، ބޭނުން ކުރާ ފަރާތްތަކަށް އެކަށީގެންވާ މާހައުލަކާއި ހިތްގައިމު ތަޖުރިބާއެއް ޤާއިމުކޮށް ދިނުމެވެ. ޙަދީޘް އެމް.ވީ. ފަރުމާ ކުރެވިފައި ވަނީ ފޯނަށް އަހަންމިއްޔަތުކަން ދެވި، ޖާގައަށް ބުރަ ނުވާ ގޮތަށެވެ. މި ވަގުތު އިންޓަރނެޓު އަދި އެންޑުރޮއިޑު ވަޞީލަތްތަކުގައި ބޭނުން ކުރެވޭނެއެވެ.</p>
 	</li>
 </ul>
 
