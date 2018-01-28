@@ -13,19 +13,36 @@
 </style>
 -->
 
+
+  <p align="center"><a href="https://hadithmv.com"><img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=200 height=200></a></p>
+
+  <h3 align="center">Hadithmv - Accessible and Sourced</h3>
+
+  <p align="center">Dhivehi Hadith translations at your fingertips</p>
+
+  <p align="center"><a href="http://hadithmv.com"><strong>Web Version »</strong></a></p>
+<!--
+    <br>
+    <a href="http://hadithmv.com">Web Version</a>
+    ·
+    <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv">Android Version</a>
+    ·
+    <a href="https://hadithmv.github.io/alt/Desktop/Hadithmv-Win.zip">Desktop Version</a>
+    <br>
+-->
   <p align="center"><a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="" width=250></a></p> 
 
 <br><br>
 
 <h2><b>Developing a Hadith App for Maldivians</b></h2>
 
-<p align="center"><i>In the Name of Allah, the Entirely Merciful, the Especially Merciful.</i></p>
+<p align="center"><i>- In the Name of Allah, the Entirely Merciful, the Especially Merciful -</i></p>
 
 <p align="justify">The <b>Hmv</b> project is a collaborated effort in making the sayings and teachings of Muhammad  ﷺ as accessible and understandable as possible for the Muslim Maldivian community. Once this work is complete, they will have a Hadith collection in their native language, Dhivehi. Any good is from Allah, and any shortcomings are from ourselves and shaithan.</p>
 
 <br>
 
-<h3><b>Goals</b></h3>
+<h3><b>Goals:</b></h3>
 <hr/>
 <ul align="justify">
 	<li>
@@ -44,7 +61,7 @@
 
 <br>
 
-<h3><b>Milestones</b></h3>
+<h3><b>Milestones:</b></h3>
 <hr/>
 <ul>
 	<li>
@@ -57,13 +74,13 @@
 
 <h2 dir="rtl"><b>ޙަދީޘް އެމް.ވީ. - ދިވެހިންނަށް ޙަދީޘް އެޕްލިކޭށަނެއް އުފެއްދުން</b></h2>
 
-<p align="center" dir="rtl">ރަޙްމާން ވަންތަ ރަޙީމް ވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ.</p>
+<p align="center" dir="rtl">- ރަޙްމާން ވަންތަ ރަޙީމް ވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ -</p>
 
 <p align="justify" dir="rtl" style="font-family: Tharujamaanu;">ޙަދީޘް އެމް.ވީ.މަޝްރޫޢަކީ އިސްލާމީ ދިވެހި މުޖުތަމަޢަށް ވީހާވެސް ފަސޭހަ ކަމާއިއެކު ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތަަކުގެ މާނަ އުނގަންނައިދީ ފޯރުކޮށްދިނުމަށް ޓަކައި ވަސީލަތެއް ގާއިމު ކުރުމުގެ ގޮތުން ކުރެވޭ މަސައްކަތެކެވެ. މި މަސައްކަތް ފުރިހަމަ ވުމުން ގިނަ އަދަދެއްގެ ހަދީޘްތަކެއް ދިވެހި ބަހުން އެއްތަނަކުން ފަސޭހައިން ލިބެން ހުންނާނެއެވެ. މި ކަމުގައި އެއްވެސް ހެޔޮކަމެއް ވާނަމަ، ފަހެ އެއީ ﷲ ގެ ޙަޟްރަތުން އައި ކަމެކެވެ. އަދި މި ކަމުގައި އެއްވެސް އުނިކަމެއް ވާނަމަ އެއީ އަޅުގަނޑުމެންނާއި ޝައިޠާނާގެ ފަރާތުން އައި ކަމެކެވެ.</p>
 
 <br>
 
-<h3 dir="rtl"><b>އަމާޒު</b></h3>
+<h3 dir="rtl"><b>އަމާޒު:</b></h3>
 <hr/>
 <ul align="justify" dir="rtl" font-family="Tharujamaanu">
 	<li>
@@ -82,7 +99,7 @@
 
 <br>
 
-<h3 dir="rtl"><b>ލަނޑުދަނޑިތައް</b></h3>
+<h3 dir="rtl"><b>ލަނޑުދަނޑިތައް:</b></h3>
 <hr/>
 <ul dir="rtl">
 	<li>
