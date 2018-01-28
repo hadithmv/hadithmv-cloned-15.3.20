@@ -958,7 +958,7 @@
          
          /* CHANGE123 */
              bstateSave: true, //Seems to work even offline - restore table state on page reload
-                             "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
+                             "stateDuration": "16800", //seconds, 0 infinity, default 2 hours 200, -1 session only
                              "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
          /*
              stateSave: true, //TURN OFF TO TEST OFFLINE - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
