@@ -32,12 +32,10 @@
 	<h3><b>Accessibility</b></h3>
 	<p align="justify">Bring the Hadith of the Allah's Prophet ﷺ within reach of everyone, everywhere, regardless of the barriers of medium, location, portability, age, language, wealth, etc. And use the platform of modern technology to aid the spread of the Sunnah, as today's Maldivians are closer to their personal devices than they are to books.</p>
 	</li>
-
 	<li>
 	<h3><b>Education</b></h3>
 	<p align="justify">The cause of most of our society's problems is due to people being uneducated about Islam. To solve this redundant issue, they need a way to access Islamic material they can look up for themselves. Also, teachers and students alike can benefit from these references, without having to repeat the translation process every time.</p>
 	</li>
-
 	<li>
 	<h3><b>Progressive</b></h3>
 	<p align="justify">It is Allah who has subjected technology for us to use. We aim to provide a feature-rich yet user-friendly product for everyone, while maintaining a compatible user experience over varying devices and configurations. Hmv is designed to be mobile-first with minimal bloat. Currently supports both web and Android.</p>
