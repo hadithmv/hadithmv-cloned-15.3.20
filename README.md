@@ -1,4 +1,12 @@
-<!--
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+      <meta http-equiv="content-language" content="en">
+      <meta name="google" value="notranslate">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+	  <!--
 <style type="text/css">
 	         @font-face {
          font-family: 'Tharujamaanu';
@@ -11,8 +19,15 @@
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
          }
 </style>
--->
+	  -->
+<body class="notranslate">
 
+<article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
+	
+<p align="center"><b>
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+</b></p>
+<br>
 
   <p align="center"><a href="https://hadithmv.com"><img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=200 height=200></a></p>
 
@@ -106,3 +121,7 @@
 		<b>40 ނަވަވީ</b>
 	</li>
 </ul>
+</article>	<!-- END OF ARTICLE -->
+</body>
+</head>
+</html>
