@@ -24,9 +24,9 @@
 
 <article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
 	
-<p align="center"><b>
+<h3 align="center"><b>
 بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
-</b></p>
+</b></h3>
 <br>
 
   <p align="center"><a href="https://hadithmv.com"><img src="https://hadithmv.github.io/img/newLogo4/newLogo4.svg" alt="" width=200 height=200></a></p>
