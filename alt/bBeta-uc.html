@@ -74,6 +74,9 @@
 <!--HammerJS -->
 <script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 
+<!--KeyTable -->
+<script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
+
 <!--<script type="text/javascript" src="https://hadithmv.github.io/alt/hmv-mod.js"></script>
 <script type="text/javascript" src="https://hadithmv.github.io/alt/Resc/hmv-mod.js"></script>-->
 <style type="text/css">
@@ -171,10 +174,19 @@ time, mark, audio, video {
  * {font-family: ;}
  */
 
-/*The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements.*/
- input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: searchfield-cancel-button;
-}
+         /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements. */
+         input[type="search"]::-webkit-search-cancel-button {
+         -webkit-appearance: searchfield-cancel-button; /* adds x */
+         border:4px solid transparent; /*makes x a bit bigger*/
+         }
+
+         /* Keytable - Desktop only MQ */
+         @media screen and (min-width: 1200px) {
+         table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
+         }
+
+         /* Mark JS - padding: 0; removes useless padding */
+         mark {background: #add1f2; color: black; padding: 0;}
 
         /*fits then moves footer search to top*/
         tfoot input {
