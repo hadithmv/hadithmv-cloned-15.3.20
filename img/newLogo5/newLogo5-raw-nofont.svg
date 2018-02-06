@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #337ab7 } 
+		.shp1 { fill: none;stroke: #ffffff;paint-order:stroke fill markers;stroke-width: 50 } 
+		.shp2 { fill: #ffffff } 
+		.txt3 { font-size: 150px; fill: #fff; font-family: Arial Black, georgia, times, serif; } 
+	</style>
+	<g id="Layer">
+		<path id="square block" class="shp0" d="M158.11,922.89h763.8v-763.8h-763.8z" />
+		<path id="diag square block" class="shp0" d="M-0.58,540.78l540.09,540.09l540.09,-540.09l-540.09,-540.09z" />
+		<path id="inner w circle" class="shp1" d="M781.21,540.99c0,-133.38 -107.82,-241.2 -241.2,-241.2c-133.38,0 -241.2,107.82 -241.2,241.2c0,133.38 107.82,241.2 241.2,241.2c133.38,0 241.2,-107.82 241.2,-241.2z" />
+		<path id="mini w square" class="shp2" d="M866.62,213.38h-120.6v120.6h120.6z" />
+		<path id="mini w square" class="shp2" d="M330.98,217.38h-120.6v120.6h120.6z" />
+		<path id="mini w square" class="shp2" d="M332.98,747.01h-120.6v120.6h120.6z" />
+		<path id="mini w square" class="shp2" d="M864.61,750.01h-120.6v120.6h120.6z" />
+		<path id="mini w diaq square" class="shp2" d="M1001.13,543l-85.28,-85.28l-85.28,85.28l85.28,85.28z" />
+		<path id="mini w diaq square" class="shp2" d="M249.43,543l-85.28,-85.28l-85.28,85.28l85.28,85.28z" />
+		<path id="mini w diaq square" class="shp2" d="M622.28,916.85l-85.28,-85.28l-85.28,85.28l85.28,85.28z" />
+		<path id="mini w diaq square" class="shp2" d="M622.28,165.15l-85.28,-85.28l-85.28,85.28l85.28,85.28z" />
+		<text id="hmv" style="transform: matrix(1.005,0,0,1.005,368,593.245)" >
+			<tspan x="0" y="0" class="txt3">hmv</tspan>
+		</text>
+	</g>
+</svg>
