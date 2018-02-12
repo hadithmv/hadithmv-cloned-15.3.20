@@ -487,13 +487,13 @@ time, mark, audio, video {
             {"data":"no",       "title":"#"},
             {"data":"arKitab",  "title":"Ar Book"},
             {"data":"arBab",    "title":"Ar Chapter"},
-            {"data":"arTarj",   "title":"Ar Expl."},
+            {"data":"arTarj",   "title":"Ar Heading"},
             {"data":"enKitab",  "title":"En Book"},
             {"data":"enBab",    "title":"En Chapter"},
-            {"data":"enTarj",   "title":"En Expl."},
+            {"data":"enTarj",   "title":"En Heading"},
             {"data":"dvKitab",  "title":"Dv Book"},
             {"data":"dvBab",    "title":"Dv Chapter"},
-            {"data":"dvTarj",   "title":"Dv Expl."},
+            {"data":"dvTarj",   "title":"Dv Heading"},
             {"data":"arab",     "title":"Arabic"},
             {"data":"eng",      "title":"English"},
             {"data":"dhiv",     "title":"Dhivehi"},
@@ -574,7 +574,7 @@ time, mark, audio, video {
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Expl.</th><th>En Book</th><th>En Chapter</th><th>En Expl.</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Expl.</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
 
          //Setup - add a text input to each search footer cell
                          $('#table_id tfoot th').each(function() {
@@ -729,13 +729,13 @@ time, mark, audio, video {
                        data = data.replace( /\n#/g, '' );
                        data = data.replace( /\tAr Book/g, '' );
                        data = data.replace( /\tAr Chapter/g, '' );
-                       data = data.replace( /\tAr Expl./g, '' );
+                       data = data.replace( /\tAr Heading/g, '' );
                        data = data.replace( /\tEn Title/g, '' );
                        data = data.replace( /\tEn Chapter/g, '' );
-                       data = data.replace( /\tEn Expl./g, '' );
+                       data = data.replace( /\tEn Heading/g, '' );
                        data = data.replace( /\tDv Title/g, '' );
                        data = data.replace( /\tDv Chapter/g, '' );
-                       data = data.replace( /\tDv Expl./g, '' );
+                       data = data.replace( /\tDv Heading/g, '' );
                        data = data.replace( /\tArabic/g, '' );
                        data = data.replace( /\tEnglish/g, '' );
                        data = data.replace( /\tDhivehi/g, '' );

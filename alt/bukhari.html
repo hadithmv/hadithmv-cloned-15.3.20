@@ -149,12 +149,12 @@
 
       <!--  === === Base Data Json === === -->
       <!-- CHANGE123
-      <script src="file:///android_asset/40nJson.js"></script>
+      <script src="file:///android_asset/bJson.js"></script>
   	  -->
       <!--<script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/40nJson.js"></script>-->
       <!-- JSDELIVR123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers  -->
-      <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
+      <script src="https://hadithmv.com/alt/Apk/json/bJson.js"></script>
       <!--  === === Base Json End=== === -->
 
 
@@ -256,73 +256,107 @@
          vertical-align: top;
          }
 
-         /* corrects web view only/none-print display for these particular columns ? */
-         .dataTable tbody tr td.col1 { /* # number */
+        /* corrects web view only/none-print display for these particular columns */
+        .dataTable tbody tr td.col1 {   /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 110%;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
-         .dataTable tbody tr td.col2 { /* ar title */
-         direction: rtl;
-         font-size: 125%;
-         text-align: center;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
-         .dataTable tbody tr td.col3 { /* en title */
-         font-size: 100%;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
-         .dataTable tbody tr td.col4 { /* dv title */
-         direction: rtl;
-         font-size: 125%;
-         text-align: center;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
-         /* @media screen and (max-width: 768px) {
-         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-         } above mobile breakpoint */
-         .dataTable tbody tr td.col5 { /* ar text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.45;
-         font-size: 150%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
-         .dataTable tbody tr td.col6 { /* en text */
-         direction: ltr;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 107%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
-         .dataTable tbody tr td.col7 { /* dv text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 135%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
-         .dataTable tbody tr td.col8 { /* ar ref */
-         direction: rtl;
-         text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 125%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
-         #table_id > tbody > tr > td.col9 {   /* en ref */
-         direction: ltr;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         font-size: 100%;
-         }
-         #table_id > tbody > tr > td.col9 {text-align: center;} /* center does not work without this for some reason */
-         .dataTable tbody tr td.col10 { /* dv ref */
-         direction: rtl;
-         text-align: center;
-         font-size: 115%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+            font-size: 110%;
+            text-align: center;
+        }
+
+        .dataTable tbody tr td.col2 {   /* ar book */
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.col3 {   /* ar chapt */
+            direction: rtl;
+            font-size: 130%;
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+        .dataTable tbody tr td.col4 {   /* ar expl */
+            direction: rtl;
+            font-size: 130%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+
+        .dataTable tbody tr td.col5 {   /* en book */
+            font-size: 100%;
+            text-align: center;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.col6 {   /* en chapt */
+            font-size: 100%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.col7 {   /* en expl */
+            font-size: 100%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+
+        .dataTable tbody tr td.col8 {   /* dv book */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            text-align: center;
+        }
+        .dataTable tbody tr td.col9 {   /* dv chapt */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+        .dataTable tbody tr td.col10 {   /* dv expl */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+
+        .dataTable tbody tr td.col11 {  /* ar text */
+            direction: rtl;
+            text-align: justify;
+            font-size: 130%;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.col12  {  /* en text */
+            direction: ltr;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 110%;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.col13 {  /* dv text */
+            direction: rtl;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 135%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+        }
+/* @media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+} above mobile breakpoint */
+
+        .dataTable tbody tr td.col14 {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-size: 120%;
+            font-family: none;
+        }
+        .dataTable tbody tr td.col15 {   /* en ref */
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-size: 100%;
+        }
+        .dataTable tbody tr td.col16 {  /* dv ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: "Tharujamaanu";
+            font-size: 115%;
+        }
 
          /*hides table headers even on mobile, prev nth-child(2)*/
          thead tr:nth-child(1) {
@@ -521,12 +555,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav">
 
-                  <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
+                  <li class=" NavClick"><a href="https:/hadithmv.com" target="_blank" rel="noopener">40 Nawawi</a></li>
                   
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
 
-                  <li class=""><a href="https:/hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
-
+                  <li class="active NavClick"><a href="https:/hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
 
                </ul>
                <!-- === Search engine 
@@ -600,6 +633,12 @@
                   <table id="table_id" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
                      <thead>
                         <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
                            <th></th>
                            <th></th>
                            <th></th>
@@ -866,8 +905,8 @@
                  $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
              } );
          
-         //Add footer search to table
-                         $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>ar Ref.</th><th>en Ref.</th><th>dv Ref.</th></tr></tfoot>');
+//Add footer search to table
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#table_id tfoot th').each(function() {
@@ -936,28 +975,40 @@
           //   data: data, previously without column titles
              columns: [
                {title:"#"}, 
-               {title:"Ar Title"},
-               {title:"En Title"},
-               {title:"Dv Title"},
+               {title:"Ar Book"},
+               {title:"Ar Chapter"},
+               {title:"Ar Heading"},
+               {title:"En Book"},
+               {title:"En Chapter"},
+               {title:"En Heading"},
+               {title:"Dv Book"},
+               {title:"Dv Chapter"},
+               {title:"Dv Heading"},
                {title:"Arabic"},
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
-               {title:"En Ref."},
+               {title:"Ar Ref."},
                {title:"Dv Ref."},
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
-               { className: "col1", "targets": [0], "visible": true, "searchable": true},
-               { className: "col2", "targets": [1], "visible": true, "searchable": false },
-               { className: "col3", "targets": [2], "visible": false, "searchable": false },
-               { className: "col4", "targets": [3], "visible": false, "searchable": false },
-               { className: "col5", "targets": [4], "visible": true, "searchable": true },
-               { className: "col6", "targets": [5], "visible": true, "searchable": true },
-               { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
-               { className: "col8", "targets": [7], "visible": true, "searchable": false },
-               { className: "col9", "targets": [8], "visible": false, "searchable": false },
-               { className: "col10", "targets": [9], "visible": false, "searchable": false },
+      { className: "col1", "targets": [0], "visible": true, "searchable": true},
+      { className: "col2", "targets": [1], "visible": true, "searchable": false },
+      { className: "col3", "targets": [2], "visible": true, "searchable": false },
+      { className: "col4", "targets": [3], "visible": true, "searchable": false },
+      { className: "col5", "targets": [4], "visible": false, "searchable": false },
+      { className: "col6", "targets": [5], "visible": false, "searchable": false },
+      { className: "col7", "targets": [6], "visible": false, "searchable": false }, 
+      { className: "col8", "targets": [7], "visible": false, "searchable": false },
+      { className: "col9", "targets": [8], "visible": false, "searchable": false },
+      { className: "col10", "targets": [9], "visible": false, "searchable": false },
+      { className: "col11", "targets": [10], "visible": true, "searchable": true },
+      { className: "col12", "targets": [11], "visible": true, "searchable": true },
+      { className: "col13", "targets": [12], "visible": true, "searchable": true },
+      { className: "col14", "targets": [13], "visible": true, "searchable": false },
+      { className: "col15", "targets": [14], "visible": false, "searchable": false },
+      { className: "col16", "targets": [15], "visible": false, "searchable": false },
             ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */
@@ -1080,16 +1131,22 @@
                                 data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
          
                                // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
-                                data = data.replace( /\n#/g, '' );
-                                data = data.replace( /\tAr Title/g, '' );
-                                data = data.replace( /\tEn Title/g, '' );
-                                data = data.replace( /\tDv Title/g, '' );
-                                data = data.replace( /\tArabic/g, '' );
-                                data = data.replace( /\tEnglish/g, '' );
-                                data = data.replace( /\tDhivehi/g, '' );
-                                data = data.replace( /\tAr Ref./g, '' );
-                                data = data.replace( /\tEn Ref./g, '' );
-                                data = data.replace( /\tDv Ref./g, '' );
+                       data = data.replace( /\n#/g, '' );
+                       data = data.replace( /\tAr Book/g, '' );
+                       data = data.replace( /\tAr Chapter/g, '' );
+                       data = data.replace( /\tAr Heading/g, '' );
+                       data = data.replace( /\tEn Title/g, '' );
+                       data = data.replace( /\tEn Chapter/g, '' );
+                       data = data.replace( /\tEn Heading/g, '' );
+                       data = data.replace( /\tDv Title/g, '' );
+                       data = data.replace( /\tDv Chapter/g, '' );
+                       data = data.replace( /\tDv Heading/g, '' );
+                       data = data.replace( /\tArabic/g, '' );
+                       data = data.replace( /\tEnglish/g, '' );
+                       data = data.replace( /\tDhivehi/g, '' );
+                       data = data.replace( /\tAr Ref./g, '' );
+                       data = data.replace( /\tEn Ref./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
          
                                 
          
@@ -1292,9 +1349,6 @@
          gtag('config', 'UA-112777351-1');
       </script>
       <!-- Google Analytics End -->
-
-
-
 
 
    </body>
