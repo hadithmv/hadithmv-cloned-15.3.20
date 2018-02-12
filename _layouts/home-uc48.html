@@ -9,10 +9,8 @@
       <title>Hadithmv - Accessible and Sourced</title>
       <meta name="description" content="Dhivehi Hadith translations at your fingertips">
       <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1,"> <!--  maximum-scale=1.0, user-scalable=no -->
-<!-- 1 week
-      <meta http-equiv="cache-control" content="Public" max-age=604800/>
+      <meta http-equiv="cache-control" content="Public" max-age=604800/>   <!-- 1 week -->
       <meta http-equiv="Expires" content="604800"/>
--->
       <meta name="keywords" content="hadithmv.github.io, hadithmv.com, www.hadithmv.com, hadithmv, hadith, hadeeth, nawawi, 40 hadith, saalhees, open, sourced, translations, tharujama, tarujama, tharjama, tarjama, islam, islamic, dhivehi, maldives, maldivian, raajje, deen, dheen, deeny, dheeny, deeni, dheeni, deenee, dheenee">
       <meta name="author" content="Hadithmv">
       <meta name="theme-color" content="#1A619E" />
@@ -28,11 +26,11 @@
       <meta og:description content="Dhivehi Hadith translations at your fingertips">
       <meta og::image content="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png">
 
-<!-- defines alternative page for mobile etc 
+      <!-- defines alternative page for mobile etc -->
       <link rel="alternate" media="only screen and (max-width: 640px)" href="https://hadithmv.com">
       <link rel="alternate" href="android-app://hadithmv.com">
       <link rel="alternate" href="ios-app://hadithmv.com">
--->
+
       <link rel="manifest" href="https://hadithmv.com/alt/hmvManifest.json"> <!-- JSON file , control how your app appears as an app/mobile CHANGE123-->
 
       <script async> //Service Worker - helps cache website offline
@@ -43,20 +41,20 @@
 
       <!-- favicons
          <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
-<!--  <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo5/newLogo5%20-16.png">	-->
+      <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo5/newLogo5%20-16.png">
       <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.com/img/newLogo5/newLogo5%20-32.png">
-<!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.com/img/newLogo5/newLogo5%20-72.png" />	-->
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.com/img/newLogo5/newLogo5%20-72.png" />
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hadithmv.com/img/newLogo5/newLogo5%20-114.png" />
-<!--  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />	-->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />
       <link rel="manifest" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/manifest.json">
       <link rel="shortcut icon" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/favicon.ico">
       <meta name="apple-mobile-web-app-title" content="Hadithmv">
       <meta name="application-name" content="Hadithmv">
       <meta name="msapplication-config" content="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/browserconfig.xml">
       <meta name="msapplication-TileImage" content="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />
-<!--  <meta name="msapplication-square70x70logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-70.png" /> -->
+      <meta name="msapplication-square70x70logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-70.png" />
       <meta name="msapplication-square150x150logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-150.png" />
-<!--  <meta name="msapplication-square310x310logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-310.png" /> -->
+      <meta name="msapplication-square310x310logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-310.png" />
 
 
       <!--  === === Base C CSS JS === === -->
@@ -733,13 +731,12 @@
          /* removes right tab click active */
          $(".nav li").click(function() {
              $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
-             $("html").animate({ scrollTop: 0 }, "fast");	/* NavClick scroll to top - tabs */
          });
          
-         /* NavClick scroll to top - tabs 
+         /* NavClick scroll to top - tabs */
          $('.NavClick').click(function(){
              $("html").animate({ scrollTop: 0 }, "fast");
-          });	*/
+          });
          
          /* CLOSE NAV ON EXT CLICK */
          $('body').bind('click', function(e) { 
@@ -981,7 +978,7 @@
                     ],
          
              //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
              
              language: {
                  buttons: {
@@ -1134,7 +1131,7 @@
          
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
-                                   text: 'Hide Items'
+                                   text: 'Hide'
                                  }, //end of colvis
                                  {key: { key: 's', shiftKey: true },
                                  text: 'Android Version',
