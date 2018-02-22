@@ -1960,14 +1960,23 @@
          if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
           /* empty */
          } else { /* js media query on mobile, tablet */
-
+/*
                        Hammer("bTable").on("swipeleft", function() {
                              table.page( 'next' ).draw( 'page' );  
                        });
                        Hammer(document.getElementById("bTable")).on("swiperight", function() {
                              table.page( 'previous' ).draw( 'page' );  
                        });
+*/
          
+            $(".bTable").swipe( {
+     swipeLeft:function(event, direction, distance, duration, fingerCount) {
+          $(".nav-tabs li.active").table.page( 'next' ).draw( 'page' );  
+        },
+     swipeRight:function(event, direction, distance, duration, fingerCount) {
+          $(".nav-tabs li.active").table.page( 'previous' ).draw( 'page' );
+        },
+  });
 
          } //===================end if else
          
