@@ -257,79 +257,79 @@
          }
 
         /* corrects web view only/none-print display for these particular columns */
-        .dataTable tbody tr td.col1 {   /* # number */
+        .dataTable tbody tr td.bCol1 {   /* # number */
             /*margin-bottom: -1px;*/
             font-size: 110%;
             text-align: center;
         }
 
-        .dataTable tbody tr td.col2 {   /* ar book */
+        .dataTable tbody tr td.bCol2 {   /* ar book */
             direction: rtl;
             font-size: 130%;
             text-align: center;
             font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
-        .dataTable tbody tr td.col3 {   /* ar chapt */
+        .dataTable tbody tr td.bCol3 {   /* ar chapt */
             direction: rtl;
             font-size: 130%;
             text-align: justify; text-align-last: center; /* justify and center */
         }
-        .dataTable tbody tr td.col4 {   /* ar expl */
+        .dataTable tbody tr td.bCol4 {   /* ar expl */
             direction: rtl;
             font-size: 130%;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
 
-        .dataTable tbody tr td.col5 {   /* en book */
+        .dataTable tbody tr td.bCol5 {   /* en book */
             font-size: 100%;
             text-align: center;
             font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
-        .dataTable tbody tr td.col6 {   /* en chapt */
+        .dataTable tbody tr td.bCol6 {   /* en chapt */
             font-size: 100%;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
-        .dataTable tbody tr td.col7 {   /* en expl */
+        .dataTable tbody tr td.bCol7 {   /* en expl */
             font-size: 100%;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
-        .dataTable tbody tr td.col8 {   /* dv book */
+        .dataTable tbody tr td.bCol8 {   /* dv book */
             direction: rtl;
             font-size: 125%;
             font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
             text-align: center;
         }
-        .dataTable tbody tr td.col9 {   /* dv chapt */
+        .dataTable tbody tr td.bCol9 {   /* dv chapt */
             direction: rtl;
             font-size: 125%;
             font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
             text-align: justify; text-align-last: center; /* justify and center */
         }
-        .dataTable tbody tr td.col10 {   /* dv expl */
+        .dataTable tbody tr td.bCol10 {   /* dv expl */
             direction: rtl;
             font-size: 125%;
             font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
             text-align: justify; text-align-last: center; /* justify and center */
         }
 
-        .dataTable tbody tr td.col11 {  /* ar text */
+        .dataTable tbody tr td.bCol11 {  /* ar text */
             direction: rtl;
             text-align: justify;
             font-size: 150%;
             font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
-        .dataTable tbody tr td.col12  {  /* en text */
+        .dataTable tbody tr td.bCol12  {  /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
             font-size: 105%;
             font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
-        .dataTable tbody tr td.col13 {  /* dv text */
+        .dataTable tbody tr td.bCol13 {  /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
@@ -340,18 +340,18 @@
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
 } above mobile breakpoint */
 
-        .dataTable tbody tr td.col14 {   /* ar ref */
+        .dataTable tbody tr td.bCol14 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-size: 125%;
             font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
-        .dataTable tbody tr td.col15 {   /* en ref */
+        .dataTable tbody tr td.bCol15 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
         }
-        .dataTable tbody tr td.col16 {  /* dv ref */
+        .dataTable tbody tr td.bCol16 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: "Tharujamaanu";
@@ -993,22 +993,22 @@
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
-      { className: "col1", "targets": [0], "visible": true, "searchable": true},
-      { className: "col2", "targets": [1], "visible": true, "searchable": false },
-      { className: "col3", "targets": [2], "visible": true, "searchable": false },
-      { className: "col4", "targets": [3], "visible": true, "searchable": false },
-      { className: "col5", "targets": [4], "visible": false, "searchable": false },
-      { className: "col6", "targets": [5], "visible": false, "searchable": false },
-      { className: "col7", "targets": [6], "visible": false, "searchable": false }, 
-      { className: "col8", "targets": [7], "visible": false, "searchable": false },
-      { className: "col9", "targets": [8], "visible": false, "searchable": false },
-      { className: "col10", "targets": [9], "visible": false, "searchable": false },
-      { className: "col11", "targets": [10], "visible": true, "searchable": true },
-      { className: "col12", "targets": [11], "visible": true, "searchable": true },
-      { className: "col13", "targets": [12], "visible": true, "searchable": true },
-      { className: "col14", "targets": [13], "visible": true, "searchable": false },
-      { className: "col15", "targets": [14], "visible": false, "searchable": false },
-      { className: "col16", "targets": [15], "visible": false, "searchable": false },
+      { className: "bCol1", "targets": [0], "visible": true, "searchable": true},
+      { className: "bCol2", "targets": [1], "visible": true, "searchable": false },
+      { className: "bCol3", "targets": [2], "visible": true, "searchable": false },
+      { className: "bCol4", "targets": [3], "visible": true, "searchable": false },
+      { className: "bCol5", "targets": [4], "visible": false, "searchable": false },
+      { className: "bCol6", "targets": [5], "visible": false, "searchable": false },
+      { className: "bCol7", "targets": [6], "visible": false, "searchable": false }, 
+      { className: "bCol8", "targets": [7], "visible": false, "searchable": false },
+      { className: "bCol9", "targets": [8], "visible": false, "searchable": false },
+      { className: "bCol10", "targets": [9], "visible": false, "searchable": false },
+      { className: "bCol11", "targets": [10], "visible": true, "searchable": true },
+      { className: "bCol12", "targets": [11], "visible": true, "searchable": true },
+      { className: "bCol13", "targets": [12], "visible": true, "searchable": true },
+      { className: "bCol14", "targets": [13], "visible": true, "searchable": false },
+      { className: "bCol15", "targets": [14], "visible": false, "searchable": false },
+      { className: "bCol16", "targets": [15], "visible": false, "searchable": false },
             ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */

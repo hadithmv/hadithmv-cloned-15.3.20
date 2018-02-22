@@ -257,24 +257,24 @@
          }
 
          /* corrects web view only/none-print display for these particular columns ? */
-         .dataTable tbody tr td.fnCol1 { /* # number */
+         .dataTable tbody tr td.col1 { /* # number */
             /*margin-bottom: -1px;*/
          font-size: 110%;
          text-align: center;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          }
-         .dataTable tbody tr td.fnCol2 { /* ar title */
+         .dataTable tbody tr td.col2 { /* ar title */
          direction: rtl;
          font-size: 130%;
          text-align: center;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
          }
-         .dataTable tbody tr td.fnCol3 { /* en title */
+         .dataTable tbody tr td.col3 { /* en title */
          font-size: 100%;
          text-align: center;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          }
-         .dataTable tbody tr td.fnCol4 { /* dv title */
+         .dataTable tbody tr td.col4 { /* dv title */
          direction: rtl;
          font-size: 125%;
          text-align: center;
@@ -283,41 +283,41 @@
          /* @media screen and (max-width: 768px) {
          .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
          } above mobile breakpoint */
-         .dataTable tbody tr td.fnCol5 { /* ar text */
+         .dataTable tbody tr td.col5 { /* ar text */
          direction: rtl;
          text-align: justify;
          line-height: 1.45;
          font-size: 150%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
          }
-         .dataTable tbody tr td.fnCol6 { /* en text */
+         .dataTable tbody tr td.col6 { /* en text */
          direction: ltr;
          text-align: justify;
          line-height: 1.37;
          font-size: 105%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          }
-         .dataTable tbody tr td.fnCol7 { /* dv text */
+         .dataTable tbody tr td.col7 { /* dv text */
          direction: rtl;
          text-align: justify;
          line-height: 1.37;
          font-size: 135%;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
          }
-         .dataTable tbody tr td.fnCol8 { /* ar ref */
+         .dataTable tbody tr td.col8 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 125%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
          }
-         #fnTable > tbody > tr > td.fnCol9 {   /* en ref */
+         #fnTable > tbody > tr > td.col9 {   /* en ref */
          direction: ltr;
          text-align: center;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          font-size: 100%;
          }
-         #fnTable > tbody > tr > td.fnCol9 {text-align: center;} /* center does not work without this for some reason */
-         .dataTable tbody tr td.fnCol10 { /* dv ref */
+         #fnTable > tbody > tr > td.col9 {text-align: center;} /* center does not work without this for some reason */
+         .dataTable tbody tr td.col10 { /* dv ref */
          direction: rtl;
          text-align: center;
          font-size: 115%;
@@ -947,16 +947,16 @@
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
-               { className: "fnCol1", "targets": [0], "visible": true, "searchable": true},
-               { className: "fnCol2", "targets": [1], "visible": true, "searchable": false },
-               { className: "fnCol3", "targets": [2], "visible": false, "searchable": false },
-               { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },
-               { className: "fnCol5", "targets": [4], "visible": true, "searchable": true },
-               { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },
-               { className: "fnCol7", "targets": [6], "visible": true, "searchable": true }, 
-               { className: "fnCol8", "targets": [7], "visible": true, "searchable": false },
-               { className: "fnCol9", "targets": [8], "visible": false, "searchable": false },
-               { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
+               { className: "col1", "targets": [0], "visible": true, "searchable": true},
+               { className: "col2", "targets": [1], "visible": true, "searchable": false },
+               { className: "col3", "targets": [2], "visible": false, "searchable": false },
+               { className: "col4", "targets": [3], "visible": false, "searchable": false },
+               { className: "col5", "targets": [4], "visible": true, "searchable": true },
+               { className: "col6", "targets": [5], "visible": true, "searchable": true },
+               { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
+               { className: "col8", "targets": [7], "visible": true, "searchable": false },
+               { className: "col9", "targets": [8], "visible": false, "searchable": false },
+               { className: "col10", "targets": [9], "visible": false, "searchable": false },
             ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */
