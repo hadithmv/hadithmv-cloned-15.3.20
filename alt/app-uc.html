@@ -310,19 +310,131 @@
          font-size: 125%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
          }
-         #fnTable > tbody > tr > td.fnCol9 {   /* en ref */
+         .dataTable tbody tr td.fnCol9 {   /* en ref */
          direction: ltr;
          text-align: center;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          font-size: 100%;
          }
-         #fnTable > tbody > tr > td.fnCol9 {text-align: center;} /* center does not work without this for some reason */
+         .dataTable tbody tr td.fnCol9 {text-align: center;} /* center does not work without this for some reason */
+
          .dataTable tbody tr td.fnCol10 { /* dv ref */
          direction: rtl;
          text-align: center;
          font-size: 115%;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
          }
+
+
+
+
+
+
+        /* corrects web view only/none-print display for these particular columns */
+        .dataTable tbody tr td.bCol1 {   /* # number */
+            /*margin-bottom: -1px;*/
+            font-size: 110%;
+            text-align: center;
+        }
+
+        .dataTable tbody tr td.bCol2 {   /* ar book */
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.bCol3 {   /* ar chapt */
+            direction: rtl;
+            font-size: 130%;
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+        .dataTable tbody tr td.bCol4 {   /* ar expl */
+            direction: rtl;
+            font-size: 130%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+
+        .dataTable tbody tr td.bCol5 {   /* en book */
+            font-size: 100%;
+            text-align: center;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol6 {   /* en chapt */
+            font-size: 100%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol7 {   /* en expl */
+            font-size: 100%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+
+        .dataTable tbody tr td.bCol8 {   /* dv book */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            text-align: center;
+        }
+        .dataTable tbody tr td.bCol9 {   /* dv chapt */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+        .dataTable tbody tr td.bCol10 {   /* dv expl */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+
+        .dataTable tbody tr td.bCol11 {  /* ar text */
+            direction: rtl;
+            text-align: justify;
+            font-size: 150%;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.bCol12  {  /* en text */
+            direction: ltr;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 105%;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol13 {  /* dv text */
+            direction: rtl;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 135%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+        }
+/* @media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+} above mobile breakpoint */
+
+        .dataTable tbody tr td.bCol14 {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-size: 125%;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.bCol15 {   /* en ref */
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-size: 100%;
+        }
+        .dataTable tbody tr td.bCol16 {  /* dv ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: "Tharujamaanu";
+            font-size: 115%;
+        }
+
+
+
+
 
          /*hides table headers even on mobile, prev nth-child(2)*/
          thead tr:nth-child(1) {
@@ -332,7 +444,7 @@
          }
 
          /* makes min-width a bit bigger */
-         #example > thead > tr > th > input[type="text"] {
+         .dataTable thead tr th input[type="text"] {
          width: 100%;
          padding: 3px;
          box-sizing: border-box;
@@ -359,12 +471,7 @@
          border: 1px solid rgba(34, 36, 38, .15);
          }
 
-         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
-         padding: 0px !important; padding-left: 1px !important;}
-         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
-         padding: 0px !important;}
-         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
-         margin: 0px !important; width: 43vw !important;}
+
 
          html, body, { /* removing comma from body makes footer break */
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
@@ -392,15 +499,27 @@
          overflow-x: hidden;}
          }
 
+
+
+
+
+
+
+
+         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
          #fnTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
          #fnTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
          #fnTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
          #fnTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
-         #fnTable > thead > tr:nth-child(2) > th {padding-bottom: 2px !important; padding-top: 2px !important;}
-         #fnTable > thead > tr:nth-child(2) {padding: 0px !important;}
+
          #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
          #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
-         #fnTable > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
 
          /*table sides padding*/
          #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
@@ -422,14 +541,7 @@
          #fnTable_paginate {margin-top: -5px !important;}
          /* moves page lenght button a little to the left */
          #fnTable_length > label > select {margin-left: -6px !important;}
-         /* centers table headers */
-         #fnTable > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
-         /* lessens table header bold line */
-         #fnTable > thead > tr:nth-child(2) > th {border-top: 0;}
-         /*hides table top border, mobile view only*/
-         @media screen and (max-width: 768px) {
-         .ui.table {border: none;}
-         }
+
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
@@ -454,6 +566,99 @@
          @media screen and (min-width: 768px) {
          #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
          }  
+
+
+
+
+
+
+
+
+
+         #bTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
+         #bTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #bTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #bTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #bTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+         #bTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #bTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+         /*table sides padding*/
+         #bTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+
+         /* adjusts search input height to match rest */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
+         #bTable_filter > label > input {height: 33px;}
+         /* options button */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
+         #bTable_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
+         /* page length -show button height */
+         #bTable_length > label > select {height: 33px !important;}
+         /* options button height */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+         /* moves pagination buttons a little higher */
+         #bTable_paginate {margin-top: -5px !important;}
+         /* moves page lenght button a little to the left */
+         #bTable_length > label > select {margin-left: -6px !important;}
+
+         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         /*moves show index a little to the right*/
+         #bTable_info { margin-left: 10px;}
+         /*moves show index a little to the bottom*/
+         #bTable_info { padding-top: 6.5px;}
+         /* removes margin around table, especially top-bottom */
+         #bTable {margin: 0 !important;}
+         /* increases the bottom height of show/length -prev 30 */
+         #bTable_length > label > select {height: 34px; }
+         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         }       /* desktop page buttons height - buttons row - mobile */
+         #bTable_paginate {height: 40px;}
+         /* dont forget tab height - margin for whole table */
+         /*       
+         <div class="tab-content clearfix" style="margin-top: 54px;">
+         */
+         /* moves pagination buttons a bit higher - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         }  
+
+
+
+
+
+
+
+
+
+
+         /* centers table headers */
+         .dataTable thead tr:nth-child(2) > * > input[type="text"] {text-align: center;}
+         /* lessens table header bold line */
+         .dataTable thead tr:nth-child(2) > th {border-top: 0;}
+
+         .dataTable thead tr:nth-child(2) > th {padding-bottom: 2px !important; padding-top: 2px !important;}
+         .dataTable thead tr:nth-child(2) {padding: 0px !important;}
+         .dataTable tbody tr {padding-top: 0px !important; padding-bottom: 0px !important;}
+         /*hides individual column search, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .dataTable thead tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+         }
+
+         /*hides table top border, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .ui.table {border: none;}
+         }
          /* moves copied info in front, changes clipboard copied color, */
          #datatables_buttons_info {z-index: 9999 !important;}
        #datatables_buttons_info > h2 {background: #ADD1F2;}
@@ -1315,21 +1520,7 @@
 
 
 
-
       <script src="https://hadithmv.com/alt/Apk/json/bJson.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
