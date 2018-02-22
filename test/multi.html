@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+      <meta charset="utf-8">
+<meta name="robots" content="noindex"/>
+
+         <!--=== === Base Ext CSS === ===-
+            <!--Bootstrap 3-->
+         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+         <!--Datatables - Bootstrap 3 Integration -->
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"/>
+         <!--Datatables - Buttons - Bootstrap 3 Integration -->  
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.bootstrap.min.css"/>
+         <!--Replace Default Buttons Css with custom styling buttons css
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.0/css/buttons.dataTables.min.css">-->
+         <!--Mark JS -->
+         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.css">
+         <!--=== === Base Ext CSS End === ===-->
+
+
+
+         <!--=== === Base Ext JS === ===
+            <!--jQuery - Google 3.x snippet-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <!--Bootstrap 3-->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <!--DataTables Core JS-->
+         <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+         <!--Datatables - Bootstrap 3 Integration -->
+         <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+         <!--Datatables - Buttons -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+         <!--Datatables - Buttons - Bootstrap 3 Integration -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+         <!--Datatables - Buttons - colvis -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+         <!--Mark JS -->
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+         <!--Datatables - KeyTables - Bootstrap 3 Integration -->
+         <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
+         <!--=== === Base Ext JS End === ===-->
+
+
+
+      <!--  === === Base Data Json === === -->
+      <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
+      <!--  === === Base Json End=== === -->
+
+
+      <!--=== Embedded CSS ===-->
+      <style> 
+
+         /* Mark JS */
+         mark {background: yellow; color: black; padding: 0;}
+
+
+
+
+         /*hides table headers even on mobile, prev nth-child(2)*/
+         thead tr:nth-child(1) {
+         position: absolute !important;
+         top: -9999px !important;
+         left: -9999px !important;
+         }
+
+         /* makes min-width a bit bigger */
+         #example > thead > tr > th > input[type="text"] {
+         width: 100%;
+         padding: 3px;
+         box-sizing: border-box;
+         min-width: 20px;
+         border-radius: .28571429rem;
+         border: 1px solid rgba(34, 36, 38, .15);
+         }
+
+         /* both above and below 2 needed to work min-width, or just below 2 to work width */
+         thead input {
+         width: 100%;
+         padding: 3px;
+         min-width: 20px;
+         box-sizing: border-box;
+         border-radius: .28571429rem;
+         border: 1px solid rgba(34, 36, 38, .15);
+         } 
+
+         tfoot input {
+         width: 100%;
+         padding: 3px;
+         box-sizing: border-box;
+         border-radius: .28571429rem;
+         border: 1px solid rgba(34, 36, 38, .15);
+         }
+
+         #Table1_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #Table1_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #Table1_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
+         html, body, { /* removing comma from body makes footer break */
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+         /*font-size: 16px; base font size*/
+         width: 100%;
+         height: 100%;
+         min-width: 100%;
+         min-height: 100%;
+         /*hides unwanted horizontal scroll space, but affects print
+         max-width: 100%; 
+         overflow-x: hidden;*/
+         margin: 0;
+         padding: 0;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         position: absolute;
+         background-color: #fff;
+         }
+
+         /*hides unwanted horizontal scroll space, makes scroll not show on print, adding comma to body makes it fail*/
+         @media not print, screen {
+         html, body {max-width: 100%; 
+         overflow-x: hidden;}
+         }
+
+         #Table1_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #Table1_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #Table1_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #Table1_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+         #Table1 > thead > tr:nth-child(2) > th {padding-bottom: 2px !important; padding-top: 2px !important;}
+         #Table1 > thead > tr:nth-child(2) {padding: 0px !important;}
+         #Table1_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #Table1_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+         #Table1 > tbody > tr {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+         /*table sides padding*/
+         #Table1_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         /*hides individual column search, mobile view only*/
+         @media screen and (max-width: 768px) {
+         #Table1 > thead > tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+         }
+         /* adjusts search input height to match rest */
+         #Table1_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
+         #Table1_filter > label > input {height: 33px;}
+         /* options button */
+         #Table1_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
+         #Table1_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
+         /* page length -show button height */
+         #Table1_length > label > select {height: 33px !important;}
+         /* options button height */
+         #Table1_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+         /* moves pagination buttons a little higher */
+         #Table1_paginate {margin-top: -5px !important;}
+         /* moves page lenght button a little to the left */
+         #Table1_length > label > select {margin-left: -6px !important;}
+         /* centers table headers */
+         #Table1 > thead > tr:nth-child(2) > * > input[type="text"] {text-align: center;}
+         /* lessens table header bold line */
+         #Table1 > thead > tr:nth-child(2) > th {border-top: 0;}
+         /*hides table top border, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .ui.table {border: none;}
+         }
+         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+         #Table1_wrapper > div:nth-child(1) > div:nth-child(3),
+         #Table1_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         /*moves show index a little to the right*/
+         #Table1_info { margin-left: 10px;}
+         /*moves show index a little to the bottom*/
+         #Table1_info { padding-top: 6.5px;}
+         /* removes margin around table, especially top-bottom */
+         #Table1 {margin: 0 !important;}
+         /* increases the bottom height of show/length -prev 30 */
+         #Table1_length > label > select {height: 34px; }
+         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #Table1_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         }       /* desktop page buttons height - buttons row - mobile */
+         #Table1_paginate {height: 40px;}
+         /* dont forget tab height - margin for whole table */
+         /*       
+         <div class="tab-content clearfix" style="margin-top: 54px;">
+         */
+         /* moves pagination buttons a bit higher - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #Table1_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         }  
+         /* moves copied info in front, changes clipboard copied color, */
+         #datatables_buttons_info {z-index: 9999 !important;}
+       #datatables_buttons_info > h2 {background: #ADD1F2;}
+         /* tab-content clearfix */
+         body > div > div > div {margin-top: 54px !important;}
+         /* about jumbotron text direction */
+         .righty {direction: rtl;}  .lefty {direction: ltr; font-size: 18px !important;}
+         /* first and third jumbo */
+         #about > div:nth-child(1), #about > div:nth-child(3)  {margin-top: -5px; background-color: transparent; margin-bottom: -5px;}
+         /* second jumbo {}*/
+         /* fourth jumbo */
+         #about > div:nth-child(4) {margin-top: -5px; margin-bottom: -15px;}
+
+      </style>
+
+
+   </head>
+
+
+   <body class="notranslate">
+      <!-- === === NAV BAR === === -->
+      <nav class="navbar navbar-xs navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+
+               <!-- CHANGE123
+                  href="file:///android_asset/newLogo4.svg">
+                  "https://hadithmv.github.io/img/newLogo4/newLogo4.svg"-->     <!-- JSDELIVR123 -->
+               <a class="navbar-brand"></a>
+
+               <!--prev navbar-text-->
+               <h4 class="navbar-text text-center"></h4>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+
+                  <li class="active NavClick" data-toggle="tab" href="#tab1"><a href="">Table1</a></li>
+                  <li class="NavClick" data-toggle="tab" href="#tab2"><a href="">Table2</a></li>
+
+               </ul>
+            </div>    <!-- /.navbar-collapse -->
+         </div>   <!-- /.container-fluid -->
+      </nav>    <!-- === === /NAV BAR === === -->
+
+
+      <!-- === === CONTAINER === === -->
+      <div class="container-fluid">
+         <div class="flex-row row">
+
+            <div class="tab-content clearfix">
+
+               <div class="tab-pane fade in active" id="tab1">
+                  <!-- === === /40n tab === === -->
+                  <!--TABLE BEGIN,
+                     "display": Short-hand for the stripe, hover, row-border and order-column classes.
+                     "cell-border": Border around all four sides of each cell.
+                     "compact": Reduce the amount of white-space the default styling for the DataTable uses, increasing the information density on screen (since 1.10.1).
+                     "hover": Row highlighting on mouse over.
+                     "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
+                     "order-column": Highlight the column that the table data is currently ordered on.
+                     "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
+                     "striped": Row striping-->
+                  <table id="Table1" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
+                     <thead>
+                        <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                        </tr>
+                     </thead>
+                  </table>
+               </div>   <!-- === === /tab-pane active" === === -->
+
+
+               <div class="tab-pane fade" id="tab2">  <!-- === === /bukh tab === === -->
+                  <table id="Table2" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
+                     <thead>
+                        <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                        </tr>
+                     </thead>
+                  </table>
+               </div>   <!-- === === /tab-pane === === -->
+
+
+
+            </div>   <!-- === === /tab-content clearfix === === -->
+
+         </div>     <!-- === /FLEX-ROW === -->
+      </div>   <!-- === === /CONTAINER === === --> 
+
+
+      <!--=== === ===INLINE JS=== === ===-->
+      <script>
+         
+         
+         /* removes right tab click active */
+         $(".nav li").click(function() {
+             $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
+             $("html").animate({ scrollTop: 0 }, "fast");   /* NavClick scroll to top - tabs */
+         });
+         
+         /* CLOSE NAV ON EXT CLICK */
+         $('body').bind('click', function(e) { 
+             if(jQuery(e.target).closest('.navbar').length == 0) {
+                 // click happened outside of .navbar, so hide
+                 var opened = $('.navbar-collapse').hasClass('collapse in');
+                 if ( opened === true ) {
+                     $('.navbar-collapse').collapse('hide');
+                 }
+             }
+         });
+         
+         /* close mobile view navbar on click */
+         $(document).on('click','.navbar-collapse.in',function(e) {
+             if( $(e.target).is('a') ) {
+                 $(this).collapse('hide');
+             }
+         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         $(document).ready(function() {
+         
+         
+         
+             // Setup - add a text input to each footer cell
+             $('#Table1 tfoot th').each( function () {
+                 var title = $(this).text(); //var title = $('#Table1 thead th').eq( $(this).index() ).text();
+                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+             } );
+         
+         //Add footer search to table
+                         $("#Table1").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>ar Ref.</th><th>en Ref.</th><th>dv Ref.</th></tr></tfoot>');
+         
+         //Setup - add a text input to each search footer cell
+                         $('#Table1 tfoot th').each(function() {
+                             var title = $(this).text();
+                             $(this).html('<input type="text" placeholder="'+title+'"/>');
+                         });
+         
+         
+         //                         var dataSrc = []; //autocomplete typeahead
+         
+
+         //=================== PagingType Media Query
+         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+         
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full_numbers",
+                "keys": "true", //KeyTable extension 
+             } );
+         
+         } else { /* js media query on mobile, tablet */
+         
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full",
+                                       //KeyTable extension "keys": "false",  no need, makes mobile jump on touch
+             } );
+         
+         } //===================end if else
+         
+         
+         //  $(document).ready(function() {
+           var table = $('#Table1').DataTable({
+                     data: dataSet,
+         
+          //   data: data, previously without column titles
+             columns: [
+               {title:"#"}, 
+               {title:"Ar Title"},
+               {title:"En Title"},
+               {title:"Dv Title"},
+               {title:"Arabic"},
+               {title:"English"},
+               {title:"Dhivehi"},
+               {title:"Ar Ref."},
+               {title:"En Ref."},
+               {title:"Dv Ref."},
+             ],
+         
+             columnDefs: [  //classes columns for css in nweb view, but not print
+               { className: "T1Col1", "targets": [0], "visible": true, "searchable": true},
+               { className: "T1Col2", "targets": [1], "visible": true, "searchable": false },
+               { className: "T1Col3", "targets": [2], "visible": false, "searchable": false },
+               { className: "T1Col4", "targets": [3], "visible": false, "searchable": false },
+               { className: "T1Col5", "targets": [4], "visible": true, "searchable": true },
+               { className: "T1Col6", "targets": [5], "visible": true, "searchable": true },
+               { className: "T1Col7", "targets": [6], "visible": true, "searchable": true }, 
+               { className: "T1Col8", "targets": [7], "visible": true, "searchable": false },
+               { className: "T1Col9", "targets": [8], "visible": false, "searchable": false },
+               { className: "T1Col10", "targets": [9], "visible": false, "searchable": false },
+            ], //end of columnDefs
+         
+
+         
+             orderCellsTop: false, //Moves the sorting icons to the first header row
+             mark: true, //highlights searches
+             autoWidth: false,
+             ordering: false, //disables column sorting
+             order: [
+                    [0, "asc"]
+                    ],
+         
+             lengthMenu: [1, 2, 3, 5, 7, 10, 15,20,-1],
+         
+         
+         
+          
+           }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#Table1').DataTable({
+         
+
+
+         
+         
+             // ScrollTop - If the user changes the page, scroll to the top
+             $(".dataTable").on("page.dt", function () {
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+                 $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
+             });
+         
+
+         //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                         $('#Table1_filter input').keyup(function() {
+                             table
+                                 .search(
+                                     $.fn.DataTable.ext.type.search.string(this.value)
+                                 )
+                                 .draw();
+                         });
+         //End of Remove accented characters from global search input
+         
+         
+
+             // Apply the Individual column searching, other half at top
+             table.columns().every( function () {
+                 var that = this;
+          
+                 $( 'input', this.footer() ).on( 'keyup change', function () {
+                     if ( that.search() !== this.value ) {
+                         that
+                             .search( this.value )
+                             .draw();
+                     }
+                 } );
+             } );
+         // Individual column searching end
+         
+         // moves individual column searching to top
+         $('#Table1 tfoot tr').appendTo('#Table1 thead');
+         // moves individual column searching to top end
+         
+         // Apply Buttons
+                         table.buttons().container()
+                         table.buttons(0, null).containers();
+
+         
+         });
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+var dataSet1 = [
+  ["Edan","North Island","Sit Amet Nulla Inc.","Ghana"  ],
+  ["Macaulay","Wisconsin","Eu Placerat Eget Company","Saint Martin"  ],
+  ["Odysseus","VB","Cras Institute","Indonesia"  ],
+  ["Ahmed","Leinster","Enim Commodo Institute","Austria"  ],
+  ["Curran","KT","Id Libero Corp.","Madagascar"  ],
+  ["Dieter","Noord Brabant","Nec Urna Suscipit Inc.","Sudan"  ],
+  ["Keith","Bihar","Ut Aliquam Consulting","French Southern Territories"  ],
+  ["Zephania","British Columbia","Nibh Company","Nigeria"  ],
+  ["Elton","SJ","Non Magna Consulting","Northern Mariana Islands"  ],
+  ["Kirk","NA","Pellentesque Incorporated","Chad"  ],
+  ["Ray","Wyoming","Purus Consulting","Australia"  ],
+  ["Leroy","West Bengal","Magnis Dis Parturient Industries","Tanzania"  ],
+  ["Brenden","LA","Praesent Interdum Limited","Slovakia"  ],
+  ["Garrison","AP","Orci Sem Eget LLC","South Africa"  ],
+  ["Lucian","MG","Mus Donec LLP","Tunisia"  ],
+  ["Burton","Alajuela","Fermentum Company","Oman"  ],
+  ["Bevis","Midi-Pyrénées","Posuere Foundation","Liechtenstein"  ],
+  ["Charles","Victoria","Sit Incorporated","Argentina"  ],
+  ["Stone","AP","Lacinia Industries","Nepal"  ],
+  ["Damon","Gävleborgs län","Quis Industries","Eritrea"  ]
+];
+      </script>
+
+      <!--=== === ===INLINE JS=== === ===-->
+      <script>
+
+         $(document).ready(function() {
+
+         
+         // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
+             // Setup - add a text input to each footer cell
+             $('#Table2 tfoot th').each( function () {
+                 var title = $(this).text(); //var title = $('#Table2 thead th').eq( $(this).index() ).text();
+                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+             } );
+         
+//Add footer search to table
+                $("#Table2").append('<tfoot><tr><th>Name</th><th>Region</th><th>Company</th><th>Country</th></tr></tfoot>');
+         
+         //Setup - add a text input to each search footer cell
+                         $('#Table2 tfoot th').each(function() {
+                             var title = $(this).text();
+                             $(this).html('<input type="text" placeholder="'+title+'"/>');
+                         });
+         
+         
+         
+
+
+         
+         
+         //  $(document).ready(function() {
+           var table = $('#Table2').DataTable({
+                     data: dataSet1,
+         
+
+         
+         
+          //   data: data,
+             columns: [
+               {title:"Name"}, 
+               {title:"Region"},
+               {title:"Company"},
+               {title:"Country"},
+             ],
+         
+             columnDefs: [  //classes columns for css in nweb view, but not print
+      { className: "T2Col1", "targets": [0], "visible": true, "searchable": true},
+      { className: "T2Col2", "targets": [1], "visible": true, "searchable": false },
+      { className: "T2Col3", "targets": [2], "visible": true, "searchable": false },
+      { className: "T2Col4", "targets": [3], "visible": true, "searchable": false },
+      { className: "T2Col5", "targets": [4], "visible": false, "searchable": false },
+      { className: "T2Col6", "targets": [5], "visible": false, "searchable": false },
+      { className: "T2Col7", "targets": [6], "visible": false, "searchable": false }, 
+      { className: "T2Col8", "targets": [7], "visible": false, "searchable": false },
+      { className: "T2Col9", "targets": [8], "visible": false, "searchable": false },
+      { className: "T2Col10", "targets": [9], "visible": false, "searchable": false },
+      { className: "T2Col11", "targets": [10], "visible": true, "searchable": true },
+      { className: "T2Col12", "targets": [11], "visible": true, "searchable": true },
+      { className: "T2Col13", "targets": [12], "visible": true, "searchable": true },
+      { className: "T2Col14", "targets": [13], "visible": true, "searchable": false },
+      { className: "T2Col15", "targets": [14], "visible": false, "searchable": false },
+      { className: "T2Col16", "targets": [15], "visible": false, "searchable": false },
+            ], //end of columnDefs
+         
+         
+             orderCellsTop: false, //Moves the sorting icons to the first header row
+             mark: true, //highlights searches
+             autoWidth: false,
+             ordering: false, //disables column sorting
+             order: [
+                    [0, "asc"]
+                    ],
+         
+
+             lengthMenu: [1, 2, 3, 5, 7, 10, 15, 20, -1],
+             
+         
+          
+           }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#Table2').DataTable({
+         
+
+         
+         
+             // ScrollTop
+             $(".dataTable").on("page.dt", function () {
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+                 $("th:first-child").focus();
+             });
+         
+         
+                         $('#Table2_filter input').keyup(function() {
+                             table
+                                 .search(
+                                     $.fn.DataTable.ext.type.search.string(this.value)
+                                 )
+                                 .draw();
+                         });
+
+         
+         
+             // Apply the Individual column searching,
+             table.columns().every( function () {
+                 var that = this;
+          
+                 $( 'input', this.footer() ).on( 'keyup change', function () {
+                     if ( that.search() !== this.value ) {
+                         that
+                             .search( this.value )
+                             .draw();
+                     }
+                 } );
+             } );
+         // Individual column searching end
+         
+         // moves individual column searching to top, header, does not break fixedcolumnheaders
+         $('#Table2 tfoot tr').appendTo('#Table2 thead');
+         // moves individual column searching to top end
+         
+         // Apply Buttons
+                         table.buttons().container()
+                         table.buttons(0, null).containers();
+
+         
+         });
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </body>
+</html>
