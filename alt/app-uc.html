@@ -637,6 +637,11 @@
 
 
 
+         /*hides individual column search, mobile view only*/ /*APP123 40table ind column search wont hide otherwise*/
+         @media screen and (max-width: 768px) {
+         #fnTable > tfoot > tr {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+         }
+
 
 
 
