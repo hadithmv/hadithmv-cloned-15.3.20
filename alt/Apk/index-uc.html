@@ -3,7 +3,12 @@
    <!--change languages later if needed-->
    <head>   <!--<meta name="robots" content="noindex"/> -->
 
-
+<!--
+   APPCHANGE
+   VERSIONCHANGE
+   APKCHANGE
+ -->
+ 
       <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
       <meta http-equiv="X-UA-Compatible" content="IE=Edge">
       <title>Hadithmv - Accessible and Sourced</title>
@@ -60,18 +65,14 @@
 
 
       <!--  === === Base C CSS JS === === -->
-      <!-- CHANGE123
+      <!-- APKCHANGE123
       <link rel="stylesheet" href="file:///android_asset/app2.css">
       -->
-      <!--<link rel="stylesheet" type="text/css" href="https://hadithmv.github.io/alt/Apk/Resc/app2.css" https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/app2.css>-->
-      <!-- JSDELIVR123 --> 
       <link rel="stylesheet" href="file:///android_asset/app2.css">
 
-      <!-- CHANGE123
+      <!-- APKCHANGE123
       <script src="file:///android_asset/app2.js"></script>
       -->
-      <!--<script type="text/javascript" src="https://hadithmv.github.io/alt/Apk/Resc/app2.js"  https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/app2.js></script>-->
-      <!-- JSDELIVR123 --> 
       <script src="file:///android_asset/app2.js"></script>
       <!--  === === Base C CSS JS End=== === -->
 
@@ -148,23 +149,20 @@
 
 
       <!--  === === Base Data Json === === -->
-      <!-- CHANGE123
-      <script src="file:///android_asset/bJson.js"></script>
+      <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
+      <script src="file:///android_asset/40nJson.js"></script>
      -->
-      <!--<script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
-      <script src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/40nJson.js"></script>-->
-      <!-- JSDELIVR123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers  -->
       <script src="file:///android_asset/40nJson.js"></script>
       <!--  === === Base Json End=== === -->
 
 
       <!--=== Embedded CSS ===-->
-      <style> /* JSDELIVR123 */
+      <style>
          /* Ubuntu-mod */
          @font-face {
          font-family: 'Ubuntu';
          src:
-      /* CHANGE123
+      /* APKCHANGE123
          url('file:///android_asset/Ubuntu-mod.woff') format('woff'),   https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Ubuntu-mod.woff2
          */
          url('file:///android_asset/Ubuntu-mod.woff') format('woff');
@@ -173,19 +171,19 @@
          @font-face {
          font-family: 'KFGQPCUthmanTahaNaskh';
          src:
-      /* CHANGE123
-         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod.woff') format('woff'),
+      /* APKCHANGE123
+         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2') format('woff'),
          */
-         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff');
+         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2') format('woff');
          }
          /* Tharujamaanu-B-Regular-mod */
          @font-face {
          font-family: 'Tharujamaanu';
          src: 
-      /* CHANGE123
-         url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
+      /* APKCHANGE123
+         url('file:///android_asset/Tharujamaanu-B-Regular-mod4.woff') format('woff'),
          */
-         url('file:///android_asset/Tharujamaanu-B-Regular-mod4.woff') format('woff');
+         url('file:///android_asset/Tharujamaanu-B-Regular-mod4.woff.woff') format('woff');
          }
 
 
@@ -714,9 +712,9 @@
                <span class="icon-bar"></span>
                </button>
 
-               <!-- CHANGE123
-                  href="file:///android_asset/newLogo4.svg">
-                  "https://hadithmv.github.io/img/newLogo4/newLogo4.svg"-->     <!-- JSDELIVR123 -->
+               <!-- APKCHANGE123
+                  "file:///android_asset/newLogo5-compressor.svg">
+                -->
                <a class="navbar-brand" href="https://hadithmv.com"><img class="miniLogo imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/newLogo5-compressor.svg" alt="menu logo"></a>
 
                <!--prev navbar-text-->
@@ -869,15 +867,19 @@
                   <div class="jumbotron text-center">
                      <div class="container">
                         <div class="col-lg-6">
-                           <!-- CHANGE123 "file:///android_asset/newLogo4.svg"  https://hadithmv.github.io/img/newLogo4/newLogo4.svg    https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/newLogo4.svg-->             <!-- JSDELIVR123 -->
+               <!-- APKCHANGE123
+                  "file:///android_asset/newLogo5-compressor.svg">
+                -->
                            <img class="img-responsive center-block imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/newLogo5-compressor.svg" width="250" alt="menu logo" />
                         </div>
                         <div class="col-lg-6">
                            <h2>السلام عليكم</h2>
                            <br>
                            <p class="lead">Welcome to <strong>Hadithmv</strong></p>
-                           <!-- CHANGE123 "file:///android_asset/en_badge_web_generic-compressor.png" -->
-                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/en_badge_web_generic-compressor.png"/></a>
+               <!-- APKCHANGE123
+                  "file:///android_asset/en_badge_web_generic-compressor.svg">
+                -->
+                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/en_badge_web_generic-compressor.svg"/></a>
                            <br>
                         </div>
                      </div>
@@ -929,7 +931,7 @@
                      <div class="container">
                         <div class="row">
                            <div class="col-lg-12">
-                              <p>Version <strong>0.0.1</strong></p> <!-- VERSION 123 -->
+                              <p>Version <strong>1.2.6</strong></p> <!-- VERSIONCHANGE123 -->
                            </div>
                         </div>
                      </div>
@@ -1232,7 +1234,7 @@
                  infoFiltered:   "(filtered from _MAX_ total)",
                  zeroRecords:    "No matches found",
                  search: "",
-                 searchPlaceholder: "Search Hmv . . . ",
+                 searchPlaceholder: "Search 40 Nawawi . . . ",
                  info: "_START_ to _END_ of _TOTAL_ Hadith",
                  lengthMenu: "_MENU_"
              }, //end of language
@@ -1344,7 +1346,17 @@
                        exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
                      },
          //end of copy customization
-         /*CHANGE123*/
+
+         /*APKCHANGE123*/
+         
+
+
+                                 { extend: 'csv',
+                                   key: { key: 'v', shiftKey: true },
+                                   text: 'Csv',
+                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
+                                 }, //end of csv
+         
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
                                    text: 'Hide Items'
@@ -1519,8 +1531,21 @@
 
 
 
-<!--APPCHANGE123-->
+      <!--  === === Base Data Json === === -->
+      <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
       <script src="file:///android_asset/bJson.js"></script>
+     -->
+      <script src="file:///android_asset/bJson.js"></script>
+      <!--  === === Base Json End=== === -->
+
+
+
+
+
+
+
+
+
       <!--=== === ===INLINE JS=== === ===-->
       <script>
          $(document).ready(function() {
@@ -1721,7 +1746,7 @@
                  infoFiltered:   "(filtered from _MAX_ total)",
                  zeroRecords:    "No matches found",
                  search: "",
-                 searchPlaceholder: "Search Hmv . . . ",
+                 searchPlaceholder: "Search Bukhari . . . ",
                  info: "_START_ to _END_ of _TOTAL_ Hadith",
                  lengthMenu: "_MENU_"
              }, //end of language
@@ -1839,7 +1864,8 @@
                        exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
                      },
          //end of copy customization
-         /*CHANGE123*/
+         
+         /*APKCHANGE123*/
          
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
@@ -2028,7 +2054,7 @@
 
 
 
-      <!--  === === Web only plugins - CHANGE123 ===  === -->
+      <!--  === === Web only plugins - APKCHANGE123 ===  === -->
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 
 
