@@ -358,6 +358,97 @@
             font-size: 115%;
         }
 
+
+         #bTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
+         #bTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #bTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #bTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #bTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+         #bTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #bTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+         /*table sides padding*/
+         #bTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+
+         /* adjusts search input height to match rest */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
+         #bTable_filter > label > input {height: 33px;}
+         /* options button */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
+         #bTable_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
+         /* page length -show button height */
+         #bTable_length > label > select {height: 33px !important;}
+         /* options button height */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
+         /* moves pagination buttons a little higher */
+         #bTable_paginate {margin-top: -5px !important;}
+         /* moves page lenght button a little to the left */
+         #bTable_length > label > select {margin-left: -6px !important;}
+
+         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
+         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         /*moves show index a little to the right*/
+         #bTable_info { margin-left: 10px;}
+         /*moves show index a little to the bottom*/
+         #bTable_info { padding-top: 6.5px;}
+         /* removes margin around table, especially top-bottom */
+         #bTable {margin: 0 !important;}
+         /* increases the bottom height of show/length -prev 30 */
+         #bTable_length > label > select {height: 34px; }
+         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         }       /* desktop page buttons height - buttons row - mobile */
+         #bTable_paginate {height: 40px;}
+         /* dont forget tab height - margin for whole table */
+         /*       
+         <div class="tab-content clearfix" style="margin-top: 54px;">
+         */
+         /* moves pagination buttons a bit higher - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         }  
+/*APPCHANGE123*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
          /*hides table headers even on mobile, prev nth-child(2)*/
          thead tr:nth-child(1) {
          position: absolute !important;
@@ -436,63 +527,6 @@
          }
 
 
-         #bTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
-         padding: 0px !important; padding-left: 1px !important;}
-         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
-         padding: 0px !important;}
-         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
-         margin: 0px !important; width: 43vw !important;}
-
-         #bTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
-         #bTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
-         #bTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
-         #bTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
-
-         #bTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
-         #bTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
-
-         /*table sides padding*/
-         #bTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
-
-         /* adjusts search input height to match rest */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
-         #bTable_filter > label > input {height: 33px;}
-         /* options button */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
-         #bTable_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-         /* page length -show button height */
-         #bTable_length > label > select {height: 33px !important;}
-         /* options button height */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
-         /* moves pagination buttons a little higher */
-         #bTable_paginate {margin-top: -5px !important;}
-         /* moves page lenght button a little to the left */
-         #bTable_length > label > select {margin-left: -6px !important;}
-
-         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-         /*moves show index a little to the right*/
-         #bTable_info { margin-left: 10px;}
-         /*moves show index a little to the bottom*/
-         #bTable_info { padding-top: 6.5px;}
-         /* removes margin around table, especially top-bottom */
-         #bTable {margin: 0 !important;}
-         /* increases the bottom height of show/length -prev 30 */
-         #bTable_length > label > select {height: 34px; }
-         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
-         @media screen and (min-width: 768px) {
-         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-         }       /* desktop page buttons height - buttons row - mobile */
-         #bTable_paginate {height: 40px;}
-         /* dont forget tab height - margin for whole table */
-         /*       
-         <div class="tab-content clearfix" style="margin-top: 54px;">
-         */
-         /* moves pagination buttons a bit higher - Desktop only MQ */
-         @media screen and (min-width: 768px) {
-         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
-         }  
 
 
 
@@ -569,9 +603,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav">
-
+<!--APPCHANGE123
+                  <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
+                  <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari</a></li>
+-->
                   <li class=" NavClick"><a href="https://hadithmv.com" target="_blank" rel="noopener">40 Nawawi</a></li>
-
                   <li class="active NavClick"><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
@@ -634,7 +670,7 @@
 
             <div class="tab-content clearfix">
 
-               <div class="tab-pane fade in active" id="40n">
+               <div class="tab-pane fade in active" id="bukh">
                   <!-- === === /40n tab === === -->
                   <!--TABLE BEGIN,
                      "display": Short-hand for the stripe, hover, row-border and order-column classes.
@@ -674,8 +710,8 @@
                   </div>
                </div>   <!-- === === /tab-pane active" id="40n" === === -->
 
-
-               <div class="tab-pane fade" id="bukh">  <!-- === === /bukh tab === === -->
+<!--APPCHANGE123-->
+               <div class="tab-pane fade" id="40n">  <!-- === === /bukh tab === === -->
                   <h3>Bukhari</h3>
                   <p>Coming Soon</p>
                   <p>Insha Allah</p>
