@@ -319,7 +319,7 @@
         .dataTable tbody tr td.bCol11 {  /* ar text */
             direction: rtl;
             text-align: justify;
-            font-size: 150%;
+            font-size: 140%;
             font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
         }
         .dataTable tbody tr td.bCol12  {  /* en text */
@@ -363,6 +363,20 @@
          position: absolute !important;
          top: -9999px !important;
          left: -9999px !important;
+         }
+
+         /*hides individual column search, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .dataTable thead tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+         }
+
+         /* moves copied info in front, changes clipboard copied color, */
+         #datatables_buttons_info {z-index: 9999 !important;}
+         #datatables_buttons_info > h2 {background: #ADD1F2;}
+
+         /*hides table top border, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .ui.table {border: none;}
          }
 
          /* makes min-width a bit bigger */
@@ -491,18 +505,7 @@
          .dataTable thead tr:nth-child(2) {padding: 0px !important;}
          .dataTable tbody tr {padding-top: 0px !important; padding-bottom: 0px !important;}
          
-         /*hides individual column search, mobile view only*/
-         @media screen and (max-width: 768px) {
-         .dataTable thead tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
-         }
 
-         /*hides table top border, mobile view only*/
-         @media screen and (max-width: 768px) {
-         .ui.table {border: none;}
-         }
-         /* moves copied info in front, changes clipboard copied color, */
-         #datatables_buttons_info {z-index: 9999 !important;}
-		 #datatables_buttons_info > h2 {background: #ADD1F2;}
          /* tab-content clearfix */
          body > div > div > div {margin-top: 54px !important;}
          /* about jumbotron text direction */

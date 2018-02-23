@@ -149,7 +149,7 @@
 
       <!--  === === Base Data Json === === -->
       <!-- CHANGE123
-      <script src="file:///android_asset/40nJson.js"></script>
+      <script src="file:///android_asset/bJson.js"></script>
      -->
       <!--<script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/40nJson.js"></script>-->
@@ -287,7 +287,7 @@
          direction: rtl;
          text-align: justify;
          line-height: 1.45;
-         font-size: 150%;
+         font-size: 140%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
          }
          .dataTable tbody tr td.fnCol6 { /* en text */
@@ -330,6 +330,20 @@
          position: absolute !important;
          top: -9999px !important;
          left: -9999px !important;
+         }
+
+         /*hides individual column search, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .dataTable thead tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+         }
+
+         /* moves copied info in front, changes clipboard copied color, */
+         #datatables_buttons_info {z-index: 9999 !important;}
+         #datatables_buttons_info > h2 {background: #ADD1F2;}
+
+         /*hides table top border, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .ui.table {border: none;}
          }
 
          /* makes min-width a bit bigger */
@@ -406,8 +420,6 @@
 
          /*table sides padding*/
          #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
-         /*hides individual column search, mobile view only*/
-         @media screen and (max-width: 768px) {
 
          /* adjusts search input height to match rest */
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
@@ -460,18 +472,7 @@
          .dataTable thead tr:nth-child(2) {padding: 0px !important;}
          .dataTable tbody tr {padding-top: 0px !important; padding-bottom: 0px !important;}
          
-         /*hides individual column search, mobile view only*/
-         @media screen and (max-width: 768px) {
-         .dataTable thead tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
-         }
 
-         /*hides table top border, mobile view only*/
-         @media screen and (max-width: 768px) {
-         .ui.table {border: none;}
-         }
-         /* moves copied info in front, changes clipboard copied color, */
-         #datatables_buttons_info {z-index: 9999 !important;}
-       #datatables_buttons_info > h2 {background: #ADD1F2;}
          /* tab-content clearfix */
          body > div > div > div {margin-top: 54px !important;}
          /* about jumbotron text direction */
@@ -541,7 +542,7 @@
                   <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
-                  
+
                </ul>
                <!-- === Search engine 
                   <form class="navbar-form navbar-left">
@@ -614,6 +615,12 @@
                   <table id="fnTable" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
                      <thead>
                         <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
                            <th></th>
                            <th></th>
                            <th></th>
@@ -711,7 +718,7 @@
                      <div class="container">
                         <div class="row">
                            <div class="col-lg-12">
-                              <p>Version <strong>1.2.5</strong></p> <!-- VERSION 123 -->
+                              <p>Version <strong>0.0.1</strong></p> <!-- VERSION 123 -->
                            </div>
                         </div>
                      </div>
@@ -1230,7 +1237,7 @@
           /* empty */
          } else { /* js media query on mobile, tablet */
          
-                       Hammer("fnTable").on("swipeleft", function() {
+                       Hammer(fnTable).on("swipeleft", function() {
                              table.page( 'next' ).draw( 'page' );  
                        });
                        Hammer(document.getElementById("fnTable")).on("swiperight", function() {
@@ -1306,9 +1313,6 @@
          gtag('config', 'UA-112777351-1');
       </script>
       <!-- Google Analytics End -->
-
-
-
 
 
    </body>
