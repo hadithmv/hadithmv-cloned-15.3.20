@@ -1124,14 +1124,6 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
                                  '' :
                                  typeof data === 'string' ?
                                  data
-
-                                 .replace(/\[[^\]]*\]/g, '') //exclude whats between square brackets, doesnt work on arabic
-                                 
-                                 .replace(/Allah be pleased with him/g, '')
-                                 .replace(/Allah be pleased with her/g, '')
-                                 .replace(/Allah be pleased with them/g, '')
-                                 .replace(/Allah be pleased with them both/g, '')
-
                                  .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
                                  .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
          //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
@@ -1401,15 +1393,7 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
                                 data = data.replace( /\tEn Ref./g, '' );
                                 data = data.replace( /\tDv Ref./g, '' );
          
-                                data = data.replace( /\nAr Title/g, '' );
-                                data = data.replace( /\nEn Title/g, '' );
-                                data = data.replace( /\nDv Title/g, '' );
-                                data = data.replace( /\nArabic/g, '' );
-                                data = data.replace( /\nEnglish/g, '' );
-                                data = data.replace( /\nDhivehi/g, '' );
-                                data = data.replace( /\nAr Ref./g, '' );
-                                data = data.replace( /\nEn Ref./g, '' );
-                                data = data.replace( /\nDv Ref./g, '' );  
+                                
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
@@ -1663,14 +1647,6 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
                                  '' :
                                  typeof data === 'string' ?
                                  data
-
-                                 .replace(/\[[^\]]*\]/g, '') //exclude whats between square brackets, doesnt work on arabic
-                                 
-                                 .replace(/Allah be pleased with him/g, '')
-                                 .replace(/Allah be pleased with her/g, '')
-                                 .replace(/Allah be pleased with them/g, '')
-                                 .replace(/Allah be pleased with them both/g, '')
-
                                  .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
                                  .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
          //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
@@ -1798,7 +1774,7 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
-               {title:"En Ref."},
+               {title:"Ar Ref."},
                {title:"Dv Ref."},
              ],
          
@@ -1945,10 +1921,10 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
                        data = data.replace( /\tAr Book/g, '' );
                        data = data.replace( /\tAr Chapter/g, '' );
                        data = data.replace( /\tAr Heading/g, '' );
-                       data = data.replace( /\tEn Book/g, '' );
+                       data = data.replace( /\tEn Title/g, '' );
                        data = data.replace( /\tEn Chapter/g, '' );
                        data = data.replace( /\tEn Heading/g, '' );
-                       data = data.replace( /\tDv Book/g, '' );
+                       data = data.replace( /\tDv Title/g, '' );
                        data = data.replace( /\tDv Chapter/g, '' );
                        data = data.replace( /\tDv Heading/g, '' );
                        data = data.replace( /\tArabic/g, '' );
@@ -1958,21 +1934,7 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
                        data = data.replace( /\tEn Ref./g, '' );
                        data = data.replace( /\tDv Ref./g, '' );
          
-                       data = data.replace( /\nAr Book/g, '' );
-                       data = data.replace( /\nAr Chapter/g, '' );
-                       data = data.replace( /\nAr Heading/g, '' );
-                       data = data.replace( /\nEn Book/g, '' );
-                       data = data.replace( /\nEn Chapter/g, '' );
-                       data = data.replace( /\nEn Heading/g, '' );
-                       data = data.replace( /\nDv Book/g, '' );
-                       data = data.replace( /\nDv Chapter/g, '' );
-                       data = data.replace( /\nDv Heading/g, '' );
-                       data = data.replace( /\nArabic/g, '' );
-                       data = data.replace( /\nEnglish/g, '' );
-                       data = data.replace( /\nDhivehi/g, '' );
-                       data = data.replace( /\nAr Ref./g, '' );
-                       data = data.replace( /\nEn Ref./g, '' );
-                       data = data.replace( /\nDv Ref./g, '' );
+                                
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
