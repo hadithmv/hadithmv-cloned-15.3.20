@@ -48,11 +48,11 @@
 
       <!-- favicons
          <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
-<!--  <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo5/newLogo5%20-16.png">   -->
+<!--  <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo5/newLogo5%20-16.png">	-->
       <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.com/img/newLogo5/newLogo5-32-compressor.png">
-<!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.com/img/newLogo5/newLogo5%20-72.png" />   -->
+<!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.com/img/newLogo5/newLogo5%20-72.png" />	-->
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
-<!--  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />   -->
+<!--  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />	-->
       <link rel="manifest" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/manifest.json">
       <link rel="shortcut icon" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/favicon.ico">
       <meta name="apple-mobile-web-app-title" content="Hadithmv">
@@ -141,7 +141,7 @@
 
       <!--  === === Web only plugins ===  === MOVED BELOW
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
-   -->
+	-->
 
       <!--=== === Web only plugins End === ===-->
       <!--Search input with autocomplete using Typeahead and Bootstrap - FIX LATER
@@ -824,13 +824,13 @@
          /* removes right tab click active */
          $(".nav li").click(function() {
              $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
-             $("html").animate({ scrollTop: 0 }, "fast");   /* NavClick scroll to top - tabs */
+             $("html").animate({ scrollTop: 0 }, "fast");	/* NavClick scroll to top - tabs */
          });
          
          /* NavClick scroll to top - tabs 
          $('.NavClick').click(function(){
              $("html").animate({ scrollTop: 0 }, "fast");
-          });  */
+          });	*/
          
          /* CLOSE NAV ON EXT CLICK */
          $('body').bind('click', function(e) { 
@@ -915,7 +915,7 @@
                                  typeof data === 'string' ?
                                  data
 
-                                 .replace(/\[[^\]]*\]/g, '') //exclude whats between square brackets, doesnt work on arabic
+                                 .replace(/\[.*\][(].*[)]/g, '') //exclude whats between square brackets, doesnt work on arabic
                                  
                                  .replace(/Allah be pleased with him/g, '')
                                  .replace(/Allah be pleased with her/g, '')
@@ -1049,7 +1049,7 @@
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
-               {title:"Ar Ref."},
+               {title:"En Ref."},
                {title:"Dv Ref."},
              ],
          
