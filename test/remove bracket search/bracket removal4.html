@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link href="https://nightly.datatables.net/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+
+        <script src="https://cdn.datatables.net/plug-ins/1.10.16/pagination/input.js"></script>
+
+    <meta name="robots" content="noindex"/>
+    <meta charset=utf-8 />
+    <title>DataTables - JS Bin</title>
+  </head>
+  <body>
+
+
+<script type="text/javascript">
+         var dataSet = [
+  ["Name","Position","Office","Age","Start date","Salary"  ],
+  ["[Tiger] Narrated Jabir bin Abdullah al-Ansari (while talking about the period of pause in Revelation) reporting from the Prophet as saying: While I was walking, (suddenly) I heard a voice from the sky. So I looked up and saw the angel (Jibril) who came to me at the cave of Hira, he was sitting on a chair between the sky and the earth. I became afraid of him, so I returned home and said: Wrap me (in blankets). And then Allah the Most High revealed: \"O you (Muhammad) wrapped up in blankets, arise and warn, and proclaim the Greatness of your Rabb, and purify your garments, and shun the idols.\" [Mudhathir 74:1-5] Afterwards, the Revelation started coming strongly, frequently and regularly.","System Architect","Edinburgh","61","2011/04/25","$3,120"  ],
+  ["Garrett [Winters]","Director","Edinburgh","63","2011/07/25","$5,300"  ],
+  ["Ashton Cox","Technical Author","San Francisco","66","2009/01/12","$4,800"  ],
+  ["Cedric Kelly","Javascript Developer","Edinburgh","22","2012/03/29","$3,600"  ],
+  ["Jenna Elliott","Financial Controller","Edinburgh","33","2008/11/28","$5,300"  ],
+  ["Brielle Williamson","Integration Specialist","New York","61","2012/12/02","$4,525"  ],
+  ["Herrod Chandler","Sales Assistant","San Francisco","59","2012/08/06","$4,080"  ],
+  ["Rhona Davidson","Integration Specialist","Edinburgh","55","2010/10/14","$6,730"  ],
+  ["Colleen Hurst","Javascript Developer","San Francisco","39","2009/09/15","$5,000"  ],
+  ["Sonya Frost","Software Engineer","Edinburgh","23","2008/12/13","$3,600"  ],
+  ["Jena [Gaines]","System Architect","London","30","2008/12/19","$5,000"  ],
+  ["Quinn Flynn","Financial [Controller]","Edinburgh","22","2013/03/03","$4,200"  ],
+  ["Charde Marshall","Regional Director","San Francisco","36","2008/10/16","$5,300"  ],
+  ["Haley Kennedy","Senior Marketing Designer","London","43","2012/12/18","$4,800"  ],
+  ["[Tatyana] Fitzpatrick","Regional Director","London","19","2010/03/17","$2,875"  ],
+  ["Michael Silva","Senior Marketing Designer","London","66","2012/11/27","$3,750"  ],
+  ["Paul Byrd","Javascript Developer","New York","64","2010/06/09","$5,000"  ],
+  ["Gloria [Little]","Systems Administrator","New York","59","2009/04/10","$3,120"  ],
+  ["Bradley Greer","Software Engineer","London","41","2012/10/13","$3,120"  ],
+  ["Dai Rios","System Architect","Edinburgh","35","2012/09/26","$4,200"  ],
+  ["[Jenette] Caldwell","Financial Controller","New York","30","2011/09/03","$4,965"  ],
+  ["Yuri Berry","System Architect","New York","40","2009/06/25","$3,600"  ],
+  ["Caesar Vance","Technical Author","New York","21","2011/12/12","$4,965"  ],
+  ["Doris [Wilder]","Sales Assistant","Edinburgh","23","2010/09/20","$4,965"  ],
+  ["Angelica Ramos","System Architect","London","36","2009/10/09","$2,875"  ],
+  ["Gavin Joyce","Developer","Edinburgh","42","2010/12/22","$4,525"  ],
+  ["Jennifer Chang","[Regional Director]","London","28","2010/11/14","$4,080"  ],
+  ["Brenden Wagner","Software Engineer","San Francisco","18","2011/06/07","$3,750"  ],
+  ["Ebony Grimes","Software Engineer","[San Francisco]","48","2010/03/11","$2,875"  ],
+  ["Russell Chavez","Director","Edinburgh","20","2011/08/14","$3,600"  ],
+  ["Michelle House","Integration Specialist","Edinburgh","37","2011/06/02","$3,750"  ],
+  ["Suki Burks","Developer","London","53","2009/10/22","$2,875"  ],
+  ["[Prescott] Bartlett","Technical Author","London","27","2011/05/07","$6,730"  ],
+  ["Gavin Cortez","Technical Author","San Francisco","22","2008/10/26","$6,730"  ],
+  ["Martena Mccray","Integration Specialist","[Edinburgh]","46","2011/03/09","$4,080"  ]
+];
+      </script>
+
+
+
+<script type="text/javascript">
+  $.fn.DataTable.ext.type.search.string = function ( data ) {
+    return ! data ?
+        '' :
+        typeof data === 'string' ?
+            data
+                                 .replace(/\[.*?\]/g, '') //exclude whats between square brackets
+ :
+            data;
+};
+
+
+
+
+$(document).ready(function() {
+
+
+           var table = $('#example').DataTable({
+                     data: dataSet,
+            }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#bTable').DataTable({
+
+
+
+      // regex search manipulation
+      $('#myInput').keyup( function () {
+        table
+          .search(
+            jQuery.fn.DataTable.ext.type.search.string( this.value )
+          )
+          .draw()
+      } );
+  } );
+</script>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+                        <table id="example" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
+                     <thead>
+                        <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                        </tr>
+                     </thead>
+                  </table>
+    </div>
+  </body>
+</html>
