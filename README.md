@@ -42,7 +42,7 @@
     ·
     <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv">Android Version</a>
     ·
-    <a href="https://hadithmv.github.io/alt/Desktop/Hadithmv-Win.zip">Desktop Version</a>
+    <a href="https://hadithmv.github.io/alt/Desktop/hmv-win.zip">Desktop Version</a>
     <br>
 -->
   <p align="center"><a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv"><img src="https://hadithmv.com/img/playstore-badge/en_badge_web_generic-compressor.png" alt="" width=250></a></p> 
