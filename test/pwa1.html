@@ -40,10 +40,15 @@
 -->
       <link rel="manifest" href="https://hadithmv.com/alt/hmvManifest.json"> <!-- JSON file , control how your app appears as an app/mobile CHANGE123-->
 
-      <script async> //Service Worker - helps cache website offline
+      <script> //Service Worker - helps cache website offline
+		navigator.serviceWorker && navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js').then(function(registration) {
+  			console.log('Excellent, registered with scope: ', registration.scope);
+		});
+		/*
          if ('serviceWorker' in navigator) {
          self.addEventListener('fetch', function(event) {});
          navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js'); }
+         */
       </script>
 
       <!-- favicons
