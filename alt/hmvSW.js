@@ -1,6 +1,9 @@
-/** An empty service worker! */
 self.addEventListener('fetch', function(event) {
-  /** An empty fetch handler! */
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
 });
 
 self.addEventListener('install', function(e) {
