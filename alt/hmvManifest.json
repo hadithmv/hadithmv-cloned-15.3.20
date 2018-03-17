@@ -8,9 +8,9 @@
   "description": "Dhivehi Hadith translations at your fingertips",
   "icons": [
     {
-      "src": "https://hadithmv.com/img/newLogo4/newLogo4-512.png",
+      "src": "https://hadithmv.com/img/newLogo5/newLogo5-500-compressor.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "500x500"
     }
   ],
   "related_applications": [{
