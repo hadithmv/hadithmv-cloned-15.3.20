@@ -42,21 +42,14 @@
 
       <link rel="manifest" href="https://hadithmv.com/alt/hmvManifest.json"> <!-- JSON file , control how your app appears as an app/mobile CHANGE123-->
 
-      <script src="https://cdn.rawgit.com/boyofgreen/ManUp.js/6dae0a97/manup.min.js"></script>
+  <script src="https://raw.githubusercontent.com/TalAter/UpUp/master/dist/upup.min.js"></script>
 
-      <script type="text/javascript">
-      	//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
-if (navigator.serviceWorker.controller) {
-  console.log('[PWA Builder] active service worker found, no need to register')
-} else {
-  //Register the ServiceWorker
-  navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js', {
-    scope: './'
-  }).then(function(reg) {
-    console.log('Service worker has been registered for scope:'+ reg.scope);
-  });
-}
-      </script>
+  <script>
+    UpUp.start({
+      'content-url': 'https://hadithmv.com/alt/app-offline.html'
+    });
+  </script>
+
 <!--
       <script> //Service Worker - helps cache website offline
 		navigator.serviceWorker && navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js').then(function(registration) {
