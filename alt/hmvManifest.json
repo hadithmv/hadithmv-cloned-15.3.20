@@ -1,20 +1,22 @@
 {
-  "name": "Hadithmv",
-  "short_name": "Hmv",
-  "start_url": "/?homescreen=1",
-  "display": "fullscreen",
-  "theme_color": "#1A619E",
-  "background_color": "#fff",
-  "description": "Dhivehi Hadith translations at your fingertips",
-  "icons": [
-    {
-      "src": "https://hadithmv.com/img/newLogo5/newLogo5-500-compressor.png",
-      "type": "image/png",
-      "sizes": "500x500"
-    }
-  ],
-  "related_applications": [{
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=com.hadithmv.hmv"
-  }]
+    "name": "Hadithmv",
+    "short_name": "Hmv",
+    "start_url": "https://hadithmv.com/?homescreen=1",
+    "display": "fullscreen",
+    "theme_color": "#1A619E",
+    "background_color": "#fff",
+    "description": "Dhivehi Hadith translations at your fingertips",
+    "icons": [
+        {
+            "src": "/images/img/newLogo5/newLogo5-500-compressor.png",
+            "type": "image/png",
+            "sizes": "500x500"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "play",
+            "url": "https://play.google.com/store/apps/details?id=com.hadithmv.hmv"
+        }
+    ]
 }

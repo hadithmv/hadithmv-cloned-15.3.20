@@ -1,26 +1,13 @@
-// version: change this to update
+//This is the "Offline page" service worker
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
-});
-
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open('the-magic-cache').then(function(cache) {
-      return cache.addAll([
-        '/',
-        'https://hadithmv.com.html',
-        'https://hadithmv.com/alt/hmvManifest.json',
-        'https://hadithmv.com/alt/Apk/Resc/app2.css',
-        'https://hadithmv.com/alt/Apk/json/40nJson.js',
-        'https://hadithmv.com/alt/Apk/Resc/app2.js',
-        'https://hadithmv.com/img/playstore-badge/en_badge_web_generic-compressor.png',
-        'https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg',
-      ]);
-    })
-  );
-});
+//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+if (navigator.serviceWorker.controller) {
+  console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+  //Register the ServiceWorker
+  navigator.serviceWorker.register('pwabuilder-sw.js', {
+    scope: './'
+  }).then(function(reg) {
+    console.log('Service worker has been registered for scope:'+ reg.scope);
+  });
+}
