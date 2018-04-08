@@ -42,7 +42,7 @@
 
       <script async> //Service Worker - helps cache website offline
          if ('serviceWorker' in navigator) {
-         self.addEventListener('fetch', function(event) {});
+         // sw.js can literally be empty, but must exist
          navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js'); }
       </script>
 
@@ -756,7 +756,7 @@
                      <div class="container">
                         <div class="row">
                            <div class="col-lg-12">
-                              <p>Version <strong>1.2.10</strong></p> <!-- VERSIONCHANGE123 -->
+                              <p>Version <strong>1.2.11</strong></p> <!-- VERSIONCHANGE123 -->
                            </div>
                         </div>
                      </div>

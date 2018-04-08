@@ -317,73 +317,109 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
          vertical-align: top;
          }
 
-         /* corrects web view only/none-print display for these particular columns ? */
-         .dataTable tbody tr td.col1 { /* # number */
+        /* corrects web view only/none-print display for these particular columns */
+        .dataTable tbody tr td.bCol1 {   /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 110%;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
-         .dataTable tbody tr td.col2 { /* ar title */
-         direction: rtl;
-         font-size: 130%;
-         text-align: center;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
-         .dataTable tbody tr td.col3 { /* en title */
-         font-size: 100%;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
-         .dataTable tbody tr td.col4 { /* dv title */
-         direction: rtl;
-         font-size: 125%;
-         text-align: center;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
-         /* @media screen and (max-width: 768px) {
-         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-         } above mobile breakpoint */
-         .dataTable tbody tr td.col5 { /* ar text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.45;
-         font-size: 150%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
-         .dataTable tbody tr td.col6 { /* en text */
-         direction: ltr;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 105%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
-         .dataTable tbody tr td.col7 { /* dv text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 135%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
-         .dataTable tbody tr td.col8 { /* ar ref */
-         direction: rtl;
-         text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 125%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
-         #table_id > tbody > tr > td.col9 {   /* en ref */
-         direction: ltr;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         font-size: 100%;
-         }
-         #table_id > tbody > tr > td.col9 {text-align: center;} /* center does not work without this for some reason */
-         .dataTable tbody tr td.col10 { /* dv ref */
-         direction: rtl;
-         text-align: center;
-         font-size: 115%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+            font-size: 110%;
+            text-align: center;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+
+        .dataTable tbody tr td.bCol2 {   /* ar book */
+            direction: rtl;
+            font-size: 130%;
+            text-align: center;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol3 {   /* ar chapt */
+            direction: rtl;
+            font-size: 130%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol4 {   /* ar expl */
+            direction: rtl;
+            font-size: 130%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+
+        .dataTable tbody tr td.bCol5 {   /* en book */
+            font-size: 100%;
+            text-align: center;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol6 {   /* en chapt */
+            font-size: 100%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol7 {   /* en expl */
+            font-size: 100%;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+
+        .dataTable tbody tr td.bCol8 {   /* dv book */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
+            text-align: center;
+        }
+        .dataTable tbody tr td.bCol9 {   /* dv chapt */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+        .dataTable tbody tr td.bCol10 {   /* dv expl */
+            direction: rtl;
+            font-size: 125%;
+            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
+            text-align: justify; text-align-last: center; /* justify and center */
+        }
+
+        .dataTable tbody tr td.bCol11 {  /* ar text */
+            direction: rtl;
+            text-align: justify;
+            font-size: 145%;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.bCol12  {  /* en text */
+            direction: ltr;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 110%;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+        }
+        .dataTable tbody tr td.bCol13 {  /* dv text */
+            direction: rtl;
+            text-align: justify;
+            line-height: 1.4;
+            font-size: 125%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+        }
+/* @media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+} above mobile breakpoint */
+
+        .dataTable tbody tr td.bCol14 {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-size: 125%;
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+        }
+        .dataTable tbody tr td.bCol15 {   /* en ref */
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+            font-size: 100%;
+        }
+        .dataTable tbody tr td.bCol16 {  /* dv ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            font-size: 115%;
+        }
 
          /*hides table headers even on mobile, prev nth-child(2)*/
          thead tr:nth-child(1) {
@@ -584,7 +620,7 @@ function wa(a){var b=a.aLastSort,c=a.oClasses.sSortColumn,d=V(a),e=a.oFeatures,f
 
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
 
-                  <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
+                  <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari (Beta)</a></li>
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
                   
