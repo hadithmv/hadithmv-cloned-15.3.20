@@ -163,7 +163,7 @@
          font-family: 'Ubuntu';
          src:
       /* APKCHANGE123
-         url('file:///android_asset/Ubuntu-mod.woff') format('woff'),   https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Ubuntu-mod.woff2
+         url('file:///android_asset/Ubuntu-mod.woff') format('woff')
          */
          url('file:///android_asset/Ubuntu-mod.woff') format('woff');
          }
@@ -172,7 +172,7 @@
          font-family: 'KFGQPCUthmanTahaNaskh';
          src:
       /* APKCHANGE123
-         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2') format('woff'),
+         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff'),
          */
          url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff');
          }
@@ -248,109 +248,74 @@
          vertical-align: top;
          }
 
-        /* corrects web view only/none-print display for these particular columns */
-        .dataTable tbody tr td.bCol1 {   /* # number */
+         /* corrects web view only/none-print display for these particular columns ? */
+         .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
-            font-size: 110%;
-            text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
+         font-size: 110%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+         }
+         .dataTable tbody tr td.fnCol2 { /* ar title */
+         direction: rtl;
+         font-size: 130%;
+         text-align: center;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+         }
+         .dataTable tbody tr td.fnCol3 { /* en title */
+         font-size: 100%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+         }
+         .dataTable tbody tr td.fnCol4 { /* dv title */
+         direction: rtl;
+         font-size: 125%;
+         text-align: center;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+         }
+         /* @media screen and (max-width: 768px) {
+         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+         } above mobile breakpoint */
+         .dataTable tbody tr td.fnCol5 { /* ar text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.45;
+         font-size: 145%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+         }
+         .dataTable tbody tr td.fnCol6 { /* en text */
+         direction: ltr;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 110%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+         }
+         .dataTable tbody tr td.fnCol7 { /* dv text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 125%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+         }
+         .dataTable tbody tr td.fnCol8 { /* ar ref */
+         direction: rtl;
+         text-align: justify; text-align-last: center; /* justify and center */
+         font-size: 125%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+         }
+         .dataTable tbody tr td.fnCol9 {   /* en ref */
+         direction: ltr;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+         font-size: 100%;
+         }
+         .dataTable tbody tr td.fnCol9 {text-align: center;} /* center does not work without this for some reason */
 
-        .dataTable tbody tr td.bCol2 {   /* ar book */
-            direction: rtl;
-            font-size: 130%;
-            text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-        .dataTable tbody tr td.bCol3 {   /* ar chapt */
-            direction: rtl;
-            font-size: 130%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-        .dataTable tbody tr td.bCol4 {   /* ar expl */
-            direction: rtl;
-            font-size: 130%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-
-        .dataTable tbody tr td.bCol5 {   /* en book */
-            font-size: 100%;
-            text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-        .dataTable tbody tr td.bCol6 {   /* en chapt */
-            font-size: 100%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-        .dataTable tbody tr td.bCol7 {   /* en expl */
-            font-size: 100%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-
-        .dataTable tbody tr td.bCol8 {   /* dv book */
-            direction: rtl;
-            font-size: 125%;
-            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: center;
-        }
-        .dataTable tbody tr td.bCol9 {   /* dv chapt */
-            direction: rtl;
-            font-size: 125%;
-            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: justify; text-align-last: center; /* justify and center */
-        }
-        .dataTable tbody tr td.bCol10 {   /* dv expl */
-            direction: rtl;
-            font-size: 125%;
-            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: justify; text-align-last: center; /* justify and center */
-        }
-
-        .dataTable tbody tr td.bCol11 {  /* ar text */
-            direction: rtl;
-            text-align: justify;
-            font-size: 145%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-        }
-        .dataTable tbody tr td.bCol12  {  /* en text */
-            direction: ltr;
-            text-align: justify;
-            line-height: 1.4;
-            font-size: 110%;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-        .dataTable tbody tr td.bCol13 {  /* dv text */
-            direction: rtl;
-            text-align: justify;
-            line-height: 1.4;
-            font-size: 125%;
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-        }
-/* @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-} above mobile breakpoint */
-
-        .dataTable tbody tr td.bCol14 {   /* ar ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-size: 125%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-        }
-        .dataTable tbody tr td.bCol15 {   /* en ref */
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-            font-size: 100%;
-        }
-        .dataTable tbody tr td.bCol16 {  /* dv ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-            font-size: 115%;
-        }
+         .dataTable tbody tr td.fnCol10 { /* dv ref */
+         direction: rtl;
+         text-align: center;
+         font-size: 115%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+         }
 
 
          #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
@@ -447,24 +412,26 @@
             /*margin-bottom: -1px;*/
             font-size: 110%;
             text-align: center;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
         .dataTable tbody tr td.bCol2 {   /* ar book */
             direction: rtl;
             font-size: 130%;
             text-align: center;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
         .dataTable tbody tr td.bCol3 {   /* ar chapt */
             direction: rtl;
             font-size: 130%;
             text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
         .dataTable tbody tr td.bCol4 {   /* ar expl */
             direction: rtl;
             font-size: 130%;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
         }
 
         .dataTable tbody tr td.bCol5 {   /* en book */
@@ -486,19 +453,19 @@
         .dataTable tbody tr td.bCol8 {   /* dv book */
             direction: rtl;
             font-size: 125%;
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
             text-align: center;
         }
         .dataTable tbody tr td.bCol9 {   /* dv chapt */
             direction: rtl;
             font-size: 125%;
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
             text-align: justify; text-align-last: center; /* justify and center */
         }
         .dataTable tbody tr td.bCol10 {   /* dv expl */
             direction: rtl;
             font-size: 125%;
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
+            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
             text-align: justify; text-align-last: center; /* justify and center */
         }
 
@@ -534,13 +501,13 @@
         }
         .dataTable tbody tr td.bCol15 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
             font-size: 100%;
         }
         .dataTable tbody tr td.bCol16 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: "Tharujamaanu";
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
             font-size: 115%;
         }
 
@@ -764,7 +731,7 @@
                   <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
 -->
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
-                  <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari</a></li>
+                  <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari (Beta)</a></li>
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
 
@@ -905,7 +872,7 @@
                <!-- APKCHANGE123
                   "file:///android_asset/newLogo5-compressor.svg">
                 -->
-                           <img class="img-responsive center-block imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/newLogo5-compressor.svg" width="250" alt="menu logo" />
+                           <img class="img-responsive center-block imgGrow" src="file:///android_asset/newLogo5-compressor.svg" width="250" alt="menu logo" />
                         </div>
                         <div class="col-lg-6">
                            <h2>السلام عليكم</h2>
@@ -914,11 +881,11 @@
                <!-- APKCHANGE123
                   "file:///android_asset/en_badge_web_generic-compressor.svg">
                 -->
-                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/en_badge_web_generic-compressor.png"/></a>
-                           <br>
+                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="file:///android_asset/en_badge_web_generic-compressor.png"/></a>
 
-                           <a href="https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="240" alt="Get it on Windows Desktop" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="file:///android_asset/Get-it-on-windows-10-compressor.png"/></a>
+                           <a href="https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="240" alt="Get it on Windows Desktop" src="file:///android_asset/Get-it-on-windows-10-compressor.png"/></a>
                            
+                           <br>
                         </div>
                      </div>
                   </div>   <!-- jumbotron end -->
@@ -1095,13 +1062,13 @@
                                  typeof data === 'string' ?
                                  data
 
-                                 .replace(/\[[^\]]*\]/g, '') //exclude whats between square brackets, doesnt work on arabic
+         //                     .replace(/\[.*?\]/g, '') //exclude whats between square brackets, doesnt work on arabic
                                  
                                  .replace(/Allah be pleased with him/g, '')
                                  .replace(/Allah be pleased with her/g, '')
                                  .replace(/Allah be pleased with them/g, '')
                                  .replace(/Allah be pleased with them both/g, '')
-
+                                 
                                  .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
                                  .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
          //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
@@ -1401,14 +1368,15 @@
                      },
          //end of copy customization
 
-         /*APKCHANGE123*/
+
+
+
 
          
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
                                    text: 'Hide Items'
                                  }, //end of colvis
-                                 {key: { key: 's', shiftKey: true },
                                  {text: 'Web Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://hadithmv.com';}
@@ -1421,7 +1389,7 @@
                                  {text: 'Desktop Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip';}
-                                 }, //custom button end 
+                                 }, //custom button end
          /*
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
@@ -1603,13 +1571,8 @@
                                  typeof data === 'string' ?
                                  data
 
-                                 .replace(/\[[^\]]*\]/g, '') //exclude whats between square brackets, doesnt work on arabic
-                                 
-                                 .replace(/Allah be pleased with him/g, '')
-                                 .replace(/Allah be pleased with her/g, '')
-                                 .replace(/Allah be pleased with them/g, '')
-                                 .replace(/Allah be pleased with them both/g, '')
-
+         //                     .replace(/\[.*?\]/g, '') //exclude whats between square brackets, doesnt work on arabic
+         
                                  .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
                                  .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
          //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
@@ -1737,8 +1700,8 @@
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
+               {title:"Ar Ref."},
                {title:"Dv Ref."},
-               {title:"En Ref."},
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
@@ -1934,12 +1897,15 @@
          //end of copy customization
          
          /*APKCHANGE123*/
+
+
+
+                                 
          
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
                                    text: 'Hide Items'
                                  }, //end of colvis
-                                 {key: { key: 's', shiftKey: true },
                                  {text: 'Web Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://hadithmv.com';}
@@ -1952,7 +1918,8 @@
                                  {text: 'Desktop Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip';}
-                                 }, //custom button end 
+                                 }, //custom button end
+                   
          /*
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
