@@ -341,7 +341,7 @@
 
          /*around table sides padding*/
          #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
-         #fnTable > tbody > tr > td {padding-left: 7px !important; padding-right: 7px !important;}
+         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
 
 
 
@@ -374,16 +374,16 @@
 /*fixlater
 table unpadded too much, as if zoomed, readd padded around sides*/
 #fnTable_wrapper > div:nth-child(1) > div {padding-left: 10px; padding-right: 15px;}
-/* Same thing, mobile only MQ */
+
+/*mobile*/
          @media screen and (max-width: 768px) {
-         #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) {padding-left: 10px; padding-right: 20px;}
+/*options button - make height less */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+/*options button sides padding - remove */
+          #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {padding: 0;}
+/*Show button sides padding - remove - */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
          }  
-
-         @media screen and (max-width: 768px) {
-         #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div > button {height: 30px;}
-         }  
-
-
 
 
 
@@ -1106,7 +1106,7 @@ dom: //previous dom setting broke the diactric included search
 
       //mobile and tablet top
       "<'row hidden-md hidden-lg hidden-sm '"   +
-         "<'row'<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>>"+
+         "<'row'<'col-xs-1'><'col-xs-2'f><'col-xs-3'><'col-xs-2 pull-left'B><'col-xs-1'><'col-xs-2 'l><'col-xs-1'>>"+
          "<'row'<'col-sm-12'p>>" +
       ">"   +
 
