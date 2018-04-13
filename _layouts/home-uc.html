@@ -257,7 +257,7 @@
          /* corrects web view only/none-print display for these particular columns ? */
          .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 110%;
+         font-size: 120%;
          text-align: center;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          }
@@ -339,23 +339,10 @@
          #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
          #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
 
-         /*table sides padding*/
+         /*around table sides padding*/
          #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
 
-         /* adjusts search input height to match rest */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
-         #fnTable_filter > label > input {height: 33px;}
-         /* options button */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
-         #fnTable_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-         /* page length -show button height */
-         #fnTable_length > label > select {height: 33px !important;}
-         /* options button height */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
-         /* moves pagination buttons a little higher */
-         #fnTable_paginate {margin-top: -5px !important;}
-         /* moves page lenght button a little to the left */
-         #fnTable_length > label > select {margin-left: -6px !important;}
+
 
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
@@ -368,10 +355,10 @@
          #fnTable {margin: 0 !important;}
          /* increases the bottom height of show/length -prev 30 */
          #fnTable_length > label > select {height: 34px; }
-         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
          @media screen and (min-width: 768px) {
          #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-         }       /* desktop page buttons height - buttons row - mobile */
+         }       /* desktop page buttons height - buttons ROW - mobile */
          #fnTable_paginate {height: 40px;}
          /* dont forget tab height - margin for whole table */
          /*       
@@ -383,9 +370,17 @@
          }  
 /*APPCHANGE123*/
 
+/*fixlater
+table unpadded too much, as if zoomed, readd padded around sides*/
+#fnTable_wrapper > div:nth-child(1) > div {padding-left: 10px; padding-right: 15px;}
+/* Same thing, mobile only MQ */
+         @media screen and (max-width: 768px) {
+         #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) {padding-left: 10px; padding-right: 20px;}
+         }  
 
-
-
+         @media screen and (max-width: 768px) {
+         #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > div > button {height: 30px;}
+         }  
 
 
 
@@ -784,7 +779,7 @@
       <script>
          /*Help Alert*/
                  function myHelp() {
-                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
+                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+w] = Website Link, [shift+s] = Play Store Link, [shift+d] = Desktop Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
                  }
          
          /*Footer Alert*/
@@ -1100,34 +1095,35 @@
          "<'row'<'col-sm-5'i><'col-sm-7'p>>"
          */
          //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
-           dom:
-         
-         //mobile
-         "<'row hidden-md hidden-lg hidden-sm '"+
-                 "<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>"+
-         ">" +
-         "<'row hidden-md hidden-lg hidden-sm'"+
-                 "<'row'<'col-sm-12'p>>" +
-         ">" +
-         //desktop
-         "<'row-fluid hidden-xs'"+
-             "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
-         ">" +
-         
-         //both
+
+dom: //previous dom setting broke the diactric included search
+
+      //desktop top
+      "<'row hidden-xs'"   +
+         "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
+      ">"   +
+
+      //mobile and tablet top
+      "<'row hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>>"+
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //BOTH (table for desktop and mobile and tablet)
          "<'row'<'col-sm-12'tr>>" +
-         
-         
-         //mobile
-         "<'row hidden-md hidden-lg hidden-sm'"+
-                 "<'col-sm-5'i><'col-sm-7'p>"+
-         ">" +
-         //desktop
-         "<'row hidden-xs'"+
-                 "<'col-sm-12'p>"+
-         ">" 
-             ,
-         
+
+      //desktop bottom
+      "<'row hidden-xs'"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //mobile and tablet bottom
+      "<'row hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>"  +
+      ">",
+
+renderer: 'bootstrap',
+
 
              buttons: [
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
@@ -1217,7 +1213,8 @@
                                    key: {key: 'h', shiftKey: true},
                                    text: 'Hide Items'
                                  }, //end of colvis
-                                 {text: 'Web Version',
+                                 {key: { key: 'w', shiftKey: true },
+                                 text: 'Web Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://hadithmv.com';}
                                  }, //custom button end
@@ -1226,7 +1223,8 @@
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                                  }, //custom button end
-                                 {text: 'Desktop Version',
+                                 {key: { key: 'd', shiftKey: true },
+                                 text: 'Desktop Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip';}
                                  }, //custom button end                 
