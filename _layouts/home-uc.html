@@ -383,7 +383,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 /*options button - make height less */
             #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
 /*options button sides padding - remove, reposition sides */
-          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 13px !important; margin-right: -15px !important;}
+          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
 /*Show button sides padding - remove - */
             #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
          }  
@@ -939,7 +939,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
              } );
          
          //Add footer search to table
-                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>ar Ref.</th><th>en Ref.</th><th>dv Ref.</th></tr></tfoot>');
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
@@ -1070,9 +1070,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                      },
                  infoEmpty:      "Found 0 Hadith",
                  infoFiltered:   "(filtered from _MAX_ total)",
-                 zeroRecords:    "No matches found",
+                 zeroRecords:    "No matches",
                  search: "",
-                 searchPlaceholder: "Search 40 Nawawi . . . ",
+                 searchPlaceholder: "Search 40 Nawawi",
                  info: "_START_ to _END_ of _TOTAL_ Hadith",
                  lengthMenu: "_MENU_"
              }, //end of language
@@ -1109,7 +1109,7 @@ dom: //previous dom setting broke the diactric included search
 
 
       //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
-         "<'row'<'col-sm-1 col-xs-2'f><'hidden-md hidden-lg hidden-sm col-xs-3'><'col-sm-2 col-xs-3 text-right'B><'col-xs-1'><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>"+
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-3'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>"+
 
       //mobile and tablet top
       "<'hidden-md hidden-lg hidden-sm '"   +
