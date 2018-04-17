@@ -284,8 +284,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
             text-align: justify; }
         table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
             direction: rtl;
-            text-align: justify;
-            font-family: Tharujamaanu-Bold;  }  
+            text-align: justify; }  
         table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */ }
@@ -294,8 +293,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
             text-align: center; }
         table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
             direction: rtl;
-            text-align: center;
-            font-family: Tharujamaanu-Bold;  }  
+            text-align: center;  }  
 
 
 
@@ -437,163 +435,14 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
 
 
-/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
-        /*corrects print display for these particular columns*/
-        /* *previously just .datatable before tbody */
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
-            text-align: center;
-            font-weight: bold;   }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
-            text-align: center;  }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
-            direction: rtl;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
-            direction: ltr;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
-            direction: rtl;
-            text-align: justify;
-            font-family: Tharujamaanu-Bold;  }  
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */ }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
-            direction: ltr;
-            text-align: center; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
-            direction: rtl;
-            text-align: center;
-            font-family: Tharujamaanu-Bold;  }  
 
 
 
 
 
-         /* corrects web view only/none-print display for these particular columns ? */
-         .dataTable tbody tr td.fnCol1 { /* # number */
-            /*margin-bottom: -1px;*/
-         font-size: 120%;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol2 { /* ar title */
-         direction: rtl;
-         font-size: 130%;
-         text-align: center;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-         .dataTable tbody tr td.fnCol3 { /* en title */
-         font-size: 100%;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol4 { /* dv title */
-         direction: rtl;
-         font-size: 125%;
-         text-align: center;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-         /* @media screen and (max-width: 768px) {
-         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-         } above mobile breakpoint */
-         .dataTable tbody tr td.fnCol5 { /* ar text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.45;
-         font-size: 145%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-         .dataTable tbody tr td.fnCol6 { /* en text */
-         direction: ltr;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 100%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol7 { /* dv text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 130%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-         .dataTable tbody tr td.fnCol8 { /* ar ref */
-         direction: rtl;
-         text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 125%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-         .dataTable tbody tr td.fnCol9 {   /* en ref */
-         direction: ltr;
-         text-align: center; /* center does not work without this for some reason */
-         font-size: 100%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol10 { /* dv ref */
-         direction: rtl;
-         text-align: center;
-         font-size: 120%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
 
 
 
-
-
-         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
-         padding: 0px !important; padding-left: 1px !important;}
-         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
-         padding: 0px !important;}
-         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
-         margin: 0px !important; width: 43vw !important;}
-
-         #fnTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
-         #fnTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
-         #fnTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
-         #fnTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
-
-         #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
-         #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
-
-         /*around table sides padding*/
-         #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
-         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
-
-
-
-         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-         /*moves show index a little to the right*/
-         #fnTable_info { margin-left: 10px;}
-         /*moves show index a little to the bottom*/
-         #fnTable_info { padding-top: 6.5px;}
-         /* removes margin around table, especially top-bottom */
-         #fnTable {margin: 0 !important;}
-         /* increases the bottom height of show/length -prev 30 */
-         #fnTable_length > label > select {height: 34px; }
-         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
-         @media screen and (min-width: 768px) {
-         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-         }       /* desktop page buttons height - buttons ROW - mobile */
-         #fnTable_paginate {height: 40px;}
-         /* dont forget tab height - margin for whole table */
-         /*       
-         <div class="tab-content clearfix" style="margin-top: 54px;">
-         */
-         /* moves pagination buttons a bit higher - Desktop only MQ */
-         @media screen and (min-width: 768px) {
-         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
-         }  
-/*APPCHANGE123*/
-
-/*fixlater
-table unpadded too much, as if zoomed, readd padded around sides*/
-#fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
-
-/*search button height*/
-#fnTable_filter > label > input {height: 34px !important;}
-
-/*mobile*/
-         @media screen and (max-width: 768px) {
-/*options button - make height less */
-            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
-/*options button sides padding - remove, reposition sides */
-          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
-/*Show button sides padding - remove - */
-            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
-         }  
 
 
 
@@ -624,8 +473,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
             text-align: justify; }
         table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(7) {   /* dv text  */
             direction: rtl;
-            text-align: justify;
-            font-family: Tharujamaanu-Bold;  } 
+            text-align: justify; } 
         table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(8) {   /* ar ref  */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */ }
