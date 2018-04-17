@@ -151,9 +151,9 @@
 
       <!--  === === Base Data Json === === -->
       <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
-      <script src="file:///android_asset/bJson.js"></script>
+      <script src="file:///android_asset/40nJson.js"></script>
          TABLECHANGE123-->
-      <script src="https://hadithmv.com/alt/Apk/json/bJson.js"></script>
+      <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
       <!--  === === Base Json End=== === -->
 
 
@@ -254,7 +254,7 @@
          table.dataTable tbody td {
          vertical-align: top;
          }
-
+         
 body > h1 {font-size: 20px;} /*print header font size*/
 
 
@@ -267,184 +267,158 @@ body > h1 {font-size: 20px;} /*print header font size*/
 /* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
         /*corrects print display for these particular columns*/
         /* *previously just .datatable before tbody */
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
             text-align: center;
             font-weight: bold;   }
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(2) {   /* ar book */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
             text-align: center;  }
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(3) {   /* ar chapt */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
             direction: rtl;
             text-align: justify; }
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(4) {   /* ar head  */
-            direction: rtl;
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
             text-align: justify; }
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(5) {   /* ar text  */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
             direction: rtl;
             text-align: justify;
             font-family: Tharujamaanu-Bold;  }  
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(6) {   /* en text */
-            direction: ltr;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(7) {   /* dv text  */
-            direction: rtl;
-            text-align: justify;
-            font-family: Tharujamaanu-Bold;  } 
-        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(8) {   /* ar ref  */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;
+            font-family: Tharujamaanu-Bold;  }  
 
 
 
 
 
          /* corrects web view only/none-print display for these particular columns ? */
-        .dataTable tbody tr td.bCol1 {   /* # number */
+         .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
-            font-size: 120%;
-            text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol2 {   /* ar book */
-            direction: rtl;
-            font-size: 130%;
-            text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol3 {   /* ar chapt */
-            direction: rtl;
-            font-size: 130%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol4 {   /* ar expl */
-            direction: rtl;
-            font-size: 130%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol5 {   /* en book */
-            font-size: 100%;
-            text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol6 {   /* en chapt */
-            font-size: 100%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol7 {   /* en expl */
-            font-size: 100%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol8 {   /* dv book */
-            direction: rtl;
-            font-size: 125%;
-            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: center;  }
-        .dataTable tbody tr td.bCol9 {   /* dv chapt */
-            direction: rtl;
-            font-size: 125%;
-            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: justify; text-align-last: center; /* justify and center */  }
-        .dataTable tbody tr td.bCol10 {   /* dv expl */
-            direction: rtl;
-            font-size: 125%;
-            font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: justify; text-align-last: center; /* justify and center */  }
-        .dataTable tbody tr td.bCol11 {  /* ar text */
-            direction: rtl;
-            text-align: justify;
-            font-size: 145%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';   }
-        .dataTable tbody tr td.bCol12  {  /* en text */
-            direction: ltr;
-            text-align: justify;
-            line-height: 1.4;
-            font-size: 100%;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-        .dataTable tbody tr td.bCol13 {  /* dv text */
-            direction: rtl;
-            text-align: justify;
-            line-height: 1.4;
-            font-size: 130%;
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-/* @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-} above mobile breakpoint */
-.dataTable tbody tr td.bCol14 {   /* ar ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-size: 125%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-        .dataTable tbody tr td.bCol15 {   /* en ref */
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-            font-size: 100%;  }
-        .dataTable tbody tr td.bCol16 {  /* dv ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-            font-size: 120%;  }
+         font-size: 120%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol2 { /* ar title */
+         direction: rtl;
+         font-size: 130%;
+         text-align: center;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol3 { /* en title */
+         font-size: 100%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol4 { /* dv title */
+         direction: rtl;
+         font-size: 125%;
+         text-align: center;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         /* @media screen and (max-width: 768px) {
+         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+         } above mobile breakpoint */
+         .dataTable tbody tr td.fnCol5 { /* ar text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.45;
+         font-size: 145%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol6 { /* en text */
+         direction: ltr;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol7 { /* dv text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 130%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         .dataTable tbody tr td.fnCol8 { /* ar ref */
+         direction: rtl;
+         text-align: justify; text-align-last: center; /* justify and center */
+         font-size: 125%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol9 {   /* en ref */
+         direction: ltr;
+         text-align: center; /* center does not work without this for some reason */
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol10 { /* dv ref */
+         direction: rtl;
+         text-align: center;
+         font-size: 120%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
 
 
 
 
-         #bTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+
+         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
          padding: 0px !important; padding-left: 1px !important;}
-         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
          padding: 0px !important;}
-         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
          margin: 0px !important; width: 43vw !important;}
 
-         #bTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
-         #bTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
-         #bTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
-         #bTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #fnTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
 
-         #bTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
-         #bTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
 
          /*around table sides padding*/
-         #bTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
-         #bTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
+         #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
 
 
 
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
          /*moves show index a little to the right*/
-         #bTable_info { margin-left: 10px;}
+         #fnTable_info { margin-left: 10px;}
          /*moves show index a little to the bottom*/
-         #bTable_info { padding-top: 6.5px;}
+         #fnTable_info { padding-top: 6.5px;}
          /* removes margin around table, especially top-bottom */
-         #bTable {margin: 0 !important;}
+         #fnTable {margin: 0 !important;}
          /* increases the bottom height of show/length -prev 30 */
-         #bTable_length > label > select {height: 34px; }
+         #fnTable_length > label > select {height: 34px; }
          /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
          @media screen and (min-width: 768px) {
-         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
          }       /* desktop page buttons height - buttons ROW - mobile */
-         #bTable_paginate {height: 40px;}
+         #fnTable_paginate {height: 40px;}
          /* dont forget tab height - margin for whole table */
          /*       
          <div class="tab-content clearfix" style="margin-top: 54px;">
          */
          /* moves pagination buttons a bit higher - Desktop only MQ */
          @media screen and (min-width: 768px) {
-         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
          }  
 /*APPCHANGE123*/
 
 /*fixlater
 table unpadded too much, as if zoomed, readd padded around sides*/
-#bTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
+#fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
 
 /*search button height*/
-#bTable_filter > label > input {height: 34px !important;}
+#fnTable_filter > label > input {height: 34px !important;}
 
 /*mobile*/
          @media screen and (max-width: 768px) {
 /*options button - make height less */
-            #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
 /*options button sides padding - remove, reposition sides */
-          #bTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
+          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
 /*Show button sides padding - remove - */
-            #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
          }  
 
 
@@ -633,9 +607,8 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
                   <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari</a></li>
 -->
-                  <li class=" NavClick"><a href="https://hadithmv.com" target="_blank" rel="noopener">40 Nawawi</a></li>
-                  <li class="active NavClick"><a data-toggle="tab" href="#40n">Bukhari (beta)</a></li>
-                  <!--TABLECHANGE123-->
+                  <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
+                  <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari (beta)</a></li> <!--TABLECHANGE123-->
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
 
@@ -697,7 +670,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
             <div class="tab-content clearfix">
 
-               <div class="tab-pane fade in active" id="bukh">
+               <div class="tab-pane fade in active" id="40n">
                   <!-- === === /40n tab === === -->
                   <!--TABLE BEGIN,
                      "display": Short-hand for the stripe, hover, row-border and order-column classes.
@@ -709,7 +682,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                      "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
                      "striped": Row striping
                      TABLECHANGE123-->
-                  <table id="bTable" class="ui celled compact striped table bClass"> <!--cellspacing="0" width="100%"-->
+                  <table id="fnTable" class="ui celled compact striped table fnClass"> <!--cellspacing="0" width="100%"-->
                      <thead>
                         <tr>
                            <th></th>
@@ -739,7 +712,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                </div>   <!-- === === /tab-pane active" id="40n" === === -->
 
 <!--APPCHANGE123-->  <!--TABLECHANGE123-->
-               <div class="tab-pane fade" id="40n">  <!-- === === /bukh tab === === -->
+               <div class="tab-pane fade" id="bukh">  <!-- === === /bukh tab === === -->
                   <h3>Bukhari</h3>
                   <p>Coming Soon</p>
                   <p>Insha Allah</p>
@@ -1004,16 +977,16 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          
          // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
              // Setup - add a text input to each footer cell
-             $('#bTable tfoot th').each( function () {
+             $('#fnTable tfoot th').each( function () {
                  var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
                  $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
              } );
          
          //Add footer search to table
-                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
-                         $('#bTable tfoot th').each(function() {
+                         $('#fnTable tfoot th').each(function() {
                              var title = $(this).text();
                              $(this).html('<input type="text" placeholder="'+title+'"/>');
                          });
@@ -1041,8 +1014,8 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          
          //============================================Table Data Begin
          //  $(document).ready(function() {
-           var table = $('#bTable').DataTable({
-                     data: BdataSet, //has to match javascript json
+           var table = $('#fnTable').DataTable({
+                     data: FNdataSet,
          
          
          /*
@@ -1079,15 +1052,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
           //   data: data, previously without column titles
              columns: [
                {title:"#"}, 
-               {title:"Ar Book"},
-               {title:"Ar Chapter"},
-               {title:"Ar Heading"},
-               {title:"En Book"},
-               {title:"En Chapter"},
-               {title:"En Heading"},
-               {title:"Dv Book"},
-               {title:"Dv Chapter"},
-               {title:"Dv Heading"},
+               {title:"Ar Title"},
+               {title:"En Title"},
+               {title:"Dv Title"},
                {title:"Arabic"},
                {title:"English"},
                {title:"Dhivehi"},
@@ -1097,22 +1064,16 @@ table unpadded too much, as if zoomed, readd padded around sides*/
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
-      { className: "bCol1", "targets": [0], "visible": true, "searchable": true},
-      { className: "bCol2", "targets": [1], "visible": true, "searchable": false },
-      { className: "bCol3", "targets": [2], "visible": true, "searchable": false },
-      { className: "bCol4", "targets": [3], "visible": true, "searchable": false },
-      { className: "bCol5", "targets": [4], "visible": false, "searchable": false },
-      { className: "bCol6", "targets": [5], "visible": false, "searchable": false },
-      { className: "bCol7", "targets": [6], "visible": false, "searchable": false }, 
-      { className: "bCol8", "targets": [7], "visible": false, "searchable": false },
-      { className: "bCol9", "targets": [8], "visible": false, "searchable": false },
-      { className: "bCol10", "targets": [9], "visible": false, "searchable": false },
-      { className: "bCol11", "targets": [10], "visible": true, "searchable": true },
-      { className: "bCol12", "targets": [11], "visible": true, "searchable": true },
-      { className: "bCol13", "targets": [12], "visible": true, "searchable": true },
-      { className: "bCol14", "targets": [13], "visible": true, "searchable": false },
-      { className: "bCol15", "targets": [14], "visible": false, "searchable": false },
-      { className: "bCol16", "targets": [15], "visible": false, "searchable": false },
+               { className: "fnCol1", "targets": [0], "visible": true, "searchable": true},
+               { className: "fnCol2", "targets": [1], "visible": true, "searchable": false },
+               { className: "fnCol3", "targets": [2], "visible": false, "searchable": false },
+               { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },
+               { className: "fnCol5", "targets": [4], "visible": true, "searchable": true },
+               { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },
+               { className: "fnCol7", "targets": [6], "visible": true, "searchable": true }, 
+               { className: "fnCol8", "targets": [7], "visible": true, "searchable": false },
+               { className: "fnCol9", "targets": [8], "visible": false, "searchable": false },
+               { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
             ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */
@@ -1155,7 +1116,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                  infoFiltered:   "(filtered from _MAX_ total)",
                  zeroRecords:    "No matches",
                  search: "",
-                 searchPlaceholder: "Search Bukhari",
+                 searchPlaceholder: "Search 40 Nawawi",
                  info: "_START_ to _END_ of _TOTAL_ Hadith",
                  lengthMenu: "_MENU_"
              }, //end of language
@@ -1226,7 +1187,7 @@ renderer: 'bootstrap',
                        {extend: 'copy',
                         key: {key: 'c', shiftKey: true},
                         text: 'Copy',
-                        messageTop: 'Sahih Bukhari',
+                        messageTop: '40 Nawawi',
                         title: 'hadithmv.com',
          
          //=== edits clipboard regex, code to manipulate the data string as desired
@@ -1240,38 +1201,26 @@ renderer: 'bootstrap',
                                 data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
          
                                // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
-                       data = data.replace( /\n#/g, '' );
-                       data = data.replace( /\tAr Book/g, '' );
-                       data = data.replace( /\tAr Chapter/g, '' );
-                       data = data.replace( /\tAr Heading/g, '' );
-                       data = data.replace( /\tEn Book/g, '' );
-                       data = data.replace( /\tEn Chapter/g, '' );
-                       data = data.replace( /\tEn Heading/g, '' );
-                       data = data.replace( /\tDv Book/g, '' );
-                       data = data.replace( /\tDv Chapter/g, '' );
-                       data = data.replace( /\tDv Heading/g, '' );
-                       data = data.replace( /\tArabic/g, '' );
-                       data = data.replace( /\tEnglish/g, '' );
-                       data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tAr Ref./g, '' );
-                       data = data.replace( /\tEn Ref./g, '' );
-                       data = data.replace( /\tDv Ref./g, '' );
+                                data = data.replace( /\n#/g, '' );
+                                data = data.replace( /\tAr Title/g, '' );
+                                data = data.replace( /\tEn Title/g, '' );
+                                data = data.replace( /\tDv Title/g, '' );
+                                data = data.replace( /\tArabic/g, '' );
+                                data = data.replace( /\tEnglish/g, '' );
+                                data = data.replace( /\tDhivehi/g, '' );
+                                data = data.replace( /\tAr Ref./g, '' );
+                                data = data.replace( /\tEn Ref./g, '' );
+                                data = data.replace( /\tDv Ref./g, '' );
          
-                       data = data.replace( /\nAr Book/g, '' );
-                       data = data.replace( /\nAr Chapter/g, '' );
-                       data = data.replace( /\nAr Heading/g, '' );
-                       data = data.replace( /\nEn Book/g, '' );
-                       data = data.replace( /\nEn Chapter/g, '' );
-                       data = data.replace( /\nEn Heading/g, '' );
-                       data = data.replace( /\nDv Book/g, '' );
-                       data = data.replace( /\nDv Chapter/g, '' );
-                       data = data.replace( /\nDv Heading/g, '' );
-                       data = data.replace( /\nArabic/g, '' );
-                       data = data.replace( /\nEnglish/g, '' );
-                       data = data.replace( /\nDhivehi/g, '' );
-                       data = data.replace( /\nAr Ref./g, '' );
-                       data = data.replace( /\nEn Ref./g, '' );
-                       data = data.replace( /\nDv Ref./g, '' ); 
+                                data = data.replace( /\nAr Title/g, '' );
+                                data = data.replace( /\nEn Title/g, '' );
+                                data = data.replace( /\nDv Title/g, '' );
+                                data = data.replace( /\nArabic/g, '' );
+                                data = data.replace( /\nEnglish/g, '' );
+                                data = data.replace( /\nDhivehi/g, '' );
+                                data = data.replace( /\nAr Ref./g, '' );
+                                data = data.replace( /\nEn Ref./g, '' );
+                                data = data.replace( /\nDv Ref./g, '' );  
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
@@ -1397,10 +1346,10 @@ renderer: 'bootstrap',
           /* empty */
          } else { /* js media query on mobile, tablet */
          
-                       Hammer(bTable).on("swipeleft", function() {
+                       Hammer(fnTable).on("swipeleft", function() {
                              table.page( 'next' ).draw( 'page' );  
                        });
-                       Hammer(document.getElementById("bTable")).on("swiperight", function() {
+                       Hammer(document.getElementById("fnTable")).on("swiperight", function() {
                              table.page( 'previous' ).draw( 'page' );  
                        });
          
@@ -1416,7 +1365,7 @@ renderer: 'bootstrap',
          
             // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
          //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
-                         $('#bTable_filter input').keyup(function() {
+                         $('#fnTable_filter input').keyup(function() { //keydown requires constant press
                              table
                                  .search(
                                      $.fn.DataTable.ext.type.search.string(this.value)
@@ -1442,7 +1391,7 @@ renderer: 'bootstrap',
          // Individual column searching end
          
          // moves individual column searching to top, header, does not break fixedcolumnheaders
-         $('#bTable tfoot tr').appendTo('#bTable thead');
+         $('#fnTable tfoot tr').appendTo('#fnTable thead');
          // moves individual column searching to top end
          
          // Apply S Buttons

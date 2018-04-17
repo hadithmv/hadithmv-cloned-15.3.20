@@ -7,6 +7,7 @@
    APPCHANGE
    VERSIONCHANGE
    APKCHANGE
+   TABLECHANGE
  -->
 
       <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
@@ -151,7 +152,7 @@
       <!--  === === Base Data Json === === -->
       <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
       <script src="file:///android_asset/40nJson.js"></script>
-     -->
+         TABLECHANGE123-->
       <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
       <!--  === === Base Json End=== === -->
 
@@ -254,30 +255,68 @@
          vertical-align: top;
          }
 
+body > h1 {font-size: 20px;} /*print header font size*/
+
+
+
+
+
+
+
+
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;
+            font-family: Tharujamaanu-Bold;  }  
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;
+            font-family: Tharujamaanu-Bold;  }  
+
+
+
+
+
          /* corrects web view only/none-print display for these particular columns ? */
          .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
          font-size: 120%;
          text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol2 { /* ar title */
          direction: rtl;
          font-size: 130%;
          text-align: center;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol3 { /* en title */
          font-size: 100%;
          text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol4 { /* dv title */
          direction: rtl;
          font-size: 125%;
          text-align: center;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          /* @media screen and (max-width: 768px) {
          .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
          } above mobile breakpoint */
@@ -286,42 +325,36 @@
          text-align: justify;
          line-height: 1.45;
          font-size: 145%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol6 { /* en text */
          direction: ltr;
          text-align: justify;
          line-height: 1.37;
-         font-size: 110%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol7 { /* dv text */
          direction: rtl;
          text-align: justify;
          line-height: 1.37;
-         font-size: 125%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+         font-size: 130%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          .dataTable tbody tr td.fnCol8 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 125%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol9 {   /* en ref */
          direction: ltr;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         font-size: 100%;
-         }
-         .dataTable tbody tr td.fnCol9 {text-align: center;} /* center does not work without this for some reason */
-
+         text-align: center; /* center does not work without this for some reason */
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol10 { /* dv ref */
          direction: rtl;
          text-align: center;
-         font-size: 115%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+         font-size: 120%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+
+
+
 
 
          #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
@@ -376,7 +409,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 #fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
 
 /*search button height*/
-#fnTable_filter > label > input {height: 33px !important;}
+#fnTable_filter > label > input {height: 34px !important;}
 
 /*mobile*/
          @media screen and (max-width: 768px) {
@@ -391,12 +424,171 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
 
 
+         /*TABLECHANGE123*/
 
 
 
 
 
 
+
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;
+            font-family: Tharujamaanu-Bold;  }  
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;
+            font-family: Tharujamaanu-Bold;  }  
+
+
+
+
+
+         /* corrects web view only/none-print display for these particular columns ? */
+         .dataTable tbody tr td.fnCol1 { /* # number */
+            /*margin-bottom: -1px;*/
+         font-size: 120%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol2 { /* ar title */
+         direction: rtl;
+         font-size: 130%;
+         text-align: center;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol3 { /* en title */
+         font-size: 100%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol4 { /* dv title */
+         direction: rtl;
+         font-size: 125%;
+         text-align: center;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         /* @media screen and (max-width: 768px) {
+         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+         } above mobile breakpoint */
+         .dataTable tbody tr td.fnCol5 { /* ar text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.45;
+         font-size: 145%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol6 { /* en text */
+         direction: ltr;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol7 { /* dv text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 130%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         .dataTable tbody tr td.fnCol8 { /* ar ref */
+         direction: rtl;
+         text-align: justify; text-align-last: center; /* justify and center */
+         font-size: 125%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol9 {   /* en ref */
+         direction: ltr;
+         text-align: center; /* center does not work without this for some reason */
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol10 { /* dv ref */
+         direction: rtl;
+         text-align: center;
+         font-size: 120%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+
+
+
+
+
+         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
+         #fnTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #fnTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+         #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+         /*around table sides padding*/
+         #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
+
+
+
+         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         /*moves show index a little to the right*/
+         #fnTable_info { margin-left: 10px;}
+         /*moves show index a little to the bottom*/
+         #fnTable_info { padding-top: 6.5px;}
+         /* removes margin around table, especially top-bottom */
+         #fnTable {margin: 0 !important;}
+         /* increases the bottom height of show/length -prev 30 */
+         #fnTable_length > label > select {height: 34px; }
+         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         }       /* desktop page buttons height - buttons ROW - mobile */
+         #fnTable_paginate {height: 40px;}
+         /* dont forget tab height - margin for whole table */
+         /*       
+         <div class="tab-content clearfix" style="margin-top: 54px;">
+         */
+         /* moves pagination buttons a bit higher - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         }  
+/*APPCHANGE123*/
+
+/*fixlater
+table unpadded too much, as if zoomed, readd padded around sides*/
+#fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
+
+/*search button height*/
+#fnTable_filter > label > input {height: 34px !important;}
+
+/*mobile*/
+         @media screen and (max-width: 768px) {
+/*options button - make height less */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+/*options button sides padding - remove, reposition sides */
+          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
+/*Show button sides padding - remove - */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         }  
 
 
 
@@ -573,6 +765,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 -->
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
                   <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari (beta)</a></li>
+                  <!--TABLECHANGE123-->
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
 
@@ -644,8 +837,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                      "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
                      "order-column": Highlight the column that the table data is currently ordered on.
                      "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
-                     "striped": Row striping-->
-                  <table id="fnTable" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
+                     "striped": Row striping
+                     TABLECHANGE123-->
+                  <table id="fnTable" class="ui celled compact striped table fnClass"> <!--cellspacing="0" width="100%"-->
                      <thead>
                         <tr>
                            <th></th>
@@ -674,7 +868,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                   </div>
                </div>   <!-- === === /tab-pane active" id="40n" === === -->
 
-<!--APPCHANGE123-->
+<!--APPCHANGE123-->  <!--TABLECHANGE123-->
                <div class="tab-pane fade" id="bukh">  <!-- === === /bukh tab === === -->
                   <h3>Bukhari</h3>
                   <p>Coming Soon</p>
@@ -872,15 +1066,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          if(vidDefer[i].getAttribute('data-src')) {
          vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
          } } 
-         
-         
-         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
-         Remove trailing empty cells.
-         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
 
-         $(document).ready(function() {
-         
-         //=== === Accent neutralise === === other half at bottom
+         //=== ===
+         //=== ===
+         //=== === Accent neutralise === === other half at bottom = do no repeat for every table
                          $.fn.DataTable.ext.type.search.string = function(data) {
                              return !data ?
                                  '' :
@@ -910,6 +1099,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                                  .replace(/٧/g, '7')
                                  .replace(/٨/g, '8')
                                  .replace(/٩/g, '9')
+
+                                 .replace(/[أآإٱ]/g, 'ا') //hamza neutralize
+
          
                                  .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
          //ٱ
@@ -929,7 +1121,16 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                                  data;
                          };
          //End of Accent neutralize and regex for search
+         //============
+         //============
          
+         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+         Remove trailing empty cells.
+         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
+
+         $(document).ready(function() { //no need to add this again for another table
+         
+         //TABLECHANGE123
          
          // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
              // Setup - add a text input to each footer cell
@@ -968,10 +1169,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          
          } //===================end if else
          
-         
+         //============================================Table Data Begin
          //  $(document).ready(function() {
            var table = $('#fnTable').DataTable({
-                     data: FNdataSet,
+                     data: FNdataSet,  //has to match javascript json
          
          
          /*
@@ -1109,7 +1310,8 @@ dom: //previous dom setting broke the diactric included search
 
 
       //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
-         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-3'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>"+
+      //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>"+
 
       //mobile and tablet top
       "<'hidden-md hidden-lg hidden-sm '"   +
