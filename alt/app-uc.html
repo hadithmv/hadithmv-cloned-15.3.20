@@ -7,8 +7,9 @@
    APPCHANGE
    VERSIONCHANGE
    APKCHANGE
+   TABLECHANGE
  -->
- 
+
       <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
       <meta http-equiv="X-UA-Compatible" content="IE=Edge">
       <title>Hadithmv - Accessible and Sourced</title>
@@ -151,8 +152,9 @@
       <!--  === === Base Data Json === === -->
       <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
       <script src="file:///android_asset/40nJson.js"></script>
-     -->
+         TABLECHANGE123-->
       <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
+      <script src="https://hadithmv.com/alt/Apk/json/bJson.js"></script>
       <!--  === === Base Json End=== === -->
 
 
@@ -254,30 +256,68 @@
          vertical-align: top;
          }
 
+body > h1 {font-size: 20px;} /*print header font size*/
+
+
+
+
+
+
+
+
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;
+            font-family: Tharujamaanu-Bold;  }  
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;
+            font-family: Tharujamaanu-Bold;  }  
+
+
+
+
+
          /* corrects web view only/none-print display for these particular columns ? */
          .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 110%;
+         font-size: 120%;
          text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol2 { /* ar title */
          direction: rtl;
          font-size: 130%;
          text-align: center;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol3 { /* en title */
          font-size: 100%;
          text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol4 { /* dv title */
          direction: rtl;
          font-size: 125%;
          text-align: center;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          /* @media screen and (max-width: 768px) {
          .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
          } above mobile breakpoint */
@@ -286,42 +326,36 @@
          text-align: justify;
          line-height: 1.45;
          font-size: 145%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol6 { /* en text */
          direction: ltr;
          text-align: justify;
          line-height: 1.37;
-         font-size: 110%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         }
+         font-size: 105%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol7 { /* dv text */
          direction: rtl;
          text-align: justify;
          line-height: 1.37;
-         font-size: 125%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+         font-size: 130%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          .dataTable tbody tr td.fnCol8 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 125%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-         }
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol9 {   /* en ref */
          direction: ltr;
-         text-align: center;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-         font-size: 100%;
-         }
-         .dataTable tbody tr td.fnCol9 {text-align: center;} /* center does not work without this for some reason */
-
+         text-align: center; /* center does not work without this for some reason */
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol10 { /* dv ref */
          direction: rtl;
          text-align: center;
-         font-size: 115%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-         }
+         font-size: 120%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+
+
+
 
 
          #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
@@ -339,23 +373,11 @@
          #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
          #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
 
-         /*table sides padding*/
+         /*around table sides padding*/
          #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
 
-         /* adjusts search input height to match rest */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
-         #fnTable_filter > label > input {height: 33px;}
-         /* options button */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
-         #fnTable_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-         /* page length -show button height */
-         #fnTable_length > label > select {height: 33px !important;}
-         /* options button height */
-         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
-         /* moves pagination buttons a little higher */
-         #fnTable_paginate {margin-top: -5px !important;}
-         /* moves page lenght button a little to the left */
-         #fnTable_length > label > select {margin-left: -6px !important;}
+
 
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
@@ -368,10 +390,10 @@
          #fnTable {margin: 0 !important;}
          /* increases the bottom height of show/length -prev 30 */
          #fnTable_length > label > select {height: 34px; }
-         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
          @media screen and (min-width: 768px) {
          #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-         }       /* desktop page buttons height - buttons row - mobile */
+         }       /* desktop page buttons height - buttons ROW - mobile */
          #fnTable_paginate {height: 40px;}
          /* dont forget tab height - margin for whole table */
          /*       
@@ -381,6 +403,29 @@
          @media screen and (min-width: 768px) {
          #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
          }  
+/*APPCHANGE123*/
+
+/*fixlater
+table unpadded too much, as if zoomed, readd padded around sides*/
+#fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
+
+/*search button height*/
+#fnTable_filter > label > input {height: 34px !important;}
+
+/*mobile*/
+         @media screen and (max-width: 768px) {
+/*options button - make height less */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+/*options button sides padding - remove, reposition sides */
+          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
+/*Show button sides padding - remove - */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         }  
+
+
+
+
+         /*TABLECHANGE123*/
 
 
 
@@ -389,6 +434,163 @@
 
 
 
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;
+            font-family: Tharujamaanu-Bold;  }  
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;
+            font-family: Tharujamaanu-Bold;  }  
+
+
+
+
+
+         /* corrects web view only/none-print display for these particular columns ? */
+         .dataTable tbody tr td.fnCol1 { /* # number */
+            /*margin-bottom: -1px;*/
+         font-size: 120%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol2 { /* ar title */
+         direction: rtl;
+         font-size: 130%;
+         text-align: center;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol3 { /* en title */
+         font-size: 100%;
+         text-align: center;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol4 { /* dv title */
+         direction: rtl;
+         font-size: 125%;
+         text-align: center;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         /* @media screen and (max-width: 768px) {
+         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+         } above mobile breakpoint */
+         .dataTable tbody tr td.fnCol5 { /* ar text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.45;
+         font-size: 145%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol6 { /* en text */
+         direction: ltr;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol7 { /* dv text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 130%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         .dataTable tbody tr td.fnCol8 { /* ar ref */
+         direction: rtl;
+         text-align: justify; text-align-last: center; /* justify and center */
+         font-size: 125%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol9 {   /* en ref */
+         direction: ltr;
+         text-align: center; /* center does not work without this for some reason */
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol10 { /* dv ref */
+         direction: rtl;
+         text-align: center;
+         font-size: 120%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+
+
+
+
+
+         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
+         #fnTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #fnTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+         #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+         /*around table sides padding*/
+         #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
+
+
+
+         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         /*moves show index a little to the right*/
+         #fnTable_info { margin-left: 10px;}
+         /*moves show index a little to the bottom*/
+         #fnTable_info { padding-top: 6.5px;}
+         /* removes margin around table, especially top-bottom */
+         #fnTable {margin: 0 !important;}
+         /* increases the bottom height of show/length -prev 30 */
+         #fnTable_length > label > select {height: 34px; }
+         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         }       /* desktop page buttons height - buttons ROW - mobile */
+         #fnTable_paginate {height: 40px;}
+         /* dont forget tab height - margin for whole table */
+         /*       
+         <div class="tab-content clearfix" style="margin-top: 54px;">
+         */
+         /* moves pagination buttons a bit higher - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         }  
+/*APPCHANGE123*/
+
+/*fixlater
+table unpadded too much, as if zoomed, readd padded around sides*/
+#fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
+
+/*search button height*/
+#fnTable_filter > label > input {height: 34px !important;}
+
+/*mobile*/
+         @media screen and (max-width: 768px) {
+/*options button - make height less */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+/*options button sides padding - remove, reposition sides */
+          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
+/*Show button sides padding - remove - */
+            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         }  
 
 
 
@@ -397,125 +599,122 @@
 
 
 
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(2) {   /* ar book */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(3) {   /* ar chapt */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(4) {   /* ar head  */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(5) {   /* ar text  */
+            direction: rtl;
+            text-align: justify; }  
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(6) {   /* en text */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(7) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;
+            font-family: Tharujamaanu-Bold;  } 
+        table.ui.celled.compact.striped.table.bClass.dataTable tbody tr td:nth-child(8) {   /* ar ref  */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        /* corrects web view only/none-print display for these particular columns */
+         /* corrects web view only/none-print display for these particular columns ? */
         .dataTable tbody tr td.bCol1 {   /* # number */
             /*margin-bottom: -1px;*/
-            font-size: 110%;
+            font-size: 120%;
             text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol2 {   /* ar book */
             direction: rtl;
             font-size: 130%;
             text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol3 {   /* ar chapt */
             direction: rtl;
             font-size: 130%;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-        .dataTable tbody tr td.bCol4 {   /* ar expl */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+        .dataTable tbody tr td.bCol4 {   /* ar head */
             direction: rtl;
             font-size: 130%;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol5 {   /* en book */
             font-size: 100%;
             text-align: center;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol6 {   /* en chapt */
             font-size: 100%;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol7 {   /* en expl */
             font-size: 100%;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
-
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol8 {   /* dv book */
             direction: rtl;
             font-size: 125%;
             font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: center;
-        }
+            text-align: center;  }
         .dataTable tbody tr td.bCol9 {   /* dv chapt */
             direction: rtl;
             font-size: 125%;
             font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: justify; text-align-last: center; /* justify and center */
-        }
+            text-align: justify; text-align-last: center; /* justify and center */  }
         .dataTable tbody tr td.bCol10 {   /* dv expl */
             direction: rtl;
             font-size: 125%;
             font-family: 'Ubuntu','Tharujamaanu','KFGQPCUthmanTahaNaskh';
-            text-align: justify; text-align-last: center; /* justify and center */
-        }
-
+            text-align: justify; text-align-last: center; /* justify and center */  }
         .dataTable tbody tr td.bCol11 {  /* ar text */
             direction: rtl;
             text-align: justify;
             font-size: 145%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-        }
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';   }
         .dataTable tbody tr td.bCol12  {  /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
-            font-size: 110%;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-        }
+            font-size: 100%;
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
         .dataTable tbody tr td.bCol13 {  /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
-            font-size: 125%;
-            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-        }
+            font-size: 130%;
+            font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
 /* @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
 } above mobile breakpoint */
-
-        .dataTable tbody tr td.bCol14 {   /* ar ref */
+.dataTable tbody tr td.bCol14 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-size: 125%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';
-        }
+            font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
         .dataTable tbody tr td.bCol15 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
-            font-size: 100%;
-        }
+            font-size: 100%;  }
         .dataTable tbody tr td.bCol16 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';
-            font-size: 115%;
-        }
+            font-size: 120%;  }
+
+
 
 
          #bTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
@@ -533,23 +732,11 @@
          #bTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
          #bTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
 
-         /*table sides padding*/
+         /*around table sides padding*/
          #bTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         #bTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
 
-         /* adjusts search input height to match rest */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) > div > label > input {height: 33px;}
-         #bTable_filter > label > input {height: 33px;}
-         /* options button */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(7) {margin-right: 0; padding-right: 0; padding-left: 45px;}
-         #bTable_wrapper > div:nth-child(1) > div.hidden-md.hidden-lg.col-xs-4.pull-right.text-right > div {margin-left: -50px;}
-         /* page length -show button height */
-         #bTable_length > label > select {height: 33px !important;}
-         /* options button height */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(3) > div > button {height: 33px;}
-         /* moves pagination buttons a little higher */
-         #bTable_paginate {margin-top: -5px !important;}
-         /* moves page lenght button a little to the left */
-         #bTable_length > label > select {margin-left: -6px !important;}
+
 
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
          #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
@@ -562,10 +749,10 @@
          #bTable {margin: 0 !important;}
          /* increases the bottom height of show/length -prev 30 */
          #bTable_length > label > select {height: 34px; }
-         /* desktop page buttons height - as if table height - all buttos row - Desktop only MQ */
+         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
          @media screen and (min-width: 768px) {
          #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-         }       /* desktop page buttons height - buttons row - mobile */
+         }       /* desktop page buttons height - buttons ROW - mobile */
          #bTable_paginate {height: 40px;}
          /* dont forget tab height - margin for whole table */
          /*       
@@ -576,6 +763,29 @@
          #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
          }  
 /*APPCHANGE123*/
+
+/*fixlater
+table unpadded too much, as if zoomed, readd padded around sides*/
+#bTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
+
+/*search button height*/
+#bTable_filter > label > input {height: 34px !important;}
+
+/*mobile*/
+         @media screen and (max-width: 768px) {
+/*options button - make height less */
+            #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+/*options button sides padding - remove, reposition sides */
+          #bTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
+/*Show button sides padding - remove - */
+            #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         }
+
+
+
+
+
+
 
 
          /*hides table headers even on mobile, prev nth-child(2)*/
@@ -734,10 +944,11 @@
                <ul class="nav navbar-nav">
 <!--APPCHANGE123
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
-                  <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari</a></li>
+                  <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari</a></li>
 -->
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
                   <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari (beta)</a></li>
+                  <!--TABLECHANGE123-->
 
                   <li lass=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Submissions</a></li>
 
@@ -809,8 +1020,9 @@
                      "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
                      "order-column": Highlight the column that the table data is currently ordered on.
                      "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
-                     "striped": Row striping-->
-                  <table id="fnTable" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
+                     "striped": Row striping
+                     TABLECHANGE123-->
+                  <table id="fnTable" class="ui celled compact striped table fnClass"> <!--cellspacing="0" width="100%"-->
                      <thead>
                         <tr>
                            <th></th>
@@ -839,9 +1051,9 @@
                   </div>
                </div>   <!-- === === /tab-pane active" id="40n" === === -->
 
-<!--APPCHANGE123-->
+<!--APPCHANGE123-->  <!--TABLECHANGE123-->
                <div class="tab-pane fade in" id="bukh">
-                  <table id="bTable" class="ui celled compact striped table"> <!--cellspacing="0" width="100%"-->
+                  <table id="bTable" class="ui celled compact striped table bClass"> <!--cellspacing="0" width="100%"-->
                      <thead>
                         <tr>
                            <th></th>
@@ -884,6 +1096,7 @@
                            <h2>السلام عليكم</h2>
                            <br>
                            <p class="lead">Welcome to <strong>Hadithmv</strong></p>
+
                <!-- APKCHANGE123
                   "file:///android_asset/en_badge_web_generic-compressor.svg">-->
                       <div class="col-lg-6">
@@ -966,7 +1179,7 @@
       <script>
          /*Help Alert*/
                  function myHelp() {
-                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+s] = Play Store Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
+                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+w] = Website Link, [shift+s] = Play Store Link, [shift+d] = Desktop Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
                  }
          
          /*Footer Alert*/
@@ -1055,15 +1268,10 @@
          if(vidDefer[i].getAttribute('data-src')) {
          vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
          } } 
-         
-         
-         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
-         Remove trailing empty cells.
-         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
 
-         $(document).ready(function() {
-         
-         //=== === Accent neutralise === === other half at bottom
+         //=== ===
+         //=== ===
+         //=== === Accent neutralise === === other half at bottom = do no repeat for every table
                          $.fn.DataTable.ext.type.search.string = function(data) {
                              return !data ?
                                  '' :
@@ -1076,7 +1284,7 @@
                                  .replace(/Allah be pleased with her/g, '')
                                  .replace(/Allah be pleased with them/g, '')
                                  .replace(/Allah be pleased with them both/g, '')
-                                 
+
                                  .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
                                  .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
          //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
@@ -1093,6 +1301,9 @@
                                  .replace(/٧/g, '7')
                                  .replace(/٨/g, '8')
                                  .replace(/٩/g, '9')
+
+                                 .replace(/[أآإٱ]/g, 'ا') //hamza neutralize
+
          
                                  .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
          //ٱ
@@ -1112,7 +1323,16 @@
                                  data;
                          };
          //End of Accent neutralize and regex for search
+         //============
+         //============
          
+         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+         Remove trailing empty cells.
+         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
+
+         $(document).ready(function() { //no need to add this again for another table
+         
+         //TABLECHANGE123
          
          // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
              // Setup - add a text input to each footer cell
@@ -1120,16 +1340,24 @@
                  var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
                  $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
              } );
-         
+             $('#bTable tfoot th').each( function () {
+                 var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
+                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+             } );
          //Add footer search to table
-                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>ar Ref.</th><th>en Ref.</th><th>dv Ref.</th></tr></tfoot>');
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
                              var title = $(this).text();
                              $(this).html('<input type="text" placeholder="'+title+'"/>');
                          });
-         
+                         $('#bTable tfoot th').each(function() {
+                             var title = $(this).text();
+                             $(this).html('<input type="text" placeholder="'+title+'"/>');
+                         });
+
          
          //                         var dataSrc = []; //autocomplete typeahead
          
@@ -1151,10 +1379,10 @@
          
          } //===================end if else
          
-         
+         //============================================Table Data Begin
          //  $(document).ready(function() {
            var table = $('#fnTable').DataTable({
-                     data: FNdataSet,
+                     data: FNdataSet,  //has to match javascript json
          
          
          /*
@@ -1253,9 +1481,9 @@
                      },
                  infoEmpty:      "Found 0 Hadith",
                  infoFiltered:   "(filtered from _MAX_ total)",
-                 zeroRecords:    "No matches found",
+                 zeroRecords:    "No matches",
                  search: "",
-                 searchPlaceholder: "Search 40 Nawawi . . . ",
+                 searchPlaceholder: "Search 40 Nawawi",
                  info: "_START_ to _END_ of _TOTAL_ Hadith",
                  lengthMenu: "_MENU_"
              }, //end of language
@@ -1273,6 +1501,11 @@
          
           'lBpfrtip',
          
+< and > - div element
+<"class" and > - div with a class
+<"#id" and > - div with an ID
+<"#id.class" and > - div with an ID and a class
+
          "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
          "<'row'<'col-sm-12'tr>>" +
          "<'row'<'col-sm-5'i><'col-sm-7'p>>",
@@ -1282,34 +1515,34 @@
          "<'row'<'col-sm-5'i><'col-sm-7'p>>"
          */
          //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
-           dom:
-         
-         //mobile
-         "<'row hidden-md hidden-lg hidden-sm '"+
-                 "<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>"+
-         ">" +
-         "<'row hidden-md hidden-lg hidden-sm'"+
-                 "<'row'<'col-sm-12'p>>" +
-         ">" +
-         //desktop
-         "<'row-fluid hidden-xs'"+
-             "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
-         ">" +
-         
-         //both
+
+dom: //previous dom setting broke the diactric included search
+
+
+      //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
+      //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+
+      //mobile and tablet top
+      "<'hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //BOTH (table for desktop and mobile and tablet)
          "<'row'<'col-sm-12'tr>>" +
-         
-         
-         //mobile
-         "<'row hidden-md hidden-lg hidden-sm'"+
-                 "<'col-sm-5'i><'col-sm-7'p>"+
-         ">" +
-         //desktop
-         "<'row hidden-xs'"+
-                 "<'col-sm-12'p>"+
-         ">" 
-             ,
-         
+
+      //desktop bottom
+      "<'hidden-xs'"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //mobile and tablet bottom
+      "<'hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>"  +
+      ">",
+
+renderer: 'bootstrap',
+
 
              buttons: [
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
@@ -1375,7 +1608,7 @@
                        exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
                      },
          //end of copy customization
-
+         
          /*APKCHANGE123*/
                                  { extend: 'print',
                                    key: { key: 'p', shiftKey: true },
@@ -1388,21 +1621,19 @@
                                    text: 'Excel',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of excel
-
+         
                                  { extend: 'csv',
                                    key: { key: 'v', shiftKey: true },
                                    text: 'Csv',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
-
-
-
          
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
                                    text: 'Hide Items'
                                  }, //end of colvis
-                                 {text: 'Web Version',
+                                 {key: { key: 'w', shiftKey: true },
+                                 text: 'Web Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://hadithmv.com';}
                                  }, //custom button end
@@ -1411,10 +1642,11 @@
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                                  }, //custom button end
-                                 {text: 'Desktop Version',
+                                 {key: { key: 'd', shiftKey: true },
+                                 text: 'Desktop Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip';}
-                                 }, //custom button end
+                                 }, //custom button end                 
          /*
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
@@ -1471,211 +1703,8 @@
          
           
            }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
-         
-
-             //======================================== HammerJS - Swipe
-             delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
-         
-         
-         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
-          /* empty */
-         } else { /* js media query on mobile, tablet */
-         
-                       Hammer(fnTable).on("swipeleft", function() {
-                             table.page( 'next' ).draw( 'page' );  
-                       });
-                       Hammer(document.getElementById("fnTable")).on("swiperight", function() {
-                             table.page( 'previous' ).draw( 'page' );  
-                       });
-         
-         } //===================end if else
-         
-         
-             // ScrollTop - If the user changes the page, scroll to the top
-             $(".dataTable").on("page.dt", function () {
-                 $("html, body").animate({ scrollTop: 0 }, "fast");
-                 $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
-             });
-         
-         
-            // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-         //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
-                         $('#fnTable_filter input').keyup(function() {
-                             table
-                                 .search(
-                                     $.fn.DataTable.ext.type.search.string(this.value)
-                                 )
-                                 .draw();
-                         });
-         //End of Remove accented characters from global search input
-         
-         
-          // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-             // Apply the Individual column searching, other half at top
-             table.columns().every( function () {
-                 var that = this;
-          
-                 $( 'input', this.footer() ).on( 'keyup change', function () {
-                     if ( that.search() !== this.value ) {
-                         that
-                             .search( this.value )
-                             .draw();
-                     }
-                 } );
-             } );
-         // Individual column searching end
-         
-         // moves individual column searching to top, header, does not break fixedcolumnheaders
-         $('#fnTable tfoot tr').appendTo('#fnTable thead');
-         // moves individual column searching to top end
-         
-         // Apply S Buttons
-                         table.buttons().container()
-                         table.buttons(0, null).containers();
-                         /*table.buttons().container()
-                           .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
-                         */
-         
-         });
-      </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--  === === Base Data Json === === -->
-      <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
-      <script src="file:///android_asset/bJson.js"></script>
-     -->
-      <script src="https://hadithmv.com/alt/Apk/json/bJson.js"></script>
-      <!--  === === Base Json End=== === -->
-
-
-
-
-
-
-
-
-
-      <!--=== === ===INLINE JS=== === ===-->
-      <script>
-         $(document).ready(function() {
-         
-         //=== === Accent neutralise === === other half at bottom
-                         $.fn.DataTable.ext.type.search.string = function(data) {
-                             return !data ?
-                                 '' :
-                                 typeof data === 'string' ?
-                                 data
-
-         //                     .replace(/\[.*?\]/g, '') //exclude whats between square brackets, doesnt work on arabic
-         
-                                 .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
-                                 .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
-         //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
-                                 .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
-         //ف ق ك ل م ن ه و ى ي
-         
-                                 .replace(/٠/g, '0')
-                                 .replace(/١/g, '1')
-                                 .replace(/٢/g, '2')
-                                 .replace(/٣/g, '3')
-                                 .replace(/٤/g, '4')
-                                 .replace(/٥/g, '5')
-                                 .replace(/٦/g, '6')
-                                 .replace(/٧/g, '7')
-                                 .replace(/٨/g, '8')
-                                 .replace(/٩/g, '9')
-         
-                                 .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
-         //ٱ
-                                 .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
-         //ھ
-                                 .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
-         
-                               //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
-         /*
-                                 .replace(/(ٱ|آ|إ|أ)/g, 'ا')
-                                 .replace(/(ة|ھ)/g, 'ه')
-                                 .replace(/(ئ|ؤ)/g, 'ء')
-                                 .replace(/(ؤ)/g, 'و')
-                                 .replace(/(لأ)/g, 'لا')
-                                 .replace(/(لإ)/g, 'لا')
-                                 .replace(/(ى)/g, 'ي') */  :
-                                 data;
-                         };
-         //End of Accent neutralize and regex for search
-         
-         
-         // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
-             // Setup - add a text input to each footer cell
-             $('#bTable tfoot th').each( function () {
-                 var title = $(this).text(); //var title = $('#bTable thead th').eq( $(this).index() ).text();
-                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-             } );
-         
-//Add footer search to table
-                $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
-         
-         //Setup - add a text input to each search footer cell
-                         $('#bTable tfoot th').each(function() {
-                             var title = $(this).text();
-                             $(this).html('<input type="text" placeholder="'+title+'"/>');
-                         });
-         
-         
-         //                         var dataSrc = []; //autocomplete typeahead
-         
-
-         //=================== PagingType Media Query
-         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
-         
-             $.extend( true, $.fn.dataTable.defaults, {
-                "pagingType": "full_numbers",
-                "keys": "true", //KeyTable extension 
-             } );
-         
-         } else { /* js media query on mobile, tablet */
-         
-             $.extend( true, $.fn.dataTable.defaults, {
-                "pagingType": "full",
-                                       //KeyTable extension "keys": "false",  no need, makes mobile jump on touch
-             } );
-         
-         } //===================end if else
-         
-         
-         //  $(document).ready(function() {
            var table = $('#bTable').DataTable({
-                     data: BdataSet,
+                     data: BdataSet, //has to match javascript json
          
          
          /*
@@ -1725,7 +1754,7 @@
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
-               {title:"Ar Ref."},
+               {title:"En Ref."},
                {title:"Dv Ref."},
              ],
          
@@ -1786,9 +1815,9 @@
                      },
                  infoEmpty:      "Found 0 Hadith",
                  infoFiltered:   "(filtered from _MAX_ total)",
-                 zeroRecords:    "No matches found",
+                 zeroRecords:    "No matches",
                  search: "",
-                 searchPlaceholder: "Search Bukhari . . . ",
+                 searchPlaceholder: "Search Bukhari",
                  info: "_START_ to _END_ of _TOTAL_ Hadith",
                  lengthMenu: "_MENU_"
              }, //end of language
@@ -1806,6 +1835,11 @@
          
           'lBpfrtip',
          
+< and > - div element
+<"class" and > - div with a class
+<"#id" and > - div with an ID
+<"#id.class" and > - div with an ID and a class
+
          "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
          "<'row'<'col-sm-12'tr>>" +
          "<'row'<'col-sm-5'i><'col-sm-7'p>>",
@@ -1815,34 +1849,34 @@
          "<'row'<'col-sm-5'i><'col-sm-7'p>>"
          */
          //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
-           dom:
-         
-         //mobile
-         "<'row hidden-md hidden-lg hidden-sm '"+
-                 "<'col-xs-2'f><'col-xs-4'><'col-xs-2 'B><'col-xs-1'><'col-xs-2'l><'col-xs-1'>"+
-         ">" +
-         "<'row hidden-md hidden-lg hidden-sm'"+
-                 "<'row'<'col-sm-12'p>>" +
-         ">" +
-         //desktop
-         "<'row-fluid hidden-xs'"+
-             "<'row'<'col-sm-1'f><'col-sm-1'><'col-sm-1'l><'col-sm-2'i><'col-sm-2 text-right'B><'col-sm-5'p>>" +
-         ">" +
-         
-         //both
+
+dom: //previous dom setting broke the diactric included search
+
+
+      //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
+      //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+
+      //mobile and tablet top
+      "<'hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //BOTH (table for desktop and mobile and tablet)
          "<'row'<'col-sm-12'tr>>" +
-         
-         
-         //mobile
-         "<'row hidden-md hidden-lg hidden-sm'"+
-                 "<'col-sm-5'i><'col-sm-7'p>"+
-         ">" +
-         //desktop
-         "<'row hidden-xs'"+
-                 "<'col-sm-12'p>"+
-         ">" 
-             ,
-         
+
+      //desktop bottom
+      "<'hidden-xs'"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //mobile and tablet bottom
+      "<'hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>"  +
+      ">",
+
+renderer: 'bootstrap',
+
 
              buttons: [
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
@@ -1899,7 +1933,7 @@
                        data = data.replace( /\nDhivehi/g, '' );
                        data = data.replace( /\nAr Ref./g, '' );
                        data = data.replace( /\nEn Ref./g, '' );
-                       data = data.replace( /\nDv Ref./g, '' );
+                       data = data.replace( /\nDv Ref./g, '' ); 
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
@@ -1939,15 +1973,13 @@
                                    text: 'Csv',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
-
-
-                                 
          
                                  { extend: 'colvis',
                                    key: {key: 'h', shiftKey: true},
                                    text: 'Hide Items'
                                  }, //end of colvis
-                                 {text: 'Web Version',
+                                 {key: { key: 'w', shiftKey: true },
+                                 text: 'Web Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://hadithmv.com';}
                                  }, //custom button end
@@ -1956,11 +1988,11 @@
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                                  }, //custom button end
-                                 {text: 'Desktop Version',
+                                 {key: { key: 'd', shiftKey: true },
+                                 text: 'Desktop Version',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip';}
-                                 }, //custom button end
-                   
+                                 }, //custom button end                 
          /*
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
@@ -2016,8 +2048,7 @@
          //=== end of outer buttons
          
           
-           }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#bTable').DataTable({
-         
+           }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
 
              //======================================== HammerJS - Swipe
              delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
@@ -2027,13 +2058,18 @@
           /* empty */
          } else { /* js media query on mobile, tablet */
          
+                       Hammer(fnTable).on("swipeleft", function() {
+                             table.page( 'next' ).draw( 'page' );  
+                       });
+                       Hammer(document.getElementById("fnTable")).on("swiperight", function() {
+                             table.page( 'previous' ).draw( 'page' );  
+                       });
                        Hammer(bTable).on("swipeleft", function() {
                              table.page( 'next' ).draw( 'page' );  
                        });
                        Hammer(document.getElementById("bTable")).on("swiperight", function() {
                              table.page( 'previous' ).draw( 'page' );  
                        });
-         
          } //===================end if else
          
          
@@ -2046,6 +2082,13 @@
          
             // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
          //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                         $('#fnTable_filter input').keyup(function() {
+                             table
+                                 .search(
+                                     $.fn.DataTable.ext.type.search.string(this.value)
+                                 )
+                                 .draw();
+                         });
                          $('#bTable_filter input').keyup(function() {
                              table
                                  .search(
@@ -2072,6 +2115,7 @@
          // Individual column searching end
          
          // moves individual column searching to top, header, does not break fixedcolumnheaders
+         $('#fnTable tfoot tr').appendTo('#fnTable thead');
          $('#bTable tfoot tr').appendTo('#bTable thead');
          // moves individual column searching to top end
          
@@ -2089,47 +2133,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--  === === Web only plugins - APKCHANGE123 ===  === -->
+      <!--  === === Web only plugins - CHANGE123 ===  === -->
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
 
 
