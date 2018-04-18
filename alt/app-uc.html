@@ -416,12 +416,14 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 /*mobile*/
          @media screen and (max-width: 768px) {
 /*options button - make height less */
-            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+         #fnTable_wrapper > div:nth-child(1) > div.col-sm-1.col-xs-2.text-right > div > button {height: 34px !important;}
 /*options button sides padding - remove, reposition sides */
           #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
 /*Show button sides padding - remove - */
-            #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
          }  
+/*moves pagination buttons row a little hight, taking from the margins */
+         #fnTable_wrapper > div:nth-child(2) > div > div > div {margin-top: -5px; margin-bottom: -5px;}
 
 
 
@@ -625,12 +627,14 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 /*mobile*/
          @media screen and (max-width: 768px) {
 /*options button - make height less */
-            #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) > div > button {height: 30px !important;}
+         #bTable_wrapper > div:nth-child(1) > div.col-sm-1.col-xs-2.text-right > div > button {height: 34px !important;}
 /*options button sides padding - remove, reposition sides */
           #bTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
 /*Show button sides padding - remove - */
-            #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
-         }
+         #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         }  
+/*moves pagination buttons row a little hight, taking from the margins */
+         #bTable_wrapper > div:nth-child(2) > div > div > div {margin-top: -5px; margin-bottom: -5px;}
 
 
 
