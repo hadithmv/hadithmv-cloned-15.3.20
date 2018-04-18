@@ -1012,7 +1012,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                      <div class="container">
                         <div class="row">
                            <div class="col-lg-12">
-                              <p>Version <strong>1.2.13</strong></p> <!-- VERSIONCHANGE123 -->
+                              <p>Version <strong>1.2.4</strong></p> <!-- VERSIONCHANGE123 -->
                            </div>
                         </div>
                      </div>
@@ -1028,6 +1028,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
          </div>     <!-- === /FLEX-ROW === -->
       </div>   <!-- === === /CONTAINER === === --> 
+
 
 
       <!--=== === ===INLINE JS=== === ===-->
@@ -1195,24 +1196,16 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                  var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
                  $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
              } );
-             $('#bTable tfoot th').each( function () {
-                 var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
-                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-             } );
+         
          //Add footer search to table
                          $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
-                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
                              var title = $(this).text();
                              $(this).html('<input type="text" placeholder="'+title+'"/>');
                          });
-                         $('#bTable tfoot th').each(function() {
-                             var title = $(this).text();
-                             $(this).html('<input type="text" placeholder="'+title+'"/>');
-                         });
-
+         
          
          //                         var dataSrc = []; //autocomplete typeahead
          
@@ -1558,6 +1551,301 @@ renderer: 'bootstrap',
          
           
            }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
+         
+
+             //======================================== HammerJS - Swipe
+             delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
+         
+         
+         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+          /* empty */
+         } else { /* js media query on mobile, tablet */
+         
+                       Hammer(fnTable).on("swipeleft", function() {
+                             table.page( 'next' ).draw( 'page' );  
+                       });
+                       Hammer(document.getElementById("fnTable")).on("swiperight", function() {
+                             table.page( 'previous' ).draw( 'page' );  
+                       });
+         
+         } //===================end if else
+         
+         
+             // ScrollTop - If the user changes the page, scroll to the top
+             $(".dataTable").on("page.dt", function () {
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+                 $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
+             });
+         
+         
+            // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+         //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                         $('#fnTable_filter input').keyup(function() {
+                             table
+                                 .search(
+                                     $.fn.DataTable.ext.type.search.string(this.value)
+                                 )
+                                 .draw();
+                         });
+         //End of Remove accented characters from global search input
+         
+         
+          // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+             // Apply the Individual column searching, other half at top
+             table.columns().every( function () {
+                 var that = this;
+          
+                 $( 'input', this.footer() ).on( 'keyup change', function () {
+                     if ( that.search() !== this.value ) {
+                         that
+                             .search( this.value )
+                             .draw();
+                     }
+                 } );
+             } );
+         // Individual column searching end
+         
+         // moves individual column searching to top, header, does not break fixedcolumnheaders
+         $('#fnTable tfoot tr').appendTo('#fnTable thead');
+         // moves individual column searching to top end
+         
+         // Apply S Buttons
+                         table.buttons().container()
+                         table.buttons(0, null).containers();
+                         /*table.buttons().container()
+                           .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
+                         */
+         
+         });
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--=== === ===INLINE JS=== === ===-->
+      <script>
+         /*Help Alert*/
+                 function myHelp() {
+                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+w] = Website Link, [shift+s] = Play Store Link, [shift+d] = Desktop Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
+                 }
+         
+         /*Footer Alert*/
+                 function myFooter() {
+                     alert("صحيح البخاري 456: عَنْ عَائِشَةَ أَنَّ رَسُولَ اللَّهِ ﷺ قال: مَا بَالُ أَقْوَامٍ يَشْتَرِطُونَ شُرُوطًا لَيْسَ فِي كِتَابِ اللَّهِ؟ مَنِ اشْتَرَطَ شَرْطًا لَيْسَ فِي كِتَابِ اللَّهِ فَلَيْسَ لَهُ، وَإِنِ اشْتَرَطَ مِائَةَ مَرَّةٍ.");
+                 }
+                 /* Narrated Aisha: Allah's Messenger ﷺ said: What is the matter with people that they impose conditions which are not in the Book of Allah? Whoever imposes conditions which are not in the Book of Allah, his conditions will be invalid even if he imposed them a hundred times. */
+         
+         
+         /* removes right tab click active */
+         $(".nav li").click(function() {
+             $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
+             $("html").animate({ scrollTop: 0 }, "fast");   /* NavClick scroll to top - tabs */
+         });
+         
+         /* NavClick scroll to top - tabs 
+         $('.NavClick').click(function(){
+             $("html").animate({ scrollTop: 0 }, "fast");
+          });  */
+         
+         /* CLOSE NAV ON EXT CLICK */
+         $('body').bind('click', function(e) { 
+             if(jQuery(e.target).closest('.navbar').length == 0) {
+                 // click happened outside of .navbar, so hide
+                 var opened = $('.navbar-collapse').hasClass('collapse in');
+                 if ( opened === true ) {
+                     $('.navbar-collapse').collapse('hide');
+                 }
+             }
+         });
+         
+         /* close mobile view navbar on click */
+         $(document).on('click','.navbar-collapse.in',function(e) {
+             if( $(e.target).is('a') ) {
+                 $(this).collapse('hide');
+             }
+         });
+         /* ACTIVE STATE ON NAV - breaks tabs
+             $(".nav li").on("click", function() {
+               $(".nav li").removeClass("active");
+               $(this).addClass("active");
+             });
+         */
+         
+         /* close mobile view navbar on click - both of these break dropdowns
+         $(function() {
+             $('.nav a').on('click', function(){ 
+                 if($('.navbar-toggle').css('display') !='none'){
+                     $(".navbar-toggle").trigger( "click" );
+                 }
+             });
+         });
+         
+         $('.navbar-nav a').on('click', function () {
+                 if (window.innerWidth <= 768) {
+                     $(".navbar-toggle").click();
+                 }
+             });
+         */
+         
+         /* SEARCH ENGINE 
+           (function() {
+             var cx = '013964696037650862895:jlgz5hvcplw';
+             var gcse = document.createElement('script');
+             gcse.type = 'text/javascript';
+             gcse.async = true;
+             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(gcse, s);
+           })();
+         */
+         
+         /* FOCUS SEARCH INPUT 
+         $('body').on('shown.bs.modal', '#searchModal', function () {
+             $('input:visible:enabled:first', this).focus();
+         })
+         */
+         /* DEFER IMAGES AND IFRAMES */
+         var imgDefer = document.getElementsByTagName('img');
+         for (var i=0; i<imgDefer.length; i++) {
+         if(imgDefer[i].getAttribute('data-src')) {
+         imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+         } }
+         var vidDefer = document.getElementsByTagName('iframe');
+         for (var i=0; i<vidDefer.length; i++) {
+         if(vidDefer[i].getAttribute('data-src')) {
+         vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+         } } 
+
+         //=== ===
+         //=== ===
+         //=== === Accent neutralise === === other half at bottom = do no repeat for every table
+                         $.fn.DataTable.ext.type.search.string = function(data) {
+                             return !data ?
+                                 '' :
+                                 typeof data === 'string' ?
+                                 data
+
+         //                     .replace(/\[.*?\]/g, '') //exclude whats between square brackets, doesnt work on arabic
+                                 
+                                 .replace(/Allah be pleased with him/g, '')
+                                 .replace(/Allah be pleased with her/g, '')
+                                 .replace(/Allah be pleased with them/g, '')
+                                 .replace(/Allah be pleased with them both/g, '')
+
+                                 .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
+                                 .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
+         //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
+                                 .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
+         //ف ق ك ل م ن ه و ى ي
+         
+                                 .replace(/٠/g, '0')
+                                 .replace(/١/g, '1')
+                                 .replace(/٢/g, '2')
+                                 .replace(/٣/g, '3')
+                                 .replace(/٤/g, '4')
+                                 .replace(/٥/g, '5')
+                                 .replace(/٦/g, '6')
+                                 .replace(/٧/g, '7')
+                                 .replace(/٨/g, '8')
+                                 .replace(/٩/g, '9')
+
+                                 .replace(/[أآإٱ]/g, 'ا') //hamza neutralize
+
+         
+                                 .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
+         //ٱ
+                                 .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
+         //ھ
+                                 .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
+         
+                               //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
+         /*
+                                 .replace(/(ٱ|آ|إ|أ)/g, 'ا')
+                                 .replace(/(ة|ھ)/g, 'ه')
+                                 .replace(/(ئ|ؤ)/g, 'ء')
+                                 .replace(/(ؤ)/g, 'و')
+                                 .replace(/(لأ)/g, 'لا')
+                                 .replace(/(لإ)/g, 'لا')
+                                 .replace(/(ى)/g, 'ي') */  :
+                                 data;
+                         };
+         //End of Accent neutralize and regex for search
+         //============
+         //============
+         
+         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+         Remove trailing empty cells.
+         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
+
+         $(document).ready(function() { //no need to add this again for another table
+         
+         //TABLECHANGE123
+         
+         // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
+             // Setup - add a text input to each footer cell
+             $('#bTable tfoot th').each( function () {
+                 var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
+                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+             } );
+         
+         //Add footer search to table
+                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+         
+         //Setup - add a text input to each search footer cell
+                         $('#bTable tfoot th').each(function() {
+                             var title = $(this).text();
+                             $(this).html('<input type="text" placeholder="'+title+'"/>');
+                         });
+         
+         
+         //                         var dataSrc = []; //autocomplete typeahead
+         
+
+         //=================== PagingType Media Query
+         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+         
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full_numbers",
+                "keys": "true", //KeyTable extension 
+             } );
+         
+         } else { /* js media query on mobile, tablet */
+         
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full",
+                                       //KeyTable extension "keys": "false",  no need, makes mobile jump on touch
+             } );
+         
+         } //===================end if else
+         
+         //============================================Table Data Begin
+         //  $(document).ready(function() {
            var table = $('#bTable').DataTable({
                      data: BdataSet, //has to match javascript json
          
@@ -1904,6 +2192,7 @@ renderer: 'bootstrap',
          
           
            }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
+         
 
              //======================================== HammerJS - Swipe
              delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
@@ -1913,18 +2202,13 @@ renderer: 'bootstrap',
           /* empty */
          } else { /* js media query on mobile, tablet */
          
-                       Hammer(fnTable).on("swipeleft", function() {
-                             table.page( 'next' ).draw( 'page' );  
-                       });
-                       Hammer(document.getElementById("fnTable")).on("swiperight", function() {
-                             table.page( 'previous' ).draw( 'page' );  
-                       });
                        Hammer(bTable).on("swipeleft", function() {
                              table.page( 'next' ).draw( 'page' );  
                        });
                        Hammer(document.getElementById("bTable")).on("swiperight", function() {
                              table.page( 'previous' ).draw( 'page' );  
                        });
+         
          } //===================end if else
          
          
@@ -1937,13 +2221,6 @@ renderer: 'bootstrap',
          
             // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
          //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
-                         $('#fnTable_filter input').keyup(function() {
-                             table
-                                 .search(
-                                     $.fn.DataTable.ext.type.search.string(this.value)
-                                 )
-                                 .draw();
-                         });
                          $('#bTable_filter input').keyup(function() {
                              table
                                  .search(
@@ -1970,7 +2247,6 @@ renderer: 'bootstrap',
          // Individual column searching end
          
          // moves individual column searching to top, header, does not break fixedcolumnheaders
-         $('#fnTable tfoot tr').appendTo('#fnTable thead');
          $('#bTable tfoot tr').appendTo('#bTable thead');
          // moves individual column searching to top end
          
@@ -1985,6 +2261,24 @@ renderer: 'bootstrap',
       </script>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
 
 
