@@ -303,20 +303,24 @@ body > h1 {font-size: 20px;} /*print header font size*/
             /*margin-bottom: -1px;*/
          font-size: 120%;
          text-align: center;
+         color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol2 { /* ar title */
          direction: rtl;
          font-size: 130%;
          text-align: center;
+         color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol3 { /* en title */
          font-size: 100%;
          text-align: center;
+         color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol4 { /* dv title */
          direction: rtl;
          font-size: 125%;
          text-align: center;
+         color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          /* @media screen and (max-width: 768px) {
          .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
@@ -325,33 +329,36 @@ body > h1 {font-size: 20px;} /*print header font size*/
          direction: rtl;
          text-align: justify;
          line-height: 1.45;
-         font-size: 145%;
+         font-size: 150%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol6 { /* en text */
          direction: ltr;
          text-align: justify;
          line-height: 1.37;
-         font-size: 105%;
+         font-size: 110%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol7 { /* dv text */
          direction: rtl;
          text-align: justify;
          line-height: 1.37;
-         font-size: 125%;
+         font-size: 135%;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          .dataTable tbody tr td.fnCol8 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 125%;
+         font-size: 135%;
+         color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol9 {   /* en ref */
          direction: ltr;
          text-align: center; /* center does not work without this for some reason */
+         font-size: 110%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol10 { /* dv ref */
          direction: rtl;
          text-align: center;
-         font-size: 120%;
+         font-size: 130%;
+         color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
 
 
@@ -1100,7 +1107,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                     ],
          
              //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
              
              language: {
                  buttons: {

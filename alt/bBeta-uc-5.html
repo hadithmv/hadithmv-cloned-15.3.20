@@ -226,48 +226,40 @@ time, mark, audio, video {
         /* corrects web view only/none-print display for these particular columns */
         .dataTable tbody tr td.col1 {   /* # number */
             /*margin-bottom: -1px;*/
-            font-size: 120%;
+            font-size: 110%;
             text-align: center;
-            color: red;
-            font-weight: bold;
         }
 
         .dataTable tbody tr td.col2 {   /* ar book */
             direction: rtl;
             font-size: 140%;
             text-align: center;
-            color: red;
         }
         .dataTable tbody tr td.col3 {   /* ar chapt */
             direction: rtl;
             font-size: 140%;
             text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
         }
         .dataTable tbody tr td.col4 {   /* ar expl */
             direction: rtl;
             font-size: 140%;
             text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
         }
 
         .dataTable tbody tr td.col5 {   /* en book */
             font-size: 100%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: center;
-            color: red;
         }
         .dataTable tbody tr td.col6 {   /* en chapt */
             font-size: 100%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
         }
         .dataTable tbody tr td.col7 {   /* en expl */
             font-size: 100%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
         }
 
         .dataTable tbody tr td.col8 {   /* dv book */
@@ -275,34 +267,30 @@ time, mark, audio, video {
             font-size: 125%;
             font-family: "Tharujamaanu";
             text-align: center;
-            color: red;
         }
         .dataTable tbody tr td.col9 {   /* dv chapt */
             direction: rtl;
             font-size: 125%;
             font-family: "Tharujamaanu";
             text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
         }
         .dataTable tbody tr td.col10 {   /* dv expl */
             direction: rtl;
             font-size: 125%;
             font-family: "Tharujamaanu";
             text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
         }
 
         .dataTable tbody tr td.col11 {  /* ar text */
             direction: rtl;
             text-align: justify;
-            font-size: 160%;
-            line-height: 1.4;
+            font-size: 150%;
         }
         .dataTable tbody tr td.col12  {  /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
-            font-size: 125%;
+            font-size: 120%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
         .dataTable tbody tr td.col13 {  /* dv text */
@@ -319,22 +307,19 @@ time, mark, audio, video {
         .dataTable tbody tr td.col14 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-size: 140%;
+            font-size: 130%;
             font-family: none;
-            color: red;
         }
         .dataTable tbody tr td.col15 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
-            color: red;
         }
         .dataTable tbody tr td.col16 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: "Tharujamaanu";
-            font-size: 120%;
-            color: red;
+            font-size: 115%;
         }
 
 
@@ -655,7 +640,7 @@ time, mark, audio, video {
                     ],
          
              //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["1", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20], [1, 2, 3, 5, 7, 10, 15, 20]], //display range of pages , -1 // , "All"
              
              language: {
                  buttons: {

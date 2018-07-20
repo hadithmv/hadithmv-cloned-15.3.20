@@ -230,27 +230,28 @@ time, mark, audio, video {
         /* corrects web view only/none-print display for these particular columns */
         .dataTable tbody tr td.col1 {   /* # number */
             /*margin-bottom: -1px;*/
-            font-size: 110%;
+            font-size: 120%;
             text-align: center;
-            /*color: #ff4136*/
-
+            color: red;
+            font-weight: bold;
         }
         .dataTable tbody tr td.col2 {   /* ar title */
             direction: rtl;
-            font-size: 130%;
+            font-size: 140%;
             text-align: center;
-            /*color: #0074d9*/
+            color: red;
         }
         .dataTable tbody tr td.col3 {   /* en title */
-            font-size: 100%;
+            font-size: 110%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: center;
         }
         .dataTable tbody tr td.col4 {   /* dv title */
             direction: rtl;
-            font-size: 125%;
+            font-size: 130%;
             font-family: "Tharujamaanu";
             text-align: center;
+            color: red;
         }
 /* @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
@@ -260,13 +261,13 @@ time, mark, audio, video {
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
-            font-size: 150%;
+            font-size: 160%;
         }
         .dataTable tbody tr td.col6 {   /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
-            font-size: 120%;
+            font-size: 125%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
         .dataTable tbody tr td.col7 {   /* dv text */
@@ -280,19 +281,22 @@ time, mark, audio, video {
         .dataTable tbody tr td.col8 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
-            font-size: 130%;
+            font-size: 140%;
             font-family: none;
+            color: red;
         }
         .dataTable tbody tr td.col9 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            font-size: 100%;
+            font-size: 110%;
+            color: red;
         }
         .dataTable tbody tr td.col10 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: "Tharujamaanu";
-            font-size: 115%;
+            font-size: 120%;
+            color: red;
         }
 
 
@@ -557,7 +561,7 @@ time, mark, audio, video {
                     ],
          
              //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20], [1, 2, 3, 5, 7, 10, 15, 20]], //display range of pages , -1 // , "All"
+             lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["1", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
              
              language: {
                  buttons: {
