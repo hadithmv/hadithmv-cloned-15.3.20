@@ -213,7 +213,7 @@
 
          /* Keytable - Desktop only MQ */
          @media screen and (min-width: 1200px) {
-         table.dataTable th.focus, table.dataTable td.focus{outline: 3px solid #337ab7; outline-offset:-2px;}
+         table.dataTable tbody th.focus,table.dataTable tbody td.focus{box-shadow:inset 0 0 1px 2px #337ab7}
          }
 
          /* Mark JS - padding: 0; removes useless padding */
@@ -1413,7 +1413,7 @@ renderer: 'bootstrap',
              buttons: [
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
                   text: 'Options',
-                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+                  autoClose: true, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
 
                   buttons: [
          
@@ -1531,7 +1531,7 @@ renderer: 'bootstrap',
                                  //share collection
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
                   text: 'Share App',
-                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+                  autoClose: true, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
                   buttons: [
                                  {text: 'Telegram',
                                          action: function ( e, dt, button, config ) {
