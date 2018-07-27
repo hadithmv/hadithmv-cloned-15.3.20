@@ -722,26 +722,8 @@ time, mark, audio, video {
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
          
-                                 { extend: 'colvis',
-                                   key: {key: 'h', shiftKey: true},
-                                   text: 'Hide'
-                                 }, //end of colvis
-                                 {key: { key: 's', shiftKey: true },
-                                 text: 'Android Version',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Web Version',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://hadithmv.com';}
-                                 }, //custom button end
-         /*                        
-                                 {text: 'Desktop Version',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://hadithmv.github.io/alt/Desktop/Hadithmv-Win.zip';}
-                                 }, //custom button end
-         */                        
-         /*
+
+
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
                                    action: function ( e, dt, button, config ) {
@@ -753,41 +735,12 @@ time, mark, audio, video {
                                                             );
                                                                                }
                                  }, //json button end
-         */
-                                 //custom button
-         
-                                 //share collection
-                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
-                  text: 'Share App',
-                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
-                  buttons: [
-                                 {text: 'Telegram',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Facebook',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://www.facebook.com/sharer.php?u=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Twitter',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://twitter.com/intent/tweet?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Whatsapp',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'whatsapp://send?text=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Viber',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'viber://forward?text=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-         
-                         ] },//end of share collection
-                         
-                                 {text: 'Submissions',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://goo.gl/forms/O0SLwVntIGRdhVGv2';}
-                                 }, //custom button end
+
+
+                                 { extend: 'colvis',
+                                   key: {key: 'h', shiftKey: true},
+                                   text: 'Show/Hide'
+                                 }, //end of colvis
          
          
                          ] }//end of inner buttons
