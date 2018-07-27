@@ -718,37 +718,39 @@ time, mark, audio, video {
 
         ">",
 
-    buttons: [
-        {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
-         text: 'Options',
-         autoClose: true, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
-         buttons: [
+             buttons: [
+                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+                  text: 'Options',
+                  key: {key: 'o', shiftKey: true},
+                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
 
-              {extend: 'copy',
-               key: {key: 'c', shiftKey: true},
-               text: 'Copy',
-               messageTop: '40 Nawawi',
-               title: 'hadithmv.com',
-
-//=== edits clipboard regex, code to manipulate the data string as desired
-              customize: function(data) {
-/**/
-                      // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
-//                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
-
-                       data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
-
-                       data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
-
-                      // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
+                  buttons: [
+         
+                       {extend: 'copy',
+                        key: {key: 'c', shiftKey: true},
+                        text: 'Copy',
+                        messageTop: 'Sahih Bukhari',
+                        title: 'hadithmv.com',
+         
+         //=== edits clipboard regex, code to manipulate the data string as desired
+                       customize: function(data) {
+         /**/
+                               // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
+         //                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
+         
+                                data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
+         
+                                data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
+         
+                               // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
                        data = data.replace( /\n#/g, '' );
                        data = data.replace( /\tAr Book/g, '' );
                        data = data.replace( /\tAr Chapter/g, '' );
                        data = data.replace( /\tAr Heading/g, '' );
-                       data = data.replace( /\tEn Title/g, '' );
+                       data = data.replace( /\tEn Book/g, '' );
                        data = data.replace( /\tEn Chapter/g, '' );
                        data = data.replace( /\tEn Heading/g, '' );
-                       data = data.replace( /\tDv Title/g, '' );
+                       data = data.replace( /\tDv Book/g, '' );
                        data = data.replace( /\tDv Chapter/g, '' );
                        data = data.replace( /\tDv Heading/g, '' );
                        data = data.replace( /\tArabic/g, '' );
@@ -757,29 +759,50 @@ time, mark, audio, video {
                        data = data.replace( /\tAr Ref./g, '' );
                        data = data.replace( /\tEn Ref./g, '' );
                        data = data.replace( /\tDv Ref./g, '' );
-
-                       
-
-                       data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
-                       data = data.replace( /\t/g, '\n\n' ); //seperates rows
-
-                       data = data.replace( /hadithmv.com\n/g, 'hadithmv.com\n\n' ); //adds new line on android
-
-/*
-                       data = data.replace( /\r/g, '' ); //rids windows platform newline
-                       data = data.replace( /\t/g, '\n\n' );
-/**/
-
-
-                      console.log(JSON.stringify(data));
-                      return data;
-                    },
+         
+                       data = data.replace( /\nAr Book/g, '' );
+                       data = data.replace( /\nAr Chapter/g, '' );
+                       data = data.replace( /\nAr Heading/g, '' );
+                       data = data.replace( /\nEn Book/g, '' );
+                       data = data.replace( /\nEn Chapter/g, '' );
+                       data = data.replace( /\nEn Heading/g, '' );
+                       data = data.replace( /\nDv Book/g, '' );
+                       data = data.replace( /\nDv Chapter/g, '' );
+                       data = data.replace( /\nDv Heading/g, '' );
+                       data = data.replace( /\nArabic/g, '' );
+                       data = data.replace( /\nEnglish/g, '' );
+                       data = data.replace( /\nDhivehi/g, '' );
+                       data = data.replace( /\nAr Ref./g, '' );
+                       data = data.replace( /\nEn Ref./g, '' );
+                       data = data.replace( /\nDv Ref./g, '' ); 
+         
+                                data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
+                                data = data.replace( /\t/g, '\n\n' ); //seperates rows
+         
+                                data = data.replace( /hadithmv.com\n/g, 'hadithmv.com\n\n' ); //adds new line on android
+         
+         /*
+                                data = data.replace( /\r/g, '' ); //rids windows platform newline
+                                data = data.replace( /\t/g, '\n\n' );
+         /**/
+         
+         
+                               console.log(JSON.stringify(data));
+                               return data;
+                             },
          //=== edits clipboard regex end, customize: function(data) {
          
                        exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
                      },
          //end of copy customization
-         /*CHANGE123*/
+         
+         /*APKCHANGE123*/
+                                 { extend: 'colvis',
+                                   key: {key: 'h', shiftKey: true},
+                                   text: 'Show/Hide'
+                                 }, //end of colvis
+
+
                                  { extend: 'print',
                                    key: { key: 'p', shiftKey: true },
                                    text: 'Print',
@@ -799,7 +822,6 @@ time, mark, audio, video {
                                  }, //end of csv
          
 
-
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
                                    action: function ( e, dt, button, config ) {
@@ -812,12 +834,20 @@ time, mark, audio, video {
                                                                                }
                                  }, //json button end
 
-
-                                 { extend: 'colvis',
-                                   key: {key: 'h', shiftKey: true},
-                                   text: 'Show/Hide'
-                                 }, //end of colvis
+                                 //custom button
          
+/*         
+                                 //share collection
+                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+                  text: 'Share App',
+                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+                  buttons: [
+                                 {text: 'Telegram',
+                                         action: function ( e, dt, button, config ) {
+                                         window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                                 }, //custom button end
+                         ] },//end of share collection
+*/                         
          
                          ] }//end of inner buttons
          
