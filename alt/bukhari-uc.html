@@ -1262,6 +1262,7 @@ renderer: 'bootstrap',
              buttons: [
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
                   text: 'Options',
+                  key: {key: 'o', shiftKey: true},
                   autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
 
                   buttons: [
@@ -1269,7 +1270,7 @@ renderer: 'bootstrap',
                        {extend: 'copy',
                         key: {key: 'c', shiftKey: true},
                         text: 'Copy',
-                        messageTop: 'Sahih Bukhari',
+                        messageTop: '40 Nawawi',
                         title: 'hadithmv.com',
          
          //=== edits clipboard regex, code to manipulate the data string as desired
@@ -1337,6 +1338,12 @@ renderer: 'bootstrap',
          //end of copy customization
          
          /*APKCHANGE123*/
+                                 { extend: 'colvis',
+                                   key: {key: 'h', shiftKey: true},
+                                   text: 'Show/Hide'
+                                 }, //end of colvis
+
+                                 
                                  { extend: 'print',
                                    key: { key: 'p', shiftKey: true },
                                    text: 'Print',
@@ -1355,25 +1362,7 @@ renderer: 'bootstrap',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
          
-                                 { extend: 'colvis',
-                                   key: {key: 'h', shiftKey: true},
-                                   text: 'Hide Items'
-                                 }, //end of colvis
-                                 {key: { key: 'w', shiftKey: true },
-                                 text: 'Web Version',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://hadithmv.com';}
-                                 }, //custom button end
-                                 {key: { key: 's', shiftKey: true },
-                                 text: 'Android Version',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {key: { key: 'd', shiftKey: true },
-                                 text: 'Desktop Version',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip';}
-                                 }, //custom button end                 
+
          /*
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
@@ -1389,6 +1378,7 @@ renderer: 'bootstrap',
          */
                                  //custom button
          
+/*         
                                  //share collection
                  {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
                   text: 'Share App',
@@ -1398,30 +1388,8 @@ renderer: 'bootstrap',
                                          action: function ( e, dt, button, config ) {
                                          window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
                                  }, //custom button end
-                                 {text: 'Facebook',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://www.facebook.com/sharer.php?u=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Twitter',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://twitter.com/intent/tweet?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Whatsapp',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'whatsapp://send?text=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                                 {text: 'Viber',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'viber://forward?text=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-         
                          ] },//end of share collection
-                         
-                                 {text: 'Submissions',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://goo.gl/forms/O0SLwVntIGRdhVGv2';}
-                                 }, //custom button end
-         
+*/                         
          
                          ] }//end of inner buttons
          

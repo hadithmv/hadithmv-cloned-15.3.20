@@ -1282,6 +1282,12 @@ renderer: 'bootstrap',
          //end of copy customization
          
          /*APKCHANGE123*/
+                                 { extend: 'colvis',
+                                   key: {key: 'h', shiftKey: true},
+                                   text: 'Show/Hide'
+                                 }, //end of colvis
+
+                                 
                                  { extend: 'print',
                                    key: { key: 'p', shiftKey: true },
                                    text: 'Print',
@@ -1300,10 +1306,7 @@ renderer: 'bootstrap',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
          
-                                 { extend: 'colvis',
-                                   key: {key: 'h', shiftKey: true},
-                                   text: 'Show/Hide'
-                                 }, //end of colvis
+
          /*
                                  //json button (export all)
                                  { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
