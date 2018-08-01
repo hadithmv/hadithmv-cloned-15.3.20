@@ -174,6 +174,7 @@ time, mark, audio, video {
  * {font-family: ;}
  */
 
+
          /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements. */
          input[type="search"]::-webkit-search-cancel-button {
          -webkit-appearance: searchfield-cancel-button; /* adds x */
@@ -187,6 +188,9 @@ time, mark, audio, video {
 
          /* Mark JS - padding: 0; removes useless padding */
          mark {background: #f2cead; color: black; padding: 0;}
+
+
+
 
         /*fits then moves footer search to top*/
         tfoot input {
@@ -231,105 +235,63 @@ time, mark, audio, video {
             color: red;
             font-weight: bold;
         }
-
-        .dataTable tbody tr td.col2 {   /* ar book */
+        .dataTable tbody tr td.col2 {   /* ar title */
             direction: rtl;
             font-size: 140%;
             text-align: center;
             color: red;
         }
-        .dataTable tbody tr td.col3 {   /* ar chapt */
-            direction: rtl;
-            font-size: 140%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
-        }
-        .dataTable tbody tr td.col4 {   /* ar expl */
-            direction: rtl;
-            font-size: 140%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
-        }
-
-        .dataTable tbody tr td.col5 {   /* en book */
-            font-size: 100%;
+        .dataTable tbody tr td.col3 {   /* en title */
+            font-size: 110%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: center;
-            color: red;
         }
-        .dataTable tbody tr td.col6 {   /* en chapt */
-            font-size: 100%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
-        }
-        .dataTable tbody tr td.col7 {   /* en expl */
-            font-size: 100%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
-        }
-
-        .dataTable tbody tr td.col8 {   /* dv book */
+        .dataTable tbody tr td.col4 {   /* dv title */
             direction: rtl;
-            font-size: 125%;
+            font-size: 130%;
             font-family: "Tharujamaanu";
             text-align: center;
             color: red;
         }
-        .dataTable tbody tr td.col9 {   /* dv chapt */
-            direction: rtl;
-            font-size: 125%;
-            font-family: "Tharujamaanu";
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
-        }
-        .dataTable tbody tr td.col10 {   /* dv expl */
-            direction: rtl;
-            font-size: 125%;
-            font-family: "Tharujamaanu";
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: red;
-        }
+/* @media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+} above mobile breakpoint */
 
-        .dataTable tbody tr td.col11 {  /* ar text */
+        .dataTable tbody tr td.col5 {   /* ar text */
             direction: rtl;
             text-align: justify;
-            font-size: 160%;
             line-height: 1.4;
+            font-size: 160%;
         }
-        .dataTable tbody tr td.col12  {  /* en text */
+        .dataTable tbody tr td.col6 {   /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
             font-size: 125%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
-        .dataTable tbody tr td.col13 {  /* dv text */
+        .dataTable tbody tr td.col7 {   /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 135%;
             font-family: "Tharujamaanu";
         }
-/* @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-} above mobile breakpoint */
 
-        .dataTable tbody tr td.col14 {   /* ar ref */
+        .dataTable tbody tr td.col8 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-size: 140%;
             font-family: none;
             color: red;
         }
-        .dataTable tbody tr td.col15 {   /* en ref */
+        .dataTable tbody tr td.col9 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
             color: red;
         }
-        .dataTable tbody tr td.col16 {  /* dv ref */
+        .dataTable tbody tr td.col10 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: "Tharujamaanu";
@@ -339,50 +301,6 @@ time, mark, audio, video {
 
 
 
-/* makes min-width a bit bigger */
-        #example > thead > tr > th > input[type="text"] {
-          width: 100%;
-          padding: 3px;
-          box-sizing: border-box;
-          min-width: 20px;
-          border-radius: .28571429rem;
-          border: 1px solid rgba(34, 36, 38, .15);
-        }
-/* both above and below 2 needed to work min-width, or just below 2 to work width */
-        thead input {
-          width: 100%;
-          padding: 3px;
-            min-width: 20px;
-          box-sizing: border-box;
-                      border-radius: .28571429rem;
-          border: 1px solid rgba(34, 36, 38, .15);
-        } 
-        tfoot input {
-          width: 100%;
-          padding: 3px;
-          box-sizing: border-box;
-                      border-radius: .28571429rem;
-          border: 1px solid rgba(34, 36, 38, .15);
-        }
-
-
-
-
-        #table_id_wrapper > div > div:nth-child(3) > div.six.wide.column {
-          padding: 0px !important; padding-left: 1px !important;}
-        #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column {
-          padding: 0px !important;}
-        #table_id_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
-          margin: 0px !important; width: 43vw !important;}
-
-
-        html,
-        body {
-             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-
-            /*font-size: 16px; base font size*/
-
-            width: 100%;
 /* makes min-width a bit bigger */
         #example > thead > tr > th > input[type="text"] {
           width: 100%;
@@ -496,28 +414,22 @@ time, mark, audio, video {
 
 <!--===NINSERT JS===. . . -->
     <script type="text/javascript">
-        var key = "1BpU_s2TZAdkP0wBGZBWSRakgq1c4F8Ls2e7Xr7uMxM0";
+        var key = "1vsXLFawAvgOhWK9QMuBR6PlkAZn3OAni8MWj-D13KIg";
         //"https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
             {"data":"no",       "title":"#"},
-            {"data":"arKitab",  "title":"Ar Book"},
-            {"data":"arBab",    "title":"Ar Chapter"},
-            {"data":"arTarj",   "title":"Ar Heading"},
-            {"data":"enKitab",  "title":"En Book"},
-            {"data":"enBab",    "title":"En Chapter"},
-            {"data":"enTarj",   "title":"En Heading"},
-            {"data":"dvKitab",  "title":"Dv Book"},
-            {"data":"dvBab",    "title":"Dv Chapter"},
-            {"data":"dvTarj",   "title":"Dv Heading"},
+            {"data":"arTitle",  "title":"Ar Title"},
+            {"data":"enTitle",  "title":"En Title"},
+            {"data":"dvTitle",  "title":"Dv Title"},
             {"data":"arab",     "title":"Arabic"},
             {"data":"eng",      "title":"English"},
             {"data":"dhiv",     "title":"Dhivehi"},
-            {"data":"arTakh",    "title":"Ar Ref."},
-            {"data":"enTakh",    "title":"Ar Ref."},
-            {"data":"dvTakh",    "title":"Dv Ref."},
-
+            /*
+            {"data":"arRef",    "title":"Ar Ref."},
+            {"data":"enRef",    "title":"En Ref."},
+            {"data":"dvRef",    "title":"Dv Ref."},
+            */
             ];
-
 
 
         $(document).ready(function() {
@@ -589,8 +501,12 @@ time, mark, audio, video {
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+/*
+$("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+*/
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th></tr></tfoot>');
 
+         
          //Setup - add a text input to each search footer cell
                          $('#table_id tfoot th').each(function() {
                              var title = $(this).text();
@@ -626,20 +542,14 @@ time, mark, audio, video {
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
       { className: "col2", "targets": [1], "visible": true, "searchable": false },
-      { className: "col3", "targets": [2], "visible": true, "searchable": false },
-      { className: "col4", "targets": [3], "visible": true, "searchable": false },
-      { className: "col5", "targets": [4], "visible": false, "searchable": false },
-      { className: "col6", "targets": [5], "visible": false, "searchable": false },
-      { className: "col7", "targets": [6], "visible": false, "searchable": false }, 
-      { className: "col8", "targets": [7], "visible": false, "searchable": false },
+      { className: "col3", "targets": [2], "visible": false, "searchable": false },
+      { className: "col4", "targets": [3], "visible": false, "searchable": false }, 
+      { className: "col5", "targets": [4], "visible": true, "searchable": true },
+      { className: "col6", "targets": [5], "visible": true, "searchable": true },
+      { className: "col7", "targets": [6], "visible": true, "searchable": true }, /*
+      { className: "col8", "targets": [7], "visible": true, "searchable": true },
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
-      { className: "col10", "targets": [9], "visible": false, "searchable": false },
-      { className: "col11", "targets": [10], "visible": true, "searchable": true },
-      { className: "col12", "targets": [11], "visible": true, "searchable": true },
-      { className: "col13", "targets": [12], "visible": true, "searchable": true },
-      { className: "col14", "targets": [13], "visible": true, "searchable": false },
-      { className: "col15", "targets": [14], "visible": false, "searchable": false },
-      { className: "col16", "targets": [15], "visible": false, "searchable": false },
+      { className: "col10", "targets": [9], "visible": false, "searchable": false }, */
    ], //end of columnDefs, previously without visible and searchable options
 
 
@@ -661,8 +571,8 @@ time, mark, audio, video {
                  buttons: {
                      copyTitle: 'Copy',
                      copySuccess: {
-                         1: "Copied 1 Hadith",
-                         _: "Copied %d Ahadith"
+                         1: "Copied 1 Point",
+                         _: "Copied %d Points"
                      }
                  },
                  paginate: {
@@ -671,14 +581,37 @@ time, mark, audio, video {
                      next:       "Next &gt;",
                      previous:   "&lt; Back"
                      },
-                 infoEmpty:      "Found 0 Hadith",
+                 infoEmpty:      "Found 0 Points",
                  infoFiltered:   "(filtered from _MAX_ total)",
                  zeroRecords:    "No matches found",
                  search: "",
-                 searchPlaceholder: "Search Bukhari . . . ",
-                 info: "_START_ to _END_ of _TOTAL_ Hadith",
+                 searchPlaceholder: "Search Sharhu Sunnah . . . ",
+                 info: "_START_ to _END_ of _TOTAL_ Points",
                  lengthMenu: "_MENU_"
              }, //end of language
+         
+         
+         /*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
+          default: lpfrtip
+         l - length changing input control
+         f - filtering input
+         t - The table
+         i - Table information summary
+         p - pagination control
+         r - processing display element
+         B - Buttons
+         
+          'lBpfrtip',
+         
+         "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+         "<'row'<'col-sm-12'tr>>" +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+         
+         "<'row'<'col-sm-4'l><'col-sm-4'f><'col-sm-4'B>>" +
+         "<'row'<'col-sm-12'tr>>" +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>"
+         */
+         //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
 
     dom: 
         "<'ui unstackable grid'" + /*add celled to see grid*/
@@ -729,7 +662,7 @@ time, mark, audio, video {
                        {extend: 'copy',
                         key: {key: 'c', shiftKey: true},
                         text: 'Copy',
-                        messageTop: 'Sahih Bukhari',
+                        messageTop: '40 Nawawi',
                         title: 'hadithmv.com',
          
          //=== edits clipboard regex, code to manipulate the data string as desired
@@ -743,38 +676,26 @@ time, mark, audio, video {
                                 data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
          
                                // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
-                       data = data.replace( /\n#/g, '' );
-                       data = data.replace( /\tAr Book/g, '' );
-                       data = data.replace( /\tAr Chapter/g, '' );
-                       data = data.replace( /\tAr Heading/g, '' );
-                       data = data.replace( /\tEn Book/g, '' );
-                       data = data.replace( /\tEn Chapter/g, '' );
-                       data = data.replace( /\tEn Heading/g, '' );
-                       data = data.replace( /\tDv Book/g, '' );
-                       data = data.replace( /\tDv Chapter/g, '' );
-                       data = data.replace( /\tDv Heading/g, '' );
-                       data = data.replace( /\tArabic/g, '' );
-                       data = data.replace( /\tEnglish/g, '' );
-                       data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tAr Ref./g, '' );
-                       data = data.replace( /\tEn Ref./g, '' );
-                       data = data.replace( /\tDv Ref./g, '' );
+                                data = data.replace( /\n#/g, '' );
+                                data = data.replace( /\tAr Title/g, '' );
+                                data = data.replace( /\tEn Title/g, '' );
+                                data = data.replace( /\tDv Title/g, '' );
+                                data = data.replace( /\tArabic/g, '' );
+                                data = data.replace( /\tEnglish/g, '' );
+                                data = data.replace( /\tDhivehi/g, '' );
+                                data = data.replace( /\tAr Ref./g, '' );
+                                data = data.replace( /\tEn Ref./g, '' );
+                                data = data.replace( /\tDv Ref./g, '' );
          
-                       data = data.replace( /\nAr Book/g, '' );
-                       data = data.replace( /\nAr Chapter/g, '' );
-                       data = data.replace( /\nAr Heading/g, '' );
-                       data = data.replace( /\nEn Book/g, '' );
-                       data = data.replace( /\nEn Chapter/g, '' );
-                       data = data.replace( /\nEn Heading/g, '' );
-                       data = data.replace( /\nDv Book/g, '' );
-                       data = data.replace( /\nDv Chapter/g, '' );
-                       data = data.replace( /\nDv Heading/g, '' );
-                       data = data.replace( /\nArabic/g, '' );
-                       data = data.replace( /\nEnglish/g, '' );
-                       data = data.replace( /\nDhivehi/g, '' );
-                       data = data.replace( /\nAr Ref./g, '' );
-                       data = data.replace( /\nEn Ref./g, '' );
-                       data = data.replace( /\nDv Ref./g, '' ); 
+                                data = data.replace( /\nAr Title/g, '' );
+                                data = data.replace( /\nEn Title/g, '' );
+                                data = data.replace( /\nDv Title/g, '' );
+                                data = data.replace( /\nArabic/g, '' );
+                                data = data.replace( /\nEnglish/g, '' );
+                                data = data.replace( /\nDhivehi/g, '' );
+                                data = data.replace( /\nAr Ref./g, '' );
+                                data = data.replace( /\nEn Ref./g, '' );
+                                data = data.replace( /\nDv Ref./g, '' );  
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
@@ -802,7 +723,7 @@ time, mark, audio, video {
                                    text: 'Show/Hide'
                                  }, //end of colvis
 
-
+                                 
                                  { extend: 'print',
                                    key: { key: 'p', shiftKey: true },
                                    text: 'Print',

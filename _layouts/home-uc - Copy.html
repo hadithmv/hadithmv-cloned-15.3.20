@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <!--change languages later if needed-->
+   <head>   <!--<meta name="robots" content="noindex"/> -->
+
+<!--
+   APPCHANGE
+   VERSIONCHANGE
+   APKCHANGE
+   TABLECHANGE
+ -->
+
+      <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <title>Hadithmv - Accessible and Sourced</title>
+      <meta name="description" content="Dhivehi Hadith translations at your fingertips">
+      <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1,"> <!--  maximum-scale=1.0, user-scalable=no -->
+<!-- 1 week
+      <meta http-equiv="cache-control" content="Public" max-age=604800/>
+      <meta http-equiv="Expires" content="604800"/>
+-->
+      <meta name="keywords" content="hadithmv.github.io, hadithmv.com, www.hadithmv.com, hadithmv, hadith, hadeeth, nawawi, 40 hadith, saalhees, open, sourced, translations, tharujama, tarujama, tharjama, tarjama, islam, islamic, dhivehi, maldives, maldivian, raajje, deen, dheen, deeny, dheeny, deeni, dheeni, deenee, dheenee">
+      <meta name="author" content="Hadithmv">
+      <meta name="theme-color" content="#1A619E" />
+      <link rel="canonical" href="https://hadithmv.com" />  <!-- to define a preferred url for search engines to index -->
+      <link rel="author" href="https://hadithmv.com" />
+      <link rel="publisher" href="https://hadithmv.com">
+      <meta name="thumbnail" content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
+
+      <meta http-equiv="content-language" content="en">
+      <meta name="google" value="notranslate">
+
+      <meta og:title content="Hadithmv - Accessible and Sourced">
+      <meta og:description content="Dhivehi Hadith translations at your fingertips">
+      <meta og::image content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png">
+
+<!-- defines alternative page for mobile etc 
+      <link rel="alternate" media="only screen and (max-width: 640px)" href="https://hadithmv.com">
+      <link rel="alternate" href="android-app://hadithmv.com">
+      <link rel="alternate" href="ios-app://hadithmv.com">
+-->
+      <link rel="manifest" href="https://hadithmv.com/alt/hmvManifest.json"> <!-- JSON file , control how your app appears as an app/mobile CHANGE123-->
+
+      <script async> //Service Worker - helps cache website offline
+         if ('serviceWorker' in navigator) {
+         // sw.js can literally be empty, but must exist
+         navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js'); }
+      </script>
+
+      <!-- favicons
+         <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
+<!--  <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo5/newLogo5%20-16.png">   -->
+      <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.com/img/newLogo5/newLogo5-32-compressor.png">
+
+      
+<!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.com/img/newLogo5/newLogo5%20-72.png" />   -->
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
+<!--  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />   -->
+<!--
+      <link rel="manifest" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/manifest.json">
+      <link rel="shortcut icon" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/favicon.ico">
+      <meta name="apple-mobile-web-app-title" content="Hadithmv">
+      <meta name="application-name" content="Hadithmv">
+      <meta name="msapplication-config" content="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/browserconfig.xml">
+      <meta name="msapplication-TileImage" content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
+  <meta name="msapplication-square70x70logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-70.png" />
+      <meta name="msapplication-square150x150logo" content="https://hadithmv.com/img/newLogo5/newLogo5-150-compressor.png" />
+  <meta name="msapplication-square310x310logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-310.png" /> -->
+
+
+      <!--  === === Base C CSS JS === === -->
+      <!-- APKCHANGE123
+      <link rel="stylesheet" href="file:///android_asset/app3.css">
+      -->
+      <link rel="stylesheet" href="https://hadithmv.com/alt/Apk/Resc/app2.css">
+      <!--=== === Base C CSS End=== === -->
+      <!-- APKCHANGE123
+      <script src="file:///android_asset/app3.js"></script>
+      -->
+      <script src="https://hadithmv.com/alt/Apk/Resc/app2.js"></script>
+      <!--=== === Base C JS End=== === -->
+
+
+      <style>
+         /*
+         <!--=== === Base Ext CSS === ===-->
+            <!--Bootstrap 3-->
+         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+         <!--Datatables - Bootstrap 3 Integration -->
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css"/>
+         <!--Datatables - Buttons - Bootstrap 3 Integration -->  
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap.min.css"/>
+         <!--SUI table only component - NO JS -->
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/table.min.css"/>
+         <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.semanticui.min.css"/>
+         <!--Replace Default Buttons Css with custom styling buttons css
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.dataTables.min.css">-->
+         <!--Mark JS - small - embedded - unneeded
+         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.css"> -->
+         <!--=== === Base Ext CSS End === ===-->
+         */
+      </style>
+
+
+      <style>
+         /*
+         <!--=== === Base Ext JS === ===-->
+            <!--jQuery - Google 3.x snippet-->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+         <!--Bootstrap 3-->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <!--DataTables Core JS-->
+         <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+         <!--Datatables - Bootstrap 3 Integration -->
+         <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap.min.js"></script>
+         <!--Datatables - Semantic UI Integration NO NEED FOR THIS, TABLE STACKS FINE WITHOUT IT, BREAKS PAGINATION STYLING
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>-->
+         <!--Datatables - Buttons -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+         <!--Datatables - Buttons - Bootstrap 3 Integration -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap.min.js"></script>
+         <!--Datatables - Buttons - colvis, html5 -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+         <!--Datatables - Buttons - print (Must go below other related JS), excel -->
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+         <!--Mark JS -->
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+         <script type="text/javascript" src="https://rawgit.com/julmot/datatables.mark.js/master/dist/datatables.mark.min.js"></script> <!--src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"-->
+         <!--HammerJS -->
+         <script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+         <!--Datatables - KeyTables - Bootstrap 3 Integration -->
+         <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.4.1/js/dataTables.keyTable.min.js"></script>
+         <!--KeepConditions -->
+         <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
+         <!--=== === Base Ext JS End === ===-->
+         */
+      </style>
+
+<!--=== === Base Ext JS === ===
+<!--jQuery - Google 3.x snippet-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Bootstrap 3-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--DataTables Core JS-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<!--Datatables - Bootstrap 3 Integration -->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<!--Datatables - Semantic UI Integration NO NEED FOR THIS, TABLE STACKS FINE WITHOUT IT, BREAKS PAGINATION STYLING
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>-->
+<!--Datatables - Buttons -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+<!--Datatables - Buttons - Bootstrap 3 Integration -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.bootstrap.min.js"></script>
+<!--Datatables - Buttons - colvis, html5 -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+<!--Datatables - Buttons - print (Must go below other related JS), excel -->
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+<!--Mark JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+<!--HammerJS -->
+<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<!--Datatables - KeyTables - Bootstrap 3 Integration -->
+<script type="text/javascript" src="https://cdn.datatables.net/keytable/2.3.2/js/dataTables.keyTable.min.js"></script>
+<!--KeepConditions -->
+<script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
+<!--=== === Base Ext JS End === ===-->
+      <!--Datatables - KeyTables CSS - BS 3 Int - small - embedded - unneeded
+         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.4.1/css/keyTable.dataTables.min.css"/>-->
+
+
+      <!--  === === Web only plugins ===  === MOVED BELOW
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+   -->
+
+      <!--=== === Web only plugins End === ===-->
+      <!--Search input with autocomplete using Typeahead and Bootstrap - FIX LATER
+         <script type="text/javascript" src="https://rawgit.com/bassjobsen/Bootstrap-3-Typeahead/master/bootstrap3-typeahead.min.js"></script>-->
+
+
+      <!--  === === Base Data Json === === -->
+      <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
+      <script src="file:///android_asset/40nJson.js"></script>
+         TABLECHANGE123-->
+      <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
+      <!--  === === Base Json End=== === -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+
+      <!--=== Embedded CSS ===-->
+      <style>
+         /* Ubuntu-mod */
+         @font-face {
+         font-family: 'Ubuntu';
+         src:
+      /* APKCHANGE123
+         url('file:///android_asset/Ubuntu-mod.woff') format('woff')
+         */
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod.ttf') format('truetype');
+         }
+         /* KFGQPCUthmanTahaNaskh-mod */
+         @font-face {
+         font-family: 'KFGQPCUthmanTahaNaskh';
+         src:
+      /* APKCHANGE123
+         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff'),
+         */
+         url('https://hadithmv.com/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod2.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/KFGQPCUthmanTahaNaskh-B-mod2.ttf') format('truetype');
+         }
+         /* Tharujamaanu-B-Regular-mod */
+         @font-face {
+         font-family: 'Tharujamaanu';
+         src: 
+      /* APKCHANGE123
+         url('file:///android_asset/Tharujamaanu-B-Regular-mod4.woff') format('woff'),
+         */
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod4.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod4.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Tharujamaanu-B-Regular-mod4.ttf') format('truetype');
+         }
+
+
+         * {font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';} /* universal select fonts */
+
+         /* NAVBAR Color */
+         .navbar-default,.navbar-default .navbar-toggle{border-color:#1a619e!important}.navbar-default{background-color:#337ab7!important}.navbar-default .navbar-brand{color:#fff!important}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#99e0ff!important}.navbar-default .navbar-nav>li>a,.navbar-default .navbar-text{color:#fff!important}.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#99e0ff!important}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#99e0ff!important;background-color:#1a619e!important}.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#1a619e!important}.navbar-default .navbar-toggle .icon-bar{background-color:#fff!important}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#fff!important}.navbar-default .navbar-link{color:#fff!important}.navbar-default .navbar-link:hover{color:#99e0ff!important}@media (max-width:767px){.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#fff!important}.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#99e0ff!important}.navbar-default .navbar-nav .open .dropdown-menu>.active>a,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover{color:#99e0ff!important;background-color:#1a619e!important}}
+
+         /* Footer text link */
+         .foottext {color: white !important;}
+
+         /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. This button and pseudo-element are non-standard, supported only in WebKit and Blink, hence the vendor prefix. The clear button is only shown on non-empty search <input> elements. */
+         input[type="search"]::-webkit-search-cancel-button {
+         -webkit-appearance: searchfield-cancel-button; /* adds x */
+         border:4px solid transparent; /*makes x a bit bigger*/
+         }
+
+         /* Keytable - Desktop only MQ */
+         @media screen and (min-width: 1200px) {
+         table.dataTable tbody th.focus,table.dataTable tbody td.focus{box-shadow:inset 0 0 1px 2px #337ab7}
+         }
+
+         /* Mark JS - padding: 0; removes useless padding */
+         mark {background: #add1f2; color: black; padding: 0;}
+
+
+
+
+         /* *navbar brand image */
+         .navbar-brand img {height: 40px; width: 40px; margin:-10px !important; margin-left: 0.5px !important; margin-right: -0.5px!important; background-color: white; border-radius: 50%;}
+
+         /*logo transition enlarge effect upon hover*/
+         .imgGrow
+         {    transition:all 0.25s ease; }
+         .imgGrow:hover
+         {   -webkit-transform: scale(1.15);
+         -ms-transform: scale(1.15);
+         transform: scale(1.15); }
+
+         /*FOOTER STICK to bottom even if not filled*/
+         html {height: 100%; box-sizing: border-box;}
+         *, *:before, *:after { box-sizing: inherit;}
+         body { position: relative;
+         margin: 0;
+         padding-bottom: 4rem; /* footer height*/
+         min-height: 100%;}
+         .footer { position: absolute; 
+         right: 0;
+         bottom: 0;
+         left: 0;
+         color: white; /*prev none*/
+         background-color: #337ab7; /*efefef*/
+         text-align: center;
+         border-top: 1px solid #1a619e;
+         padding: 10px;}
+         /*makes footer space smaller, mobile view only
+         @media screen and (max-width: 768px) {
+         .footer {padding: .8rem;}
+         }*/
+
+         /*vertically aligns column text to top*/
+         table.dataTable tbody td {
+         vertical-align: top;
+         }
+
+body > h1 {font-size: 20px;} /*print header font size*/
+
+
+
+
+
+
+
+
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;  }  
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;  }  
+
+
+
+
+
+         /* corrects web view only/none-print display for these particular columns ? */
+         .dataTable tbody tr td.fnCol1 { /* # number */
+            /*margin-bottom: -1px;*/
+         font-size: 120%;
+         text-align: center;
+         color: #205ca5;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol2 { /* ar title */
+         direction: rtl;
+         font-size: 130%;
+         text-align: center;
+         color: #205ca5;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol3 { /* en title */
+         font-size: 100%;
+         text-align: center;
+         color: #205ca5;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol4 { /* dv title */
+         direction: rtl;
+         font-size: 125%;
+         text-align: center;
+         color: #205ca5;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         /* @media screen and (max-width: 768px) {
+         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+         } above mobile breakpoint */
+         .dataTable tbody tr td.fnCol5 { /* ar text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.45;
+         font-size: 150%;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol6 { /* en text */
+         direction: ltr;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 110%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol7 { /* dv text */
+         direction: rtl;
+         text-align: justify;
+         line-height: 1.37;
+         font-size: 135%;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+         .dataTable tbody tr td.fnCol8 { /* ar ref */
+         direction: rtl;
+         text-align: justify; text-align-last: center; /* justify and center */
+         font-size: 135%;
+         color: #205ca5;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+         .dataTable tbody tr td.fnCol9 {   /* en ref */
+         direction: ltr;
+         text-align: center; /* center does not work without this for some reason */
+         font-size: 100%;
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
+         .dataTable tbody tr td.fnCol10 { /* dv ref */
+         direction: rtl;
+         text-align: center;
+         font-size: 130%;
+         color: #205ca5;
+         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
+
+
+
+
+
+         #fnTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
+         padding: 0px !important; padding-left: 1px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
+         padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
+         margin: 0px !important; width: 43vw !important;}
+
+         #fnTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
+         #fnTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
+         #fnTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
+
+         #fnTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
+         #fnTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
+
+         /*around table sides padding*/
+         #fnTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
+         #fnTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
+
+
+
+         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
+         #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
+         /*moves show index a little to the right*/
+         #fnTable_info { margin-left: 10px;}
+         /*moves show index a little to the bottom*/
+         #fnTable_info { padding-top: 6.5px;}
+         /* removes margin around table, especially top-bottom */
+         #fnTable {margin: 0 !important;}
+         /* increases the bottom height of show/length -prev 30 */
+         #fnTable_length > label > select {height: 34px; }
+         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
+         }       /* desktop page buttons height - buttons ROW - mobile */
+         #fnTable_paginate {height: 40px;}
+         /* dont forget tab height - margin for whole table */
+         /*       
+         <div class="tab-content clearfix" style="margin-top: 54px;">
+         */
+         /* moves pagination buttons a bit higher - Desktop only MQ */
+         @media screen and (min-width: 768px) {
+         #fnTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
+         }  
+/*APPCHANGE123*/
+
+/*fixlater
+table unpadded too much, as if zoomed, readd padded around sides*/
+#fnTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
+
+/*search button height*/
+#fnTable_filter > label > input {height: 34px !important;}
+
+/*mobile*/
+         @media screen and (max-width: 768px) {
+/*options button - make height less */
+         #fnTable_wrapper > div:nth-child(1) > div.col-sm-1.col-xs-2.text-right > div > button {height: 34px !important;}
+/*options button sides padding - remove, reposition sides */
+          #fnTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
+/*Show button sides padding - remove - */
+         #fnTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
+         }  
+/*moves pagination buttons row a little hight, taking from the margins */
+         #fnTable_wrapper > div:nth-child(2) > div > div > div {margin-top: -5px; margin-bottom: -5px;} 
+
+
+
+
+         /*TABLECHANGE123*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /*hides table headers even on mobile, prev nth-child(2)*/
+         thead tr:nth-child(1) {
+         position: absolute !important;
+         top: -9999px !important;
+         left: -9999px !important;
+         }
+
+         /*hides individual column search, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .dataTable thead tr:nth-child(2) {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+         }
+
+         /* moves copied info in front, changes clipboard copied color, */
+         #datatables_buttons_info {z-index: 9999 !important;}
+         #datatables_buttons_info > h2 {background: #ADD1F2;}
+
+         /*hides table top border, mobile view only*/
+         @media screen and (max-width: 768px) {
+         .ui.table {border: none;}
+         }
+
+         /* makes min-width a bit bigger */
+         .dataTable thead tr th input[type="text"] {
+         width: 100%;
+         padding: 3px;
+         box-sizing: border-box;
+         min-width: 20px;
+         border-radius: .28571429rem;
+         border: 1px solid rgba(34, 36, 38, .15);
+         }
+
+         /* both above and below 2 needed to work min-width, or just below 2 to work width */
+         thead input {
+         width: 100%;
+         padding: 3px;
+         min-width: 20px;
+         box-sizing: border-box;
+         border-radius: .28571429rem;
+         border: 1px solid rgba(34, 36, 38, .15);
+         } 
+
+         tfoot input {
+         width: 100%;
+         padding: 3px;
+         box-sizing: border-box;
+         border-radius: .28571429rem;
+         border: 1px solid rgba(34, 36, 38, .15);
+         }
+
+
+
+         html, body, { /* removing comma from body makes footer break */
+         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
+         /*font-size: 16px; base font size*/
+         width: 100%;
+         height: 100%;
+         min-width: 100%;
+         min-height: 100%;
+         /*hides unwanted horizontal scroll space, but affects print
+         max-width: 100%; 
+         overflow-x: hidden;*/
+         margin: 0;
+         padding: 0;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         position: absolute;
+         background-color: #fff;
+         }
+
+         /*hides unwanted horizontal scroll space, makes scroll not show on print, adding comma to body makes it fail*/
+         @media not print, screen {
+         html, body {max-width: 100%; 
+         overflow-x: hidden;}
+         }
+
+
+
+
+
+         /* centers table headers */
+         .dataTable thead tr:nth-child(2) > * > input[type="text"] {text-align: center;}
+         /* lessens table header bold line */
+         .dataTable thead tr:nth-child(2) > th {border-top: 0;}
+
+         .dataTable thead tr:nth-child(2) > th {padding-bottom: 2px !important; padding-top: 2px !important;}
+         .dataTable thead tr:nth-child(2) {padding: 0px !important;}
+         .dataTable tbody tr {padding-top: 0px !important; padding-bottom: 0px !important;}
+         
+
+         /* tab-content clearfix */
+         body > div > div > div {margin-top: 54px !important;}
+         /* about jumbotron text direction */
+         .righty {direction: rtl;}  .lefty {direction: ltr; font-size: 18px !important;}
+         /* first and third jumbo */
+         #about > div:nth-child(1), #about > div:nth-child(3)  {margin-top: -5px; background-color: transparent; margin-bottom: -5px;}
+         /* second jumbo {}*/
+         /* fourth jumbo */
+         #about > div:nth-child(4) {margin-top: -5px; margin-bottom: -15px;}
+         /*reduces navbar height
+         .navbar-xs { min-height:28px; height: 28px; }
+         .navbar-xs .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 28px; }
+         .navbar-xs .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 28px; }*/
+         /*reduces navbar heigh -mobile
+         .navbar-toggle {
+         padding: 0 0;
+         margin-top: 7px;
+         margin-bottom: 0;
+         }*/
+         /* change this: 
+         <div class="tab-content clearfix" style="margin-top: 40px;">
+         /*
+         .navbar-inner {
+         min-height: 0px;
+         }
+         .navbar-brand,
+         .navbar-nav li a {
+         line-height: 20px;
+         height: 20px;
+         padding-top: 0;
+         }
+         */
+      </style>
+
+
+   </head>
+
+
+   <body class="notranslate">
+      <!-- === === NAV BAR === === -->
+      <nav class="navbar navbar-xs navbar-default navbar-fixed-top">
+         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+
+               <!-- APKCHANGE123
+                  "file:///android_asset/newLogo5-compressor.svg">
+                -->
+               <a class="navbar-brand" href="https://hadithmv.com" target="_blank" rel="noopener"><img class="miniLogo imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" alt="menu logo"></a>
+
+               <!--prev navbar-text-->
+               <h4 class="navbar-text text-center">hadithmv</h4>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+<!--APPCHANGE123
+                  <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
+                  <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari</a></li>
+-->
+                  <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
+                  <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari (beta)</a></li>
+                  <!--TABLECHANGE123-->
+
+                  <li class=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Contact</a></li>
+
+               </ul>
+               <!-- === Search engine 
+                  <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" data-toggle="modal" href="#searchModal" class="form-control" placeholder="Search">
+                    </div>
+                  </form>
+               === Search engine === -->
+
+               <ul class="nav navbar-nav navbar-right">
+
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Platform<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="https://hadithmv.com" target="_blank" rel="noopener">Web</a></li>
+                           <li><a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv" target="_blank" rel="noopener">Android</a></li>
+                           <li><a href="https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip" target="_blank" rel="noopener">Windows</a></li>
+                        </ul>
+                  </li>
+
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Share<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="https://telegram.me/share/url?url=https://hadithmv.com" target="_blank" rel="noopener">Telegram</a></li>
+                           <li><a href="https://www.facebook.com/sharer.php?u=https://hadithmv.com" target="_blank" rel="noopener">WhatsApp</a></li>
+                           <li><a href="https://twitter.com/intent/tweet?url=https://hadithmv.com" target="_blank" rel="noopener">Facebook</a></li>
+                           <li><a href="whatsapp://send?text=https://hadithmv.com" target="_blank" rel="noopener">Twitter</a></li>
+                           <li><a href="viber://forward?text=https://hadithmv.com" target="_blank" rel="noopener">Viber</a></li>
+                        </ul>
+                  </li>
+
+                  <li class="NavClick" data-toggle="tab" href="#about"><a href="">About</a></li>
+                  <li><a href="https://hadithmv.com/alt/docs" target="_blank" rel="noopener">Docs</a></li>
+                  <li class="hidden-xs hidden-sm"><a onclick="myHelp()">Help</a></li> <!-- Only on desktop, made such in css -->
+                                   </ul>  <!-- === Share DISABLED ===      
+                  <li class="dropdown">
+                  
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-send"></span>&nbsp; Share <span class="caret"></span></a>
+                    <ul class="dropdown-menu" >
+                  
+                  <li><a href="https://telegram.me/share/url?url=https://hadithmv.github.io&text=TEXT">Telegram</a></li>
+                  <li><a href="whatsapp://send?text=https://hadithmv.github.com">WhatsApp</a></li>
+                  <li><a href="facebook.com/sharer.php?u=https://hadithmv.github.io">Facebook</a></li>
+                  <li><a href="http://www.twitter.com/share?url=https://hadithmv.github.io">Twitter</a></li>
+                  <li><a href="viber://forward?text=https://hadithmv.github.io">Viber</a></li>
+                  
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown">
+                  
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-wrench"></span>&nbsp; Experimental <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    
+                  <li><a href="https://hadithmv.github.io">Default</a></li>
+                  <li><a href="https://hadithmv.github.io/alt/legacy">Legacy</a></li>
+                  
+                      <li role="separator" class="divider"></li>
+                  
+                  <li><a href="https://hadithmv.github.io/alt/arabicfonts1">Arabic Fonts</a></li>
+                  <li><a href="https://hadithmv.github.io/alt/arabicfonts2">Arabic Fonts 2</a></li>
+                  <li><a href="https://hadithmv.github.io/alt/englishfonts">English Fonts</a></li>
+                  <li><a href="https://hadithmv.github.io/alt/dhivehifonts">Dhivehi Fonts</a></li>
+                  
+                    </ul>
+                  </li>
+                  
+                  </ul>      Share DISABLED ===   -->
+
+            </div>    <!-- /.navbar-collapse -->
+         </div>   <!-- /.container-fluid -->
+      </nav>    <!-- === === /NAV BAR === === -->
+
+
+      <!-- === === CONTAINER === === -->
+      <div class="container-fluid">
+         <div class="flex-row row">
+
+            <div class="tab-content clearfix">
+
+               <div class="tab-pane fade in active" id="40n">
+                  <!-- === === /40n tab === === -->
+                  <!--TABLE BEGIN,
+                     "display": Short-hand for the stripe, hover, row-border and order-column classes.
+                     "cell-border": Border around all four sides of each cell.
+                     "compact": Reduce the amount of white-space the default styling for the DataTable uses, increasing the information density on screen (since 1.10.1).
+                     "hover": Row highlighting on mouse over.
+                     "nowrap": Disable wrapping of content in the table, so all text in the cells is on a single line (since 1.10.1).
+                     "order-column": Highlight the column that the table data is currently ordered on.
+                     "row-border": Border around only the top an bottom of each each (i.e. for the rows). Note cell-border and row-border are mutually exclusive and cannot be used together.
+                     "striped": Row striping
+                     TABLECHANGE123-->
+                  <table id="fnTable" class="ui celled compact striped table fnClass"> <!--cellspacing="0" width="100%"-->
+                     <thead>
+                        <tr>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                           <th></th>
+                        </tr>
+                     </thead>
+                  </table>
+
+                  <div class="footer">
+                 <!--<span onclick="myFooter()">2018 &nbsp;</span>
+                     <span onclick="myHelp()">hadithmv.com</span> -->
+                 <!--<a class="foottext" href="" target="_blank" rel="noopener">Islam is the Sunnah and the Sunnah is Islam</a>	replace with book link once complete-->
+                     <a class="foottext">Islam is the Sunnah and the Sunnah is Islam</a>
+      
+                  </div>
+               </div>   <!-- === === /tab-pane active" id="40n" === === -->
+
+<!--APPCHANGE123-->  <!--TABLECHANGE123-->
+               <div class="tab-pane fade" id="bukh">  <!-- === === /bukh tab === === -->
+                  <h3>Bukhari</h3>
+                  <p>Coming Soon</p>
+               </div>   <!-- === === /tab-pane active" id="bukh" === === -->
+
+
+               <div class="tab-pane fade" id="about">    <!-- === === /about tab === === -->
+                  <div class="jumbotron text-center">
+                     <div class="container">
+                        <div class="col-lg-6">
+               <!-- APKCHANGE123
+                  "file:///android_asset/newLogo5-compressor.svg">
+                -->
+                           <img class="img-responsive center-block imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" width="250" alt="menu logo" />
+                        </div>
+                        <div class="col-lg-6">
+                           <h2>السلام عليكم</h2>
+                           <br>
+                           <p class="lead">Welcome to <strong>Hadithmv</strong></p>
+
+               <!-- APKCHANGE123
+                  "file:///android_asset/en_badge_web_generic-compressor.svg">-->
+                      <div class="col-lg-6">
+                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/playstore-badge/en_badge_web_generic-compressor.png"/></a>
+                        </div> 
+                        <div class="col-lg-6">
+                           <a href="https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Windows Desktop" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/windows-desktop-badge/windows-badge-compressor.png"/></a>
+                           <br><br>
+                        </div>
+
+                        </div>
+                     </div>
+                  </div>   <!-- jumbotron end -->
+
+                  <div class="jumbotron text-center">
+                     <div class="container">
+                        <div class="col-lg-6">
+                           <h2>سورة يس</h2>
+                           <br>
+                           <p class="lead text-justify righty">﴿إِنَّا نَحْنُ نُحْيِي الْمَوْتَىٰ وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ ۚ وَكُلَّ شَيْءٍ أَحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ﴾</p>
+                           <br>
+                           <p class="lead text-justify lefty">'Indeed, it is We who bring the dead to life, and We record what they have put forth and what they left behind, and all things We have recorded in a clear register.'</p>
+                           <br>
+                           <p class="lead text-justify righty">'ހަމަކަށަވަރުން، މަރުވެފައިވާ މީހުން އަލުން ދިރުއްވަނީ ތިމަންއިލާހެވެ. އަދި އެބައިމީހުން އިހުކުރި ޢަމަލުތަކާއި އެބައިމީހުން ފަހަށް ދޫކޮށްފައި ދިޔަ އަސަރުތައް ތިމަންއިލާހު ލިޔުއްވަމެވެ. އަދި ކޮންމެ ކަމެއްމެ ބަޔާންވެގެންވާ ފޮތެއްގައި ތިމަންއިލާހު ހިމެނުއްވީމެވެ.'</p>
+                           <br>
+                           <p class="lead text-center">[12:36]</p>
+                        </div>
+                        <!--
+                           <div class="col-lg-6">
+                               <img class="grow img-responsive center-block" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="http://www.stickpng.com/assets/images/580b585b2edbce24c47b2ab9.png" />
+                           </div>
+                           -->
+                     </div>
+                  </div>   <!-- jumbotron end -->
+
+                  <div class="jumbotron text-center">
+                     <div class="container">
+                        <!--
+                           <div class="col-lg-6">
+                               <img class="grow img-responsive center-block " src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://cdn.shopify.com/s/files/1/1221/9418/products/A03a-Sahih_Muslim_3D.jpeg" width="200px" style="" />
+                           </div>
+                           -->
+                        <div class="col-lg-6 pull-right">
+                           <h2>صحيح مسلم</h2>
+                           <br>
+                           <p class="lead text-justify righty">«عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ»</p> <br>
+                           <p class="lead text-justify lefty">Mundhir bin Jarir narrated from his father: Allah's Messenger ﷺ said: "Whoever starts (acting upon or revives) a good practice in Islam will have its reward and the reward of whoever acts upon it after him, without reducing anything from their rewards, and whoever starts (acting upon) an evil practice (or bid'ah) in Islam will have its sin and the sin of those who act upon it after him, without reducing anything from their sins."</p>
+                           <br>
+                           <p class="lead text-justify righty">މުންޛިރު ބިން ޖަރީރު އެ ޞަޙާބީގެ ބައްޕާފުޅު ފަރާތުން ރިވާކު ރެއްވިއެވެ: "ﷲ ގެ ރަސޫލާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: އިސްލާމް ދީނުގައި ހެޔޮ ކަމެއް (ކުރަން ނުވަތަ ދިރުއްވަން) ފައްޓައިފި މީހަކު، ފަހެ އެކަމުގެ ސަވާބާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ސަވާބު އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ސަވާބުން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ. އަދި އިސްލާމް ދީނުގައި ނުބައި ކަމެއް (ނުވަތަ ބިދުޢައެއް) ފައްޓައިފި މީހަކު، އެކަމުގެ ފާފައާއި، އޭނާގެ ފަހަތުން އެކަން ކުރިހައި ބަޔެއްގެ ފާފަ އޭނާއަށް ލިބޭހުއްޓެވެ. އެއީ އެބައިމީހުންގެ ފާފައިން އެބައިމީހުންނަށް އެއްވެސް އުނިވުމަކާ ނުލައެވެ."</p>
+                           <br>
+                           <p class="lead text-center">[1017]</p>
+                        </div>
+                     </div>
+                  </div>   <!-- jumbotron end -->
+
+                  <div class="jumbotron jumbotron text-center">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <p>Version <strong>1.2.14</strong></p> <!-- VERSIONCHANGE123 -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>   <!-- jumbotron end -->
+
+                  <div class="footer">
+                 <!--<span onclick="myFooter()">2018 &nbsp;</span>
+                     <span onclick="myHelp()">hadithmv.com</span> -->
+                 <!--<a class="foottext" href="" target="_blank" rel="noopener">Islam is the Sunnah and the Sunnah is Islam</a>  replace with book link once complete-->
+                     <a class="foottext">Islam is the Sunnah and the Sunnah is Islam</a>
+                  </div>
+               </div>   <!-- === === /tab-pane active" id="about" === === -->
+
+            </div>   <!-- === === /tab-content clearfix === === -->
+
+         </div>     <!-- === /FLEX-ROW === -->
+      </div>   <!-- === === /CONTAINER === === --> 
+
+
+      <!--=== === ===INLINE JS=== === ===-->
+      <script>
+         /*Help Alert*/
+                 function myHelp() {
+                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+o] = Options, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
+                 }
+         
+         /*Footer Alert*/
+                 function myFooter() {
+                     alert("صحيح البخاري 456: عَنْ عَائِشَةَ أَنَّ رَسُولَ اللَّهِ ﷺ قال: مَا بَالُ أَقْوَامٍ يَشْتَرِطُونَ شُرُوطًا لَيْسَ فِي كِتَابِ اللَّهِ؟ مَنِ اشْتَرَطَ شَرْطًا لَيْسَ فِي كِتَابِ اللَّهِ فَلَيْسَ لَهُ، وَإِنِ اشْتَرَطَ مِائَةَ مَرَّةٍ.");
+                 }
+                 /* Narrated Aisha: Allah's Messenger ﷺ said: What is the matter with people that they impose conditions which are not in the Book of Allah? Whoever imposes conditions which are not in the Book of Allah, his conditions will be invalid even if he imposed them a hundred times. */
+         
+         
+         /* removes right tab click active */
+         $(".nav li").click(function() {
+             $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
+             $("html").animate({ scrollTop: 0 }, "fast");   /* NavClick scroll to top - tabs */
+         });
+         
+         /* NavClick scroll to top - tabs 
+         $('.NavClick').click(function(){
+             $("html").animate({ scrollTop: 0 }, "fast");
+          });  */
+         
+         /* CLOSE NAV ON EXT CLICK */
+         $('body').bind('click', function(e) { 
+             if(jQuery(e.target).closest('.navbar').length == 0) {
+                 // click happened outside of .navbar, so hide
+                 var opened = $('.navbar-collapse').hasClass('collapse in');
+                 if ( opened === true ) {
+                     $('.navbar-collapse').collapse('hide');
+                 }
+             }
+         });
+         
+         /* close mobile view navbar on click */
+         $(document).on('click','.navbar-collapse.in',function(e) {
+             if( $(e.target).is('a') ) {
+                 $(this).collapse('hide');
+             }
+         });
+         /* ACTIVE STATE ON NAV - breaks tabs
+             $(".nav li").on("click", function() {
+               $(".nav li").removeClass("active");
+               $(this).addClass("active");
+             });
+         */
+         
+         /* close mobile view navbar on click - both of these break dropdowns
+         $(function() {
+             $('.nav a').on('click', function(){ 
+                 if($('.navbar-toggle').css('display') !='none'){
+                     $(".navbar-toggle").trigger( "click" );
+                 }
+             });
+         });
+         
+         $('.navbar-nav a').on('click', function () {
+                 if (window.innerWidth <= 768) {
+                     $(".navbar-toggle").click();
+                 }
+             });
+         */
+         
+         /* SEARCH ENGINE 
+           (function() {
+             var cx = '013964696037650862895:jlgz5hvcplw';
+             var gcse = document.createElement('script');
+             gcse.type = 'text/javascript';
+             gcse.async = true;
+             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(gcse, s);
+           })();
+         */
+         
+         /* FOCUS SEARCH INPUT 
+         $('body').on('shown.bs.modal', '#searchModal', function () {
+             $('input:visible:enabled:first', this).focus();
+         })
+         */
+         /* DEFER IMAGES AND IFRAMES */
+         var imgDefer = document.getElementsByTagName('img');
+         for (var i=0; i<imgDefer.length; i++) {
+         if(imgDefer[i].getAttribute('data-src')) {
+         imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+         } }
+         var vidDefer = document.getElementsByTagName('iframe');
+         for (var i=0; i<vidDefer.length; i++) {
+         if(vidDefer[i].getAttribute('data-src')) {
+         vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+         } } 
+
+         //=== ===
+         //=== ===
+         //=== === Accent neutralise === === other half at bottom = do no repeat for every table
+                         $.fn.DataTable.ext.type.search.string = function(data) {
+                             return !data ?
+                                 '' :
+                                 typeof data === 'string' ?
+                                 data
+
+         //                     .replace(/\[.*?\]/g, '') //exclude whats between square brackets, doesnt work on arabic
+                                 
+                                 .replace(/Allah be pleased with him/g, '')
+                                 .replace(/Allah be pleased with her/g, '')
+                                 .replace(/Allah be pleased with them/g, '')
+                                 .replace(/Allah be pleased with them both/g, '')
+
+                                 .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
+                                 .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
+         //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
+                                 .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
+         //ف ق ك ل م ن ه و ى ي
+         
+                                 .replace(/٠/g, '0')
+                                 .replace(/١/g, '1')
+                                 .replace(/٢/g, '2')
+                                 .replace(/٣/g, '3')
+                                 .replace(/٤/g, '4')
+                                 .replace(/٥/g, '5')
+                                 .replace(/٦/g, '6')
+                                 .replace(/٧/g, '7')
+                                 .replace(/٨/g, '8')
+                                 .replace(/٩/g, '9')
+
+                                 .replace(/[أآإٱ]/g, 'ا') //hamza neutralize
+
+         
+                                 .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
+         //ٱ
+                                 .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
+         //ھ
+                                 .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
+         
+                               //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
+         /*
+                                 .replace(/(ٱ|آ|إ|أ)/g, 'ا')
+                                 .replace(/(ة|ھ)/g, 'ه')
+                                 .replace(/(ئ|ؤ)/g, 'ء')
+                                 .replace(/(ؤ)/g, 'و')
+                                 .replace(/(لأ)/g, 'لا')
+                                 .replace(/(لإ)/g, 'لا')
+                                 .replace(/(ى)/g, 'ي') */  :
+                                 data;
+                         };
+         //End of Accent neutralize and regex for search
+         //============
+         //============
+         
+         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+         Remove trailing empty cells.
+         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
+
+         $(document).ready(function() { //no need to add this again for another table
+         
+         //TABLECHANGE123
+         
+         // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
+             // Setup - add a text input to each footer cell
+             $('#fnTable tfoot th').each( function () {
+                 var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
+                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+             } );
+         
+         //Add footer search to table
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+         
+         //Setup - add a text input to each search footer cell
+                         $('#fnTable tfoot th').each(function() {
+                             var title = $(this).text();
+                             $(this).html('<input type="text" placeholder="'+title+'"/>');
+                         });
+         
+         
+         //                         var dataSrc = []; //autocomplete typeahead
+         
+
+         //=================== PagingType Media Query
+         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+         
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full_numbers",
+                "keys": "true", //KeyTable extension 
+             } );
+         
+         } else { /* js media query on mobile, tablet */
+         
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full",
+                                       //KeyTable extension "keys": "false",  no need, makes mobile jump on touch
+             } );
+         
+         } //===================end if else
+         
+         //============================================Table Data Begin
+         //  $(document).ready(function() {
+           var table = $('#fnTable').DataTable({
+                     data: FNdataSet,  //has to match javascript json
+         
+         
+         /*
+         //============================================autocomplete typeahead
+               'initComplete': function(){
+                  var api = this.api();
+                  
+         
+                  // Populate a dataset for autocomplete functionality
+                  // using data from first, second and third columns
+                  api.cells('tr', [0, 4, 5, 6, 7, 8, 9]).every(function(){
+                     // Get cell data as plain text
+                     var data = $('<div>').html(this.data()).text();           
+                     if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+                  });
+                  
+                  // Sort dataset alphabetically
+                  //dataSrc.sort();
+                 
+                  // Initialize Typeahead plug-in
+                  $('.dataTables_filter input[type="search"]', api.table().container())
+                     .typeahead({
+                        source: dataSrc,
+                        afterSelect: function(value){
+                           api.search(value).draw();
+                        }
+                     }
+                  );
+         
+               },
+         *///==============================================autocomplete typeahead
+         
+         
+          //   data: data, previously without column titles
+             columns: [
+               {title:"#"}, 
+               {title:"Ar Title"},
+               {title:"En Title"},
+               {title:"Dv Title"},
+               {title:"Arabic"},
+               {title:"English"},
+               {title:"Dhivehi"},
+               {title:"Ar Ref."},
+               {title:"En Ref."},
+               {title:"Dv Ref."},
+             ],
+         
+             columnDefs: [  //classes columns for css in nweb view, but not print
+               { className: "fnCol1", "targets": [0], "visible": true, "searchable": true},
+               { className: "fnCol2", "targets": [1], "visible": true, "searchable": false },
+               { className: "fnCol3", "targets": [2], "visible": false, "searchable": false },
+               { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },
+               { className: "fnCol5", "targets": [4], "visible": true, "searchable": true },
+               { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },
+               { className: "fnCol7", "targets": [6], "visible": true, "searchable": true }, 
+               { className: "fnCol8", "targets": [7], "visible": true, "searchable": false },
+               { className: "fnCol9", "targets": [8], "visible": false, "searchable": false },
+               { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
+            ], //end of columnDefs, previously without visible and searchable options
+         
+         /* CHANGE123 */
+             bstateSave: true, //Seems to work even offline - restore table state on page reload
+                             "stateDuration": "16800", //seconds, 0 infinity, default 2 hours 200, -1 session only
+                             "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
+         /*
+             stateSave: true, //TURN OFF TO TEST OFFLINE - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
+                             "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
+                             "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
+         */
+             keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
+         
+             orderCellsTop: false, //Moves the sorting icons to the first header row
+             mark: true, //highlights searches
+             autoWidth: false,
+             ordering: false, //disables column sorting
+             order: [
+                    [0, "asc"]
+                    ],
+         
+             //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
+             lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             
+             language: {
+                 buttons: {
+                     copyTitle: 'Copy',
+                     copySuccess: {
+                         1: "Copied 1 Hadith",
+                         _: "Copied %d Ahadith"
+                     }
+                 },
+                 paginate: {
+                     first:      "&lt;&lt; First",
+                     last:       "Last &gt;&gt;",
+                     next:       "Next &gt;",
+                     previous:   "&lt; Back"
+                     },
+                 infoEmpty:      "Found 0 Hadith",
+                 infoFiltered:   "(filtered from _MAX_ total)",
+                 zeroRecords:    "No matches",
+                 search: "",
+                 searchPlaceholder: "Search 40 Nawawi",
+                 info: "_START_ to _END_ of _TOTAL_ Hadith",
+                 lengthMenu: "_MENU_"
+             }, //end of language
+         
+         
+         /*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
+          default: lpfrtip
+         l - length changing input control
+         f - filtering input
+         t - The table
+         i - Table information summary
+         p - pagination control
+         r - processing display element
+         B - Buttons
+         
+          'lBpfrtip',
+         
+< and > - div element
+<"class" and > - div with a class
+<"#id" and > - div with an ID
+<"#id.class" and > - div with an ID and a class
+
+         "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
+         "<'row'<'col-sm-12'tr>>" +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+         
+         "<'row'<'col-sm-4'l><'col-sm-4'f><'col-sm-4'B>>" +
+         "<'row'<'col-sm-12'tr>>" +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>"
+         */
+         //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
+
+dom: //previous dom setting broke the diactric included search
+
+
+      //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
+      //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+
+      //mobile and tablet top
+      "<'hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //BOTH (table for desktop and mobile and tablet)
+         "<'row'<'col-sm-12'tr>>" +
+
+      //desktop bottom
+      "<'hidden-xs'"   +
+         "<'row'<'col-sm-12'p>>" +
+      ">"   +
+
+      //mobile and tablet bottom
+      "<'hidden-md hidden-lg hidden-sm '"   +
+         "<'row'<'col-sm-5'i><'col-sm-7'p>>"  +
+      ">",
+
+renderer: 'bootstrap',
+
+
+             buttons: [
+                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+                  text: 'Options',
+                  key: {key: 'o', shiftKey: true},
+                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+
+                  buttons: [
+         
+                       {extend: 'copy',
+                        key: {key: 'c', shiftKey: true},
+                        text: 'Copy',
+                        messageTop: '40 Nawawi',
+                        title: 'hadithmv.com',
+         
+         //=== edits clipboard regex, code to manipulate the data string as desired
+                       customize: function(data) {
+         /**/
+                               // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
+         //                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
+         
+                                data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
+         
+                                data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
+         
+                               // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
+                                data = data.replace( /\n#/g, '' );
+                                data = data.replace( /\tAr Title/g, '' );
+                                data = data.replace( /\tEn Title/g, '' );
+                                data = data.replace( /\tDv Title/g, '' );
+                                data = data.replace( /\tArabic/g, '' );
+                                data = data.replace( /\tEnglish/g, '' );
+                                data = data.replace( /\tDhivehi/g, '' );
+                                data = data.replace( /\tAr Ref./g, '' );
+                                data = data.replace( /\tEn Ref./g, '' );
+                                data = data.replace( /\tDv Ref./g, '' );
+         
+                                data = data.replace( /\nAr Title/g, '' );
+                                data = data.replace( /\nEn Title/g, '' );
+                                data = data.replace( /\nDv Title/g, '' );
+                                data = data.replace( /\nArabic/g, '' );
+                                data = data.replace( /\nEnglish/g, '' );
+                                data = data.replace( /\nDhivehi/g, '' );
+                                data = data.replace( /\nAr Ref./g, '' );
+                                data = data.replace( /\nEn Ref./g, '' );
+                                data = data.replace( /\nDv Ref./g, '' );  
+         
+                                data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
+                                data = data.replace( /\t/g, '\n\n' ); //seperates rows
+         
+                                data = data.replace( /hadithmv.com\n/g, 'hadithmv.com\n\n' ); //adds new line on android
+         
+         /*
+                                data = data.replace( /\r/g, '' ); //rids windows platform newline
+                                data = data.replace( /\t/g, '\n\n' );
+         /**/
+         
+         
+                               console.log(JSON.stringify(data));
+                               return data;
+                             },
+         //=== edits clipboard regex end, customize: function(data) {
+         
+                       exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
+                     },
+         //end of copy customization
+         
+         /*APKCHANGE123*/
+                                 { extend: 'colvis',
+                                   key: {key: 'h', shiftKey: true},
+                                   text: 'Show/Hide'
+                                 }, //end of colvis
+
+                                 { extend: 'pdf',
+                                   key: { key: 'p', shiftKey: true },
+                                   text: 'pdf',
+                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
+                                 }, //end of print
+                                 { extend: 'print',
+                                   key: { key: 'p', shiftKey: true },
+                                   text: 'Print',
+                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
+                                 }, //end of print
+         
+                                 { extend: 'excel',
+                                   key: { key: 'x', shiftKey: true },
+                                   text: 'Excel',
+                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
+                                 }, //end of excel
+         
+                                 { extend: 'csv',
+                                   key: { key: 'v', shiftKey: true },
+                                   text: 'Csv',
+                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
+                                 }, //end of csv
+         
+
+         /*
+                                 //json button (export all)
+                                 { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
+                                   action: function ( e, dt, button, config ) {
+                                     var data = dt.buttons.exportData();
+          
+                                     $.fn.dataTable.fileSave(
+                                      new Blob( [ JSON.stringify( data ) ] ),
+                                         'Export.json'
+                                                            );
+                                                                               }
+                                 }, //json button end
+         */
+                                 //custom button
+         
+/*         
+                                 //share collection
+                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
+                  text: 'Share App',
+                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
+                  buttons: [
+                                 {text: 'Telegram',
+                                         action: function ( e, dt, button, config ) {
+                                         window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
+                                 }, //custom button end
+                         ] },//end of share collection
+*/                         
+         
+                         ] }//end of inner buttons
+         
+                   ],
+         //=== end of outer buttons
+         
+          
+           }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
+         
+
+             //======================================== HammerJS - Swipe
+             delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
+         
+         
+         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+          /* empty */
+         } else { /* js media query on mobile, tablet */
+         
+                       Hammer(fnTable).on("swipeleft", function() {
+                             table.page( 'next' ).draw( 'page' );  
+                       });
+                       Hammer(document.getElementById("fnTable")).on("swiperight", function() {
+                             table.page( 'previous' ).draw( 'page' );  
+                       });
+         
+         } //===================end if else
+         
+         
+             // ScrollTop - If the user changes the page, scroll to the top
+             $(".dataTable").on("page.dt", function () {
+                 $("html, body").animate({ scrollTop: 0 }, "fast");
+                 $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
+             });
+         
+         
+            // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+         //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
+                         $('#fnTable_filter input').keyup(function() {
+                             table
+                                 .search(
+                                     $.fn.DataTable.ext.type.search.string(this.value)
+                                 )
+                                 .draw();
+                         });
+         //End of Remove accented characters from global search input
+         
+         
+          // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
+             // Apply the Individual column searching, other half at top
+             table.columns().every( function () {
+                 var that = this;
+          
+                 $( 'input', this.footer() ).on( 'keyup change', function () {
+                     if ( that.search() !== this.value ) {
+                         that
+                             .search( this.value )
+                             .draw();
+                     }
+                 } );
+             } );
+         // Individual column searching end
+         
+         // moves individual column searching to top, header, does not break fixedcolumnheaders
+         $('#fnTable tfoot tr').appendTo('#fnTable thead');
+         // moves individual column searching to top end
+         
+         // Apply S Buttons
+                         table.buttons().container()
+                         table.buttons(0, null).containers();
+                         /*table.buttons().container()
+                           .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
+                         */
+         
+         });
+      </script>
+
+
+
+
+
+      <!--  === === Web only plugins - CHANGE123 ===  === -->
+      <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112777351-1"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         
+         gtag('config', 'UA-112777351-1');
+      </script>
+      <!-- Google Analytics End -->
+
+
+   </body>
+</html>
