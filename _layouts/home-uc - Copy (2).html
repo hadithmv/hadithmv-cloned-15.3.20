@@ -76,9 +76,9 @@
       <!--=== === Base C CSS End=== === -->
       <!-- APKCHANGE123
       <script src="file:///android_asset/app3.js"></script>
-      --><!--
+      -->
       <script src="https://hadithmv.com/alt/Apk/Resc/app2.js"></script>
-      === === Base C JS End=== === -->
+      <!--=== === Base C JS End=== === -->
 
 
       <style>
@@ -106,13 +106,12 @@
       <style>
          /*
          <!--=== === Base Ext JS === ===-->
-            <!--jQuery - Google 3.x snippet-->         */
-      </style>
+            <!--jQuery - Google 3.x snippet-->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
          <!--Bootstrap 3-->
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <!--DataTables Core JS-->
-         <script type="text/javascript" src="https://nightly.datatables.net/js/jquery.dataTables.min.js"></script>
+         <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
          <!--Datatables - Bootstrap 3 Integration -->
          <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap.min.js"></script>
          <!--Datatables - Semantic UI Integration NO NEED FOR THIS, TABLE STACKS FINE WITHOUT IT, BREAKS PAGINATION STYLING
@@ -125,7 +124,7 @@
          <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.colVis.min.js"></script>
          <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
          <!--Datatables - Buttons - print (Must go below other related JS), excel -->
-         <script type="text/javascript" src="https://nightly.datatables.net/buttons/js/buttons.print.min.js"></script>
+         <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
          <!--Mark JS -->
          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
          <script type="text/javascript" src="https://rawgit.com/julmot/datatables.mark.js/master/dist/datatables.mark.min.js"></script> <!--src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"-->
@@ -136,7 +135,8 @@
          <!--KeepConditions -->
          <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
          <!--=== === Base Ext JS End === ===-->
-
+         */
+      </style>
 
 
       <!--Datatables - KeyTables CSS - BS 3 Int - small - embedded - unneeded
@@ -268,7 +268,32 @@ body > h1 {font-size: 20px;} /*print header font size*/
 
 
 
-
+/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
+        /*corrects print display for these particular columns*/
+        /* *previously just .datatable before tbody */
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
+            text-align: center;
+            font-weight: bold;   }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
+            text-align: center;  }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
+            direction: rtl;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
+            direction: ltr;
+            text-align: justify; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
+            direction: rtl;
+            text-align: justify;  }  
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */ }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
+            direction: ltr;
+            text-align: center; }
+        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
+            direction: rtl;
+            text-align: center;  }  
 
 
 
