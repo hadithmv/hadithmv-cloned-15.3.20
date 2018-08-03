@@ -576,7 +576,8 @@ rtl
                     ],
          
              //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["1", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             //lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["1", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             lengthMenu: [[-1, 1, 2, 5, 7, 10, 15, 20,], [ "All", "1", 2, 5, 7, 10, 15, 20,]], //display range of pages
              
              language: {
                  buttons: {
