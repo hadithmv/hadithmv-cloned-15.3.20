@@ -200,6 +200,8 @@ time, mark, audio, video {
             border: 1px solid rgba(34, 36, 38, .15);
         } /*prev just width*/
 
+         /* centers table headers / individual footer search boxes */
+         .dataTable thead tr:nth-child(2) > * > input[type="text"] {text-align: center;}
         
         tfoot {
             display: table-header-group;
@@ -233,18 +235,22 @@ time, mark, audio, video {
             font-size: 120%;
             text-align: center;
             color: red;
+            font-family: "Tharujamaanu";
             font-weight: bold;
+            direction: rtl;
         }
         .dataTable tbody tr td.col2 {   /* ar title */
             direction: rtl;
             font-size: 140%;
             text-align: center;
+            font-family: "Tharujamaanu";
             color: red;
         }
         .dataTable tbody tr td.col3 {   /* en title */
             font-size: 110%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-family: "Tharujamaanu";
             text-align: center;
+            direction: rtl;
         }
         .dataTable tbody tr td.col4 {   /* dv title */
             direction: rtl;
@@ -259,20 +265,21 @@ time, mark, audio, video {
 
         .dataTable tbody tr td.col5 {   /* ar text */
             direction: rtl;
-            text-align: justify;
+            text-align: center;
             line-height: 1.4;
+            font-family: "Tharujamaanu";
             font-size: 160%;
         }
         .dataTable tbody tr td.col6 {   /* en text */
-            direction: ltr;
-            text-align: justify;
+            direction: rtl;
+            text-align: center;
             line-height: 1.4;
             font-size: 125%;
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-family: "Tharujamaanu";
         }
         .dataTable tbody tr td.col7 {   /* dv text */
             direction: rtl;
-            text-align: justify;
+            text-align: center;
             line-height: 1.4;
             font-size: 135%;
             font-family: "Tharujamaanu";
@@ -280,20 +287,22 @@ time, mark, audio, video {
 
         .dataTable tbody tr td.col8 {   /* ar ref */
             direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
+            text-align: center;
             font-size: 140%;
             font-family: none;
+            font-family: "Tharujamaanu";
             color: red;
         }
         .dataTable tbody tr td.col9 {   /* en ref */
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-family: "Tharujamaanu";
             font-size: 100%;
             color: red;
+rtl
         }
         .dataTable tbody tr td.col10 {  /* dv ref */
             direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
+            text-align: center;
             font-family: "Tharujamaanu";
             font-size: 120%;
             color: red;
@@ -414,13 +423,13 @@ time, mark, audio, video {
 
 <!--===NINSERT JS===. . . -->
     <script type="text/javascript">
-        var key = "1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs";
+        var key = "1T7_O17lNfFZhZiryvsOMEYgR9ObDygex7587B4ZH3v4";
         //"https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
             {"data":"code",       "title":"ކޯޑު"},
-            {"data":"book",       "title":"ކޯޑު"},
-            {"data":"authoro",    "title":"މުއައްލިފު / މުތަރުޖިމު"},
-            {"data":"aupagesthor","title":"ޞަފްޙާގެ ޢަދަދު"},
+            {"data":"book",       "title":"ފޮތުގެ ނަން"},
+            {"data":"author",     "title":"މުއައްލިފު / މުތަރުޖިމު"},
+            {"data":"pages",	  "title":"ޞަފްޙާގެ ޢަދަދު"},
             {"data":"size",  	  "title":"ފޮތުގެ ސައިޒު"},
             {"data":"date",  	  "title":"ލިޔުނު / ޗާޕުކުރެވުނު ތާރީޚު"},
             {"data":"edition",    "title":"ޗާޕުގެ ޢަދަދު"},
@@ -501,7 +510,7 @@ time, mark, audio, video {
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>ކޯޑު</th><th>ފޮތުގެ ނަން</th><th>މުއައްލިފު / މުތަރުޖިމު</th><th>ޞަފްޙާގެ ޢަދަދު</th><th>ފޮތުގެ ސައިޒު</th><th>ލިޔުނު / ޗާޕުކުރެވުނު ތާރީޚު</th><th>ޗާޕުގެ ޢަދަދު</th><th>ޗާޕުކުރި ތަން</th><th>އަގު</th></tr></tfoot>');
 
          
          //Setup - add a text input to each search footer cell
@@ -538,15 +547,15 @@ time, mark, audio, video {
 
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
-      { className: "col2", "targets": [1], "visible": true, "searchable": false },
+      { className: "col2", "targets": [1], "visible": true, "searchable": true },
       { className: "col3", "targets": [2], "visible": false, "searchable": false },
       { className: "col4", "targets": [3], "visible": false, "searchable": false },
-      { className: "col5", "targets": [4], "visible": true, "searchable": true },
-      { className: "col6", "targets": [5], "visible": true, "searchable": true },
-      { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
-      { className: "col8", "targets": [7], "visible": true, "searchable": true },
-      { className: "col9", "targets": [8], "visible": false, "searchable": false },
-      { className: "col10", "targets": [9], "visible": false, "searchable": false },
+      { className: "col5", "targets": [4], "visible": true, "searchable": false },
+      { className: "col6", "targets": [5], "visible": true, "searchable": false },
+      { className: "col7", "targets": [6], "visible": true, "searchable": false }, 
+      { className: "col8", "targets": [7], "visible": true, "searchable": false },
+      { className: "col9", "targets": [8], "visible": false, "searchable": false },/*
+      { className: "col10", "targets": [9], "visible": false, "searchable": false }, */
    ], //end of columnDefs, previously without visible and searchable options
 
 
@@ -568,8 +577,8 @@ time, mark, audio, video {
                  buttons: {
                      copyTitle: 'Copy',
                      copySuccess: {
-                         1: "Copied 1 Hadith",
-                         _: "Copied %d Ahadith"
+                         1: "Copied 1 Entry",
+                         _: "Copied %d Entries"
                      }
                  },
                  paginate: {
@@ -578,12 +587,12 @@ time, mark, audio, video {
                      next:       "Next &gt;",
                      previous:   "&lt; Back"
                      },
-                 infoEmpty:      "Found 0 Hadith",
+                 infoEmpty:      "Found 0 Entries",
                  infoFiltered:   "(filtered from _MAX_ total)",
                  zeroRecords:    "No matches found",
                  search: "",
-                 searchPlaceholder: "Search 40 Nawawi . . . ",
-                 info: "_START_ to _END_ of _TOTAL_ Hadith",
+                 searchPlaceholder: ". . . ދިފިހުރިސްތުން ހޯއްދަވައި",
+                 info: "_START_ to _END_ of _TOTAL_ Entries",
                  lengthMenu: "_MENU_"
              }, //end of language
          
