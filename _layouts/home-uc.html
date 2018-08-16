@@ -302,24 +302,24 @@ body > h1 {font-size: 20px;} /*print header font size*/
          /* corrects web view only/none-print display for these particular columns ? */
          .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 120%;
+         font-size: 130%;
          text-align: center;
          color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol2 { /* ar title */
          direction: rtl;
-         font-size: 130%;
+         font-size: 140%;
          text-align: center;
          color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol3 { /* en title */
-         font-size: 100%;
+         font-size: 110%;
          text-align: center;
          color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol4 { /* dv title */
          direction: rtl;
-         font-size: 125%;
+         font-size: 135%;
          text-align: center;
          color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
@@ -330,35 +330,35 @@ body > h1 {font-size: 20px;} /*print header font size*/
          direction: rtl;
          text-align: justify;
          line-height: 1.45;
-         font-size: 150%;
+         font-size: 170%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol6 { /* en text */
          direction: ltr;
          text-align: justify;
          line-height: 1.37;
-         font-size: 110%;
+         font-size: 130%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol7 { /* dv text */
          direction: rtl;
          text-align: justify;
          line-height: 1.37;
-         font-size: 135%;
+         font-size: 155%;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          .dataTable tbody tr td.fnCol8 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 135%;
+         font-size: 145%;
          color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol9 {   /* en ref */
          direction: ltr;
          text-align: center; /* center does not work without this for some reason */
-         font-size: 100%;
+         font-size: 110%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol10 { /* dv ref */
          direction: rtl;
          text-align: center;
-         font-size: 130%;
+         font-size: 140%;
          color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
 
@@ -1293,13 +1293,13 @@ renderer: 'bootstrap',
                                    text: 'Excel',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of excel
-         
+         /* DOES NOT WORK FOR SOME REASON - FIX123
                                  { extend: 'csv',
                                    key: { key: 'v', shiftKey: true },
                                    text: 'Csv',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
-         
+         */
 
          /*
                                  //json button (export all)
