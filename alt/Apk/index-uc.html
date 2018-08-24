@@ -267,36 +267,6 @@ body > h1 {font-size: 20px;} /*print header font size*/
 
 
 
-/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
-        /*corrects print display for these particular columns*/
-        /* *previously just .datatable before tbody */
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
-            text-align: center;
-            font-weight: bold;   }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
-            text-align: center;  }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
-            direction: rtl;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
-            direction: ltr;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
-            direction: rtl;
-            text-align: justify; }  
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */ }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
-            direction: ltr;
-            text-align: center; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
-            direction: rtl;
-            text-align: center;  }  
-
-
-
-
 
          /* corrects web view only/none-print display for these particular columns ? */
          .dataTable tbody tr td.fnCol1 { /* # number */
