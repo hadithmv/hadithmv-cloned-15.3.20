@@ -298,13 +298,7 @@ time, mark, audio, video {
             font-size: 120%;
             color: red;
         }
-        .dataTable tbody tr td.col11 {  /* rs ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: "Tharujamaanu";
-            font-size: 140%;
-            color: blue;
-        }
+
 
 
 /* makes min-width a bit bigger */
@@ -433,7 +427,7 @@ time, mark, audio, video {
             {"data":"arRef",    "title":"Ar Ref."},
             {"data":"enRef",    "title":"En Ref."},
             {"data":"dvRef",    "title":"Dv Ref."},
-            {"data":"rsRef",    "title":"Rs Ref."},
+
             ];
 
 
@@ -506,7 +500,7 @@ time, mark, audio, video {
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
 
          
          //Setup - add a text input to each search footer cell
@@ -552,7 +546,6 @@ time, mark, audio, video {
       { className: "col8", "targets": [7], "visible": true, "searchable": true },
       { className: "col9", "targets": [8], "visible": false, "searchable": false },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
-      { className: "col11", "targets": [10], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
 
