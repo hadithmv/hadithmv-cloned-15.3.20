@@ -8,6 +8,7 @@
    VERSIONCHANGE
    APKCHANGE
    TABLECHANGE
+   DESKTOPCHANGE
  -->
 
       <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
@@ -70,19 +71,20 @@
 
       <!--  === === Base C CSS JS === === -->
       <!-- APKCHANGE123
-      <link rel="stylesheet" href="file:///android_asset/app3.css">
-      -->
-      <link rel="stylesheet" href="https://hadithmv.com/alt/Apk/Resc/app2.css">
-      <!--=== === Base C CSS End=== === -->
-      <!-- APKCHANGE123
-      <script src="file:///android_asset/app3.js"></script>
-      -->
-      <script src="https://hadithmv.com/alt/Apk/Resc/app2.js"></script>
-      <!--=== === Base C JS End=== === -->
+      <link rel="stylesheet" href="file:///android_asset/app4.css">-->
+      
+      <link rel="stylesheet" href="https://hadithmv.com/alt/Apk/Resc/app4.css">
 
+      <!-- APKCHANGE123
+      <script src="file:///android_asset/app4.js"></script>-->
+      
+      <script src="https://hadithmv.com/alt/Apk/Resc/app4.js"></script>
+      <!--  === === Base C CSS JS End=== === -->
+         <!--KeepConditions - MUST STAY ABOVE -->
+         <script type="text/javascript" src="https://hadithmv.com/alt/Apk/Resc/base/dataTables.keepConditions.min-mod.js"></script>
 
       <style>
-         /*
+         /*         
          <!--=== === Base Ext CSS === ===-->
             <!--Bootstrap 3-->
          <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
@@ -108,8 +110,8 @@
          <!--=== === Base Ext JS === ===-->
             <!--jQuery - Google 3.x snippet-->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <!--Bootstrap 3-->
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <!--Bootstrap 3
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--> <script type="text/javascript"></script>
          <!--DataTables Core JS-->
          <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
          <!--Datatables - Bootstrap 3 Integration -->
@@ -130,13 +132,16 @@
          <script type="text/javascript" src="https://rawgit.com/julmot/datatables.mark.js/master/dist/datatables.mark.min.js"></script> <!--src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"-->
          <!--HammerJS -->
          <script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-         <!--Datatables - KeyTables - Bootstrap 3 Integration -->
-         <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.4.1/js/dataTables.keyTable.min.js"></script>
-         <!--KeepConditions -->
-         <script type="text/javascript" src="https://hadithmv.github.io/backup/current/KeepConditions 1.2.0/dataTables.keepConditions.min.js"></script>
-         <!--=== === Base Ext JS End === ===-->
          */
       </style>
+
+
+<!-- ====== MOVED TO BOTTOM ====== WEB ONLY -->
+         <!--Datatables - KeyTables - Bootstrap 3 Integration 
+         <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.4.1/js/dataTables.keyTable.min.js"></script>-->
+<!-- ====== MOVED TO BOTTOM ====== WEB ONLY -->
+         <!--=== === Base Ext JS End === ===-->
+
 
 
       <!--Datatables - KeyTables CSS - BS 3 Int - small - embedded - unneeded
@@ -268,58 +273,28 @@ body > h1 {font-size: 20px;} /*print header font size*/
 
 
 
-/* !!!!FIX THIS LATER - COLVIS BUG - doesnt work for combined tables */
-        /*corrects print display for these particular columns*/
-        /* *previously just .datatable before tbody */
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(1) {   /* # number */
-            text-align: center;
-            font-weight: bold;   }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(2) {   /* ar title */
-            text-align: center;  }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(3) {   /* ar text */
-            direction: rtl;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(4) {   /* en text  */
-            direction: ltr;
-            text-align: justify; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(5) {   /* dv text  */
-            direction: rtl;
-            text-align: justify;  }  
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(6) {   /* ar ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */ }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(7) {   /* en ref  */
-            direction: ltr;
-            text-align: center; }
-        table.ui.celled.compact.striped.table.fnClass.dataTable tbody tr td:nth-child(8) {   /* dv ref  */
-            direction: rtl;
-            text-align: center;  }  
-
-
-
-
 
          /* corrects web view only/none-print display for these particular columns ? */
          .dataTable tbody tr td.fnCol1 { /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 120%;
+         font-size: 130%;
          text-align: center;
          color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol2 { /* ar title */
          direction: rtl;
-         font-size: 130%;
+         font-size: 140%;
          text-align: center;
          color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol3 { /* en title */
-         font-size: 100%;
+         font-size: 110%;
          text-align: center;
          color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol4 { /* dv title */
          direction: rtl;
-         font-size: 125%;
+         font-size: 135%;
          text-align: center;
          color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
@@ -330,35 +305,35 @@ body > h1 {font-size: 20px;} /*print header font size*/
          direction: rtl;
          text-align: justify;
          line-height: 1.45;
-         font-size: 150%;
+         font-size: 170%;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol6 { /* en text */
          direction: ltr;
          text-align: justify;
          line-height: 1.37;
-         font-size: 110%;
+         font-size: 120%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol7 { /* dv text */
          direction: rtl;
          text-align: justify;
          line-height: 1.37;
-         font-size: 135%;
+         font-size: 155%;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
          .dataTable tbody tr td.fnCol8 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 135%;
+         font-size: 145%;
          color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
          .dataTable tbody tr td.fnCol9 {   /* en ref */
          direction: ltr;
          text-align: center; /* center does not work without this for some reason */
-         font-size: 100%;
+         font-size: 110%;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
          .dataTable tbody tr td.fnCol10 { /* dv ref */
          direction: rtl;
          text-align: center;
-         font-size: 130%;
+         font-size: 140%;
          color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
 
@@ -554,7 +529,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          /* tab-content clearfix */
          body > div > div > div {margin-top: 54px !important;}
          /* about jumbotron text direction */
-         .righty {direction: rtl;}  .lefty {direction: ltr; font-size: 18px !important;}
+         .leftyLatin {direction: ltr; font-size: 18px !important; font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';}
+         .rightyArab {direction: rtl; font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';}
+         .rightyThaana {direction: rtl; font-family: 'Tharujamaanu','KFGQPCUthmanTahaNaskh','Ubuntu';}
          /* first and third jumbo */
          #about > div:nth-child(1), #about > div:nth-child(3)  {margin-top: -5px; background-color: transparent; margin-bottom: -5px;}
          /* second jumbo {}*/
@@ -742,7 +719,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                   <div class="footer">
                  <!--<span onclick="myFooter()">2018 &nbsp;</span>
                      <span onclick="myHelp()">hadithmv.com</span> -->
-                 <!--<a class="foottext" href="" target="_blank" rel="noopener">Islam is the Sunnah and the Sunnah is Islam</a>	replace with book link once complete-->
+                 <!--<a class="foottext" href="" target="_blank" rel="noopener">Islam is the Sunnah and the Sunnah is Islam</a>  replace with book link once complete-->
                      <a class="foottext">Islam is the Sunnah and the Sunnah is Islam</a>
       
                   </div>
@@ -788,11 +765,11 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                         <div class="col-lg-6">
                            <h2>سورة الأنفال‎</h2>
                            <br>
-                           <p class="lead text-justify righty">﴿لِيَهْلِكَ مَنْ هَلَكَ عَنْ بَيِّنَةٍ وَيَحْيَىٰ مَنْ حَيَّ عَنْ بَيِّنَةٍ ۗ وَإِنَّ اللَّهَ لَسَمِيعٌ عَلِيمٌ﴾</p>
+                           <p class="lead text-justify rightyArab">﴿لِيَهْلِكَ مَنْ هَلَكَ عَنْ بَيِّنَةٍ وَيَحْيَىٰ مَنْ حَيَّ عَنْ بَيِّنَةٍ ۗ وَإِنَّ اللَّهَ لَسَمِيعٌ عَلِيمٌ﴾</p>
                            <br>
-                           <p class="lead text-justify lefty">'So that those who were to be destroyed (for their rejecting the Faith) might be destroyed after a clear evidence, and those who were to live (in Faith) might live after a clear evidence. And indeed, Allah is the Hearing, the Knowing.'</p>
+                           <p class="lead text-justify leftyLatin">'So that those who were to be destroyed (for their rejecting the Faith) might be destroyed after a clear evidence, and those who were to live (in Faith) might live after a clear evidence. And indeed, Allah is the Hearing, the Knowing.'</p>
                            <br>
-                           <p class="lead text-justify righty">'އެއީ ހަލާކުވެގެންދާ ބަޔަކު ސާފު ހެތްކާއެކު، ހަލާކުވެގެން ދިޔުމަށެވެ. އަދި ދިރިގެން އަންނާނޭ ބަޔަކު، ސާފު ހެތްކާއެކު، ދިރިގެން އައުމަށެވެ. އަދި ހަމަކަށަވަރުން، اللَّه އީ، އައްސަވާވޮޑިގެންވާ، ދެނެވޮޑިގެންވާ އިލާހުކަން ކަށަވަރެވެ.'</p>
+                           <p class="lead text-justify rightyThaana">'އެއީ ހަލާކުވެގެންދާ ބަޔަކު ސާފު ހެތްކާއެކު، ހަލާކުވެގެން ދިޔުމަށެވެ. އަދި ދިރިގެން އަންނާނޭ ބަޔަކު، ސާފު ހެތްކާއެކު، ދިރިގެން އައުމަށެވެ. އަދި ހަމަކަށަވަރުން، ﷲ އީ، އައްސަވާވޮޑިގެންވާ، ދެނެވޮޑިގެންވާ އިލާހުކަން ކަށަވަރެވެ.'</p>
                            <br>
                            <p class="lead text-center">[8:42]</p>
                         </div>
@@ -814,10 +791,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                         <div class="col-lg-6 pull-right">
                            <h2>صحيح البخاري</h2>
                            <br>
-                           <p class="lead text-justify righty">«عَنْ الْمُنْذِرِ بْنِ جَرِيرٍ عَنْ أَبِيهِ عَنْ رَسُولُ اللَّهِ ﷺ قَالَ: مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، فَلَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا بَعْدَهُ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْءٌ، وَمَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً كَانَ عَلَيْهِ وِزْرُهَا وَوِزْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْءٌ»</p> <br>
-                           <p class="lead text-justify lefty">Abu Moosa al-Ash’ari narrated: The Prophet ﷺ said: "The example of the guidance and knowledge that Allah has sent me with, is like abundant rain that fell upon the earth. So from that land was good (fertile soil) that accepted (and absorbed) the water. So it grew lots of pasture and grass. And from that land was hard (soil) that held the water (for a while without absorbing it all up quickly). So Allah made the people benefit from it, and they drank it, made (their animals) drink from it, and irrigated their plants with it. And that water also fell upon another piece of land, which was only bare and barren. It could neither hold water nor grow pasture. So (the first) is the example of someone who understands Allah's religion and what Allah has sent me with (ie: the Quran and Sunnah), and so he learns (it himself) and teaches (it to others). And (the last) is the example of someone who did not even raise his head with it (ie: did not even bother with it), and did not accept the guidance of Allah that I have been sent with (ie: the Quran and Sunnah)."</p>
+                           <p class="lead text-justify rightyArab">عَنْ أَبِي مُوسَى، عَنِ النَّبِيِّ ﷺ قَالَ: «مَثَلُ مَا بَعَثَنِي اللَّهُ بِهِ مِنَ الْهُدَى وَالْعِلْمِ، كَمَثَلِ الْغَيْثِ الْكَثِيرِ أَصَابَ أَرْضًا، فَكَانَ مِنْهَا نَقِيَّةٌ، قَبِلَتِ الْمَاءَ، فَأَنْبَتَتِ الْكَلَأَ وَالْعُشْبَ الْكَثِيرَ، وَكَانَتْ مِنْهَا أَجَادِبُ، أَمْسَكَتِ الْمَاءَ، فَنَفَعَ اللَّهُ بِهَا النَّاسَ، فَشَرِبُوا وَسَقَوْا وَزَرَعُوا، وَأَصَابَتْ مِنْهَا طَائِفَةً أُخْرَى، إِنَّمَا هِيَ قِيعَانٌ لاَ تُمْسِكُ مَاءً وَلاَ تُنْبِتُ كَلَأً، فَذَلِكَ مَثَلُ مَنْ فَقُهَ فِي دِينِ اللَّهِ، وَنَفَعَهُ مَا بَعَثَنِي اللَّهُ بِهِ فَعَلِمَ وَعَلَّمَ، وَمَثَلُ مَنْ لَمْ يَرْفَعْ بِذَلِكَ رَأْسًا، وَلَمْ يَقْبَلْ هُدَى اللَّهِ الَّذِي أُرْسِلْتُ بِهِ» قَالَ أَبُو عَبْدِ اللَّهِ: قَالَ إِسْحَاقُ: وَكَانَ مِنْهَا طَائِفَةٌ قَيَّلَتِ الْمَاءَ، قَاعٌ يَعْلُوهُ الْمَاءُ، وَالْصَّفْصَفُ الْمُسْتَوِي مِنَ الْأَرْضِ»</p> <br>
+                           <p class="lead text-justify leftyLatin">Abu Moosa al-Ash’ari narrated: The Prophet ﷺ said: "The example of the guidance and knowledge that Allah has sent me with, is like abundant rain that fell upon the earth. So from that land was good (fertile soil) that accepted (and absorbed) the water. So it grew lots of pasture and grass. And from that land was hard (soil) that held the water (for a while without absorbing it all up quickly). So Allah made the people benefit from it, and they drank it, made (their animals) drink from it, and irrigated their plants with it. And that water also fell upon another piece of land, which was only bare and barren. It could neither hold water nor grow pasture. So (the first) is the example of someone who understands Allah's religion and what Allah has sent me with (ie: the Quran and Sunnah), and so he learns (it himself) and teaches (it to others). And (the last) is the example of someone who did not even raise his head with it (ie: did not even bother with it), and did not accept the guidance of Allah that I have been sent with (ie: the Quran and Sunnah)."</p>
                            <br>
-                           <p class="lead text-justify righty">އަބޫ މޫސާ ރިވާ ކުރެއްވިއެވެ: ނަބިއްޔާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: "ﷲ، ތިމަން ނަބިއްޔާއައިގެން ފޮނުއްވެވި ހިދާޔަތާއި ޢިލްމުގެ މިސާލަކީ، ބިމަކަށް ވެހޭ ބޯ ވާރޭއެއްގެ މިސާލެވެ. ފަހެ، އޭގެ ތެރޭގައި، އެ ފެން ބަލައިގަތް ރަނގަޅު (ބިމެއް) ވެއެވެ. ދެން، އެ ބިމުން ނުހަނު ގިނަ ކުދި ގަސްތަކާއި ވިނަ ފަޅައިގެން ހެދުނެވެ. އަދި އޭގެ ތެރޭގައި (ވާރޭ ވެހުނު) ހަރު ބިމެއް ވެސް ވެއެވެ. އެ ފެން (އެއްފަހަރާ އެ ބިމަށް ދަމާ ނުލައި) ހިފެހެއްޓިއެވެ. އަދި ﷲ، އޭގެން މީސްތަކުންނަށް މަންފާ ހާސިލު ކޮށްދެއްވިއެވެ. އެ ގޮތުން، އެބައިމީހުން އޭގެން ބޮއި، (ޖަނަވާރުތަކަށް) ބޯންދީ، އަދި ގޮވާން ކުރުމަށް ބޭނުން ކުރިއެވެ. އަދި އޭގެ އިތުރަށް ވާރޭ ވެހުނު އެހެން ބިމެއް ވެސް ވެއެވެ. އެއީ ހަމަ ހުރި ގޮތަށް ހުރި ހުސް ހަނަފަސް ބިމެކެވެ. އަދި އޭގައި ވިނައެއް  ވެސް ނުފަޅައެވެ. ފަހެ، އެ (ފުރަތަމަ ބިމުގެ) މިސާލަކީ، ﷲ ގެ ދީން އެ މީހަކަށް ވިސްނި، އަދި ﷲ، ތިމަން ނަބިއްޔާއައިގެން ފޮނުއްވި ކަންތަކުން (އެބަހީ: ޤުރުއާނާއި ސުންނަތުން) އެ މީހަކަށް ފައިދާ ކުރި މީހާގެ މިސާލެވެ. ވީމާ، އެ މީހާ (އަމިއްލައަށް ދީން) އުނގެނި، އަދި (އެހެން މީހުންނަށް ވެސް) އުނގަންނައި ދެއެވެ. އަދި (އެންމެ ފަހު ބިމުގެ މިސާލަކީ،)  އެއިން ކަމަކަށް (އެންމެ ކުޑަ މިނުން) އިސް ވެސް އުފުލައި ނުލި (އެބަހީ: އެއްވެސް ވަރަކަށް އަޅައި ނުލި) މީހާގެ މިސާލެވެ. އަދި (ކިއެއްތަ) އޭނާ، ތިމަން ނަބިއްޔާ އެއާއިގެން ފޮނުއްވުނު ﷲ ގެ ހިދާޔަތު (އެބަހީ: ޤުރުއާނާއި ސުންނަތް) ވެސް ޤަބޫލެއް ނުކުރިއެވެ."</p>
+                           <p class="lead text-justify rightyThaana">އަބޫ މޫސާ ރިވާ ކުރެއްވިއެވެ: ނަބިއްޔާ ﷺ ޙަދީޘް ކުރެއްވިއެވެ: "ﷲ، ތިމަން ނަބިއްޔާއައިގެން ފޮނުއްވެވި ހިދާޔަތާއި ޢިލްމުގެ މިސާލަކީ، ބިމަކަށް ވެހޭ ބޯ ވާރޭއެއްގެ މިސާލެވެ. ފަހެ، އޭގެ ތެރޭގައި، އެ ފެން ބަލައިގަތް ރަނގަޅު (ބިމެއް) ވެއެވެ. ދެން، އެ ބިމުން ނުހަނު ގިނަ ކުދި ގަސްތަކާއި ވިނަ ފަޅައިގެން ހެދުނެވެ. އަދި އޭގެ ތެރޭގައި (ވާރޭ ވެހުނު) ހަރު ބިމެއް ވެސް ވެއެވެ. އެ ފެން (އެއްފަހަރާ އެ ބިމަށް ދަމާ ނުލައި) ހިފެހެއްޓިއެވެ. އަދި ﷲ، އޭގެން މީސްތަކުންނަށް މަންފާ ހާސިލު ކޮށްދެއްވިއެވެ. އެ ގޮތުން، އެބައިމީހުން އޭގެން ބޮއި، (ޖަނަވާރުތަކަށް) ބޯންދީ، އަދި ގޮވާން ކުރުމަށް ބޭނުން ކުރިއެވެ. އަދި އޭގެ އިތުރަށް ވާރޭ ވެހުނު އެހެން ބިމެއް ވެސް ވެއެވެ. އެއީ ހަމަ ހުރި ގޮތަށް ހުރި ހުސް ހަނަފަސް ބިމެކެވެ. އަދި އޭގައި ވިނައެއް  ވެސް ނުފަޅައެވެ. ފަހެ، އެ (ފުރަތަމަ ބިމުގެ) މިސާލަކީ، ﷲ ގެ ދީން އެ މީހަކަށް ވިސްނި، އަދި ﷲ، ތިމަން ނަބިއްޔާއައިގެން ފޮނުއްވި ކަންތަކުން (އެބަހީ: ޤުރުއާނާއި ސުންނަތުން) އެ މީހަކަށް ފައިދާ ކުރި މީހާގެ މިސާލެވެ. ވީމާ، އެ މީހާ (އަމިއްލައަށް ދީން) އުނގެނި، އަދި (އެހެން މީހުންނަށް ވެސް) އުނގަންނައި ދެއެވެ. އަދި (އެންމެ ފަހު ބިމުގެ މިސާލަކީ،)  އެއިން ކަމަކަށް (އެންމެ ކުޑަ މިނުން) އިސް ވެސް އުފުލައި ނުލި (އެބަހީ: އެއްވެސް ވަރަކަށް އަޅައި ނުލި) މީހާގެ މިސާލެވެ. އަދި (ކިއެއްތަ) އޭނާ، ތިމަން ނަބިއްޔާ އެއާއިގެން ފޮނުއްވުނު ﷲ ގެ ހިދާޔަތު (އެބަހީ: ޤުރުއާނާއި ސުންނަތް) ވެސް ޤަބޫލެއް ނުކުރިއެވެ."</p>
                            <br>
                            <p class="lead text-center">[0079]</p>
                         </div>
@@ -828,7 +805,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                      <div class="container">
                         <div class="row">
                            <div class="col-lg-12">
-                              <p>Version <strong>1.2.14</strong></p> <!-- VERSIONCHANGE123 -->
+                              <p>Version <strong>1.2.15</strong></p> <!-- VERSIONCHANGE123 -->
                            </div>
                         </div>
                      </div>
@@ -848,6 +825,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
       </div>   <!-- === === /CONTAINER === === --> 
 
 
+      <!--=== === ===INLINE JS=== === ===-->
       <!--=== === ===INLINE JS=== === ===-->
       <script>
          /*Help Alert*/
@@ -1128,7 +1106,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                     ],
          
              //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 5, 7, 10, 15, 20, "All"]], //display range of pages
+             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
              
              language: {
                  buttons: {
@@ -1220,8 +1198,8 @@ renderer: 'bootstrap',
                        {extend: 'copy',
                         key: {key: 'c', shiftKey: true},
                         text: 'Copy',
-                        messageTop: '40 Nawawi',
-                        title: 'hadithmv.com',
+                        messageTop: 'hadithmv.com',
+                        title: '40 Nawawi:',
          
          //=== edits clipboard regex, code to manipulate the data string as desired
                        customize: function(data) {
@@ -1293,13 +1271,13 @@ renderer: 'bootstrap',
                                    text: 'Excel',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of excel
-         
+         /* DOES NOT WORK FOR SOME REASON - FIX123
                                  { extend: 'csv',
                                    key: { key: 'v', shiftKey: true },
                                    text: 'Csv',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of csv
-         
+         */
 
          /*
                                  //json button (export all)
@@ -1408,8 +1386,11 @@ renderer: 'bootstrap',
 
 
 
-      <!--  === === Web only plugins - CHANGE123 ===  === -->
+      <!--  === === Web only plugins - CHANGE123 - MOVED FROM TOP ===  === -->
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+         <!--Datatables - KeyTables - Bootstrap 3 Integration -->
+      <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.4.1/js/dataTables.keyTable.min.js"></script>
+
 
 
       <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -689,7 +689,8 @@ time, mark, audio, video {
                                 data = data.replace( /\tAr Ref./g, '' );
                                 data = data.replace( /\tEn Ref./g, '' );
                                 data = data.replace( /\tDv Ref./g, '' );
-         
+                                data = data.replace( /\tRs Ref./g, '' );
+
                                 data = data.replace( /\nAr Title/g, '' );
                                 data = data.replace( /\nEn Title/g, '' );
                                 data = data.replace( /\nDv Title/g, '' );
@@ -699,6 +700,7 @@ time, mark, audio, video {
                                 data = data.replace( /\nAr Ref./g, '' );
                                 data = data.replace( /\nEn Ref./g, '' );
                                 data = data.replace( /\nDv Ref./g, '' );  
+                                data = data.replace( /\nRs Ref./g, '' );  
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
