@@ -336,7 +336,12 @@ body > h1 {font-size: 20px;} /*print header font size*/
          font-size: 140%;
          color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-
+         .dataTable tbody tr td.fnCol11 { /* rs ref */
+         direction: rtl;
+         text-align: justify; text-align-last: center; /* justify and center */
+         font-size: 145%;
+         color: red;
+         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
 
 
 
@@ -600,6 +605,13 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                   <!--TABLECHANGE123-->
 
                   <li class=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Contact</a></li>
+
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Intro<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="https://hadithmv.com/alt/intro" target="_blank" rel="noopener">40 Nawawi</a></li>
+                        </ul>
+                  </li>
 
                </ul>
                <!-- === Search engine 
@@ -993,7 +1005,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
              } );
          
          //Add footer search to table
-                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
@@ -1071,6 +1083,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                {title:"Ar Ref."},
                {title:"En Ref."},
                {title:"Dv Ref."},
+               {title:"Rs Ref."},
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
@@ -1084,6 +1097,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                { className: "fnCol8", "targets": [7], "visible": true, "searchable": false },
                { className: "fnCol9", "targets": [8], "visible": false, "searchable": false },
                { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
+               { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },
             ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */
@@ -1222,7 +1236,8 @@ renderer: 'bootstrap',
                                 data = data.replace( /\tAr Ref./g, '' );
                                 data = data.replace( /\tEn Ref./g, '' );
                                 data = data.replace( /\tDv Ref./g, '' );
-         
+                                data = data.replace( /\tRs Ref./g, '' );
+
                                 data = data.replace( /\nAr Title/g, '' );
                                 data = data.replace( /\nEn Title/g, '' );
                                 data = data.replace( /\nDv Title/g, '' );
@@ -1232,7 +1247,8 @@ renderer: 'bootstrap',
                                 data = data.replace( /\nAr Ref./g, '' );
                                 data = data.replace( /\nEn Ref./g, '' );
                                 data = data.replace( /\nDv Ref./g, '' );  
-         
+                                data = data.replace( /\nRs Ref./g, '' ); 
+
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows
          
