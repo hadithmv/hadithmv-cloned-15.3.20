@@ -13,60 +13,17 @@
 
       <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
       <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-      <title>Hadithmv - Accessible and Sourced</title>
-      <meta name="description" content="Dhivehi Hadith translations at your fingertips">
-      <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1,"> <!--  maximum-scale=1.0, user-scalable=no -->
-<!-- 1 week
-      <meta http-equiv="cache-control" content="Public" max-age=604800/>
-      <meta http-equiv="Expires" content="604800"/>
--->
-      <meta name="keywords" content="hadithmv.github.io, hadithmv.com, www.hadithmv.com, hadithmv, hadith, hadeeth, nawawi, 40 hadith, saalhees, open, sourced, translations, tharujama, tarujama, tharjama, tarjama, islam, islamic, dhivehi, maldives, maldivian, raajje, deen, dheen, deeny, dheeny, deeni, dheeni, deenee, dheenee">
+    <title>Dhifihuristh</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1.0,user-scalable=no">
+
       <meta name="author" content="Hadithmv">
-      <meta name="theme-color" content="#1A619E" />
       <link rel="canonical" href="https://hadithmv.com" />  <!-- to define a preferred url for search engines to index -->
       <link rel="author" href="https://hadithmv.com" />
       <link rel="publisher" href="https://hadithmv.com">
-      <meta name="thumbnail" content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
 
-      <meta http-equiv="content-language" content="en">
-      <meta name="google" value="notranslate">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo4/newLogo4-16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.com/img/newLogo4/newLogo4-32.png">
 
-      <meta og:title content="Hadithmv - Accessible and Sourced">
-      <meta og:description content="Dhivehi Hadith translations at your fingertips">
-      <meta og::image content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png">
-
-<!-- defines alternative page for mobile etc 
-      <link rel="alternate" media="only screen and (max-width: 640px)" href="https://hadithmv.com">
-      <link rel="alternate" href="android-app://hadithmv.com">
-      <link rel="alternate" href="ios-app://hadithmv.com">
--->
-      <link rel="manifest" href="https://hadithmv.com/alt/hmvManifest.json"> <!-- JSON file , control how your app appears as an app/mobile CHANGE123-->
-
-      <script async> //Service Worker - helps cache website offline
-         if ('serviceWorker' in navigator) {
-         // sw.js can literally be empty, but must exist
-         navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js'); }
-      </script>
-
-      <!-- favicons
-         <link rel="icon" type="image/png" href="https://hadithmv.github.io/img/ppea-iw-png.png" /> -->
-<!--  <link rel="icon" type="image/png" sizes="16x16" href="https://hadithmv.com/img/newLogo5/newLogo5%20-16.png">   -->
-      <link rel="icon" type="image/png" sizes="32x32" href="https://hadithmv.com/img/newLogo5/newLogo5-32-compressor.png">
-
-      
-<!--  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://hadithmv.com/img/newLogo5/newLogo5%20-72.png" />   -->
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
-<!--  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://hadithmv.com/img/newLogo5/newLogo5%20-144.png" />   -->
-<!--
-      <link rel="manifest" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/manifest.json">
-      <link rel="shortcut icon" href="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/favicon.ico">
-      <meta name="apple-mobile-web-app-title" content="Hadithmv">
-      <meta name="application-name" content="Hadithmv">
-      <meta name="msapplication-config" content="https://hadithmv.com/img/newLogo4/favicon/realfavicongenerator.net/browserconfig.xml">
-      <meta name="msapplication-TileImage" content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
-  <meta name="msapplication-square70x70logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-70.png" />
-      <meta name="msapplication-square150x150logo" content="https://hadithmv.com/img/newLogo5/newLogo5-150-compressor.png" />
-  <meta name="msapplication-square310x310logo" content="https://hadithmv.com/img/newLogo5/newLogo5%20-310.png" /> -->
 
 
       <!--  === === Base C CSS JS === === -->
@@ -161,7 +118,7 @@
       <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
       <script src="file:///android_asset/40nJson.js"></script>
          TABLECHANGE123-->
-      <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
+      <script src="https://hadithmv.com/alt/Apk/json/dhifiJson.js"></script>
       <!--  === === Base Json End=== === -->
 
 
@@ -274,74 +231,97 @@ body > h1 {font-size: 20px;} /*print header font size*/
 
 
 
-         /* corrects web view only/none-print display for these particular columns ? */
-         .dataTable tbody tr td.fnCol1 { /* # number */
+        /* corrects web view only/none-print display for these particular columns */
+        .dataTable tbody tr td.col1 {   /* # number */
             /*margin-bottom: -1px;*/
-         font-size: 130%;
-         text-align: center;
-         color: #205ca5;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol2 { /* ar title */
-         direction: rtl;
-         font-size: 140%;
-         text-align: center;
-         color: #205ca5;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-         .dataTable tbody tr td.fnCol3 { /* en title */
-         font-size: 110%;
-         text-align: center;
-         color: #205ca5;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol4 { /* dv title */
-         direction: rtl;
-         font-size: 135%;
-         text-align: center;
-         color: #205ca5;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-         /* @media screen and (max-width: 768px) {
-         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-         } above mobile breakpoint */
-         .dataTable tbody tr td.fnCol5 { /* ar text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.45;
-         font-size: 170%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-         .dataTable tbody tr td.fnCol6 { /* en text */
-         direction: ltr;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 120%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol7 { /* dv text */
-         direction: rtl;
-         text-align: justify;
-         line-height: 1.37;
-         font-size: 155%;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-         .dataTable tbody tr td.fnCol8 { /* ar ref */
-         direction: rtl;
-         text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 145%;
-         color: #205ca5;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
-         .dataTable tbody tr td.fnCol9 {   /* en ref */
-         direction: ltr;
-         text-align: center; /* center does not work without this for some reason */
-         font-size: 110%;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  }
-         .dataTable tbody tr td.fnCol10 { /* dv ref */
-         direction: rtl;
-         text-align: center;
-         font-size: 140%;
-         color: #205ca5;
-         font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  }
-         .dataTable tbody tr td.fnCol11 { /* rs ref */
-         direction: rtl;
-         text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 145%;
-         color: red;
-         font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  }
+            font-size: 120%;
+            text-align: center;
+            line-height: 1.4;
+            color: red;
+            font-family: "Tharujamaanu";
+            font-weight: bold;
+            direction: rtl;
+        }
+        .dataTable tbody tr td.col2 {   /* ar title */
+            direction: rtl;
+            line-height: 1.4;
+            font-size: 140%;
+            text-align: center;
+            font-family: "Tharujamaanu";
+            color: red;
+        }
+        .dataTable tbody tr td.col3 {   /* en title */
+            font-size: 110%;
+            line-height: 1.4;
+            font-family: "Tharujamaanu";
+            text-align: center;
+            direction: rtl;
+        }
+        .dataTable tbody tr td.col4 {   /* dv title */
+            direction: rtl;
+            line-height: 1.4;
+            font-size: 150%;
+            font-family: "Tharujamaanu";
+            text-align: center;
+            color: red;
+        }
+/* @media screen and (max-width: 768px) {
+        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
+} above mobile breakpoint */
+
+        .dataTable tbody tr td.col5 {   /* ar text */
+            direction: rtl;
+            text-align: center;
+            line-height: 1.4;
+            font-family: "Tharujamaanu";
+            font-size: 140%;
+        }
+        .dataTable tbody tr td.col6 {   /* en text */
+            direction: rtl;
+            text-align: center;
+            line-height: 1.4;
+            font-size: 125%;
+            font-family: "Tharujamaanu";
+        }
+        .dataTable tbody tr td.col7 {   /* dv text */
+            direction: rtl;
+            text-align: center;
+            line-height: 1.4;
+            font-size: 135%;
+            font-family: "Tharujamaanu";
+        }
+
+        .dataTable tbody tr td.col8 {   /* ar ref */
+            direction: rtl;
+            text-align: center;
+            font-size: 140%;
+            font-family: none;
+            font-family: "Tharujamaanu";
+            color: red;
+        }
+        .dataTable tbody tr td.col9 {   /* en ref */
+            text-align: center;
+            font-family: "Tharujamaanu";
+            font-size: 100%;
+            line-height: 1.4;
+            color: red;
+        }
+        .dataTable tbody tr td.col10 {  /* dv ref */
+            direction: rtl;
+            text-align: center;
+            font-family: "Tharujamaanu";
+            font-size: 120%;
+            line-height: 1.4;
+            color: red;
+        }
+        .dataTable tbody tr td.col11 {  /* dv ref */
+            direction: rtl;
+            text-align: center;
+            font-family: "Tharujamaanu";
+            font-size: 120%;
+            line-height: 1.4;
+            color: red;
+        }
 
 
 
@@ -721,11 +701,6 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                            <th></th>
                            <th></th>
                            <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
                         </tr>
                      </thead>
                   </table>
@@ -1006,8 +981,8 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                  $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
              } );
          
-         //Add footer search to table
-                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
+//Add footer search to table
+                $("#table_id").append('<tfoot><tr><th>ކޯޑު</th><th>މައުޟޫއު</th><th>ބައި</th><th>ފޮތުގެ ނަން</th><th>މުއައްލިފު / މުތަރުޖިމު</th><th>ޞަފްޙާ</th><th>ސައިޒު</th><th>ތާރީޚު</th><th>ޗާޕު ޢަދަދު</th><th>ޗާޕުކުރި ތަން</th><th>އަގު</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
@@ -1039,7 +1014,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          //============================================Table Data Begin
          //  $(document).ready(function() {
            var table = $('#fnTable').DataTable({
-                     data: FNdataSet,  //has to match javascript json
+                     data: DhifidataSet,  //has to match javascript json
          
          
          /*
@@ -1075,32 +1050,33 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          
           //   data: data, previously without column titles
              columns: [
-               {title:"#"}, 
-               {title:"Ar Title"},
-               {title:"En Title"},
-               {title:"Dv Title"},
-               {title:"Arabic"},
-               {title:"English"},
-               {title:"Dhivehi"},
-               {title:"Ar Ref."},
-               {title:"En Ref."},
-               {title:"Dv Ref."},
-               {title:"Rs Ref."},
+            {"data":"code",       "title":"ކޯޑު"},
+            {"data":"department", "title":"މައުޟޫއު"},
+            {"data":"part",       "title":"ބައި"},
+            {"data":"book",       "title":"ފޮތުގެ ނަން"},
+            {"data":"author",     "title":"މުއައްލިފު / މުތަރުޖިމު"},
+            {"data":"pages",      "title":"ޞަފްޙާތައް"},
+            {"data":"size",       "title":"ސައިޒު"},
+            {"data":"date",       "title":"ތާރީޚު"},
+            {"data":"edition",    "title":"ޗާޕު ޢަދަދު"},
+            {"data":"publisher",  "title":"ޗާޕުކުރި ތަން"},
+            {"data":"price",      "title":"އަގު"},
              ],
          
-             columnDefs: [  //classes columns for css in nweb view, but not print
-               { className: "fnCol1", "targets": [0], "visible": true, "searchable": true},
-               { className: "fnCol2", "targets": [1], "visible": true, "searchable": false },
-               { className: "fnCol3", "targets": [2], "visible": false, "searchable": false },
-               { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },
-               { className: "fnCol5", "targets": [4], "visible": true, "searchable": true },
-               { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },
-               { className: "fnCol7", "targets": [6], "visible": true, "searchable": true }, 
-               { className: "fnCol8", "targets": [7], "visible": true, "searchable": false },
-               { className: "fnCol9", "targets": [8], "visible": false, "searchable": false },
-               { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
-               { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },
-            ], //end of columnDefs, previously without visible and searchable options
+    columnDefs: [  //classes columns for css in nweb view, but not print
+      { className: "col1", "targets": [0], "visible": true, "searchable": true},
+      { className: "col2", "targets": [1], "visible": true, "searchable": false },
+      { className: "col3", "targets": [2], "visible": true, "searchable": false },
+      { className: "col4", "targets": [3], "visible": true, "searchable": true },
+      { className: "col5", "targets": [4], "visible": true, "searchable": true },
+      { className: "col6", "targets": [5], "visible": true, "searchable": false },
+      { className: "col7", "targets": [6], "visible": true, "searchable": false }, 
+      { className: "col8", "targets": [7], "visible": true, "searchable": false }, 
+      { className: "col9", "targets": [8], "visible": true, "searchable": false }, 
+      { className: "col10", "targets": [9], "visible": true, "searchable": true },
+      { className: "col11", "targets": [10], "visible": true, "searchable": false },/*
+      { className: "col10", "targets": [9], "visible": false, "searchable": false }, */
+   ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */
              bstateSave: true, //Seems to work even offline - restore table state on page reload
