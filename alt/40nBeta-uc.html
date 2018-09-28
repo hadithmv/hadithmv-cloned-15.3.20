@@ -235,18 +235,23 @@ time, mark, audio, video {
             color: red;
             font-weight: bold;
         }
-        .dataTable tbody tr td.col2 {   /* ar title */
+        .dataTable tbody tr td.col2 {   /* ar number */
+            direction: rtl;
+            font-size: 120%;
+            text-align: center;
+        }
+        .dataTable tbody tr td.col3 {   /* ar title */
             direction: rtl;
             font-size: 140%;
             text-align: center;
             color: red;
         }
-        .dataTable tbody tr td.col3 {   /* en title */
+        .dataTable tbody tr td.col4 {   /* en title */
             font-size: 110%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             text-align: center;
         }
-        .dataTable tbody tr td.col4 {   /* dv title */
+        .dataTable tbody tr td.col5 {   /* dv title */
             direction: rtl;
             font-size: 130%;
             font-family: "Tharujamaanu";
@@ -257,20 +262,20 @@ time, mark, audio, video {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
 } above mobile breakpoint */
 
-        .dataTable tbody tr td.col5 {   /* ar text */
+        .dataTable tbody tr td.col6 {   /* ar text */
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
             font-size: 160%;
         }
-        .dataTable tbody tr td.col6 {   /* en text */
+        .dataTable tbody tr td.col7 {   /* en text */
             direction: ltr;
             text-align: justify;
             line-height: 1.4;
             font-size: 125%;
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
-        .dataTable tbody tr td.col7 {   /* dv text */
+        .dataTable tbody tr td.col8 {   /* dv text */
             direction: rtl;
             text-align: justify;
             line-height: 1.4;
@@ -278,27 +283,27 @@ time, mark, audio, video {
             font-family: "Tharujamaanu";
         }
 
-        .dataTable tbody tr td.col8 {   /* ar ref */
+        .dataTable tbody tr td.col9 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-size: 140%;
             font-family: none;
             color: red;
         }
-        .dataTable tbody tr td.col9 {   /* en ref */
+        .dataTable tbody tr td.col10 {   /* en ref */
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
             font-size: 100%;
             color: red;
         }
-        .dataTable tbody tr td.col10 {  /* dv ref */
+        .dataTable tbody tr td.col11 {  /* dv ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: "Tharujamaanu";
             font-size: 120%;
             color: red;
         }
-        .dataTable tbody tr td.col11 {  /* rs ref */
+        .dataTable tbody tr td.col12 {  /* rs ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-family: "Tharujamaanu";
@@ -424,6 +429,7 @@ time, mark, audio, video {
         //"https://docs.google.com/spreadsheets/d/1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs/pubhtml?gid=489792061&single=true";
         var columns = [
             {"data":"no",       "title":"#"},
+            {"data":"arNo",  "title":"Ar No."},
             {"data":"arTitle",  "title":"Ar Title"},
             {"data":"enTitle",  "title":"En Title"},
             {"data":"dvTitle",  "title":"Dv Title"},
@@ -506,7 +512,7 @@ time, mark, audio, video {
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar No.</th><th>Ar Title</th><th>En Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
 
          
          //Setup - add a text input to each search footer cell
@@ -543,16 +549,17 @@ time, mark, audio, video {
 
     columnDefs: [  //classes columns for css in nweb view, but not print
       { className: "col1", "targets": [0], "visible": true, "searchable": true},
-      { className: "col2", "targets": [1], "visible": true, "searchable": false },
-      { className: "col3", "targets": [2], "visible": false, "searchable": false },
+      { className: "col2", "targets": [1], "visible": false, "searchable": false},
+      { className: "col3", "targets": [2], "visible": true, "searchable": false },
       { className: "col4", "targets": [3], "visible": false, "searchable": false },
-      { className: "col5", "targets": [4], "visible": true, "searchable": true },
+      { className: "col5", "targets": [4], "visible": false, "searchable": false },
       { className: "col6", "targets": [5], "visible": true, "searchable": true },
-      { className: "col7", "targets": [6], "visible": true, "searchable": true }, 
-      { className: "col8", "targets": [7], "visible": true, "searchable": true },
-      { className: "col9", "targets": [8], "visible": false, "searchable": false },
+      { className: "col7", "targets": [6], "visible": true, "searchable": true },
+      { className: "col8", "targets": [7], "visible": true, "searchable": true }, 
+      { className: "col9", "targets": [8], "visible": true, "searchable": true },
       { className: "col10", "targets": [9], "visible": false, "searchable": false },
       { className: "col11", "targets": [10], "visible": false, "searchable": false },
+      { className: "col12", "targets": [11], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
 
@@ -680,6 +687,7 @@ time, mark, audio, video {
          
                                // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
                                 data = data.replace( /\n#/g, '' );
+                                data = data.replace( /\tAr No./g, '' );
                                 data = data.replace( /\tAr Title/g, '' );
                                 data = data.replace( /\tEn Title/g, '' );
                                 data = data.replace( /\tDv Title/g, '' );
@@ -691,6 +699,7 @@ time, mark, audio, video {
                                 data = data.replace( /\tDv Ref./g, '' );
                                 data = data.replace( /\tRs Ref./g, '' );
 
+                                data = data.replace( /\nAr No./g, '' );
                                 data = data.replace( /\nAr Title/g, '' );
                                 data = data.replace( /\nEn Title/g, '' );
                                 data = data.replace( /\nDv Title/g, '' );
