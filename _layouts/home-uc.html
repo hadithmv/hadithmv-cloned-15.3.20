@@ -28,12 +28,7 @@
       <link rel="publisher" href="https://hadithmv.com">
       <meta name="thumbnail" content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png" />
 
-      <meta http-equiv="content-language" content="en">
       <meta name="google" value="notranslate">
-
-      <meta og:title content="Hadithmv - Accessible and Sourced">
-      <meta og:description content="Dhivehi Hadith translations at your fingertips">
-      <meta og::image content="https://hadithmv.com/img/newLogo5/newLogo5-114-compressor.png">
 
 <!-- defines alternative page for mobile etc 
       <link rel="alternate" media="only screen and (max-width: 640px)" href="https://hadithmv.com">
@@ -42,7 +37,7 @@
 -->
       <link rel="manifest" href="https://hadithmv.com/alt/hmvManifest.json"> <!-- JSON file , control how your app appears as an app/mobile CHANGE123-->
 
-      <script async> //Service Worker - helps cache website offline
+      <script> //Service Worker - helps cache website offline
          if ('serviceWorker' in navigator) {
          // sw.js can literally be empty, but must exist
          navigator.serviceWorker.register('https://hadithmv.com/alt/hmvSW.js'); }
@@ -81,7 +76,7 @@
       <script src="https://hadithmv.com/alt/Apk/Resc/app4.js"></script>
       <!--  === === Base C CSS JS End=== === -->
          <!--KeepConditions - MUST STAY ABOVE -->
-         <script type="text/javascript" src="https://hadithmv.com/alt/Apk/Resc/base/dataTables.keepConditions.min-mod.js"></script>
+         <script src="https://hadithmv.com/alt/Apk/Resc/base/dataTables.keepConditions.min-mod.js"></script>
 
       <style>
          /*         
@@ -546,7 +541,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
 
 
-         html, body, { /* removing comma from body makes footer break */
+         html, body { /* removing comma from body makes footer break */
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';
          /*font-size: 16px; base font size*/
          width: 100%;
@@ -1471,7 +1466,7 @@ renderer: 'bootstrap',
       <!--  === === Web only plugins - CHANGE123 - MOVED FROM TOP ===  === -->
       <script async src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
          <!--Datatables - KeyTables - Bootstrap 3 Integration -->
-      <script type="text/javascript" src="https://cdn.datatables.net/keytable/2.4.1/js/dataTables.keyTable.min.js"></script>
+      <script src="https://cdn.datatables.net/keytable/2.4.1/js/dataTables.keyTable.min.js"></script>
 
 
 
