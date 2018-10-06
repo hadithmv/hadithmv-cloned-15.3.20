@@ -1,0 +1,9 @@
+You need to resize your screenshot.
+Min length for any side: 320px.
+Max length for any side: 3840px.
+Max aspect ratio: 2:1
+
+http://resizeimage.net/
+
+works for nexus 6P off chrome dev frame:
+3108h for 1554w = 2:1
