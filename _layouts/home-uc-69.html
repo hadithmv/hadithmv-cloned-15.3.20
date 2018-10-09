@@ -1079,8 +1079,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          
              $.extend( true, $.fn.dataTable.defaults, {
                 "pagingType": "full_numbers",
-            	//"keys": "true",   /* KeyTable extension, old  */
-                "keys": { clipboardOrthogonal: "export" }, // strips html tags off keystable copy
+                "keys": "true", //KeyTable extension 
              } );
          
          } else { /* js media query on mobile, tablet */
@@ -1094,7 +1093,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          
          //============================================Table Data Begin
          //  $(document).ready(function() {
-           var table = $("#fnTable").DataTable({
+           var table = $('#fnTable').DataTable({
                      data: FNdataSet,  //has to match javascript json
          
          
@@ -1158,19 +1157,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
                { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },
                { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },
-            //], //end of columnDefs, previously without visible and searchable options
-            //below strips html tags off keystable copy, second part with keys on
-               { targets: "_all",
-                 render: function (data, type, row, meta) {
-                     if (type === "export") {
-                        var div = document.createElement("div");
-                        div.innerHTML = data;
-                        return div.innerText;
-                                                          }
-        
-                     return data;
-               }
-                        }],
+            ], //end of columnDefs, previously without visible and searchable options
          
          /* CHANGE123 */
              bstateSave: true, //Seems to work even offline - restore table state on page reload
