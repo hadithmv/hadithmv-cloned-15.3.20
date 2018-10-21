@@ -352,16 +352,17 @@ body > h1 {font-size: 20px;} /*print header font size*/
          .dataTable tbody tr td.fnCol9 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 145%;
          color: #205ca5;
          font-family: 'KFGQPCUthmanTahaNaskh','Tharujamaanu','Ubuntu';  
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+        font: inherit;
+         font-size: 145%; }
          .dataTable tbody tr td.fnCol10 {   /* en ref */
          direction: ltr;
-         text-align: center; /* center does not work without this for some reason */
+         text-align: justify; text-align-last: center; /* justify and center */
          font-size: 110%;
          color: #205ca5;
          font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Tharujamaanu';  
@@ -371,7 +372,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
   word-wrap: break-word; }
          .dataTable tbody tr td.fnCol11 { /* dv ref */
          direction: rtl;
-         text-align: center;
+         text-align: justify; text-align-last: center; /* justify and center */
          font-size: 140%;
          color: #205ca5;
          font-family: 'Tharujamaanu','Ubuntu','KFGQPCUthmanTahaNaskh';  
