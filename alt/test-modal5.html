@@ -103,6 +103,43 @@
       </style>
 
 
+      <!--=== Embedded CSS ===-->
+      <style>
+         /* Ubuntu-mod */
+         @font-face {
+         font-family: 'Ubuntu';
+         src:
+      /* APKCHANGE123
+         url('file:///android_asset/Ubuntu-mod.woff') format('woff')
+         */
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod2.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod2.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod2.ttf') format('truetype');
+         }
+         /* KFGQPCUthmanTahaNaskh-mod */
+         @font-face {
+         font-family: 'KFGQPCUthmanTahaNaskh';
+         src:
+      /* APKCHANGE123
+         url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff'),
+         */
+         url('https://hadithmv.com/alt/Apk/mod-fonts/UthmanTN1Ver10-mod4.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/UthmanTN1Ver10-mod4.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/UthmanTN1Ver10-mod4.ttf') format('truetype');
+         }
+         /* Tharujamaanu-B-Regular-mod */
+         @font-face {
+         font-family: 'Faruma';
+         src: 
+      /* APKCHANGE123
+         url('file:///android_asset/Tharujamaanu-B-Regular-mod4.woff') format('woff'),
+         */
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Faruma-mod6.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Faruma-mod6.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Faruma-mod6.ttf') format('truetype');
+         }
+
+
       <style>
          /*
          <!--=== === Base Ext JS === ===-->
@@ -958,7 +995,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
         </div>
 
 
+<style type="text/css">
+   .rvTab {padding: 17px; font-size: 16px;}
 
+</style>
 
 <!-- === Modal === -->
   <div class="modal" id="eUmr">
@@ -968,47 +1008,19 @@ table unpadded too much, as if zoomed, readd padded around sides*/
       <div class="modal-content">
         <div class="modal-header">
           <button class="close" data-dismiss="modal">✖</button>
-            Umar bin al-Khattab
+            عمر بن الخطاب
         </div>
-        
         <!-- Modal body-->
-        <div class="modal-body eMdl">
-          <p>
-            <b>Name</b>: Umar Ibn Khattab Ibn Nufail Ibn Abdil Uzza Ibn Adi Ibn Ka’ab Ibn Luay Ibn Ghalib al Qurasy.
-         </p>
-          <p>
-            <b>Title</b>: al-Faruq, Ameer al-Mumineen
-         </p>
-          <p>
-            <b>Kunya</b>: Abu Hafs
-         </p>
-          <p>
-            <b>Birth</b>: 13 years after the Year of the Elephant in Makka.
-         </p>
-          <p>
-            <b>Death</b>: Martyred 23 Zul Hijjah 23 H. in Madina.
-         </p>
-          <p>
-            A senior companion. The second Khalifa of Islam after Abu Bakr.
-         </p>
-        </div>
 
-      </div>
-      
-    </div>
-  </div>
-<!-- === Modal END === -->
-<!-- === Modal === -->
-  <div class="modal" id="aUmr" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button data-dismiss="modal">✖</button>
-              عمر بن الخطاب
-        </div>
-        <!-- Modal body-->
-        <div class="modal-body aMdl">
+        <ul class="nav nav-tabs" id="tabContent">
+    <li class="active pull-right"><a href="#details" data-toggle="tab">عربي</a></li>
+    <li class="pull-right"><a href="#access-security" data-toggle="tab">En</a></li>
+    <li class="pull-right"><a href="#networking" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content rvTab">
+    <div class="tab-pane active aMdl" id="details">
+
           <p>
             <b>الاسم</b>: عمر بن الخطاب بن نفيل بن عبد العزى بن رياح بن عبد الله بن قرط بن رزاح بن عدي بن كعب بن لؤي بن غالب
          </p>
@@ -1027,24 +1039,29 @@ table unpadded too much, as if zoomed, readd padded around sides*/
           <p>
             ثاني الخلفاء وإمام الحنفاء بعد أبي بكر رضي الله عنهما وأوّل من تسمى أمير المؤمنين
          </p>
-        </div>
-
-      </div>
-      
     </div>
-  </div>
-<!-- === Modal END === -->
-<!-- === Modal === -->
-  <div class="modal fade" id="dUmr" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button data-dismiss="modal">&times;</button>
-              ޢުމަރު ބިން އަލްޚައްޠާބު
-        </div>
-        <!-- Modal body-->
-        <div class="modal-body dMdl">
+
+    <div class="tab-pane eMdl" id="access-security">
+          <p>
+            <b>Name</b>: Umar Ibn Khattab Ibn Nufail Ibn Abdil Uzza Ibn Adi Ibn Ka’ab Ibn Luay Ibn Ghalib al Qurasy.
+         </p>
+          <p>
+            <b>Title</b>: al-Faruq, Ameer al-Mumineen
+         </p>
+          <p>
+            <b>Kunya</b>: Abu Hafs
+         </p>
+          <p>
+            <b>Birth</b>: 13 years after the Year of the Elephant in Makka.
+         </p>
+          <p>
+            <b>Death</b>: Martyred 23 Zul Hijjah 23 H. in Madina.
+         </p>
+          <p>
+            A senior companion. The second Khalifa of Islam after Abu Bakr.
+         </p>
+    </div> 
+    <div class="tab-pane dMdl" id="networking">
           <p>
             <b>ނަން</b>: ޢުމަރު ބިން އަލްޚައްޠާބް ބިން ނުފައިލް ބިން ޢަބްދުލް ޢުއްޒާ ބިން ޢަދިއްޔު ބިން ކަޢުބް ބިން ލުއައި ބިން ޣާލިބު އަލްޤުރަޝީ.
          </p>
@@ -1063,7 +1080,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
           <p>
 އިސް ސަޙާބީއެއް. އަބޫ ބަކުރަށް ފަހު އިސްލާމީ ދެވަނަ ޚަލީފާ.
          </p>
-        </div>
+    </div> 
+</div>
+
+
 
       </div>
       
