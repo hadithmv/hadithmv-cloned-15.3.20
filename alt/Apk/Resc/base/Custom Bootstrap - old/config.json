@@ -398,12 +398,10 @@
     "jumbotron.less",
     "close.less",
     "component-animations.less",
-    "dropdowns.less",
-    "modals.less"
+    "dropdowns.less"
   ],
   "js": [
     "dropdown.js",
-    "modal.js",
     "tab.js",
     "collapse.js",
     "transition.js"
