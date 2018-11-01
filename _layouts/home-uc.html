@@ -342,7 +342,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
          .dataTable tbody tr td.fnCol8 { /* dv text */
          direction: rtl;
          text-align: justify;
-         font-size: 150%;
+         font-size: 145%;
          font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';  
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -393,6 +393,48 @@ body > h1 {font-size: 20px;} /*print header font size*/
 /* MAKES RAAWEE AND HADITH QUOTE STAND OUT */
 .rvtxt {  color: brown; text-shadow: 0.05px 0.05px 0px rgba(150, 150, 150, 1); font-size: 103%;   }
 .hdtxt {  color: green; text-shadow: 0.05px 0.05px 0px rgba(150, 150, 150, 1); font-size: 103%;   }
+
+
+/* === === */
+/* === RUWAATH MODALS CSS === */
+  .modal-header { font-weight: bold; text-align: center; font-size: 21px;}
+
+ .aMdl,.dMdl  { direction: rtl;
+                 text-align: justify; padding: 17px; font-size: 18px;}
+ .eMdl  { direction: ltr;
+                 text-align: justify; padding: 17px; font-size: 15px;}
+ .dMdl  {   font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';   } /* otherwise lafzul jalaala is without alif */
+/* Fixes modal opening jump */
+.modal {overflow-y: auto;}
+.modal-open {overflow: auto;}
+.modal-open[style] {padding-right: 0px !important;}
+
+/* Prevents tabs from stacking */
+@media (max-width: 768px) {
+  .nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .nav-justified > li > a  {
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 4px 4px 0 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* makes modals higher - Mobile only*/
+         @media screen and (max-width: 768px) {
+.modal-content {margin-top: 5px !important;}   }
+
+/* IOS modal fix, otherwise modal is not click activated, using span here also works */
+.rvtxt {   cursor:pointer;   }
+
+
+/* fixes Rawaahu Muslim number breaks, min 47*/
+#fnTable > tbody > tr > td.fnCol9 {min-width: 47px;}
+/* === RUWAATH MODALS CSS === */
+/* === === */
+
 
 
 /* makes search bar text bigger and more visible */
@@ -895,6 +937,2220 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
          </div>     <!-- === /FLEX-ROW === -->
       </div>   <!-- === === /CONTAINER === === --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- === ===  === === --> 
+<!-- === ===  === === --> 
+<!-- === === RUWAATH MODALS === === --> 
+<!-- === ===  === === --> 
+<!-- === ===  === === --> 
+<!-- === UMAR Modal === -->
+  <div class="modal fade" id="rUmr">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عمر بن الخطاب
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#1a" data-toggle="tab">عربي</a></li>
+    <li><a href="#1b" data-toggle="tab">En</a></li>
+    <li><a href="#1c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="1a"><p>
+            <b>الاسم</b>:
+عمر بن الخطاب بن نفيل بن عبد العزى بن رياح بن عبد الله بن قرط بن رزاح بن عدي بن كعب بن لؤي بن غالب. روي له عن النبيّ ﷺ 537 حديثاً
+         <p/><p>
+            <b>اللقب</b>:
+الفاروق، أمير المؤمنين
+         <p/><p>
+            <b>النسب</b>:
+القرشي، العدوي
+         <p/><p>
+            <b>الكنية</b>:
+أبو حفص
+         <p/><p>
+            <b>الميلاد</b>:
+13 سنة بعد الفيل
+         <p/><p>
+            <b>الوفاة</b>:
+23 هـ
+         <p/><p>•
+ثاني الخلفاء وإمام الحنفاء بعد أبي بكر رضي الله عنهما وأوّل من تسمى أمير المؤمنين. روي 537حديثاً
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="1b"><p>
+            <b>Name</b>:
+Umar Ibn Khattab Ibn Nufail Ibn Abdil Uzza Ibn Adi Ibn Ka’b Ibn Luay Ibn Ghalib al-Qurashi.
+         <p/><p>
+            <b>Title</b>:
+al-Faruq, Ameer al-Mumineen
+         <p/><p>
+            <b>Nasab</b>:
+Qurashi, 'Adawi
+         <p/><p>
+            <b>Kunya</b>:
+Abu Hafs
+         <p/><p>
+            <b>Birth</b>:
+13 years after the Year of the Elephant in Makka.
+         <p/><p>
+            <b>Death</b>:
+Martyred Zul Hijjah year 23 H. in Madina.
+         <p/><p>•
+A senior companion. The second Khalifa of Islam after Abu Bakr. Narrated 537 Hadith.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="1c"><p>
+            <b>ނަން</b>:
+ޢުމަރު ބިން އަލްޚައްޠާބް ބިން ނުފައިލް ބިން ޢަބްދުލް ޢުއްޒާ ބިން ޢަދިއްޔު ބިން ކަޢުބް ބިން ލުއައި ބިން ޣާލިބު އަލްޤުރަޝީ.
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޤުރަޝީ، ޢަދަވީ
+         <p/><p>
+            <b>ލަޤަބު</b>:
+އަލްފާރޫޤް، އަމީރުލް މުއުމިނީން
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޙަފްޞު
+         <p/><p>
+            <b>އުފަންވީ</b>:
+އެތުގެ އަހަރަށް ފަހު 13 އަހަރު ފަހުން މައްކާގައި.
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ޝަހީދު ކުރެވުނީ، ޒުލް ޙިއްޖާ މަހު ހިޖުރައިން 27 ވަނަ އަހަރު މަދީނާގައި.
+         <p/><p>•
+އަރިސް ސަޙާބީއެއް. އަބޫ ބަކުރަށް ފަހު އިސްލާމީ ދެވަނަ ޚަލީފާ. 537 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === ABDULLAH BIN UMAR Modal === -->
+  <div class="modal fade" id="rIbUmr">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عبد الله بن عمر
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#2a" data-toggle="tab">عربي</a></li>
+    <li><a href="#2b" data-toggle="tab">En</a></li>
+    <li><a href="#2c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="2a"><p>
+            <b>الاسم</b>:
+عبد الله بن عمر بن الخطاب بن نفيل بن عبد العزى بن رياح بن عبد الله بن قرط بن رزاح بن عدي بن كعب بن لؤي بن غالب
+         <p/><p>
+            <b>النسب</b>:
+القرشي، العدوي، المكي، ثم المدني
+         <p/><p>
+            <b>الكنية</b>:
+أبو عبد الرحمن
+         <p/><p>
+            <b>الميلاد</b>:
+3 من المبعث النبوي، أو قبل الوحي بسنة
+         <p/><p>
+            <b>الوفاة</b>:
+72 أو 73 أو 74 هـ، وقيل: 75 هـ بمكة
+         <p/><p>•
+أحد المكثرين من الصحابة والعبادلة، وكان من أشد الناس اتباعا للأثر. شهد الأحزاب والحديبية. روي 2630 حديثاً.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="2b"><p>
+            <b>Name</b>:
+Abdulla bin Umar Ibn Khattab Ibn Nufail Ibn Abdil Uzza Ibn Adi Ibn Ka’b Ibn Luay Ibn Ghalib
+         <p/><p>
+            <b>Nasab</b>:
+Qurashi, 'Adawi, Makki, then Madani
+         <p/><p>
+            <b>Kunya</b>:
+Abu Abdurrahman
+         <p/><p>
+            <b>Birth</b>:
+3rd year of Prophethood, or 1 year before the Revelation, in Makkah.
+         <p/><p>
+            <b>Death</b>:
+72 or 73 or 74 or 75 H. in Makka.
+         <p/><p>•
+Narrated a lot of Hadith, he was from the Companions and 4 famous Abdullahs. He was of the strictest of people in following the Hadith. He witnessed the battle of Ahzab and Hudaiybiyya. Narrated 2630 Hadith.
+         <p/><p>
+    </div> 
+
+    <div class="tab-pane dMdl" id="2c"><p>
+            <b>ނަން</b>:
+ޢަބްދު ﷲ ބިން ޢުމަރު ބިން އަލްޚައްޠާބް ބިން ނުފައިލް ބިން ޢަބްދުލް ޢުއްޒާ ބިން ޢަދިއްޔު ބިން ކަޢުބް ބިން ލުއައި ބިން ޣާލިބު.
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޤުރަޝީ، ޢަދަވީ، މައްކީ، އެއަށްފަހު މަދަނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޢަބްދުއްރަޙްމާން
+         <p/><p>
+            <b>އުފަންވީ</b>:
+ނަބީކަމައިގެން ފޮނުއްވިތާ 3 ވަނަ އަހަރު، ނުވަތަ ވަޙީގެ 1 އަހަރު ކުރިން، މައްކާގައި.
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 72 ނުވަތަ 73 ނުވަތަ 74 ނުވަތަ 75 ވަނަ އަހަރު، މައްކާގައި.
+         <p/><p>•
+ވަރަށް ގިނަ ޙަދީޘް ރިވާ ކުރެއްވި، ޢިބްނު ޢުމަރު ވަނީ ޞަޙާބީންނާއި 4 މަޝްހޫރު ޢަބްދު ﷲ އިންގެ ތެރެއިންނެވެ. މީސްތަކުންގެ ތެރެއިން ޙަދީޘްއަށް ތަބާވުމުގަ އެންމެ ވަރުގަދައަށް ތަބާވި އެކެކެވެ. އަޙްޒާބު އަދި ހުދައިބިއްޔާ ހަނގުރާމަ ދެކިލެއއްވިއެވެ. 1630 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === ABDULLAH BIN MASOOD Modal === -->
+  <div class="modal fade" id="rIbMsd">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عبد الله بن مسعود
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#3a" data-toggle="tab">عربي</a></li>
+    <li><a href="#3b" data-toggle="tab">En</a></li>
+    <li><a href="#3c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="3a"><p>
+            <b>الاسم</b>:
+عبد الله بن مسعود بن غافل بن حبيب بن شمخ بن مخزوم، ويقال: ابن شمخ بن فار بن مخزوم بن صاهلة بن كاهل بن الحارث بن تميم بن سعد بن هذيل بن مدركة بن إلياس بن مضر بن نزار بن معد بن عدنان
+         <p/><p>
+            <b>النسب</b>:
+الهذلي، المكي، المهاجري، البدري، الزهري حليفهم
+         <p/><p>
+            <b>الكنية</b>:
+أبو عبد الرحمن
+         <p/><p>
+            <b>الوفاة</b>:
+28 أو 32 أو 33 هـ بالمدينة، وقيل: بالكوفة، والأول أثبت
+         <p/><p>•
+من السابقين الأولين، ومن كبار العلماء من الصحابة، مناقبه جمة. روي 848 حديثاً.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="3b"><p>
+            <b>Name</b>:
+Abdulla bin Mas'ood bin Ghafil bin Habib bin Shumakh bin Makhzoom
+         <p/><p>
+            <b>Nasab</b>:
+Hazli, Makki, Muhajiri, Badri, Zuhri
+         <p/><p>
+            <b>Kunya</b>:
+Abu Abdurrahman
+         <p/><p>
+            <b>Death</b>:
+28 or 32 or 33 H. in Makka. And it was also said in Kufa.
+         <p/><p>•
+From the first and foremost of Muslims. And from the senior scholars from the Sahaba. Narrated 848 Hadith from the Prophet.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="3c"><p>
+            <b>ނަން</b>:
+ޢަބްދު ﷲ ބިން ބިން ޢާފިލު ބިން ޙަބީބު ބިން ޝުމަޚް ބިން މަޚްޒޫމް.
+         <p/><p>
+            <b>ނަސަބު</b>:
+ހަޒަލީ، މައްކީ، މުހާޖިރީ، ބަދްރީ، ޒުހްރީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޢަބްދުއްރަޙްމާން
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 28 ނުވަތަ 32 ނުވަތަ 33 ވަނަ އަހަރު، މައްކާގައި. އަދި ބުނެވޭގޮތުގައި ކުފާގައި.
+         <p/><p>•
+އެންމެ ކުރިން އިސްލާމްވި ޞަޙާބީންގެ ތެރޭގައި ހިމެނުނު. އަދި ޞަޙާބީންގެ ތެރެއިންވާ ބޮޑު ޢިލްމުވެރިއެއް. 848 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === AISHA Modal === -->
+  <div class="modal fade" id="rAish">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عائشة بنت أبي بكر
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#4a" data-toggle="tab">عربي</a></li>
+    <li><a href="#4b" data-toggle="tab">En</a></li>
+    <li><a href="#4c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="4a"><p>
+            <b>الاسم</b>:
+عائشة بنت أبي بكر الصديق عبد الله بن أبي قحافة بن عامر بن عمرو بن كعب بن سعد بن تيم بن مرة
+         <p/><p>
+            <b>النسب</b>:
+التيمية، القرشية، المكية، النبوِية، من بني غنم بن مالك بن كنانة
+         <p/><p>
+            <b>اللقب</b>:
+أم المؤمنين، الحميراء
+            <b>الكنية</b>:
+أم عبد الله
+         <p/><p>
+            <b>الميلاد</b>:
+بعد البعثة بـ 4 أو 5 سنين
+         <p/><p>
+            <b>الوفاة</b>:
+57 أو 58 هـ بالمدينة
+         <p/><p>•
+زوجة  وحبيبة رسول الله ﷺ، وام المؤمنين، الصديقة بنت الصديق، المبرأة من فوق سبع سماوات، وهي أفقه نساء الأمة، ومناقبها جمة. روي 2210 حديثاً.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="4b"><p>
+            <b>Name</b>:
+Aisha binth Abu Bakr As-Siddiq Abdulla bin Abi Quhafa bin'Amir bin 'Amr bin Ka'b bin Sa'd bin Tamim bin Murra
+         <p/><p>
+            <b>Nasab</b>:
+Tamimi, Qurashi, Makki, Nabawi,
+         <p/><p>
+            <b>Title</b>:
+Umm al-Mumineen
+         <p/><p>
+            <b>Kunya</b>:
+Umm Abdulla
+         <p/><p>
+            <b>Death</b>:
+57 or 58 H. in Madina.
+         <p/><p>•
+The beloved  wife of Allah's Messenger ﷺ, The Mother of the Believers, The Truthful daughter of the Truthful, her innocence was cleared from above the seven heavens, she is the most learned in religious knowledge from all the women of the Ummah. Narrated 2210 Hadith.
+         <p/><p>
+    </div> 
+
+    <div class="tab-pane dMdl" id="4c"><p>
+            <b>ނަން</b>:
+ޢާއިޝާ ބިންތި އަބޫ ބަކުރު އައްޞިއްދީޤް ޢަބްދު ﷲ ބިން އަބީ ޤުހާފާ ބިން ޢާމިރު ބިން ޢަމްރު ބިން ކަޢުބް ބިން  ޞަޢުދް ބިން ތަމީމް ބިން މުއްރާ
+         <p/><p>
+            <b>ނަސަބު</b>:
+ތަމީމީ، ޤުރަޝީ، މައްކީ، ނަބަވީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އުންމުލް މުއުމިނީން
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 57 ނުވަތަ 58 ވަނަ އަހަރު، މަދީނާގައި.
+         <p/><p>•
+ރަސޫލު ﷲ ﷺ ގެ ލޯބިފުޅުވާ އަނބިކަންބަލުން، މުއުމިނުންގެ މަންމާފުޅު، ޞިއްދީޤުގެ ދަރިކަނބަލުން ޞިއްދީޤާ، އެ ކަމަނާއަށް ކުރެވުނު ތުހުމަތުން ވަނީ ހަތް އުޑުގެ މަތިން ބަރީއަކުރެވިފައި، މުޅި އުންމަތުގެ އެންމެހައި އަންހެނުންގެ ތެރެއިން އެންމެ ފިޤުހުވެރި. 2210 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/><p>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === NUMAN BASHIR Modal === -->
+  <div class="modal fade" id="rNumB">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+النعمان بن بشير
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#5a" data-toggle="tab">عربي</a></li>
+    <li><a href="#5b" data-toggle="tab">En</a></li>
+    <li><a href="#5c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="5a"><p>
+            <b>الاسم</b>:
+النعمان بن بشير بن سعد بن ثعلبة بن الجلاس ويقال ابن خلاس بن زيد بن مالك بن ثعلبة بن كعب بن الخزرج
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، الخزرجي، المدني، القاضي، الكوفي
+         <p/><p>
+            <b>الكنية</b>:
+أبو عبد الله
+         <p/><p>
+            <b>الميلاد</b>:
+2 أو 1هـ، بالمدينة. وقيل: ولد بعد سنة أو أقل من سنة من قدوم رسول الله ﷺ المدينة، وقيل: ولد قبل وفاة رسول الله ﷺ ب8 سنين، وقيل: ب6 سنين، والأول أصح
+         <p/><p>
+            <b>الوفاة</b>:
+60 أو 64 أو 65 أو 66 هـ بحمص، وقيل: بين دمشق وحمص، وقيل: سلمية
+         <p/><p>•
+له ولأبويه صحبة.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="5b"><p>
+            <b>Name</b>:
+an-Nu'man bin Bashir bin Sa'laba bin Jallas
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khazraji, Madani, Qaadli, Kufi
+         <p/><p>
+            <b>Kunya</b>:
+Abu Abdullah
+         <p/><p>
+            <b>Death</b>:
+60 or 64 or 65 or 66 H. in Homs, or between Homs and Baghdad.
+         <p/><p>•
+He and both his parents were companions.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="5c"><p>
+            <b>ނަން</b>:
+އައްނުޢުމާނު ބިން ބަޝީރު ބިން ޘަޢުލަބާ ބިން ޖައްލާސް
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚަޒްރަޖީ، މަދަނީ، ޤާޟީ، ކޫފީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޢަބްދު ﷲ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 60 ނުވަތަ 64 ނުވަތަ 65 ނުވަތަ 66 ވަނަ އަހަރު، ޙުމްޞް ނުވަތަ ޙުމްޞްއާއި ބަޢްދާދާ ދެމެދުގައި.
+         <p/><p>•
+ނުޢުމާންއާއި އެ ޞަޙާބީގެ ދެބަފައިކަލުންނަކީ ވެސް ޞަޙާބީން.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+<!-- === TAMIM DARI Modal === -->
+  <div class="modal fade" id="rTam">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+تميم الداري
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#6a" data-toggle="tab">عربي</a></li>
+    <li><a href="#6b" data-toggle="tab">En</a></li>
+    <li><a href="#6c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="6a"><p>
+            <b>الاسم</b>:
+تميم بن أوس بن خارجة بن سود بن جذيمة بن وداع، ويقال: ذراع، ابن عدي بن الدار بن هانئ بن حبيب بن نمارة بن لخم، وهو مالك بن عدي بن الحارث بن مرة بن أدد بن يشجب بن عريب بن كهلان بن سبأ بن يشجب بن يعرب بن قحطان
+         <p/><p>
+            <b>النسب</b>:
+الداري، اللخمي، الْفلسطيني، ونسبه يحيى بن يحيى وابن بكير: ديريا
+         <p/><p>
+            <b>الكنية</b>:
+أبو رقية
+         <p/><p>
+            <b>الوفاة</b>:
+40 هـ بالشام
+         <p/><p>•
+صحابي مشهور.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="6b"><p>
+            <b>Name</b>:
+Tamim bin Aus bin Kharija bin Saud bin Juzaima bin Wada'
+         <p/><p>
+            <b>Nasab</b>:
+Dari, Khami, Falastini
+         <p/><p>
+            <b>Kunya</b>:
+Abu Ruqaiyya
+         <p/><p>
+            <b>Death</b>:
+40 H. in Sham
+         <p/><p>•
+A famous companion.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="6c"><p>
+            <b>ނަން</b>:
+ތަމީމް ބިން އައުސް ބިން ޚާރިޖާ ބިން ސައުދް ބިން ޖުޒައިމާ ބިން ވަދާޢު
+         <p/><p>
+            <b>ނަސަބު</b>:
+ދާރީ، ޚާމީ، ފަލަސްޠީނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ރުޤައްޔާ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 40 ވަނަ އަހަރު، ޝާމްގައި.
+         <p/><p>•
+މަޝްހޫރު ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === ABU HURAIRA Modal === -->
+  <div class="modal fade" id="rHur">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+أبو هريرة
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#7a" data-toggle="tab">عربي</a></li>
+    <li><a href="#7b" data-toggle="tab">En</a></li>
+    <li><a href="#7c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="7a"><p>
+            <b>الاسم</b>:
+عبد الرحمن بن صخر، وقيل: عبد الرحمن بن غنم، وقيل : عبد الله بن عائذ، وقيل: عبد الله بن عامر، وقيل: عبد الله بن عمرو، وقيل : سكين بن وذمة، وقيل: سكين بن هانئ، وقيل: سكين بن مل، وقيل: سكين بن صخر، وقيل: عامر بن عبد شمس، وقيل: عامر بن عمير، وقيل: برير بن عشرقة، وقيل: عبد نهم، وقيل: عبد شمس، وقيل: غنم، وقيل: عبيد بن غنم، وقيل: عمرو بن غنم، وقيل: عمرو بن عامر، وقيل: سعيد بن الحارث، وقيل غير ذلك، وقال هشام بن محمد الكلبي اسمه: عمير بن عامر بن ذي الشري بن طريف بن عيان بن أبي صعب بن هنية بن سعد بن ثعلبة بن سليم بن فهم بن غنم بن دوس بن عدثان بن عبد الله بن زهران بن كعب بن الحارث بن كعب بن عبد الله بن مالك بن نصر بن الأزد، وهكذا قال خليفة بن خياط في نسبه إلا أنه قال عتاب بدل عيان، ويقال: كان اسمه في الجاهلية عبد شمس فسماه رسول الله ﷺ عبد الله
+         <p/><p>
+            <b>النسب</b>:
+الدوسي، اليماني
+         <p/><p>
+            <b>الكنية</b>:
+أبو هريرة، ويقال كانت كنيته في الجاهلية: أبو الأسود
+         <p/><p>
+            <b>الوفاة</b>:
+57 أو 58 أو: 59 هـ بالعقيق
+         <p/><p>•
+الصحابي الجليل، حافظ الصحابة، كان حافظا متثبتا ذكيا مفتيا، صاحب صيام وقيام، قال عكرمة: كان يسبح في اليوم 12000 تسبيحة. روي 5374 حديثاً.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="7b"><p>
+            <b>Name</b>:
+Abdurrahman bin Sakhr
+         <p/><p>
+            <b>Nasab</b>:
+Dausi, Yemeni
+         <p/><p>
+            <b>Kunya</b>:
+Abu Huraira, and it is said that his Kunya in Jahiliyya was Abu al-Aswad
+         <p/><p>
+            <b>Death</b>:
+57 or 58 or 59 H. in Aqiq
+         <p/><p>•
+A grand companion, the memorizer of the companions, he was of strong memory, firm, intelligent and a Mufti, it was said he used to make Tasbiha 12000 times a day. Narrated 5374 Hadith.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="7c"><p>
+            <b>ނަން</b>:
+ޢަބްދުއްރަޙްމާން ބިން ޞަޚްރު
+         <p/><p>
+            <b>ނަސަބު</b>:
+ދައުސީ، ޔަމަނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ހުރައިރާ، އަދި ބުނެވޭ ގޮތުގައި ޖާހިލިއްޔަތުގައި ކުންޔާއަކީ އަބުލް އަސްވަދް
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 57 ނުވަތަ 58 ނުވަތަ 59 ވަނަ އަހަރު، ޢަޤީޤުގައި.
+         <p/><p>•
+މަތިވެރި ޞަޙާބީއެއް، ޞަޙާބީންގެ ހާފިޒު، ހިތުދަސް ކުރުމުގެ ބާރު ގަދަ، ސާބިތު، ވިސްނުން ތޫނު، މުފްތީއެއް، ބުނެވޭ ގޮތުގައި ދުވާލަކު 12000 ފަހަރު ތަސްބީހަ ވިދާޅުވިއެވެ. 5374 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === AL HASAN Modal === -->
+  <div class="modal fade" id="rHasn">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+الحسن بن علي
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#8a" data-toggle="tab">عربي</a></li>
+    <li><a href="#8b" data-toggle="tab">En</a></li>
+    <li><a href="#8c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="8a"><p>
+            <b>الاسم</b>:
+الحسن بن علي بن أبي طالب بن عبد المطلب بن هاشم
+         <p/><p>
+            <b>النسب</b>:
+الهاشمي، القرشي، المدني
+         <p/><p>
+            <b>الكنية</b>:
+أبو محمد
+         <p/><p>
+            <b>الميلاد</b>:
+3 وقيل: 4، وقيل: 5 هـ بالمدينة
+         <p/><p>
+            <b>الوفاة</b>:
+قيل: 44 وقيل: 48 وقيل: 49 وقيل: 50 وقيل: 51 وقيل: 56 وقيل: 58 وقيل: 59 هـ بالمدينة
+         <p/><p>•
+سبط رسول الله ﷺ وريحانته، وقد صحبه وحفظ عنه
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="8b"><p>
+            <b>Name</b>:
+al-Hasan bin Ali bin Abu Talib bin Abdul Muttalib bin Hashim
+         <p/><p>
+            <b>Nasab</b>:
+Hashimi, Qurashi, Madani
+         <p/><p>
+            <b>Kunya</b>:
+Abu Muhammad
+         <p/><p>
+            <b>Death</b>:
+44 or 48 or 49 or 50 or 51 or 56 or 58 or 59 H. in Madina
+         <p/><p>•
+The grandson of the Prophet, and his beloved sweet basil, son of Ali and Fatima, he was a companion and memorized narrations from the Prophet.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="8c"><p>
+            <b>ނަން</b>:
+އަލްޙަސަން ބިން ޢަލީ ބިން އަބޫ ޠާލިބު ބިން ޢަބްދުލް މުއްޠަލިބު ބިން ހާޝިމް
+         <p/><p>
+            <b>ނަސަބު</b>:
+ހާޝިމީ، ޤުރަޝީ، މަދަނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ މުޙައްމަދު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 44 ނުވަތަ 48 ނުވަތަ 49 ނުވަތަ 50 ނުވަތަ 51 ނުވަތަ 56 ނުވަތަ 58 ނުވަތަ 59 ވަނަ އަހަރު، ޢަޤީޤުގައި.
+         <p/><p>•
+ނަބިއްޔާގެ ލޯބިފުޅުވާ މަލެއް ފަދަ ކާފަދަރިކަލެއް، ޢަލީއާއި ފާޠިމާގެ ދަރިފުޅު، ނަބިއްޔާގެ އަރިހުން ޙަދީޘް ދަސްކުރެއްވި ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === ANAS BIN MALIK Modal === -->
+  <div class="modal fade" id="rAnas">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+أنس بن مالك
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#9a" data-toggle="tab">عربي</a></li>
+    <li><a href="#9b" data-toggle="tab">En</a></li>
+    <li><a href="#9c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="9a"><p>
+            <b>الاسم</b>:
+أنس بن مالك بن النضر بن ضمضم بن زيد بن حرام بن جندب بن عامر بن غنم بن عدي بن النجار
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، الخزرجي، النجاري، المدني
+         <p/><p>
+            <b>اللقب</b>:
+ذو الأذنين
+         <p/><p>
+            <b>الكنية</b>:
+أبو حمزة، أبو النضر، أبو ثمامة
+         <p/><p>
+            <b>الميلاد</b>:
+في السنة 4 من نبوة بالمدينة
+         <p/><p>
+            <b>الوفاة</b>:
+90 أو 91 أو 92 أو 93 هـ بالبصرة
+         <p/><p>•
+صحابي مشهور
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="9b"><p>
+            <b>Name</b>:
+Anas bin Malik bin Nadlr bin Dlamdlam bin Zaid bin Haram bin Jundub bin 'Amir bin Ghanam bin 'Adiy bin Najjar
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khazraji, Najjari, Madani
+         <p/><p>
+            <b>Title</b>:
+zul-Uzunain
+         <p/><p>
+            <b>Kunya</b>:
+Abu Hamza, Abu Nadlr, Abu Samaama
+         <p/><p>
+            <b>Birth</b>:
+4th year of Prophethood in Madina
+         <p/><p>
+            <b>Death</b>:
+90 or 91 or 92 H. in Basra
+         <p/><p>•
+A famous companion.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="9c"><p>
+            <b>ނަން</b>:
+އަނަސް ބިން މާލިކު ބިން ނަޟްރު ބިން ޒައިދު ބިން ޙަރާމް ބިން ޖުންދުބް ބިން ޢާމިރު ބިން ޣަނަމް ބިން ޢަދިއްޔު ބިން ނައްޖާރު
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚަޒްރަޖީ، ނައްޖާރީ، މަދަނީ
+   <p/><p>
+            <b>ލަޤަބު</b>:
+ޒުލް އުޛުނައިން
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ހަމްޒާ، އަބޫ ނަޟްރު، އަބޫ ސަމާމާ
+         <p/><p>
+            <b>އުފަންވީ</b>:
+ނަބީކަމައިގެން އަތުވިތާ 4 ވަނަ އަހަރު، މަދީނާގައި.
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 90 ނުވަތަ 91 ނުވަތަ 92 ވަނަ އަހަރު، ބަޞްރާގައި.
+         <p/><p>•
+މަޝްހޫރު ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === SHADDAD BIN AUS Modal === -->
+  <div class="modal fade" id="rShad">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+شداد بن أوس
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#10a" data-toggle="tab">عربي</a></li>
+    <li><a href="#10b" data-toggle="tab">En</a></li>
+    <li><a href="#10c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="10a"><p>
+            <b>الاسم</b>:
+شداد بن أوس بن ثابت بن المنذر بن حرام
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، المدني، الخزرجي، النجاري، الحدلي
+         <p/><p>
+            <b>الكنية</b>:
+أبو يعلى، ويقال: أبو عبد الرحمن
+         <p/><p>
+            <b>الميلاد</b>:
+بالمدينة
+         <p/><p>
+            <b>الوفاة</b>:
+41 أو 54 أو 58 أو 64 هـ بالشام، بيت المقدس
+         <p/><p>•
+صحابي
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="10b"><p>
+            <b>Name</b>:
+Shaddad bin Aus bin Sabith bin Munzir bin Haraam
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khazraji, Najjari, Madani, Maqdisi
+         <p/><p>
+            <b>Kunya</b>:
+Abu Ya'la, and it was said Abu Abdurrahman
+         <p/><p>
+            <b>Birth</b>:
+Madina
+         <p/><p>
+            <b>Death</b>:
+41 or 54 or 58 or 64 H. in Sham, Jerusalem
+         <p/><p>•
+A companion.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="10c"><p>
+            <b>ނަން</b>:
+ޝައްދާދު ބިން އައުސް ބިން ޘާބިތު ބިން މުންޛިރު ބިން ޙަރާމް
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚަޒްރަޖީ، ނައްޖާރީ، މަދަނީ، މަޤްދީސީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޔަޢުލާ، އަދި ބުނެވޭ ގޮތުގައި އަބޫ އަބްދުއްރަޙްމާން
+         <p/><p>
+            <b>އުފަންވީ</b>:
+މަދީނާގައި.
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 41 ނުވަތަ 54 ނުވަތަ 58 ނުވަތަ 64 ވަނަ އަހަރު، ބައިތުލް މަޤްދިސްގައި، ޝާމް.
+         <p/><p>•
+ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === ABU ZARR Modal === -->
+  <div class="modal fade" id="rAzar">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+أبو ذر
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#11a" data-toggle="tab">عربي</a></li>
+    <li><a href="#11b" data-toggle="tab">En</a></li>
+    <li><a href="#11c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="11a"><p>
+            <b>الاسم</b>:
+   أبو ذر، قيل اسمه: جندب بن جنادة بن قيس بن عمرو بن مليل بن صعير بن حرام بن عفان، وقيل اسمه: برير بن جنادة ،وقيل: ابن جندب، وقيل: ابن عشرقة، وقيل: ابن جندب بن عبد الله، وقيل: ابن السكن
+         <p/><p>
+            <b>النسب</b>:
+الغفاري
+         <p/><p>
+            <b>الكنية</b>:
+أبو ذر
+         <p/><p>
+            <b>الوفاة</b>:
+31 هـ أو 32 هـ بالربذة
+         <p/><p>•
+صحابي
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="11b"><p>
+            <b>Name</b>:
+Jundub bin Junadah bin Qais bin 'Amr bin Mulail bin Sair bin Haraam bin 'Affan
+         <p/><p>
+            <b>Nasab</b>:
+Ghifari
+         <p/><p>
+            <b>Kunya</b>:
+Abu Zarr
+         <p/><p>
+            <b>Death</b>:
+31 or 32 H. in Rabaza
+         <p/><p>•
+A companion.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="11c"><p>
+            <b>ނަން</b>:
+ޖުންދުބް ބިން ޖުނާދާ ބިން ޤައިސް ބިނ ޢަމްރު ބިން މުލައިލް ބިން ޞަޢީރު ބިން ޙަރާމް ބިން ޢައްފާން
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޣިފާރީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޛައްރު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 31 ނުވަތަ 32 ވަނަ އަހަރު، ރަބަޛާގައި.
+         <p/><p>•
+ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === Muaz bin Jabal Modal === -->
+  <div class="modal fade" id="rZarr">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+معاذ بن جبل
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#11a" data-toggle="tab">عربي</a></li>
+    <li><a href="#12b" data-toggle="tab">En</a></li>
+    <li><a href="#12c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="12a"><p>
+            <b>الاسم</b>:
+   معاذ بن جبل بن عمرو بن أوس بن عائذ ابن عدي بن كعب بن عمرو بن أدي بن سعد بن علي بن أسد بن ساردة بن يزيد بن جشم بن عدي بن نابي بن غنم بن كعب بن سلمة
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، الخزرجي، المدني، السلمي
+         <p/><p>
+            <b>الكنية</b>:
+أبو عبد الرحمن
+         <p/><p>
+            <b>الوفاة</b>:
+17 أو 18 هـ. قال بن حبان فى الثقات: الأردن، وقال الحافظ فى التقريب: الشام
+         <p/><p>•
+مشهور، من أعيان الصحابة
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="12b"><p>
+            <b>Name</b>:
+Muaz bin Jabal bin 'Amr bin Aus bin 'Aiz bin 'Adi bin Ka'b bin 'Amr bin Udaiy bin Sa'd bin Ali bin Asad bin Sarida bin Yazid bin Jashm bin 'Adiy bin Naabi bin Ghanam bin Ka'b bin Salama
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khazraji, Madani, Salami
+         <p/><p>
+            <b>Kunya</b>:
+Abu Abdurrahman
+         <p/><p>
+            <b>Death</b>:
+17 or 18 H. in Jordan or Sham
+         <p/><p>•
+Well known, from the senior companions
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="12c"><p>
+            <b>ނަން</b>:
+މުޢާޛް ބިން ޖަބަލް ބިން އައުސް ބިން ޢާއިޛް ބިން ޢަދީ ބިން ކަޢުބް ބިނ ޢަމްރު ބިން ޢުދައްޔި ބިން ސަޢުދް ބިން ޢަލީ ބިން އަސަދް ބިނ ސާރިދާ ބިނ ޔަޒީދު ބިން ޖަޝްމު ބިން ޢަދިއްޔު ބިން ނާބީ ބިން ޢަނަމް ބިނ ކަޢުބް ބިނ ސަލަމާ
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚަޒްރަޖީ، މަދަނީ، ސަލަމީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ އަބްދުއްރަޙްމާން
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 17 ނުވަތަ 18 ވަނަ އަހަރު، އުރުދުން ނުވަތަ ޝާމްގައި.
+         <p/><p>•
+މަޝްހޫރު، އަރިސް ޞަޙާބީއެއް
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Muaz bin Jabal Modal === -->
+  <div class="modal fade" id="rMuaz">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+معاذ بن جبل
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#11a" data-toggle="tab">عربي</a></li>
+    <li><a href="#12b" data-toggle="tab">En</a></li>
+    <li><a href="#12c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="12a"><p>
+            <b>الاسم</b>:
+   معاذ بن جبل بن عمرو بن أوس بن عائذ ابن عدي بن كعب بن عمرو بن أدي بن سعد بن علي بن أسد بن ساردة بن يزيد بن جشم بن عدي بن نابي بن غنم بن كعب بن سلمة
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، الخزرجي، المدني، السلمي
+         <p/><p>
+            <b>الكنية</b>:
+أبو عبد الرحمن
+         <p/><p>
+            <b>الوفاة</b>:
+17 أو 18 هـ. قال بن حبان فى الثقات: الأردن، وقال الحافظ فى التقريب: الشام
+         <p/><p>•
+مشهور، من أعيان الصحابة
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="12b"><p>
+            <b>Name</b>:
+Muaz bin Jabal bin 'Amr bin Aus bin 'Aiz bin 'Adi bin Ka'b bin 'Amr bin Udaiy bin Sa'd bin Ali bin Asad bin Sarida bin Yazid bin Jashm bin 'Adiy bin Naabi bin Ghanam bin Ka'b bin Salama
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khazraji, Madani, Salami
+         <p/><p>
+            <b>Kunya</b>:
+Abu Abdurrahman
+         <p/><p>
+            <b>Death</b>:
+17 or 18 H. in Jordan or Sham
+         <p/><p>•
+Well known, from the senior companions
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="12c"><p>
+            <b>ނަން</b>:
+މުޢާޛް ބިން ޖަބަލް ބިން އައުސް ބިން ޢާއިޛް ބިން ޢަދީ ބިން ކަޢުބް ބިން ޢަމްރު ބިން ޢުދައްޔި ބިން ސަޢުދް ބިން ޢަލީ ބިން އަސަދް ބިން ސާރިދާ ބިން ޔަޒީދު ބިން ޖަޝްމު ބިން ޢަދިއްޔު ބިން ނާބީ ބިން ޢަނަމް ބިނ ކަޢުބް ބިން ސަލަމާ
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚަޒްރަޖީ، މަދަނީ، ސަލަމީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ އަބްދުއްރަޙްމާން
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 17 ނުވަތަ 18 ވަނަ އަހަރު، އުރުދުން ނުވަތަ ޝާމްގައި.
+         <p/><p>•
+މަޝްހޫރު، އަރިސް ޞަޙާބީއެއް
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Ibn Abbas Modal === -->
+  <div class="modal fade" id="rIAbb">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+ابن عبّاس
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#13a" data-toggle="tab">عربي</a></li>
+    <li><a href="#13b" data-toggle="tab">En</a></li>
+    <li><a href="#13c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="13a"><p>
+            <b>الاسم</b>:
+عبد الله بن عباس بن عبد المطلب بن هاشم بن عبد مناف
+         <p/><p>
+            <b>النسب</b>:
+الهاشمي ، القرشي ، المدني
+         <p/><p>
+            <b>اللقب</b>:
+البحر، حبر الأمة
+         <p/><p>
+            <b>الكنية</b>:
+أبو العباس
+         <p/><p>
+            <b>الميلاد</b>:
+قبل الهجرة ب 3 سنين، أو 4، وقيل: 5، والأول أثبت
+         <p/><p>
+            <b>الوفاة</b>:
+65 أو 67 أو 68 هـ، وقيل : 69، وقيل: 70 وقيل: 73 هـ بالطائف
+         <p/><p>•
+أحد المكثرين من الصحابة، ترجمان القرآن، روي 1660 حديثاً.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="13b"><p>
+            <b>Name</b>:
+Abdulla bin Abbas bin Abdul Muttalib bin Hashim bin Manaf
+         <p/><p>
+            <b>Nasab</b>:
+Hashimi, Qurashi, Madani
+         <p/><p>
+            <b>Kunya</b>:
+Abu al-Abbas
+         <p/><p>
+            <b>Birth</b>:
+3 or 4 or 5 years before the Hijra.
+         <p/><p>
+            <b>Death</b>:
+65 or 67 or 68 or 69 or 70 or 73 H. in Taif
+         <p/><p>•
+One of those who narrated a lot Hadith from the companions, the interpreter of the Quran. Narrated 1660 Hadith.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="13c"><p>
+            <b>ނަން</b>:
+ޢަބްދު ﷲ ބިން ޢައްބާސް ބިން ޢަބްދުލް މުއްޠަލިބް ބިން ހާޝިމް ބިން މަނާފް
+         <p/><p>
+            <b>ނަސަބު</b>:
+ހާޝިމީ، ޤުރަޝީ، މަދަނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ އަލްޢައްބާސް
+         <p/><p>
+            <b>އުފަންވީ</b>:
+ހިޖުރައިގެ 3 ނުވަތަ 4 ނުވަތަ 5 އަހަރު ކުރިން.
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 65 ނުވަތަ 67 ނުވަތަ 68 ނުވަތަ 69 ނުވަތަ 70 ނުވަތަ 73 ވަނަ އަހަރު، ޠާއިފުގައި.
+         <p/><p>•
+އެންމެ ގިނައިން ޙަދީޘް ރިވާ ކުރެއްވި އެކަކު، ޤުރުއާނުގެ ތަރުޖަމާނު. 1660 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === Uqba bin Amr Modal === -->
+  <div class="modal fade" id="rUqba">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عقبة بن عمرو
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#14a" data-toggle="tab">عربي</a></li>
+    <li><a href="#14b" data-toggle="tab">En</a></li>
+    <li><a href="#14c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="14a"><p>
+            <b>الاسم</b>:
+عقبة بن عمرو بن ثعلبة بن أسيرة بن عسيرة بن عطية بن جدارة بن عوف بن الحارث بن الخزرج
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، البدري، النجاري
+         <p/><p>
+            <b>الكنية</b>:
+أبو مسعود
+         <p/><p>
+            <b>الوفاة</b>:
+40 هـ، أو قبلها أو بعدها، أو 41 أو 42 هـ بالكوفة، وقيل: بالمدينة
+         <p/><p>•
+صحابي جليل، شهد العقبة الثانية
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="14b"><p>
+            <b>Name</b>:
+'Uqba bin 'Amr bin Sa'laba bin Usaira bin 'Aseera bi 'Utayya bin Jidara bin 'Auf bin al-Harith bin al-Khazraj
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Badri, Najjari
+         <p/><p>
+            <b>Kunya</b>:
+Abu Mas'ood
+         <p/><p>
+            <b>Death</b>:
+40 or 41 or 42 H. in Kufa or Madina
+         <p/><p>•
+A grand companion, witnessed the 2nd pledge of 'Aqaba
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="14c"><p>
+            <b>ނަން</b>:
+ޢުޤްބާ ބިން ޢަމްރު ބިން ޘަޢުލަބާ ބިނ އުސައިރާ ބިން ޢަސީރާ ބިނ ޢުޠައްޔާ ބިން ޖިދާރާ ބިން ޢައުފް ބިން އަލްހާރިޘް ބިން އްލަޚަޒްރަޖް
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ބަދްރީ، ނައްޖާރީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ އަލްޢައްބާސް
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 40 ނުވަތަ 41 ނުވަތަ 42 ވަނަ އަހަރު، ކޫފާ ނުވަތަ މަދީނާގައި.
+         <p/><p>•
+މަތިވެރި ޞަޙާބީއެއް، ދެވަނަ ބައިޢަތުލް ޢަޤަބާ ދެކެލެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Sufyan bin Abdullah Modal === -->
+  <div class="modal fade" id="rSufA">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عقبة بن عمرو
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#15a" data-toggle="tab">عربي</a></li>
+    <li><a href="#15b" data-toggle="tab">En</a></li>
+    <li><a href="#15c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="15a"><p>
+            <b>الاسم</b>:
+سفيان بن عبد الله بن ربيعة بن الحارث، ويقال: سفيان بن عبد الله بن حطيط
+         <p/><p>
+            <b>النسب</b>:
+الثقفي، الطائفي، البصري
+         <p/><p>
+            <b>الكنية</b>:
+أبو عمرو، ويقال: أبو عمرة 
+         <p/><p>
+            <b>الوفاة</b>:
+بين 41 إلى 50 هـ
+         <p/><p>•
+صحابي
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="15b"><p>
+            <b>Name</b>:
+Sufyan bin Abdullah bin Rabi'a bin al-Harith
+         <p/><p>
+            <b>Nasab</b>:
+Saqafi, Taifi, Basri
+         <p/><p>
+            <b>Kunya</b>:
+Abu 'Amr, or Abu 'Amra
+         <p/><p>
+            <b>Death</b>:
+Between 41 and 50 H.
+         <p/><p>•
+A companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="15c"><p>
+            <b>ނަން</b>:
+ސުފްޔާން ބިން ޢަބްދު ﷲ ބިން ރަބީޢާ ބިން އަލްޙާރިޘް
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޘަޤަފީ، ޠާއިފީ، ބަޞްރީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޢަމްރު، ނުވަތަ އަބޫ ޢަމްރާ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 41 އާއި 50 ވަނަ އަހަރާ ދެމެދު.
+         <p/><p>•
+ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Jabir bin Abdullah Modal === -->
+  <div class="modal fade" id="rJbr">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+جابر بن عبد الله
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#16a" data-toggle="tab">عربي</a></li>
+    <li><a href="#16b" data-toggle="tab">En</a></li>
+    <li><a href="#16c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="16a"><p>
+            <b>الاسم</b>:
+جابر بن عبد الله بن عمرو بن حرام بن ثعلبة بن كعب بن غنم بن كعب بن سلمة بن سعد بن علي بن أسد بن ساردة بن تزيد بن جشم بن الخزرج
+         <p/><p>
+            <b>النسب</b>:
+الخزرجي، الأنصاري، السلمي، المدني، عقبي
+         <p/><p>
+            <b>الكنية</b>:
+أبو عبد الله، ويقال: أبو عبد الرحمن، ويقال: أبو محمد 
+         <p/><p>
+            <b>الوفاة</b>:
+68 أو 72 أو 73 أو 77 أو 78 أو 79 هـ بالمدينة
+         <p/><p>•
+صحابي، روي 1540 حديثاً.
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="16b"><p>
+            <b>Name</b>:
+Jabir bin Abdullah bin 'Amr bin Haraam bin Sa'laba bin Ka'b bin Ghanam bin Ka'b bin Salama bin Sa'd bin Ali bin Asad bin Saadira bin Thazid bin Jashm bin al-Khazraj
+         <p/><p>
+            <b>Nasab</b>:
+Khazraji, Ansari, Salami, Madani, 'Aqabi
+         <p/><p>
+            <b>Kunya</b>:
+Abu Abdulla, or Abu Abdurrahman, or Abu Muhammad
+         <p/><p>
+            <b>Death</b>:
+68 or 72 or 73 or 77 or 78 or 79 H.
+         <p/><p>•
+A companion. Narrated 1540 Hadith.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="16c"><p>
+            <b>ނަން</b>:
+ޖާބިރު ބިން ޢަބްދު ﷲ ބިން ޢަމްރު ބިން ޙަރާމް ބިން ޘަޢުލަބާ ބިން ކަޢުބް ބިން ޣަނަމް ބިން ސަލަމާ ބިން ސަޢުދް ބިން ޢަލީ ބިން އަސަދް ބިން ސާދިރާ ބިން ތަޒީދު ބިނ ޖަޝްމު ބިން އަލްޚަޒްރަޖު
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޚަޒްރަޖީ، އަންޞާރީ، ސަލަމީ، މަދަނީ، ޢަޤަބީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޢަމްރު، ނުވަތަ އަބޫ ޢަމްރާ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 68 ނުވަތަ 72 ނުވަތަ 73 ނުވަތަ 77 ނުވަތަ 78 ނުވަތަ 79 ވަނަ އަހަރާ ދެމެދު.
+         <p/><p>•
+ޞަޙާބީއެއް. 1540 ޙަދީޘް ރިވާކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abu Malik al-Harith bin 'Asim al-Ash'ari Modal === -->
+  <div class="modal fade" id="rAMal">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+أبو مالك الأشعري
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#17a" data-toggle="tab">عربي</a></li>
+    <li><a href="#17b" data-toggle="tab">En</a></li>
+    <li><a href="#17c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="17a"><p>
+            <b>الاسم</b>:
+: قيل: الحارث بن الحارث، وقيل: عبيد، وقيل: عبيد الله، وقيل: عمرو، وقيل كعب بن عاصم، وقيل: كعب بن كعب  وقيل: عامر بن الحارث بن هانئ بن كلثوم
+         <p/><p>
+            <b>النسب</b>:
+الأشعري
+         <p/><p>
+            <b>الكنية</b>:
+أبو مالك، أبو عامر
+         <p/><p>
+            <b>الوفاة</b>:
+18 هـ بالعمواس
+         <p/><p>•
+صحابي
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="17b"><p>
+            <b>Name</b>:
+al-Harith bin 'Asim
+         <p/><p>
+            <b>Nasab</b>:
+Ash'ari
+         <p/><p>
+            <b>Kunya</b>:
+Abu Malik, or Abu 'Amir
+         <p/><p>
+            <b>Death</b>:
+18 H.
+         <p/><p>•
+A companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="17c"><p>
+            <b>ނަން</b>:
+އަލްހާރިޘް ބިން ޢާޞިމް
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޢަޝަރީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ މާލިކު، ނުވަތަ އަބޫ ޢާމިރު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 18 ވަނަ އަހަރު، ޢަމްވާސްގައި
+         <p/><p>•
+ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Nawwas bin Sam'an Modal === -->
+  <div class="modal fade" id="rNwws">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+النواس بن سمعان
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#18a" data-toggle="tab">عربي</a></li>
+    <li><a href="#18b" data-toggle="tab">En</a></li>
+    <li><a href="#18c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="18a"><p>
+            <b>الاسم</b>:
+النواس بن سمعان بن خالد بن عبد الله بن عمرو بن قرط بن عبد الله بن أبي بكر بن كلاب بن ربيعة بن عامر بن صعصعة
+         <p/><p>
+            <b>النسب</b>:
+الكلابي، ويقال: الأنصاري، العامري، الشامي
+         <p/><p>
+            <b>الوفاة</b>:
+41 هـ : 50 هـ
+         <p/><p>•
+صحابي ، مشهور
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="18b"><p>
+            <b>Name</b>:
+an-Nawwas bin Sam'an bin Khalid bin Abdulla bin 'Amru bin Qarat bin Abdulla bin Abu Bakr bin Kilab bin Rabi'a bin 'Amir bin Sa'sa'
+         <p/><p>
+            <b>Nasab</b>:
+         <p/><p>
+Kilabi, Ansari, Amiri, Shami
+            <b>Death</b>:
+41 : 50 H.
+         <p/><p>•
+A famous companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="18c"><p>
+            <b>ނަން</b>:
+އައްނައްވާސް ބިން ޞަމްޢާނު ބިން ޚާލިދު ބިން ޢަބްދު ﷲ ބިން ޢަމްރު ބިން ޤަރަޠު ބިން ޢަބްދު ﷲ ބިން އަބޫ ބަކުރު ބިން ކިލާބު ބިން ރަބީޢާ ބިން ޢާމިރު ބިން ޞްޢަޞްޢަ
+         <p/><p>
+            <b>ނަސަބު</b>:
+ކިލާބީ، އަންޞާރީ، އާމިރީ، ޝާމީ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 41 : 50 ވަނަ އަހަރު.
+         <p/><p>•
+މަޝްހޫރު ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Wabisa bin Ma'bad Modal === -->
+  <div class="modal fade" id="rWabs">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+وابصة بن معبد
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#19a" data-toggle="tab">عربي</a></li>
+    <li><a href="#19b" data-toggle="tab">En</a></li>
+    <li><a href="#19c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="19a"><p>
+            <b>الاسم</b>:
+   وابصة بن معبد بن عتبة بن الحارث بن مالك بن الحارث بن قيس، ويقال: بشير بن كعب بن سعد بن الحارث بن ثعلبة بن دودان بن أسد بن خزيمة بن مدركة بن إلياس بن مضر بن نزار بن معد بن عدنان، ويقال: وابصة بن عبيدة
+         <p/><p>
+            <b>النسب</b>:
+الأسدي، الرقي
+         <p/><p>
+            <b>الكنية</b>:
+أبو سالم، ويقال: أبو الشعثاء، ويقال أبو سعيد، وقال ابن عبد البر: يكنى أبا شداد، ويقال: أبو فرصافة
+         <p/><p>
+            <b>الوفاة</b>:
+قرب 90 هـ، بالرقة، الجزيرة 
+         <p/><p>•
+صحابي
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="19b"><p>
+            <b>Name</b>:
+Wabisa bin Ma'bad bin 'Utba bin Malik bin al-Harith bin Qais
+         <p/><p>
+            <b>Nasab</b>:
+Asadi, Raqqi
+         <p/><p>
+            <b>Kunya</b>:
+Abu Salim
+         <p/><p>
+            <b>Death</b>:
+Close to 90 H. at Raqqa, Syria
+         <p/><p>•
+A companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="19c"><p>
+            <b>ނަން</b>:
+ވާބިޞާ ބިން މަޢުބަދް ބިން ޢުތުބާ ބިން މާލިކް ބިން އަލްހާރިޘް ބިން ޤައިސް
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަސަދީ، ރައްޤީ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 90 ވަނަ އަހަރާ ގާތްކޮށް، ރައްޤާ، ސީރިޔާގައި.
+         <p/><p>•
+ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+<!-- === 'Irbadl bin Sariya Modal === -->
+  <div class="modal fade" id="rIrb">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+عرباض بن سارية
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#20a" data-toggle="tab">عربي</a></li>
+    <li><a href="#20b" data-toggle="tab">En</a></li>
+    <li><a href="#20c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="20a"><p>
+            <b>الاسم</b>:
+عرباض بن سارية
+         <p/><p>
+            <b>النسب</b>:
+السلمي، الحمصي، الفزاري
+         <p/><p>
+            <b>الكنية</b>:
+أبو نجيح، أبو الحارث
+         <p/><p>
+            <b>الوفاة</b>:
+75 هـ
+         <p/><p>•
+صحابي، من البكائين ومن أهل الصفة
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="20b"><p>
+            <b>Name</b>:
+'Irbadl bin Saariya
+         <p/><p>
+            <b>Nasab</b>:
+Salami, Homsi, Fazari
+         <p/><p>
+            <b>Kunya</b>:
+Abu Najeeh or Abu al-Harith
+         <p/><p>
+            <b>Death</b>:
+75 H.
+         <p/><p>•
+A companion, from those who cried a lot, from Ahl as-Suffa.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="20c"><p>
+            <b>ނަން</b>:
+އަލްއިރްބާޟް ބިން ސާރިޔާ
+         <p/><p>
+            <b>ނަސަބު</b>:
+ސަލަމީ، ހުމްސީ، ފަޒަރީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ނަޖީހު ނުވަތަ އަބޫ އަލްހާރިޘް
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 75 ވަނަ އަހަރުގައި.
+         <p/><p>•
+ޞަޙާބީއެއް، ވަރަށް ގިނައިން ކިރިތި ކުރައްވާ، ސުއްފާގެ އަހުލުވެރިންގެ ތެރެއިން ހިމެނޭ.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abu Sa'laba al-Khushani Modal === -->
+  <div class="modal fade" id="rKhsh">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+أبو ثعلبة
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#21a" data-toggle="tab">عربي</a></li>
+    <li><a href="#21b" data-toggle="tab">En</a></li>
+    <li><a href="#21c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="21a"><p>
+            <b>الاسم</b>:
+قيل: اسمه جرثوم أو جرثومة أو جرثم أو جرهم أو لاشر أو لاش أو الاشق أو لا شومة، أو ناشب أو باشر أو غرنوق أو شق أو زيد أو الأسود
+         <p/><p>
+            <b>النسب</b>:
+الخشني
+         <p/><p>
+            <b>الكنية</b>:
+أبو ثعلبة
+         <p/><p>
+            <b>الوفاة</b>:
+75 هـ أو في أول خلافة معاوية كذا قال، والمعروف خلافه، بالشام
+         <p/><p>•
+صحابي
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="21b"><p>
+            <b>Name</b>:
+Jursoom bin Nashir
+         <p/><p>
+            <b>Nasab</b>:
+Khushani
+         <p/><p>
+            <b>Kunya</b>:
+Abu Sa'laba
+         <p/><p>
+            <b>Death</b>:
+75 H. in Sham.
+         <p/><p>•
+A companion.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="21c"><p>
+            <b>ނަން</b>:
+ޖުރްސޫމް ބިން ނާޝިރު
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޚުޝަނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ޘަޢުލަބާ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 75 ވަނަ އަހަރު ޝާމްގައި.
+         <p/><p>•
+ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abu al-Abbas Sahl bin Sa'd === -->
+  <div class="modal fade" id="rSahl">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>
+سهل بن سعد 
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#22a" data-toggle="tab">عربي</a></li>
+    <li><a href="#22b" data-toggle="tab">En</a></li>
+    <li><a href="#22c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="22a"><p>
+            <b>الاسم</b>:
+سهل بن سعد بن مالك بن خالد بن ثعلبة بن حارثة بن عمرو بن الخزرج بن ساعدة بن كعب بن الخزرج، ويقال: سهل بن سعد بن سعد بن مالك، والأول أصح
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، الخزرجي، الساعدي، المدني
+         <p/><p>
+            <b>الكنية</b>:
+أبو العباس، ويقال: أبو يحيى
+         <p/><p>
+            <b>الميلاد</b>:
+قبل الهجرة ب 5 سنين
+         <p/><p>
+            <b>الوفاة</b>:
+88 أو 91 أو 96 هـ بالمدينة أو مصر أو الإسكندرية  
+         <p/><p>•
+له ولأبيه صحبة
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="22b"><p>
+            <b>Name</b>:
+Sahl bin Sa'd bin Malik bin Khalid bin Sa'laba bin Haarisa bin 'Amr bin al-Khazraj bin Saa'ida bin Ka'b bin al-Khazraj
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khazraji, Saa'idi, Madani
+         <p/><p>
+            <b>Kunya</b>:
+Abu al-Abbas or Abu Yahya
+         <p/><p>
+            <b>Death</b>:
+88 or 91 or 96 H. in Madina or Egypt
+         <p/><p>•
+He and both his parents were companions.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="22c"><p>
+            <b>ނަން</b>:
+ސަހްލު ބިން ސަޢުދް ބިން މާލިކު ބިން ޚާލިދު ބިން ޘަޢުލަބާ ބިން ހާރިޘާ ބިން ޢަމްރު ބިން އަލްޚަޒްރަޖް ބިން ސާޢަދާ ބިން ކަޢުބް ބިން އަލްޚަޒްރަޖް
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚަޒްރަޖީ، ސާޢިދީ، މަދަނީ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 88 ނުވަތަ 91 ނުވަތަ 96 ވަނަ އަހަރު.
+         <p/><p>•
+ސަހްލުއާއި ސަހްލުގެ ދެބަފައިކަލުންނަކީ ވެސް ޞަޙާބީންނެވެ.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abu Sa'eed al-Khudri Modal === -->
+  <div class="modal fade" id="rKhud">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>أبو سعيد الخدري
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#23a" data-toggle="tab">عربي</a></li>
+    <li><a href="#23b" data-toggle="tab">En</a></li>
+    <li><a href="#23c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="23a"><p>
+            <b>الاسم</b>:
+سعد بن مالك بن سنان بن عبيد بن ثعلبة بن عبيد بن الأبجر: خدرة بن عوف بن الحارث بن الخزرج بن حارثة بن ثعلبة بن عمرو بن عامر
+         <p/><p>
+            <b>النسب</b>:
+الأنصاري، الخدري، الخزرجي
+         <p/><p>
+            <b>الكنية</b>:
+أبو سعيد
+         <p/><p>
+            <b>الوفاة</b>:
+63 هـ أو 64 هـ أو 65 هـ أو 74 هـ بالمدينة
+         <p/><p>•
+له ولأبيه صحبة، من أصحاب الشجرة، فقيه نبيل. روي 1170 حديثاً
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="23b"><p>
+            <b>Name</b>:
+Sa'd bin Malik bin Sinan bin Ubaid bin Sa'laba bin Ubaid bin al-Abjar
+         <p/><p>
+            <b>Nasab</b>:
+Ansari, Khudri, Khazraji
+         <p/><p>
+            <b>Kunya</b>:
+Abu Sa'eed
+         <p/><p>
+            <b>Death</b>:
+63 or 64 or 65 or 74 H. in Madina
+         <p/><p>•
+He and both his parents were companions, he was from the companions of the tree, he was a noble Faqih. Narrated 1170 Hadith
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="23c"><p>
+            <b>ނަން</b>:
+ސަޢުދް ބިން މާލިކު ބިން ސިނާނު ބިން ޢުބައިދު ބިން ޘަޢުލަބާ ބިން ޢުބައިދު ބިން އަލްއަބްޖަރު
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަންޞާރީ، ޚުދްރީ، ޚަޒްރަޖީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ސަޢީދު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 63 ނުވަތަ 64 ނުވަތަ 65 ނުވަތަ 74 ވަނަ އަހަރު، މަދީނާގައި.
+         <p/><p>•
+ސަޢުދްއާއި ސަޢުދްގެ ދެބަފައިކަލުންނަކީ ވެސް ޞަޙާބީން، ސަޢުދް ވަނީ ގަހުގެ ޞަޙާބީންގެ ތެރެއިން، ސަޢުދްއަކީ މަތިވެރި ފަޤީހެއް. 1170 ޙަދީޘް ރިވާ ކުރެއްވި.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abdulla bin 'Amr bin al-'Aas Modal === -->
+  <div class="modal fade" id="rAbAs">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>عبد الله بن عمرو بن العاص
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#24a" data-toggle="tab">عربي</a></li>
+    <li><a href="#24b" data-toggle="tab">En</a></li>
+    <li><a href="#24c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="24a"><p>
+            <b>الاسم</b>:
+عبد الله بن عمرو بن العاص بن وائل بن هاشم بن سعيد بن سعد بن سهم بن عمرو بن هصيص بن كعب بن لؤي بن غالب
+         <p/><p>
+            <b>النسب</b>:
+القرشي، ثم السهمي
+         <p/><p>
+            <b>الكنية</b>:
+أبو محمد، وقيل: أبو عبد الرحمن، وقيل: أبو نصير
+         <p/><p>
+            <b>الوفاة</b>:
+63 أو 65 أو 68 أو 69 هـ وقيل 67 وقيل 73 وقيل 77 هـ بعجلان قرية من قرى الشام، أو مصر، وقيل: مات بمكة، وقيل : بالطائف وقيل: بفلسطين
+         <p/><p>•
+أحد السابقين، المكثرين من الصحابة، وأحد العبادلة الفقهاء. أسلم قبيل أبيه، وكان من العلماء العباد، روي 700 حديثاً
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="24b"><p>
+            <b>Name</b>:
+Abdulla bin 'Amr bin al-'Aas bin Waail bin Hashim bin Sa'eed bin Sa'd bin Sahm bin 'Amr bin Hasis bin Ka'b bin Luaiy bin Ghalib
+         <p/><p>
+            <b>Nasab</b>:
+Qurashi, then Sahmi
+         <p/><p>
+            <b>Kunya</b>:
+Abu Muhammad, or Abu Abdurrahman, or Abu Nusair
+         <p/><p>
+            <b>Death</b>:
+63 or 65 or 68 or 67 or 69 or 73 or 77 H. in Madina or Egypt
+         <p/><p>•
+He was from the first and foremost of the Muslims, one of the companions who narrated many Hadith. One of the 4 Abdullah Fuqahas. He became Muslim before his father, he was one of the scholars and worshippers. Narrated 700 Hadith.
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="24c"><p>
+            <b>ނަން</b>:
+ޢަބްދު ﷲ ބިން ޢަމްރު ބިން އަލްޢާޞް ބިން ވާއިލް ބިން ހާޝިމް ބިން ސަޢީދު ބިން ސަޢުދް ބިން ސަހްމު ބިން ހަޞީޞް ބިން ކަޢުބް ބިން ލުއައި ބިން ޣާލިބް
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޤުރަޝީ، އެއަށްފަހު ސަހްމީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ މުޙައްމަދު ނުވަތަ އަބޫ އަބްދުއްރަޙްމާން ނުވަތަ އަބޫ ނުޞައިރު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 63 ނުވަތަ 65 ނުވަތަ 68 ނުވަތަ 69 ނުވަތަ 73 ނުވަތަ 77 ވަނަ އަހަރު، މަދީނާގައި.
+         <p/><p>•
+ފުރަތަމަ އިސްލާމްވީ މުސްލިމުންގެ ތެރެއިން ހިމެނުނު، ޞަޙާބީންގެ ތެރެއިން ވަރަ ގިނަ ޙަދީޘް ރިވާ ކުރެއްވި އެކަކު. 4 ފިޤްހުވެރި ޢަބްދު ﷲ އިންގެ ތެރެއިން ހިމެނޭ. ބައްޕާފުޅުގެ ކުރިން އިސްލާމްވި، ޢިލްމުވެރިންނާއި އަޅުވެރިންގެ ތެރެއިން ހިމެނުނު. 700 ޙަދީޘް ރިވާ ކުރެއްވި. 
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abu Moosa al-Ash'ari === -->
+  <div class="modal fade" id="rAshr">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>أبو موسى الأشعري
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#25a" data-toggle="tab">عربي</a></li>
+    <li><a href="#25b" data-toggle="tab">En</a></li>
+    <li><a href="#25c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="25a"><p>
+            <b>الاسم</b>:
+عبد الله بن قيس بن سليم بن حضار بن حرب بن عامر بن عنز بن بكر بن عامر بن عذر بن وائل بن ناجية بن الجماهر بن الأشعر
+         <p/><p>
+            <b>النسب</b>:
+الأشعري، المدني، التميمي، المقرئ، اليماني
+         <p/><p>
+            <b>الكنية</b>:
+أبو موسى
+         <p/><p>
+            <b>الوفاة</b>:
+42 أو 44 أو 50 أو 52 أو 53 ويقال 49، ويقال 51 هـ بالكوفة أو بمكة، أو بخلف، وقيل: بالثوبة على ميلين من الكوفة 
+         <p/><p>•
+صحابي مشهور
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="25b"><p>
+            <b>Name</b>:
+Abdullah bin Qais bin Saleem bin Hudlar bin Harb bin 'Amir bin 'Unz bin Bakr bin 'Amir bin 'Uzr bin Wail bin Najia bin al-Jamahir bin al-Ash'ar
+         <p/><p>
+            <b>Nasab</b>:
+Ash'ari, Madani, Tamimi, Muqri, Yemeni
+         <p/><p>
+            <b>Kunya</b>:
+Abu Moosa
+         <p/><p>
+            <b>Death</b>:
+42 or 44 or 49 or 50 or 51 or 52 or 53 H. in Kufa or Makka.
+         <p/><p>•
+A famous companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="25c"><p>
+            <b>ނަން</b>:
+ޢަބްދު ﷲ ބިން ޤައިސް ބިން ސަލީމް ބިން ހުޟާރު ބިން ހަރްބު ބިން ޢާމިރު ބިން ޢުންޒު ބިން ބަކްރު ބިން ޢާމިރު ބިން ޢުޛްރު ބިން  ވާއިލް ބިން ނާޖިއާ ބިން އަލްޖަމާހިރު ބިން އަލްއަޝްޢަރު
+         <p/><p>
+            <b>ނަސަބު</b>:
+އަޝްޢަރީ، މަދަނީ، ތަމީމީ، މުޤްރީ، ޔަމަނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ މޫސާ
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 42 ނުވަތަ 44 ނުވަތަ 49 ނުވަތަ 50 ނުވަތަ 52 ނުވަތަ 53  ވަނަ އަހަރު، ކޫފާ ނުވަތަ މައްކާގައި.
+         <p/><p>•
+މަޝްހޫރު ޞަޙާބީއެއް. 
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Miqdam bin Ma'di Karib === -->
+  <div class="modal fade" id="rMKrb">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>   المقدام بن معدي كرب
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#26a" data-toggle="tab">عربي</a></li>
+    <li><a href="#26b" data-toggle="tab">En</a></li>
+    <li><a href="#26c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="26a"><p>
+            <b>الاسم</b>:
+المقدام بن معدي كرب بن عمرو بن يزيد بن معدي كرب بن سلمة، ويقال: ابن نشيط بن عبد الله بن وهب بن ربيعة بن الحارث بن معاوية بن ثور: كندة بن مرتع بن عفير بن عدي بن الحارث بن مرة بن أدد بن زيد بن الهميسع ابن عمرو بن غريب بن زيد بن كهلان بن سبأ بن يشجب بن يعرب بن قحطان
+         <p/><p>
+            <b>النسب</b>:
+الكندي، شامي
+         <p/><p>
+            <b>الكنية</b>:
+أبو كريمة، وقيل: أبو يحيى، أبو صالح، أبو بشر
+         <p/><p>
+            <b>الوفاة</b>:
+87 هـ، وقيل: 83، وقيل: 86، وقيل: 88 هـ بالشام 
+         <p/><p>•
+صحابي مشهور
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="26b"><p>
+            <b>Name</b>:
+al-Miqdam bin Ma'di Karib bin 'Amr bin Yazid bin Ma'di Karib bin Salama
+         <p/><p>
+            <b>Nasab</b>:
+Kindi, Shami
+         <p/><p>
+            <b>Kunya</b>:
+Abu Karima, or Abu Yahya, or Abu Salih, or Abu Bashar
+         <p/><p>
+            <b>Death</b>:
+83 or 86 or 87 or 88 H. in Sham.
+         <p/><p>•
+A famous companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="26c"><p>
+            <b>ނަން</b>:
+އަލްމިޤްދާމް ބިން މަޢުދީ ކަރިބް ބިން ޢަމްރު ބިން ޔަޒީދު ބިން މަޢުދީ ކަރިބް ބިން ސަލަމާ
+         <p/><p>
+            <b>ނަސަބު</b>:
+ކިންދީ، ޝާމީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ކަރީމާ، އަބޫ ޔަޙްޔާ، އަބޫ ޞާލިޙް، އަބޫ ބަޝަރު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 83 ނުވަތަ 86 ނުވަތަ 87 ނުވަތަ 88 ވަނަ އަހަރު، ޝާމްގައި.
+         <p/><p>•
+މަޝްހޫރު ޞަޙާބީއެއް. 
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+
+
+
+<!-- === Abdulla bin Busr === -->
+  <div class="modal fade" id="rABsr">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">✖</button>   عبد الله بن بسر
+        </div>
+        <!-- Modal body-->
+        <ul class="nav nav-tasb nav-justified" id="tabContent"> 
+    <li class="active"><a href="#27a" data-toggle="tab">عربي</a></li>
+    <li><a href="#27b" data-toggle="tab">En</a></li>
+    <li><a href="#27c" data-toggle="tab">ދިވެހި</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active aMdl" id="27a"><p>
+            <b>الاسم</b>:
+عبد الله بن بسر بن أبي بسر
+         <p/><p>
+            <b>النسب</b>:
+الشامي، الحمصي، السلمي، القيسي، ثم المازني
+         <p/><p>
+            <b>الكنية</b>:
+أبو بسر، أبو بشر، ويقال: أبو صفوان
+         <p/><p>
+            <b>الوفاة</b>:
+82، 87هـ ، أو 88، 96 هـ، وقيل: 89 هـ بالشام ، وقيل: بحمص منها
+         <p/><p>•
+صحابي صغير
+         <p/>
+    </div>
+
+    <div class="tab-pane eMdl" id="27b"><p>
+            <b>Name</b>:
+Abdulla bin Busr bin Abu Busr
+         <p/><p>
+            <b>Nasab</b>:
+Shami, Homsi, Salami, Qaisi, then Mazini
+         <p/><p>
+            <b>Kunya</b>:
+Abu Busr, or Abu Bashar, or Abu Sofwan
+         <p/><p>
+            <b>Death</b>:
+82 or 87 or 88 or 96 H. in Sham.
+         <p/><p>•
+A small companion
+         <p/>
+    </div> 
+
+    <div class="tab-pane dMdl" id="27c"><p>
+            <b>ނަން</b>:
+ޢަބްދު ﷲ ބިން ބުސްރު ބިން އަބޫ ބުސްރު
+         <p/><p>
+            <b>ނަސަބު</b>:
+ޝާމީ، ހޮމްޞީ، ސަލަމީ، ޤައިސީ، އެއަށްފަހު މާޒިނީ
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އަބޫ ބުސްރު، އަބޫ ބަޝަރު، އަބޫ ޞޮފްވާނު
+         <p/><p>
+            <b>އަވަހާރަވީ</b>:
+ހިޖުރައިން 82 ނުވަތަ 87 ނުވަތަ 88 ނުވަތަ 96 ވަނަ އަހަރު، ޝާމްގައި.
+         <p/><p>•
+ކުޑަ ޞަޙާބީއެއް.
+         <p/>
+    </div> 
+</div>
+
+      </div> <!-- === tab-content END === --> 
+      
+    </div>
+  </div> <!-- === Modal END === -->
+<!-- === ===  === === --> 
+<!-- === ===  === === --> 
+<!-- === === RUWAATH MODALS === === --> 
+<!-- === ===  === === --> 
+<!-- === ===  === === --> 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
