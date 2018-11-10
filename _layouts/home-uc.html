@@ -1254,7 +1254,7 @@ From the first and foremost of Muslims, and from Nujaba of creation. He witnesse
             <b>الوفاة</b>:
 57 أَو 58 هـ بِالمَدِينَة
          <p/><p>•
-زَوجَةٌ  وَحَبِيبَةٌ رَسُولِ اللهِ ﷺ، وَاُمُّ المُؤُمِنِينَ، الصِّدِّيقَةُ بِنتُ الصِّدِّيقِ، المُبَرَّأَة مِن فَوقَ سَبعِ سَمَاوَاتٍ، وَهِيَ أَفقَهُ نِسَاء الأُمَّةِ، وَمناقبها جمة. هَاجَرَ بِعَائِشَةَ أَبَوَاهَا، وَتَزَوَّجَهَا نَبِيُّ اللهِ قَبْلَ مُهَاجَرِهِ بَعْدَ وَفَاةِ الصِّدِّيْقَةِ خَدِيْجَةَ بِنْتِ خُوَيْلِدٍ، وَذَلِكَ قَبْلَ الهِجْرَةِ بِبِضْعَةَ عَشَرَ شَهْراً، وَقِيْلَ: بِعَامَيْنِ. رَوَي 2210 حَدِيثاً.
+زَوجَةٌ  وَحَبِيبَةٌ رَسُولِ اللهِ ﷺ، وَاُمُّ المُؤُمِنِينَ، الصِّدِّيقَةُ بِنتُ الصِّدِّيقِ، المُبَرَّأَة مِن فَوقَ سَبعِ سَمَاوَاتٍ، وَهِيَ أَفقَهُ نِسَاء الأُمَّةِ، وَمناقبها جمة. هَاجَرَ بِعَائِشَةَ أَبَوَاهَا، وَتَزَوَّجَهَا نَبِيُّ اللهِ قَبْلَ مُهَاجَرِهِ بَعْدَ وَفَاةِ الصِّدِّيْقَةِ خَدِيْجَةَ بِنْتِ خُوَيْلِدٍ، وَذَلِكَ قَبْلَ الهِجْرَةِ بِبِضْعَةَ عَشَرَ شَهْراً، وَقِيْلَ: بِعَامَيْنِ. رَوَت 2210 حَدِيثاً.
          <p/>
     </div>
 
@@ -3353,7 +3353,7 @@ A small companion
              } );
          
          //Add footer search to table  TABLECHANGE123
-                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar No.</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>Ar-NoDiacritics</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar No.</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>Ar Plain</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
@@ -3428,7 +3428,7 @@ A small companion
                {title:"En Title"},
                {title:"Dv Title"},
                {title:"Arabic"},
-               {title:"Ar-w/Diacritics"},
+               {title:"Ar Plain"},
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
@@ -3437,7 +3437,12 @@ A small companion
                {title:"Rs Ref."},
              ],
          
-         /*USING INLINE SPAN IN TABLE JSON CAUSE ARABIC DIACRITICS NOT TO SHOW UP IF SEARCH DOES NOT MATCH IT. TWO SOLUTIONS. 1: DONT USE SPAN, AND THEFORE LOSE COLORED TEXTS IN RAAWEE AND HADITH MATN, AS WELL AS RAAWEE MODALS ONCLICK. 2: ADD A SECOND ARABIC COLUMN STRIPPED OF DIACRITICS, HIDE IT BUT MAKE IT SEARCHABLE */
+         /*USING INLINE SPAN IN TABLE JSON CAUSE ARABIC DIACRITICS NOT TO SHOW UP IF SEARCH DOES NOT MATCH IT.
+         TWO SOLUTIONS ARE:
+         1: DONT USE SPAN, AND THEFORE LOSE COLORED TEXTS IN RAAWEE AND HADITH MATN, AS WELL AS RAAWEE MODALS ONCLICK. (any and all tags cause search diacritics to break, including <p> <br> etc)
+         2: ADD A SECOND ARABIC COLUMN STRIPPED OF DIACRITICS, HIDE IT BUT MAKE IT SEARCHABLE. CURRENTlY ON 2, COL 7.
+         TABLECHANGE123  */
+
              columnDefs: [  //classes columns for css in nweb view, but not print
                { className: "fnCol1", "targets": [0], "visible": true, "searchable": true},
                { className: "fnCol2", "targets": [1], "visible": false, "searchable": false},
