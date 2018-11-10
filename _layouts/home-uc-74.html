@@ -330,16 +330,6 @@ body > h1 {font-size: 20px;} /*print header font size*/
   line-height: 1.6;
   word-wrap: break-word; }
          .dataTable tbody tr td.fnCol7 { /* en text */
-         direction: rtl;
-         text-align: justify;
-         font-size: 165%;
-         font-family: 'KFGQPCUthmanTahaNaskh','Faruma','Ubuntu';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  line-height: 1.6;
-  word-wrap: break-word; }
-           .dataTable tbody tr td.fnCol8 { /* en text */
          direction: ltr;
          text-align: justify;
          font-size: 120%;
@@ -349,7 +339,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
   color: #24292e;
   line-height: 1.5;
   word-wrap: break-word; }
-         .dataTable tbody tr td.fnCol9 { /* dv text */
+         .dataTable tbody tr td.fnCol8 { /* dv text */
          direction: rtl;
          text-align: justify;
          font-size: 145%;
@@ -359,7 +349,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
   color: #24292e;
   line-height: 1.5;
   word-wrap: break-word; }
-         .dataTable tbody tr td.fnCol10 { /* ar ref */
+         .dataTable tbody tr td.fnCol9 { /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 145%;
@@ -369,7 +359,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
   -webkit-text-size-adjust: 100%;
   line-height: 1.6;
   word-wrap: break-word; }
-         .dataTable tbody tr td.fnCol11 {   /* en ref */
+         .dataTable tbody tr td.fnCol10 {   /* en ref */
          direction: ltr;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 110%;
@@ -379,7 +369,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   word-wrap: break-word; }
-         .dataTable tbody tr td.fnCol12 { /* dv ref */
+         .dataTable tbody tr td.fnCol11 { /* dv ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 140%;
@@ -389,7 +379,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   word-wrap: break-word; }
-         .dataTable tbody tr td.fnCol13 { /* rs ref */
+         .dataTable tbody tr td.fnCol12 { /* rs ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 145%;
@@ -3352,8 +3342,8 @@ A small companion
                  $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
              } );
          
-         //Add footer search to table  TABLECHANGE123
-                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar No.</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>Ar-NoDiacritics</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
+         //Add footer search to table
+                         $("#fnTable").append('<tfoot><tr><th>#</th><th>Ar No.</th><th>Ar Title</th><th>An Title</th><th>Dv Title</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th><th>Rs Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#fnTable tfoot th').each(function() {
@@ -3385,7 +3375,7 @@ A small companion
          
          //============================================Table Data Begin
          //  $(document).ready(function() {
-           var table = $("#fnTable").DataTable({ /* TABLECHANGE123 */
+           var table = $("#fnTable").DataTable({
                      data: FNdataSet,  //has to match javascript json
          
          
@@ -3420,7 +3410,7 @@ A small companion
          *///==============================================autocomplete typeahead
          
          
-          //   data: data, previously without column titles TABLECHANGE123
+          //   data: data, previously without column titles
              columns: [
                {title:"#"}, 
                {title:"Ar No."},
@@ -3428,7 +3418,6 @@ A small companion
                {title:"En Title"},
                {title:"Dv Title"},
                {title:"Arabic"},
-               {title:"Ar-w/Diacritics"},
                {title:"English"},
                {title:"Dhivehi"},
                {title:"Ar Ref."},
@@ -3437,7 +3426,6 @@ A small companion
                {title:"Rs Ref."},
              ],
          
-         /*USING INLINE SPAN IN TABLE JSON CAUSE ARABIC DIACRITICS NOT TO SHOW UP IF SEARCH DOES NOT MATCH IT. TWO SOLUTIONS. 1: DONT USE SPAN, AND THEFORE LOSE COLORED TEXTS IN RAAWEE AND HADITH MATN, AS WELL AS RAAWEE MODALS ONCLICK. 2: ADD A SECOND ARABIC COLUMN STRIPPED OF DIACRITICS, HIDE IT BUT MAKE IT SEARCHABLE */
              columnDefs: [  //classes columns for css in nweb view, but not print
                { className: "fnCol1", "targets": [0], "visible": true, "searchable": true},
                { className: "fnCol2", "targets": [1], "visible": false, "searchable": false},
@@ -3445,13 +3433,12 @@ A small companion
                { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },
                { className: "fnCol5", "targets": [4], "visible": false, "searchable": false },
                { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },
-               { className: "fnCol7", "targets": [6], "visible": false, "searchable": true },
-               { className: "fnCol8", "targets": [7], "visible": true, "searchable": true },
-               { className: "fnCol9", "targets": [8], "visible": true, "searchable": true }, 
-               { className: "fnCol10", "targets": [9], "visible": true, "searchable": false },
+               { className: "fnCol7", "targets": [6], "visible": true, "searchable": true },
+               { className: "fnCol8", "targets": [7], "visible": true, "searchable": true }, 
+               { className: "fnCol9", "targets": [8], "visible": true, "searchable": false },
+               { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
                { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },
                { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },
-               { className: "fnCol13", "targets": [12], "visible": false, "searchable": false },
             //], //end of columnDefs, previously without visible and searchable options
             //below strips html tags off keystable copy, second part with keys on
                { targets: "_all",
