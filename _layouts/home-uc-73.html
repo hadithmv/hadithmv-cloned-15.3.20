@@ -14,7 +14,7 @@
       <meta charset="utf-8">  <!-- preferred encoding for e-mail and web pages -->
       <meta http-equiv="X-UA-Compatible" content="IE=Edge">
       <title>Hadithmv - Accessible and Sourced</title>
-      <meta name="description" content="Hadith in Arabic, English and Dhivehi, now at your fingertips">
+      <meta name="description" content="Dhivehi Hadith translations at your fingertips">
       <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1,"> <!--  maximum-scale=1.0, user-scalable=no -->
 <!-- 1 week
       <meta http-equiv="cache-control" content="Public" max-age=604800/>
@@ -66,14 +66,14 @@
 
       <!--  === === Base C CSS JS === === -->
       <!-- APKCHANGE123
-      <link rel="stylesheet" href="file:///android_asset/app4.css">
-      -->
-      <link rel="stylesheet" href="file:///android_asset/app4.css">
+      <link rel="stylesheet" href="file:///android_asset/app4.css">-->
+      
+      <link rel="stylesheet" href="https://hadithmv.com/alt/Apk/Resc/app4.css">
 
       <!-- APKCHANGE123
-      <script src="file:///android_asset/app4.js"></script>
-      -->
-      <script src="file:///android_asset/app4.js"></script>
+      <script src="file:///android_asset/app4.js"></script>-->
+      
+      <script src="https://hadithmv.com/alt/Apk/Resc/app4.js"></script>
       <!--  === === Base C CSS JS End=== === -->
          <!--KeepConditions - MUST STAY ABOVE -->
          <script src="https://hadithmv.com/alt/Apk/Resc/base/dataTables.keepConditions.min-mod.js"></script>
@@ -156,8 +156,7 @@
       <!-- APKCHANGE123 - KEEP ABOVE INLINE JS - moving this below breaks table to just headers
       <script src="file:///android_asset/40nJson.js"></script>
          TABLECHANGE123-->
-      <script src="file:///android_asset/40nJson.js"></script>
-      <script src="file:///android_asset/bJson.js"></script>
+      <script src="https://hadithmv.com/alt/Apk/json/40nJson.js"></script>
       <!--  === === Base Json End=== === -->
 
 
@@ -170,7 +169,9 @@
       /* APKCHANGE123
          url('file:///android_asset/Ubuntu-mod.woff') format('woff')
          */
-         url('file:///android_asset/Ubuntu-mod2.woff') format('woff');
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod2.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod2.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Ubuntu-mod2.ttf') format('truetype');
          }
          /* KFGQPCUthmanTahaNaskh-mod */
          @font-face {
@@ -179,16 +180,20 @@
       /* APKCHANGE123
          url('file:///android_asset/KFGQPCUthmanTahaNaskh-B-mod2.woff') format('woff'),
          */
-         url('file:///android_asset/UthmanTN1Ver10-mod5.woff') format('woff');
+         url('https://hadithmv.com/alt/Apk/mod-fonts/UthmanTN1Ver10-mod5.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/UthmanTN1Ver10-mod5.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/UthmanTN1Ver10-mod5.ttf') format('truetype');
          }
          /* Tharujamaanu-B-Regular-mod */
          @font-face {
-         font-family: 'Tharujamaanu';
+         font-family: 'Faruma';
          src: 
       /* APKCHANGE123
          url('file:///android_asset/Tharujamaanu-B-Regular-mod4.woff') format('woff'),
          */
-         url('file:///android_asset/Faruma-mod7.woff') format('woff');
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Faruma-mod7.woff2') format('woff2'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Faruma-mod7.woff') format('woff'),
+         url('https://hadithmv.com/alt/Apk/mod-fonts/Faruma-mod7.ttf') format('truetype');
          }
 
 
@@ -317,12 +322,12 @@ body > h1 {font-size: 20px;} /*print header font size*/
          .dataTable tbody tr td.fnCol6 { /* ar text */
          direction: rtl;
          text-align: justify;
-         font-size: 165%;
+         font-size: 170%;
          font-family: 'KFGQPCUthmanTahaNaskh','Faruma','Ubuntu';  
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: #24292e;
-  line-height: 1.5;
+  line-height: 1.6;
   word-wrap: break-word; }
          .dataTable tbody tr td.fnCol7 { /* en text */
          direction: ltr;
@@ -388,7 +393,6 @@ body > h1 {font-size: 20px;} /*print header font size*/
 /* MAKES RAAWEE AND HADITH QUOTE STAND OUT */
 .rvtxt {  color: brown; text-shadow: 0.05px 0.05px 0px rgba(150, 150, 150, 1); font-size: 103%;   }
 .hdtxt {  color: green; text-shadow: 0.05px 0.05px 0px rgba(150, 150, 150, 1); font-size: 103%;   }
-
 
 
 /* === === */
@@ -523,242 +527,6 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 
 
 
-
-
-
-
-         /* corrects web view only/none-print display for these particular columns ? */
-        .dataTable tbody tr td.bCol1 {   /* # number */
-            /*margin-bottom: -1px;*/
-         font-size: 130%;
-         text-align: center;
-         color: #205ca5;
-         font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol2 {   /* ar book */
-            direction: rtl;
-            font-size: 140%;
-            text-align: center;
-            color: #205ca5;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol3 {   /* ar chapt */
-            direction: rtl;
-            font-size: 140%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: #205ca5;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol4 {   /* ar head */
-            direction: rtl;
-            font-size: 140%;
-            color: #205ca5;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol5 {   /* en book */
-            font-size: 110%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: #205ca5;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol6 {   /* en chapt */
-            font-size: 110%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: #205ca5;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol7 {   /* en expl */
-            font-size: 110%;
-            text-align: justify; text-align-last: center; /* justify and center */
-            color: #205ca5;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol8 {   /* dv book */
-            direction: rtl;
-            font-size: 135%;
-            font-family: 'Ubuntu','Faruma','KFGQPCUthmanTahaNaskh';
-            color: #205ca5;
-            text-align: center;  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol9 {   /* dv chapt */
-            direction: rtl;
-            font-size: 135%;
-            font-family: 'Ubuntu','Faruma','KFGQPCUthmanTahaNaskh';
-            color: #205ca5;
-            text-align: justify; text-align-last: center; /* justify and center */  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol10 {   /* dv expl */
-            direction: rtl;
-            font-size: 135%;
-            font-family: 'Ubuntu','Faruma','KFGQPCUthmanTahaNaskh';
-            color: #205ca5;
-            text-align: justify; text-align-last: center; /* justify and center */  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol11 {  /* ar text */
-            direction: rtl;
-            text-align: justify;
-            font-size: 165%;
-            font-family: 'KFGQPCUthmanTahaNaskh','Faruma','Ubuntu';   
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  line-height: 1.6;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol12  {  /* en text */
-            direction: ltr;
-            text-align: justify;
-            font-size: 120%;
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol13 {  /* dv text */
-            direction: rtl;
-            text-align: justify;
-            font-size: 145%;
-            font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: #24292e;
-  line-height: 1.5;
-  word-wrap: break-word; }
-/* @media screen and (max-width: 768px) {
-        .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
-} above mobile breakpoint */
-.dataTable tbody tr td.bCol14 {   /* ar ref */
-         direction: rtl;
-         text-align: justify; text-align-last: center; /* justify and center */
-         font-size: 145%;
-         color: #205ca5;
-         font-family: 'KFGQPCUthmanTahaNaskh','Faruma','Ubuntu';  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol15 {   /* en ref */
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';
-            color: #205ca5;
-            font-size: 110%;  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-        .dataTable tbody tr td.bCol16 {  /* dv ref */
-            direction: rtl;
-            text-align: justify; text-align-last: center; /* justify and center */
-            font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';
-            color: #205ca5;
-            font-size: 140%;  
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
-  word-wrap: break-word; }
-
-
-
-
-/* makes search bar text bigger and more visible */
-#bTable_filter > label > input {padding-top: 0px !important; padding-bottom: 0px !important; font-size: 14px;}
-#bTable_length > label > select {padding-right: 0px !important; }
-
-         #bTable_wrapper > div > div:nth-child(3) > div.six.wide.column {
-         padding: 0px !important; padding-left: 1px !important;}
-         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column {
-         padding: 0px !important;}
-         #bTable_wrapper > div > div:nth-child(3) > div.seven.wide.column > div > label > input[type="search"] {
-         margin: 0px !important; width: 43vw !important;}
-         #bTable_wrapper > div > div:nth-child(3) {padding-bottom: 0px !important;}
-         #bTable_wrapper > div > div.mobile.only.stackable.row {padding: 0px !important;}
-         #bTable_wrapper > div > div.mobile.only.stackable.row > div {padding: 0px !important;}
-         #bTable_wrapper > div > div.stackable.row.dt-table > div {padding-bottom: 0px !important; padding-top: 0px !important;}
-
-         #bTable_wrapper > div > div:nth-child(6) {padding: 0px !important;}
-         #bTable_wrapper > div > div:nth-child(6) > div.seven.wide.column {padding-top: 0px !important; padding-bottom: 0px !important;}
-
-         /*around table sides padding*/
-         #bTable_wrapper > div:nth-child(4) > div {padding-left: 7.5px; padding-right: 7.5px;}
-         #bTable > tbody > tr > td {padding-left: 6.5px !important; padding-right: 6.5px !important;}
-
-
-
-         /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
-         #bTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-         /*moves show index a little to the right*/
-         #bTable_info { margin-left: 10px;}
-         /*moves show index a little to the bottom*/
-         #bTable_info { padding-top: 6.5px;}
-         /* removes margin around table, especially top-bottom */
-         #bTable {margin: 0 !important;}
-         /* increases the bottom height of show/length -prev 30 */
-         #bTable_length > label > select {height: 34px; }
-         /* desktop page buttons height - as if table height - all buttons row - Desktop only MQ */
-         @media screen and (min-width: 768px) {
-         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div {height: 36px;}
-         }       /* desktop page buttons height - buttons ROW - mobile */
-         #bTable_paginate {height: 40px;}
-         /* dont forget tab height - margin for whole table */
-         /*       
-         <div class="tab-content clearfix" style="margin-top: 54px;">
-         */
-         /* moves pagination buttons a bit higher - Desktop only MQ */
-         @media screen and (min-width: 768px) {
-         #bTable_wrapper > div.row-fluid.hidden-xs > div > div.col-sm-5 > div > ul {margin-top: 0px;}
-         }  
-/*APPCHANGE123*/
-
-/*fixlater
-table unpadded too much, as if zoomed, readd padded around sides*/
-#bTable_wrapper > div:nth-child(1) > div {padding-left: 15px; padding-right: 15px;}
-
-/*search button height*/
-#bTable_filter > label > input {height: 34px !important;}
-
-/*mobile*/
-         @media screen and (max-width: 768px) {
-/*options button - make height less */
-         #bTable_wrapper > div:nth-child(1) > div.col-sm-1.col-xs-2.text-right > div > button {height: 34px !important;}
-/*options button sides padding - remove, reposition sides */
-          #bTable_wrapper > div:nth-child(1) > div.col-sm-2.col-xs-3.text-right {padding: 0;  margin-left: 20px !important; margin-right: -20px !important;}
-/*Show button sides padding - remove - */
-         #bTable_wrapper > div:nth-child(2) > div:nth-child(1) > div:nth-child(6) {padding: 0; margin-left: -23px;}
-         }  
-/*moves pagination buttons row a little hight, taking from the margins */
-         #bTable_wrapper > div:nth-child(2) > div > div > div {margin-top: -5px; margin-bottom: -5px;}
 
 
 
@@ -918,7 +686,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                <!-- APKCHANGE123
                   "file:///android_asset/newLogo5-compressor.svg">
                 -->
-               <a class="navbar-brand" href="https://hadithmv.com"><img class="miniLogo imgGrow" src="file:///android_asset/newLogo5-compressor.svg" alt="menu logo"></a>
+               <a class="navbar-brand" href="https://hadithmv.com" target="_blank" rel="noopener"><img class="miniLogo imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" alt="menu logo"></a>
 
                <!--prev navbar-text-->
                <h4 class="navbar-text text-center">hadithmv</h4>
@@ -932,7 +700,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                   <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari</a></li>
 -->
                   <li class="active NavClick" data-toggle="tab" href="#40n"><a href="">40 Nawawi</a></li>
-                  <li class="NavClick" data-toggle="tab" href="#bukh"><a href="">Bukhari (beta)</a></li>
+                  <li class=""><a href="https://hadithmv.com/alt/bukhari" target="_blank" rel="noopener">Bukhari (beta)</a></li>
                   <!--TABLECHANGE123-->
 
                   <li class=""><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">Contact</a></li>
@@ -1072,36 +840,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                </div>   <!-- === === /tab-pane active" id="40n" === === -->
 
 <!--APPCHANGE123-->  <!--TABLECHANGE123-->
-               <div class="tab-pane fade in" id="bukh">
-                  <table id="bTable" class="ui celled compact striped table bClass"> <!--cellspacing="0" width="100%"-->
-                     <thead>
-                        <tr>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                           <th></th>
-                        </tr>
-                     </thead>
-                  </table>
-
-                  <div class="footer">
-                 <!--<span onclick="myFooter()">2018 &nbsp;</span>
-                     <span onclick="myHelp()">hadithmv.com</span> -->
-                 <!--<a class="foottext" href="" target="_blank" rel="noopener">Islam is the Sunnah and the Sunnah is Islam</a>  replace with book link once complete-->
-                     <a class="foottext">Islam is the Sunnah and the Sunnah is Islam</a>
-                  </div>
+               <div class="tab-pane fade" id="bukh">  <!-- === === /bukh tab === === -->
+                  <h3>Bukhari</h3>
+                  <p>Coming Soon</p>
                </div>   <!-- === === /tab-pane active" id="bukh" === === -->
 
 
@@ -1112,7 +853,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                <!-- APKCHANGE123
                   "file:///android_asset/newLogo5-compressor.svg">
                 -->
-                           <img class="img-responsive center-block imgGrow" src="file:///android_asset/newLogo5-compressor.svg" width="250" alt="menu logo" />
+                           <img class="img-responsive center-block imgGrow" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" width="250" alt="menu logo" />
                         </div>
                         <div class="col-lg-6">
                            <h2>السلام عليكم</h2>
@@ -1122,10 +863,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                <!-- APKCHANGE123
                   "file:///android_asset/en_badge_web_generic-compressor.svg">-->
                       <div class="col-lg-6">
-                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="file:///android_asset/en_badge_web_generic-compressor.png"/></a>
+                           <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Google Play" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/playstore-badge/en_badge_web_generic-compressor.png"/></a>
                         </div> 
                         <div class="col-lg-6">
-                           <a href="https://goo.gl/EyjC4v" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Windows Desktop" src="file:///android_asset/windows-badge-compressor.png"/></a>
+                           <a href="https://goo.gl/EyjC4v" target="_blank" rel="noopener"><img class="img-responsive center-block imgGrow" width="300" alt="Get it on Windows Desktop" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/windows-desktop-badge/windows-badge-compressor.png"/></a>
                            <br><br>
                         </div>
 
@@ -1178,7 +919,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                      <div class="container">
                         <div class="row">
                            <div class="col-lg-12">
-                              <p>Version <strong>1.2.15</strong></p> <!-- VERSIONCHANGE123 -->
+                              <p>Version <strong>1.2.16</strong></p> <!-- VERSIONCHANGE123 -->
                            </div>
                         </div>
                      </div>
@@ -1214,7 +955,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 <!-- === ===  === === --> 
 <!-- === === RUWAATH MODALS === === --> 
 <!-- === ===  === === --> 
-<!-- === ===  === === -->
+<!-- === ===  === === --> 
 <!-- === UMAR Modal === -->
   <div class="modal fade" id="rUmr">
     <div class="modal-dialog">
@@ -1234,30 +975,31 @@ table unpadded too much, as if zoomed, readd padded around sides*/
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="1a"><p>
             <b>الاسم</b>:
-عمر بن الخطاب بن نفيل بن عبد العزى بن رياح بن عبد الله بن قرط بن رزاح بن عدي بن كعب بن لؤي بن غالب. 
+عُمَرُ بنُ الخَطَّابِ بنِ نُفَيْلٍ بْنِ عَبْدِ العُزَّى بنِ رِيَاحِ بنِ عَبْدِ اللَّهِ بنِ قُرْطِ بنِ رَزَاحِ بنِ عَدِيِّ بنِ كَعْبِ بنِ لُؤَيِّ بنِ غَالِبٍ
          <p/><p>
             <b>اللقب</b>:
-الفاروق، أمير المؤمنين
+الفاَرُوق، أَمِيرُ المُؤْمِنِينَ
          <p/><p>
             <b>النسب</b>:
-القرشي، العدوي
+القُرَشِيُّالعَدَوِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو حفص
+أَبُو حَفْصٍ
          <p/><p>
             <b>الميلاد</b>:
-13 سنة بعد الفيل
+13 سَنَة بَعد الفِيلِ
          <p/><p>
             <b>الوفاة</b>:
 23 هـ
          <p/><p>•
-ثاني الخلفاء وإمام الحنفاء بعد أبي بكر رضي الله عنهما وأوّل من تسمى أمير المؤمنين. روي 537 حديثاً
+ثَانِي الخُلَفَاء وَإِمَامِ الحنفاء بَعْدَ أَبِي بَكْر رَضِيَ اللهُ عَنْهُمَا وَأَوَّل مَنْ تُسَمِّي أَمِيرَ المُؤْمِنِينَ. رَوَى 537 حَدِيثًا
+
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="1b"><p>
             <b>Name</b>:
-Umar Ibn Khattab Ibn Nufail Ibn Abdil Uzza Ibn Adi Ibn Ka’b Ibn Luay Ibn Ghalib al-Qurashi.
+Umar bin al-Khattab bin Nufail bin Abdul Uzza bin Riyah bin Abdulla bin Qurut bin Razah bin 'Adi bin Ka'b bin Luay bin Ghalib
          <p/><p>
             <b>Title</b>:
 al-Faruq, Ameer al-Mumineen
@@ -1274,13 +1016,13 @@ Abu Hafs
             <b>Death</b>:
 Martyred Zul Hijjah year 23 H. in Madina.
          <p/><p>•
-A senior companion. The second Khalifa of Islam after Abu Bakr. Narrated 537 Hadith.
+A senior companion. The second Khalifa of Islam after Abu Bakr. The first to be called Amir al-Mumineen. Narrated 537 Hadith.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="1c"><p>
             <b>ނަން</b>:
-ޢުމަރު ބިން އަލްޚައްޠާބް ބިން ނުފައިލް ބިން ޢަބްދުލް ޢުއްޒާ ބިން ޢަދިއްޔު ބިން ކަޢުބް ބިން ލުއައި ބިން ޣާލިބު އަލްޤުރަޝީ.
+ޢުމަރު ބިން އަލްޚައްޠާބް ބިން ނުފައިލް ބިން ޢަބްދުލް ޢުއްޒާ ބިން ރިޔާޙު ބިން ޢަބްދު ﷲ ބިން ޤުރުޠު ބިން ރަޒާޙު ބިން ޢަދިއްޔު ބިން ކަޢުބް ބިން ލުއައި ބިން ޣާލިބު.
          <p/><p>
             <b>ނަސަބު</b>:
 ޤުރަޝީ، ޢަދަވީ
@@ -1297,7 +1039,7 @@ A senior companion. The second Khalifa of Islam after Abu Bakr. Narrated 537 Had
             <b>އަވަހާރަވީ</b>:
 ޝަހީދު ކުރެވުނީ، ޒުލް ޙިއްޖާ މަހު ހިޖުރައިން 27 ވަނަ އަހަރު މަދީނާގައި.
          <p/><p>•
-އަރިސް ސަޙާބީއެއް. އަބޫ ބަކުރަށް ފަހު އިސްލާމީ ދެވަނަ ޚަލީފާ. 537 ޙަދީޘް ރިވާ ކުރެއްވި.
+އަރިސް ސަޙާބީއެއް. އަބޫ ބަކުރަށް ފަހު އިސްލާމީ ދެވަނަ ޚަލީފާ. އަމީރުލް މުއުމިނީނުގެ ލަޤަބު ދެވުން އެންމެ ފުރަތަމަ ވެރިޔާ. 537 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1327,27 +1069,27 @@ A senior companion. The second Khalifa of Islam after Abu Bakr. Narrated 537 Had
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="2a"><p>
             <b>الاسم</b>:
-عبد الله بن عمر بن الخطاب بن نفيل بن عبد العزى بن رياح بن عبد الله بن قرط بن رزاح بن عدي بن كعب بن لؤي بن غالب
+عَبْدُ اللَّهِ بنُ عُمَرَ بنِ الخَطَّابِ بنِ نُفَيْلٍ بْنِ عَبْدِ العُزَّى بنِ رِيَاحِ بنِ عَبْدِ اللَّهِ بنِ قُرْطِ بنِ رَزَاحِ بنِ عَدِيِّ بنِ كَعْبِ بنِ لُؤَيِّ بنِ غَالِبٍ
          <p/><p>
             <b>النسب</b>:
-القرشي، العدوي، المكي، ثم المدني
+القُرَشِيُّ، العَدَوِيُّ، المَكِّيُّ، ثُمَّ المَدَنِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو عبد الرحمن
+أَبُو عَبْدِ الرَّحْمَنِ
          <p/><p>
             <b>الميلاد</b>:
-3 من المبعث النبوي، أو قبل الوحي بسنة
+3 مِن المَبعَثِ النَبَوِي، أَو قَبلَ الوَحيِ بِسَنَة
          <p/><p>
             <b>الوفاة</b>:
-72 أو 73 أو 74 هـ، وقيل: 75 هـ بمكة
+72 أَو 73 أَو 74 هـ، وَقِيلَ: 75 هـ بِمَكَّة
          <p/><p>•
-أحد المكثرين من الصحابة والعبادلة، وكان من أشد الناس اتباعا للأثر. شهد الأحزاب والحديبية. روي 2630 حديثاً.
+أَسْلَمَ وَهُوَ صَغِيْرٌ، ثُمَّ هَاجَرَ مَعَ أَبِيْهِ لَمْ يَحْتَلِمْ، وَاسْتُصْغِرَ يَوْمَ أُحُدٍ، فَأَوَّلُ غَزَوَاتِهِ الخَنْدَقُ، وَهُوَ مِمَّنْ بَايَعَ تَحْتَ الشَّجَرَةِ. أَحَدٌ المُكْثِرِينَ مِنْ الصَّحَابَة وَالعَبَادِلَة. وَكَانَ مِنْ أَشَدّ النَّاس اِتِّبَاعًا لِلأَثَرِ. شَهِدَ الأَحْزَابِ والحُدَيبِيَّة. رَوَى 2630 حَدِيثًا.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="2b"><p>
             <b>Name</b>:
-Abdulla bin Umar Ibn Khattab Ibn Nufail Ibn Abdil Uzza Ibn Adi Ibn Ka’b Ibn Luay Ibn Ghalib
+Abdulla bin Umar bin al-Khattab bin Nufail bin Abdul Uzza bin Riyah bin Abdulla bin Qurut bin Razah bin 'Adi bin Ka'b bin Luay bin Ghalib
          <p/><p>
             <b>Nasab</b>:
 Qurashi, 'Adawi, Makki, then Madani
@@ -1361,7 +1103,7 @@ Abu Abdurrahman
             <b>Death</b>:
 72 or 73 or 74 or 75 H. in Makka.
          <p/><p>•
-Narrated a lot of Hadith, he was from the Companions and 4 famous Abdullahs. He was of the strictest of people in following the Hadith. He witnessed the battle of Ahzab and Hudaiybiyya. Narrated 2630 Hadith.
+He became Muslim while he was a boy, then made Hijra with his father while he had not reached puberty. He was left out of participating in the battle of Uhud due to his young age. His first battle was that of Khandaq. He was of those who gave the pledge under the tree. Narrated a lot of Hadith. he was from the Companions and 4 famous Abdullahs. He was of the strictest of people in following the Hadith. He witnessed the battle of Ahzab and Hudaiybiyya. Narrated 2630 Hadith.
          <p/><p>
     </div> 
 
@@ -1381,7 +1123,7 @@ Narrated a lot of Hadith, he was from the Companions and 4 famous Abdullahs. He 
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 72 ނުވަތަ 73 ނުވަތަ 74 ނުވަތަ 75 ވަނަ އަހަރު، މައްކާގައި.
          <p/><p>•
-ވަރަށް ގިނަ ޙަދީޘް ރިވާ ކުރެއްވި، ޢިބްނު ޢުމަރު ވަނީ ޞަޙާބީންނާއި 4 މަޝްހޫރު ޢަބްދު ﷲ އިންގެ ތެރެއިންނެވެ. މީސްތަކުންގެ ތެރެއިން ޙަދީޘްއަށް ތަބާވުމުގަ އެންމެ ވަރުގަދައަށް ތަބާވި އެކެކެވެ. އަޙްޒާބު އަދި ހުދައިބިއްޔާ ހަނގުރާމަ ދެކިލެއއްވިއެވެ. 1630 ޙަދީޘް ރިވާ ކުރެއްވި.
+ކުޑައިރު އިސްލާމްވި. އެއަށްފަހު ބައްޕާފުޅާއެކު ހިޖުރަކުރެއްވި، އެއިރު އަދި ބާލިޢު ނުވޭ. އުމުރުން ކުޑަވީވުމުގެ ސަބަބުން ޢުހުދުގެ ހަނގުރާމައިގައި ބައިވެރިވިޔަ ނުދިން. މި ޞަޙާބީއަކީ ގަސްދޮށުގައި ބައިޢަތު ދެއްވި ޞަޙާބީއެއް. ވަރަށް ގިނަ ޙަދީޘް ރިވާ ކުރެއްވި. ޢިބްނު ޢުމަރު ވަނީ ޞަޙާބީންނާއި 4 މަޝްހޫރު ޢަބްދު ﷲ އިންގެ ތެރެއިންނެވެ. މީސްތަކުންގެ ތެރެއިން ޙަދީޘްއަށް ތަބާވުމުގަ އެންމެ ވަރުގަދައަށް ތަބާވި އެކެކެވެ. އަޙްޒާބު އަދި ހުދައިބިއްޔާ ހަނގުރާމަ ދެކިލެއއްވިއެވެ. 1630 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1411,27 +1153,27 @@ Narrated a lot of Hadith, he was from the Companions and 4 famous Abdullahs. He 
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="3a"><p>
             <b>الاسم</b>:
-عبد الله بن مسعود بن غافل بن حبيب بن شمخ بن مخزوم، ويقال: ابن شمخ بن فار بن مخزوم بن صاهلة بن كاهل بن الحارث بن تميم بن سعد بن هذيل بن مدركة بن إلياس بن مضر بن نزار بن معد بن عدنان
+عَبْدُ اللهِ بنُ مَسْعُوْدِ بنِ غَافِلِ بنِ حَبِيْبٍ بنِ شَمْخِ بنِ مَخْزُوْمِ، وَيُقَالٌ: ابنِ شَمْخِ بنِ فَارِ بنِ مَخْزُوْمِ بنِ صَاهِلَةَ بنِ كَاهِلِ بنِ الحَارِثِ بنِ تَمِيْمِ بنِ سَعْدِ بنِ هُذَيْلِ بنِ مُدْرَكَةَ بنِ إِلْيَاسِ بنِ مُضَرَ بنِ نِزَارٍ بنِ معد بنِ عَدنَان
          <p/><p>
             <b>النسب</b>:
-الهذلي، المكي، المهاجري، البدري، الزهري حليفهم
+الهُذَلِي، المَكِّيُّ، المُهَاجِرِيُّ، البَدْرِيُّ، حَلِيْفُ بَنِي زُهْرَةَ.
          <p/><p>
             <b>الكنية</b>:
-أبو عبد الرحمن
+أَبُو عَبْدِ الرَّحْمَنِ
          <p/><p>
             <b>الوفاة</b>:
-28 أو 32 أو 33 هـ بالمدينة، وقيل: بالكوفة، والأول أثبت
+28 أَو 32 أَو 33 هـ بِالمَدِينَة، وَقِيلَ: بِالكُوفَة، وَالأَوَّلُ أَثبَت
          <p/><p>•
-من السابقين الأولين، ومن كبار العلماء من الصحابة، مناقبه جمة. روي 848 حديثاً.
+كَانَ مِنَ السَّابِقِيْنَ الأَوَّلِيْنَ، وَمِنَ النُّجَبَاءِ العَالِمِيْنَ، شَهِدَ بَدْراً، وَهَاجَرَ الهِجْرَتَيْنِ، وَكَانَ يَوْمَ اليَرْمُوْكِ عَلَى النَّفْلِ، وَمَنَاقِبُهُ غَزِيْرَةٌ، وَمِن كِبَار العُلَمَاء مِن الصَحَابَة، رَوَى عِلْماً كَثِيْراً. رَوَي 848 حَدِيثاً.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="3b"><p>
             <b>Name</b>:
-Abdulla bin Mas'ood bin Ghafil bin Habib bin Shumakh bin Makhzoom
+Abdulla bin Mas'ood bin Ghafil bin Habib bin Shamkh bin Makhzoom bin Saahila bin Kaahil bin al-Harith bin Tamim bin Sa'd bin Huzail bin Mudraka bin Ilyas bin Mudlar bin Nizar bin Ma'd bin 'Adnan
          <p/><p>
             <b>Nasab</b>:
-Hazli, Makki, Muhajiri, Badri, Zuhri
+Huzali, Makki, Muhajiri, Badri, Zuhri
          <p/><p>
             <b>Kunya</b>:
 Abu Abdurrahman
@@ -1439,13 +1181,13 @@ Abu Abdurrahman
             <b>Death</b>:
 28 or 32 or 33 H. in Makka. And it was also said in Kufa.
          <p/><p>•
-From the first and foremost of Muslims. And from the senior scholars from the Sahaba. Narrated 848 Hadith from the Prophet.
+From the first and foremost of Muslims, and from Nujaba of creation. He witnessed the battle of Badr, and migrated the two Hijras, and participated in the battle of Yarmuk. He was from the senior scholars of the Sahaba. He transmitted a lot of knowledge. Narrated 848 Hadith.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="3c"><p>
             <b>ނަން</b>:
-ޢަބްދު ﷲ ބިން ބިން ޢާފިލު ބިން ޙަބީބު ބިން ޝުމަޚް ބިން މަޚްޒޫމް.
+ޢަބްދު ﷲ ބިން ބިން ޢާފިލު ބިން ޙަބީބު ބިން ޝުމަޚް ބިން މަޚްޒޫމް ބިން ޞާހިލާ ބިން ކާހިލު ބިން އަލްޙާރިޘް ބިން ތަމީމް ބިން ސަޢުދް ބިން ހުޛައިލް ބިން މުދްރަކާ ބިން އިލްޔާސް ބިން މުޟަރު ބިން ނިޒާރު ބިން މަޢުދް ބިން ޢަދްނާނު
          <p/><p>
             <b>ނަސަބު</b>:
 ހަޒަލީ، މައްކީ، މުހާޖިރީ، ބަދްރީ، ޒުހްރީ
@@ -1456,7 +1198,7 @@ From the first and foremost of Muslims. And from the senior scholars from the Sa
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 28 ނުވަތަ 32 ނުވަތަ 33 ވަނަ އަހަރު، މައްކާގައި. އަދި ބުނެވޭގޮތުގައި ކުފާގައި.
          <p/><p>•
-އެންމެ ކުރިން އިސްލާމްވި ޞަޙާބީންގެ ތެރޭގައި ހިމެނުނު. އަދި ޞަޙާބީންގެ ތެރެއިންވާ ބޮޑު ޢިލްމުވެރިއެއް. 848 ޙަދީޘް ރިވާ ކުރެއްވި.
+އެންމެ ކުރިން އިސްލާމްވި ޞަޙާބީންގެ ތެރޭގައި ހިމެނުނު. އަދި ޢާލަމްތަކުގެ ނުޖަބާއިންތެރޭ ހިމެނުނު. ބަދުރުގެ ހަނގުރާމަ ދުށް، ދެ ހިޖުރަ ވެސް ހިޖުރަ ކުރެއްވި. ޔަރުމޫކް ހަނގުރާމައިގައި ބައިވެރިވި. ޞަޙާބީންގެ ތެރެއިންވާ ބޮޑު ޢިލްމުވެރިއެއް. ވަރަށް ގިނަ ޢިލްމު ވާރިދު ކުރެއްވި. 848 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1486,29 +1228,29 @@ From the first and foremost of Muslims. And from the senior scholars from the Sa
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="4a"><p>
             <b>الاسم</b>:
-عائشة بنت أبي بكر الصديق عبد الله بن أبي قحافة بن عامر بن عمرو بن كعب بن سعد بن تيم بن مرة
+عَائِشَةُ بِنْتُ أَبِي بَكْرٍ الصِّدِّيْقِ عَبْدِ اللهِ بنِ أَبِي قُحَافَةَ عُثْمَانَ بنِ عَامِرِ بنِ عَمْرِو بنِ كَعْبِ بنِ سَعْدِ بنِ تَيْمِ بنِ مُرَّةَ بنِ كَعْبِ بنِ لُؤَيٍّ
          <p/><p>
             <b>النسب</b>:
-التيمية، القرشية، المكية، النبوِية، من بني غنم بن مالك بن كنانة
+القُرَشِيَّةُ، التَّيْمِيَّةُ، المَكِّيَّةُ، النَّبَوِيَّةُ
          <p/><p>
             <b>اللقب</b>:
-أم المؤمنين، الحميراء
+أُمُّ المُؤْمِنِيْنَ، الحميراء
             <b>الكنية</b>:
-أم عبد الله
+أٌمُّ عَبدِ الله
          <p/><p>
             <b>الميلاد</b>:
-بعد البعثة بـ 4 أو 5 سنين
+بَعد البَعثَة بـِ 4 أَو 5 سِنِين
          <p/><p>
             <b>الوفاة</b>:
-57 أو 58 هـ بالمدينة
+57 أَو 58 هـ بِالمَدِينَة
          <p/><p>•
-زوجة  وحبيبة رسول الله ﷺ، وام المؤمنين، الصديقة بنت الصديق، المبرأة من فوق سبع سماوات، وهي أفقه نساء الأمة، ومناقبها جمة. روي 2210 حديثاً.
+زَوجَةٌ  وَحَبِيبَةٌ رَسُولِ اللهِ ﷺ، وَاُمُّ المُؤُمِنِينَ، الصِّدِّيقَةُ بِنتُ الصِّدِّيقِ، المُبَرَّأَة مِن فَوقَ سَبعِ سَمَاوَاتٍ، وَهِيَ أَفقَهُ نِسَاء الأُمَّةِ، وَمناقبها جمة. هَاجَرَ بِعَائِشَةَ أَبَوَاهَا، وَتَزَوَّجَهَا نَبِيُّ اللهِ قَبْلَ مُهَاجَرِهِ بَعْدَ وَفَاةِ الصِّدِّيْقَةِ خَدِيْجَةَ بِنْتِ خُوَيْلِدٍ، وَذَلِكَ قَبْلَ الهِجْرَةِ بِبِضْعَةَ عَشَرَ شَهْراً، وَقِيْلَ: بِعَامَيْنِ. رَوَي 2210 حَدِيثاً.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="4b"><p>
             <b>Name</b>:
-Aisha binth Abu Bakr As-Siddiq Abdulla bin Abi Quhafa bin'Amir bin 'Amr bin Ka'b bin Sa'd bin Tamim bin Murra
+Aisha binth Abu Bakr As-Siddiq Abdulla bin Abi Quhafa Usman bin 'Amir bin 'Amr bin Ka'b bin Sa'd bin Tamim bin Luaiy
          <p/><p>
             <b>Nasab</b>:
 Tamimi, Qurashi, Makki, Nabawi,
@@ -1522,24 +1264,27 @@ Umm Abdulla
             <b>Death</b>:
 57 or 58 H. in Madina.
          <p/><p>•
-The beloved  wife of Allah's Messenger ﷺ, The Mother of the Believers, The Truthful daughter of the Truthful, her innocence was cleared from above the seven heavens, she is the most learned in religious knowledge from all the women of the Ummah. Narrated 2210 Hadith.
+The beloved wife of Allah's Messenger ﷺ. The Mother of the Believers. The Truthful daughter of the Truthful. her innocence was cleared from above the seven heavens. She is the most learned in religious knowledge from all the women of the Ummah. Her parents made Hijra with her. The Prophet married her before his Hijra, after Khadija binth Khuwailid passed away. Narrated 2210 Hadith.
          <p/><p>
     </div> 
 
     <div class="tab-pane dMdl" id="4c"><p>
             <b>ނަން</b>:
-ޢާއިޝާ ބިންތި އަބޫ ބަކުރު އައްޞިއްދީޤް ޢަބްދު ﷲ ބިން އަބީ ޤުހާފާ ބިން ޢާމިރު ބިން ޢަމްރު ބިން ކަޢުބް ބިން  ޞަޢުދް ބިން ތަމީމް ބިން މުއްރާ
+ޢާއިޝާ ބިންތި އަބޫ ބަކުރު އައްޞިއްދީޤް ޢަބްދު ﷲ ބިން އަބީ ޤުހާފާ ޢުޘްމާނު ބިން ޢާމިރު ބިން ޢަމްރު ބިން ކަޢުބް ބިން ޞަޢުދް ބިން ތަމީމް ބިން މުއްރާ ބިން ކަޢުބް ބިން ލުއައި
          <p/><p>
             <b>ނަސަބު</b>:
 ތަމީމީ، ޤުރަޝީ، މައްކީ، ނަބަވީ
          <p/><p>
-            <b>ކުންޔާ</b>:
+            <b>ލަޤަބު</b>:
 އުންމުލް މުއުމިނީން
+         <p/><p>
+            <b>ކުންޔާ</b>:
+އުންމު ޢަބްދު ﷲ
          <p/><p>
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 57 ނުވަތަ 58 ވަނަ އަހަރު، މަދީނާގައި.
          <p/><p>•
-ރަސޫލު ﷲ ﷺ ގެ ލޯބިފުޅުވާ އަނބިކަންބަލުން، މުއުމިނުންގެ މަންމާފުޅު، ޞިއްދީޤުގެ ދަރިކަނބަލުން ޞިއްދީޤާ، އެ ކަމަނާއަށް ކުރެވުނު ތުހުމަތުން ވަނީ ހަތް އުޑުގެ މަތިން ބަރީއަކުރެވިފައި، މުޅި އުންމަތުގެ އެންމެހައި އަންހެނުންގެ ތެރެއިން އެންމެ ފިޤުހުވެރި. 2210 ޙަދީޘް ރިވާ ކުރެއްވި.
+ރަސޫލު ﷲ ﷺ ގެ ލޯބިފުޅުވާ އަނބިކަންބަލުން. މުއުމިނުންގެ މަންމާފުޅު. ޞިއްދީޤުގެ ދަރިކަނބަލުން ޞިއްދީޤާ. އެ ކަމަނާއަށް ކުރެވުނު ތުހުމަތުން ވަނީ ހަތް އުޑުގެ މަތިން ބަރީއަކުރެވިފައި. މުޅި އުންމަތުގެ އެންމެހައި އަންހެނުންގެ ތެރެއިން އެންމެ ފިޤުހުވެރި. އެ ކަމަނާއައިގެން އެ ކަމަނައިގެ ދެބަފައިކަލުން ހިޖުރަ ކުރެއްވި. ނަބިއްޔާ އެ ކަމަނާއާ ކައިވެނި ބެއްލެވީ ނަބިއްޔާގެ ހިޖުރައިގެ ކުރިން، އެއީ ޚަދީޖާ ބިންތި ޚުވައިލިދް އަވަހާރަ ވުމުގެ ފަހުން. 2210 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/><p>
     </div> 
 </div>
@@ -1570,27 +1315,30 @@ The beloved  wife of Allah's Messenger ﷺ, The Mother of the Believers, The Tru
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="5a"><p>
             <b>الاسم</b>:
-النعمان بن بشير بن سعد بن ثعلبة بن الجلاس ويقال ابن خلاس بن زيد بن مالك بن ثعلبة بن كعب بن الخزرج
+النُّعْمَانُ بنُ بَشِيْرِ بنِ سَعْدِ بنِ ثَعْلَبَةَ الأَنْصَارِيُّ * (ع)
+الأَمِيْرُ، العَالِمُ، صَاحِبُ رَسُوْلِ اللهِ -صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ - وَابْنُ صَاحِبِهِ، أَبُو عَبْدِ اللهِ - وَيُقَالُ: أَبُو مُحَمَّدٍ - الأَنْصَارِيُّ، الخَزْرَجِيُّ، ابْنُ أُخْتِ عَبْدِ اللهِ بنِ رَوَاحَةَ.
+
+النُّعْمَانُ بنُ بَشِيْرِ بنِ سَعْدِ بنِ ثَعْلَبَةَ بنِ الجلاس وَيٌقَالٌ ابن خلاس بنِ زَيدٌ بنِ مَالِك بنِ ثَعْلَبَةَ بن كَعب بنِ الخَزرَج
          <p/><p>
             <b>النسب</b>:
-الأنصاري، الخزرجي، المدني، القاضي، الكوفي
+الأَنصَارِي، الخَزْرَجِيُّ، المَدَنِي، القَاضِي، الكُوفِي
          <p/><p>
             <b>الكنية</b>:
-أبو عبد الله
+أَبُو عَبدِ الله
          <p/><p>
             <b>الميلاد</b>:
-2 أو 1هـ، بالمدينة. وقيل: ولد بعد سنة أو أقل من سنة من قدوم رسول الله ﷺ المدينة، وقيل: ولد قبل وفاة رسول الله ﷺ ب8 سنين، وقيل: ب6 سنين، والأول أصح
+2 أو 1هـ، بالمدينة. وقيل: ولد بعد سنة أو أقل من سنة من قدوم رسول الله ﷺ المدينة، وقيل: ولد قبل وفاة رسول الله ﷺ ب8 سنين، وَقِيلَ: بِ 6 سِنِين، وَالأَوَّلُ أَصَحّ
          <p/><p>
             <b>الوفاة</b>:
-60 أو 64 أو 65 أو 66 هـ بحمص، وقيل: بين دمشق وحمص، وقيل: سلمية
+60 أَو 64 أَو 65 أَو 66 هـ بِحَمص، وَقِيلَ: بَينَ دِمِشق وِحَمص، وَقِيلَ: سلمية
          <p/><p>•
-له ولأبويه صحبة.
+لَهُ وِلِأَبَوَيهِ صَحبَة. شَهِدَ أَبُوْهُ بَدْراً.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="5b"><p>
             <b>Name</b>:
-an-Nu'man bin Bashir bin Sa'laba bin Jallas
+an-Nu'man bin Bashir bin Sa'laba bin Jallas bin Zaid bin Malik bin Sa'laba bin Ka'b bin al-Khazraj
          <p/><p>
             <b>Nasab</b>:
 Ansari, Khazraji, Madani, Qaadli, Kufi
@@ -1601,13 +1349,13 @@ Abu Abdullah
             <b>Death</b>:
 60 or 64 or 65 or 66 H. in Homs, or between Homs and Baghdad.
          <p/><p>•
-He and both his parents were companions.
+He and both his parents were companions. His father witnessed the battle of Badr.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="5c"><p>
             <b>ނަން</b>:
-އައްނުޢުމާނު ބިން ބަޝީރު ބިން ޘަޢުލަބާ ބިން ޖައްލާސް
+އައްނުޢުމާނު ބިން ބަޝީރު ބިން ޘަޢުލަބާ ބިން ޖައްލާސް ބިން ޒައިދު ބިން މާލިކު ބިން ޘަޢުލަބާ ބިން ކަޢުބް ބިން އަލްޚަޒްރަޖް
          <p/><p>
             <b>ނަސަބު</b>:
 އަންޞާރީ، ޚަޒްރަޖީ، މަދަނީ، ޤާޟީ، ކޫފީ
@@ -1616,9 +1364,9 @@ He and both his parents were companions.
 އަބޫ ޢަބްދު ﷲ
          <p/><p>
             <b>އަވަހާރަވީ</b>:
-ހިޖުރައިން 60 ނުވަތަ 64 ނުވަތަ 65 ނުވަތަ 66 ވަނަ އަހަރު، ޙުމްޞް ނުވަތަ ޙުމްޞްއާއި ބަޢްދާދާ ދެމެދުގައި.
+ހިޖުރައިން 60 ނުވަތަ 64 ނުވަތަ 65 ނުވަތަ 66 ވަނަ އަހަރު، ޙިމްޞް ނުވަތަ ޙުމްޞްއާއި ބަޢްދާދާ ދެމެދުގައި.
          <p/><p>•
-ނުޢުމާންއާއި އެ ޞަޙާބީގެ ދެބަފައިކަލުންނަކީ ވެސް ޞަޙާބީން.
+ނުޢުމާންއާއި އެ ޞަޙާބީގެ ދެބަފައިކަލުންނަކީ ވެސް ޞަޙާބީން. ނުޢުމާނުގެ ބައްޕާފުޅު ބަދުރުގެ ހަނގުރާމަ ދެކިލެއްވި.
          <p/>
     </div> 
 </div>
@@ -1627,6 +1375,8 @@ He and both his parents were companions.
       
     </div>
   </div> <!-- === Modal END === -->
+
+  
 
 <!-- === TAMIM DARI Modal === -->
   <div class="modal fade" id="rTam">
@@ -1647,24 +1397,26 @@ He and both his parents were companions.
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="6a"><p>
             <b>الاسم</b>:
-تميم بن أوس بن خارجة بن سود بن جذيمة بن وداع، ويقال: ذراع، ابن عدي بن الدار بن هانئ بن حبيب بن نمارة بن لخم، وهو مالك بن عدي بن الحارث بن مرة بن أدد بن يشجب بن عريب بن كهلان بن سبأ بن يشجب بن يعرب بن قحطان
+تَمِيْمٌ بنُ أَوْسِ بنِ خَارِجَةَ بنِ سَوْدِ بنِ جَذِيْمَةَ بنِ وداع، وَيُقَالُ: ذراع، ابن عدي بنِ الدار بن هانئ بنِ حبيب بنِ نمارة بنِ لخم، وهو مالك بنِ عدي بنِ الحارث بنِ مرة بنِ أدد بنِ يشجب بنِ عريب بنِ كهلان بنِ سبأ بنِ يشجب بنِ يعرب بنِ قحطان
          <p/><p>
             <b>النسب</b>:
-الداري، اللخمي، الْفلسطيني، ونسبه يحيى بن يحيى وابن بكير: ديريا
+الدَّارِيُّ، اللَّخْمِيُّ، الفِلَسْطِيْنِيُّ. وَالدَّارُ: بَطْنٌ مِنْ لَخْمٍ، وَلَخْمٌ: فَخِذٌ مِنْ يَعْرُبَ بنِ قَحْطَانَ.
          <p/><p>
             <b>الكنية</b>:
-أبو رقية
+أَبُو رُقَيَّةَ
          <p/><p>
             <b>الوفاة</b>:
-40 هـ بالشام
+40 هـ بِالشَّام
          <p/><p>•
-صحابي مشهور.
+صَحَابِي مَشهُور. وَفَدَ تَمِيْمٌ الدَّارِيُّ سَنَةَ تِسْعٍ، فَأَسْلَمَ، فَحَدَّثَ عَنْهُ النَّبِيُّ عَلَى المِنْبَرِ بِقِصَّةِ الجَسَّاسَةِ فِي أَمْرِ الدَّجَّالِ.
+وَلِتَمِيْمٍ عِدَّةُ أَحَادِيْثَ، وَكَانَ عَابِداً، تَلاَّءً لِكِتَابِ اللهِ.
+
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="6b"><p>
             <b>Name</b>:
-Tamim bin Aus bin Kharija bin Saud bin Juzaima bin Wada'
+Tamim bin Aus bin Kharija bin Saud bin Jazima bin Wada'
          <p/><p>
             <b>Nasab</b>:
 Dari, Khami, Falastini
@@ -1675,13 +1427,13 @@ Abu Ruqaiyya
             <b>Death</b>:
 40 H. in Sham
          <p/><p>•
-A famous companion.
+A famous companion. He used to be a Christian, and was part of a delegation of his tribe to meet the Prophet in year 9 of Hijra, he then became Muslim. And the Prophet talked about him upon the Minbar and told the story of the Jassas in the matter of the Dajjal. Tamim has a number of Hadith. He was a pious worshiper, frequently reciting the Book of Allah.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="6c"><p>
             <b>ނަން</b>:
-ތަމީމް ބިން އައުސް ބިން ޚާރިޖާ ބިން ސައުދް ބިން ޖުޒައިމާ ބިން ވަދާޢު
+ތަމީމް ބިން އައުސް ބިން ޚާރިޖާ ބިން ސައުދް ބިން ޖަޒީމާ ބިން ވަދާޢު
          <p/><p>
             <b>ނަސަބު</b>:
 ދާރީ، ޚާމީ، ފަލަސްޠީނީ
@@ -1692,7 +1444,7 @@ A famous companion.
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 40 ވަނަ އަހަރު، ޝާމްގައި.
          <p/><p>•
-މަޝްހޫރު ޞަޙާބީއެއް.
+މަޝްހޫރު ޞަޙާބީއެއް. ކުރީގައި ނަޞްރާނީއެއް. އަދި ރަސޫލާއާ ބައްދަލުކުރަން ތަމީމްގެ ޤަބީލާގެ ފަރާތުން ހިޖުރައިން 9 ވަނަ އަހަރު ދަތުރު ކުރެއްވި، އަދި އެއަށްފަހު އިސްލާމްވި. އަދި ރަސޫލާ މިންބަރަށް އަރައިވަޑައިގެން، ތަމީމްގެ ޚަބަރުން ދައްޖާލާއި ޖައްސާސްގެ ވާހަކަ ދެއްކެވި. ތަމީމްގެ ފަރާތުން އަދަދެއްގެ ޙަދީޘް ރިވާވެގެން ވެއެވެ. އެއީ އަޅުވެރި ޞަޙާބީއެއް، ގިނަގިނައިން ﷲ ގެ ފޮތް ތިލާވަތު ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1722,18 +1474,18 @@ A famous companion.
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="7a"><p>
             <b>الاسم</b>:
-عبد الرحمن بن صخر، وقيل: عبد الرحمن بن غنم، وقيل: عبد الله بن عائذ، وقيل: عبد الله بن عامر، وقيل: عبد الله بن عمرو، وقيل: سكين بن وذمة، وقيل: سكين بن هانئ، وقيل: سكين بن مل، وقيل: سكين بن صخر، وقيل: عامر بن عبد شمس، وقيل: عامر بن عمير، وقيل: برير بن عشرقة، وقيل: عبد نهم، وقيل: عبد شمس، وقيل: غنم، وقيل: عبيد بن غنم، وقيل: عمرو بن غنم، وقيل: عمرو بن عامر، وقيل: سعيد بن الحارث، وقيل غير ذلك، وقال هشام بن محمد الكلبي اسمه: عمير بن عامر بن ذي الشري بن طريف بن عيان بن أبي صعب بن هنية بن سعد بن ثعلبة بن سليم بن فهم بن غنم بن دوس بن عدثان بن عبد الله بن زهران بن كعب بن الحارث بن كعب بن عبد الله بن مالك بن نصر بن الأزد، وهكذا قال خليفة بن خياط في نسبه إلا أنه قال عتاب بدل عيان، ويقال: كان اسمه في الجاهلية عبد شمس فسماه رسول الله ﷺ عبد الله
+عَبْدُ الرَّحْمَنِ بنُ صَخْرٍ، وَقِيْلَ: عَبْدُ الرَّحْمَنِ بنُ غَنْمٍ، وَقِيْلَ: عَبْدٌ اللهِ بنُ عَائذ، وَقِيْلَ: عَبْدٌ اللهِ بنُ عَامِرٌ، وَقِيْلَ: عَبْدٌ اللهِ بنُ عَمرٍو، وَقِيْلَ: سَكِيْنٌ بنُ وذمة، وَقِيْلَ: سَكِيْنٌ بنُ هَانئ، وَقِيْلَ: سَكِيْنٌ بنُ مل، وَقِيْلَ: سَكِيْنٌ بنُ صَخرٍ، وَقِيْلَ: عَامِرٌ بنُ عَبدٌ شَمسٍ، وَقِيلَ: عَامِرٌ بنُ عٌمَير، وَقِيْلَ: بَرِيْرٌ بنُ عشرقة، وَقِيْلَ: عَبدُ نهم، وَقِيْلَ: عَبدُ شَمسٍ، وَقِيْلَ: غَنَمٍ، وَقِيلَ: عُبَيدُ بنُ غَنَمٍ، وَقِيْلَ: عَمرُو بنُ غَنَم، وَقِيْلَ: عَمرُو بنُ عَامِر، وَقِيْلَ: سَعِيْدٌ بنُ الحَارِث، وَقِيْلَ: غَيرُ ذَلكَ. وَقَالَ هِشَامُ بنُ الكَلْبِيِّ: هُوَ عُمَيْرُ بنُ عَامِرِ بنِ ذِي الشَّرَى بنِ طَرِيْفِ بنِ عَيَّانَ بنِ أَبِي صَعْبٍ بنِ هُنَيَّةَ بنِ سَعْدِ بنِ ثَعْلَبَةَ بنِ سُلَيْمِ بنِ فَهْمِ بنِ غَنْمِ بنِ دَوْسِ بنِ عُدْثَانَ بنِ عَبْدِ اللهِ بنِ زَهْرَانَ بنِ كَعْبِ بنِ الحَارِثِ بنِ كَعْبِ بنِ عَبْدِ اللهِ بنِ مَالِكِ بنِ نَصْرِ بنِ الأَزْدِ. وَهَذَا بِعَيْنِهِ قَالَهُ خَلِيْفَةُ بنُ خَيَّاطٍ فِي نَسَبِهِ، لَكِنَّهُ قَالَ: عَتَّابٌ فِي عَيَّانَ، وَقَالَ: مُنَبِّهٌ فِي هُنَيَّةَ. وَيُقَالُ: كَانَ فِي الجَاهِلِيَّةِ اسْمُهُ عَبْدُ شَمْسٍ، أَبُو الأَسْوَدِ، فَسَمَّاهُ رَسُوْلُ اللهِ ﷺ: عَبْدَ اللهِ، وَكَنَّاهُ أَبَا هُرَيْرَةَ.
          <p/><p>
             <b>النسب</b>:
-الدوسي، اليماني
+الدَّوْسِيُّ، اليَمَانِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو هريرة، ويقال كانت كنيته في الجاهلية: أبو الأسود
+أَبُو هُرَيْرَةَ
          <p/><p>
             <b>الوفاة</b>:
 57 أو 58 أو 59 هـ بالعقيق
          <p/><p>•
-الصحابي الجليل، حافظ الصحابة، كان حافظا متثبتا ذكيا مفتيا، صاحب صيام وقيام، قال عكرمة: كان يسبح في اليوم 12000 تسبيحة. روي 5374 حديثاً.
+الإِمَامُ، الفَقِيْهُ، المُجْتَهِدُ، الحَافِظُ، صَاحِبُ رَسُوْلِ اللهِ ﷺ. اخْتُلِفَ فِي اسْمِهِ عَلَى أَقْوَالٍ جَمَّةٍ، أَرْجَحُهَا: عَبْدُ الرَّحْمَنِ بنُ صَخْرٍ. وَالمَشْهُوْرُ عَنْهُ: أَنَّهُ كُنِيَ بِأَوْلاَدِ هِرَّةٍ بَرِّيَّةٍ. كَانَ حَافِظًا مُتثَبِّتًا ذَكِيًا مُفتِيًا، صَاحِبُ صِيَامٍ وَقِيَامٍ، قاَلَ عكرمة: كَانَ يُسَبِحُ فِي اليَومِ 12000 تَسبِيحَة. رَوَي 5374 حَدِيثاً.
          <p/>
     </div>
 
@@ -1745,12 +1497,12 @@ Abdurrahman bin Sakhr
 Dausi, Yemeni
          <p/><p>
             <b>Kunya</b>:
-Abu Huraira, and it is said that his Kunya in Jahiliyya was Abu al-Aswad
+Abu Huraira
          <p/><p>
             <b>Death</b>:
 57 or 58 or 59 H. in Aqiq
          <p/><p>•
-A grand companion, the memorizer of the companions, he was of strong memory, firm, intelligent and a Mufti, it was said he used to make Tasbiha 12000 times a day. Narrated 5374 Hadith.
+The Imam, Faqih, Mujtahid, Memorizer, companion the Prophet. People differed greatly on what his real name was, and the most correct is Abdurrahman bin Sakhr. What is famously known about him is, that he was nicknamed after kittens. He was of strong memory, firm, intelligent and a Mufti, it was said he used to make Tasbiha 12000 times a day. Narrated 5374 Hadith.
          <p/>
     </div> 
 
@@ -1767,7 +1519,7 @@ A grand companion, the memorizer of the companions, he was of strong memory, fir
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 57 ނުވަތަ 58 ނުވަތަ 59 ވަނަ އަހަރު، ޢަޤީޤުގައި.
          <p/><p>•
-މަތިވެރި ޞަޙާބީއެއް، ޞަޙާބީންގެ ހާފިޒު، ހިތުދަސް ކުރުމުގެ ބާރު ގަދަ، ސާބިތު، ވިސްނުން ތޫނު، މުފްތީއެއް، ބުނެވޭ ގޮތުގައި ދުވާލަކު 12000 ފަހަރު ތަސްބީހަ ވިދާޅުވިއެވެ. 5374 ޙަދީޘް ރިވާ ކުރެއްވި.
+އިމާމް، ފަޤީހު،  މުޖްތަހިދު، ހާފިޒު، ރަސޫލާގެ ޞަޙާބީއެއް. އަބޫ ހުރައިރާގެ އަސްލު ނަމާމެދު ވަރަށް ގިނަ ޤައުލުގެ މައްޗަށް މީހުން އިޚްތިލާފުވި، އެންމެ ގާތް ގޮތަކީ އަބްދުއްރަޙްމާން ބިން ޞަޚްރު. އަބޫ ހުރައިރާއާ ބެހޭ ގޮތުން މަޝްހޫރުވެފައި ވަނީ، ކުދި ބުޅާތަކަކައި ގުޅިގެން ކުންޔާ ދެވުންކަމށް. ހިތުދަސް ކުރުމުގެ ބާރު ގަދަ، ސާބިތު، ވިސްނުން ތޫނު، މުފްތީއެއް، ބުނެވޭ ގޮތުގައި ދުވާލަކު 12000 ފަހަރު ތަސްބީހަ ވިދާޅުވިއެވެ. 5374 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1798,27 +1550,28 @@ A grand companion, the memorizer of the companions, he was of strong memory, fir
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="8a"><p>
             <b>الاسم</b>:
-الحسن بن علي بن أبي طالب بن عبد المطلب بن هاشم
+الحَسَنُ بنُ عَلِيِّ بنِ أَبِي طَالِبٍ بنِ عَبْدِ المُطَّلِبِ بنِ هَاشِمِ بنِ عَبْدِ مَنَافٍ
          <p/><p>
             <b>النسب</b>:
-الهاشمي، القرشي، المدني
+القُرَشِيُّ، الهَاشِمِيُّ، المَدَنِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو محمد
+أَبُو مُحَمَّدٍ
          <p/><p>
             <b>الميلاد</b>:
-3 وقيل: 4، وقيل: 5 هـ بالمدينة
+3 وَقِيلَ: 4، وَقِيلَ: 5 هـ بِالمَدِينَة
          <p/><p>
             <b>الوفاة</b>:
-قيل: 44 وقيل: 48 وقيل: 49 وقيل: 50 وقيل: 51 وقيل: 56 وقيل: 58 وقيل: 59 هـ بالمدينة
+قِيلَ: 44 وَقِيلَ: 48 وَقِيلَ: 49 وَقِيلَ: 50 وَقِيلَ: 51 وَقِيلَ: 56 وَقِيلَ: 58 وَقِيلَ: 59 هـ بِالمَدِينَة
          <p/><p>•
-سبط رسول الله ﷺ وريحانته، وقد صحبه وحفظ عنه
+سِبْطُ رَسُوْلِ اللهِ ﷺ وَرَيْحَانَةُ الإِمَامُ السَّيِّدُ. وَسَيِّدُ شَبَابِ أَهْلِ الجَنَّةِ. وَعَقَّ عَنْهُ جَدُّهُ بِكَبشٍ.
+وَحَفِظَ عَنْ جَدِّهِ أَحَادِيْثَ، وَعَنْ أَبِيْهِ وَأُمِّهِ.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="8b"><p>
             <b>Name</b>:
-al-Hasan bin Ali bin Abu Talib bin Abdul Muttalib bin Hashim
+al-Hasan bin Ali bin Abu Talib bin Abdul Muttalib bin Hashim bin Abdul Manaf
          <p/><p>
             <b>Nasab</b>:
 Hashimi, Qurashi, Madani
@@ -1829,13 +1582,13 @@ Abu Muhammad
             <b>Death</b>:
 44 or 48 or 49 or 50 or 51 or 56 or 58 or 59 H. in Madina
          <p/><p>•
-The grandson of the Prophet, and his beloved sweet basil, son of Ali and Fatima, he was a companion and memorized narrations from the Prophet.
+The grandson of the Prophet, and his beloved sweet basil, son of Ali and Fatima. The master and Imam, and the master of the youth in Paradise. The Prophet slaughtered a Ram for him as Aqiqa. He memorized narrations from his grandfather, and both his parents.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="8c"><p>
             <b>ނަން</b>:
-އަލްޙަސަން ބިން ޢަލީ ބިން އަބޫ ޠާލިބު ބިން ޢަބްދުލް މުއްޠަލިބު ބިން ހާޝިމް
+އަލްޙަސަން ބިން ޢަލީ ބިން އަބޫ ޠާލިބު ބިން ޢަބްދުލް މުއްޠަލިބު ބިން ހާޝިމް ބިން ޢަބްދުލް މަނާފް
          <p/><p>
             <b>ނަސަބު</b>:
 ހާޝިމީ، ޤުރަޝީ، މަދަނީ
@@ -1846,7 +1599,7 @@ The grandson of the Prophet, and his beloved sweet basil, son of Ali and Fatima,
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 44 ނުވަތަ 48 ނުވަތަ 49 ނުވަތަ 50 ނުވަތަ 51 ނުވަތަ 56 ނުވަތަ 58 ނުވަތަ 59 ވަނަ އަހަރު، ޢަޤީޤުގައި.
          <p/><p>•
-ނަބިއްޔާގެ ލޯބިފުޅުވާ މަލެއް ފަދަ ކާފަދަރިކަލެއް، ޢަލީއާއި ފާޠިމާގެ ދަރިފުޅު، ނަބިއްޔާގެ އަރިހުން ޙަދީޘް ދަސްކުރެއްވި ޞަޙާބީއެއް.
+ނަބިއްޔާގެ ލޯބިފުޅުވާ މަލެއް ފަދަ ކާފަދަރިކަލެއް، އަދި ޢަލީއާއި ފާޠިމާގެ ދަރިފުޅު. ސައްޔިދު އަދި އިމާމް. އަދި ސުވަރުގޭގެ ޒުވާނުންގެ ސައްޔިދު. ރަސޫލާ ޙަސަންއަށް ކަންބަޅިއެއް ޢަޤީޤާގެ ގޮތުގައި ޤުރުބާން ކުރެއްވި. ޙަސަންގެ ކާފާފުޅު އަދި ދެބަފައިކަލުންގެ އަރިހުން ޙަދީޘް ދަސްކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1877,30 +1630,30 @@ The grandson of the Prophet, and his beloved sweet basil, son of Ali and Fatima,
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="9a"><p>
             <b>الاسم</b>:
-أنس بن مالك بن النضر بن ضمضم بن زيد بن حرام بن جندب بن عامر بن غنم بن عدي بن النجار
+أَنَسُ بنُ مَالِكِ بنِ النَّضْرِ بنِ ضَمْضَمٍ بنِ زَيْدِ بنِ حَرَامِ بنِ جُنْدُبِ بنِ عَامِرِ بنِ غَنْمِ بنِ عَدِيِّ بنِ النَّجَّارِ
          <p/><p>
             <b>النسب</b>:
-الأنصاري، الخزرجي، النجاري، المدني
+الأَنْصَارِيُّ، الخَزْرَجِيُّ، النَّجَّارِيُّ، المَدَنِيُّ
          <p/><p>
             <b>اللقب</b>:
-ذو الأذنين
+ذُو الأُذُنَينِ
          <p/><p>
             <b>الكنية</b>:
-أبو حمزة، أبو النضر، أبو ثمامة
+أَبُو حَمزَة، أَبُو النَضرِ، أَبُو ثَمَامَة
          <p/><p>
             <b>الميلاد</b>:
-في السنة 4 من نبوة بالمدينة
+فِي السَّنَةِ 4 مِن نُبُوَّة بِالمَدِينَةِ
          <p/><p>
             <b>الوفاة</b>:
-90 أو 91 أو 92 أو 93 هـ بالبصرة
+90 أَو 91 أَو 92 أَو 93 هـ بِالبَصرَة
          <p/><p>•
-صحابي مشهور
+الإِمَامُ، المُفْتِي، المُقْرِئُ، المُحَدِّثُ، رَاوِيَةُ الإِسْلاَمِ، أَبُو حَمْزَةَ الأَنْصَارِيُّ، الخَزْرَجِيُّ، النَّجَّارِيُّ، المَدَنِيُّ، خَادِمُ رَسُوْلِ اللهِ ﷺ وَقَرَابَتُهُ مِنَ النِّسَاءِ، وَتِلْمِيذُهُ، وَتَبَعُهُ، وَآخِرُ أَصْحَابِهِ مَوْتاً. رَوَي 2286 حَدِيثاً
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="9b"><p>
             <b>Name</b>:
-Anas bin Malik bin Nadlr bin Dlamdlam bin Zaid bin Haram bin Jundub bin 'Amir bin Ghanam bin 'Adiy bin Najjar
+Anas bin Malik bin Nadlr bin Dlamdlam bin Zaid bin Haraam bin Jundub bin 'Amir bin Ghanam bin 'Adiy bin Najjar
          <p/><p>
             <b>Nasab</b>:
 Ansari, Khazraji, Najjari, Madani
@@ -1917,7 +1670,7 @@ Abu Hamza, Abu Nadlr, Abu Samaama
             <b>Death</b>:
 90 or 91 or 92 H. in Basra
          <p/><p>•
-A famous companion.
+The Imam, Mufti, Reciter, Muhaddith, Narrator of Islam. The servant of the Prophet since he was small, and his student and follower, and the last of his companions to pass away. Narrated 2286 Hadith.
          <p/>
     </div> 
 
@@ -1940,7 +1693,8 @@ A famous companion.
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 90 ނުވަތަ 91 ނުވަތަ 92 ވަނަ އަހަރު، ބަޞްރާގައި.
          <p/><p>•
-މަޝްހޫރު ޞަޙާބީއެއް.
+The Imam, Mufti, Reciter, Muhaddith, Narrator of Islam. The servant of the Prophet since he was small, and his student and follower, and the last of his companions to pass away. Narrated 2286 Hadith.
+އިމާމް، މުފްތީ، މުޤްރީ، މުޙައްދިޘް، އިސްލާމް ދީނުގެ ރާވީ. ކުޑައިރުއްސުރެ ނަބިއްޔާގެ ޚާދިމު، އަދި ނަބިއްޔާއަށް ތަބާވި ދަރިވަރު. ނަބިއްޔާގެ ޞަހާބީންގެ ތެރެއިން އެންމެ ފަހުން ނިޔާވި. 2286 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -1971,21 +1725,21 @@ A famous companion.
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="10a"><p>
             <b>الاسم</b>:
-شداد بن أوس بن ثابت بن المنذر بن حرام
+شَدَّادُ بنُ أَوْسِ بنِ ثَابِتِ بنِ المُنْذِرِ بنِ حَرَامٍ
          <p/><p>
             <b>النسب</b>:
-الأنصاري، المدني، الخزرجي، النجاري، الحدلي
+الأَنْصَارِيُّ، النَّجَّارِيُّ، الخَزْرَجِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو يعلى، ويقال: أبو عبد الرحمن
+أَبُو يَعْلَى، وَيُقَالُ: وَأَبُو عَبْدِ الرَّحْمَنِ
          <p/><p>
             <b>الميلاد</b>:
-بالمدينة
+بِالمَدِينَة
          <p/><p>
             <b>الوفاة</b>:
 41 أو 54 أو 58 أو 64 هـ بالشام، بيت المقدس
          <p/><p>•
-صحابي
+مِنْ فُضَلاَءِ الصَّحَابَةِ، وَعُلَمَائِهِمْ، نَزَلَ بَيْتَ المَقْدِسِ.
          <p/>
     </div>
 
@@ -1994,7 +1748,7 @@ A famous companion.
 Shaddad bin Aus bin Sabith bin Munzir bin Haraam
          <p/><p>
             <b>Nasab</b>:
-Ansari, Khazraji, Najjari, Madani, Maqdisi
+Ansari, Najjari, Khazraji, Maqdisi
          <p/><p>
             <b>Kunya</b>:
 Abu Ya'la, and it was said Abu Abdurrahman
@@ -2005,7 +1759,7 @@ Madina
             <b>Death</b>:
 41 or 54 or 58 or 64 H. in Sham, Jerusalem
          <p/><p>•
-A companion.
+From the virtous of companions, and their scholars. He settled in Jerusalem
          <p/>
     </div> 
 
@@ -2025,7 +1779,7 @@ A companion.
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 41 ނުވަތަ 54 ނުވަތަ 58 ނުވަތަ 64 ވަނަ އަހަރު، ބައިތުލް މަޤްދިސްގައި، ޝާމް.
          <p/><p>•
-ޞަޙާބީއެއް.
+ޞަޙާބީންގެ ފަޟްލުވެރިން އަދި ޢިލްމުވެރިންގެ ތެރޭގައި ހިމެނޭ. ބައިރުލް މަޤްދިސްގައި ޤާއިމްވެލެއްވި.
          <p/>
     </div> 
 </div>
@@ -2055,24 +1809,24 @@ A companion.
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="11a"><p>
             <b>الاسم</b>:
-   أبو ذر، قيل اسمه: جندب بن جنادة بن قيس بن عمرو بن مليل بن صعير بن حرام بن عفان، وقيل اسمه: برير بن جنادة ،وقيل: ابن جندب، وقيل: ابن عشرقة، وقيل: ابن جندب بن عبد الله، وقيل: ابن السكن
+اختُلَفُ فِي اسمِهِ وَاسمِ أَبِيهِ، فَقِيلَ اسمُهُ: جُنْدُبُ بنُ جُنَادَةَ بنِ سُفْيَانَ بنِ عُبَيْدِ بنِ حَرَامِ بنِ غِفَارَ بنِ مُلَيْلِ بنِ ضَمْرَةَ. وَقِيْلَ: جُنْدُبُ بنُ سَكَنٍ. وَقِيْلَ: بُرَيْرُ بنُ جُنَادَةَ. وَقِيْلَ: بُرَيْرُ بنُ عَبْدِ اللهِ.
          <p/><p>
             <b>النسب</b>:
-الغفاري
+الغِفَارِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو ذر
+أَبُو ذَرٍّ
          <p/><p>
             <b>الوفاة</b>:
 31 هـ أو 32 هـ بالربذة
          <p/><p>•
-صحابي
+أَحَدُ السَّابِقِيْنَ الأَوَّلِيْنَ، مِنْ نُجَبَاءِ أَصْحَابِ مُحَمَّدٍ ﷺ. قِيْلَ: كَانَ خَامِسَ خَمْسَةٍ فِي الإِسْلاَمِ. ثُمَّ إِنَّهُ رُدَّ إِلَى بِلاَدِ قَوْمِهِ، فَأَقَامَ بِهَا بِأَمْرِ النَّبِيِّ ﷺ لَهُ بِذَلِكَ، فَلَمَّا أَنْ هَاجَرَ النَّبِيُّ ﷺ هَاجَرَ إِلَيْهِ أَبُو ذَرٍّ وَلاَزَمَهُ، وَجَاهَدَ مَعَهُ. وَكَانَ يُفْتِي فِي خِلاَفَةِ أَبِي بَكْرٍ، وَعُمَرَ، وَعُثْمَانَ.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="11b"><p>
             <b>Name</b>:
-Jundub bin Junadah bin Qais bin 'Amr bin Mulail bin Sair bin Haraam bin 'Affan
+Jundub bin Junadah bin Sufyan bin Ubaid bin Ghifar bin Mulail bin Dlamra
          <p/><p>
             <b>Nasab</b>:
 Ghifari
@@ -2083,7 +1837,7 @@ Abu Zarr
             <b>Death</b>:
 31 or 32 H. in Rabaza
          <p/><p>•
-A companion.
+From the first and foremost of Muslims, and from the Nujaba of the companions of the Prophet. It was said that he was the fifth in becoming Muslim, then he was sent back to his land and people, because the Prophet ordered him to do so, then when the Prophet made Hijra, Abu Zarr made Hijra to him, and stayed and fought by his side. He used to give Fatawa during the Khilafa of Abu Bakr, Umar and Uthman.
          <p/>
     </div> 
 
@@ -2100,7 +1854,7 @@ A companion.
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 31 ނުވަތަ 32 ވަނަ އަހަރު، ރަބަޛާގައި.
          <p/><p>•
-ޞަޙާބީއެއް.
+ފުރަތަމަ މުސްލިމުންގެ ތެރެއިން ހިމެނުނު، އަދި ނަބިއްޔާގެ ޞަޙާބީންގެ ނުޖަބާއިންގެ ތެރެއިން ވެސް ހިމެނުނު. ބުނެވޭ ގޮތުގައި އަބޫ ޒައްރަކީ 5 ވަނައަށް އިސްލާމްވި ޞަޙާބީ، އެއަށްފަހު ރަސޫލާގެ އަމުރުފުޅައިގެން އެނބުރި ޤައުމަށާއި ޤައުމުގެ މީސްތަކުންގެ ގާތަށް ދިޔަ، ދެން ނަބިއްޔާ ޙިޖުރަ ކުރެއްވީމަ، އަބޫ ޒައްރު ވެސް ނަބިއްޔާގެ އަރިހަށް ހިޖުރަ ކުރެއްވި، އަދި ނަބިއްޔާގެ ގާތުގައި އުޅުއްވައި ނަބިއްޔާއާއެކު ހަނގުރާމަ ވެސް ކުރެއްވި. އަބޫ ބަކުރުއާއި ޢުމަރުއާއި ޢުޘްމާނުގެ ޚިލާފަތުގައި ފަތުވާދީ އުޅުއްވި.
          <p/>
     </div> 
 </div>
@@ -2112,7 +1866,7 @@ A companion.
 
 
 <!-- === Muaz bin Jabal Modal === -->
-  <div class="modal fade" id="rZarr">
+  <div class="modal fade" id="rMuaz">
     <div class="modal-dialog">
       <!-- Modal content-->
       <div class="modal-content">
@@ -2206,27 +1960,27 @@ Well known, from the senior companions
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="12a"><p>
             <b>الاسم</b>:
-   معاذ بن جبل بن عمرو بن أوس بن عائذ ابن عدي بن كعب بن عمرو بن أدي بن سعد بن علي بن أسد بن ساردة بن يزيد بن جشم بن عدي بن نابي بن غنم بن كعب بن سلمة
+مُعَاذُ بنُ جَبَلِ بنِ عَمْرِو بنِ أَوْسٍ بنِ عَائِذِ بنِ عَدِيِّ بنِ كَعْبِ بنِ عَمْرِو بنِ أُدَيِّ بنِ سَعْدِ بنِ عَلِيِّ بنِ أَسَدِ بنِ سَارِدَةَ بنِ يَزِيْدَ بنِ جُشَمَ بنِ الخَزْرَجِ
          <p/><p>
             <b>النسب</b>:
-الأنصاري، الخزرجي، المدني، السلمي
+الأَنْصَارِيُّ، الخَزْرَجِيُّ، المَدَنِيُّ، البَدْرِيُّ
          <p/><p>
             <b>الكنية</b>:
-أبو عبد الرحمن
+أَبُو عَبْدِ الرَّحْمَنِ
          <p/><p>
             <b>الوفاة</b>:
-17 أو 18 هـ. قال بن حبان فى الثقات: الأردن، وقال الحافظ فى التقريب: الشام
+17 أو 18 هـ. قاَلَ بن حبَان فِي الثِقَات: الأُردُن، وَقاَلَ الحَافِظُ فِي التقريب: الشَام
          <p/><p>•
-مشهور، من أعيان الصحابة
+السَّيِّدُ، الإِمَامُ، شَهِدَ العَقَبَةَ شَابّاً أَمْرَدَ. وَلَهُ عِدَّةُ أَحَادِيْثَ.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="12b"><p>
             <b>Name</b>:
-Muaz bin Jabal bin 'Amr bin Aus bin 'Aiz bin 'Adi bin Ka'b bin 'Amr bin Udaiy bin Sa'd bin Ali bin Asad bin Sarida bin Yazid bin Jashm bin 'Adiy bin Naabi bin Ghanam bin Ka'b bin Salama
+Muaz bin Jabal bin 'Amr bin Aus bin 'Aiz bin 'Adi bin Ka'b bin 'Amr bin Udaiy bin Sa'd bin Ali bin Asad bin Sarida bin Yazid bin Jushm bin al-Khazraj
          <p/><p>
             <b>Nasab</b>:
-Ansari, Khazraji, Madani, Salami
+Ansari, Khazraji, Madani, Badri
          <p/><p>
             <b>Kunya</b>:
 Abu Abdurrahman
@@ -2234,16 +1988,16 @@ Abu Abdurrahman
             <b>Death</b>:
 17 or 18 H. in Jordan or Sham
          <p/><p>•
-Well known, from the senior companions
+The Master, the Imam. He witnessed the pledge of 'Aqaba while he was young. He has a number of Hadith.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="12c"><p>
             <b>ނަން</b>:
-މުޢާޛް ބިން ޖަބަލް ބިން އައުސް ބިން ޢާއިޛް ބިން ޢަދީ ބިން ކަޢުބް ބިން ޢަމްރު ބިން ޢުދައްޔި ބިން ސަޢުދް ބިން ޢަލީ ބިން އަސަދް ބިން ސާރިދާ ބިން ޔަޒީދު ބިން ޖަޝްމު ބިން ޢަދިއްޔު ބިން ނާބީ ބިން ޢަނަމް ބިނ ކަޢުބް ބިން ސަލަމާ
+މުޢާޛް ބިން ޖަބަލް ބިން އައުސް ބިން ޢާއިޛް ބިން ޢަދީ ބިން ކަޢުބް ބިން ޢަމްރު ބިން ޢުދައްޔި ބިން ސަޢުދް ބިން ޢަލީ ބިން އަސަދް ބިން ސާރިދާ ބިން ޔަޒީދު ބިން ޖުޝްމު ބިން ޢަދިއްޔު ބިން އަލްޚަޒްރަޖް
          <p/><p>
             <b>ނަސަބު</b>:
-އަންޞާރީ، ޚަޒްރަޖީ، މަދަނީ، ސަލަމީ
+އަންޞާރީ، ޚަޒްރަޖީ، މަދަނީ، ބަދްރީ
          <p/><p>
             <b>ކުންޔާ</b>:
 އަބޫ އަބްދުއްރަޙްމާން
@@ -2251,7 +2005,7 @@ Well known, from the senior companions
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 17 ނުވަތަ 18 ވަނަ އަހަރު، އުރުދުން ނުވަތަ ޝާމްގައި.
          <p/><p>•
-މަޝްހޫރު، އަރިސް ޞަޙާބީއެއް
+ސައްޔިދު، އިމާމް. ޒުވާން އިރު ޢަޤަބާގެ ބައިޢަތު ދެކިލެއްވި. އަދަދެއްގެ ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -2282,33 +2036,36 @@ Well known, from the senior companions
 <div class="tab-content">
     <div class="tab-pane active aMdl" id="13a"><p>
             <b>الاسم</b>:
-عبد الله بن عباس بن عبد المطلب بن هاشم بن عبد مناف
+عَبْدُ اللهِ بنُ عَبَّاسٍ بنِ عَبْدِ المُطَّلِبِ (شَيْبَةَ) بنِ هَاشِمِ (عَمْرُو) بنِ عَبْدِ مَنَافٍ بنِ قُصَيِّ بنِ كِلاَبِ بنِ مُرَّةَ بنِ كَعْبِ بنِ لُؤَيِّ بنِ غَالِبِ بنِ فِهْرٍ
          <p/><p>
             <b>النسب</b>:
-الهاشمي ، القرشي ، المدني
+القُرَشِيُّ، الهَاشِمِيُّ، المَكِّيُّ
          <p/><p>
             <b>اللقب</b>:
-البحر، حبر الأمة
+البَحْرُ، حَبْرُ الأُمَّةِ، تَرْجُمَانِ القُرْآنِ
          <p/><p>
             <b>الكنية</b>:
-أبو العباس
+أَبُو العَبَّاسِ
          <p/><p>
             <b>الميلاد</b>:
-قبل الهجرة ب 3 سنين، أو 4، وقيل: 5، والأول أثبت
+قَبلَ الهِجرَةِ بِ 3 سِنِينَ، أَو 4، وَقِيلَ: 5، وَالأَوَّلُ أَثبَتُ
          <p/><p>
             <b>الوفاة</b>:
-65 أو 67 أو 68 هـ، وقيل : 69، وقيل: 70 وقيل: 73 هـ بالطائف
+65 أَو 67 أَو 68 هـ، وَقِيلَ : 69، وَقِيلَ: 70 وَقِيلَ: 73 هـ بِالطَائِف
          <p/><p>•
-أحد المكثرين من الصحابة، ترجمان القرآن، روي 1660 حديثاً.
+فَقِيْهُ العَصْرِ، وَإِمَامُ التَّفْسِيْرِ، ابْنُ عَمِّ رَسُوْلِ اللهِ ﷺ العَبَّاسِ، صَحِبَ النَّبِيَّ نَحْواً مِنْ ثَلاَثينَ شَهْراً، وَحَدَّثَ عَنْهُ بِجُمْلَةٍ صَالِحَةٍ. أَحَدُ المُكَثِّرِينَ مِن الصَّحَابَة، رَوَي 1660 حَدِيثاً.
          <p/>
     </div>
 
     <div class="tab-pane eMdl" id="13b"><p>
             <b>Name</b>:
-Abdulla bin Abbas bin Abdul Muttalib bin Hashim bin Manaf
+Abdulla bin Abbas bin Abdul Muttalib bin Hashim bin Abd Manaf bin Qusaiy bin Kilab bin Murra bin Ka'b bin Luaiy bin Ghalib bin Fahr
          <p/><p>
             <b>Nasab</b>:
-Hashimi, Qurashi, Madani
+Qurashi, Hashimi, Makki
+         <p/><p>
+            <b>Title</b>:
+The Sea (of knowledge), The Habr (learned scholar) of the Ummah, the Interpreter of the Quran
          <p/><p>
             <b>Kunya</b>:
 Abu al-Abbas
@@ -2319,16 +2076,19 @@ Abu al-Abbas
             <b>Death</b>:
 65 or 67 or 68 or 69 or 70 or 73 H. in Taif
          <p/><p>•
-One of those who narrated a lot Hadith from the companions, the interpreter of the Quran. Narrated 1660 Hadith.
+The Faqih of his time, and the Imam of Tafsir, the son of the Prophet's uncle, al-Abbas. He accompanied the Prophet for around 30 months, and narrated a great amount from him. Narrated 1660 Hadith.
          <p/>
     </div> 
 
     <div class="tab-pane dMdl" id="13c"><p>
             <b>ނަން</b>:
-ޢަބްދު ﷲ ބިން ޢައްބާސް ބިން ޢަބްދުލް މުއްޠަލިބް ބިން ހާޝިމް ބިން މަނާފް
+ޢަބްދު ﷲ ބިން ޢައްބާސް ބިން ޢަބްދުލް މުއްޠަލިބް ބިން ހާޝިމް ބިން މަނާފް ބިން ޤުޞައި ބިން ކިލާބް ބިން މުއްރާ ބިން ކަޢުބް ބިން ލުއައި ބިން ޢާލިބް ބިން ފަހްރު
          <p/><p>
             <b>ނަސަބު</b>:
 ހާޝިމީ، ޤުރަޝީ، މަދަނީ
+         <p/><p>
+            <b>ލަޤަބު</b>:
+(އިލްމުގެ) ކަނޑު، އުންމަތުގެ ޙަބްރު (ބޮޑު ޢިލްމުވެރިޔާ)، ޤުރުއާނުގެ ތަރުޖަމާނު
          <p/><p>
             <b>ކުންޔާ</b>:
 އަބޫ އަލްޢައްބާސް
@@ -2339,7 +2099,9 @@ One of those who narrated a lot Hadith from the companions, the interpreter of t
             <b>އަވަހާރަވީ</b>:
 ހިޖުރައިން 65 ނުވަތަ 67 ނުވަތަ 68 ނުވަތަ 69 ނުވަތަ 70 ނުވަތަ 73 ވަނަ އަހަރު، ޠާއިފުގައި.
          <p/><p>•
-އެންމެ ގިނައިން ޙަދީޘް ރިވާ ކުރެއްވި އެކަކު، ޤުރުއާނުގެ ތަރުޖަމާނު. 1660 ޙަދީޘް ރިވާ ކުރެއްވި.
+فَقِيْهُ العَصْرِ، وَإِمَامُ التَّفْسِيْرِ، ابْنُ عَمِّ رَسُوْلِ اللهِ ﷺ العَبَّاسِ، صَحِبَ النَّبِيَّ نَحْواً مِنْ ثَلاَثينَ شَهْراً، وَحَدَّثَ عَنْهُ بِجُمْلَةٍ صَالِحَةٍ. أَحَدُ المُكَثِّرِينَ مِن الصَّحَابَة، رَوَي 1660 حَدِيثاً.
+
+ޒަމާނުގެ ފަޤީހު، ތަފްސީރުގެ އިމާމު. ރަސޫލާގެ ބޮޑުބޭބެ އަލްޢައްބާސްގެ ދަރިފުޅު. ގާތްގަނޑަކަށް 30 މަސް ވަންދެން ރަސޫލާއާއެކު އުޅުއްވި. އަދި ނަބިއްޔާގެ ފަރާތުން އެތަކެއް ބައިވަރު ޙަދީޘް ރިވާ ކުރެއްވި. 1660 ޙަދީޘް ރިވާ ކުރެއްވި.
          <p/>
     </div> 
 </div>
@@ -3417,7 +3179,7 @@ A small companion
       <script>
          /*Help Alert*/
                  function myHelp() {
-                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+o] = Options, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
+                     alert("Keyboard Controls: \n\n [Tab] =Tab Navigation \n [Arrow Keys] = Keyboard Navigation \n [Shift + o] = Options \n [Shift + c] = Copy \n [Shift + x] = Excel \n [Shift + v] = Csv \n [Shift + p] = Print");
                  }
          
          /*Footer Alert*/
@@ -3597,7 +3359,8 @@ A small companion
          
              $.extend( true, $.fn.dataTable.defaults, {
                 "pagingType": "full_numbers",
-                "keys": "true", //KeyTable extension 
+            	//"keys": "true",   /* KeyTable extension, old  */
+                "keys": { clipboardOrthogonal: "export" }, // strips html tags off keystable copy
              } );
          
          } else { /* js media query on mobile, tablet */
@@ -3611,7 +3374,7 @@ A small companion
          
          //============================================Table Data Begin
          //  $(document).ready(function() {
-           var table = $('#fnTable').DataTable({
+           var table = $("#fnTable").DataTable({
                      data: FNdataSet,  //has to match javascript json
          
          
@@ -3675,7 +3438,19 @@ A small companion
                { className: "fnCol10", "targets": [9], "visible": false, "searchable": false },
                { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },
                { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },
-            ], //end of columnDefs, previously without visible and searchable options
+            //], //end of columnDefs, previously without visible and searchable options
+            //below strips html tags off keystable copy, second part with keys on
+               { targets: "_all",
+                 render: function (data, type, row, meta) {
+                     if (type === "export") {
+                        var div = document.createElement("div");
+                        div.innerHTML = data;
+                        return div.innerText;
+                                                          }
+        
+                     return data;
+               }
+                        }],
          
          /* CHANGE123 */
              bstateSave: true, //Seems to work even offline - restore table state on page reload
@@ -3854,7 +3629,7 @@ renderer: 'bootstrap',
                                    text: 'Show/Hide'
                                  }, //end of colvis
 
-                                 /*
+                                 
                                  { extend: 'print',
                                    key: { key: 'p', shiftKey: true },
                                    text: 'Print',
@@ -3866,7 +3641,7 @@ renderer: 'bootstrap',
                                    text: 'Excel',
                                    exportOptions: { columns: [':visible'], rows: [':visible'] }
                                  }, //end of excel
-         
+         /* DOES NOT WORK FOR SOME REASON - FIX123
                                  { extend: 'csv',
                                    key: { key: 'v', shiftKey: true },
                                    text: 'Csv',
@@ -3978,633 +3753,6 @@ renderer: 'bootstrap',
       </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--=== === ===INLINE JS=== === ===-->
-      <script>
-         /*Help Alert*/
-                 function myHelp() {
-                     alert("Keyboard Controls: [Tab] =Tab Navigation, [Arrow Keys] = Keyboard Navigation, [shift+w] = Website Link, [shift+s] = Play Store Link, [shift+d] = Desktop Link, [shift+c] = Copy, [shift+x] = Excel, [shift+v] = Csv, [shift+p] = Print");
-                 }
-         
-         /*Footer Alert*/
-                 function myFooter() {
-                     alert("صحيح البخاري 456: عَنْ عَائِشَةَ أَنَّ رَسُولَ اللَّهِ ﷺ قال: مَا بَالُ أَقْوَامٍ يَشْتَرِطُونَ شُرُوطًا لَيْسَ فِي كِتَابِ اللَّهِ؟ مَنِ اشْتَرَطَ شَرْطًا لَيْسَ فِي كِتَابِ اللَّهِ فَلَيْسَ لَهُ، وَإِنِ اشْتَرَطَ مِائَةَ مَرَّةٍ.");
-                 }
-                 /* Narrated Aisha: Allah's Messenger ﷺ said: What is the matter with people that they impose conditions which are not in the Book of Allah? Whoever imposes conditions which are not in the Book of Allah, his conditions will be invalid even if he imposed them a hundred times. */
-         
-         
-         /* removes right tab click active */
-         $(".nav li").click(function() {
-             $("ul.nav.navbar-nav.navbar-right > li").removeClass('active');
-             $("html").animate({ scrollTop: 0 }, "fast");   /* NavClick scroll to top - tabs */
-         });
-         
-         /* NavClick scroll to top - tabs 
-         $('.NavClick').click(function(){
-             $("html").animate({ scrollTop: 0 }, "fast");
-          });  */
-         
-         /* CLOSE NAV ON EXT CLICK */
-         $('body').bind('click', function(e) { 
-             if(jQuery(e.target).closest('.navbar').length == 0) {
-                 // click happened outside of .navbar, so hide
-                 var opened = $('.navbar-collapse').hasClass('collapse in');
-                 if ( opened === true ) {
-                     $('.navbar-collapse').collapse('hide');
-                 }
-             }
-         });
-         
-         /* close mobile view navbar on click */
-         $(document).on('click','.navbar-collapse.in',function(e) {
-             if( $(e.target).is('a') ) {
-                 $(this).collapse('hide');
-             }
-         });
-         /* ACTIVE STATE ON NAV - breaks tabs
-             $(".nav li").on("click", function() {
-               $(".nav li").removeClass("active");
-               $(this).addClass("active");
-             });
-         */
-         
-         /* close mobile view navbar on click - both of these break dropdowns
-         $(function() {
-             $('.nav a').on('click', function(){ 
-                 if($('.navbar-toggle').css('display') !='none'){
-                     $(".navbar-toggle").trigger( "click" );
-                 }
-             });
-         });
-         
-         $('.navbar-nav a').on('click', function () {
-                 if (window.innerWidth <= 768) {
-                     $(".navbar-toggle").click();
-                 }
-             });
-         */
-         
-         /* SEARCH ENGINE 
-           (function() {
-             var cx = '013964696037650862895:jlgz5hvcplw';
-             var gcse = document.createElement('script');
-             gcse.type = 'text/javascript';
-             gcse.async = true;
-             gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-             var s = document.getElementsByTagName('script')[0];
-             s.parentNode.insertBefore(gcse, s);
-           })();
-         */
-         
-         /* FOCUS SEARCH INPUT 
-         $('body').on('shown.bs.modal', '#searchModal', function () {
-             $('input:visible:enabled:first', this).focus();
-         })
-         */
-         /* DEFER IMAGES AND IFRAMES */
-         var imgDefer = document.getElementsByTagName('img');
-         for (var i=0; i<imgDefer.length; i++) {
-         if(imgDefer[i].getAttribute('data-src')) {
-         imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
-         } }
-         var vidDefer = document.getElementsByTagName('iframe');
-         for (var i=0; i<vidDefer.length; i++) {
-         if(vidDefer[i].getAttribute('data-src')) {
-         vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
-         } } 
-
-         //=== ===
-         //=== ===
-         //=== === Accent neutralise === === other half at bottom = do no repeat for every table
-                         $.fn.DataTable.ext.type.search.string = function(data) {
-                             return !data ?
-                                 '' :
-                                 typeof data === 'string' ?
-                                 data
-
-         //                     .replace(/\[.*?\]/g, '') //exclude whats between square brackets, doesnt work on arabic
-                                 
-                                 .replace(/Allah be pleased with him/g, '')
-                                 .replace(/Allah be pleased with her/g, '')
-                                 .replace(/Allah be pleased with them/g, '')
-                                 .replace(/Allah be pleased with them both/g, '')
-
-                                 .replace(/[\u064B-\u065F]/g, '') //ً ٌ ٍ َ ُ  ِ ّ ْ ٓ ٔ ٕ ٖ ٗ ٘ ٙ ٚ ٛ ٜ ٝ ٞ ٟ
-                                 .replace(/[\u0600-\u061F]/g, '') //ً؀ ؁ ؂ ؃ ؄ ؅ ؆ ؇ ؈ ؉ ؊ ؋ ، ؍ ؎ ؏ ؐ ؑ ؒ ؓ ؔ ؕ ؖ ؗ ؘ ؙ ؚ ؛ ALM ؞ ؟
-         //ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ
-                                 .replace(/[\u063B-\u0640]/g, '') //ػ ؼ ؽ ؾ ؿ ـ
-         //ف ق ك ل م ن ه و ى ي
-         
-                                 .replace(/٠/g, '0')
-                                 .replace(/١/g, '1')
-                                 .replace(/٢/g, '2')
-                                 .replace(/٣/g, '3')
-                                 .replace(/٤/g, '4')
-                                 .replace(/٥/g, '5')
-                                 .replace(/٦/g, '6')
-                                 .replace(/٧/g, '7')
-                                 .replace(/٨/g, '8')
-                                 .replace(/٩/g, '9')
-
-                                 .replace(/[أآإٱ]/g, 'ا') //hamza neutralize
-
-         
-                                 .replace(/[\u066A-\u0670]/g, '') //ً٪ ٫ ٬ ٭ ٮ ٯ ٰ ٲ ٳ
-         //ٱ
-                                 .replace(/[\u0672-\u06BD]/g, '') //ٲ ٳ ٴ ٵ ٶ ٷ ٸ ٹ ٺ ٻ ټ ٽ پ ٿ ڀ ځ ڂ ڃ ڄ څ چ ڇ ڈ ډ ڊ ڋ ڌ ڍ ڎ ڏ ڐ ڑ ڒ ړ ڔ ڕ ږ ڗ ژ ڙ ښ ڛ ڜ ڝ ڞ ڟ ڠ ڡ ڢ ڣ ڤ ڥ ڦ ڧ ڨ ک ڪ ګ ڬ ڭ ڮ گ ڰ ڱ ڲ ڳ ڴ ڵ ڶ ڷ ڸ ڹ ں ڻ ڼ ڽ
-         //ھ
-                                 .replace(/[\u06BF-\u06FF]/g, '') //ڿ ۀ ہ ۂ ۃ ۄ ۅ ۆ ۇ ۈ ۉ ۊ ۋ ی ۍ ێ ۏ ې ۑ ے ۓ ۔ ە ۖ ۗ ۘ ۙ ۚ ۛ ۜ ۝ ۞ ۟ ۠ ۡ ۢ ۣ ۤ ۥ ۦ ۧ ۨ ۩ ۪ ۫ ۬ ۭ ۮ ۯ ۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹ ۺ ۻ ۼ ۽ ۾ ۿ
-         
-                               //  .replace(/([^\u0021-\u007E \u0621-\u063A\u0641-\u064A\u0660-\u0669 \u0780-\u07BF ])/g, '') //prev regex filter, exclude all but range, ate hamza up downs so changed.
-         /*
-                                 .replace(/(ٱ|آ|إ|أ)/g, 'ا')
-                                 .replace(/(ة|ھ)/g, 'ه')
-                                 .replace(/(ئ|ؤ)/g, 'ء')
-                                 .replace(/(ؤ)/g, 'و')
-                                 .replace(/(لأ)/g, 'لا')
-                                 .replace(/(لإ)/g, 'لا')
-                                 .replace(/(ى)/g, 'ي') */  :
-                                 data;
-                         };
-         //End of Accent neutralize and regex for search
-         //============
-         //============
-         
-         /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
-         Remove trailing empty cells.
-         then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
-
-         $(document).ready(function() { //no need to add this again for another table
-         
-         //TABLECHANGE123
-         
-         // MUST BE WITHIN DATATABLES FUNCTION, Individual column searching, other half at bottom
-             // Setup - add a text input to each footer cell
-             $('#bTable tfoot th').each( function () {
-                 var title = $(this).text(); //var title = $('#fnTable thead th').eq( $(this).index() ).text();
-                 $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-             } );
-         
-         //Add footer search to table
-                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
-         
-         //Setup - add a text input to each search footer cell
-                         $('#bTable tfoot th').each(function() {
-                             var title = $(this).text();
-                             $(this).html('<input type="text" placeholder="'+title+'"/>');
-                         });
-         
-         
-         //                         var dataSrc = []; //autocomplete typeahead
-         
-
-         //=================== PagingType Media Query
-         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
-         
-             $.extend( true, $.fn.dataTable.defaults, {
-                "pagingType": "full_numbers",
-                "keys": "true", //KeyTable extension 
-             } );
-         
-         } else { /* js media query on mobile, tablet */
-         
-             $.extend( true, $.fn.dataTable.defaults, {
-                "pagingType": "full",
-                                       //KeyTable extension "keys": "false",  no need, makes mobile jump on touch
-             } );
-         
-         } //===================end if else
-         
-         //============================================Table Data Begin
-         //  $(document).ready(function() {
-           var table = $('#bTable').DataTable({
-                     data: BdataSet, //has to match javascript json
-         
-         
-         /*
-         //============================================autocomplete typeahead
-               'initComplete': function(){
-                  var api = this.api();
-                  
-         
-                  // Populate a dataset for autocomplete functionality
-                  // using data from first, second and third columns
-                  api.cells('tr', [0, 4, 5, 6, 7, 8, 9]).every(function(){
-                     // Get cell data as plain text
-                     var data = $('<div>').html(this.data()).text();           
-                     if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
-                  });
-                  
-                  // Sort dataset alphabetically
-                  //dataSrc.sort();
-                 
-                  // Initialize Typeahead plug-in
-                  $('.dataTables_filter input[type="search"]', api.table().container())
-                     .typeahead({
-                        source: dataSrc,
-                        afterSelect: function(value){
-                           api.search(value).draw();
-                        }
-                     }
-                  );
-         
-               },
-         *///==============================================autocomplete typeahead
-         
-         
-          //   data: data, previously without column titles
-             columns: [
-               {title:"#"}, 
-               {title:"Ar Book"},
-               {title:"Ar Chapter"},
-               {title:"Ar Heading"},
-               {title:"En Book"},
-               {title:"En Chapter"},
-               {title:"En Heading"},
-               {title:"Dv Book"},
-               {title:"Dv Chapter"},
-               {title:"Dv Heading"},
-               {title:"Arabic"},
-               {title:"English"},
-               {title:"Dhivehi"},
-               {title:"Ar Ref."},
-               {title:"En Ref."},
-               {title:"Dv Ref."},
-             ],
-         
-             columnDefs: [  //classes columns for css in nweb view, but not print
-      { className: "bCol1", "targets": [0], "visible": true, "searchable": true},
-      { className: "bCol2", "targets": [1], "visible": true, "searchable": false },
-      { className: "bCol3", "targets": [2], "visible": true, "searchable": false },
-      { className: "bCol4", "targets": [3], "visible": true, "searchable": false },
-      { className: "bCol5", "targets": [4], "visible": false, "searchable": false },
-      { className: "bCol6", "targets": [5], "visible": false, "searchable": false },
-      { className: "bCol7", "targets": [6], "visible": false, "searchable": false }, 
-      { className: "bCol8", "targets": [7], "visible": false, "searchable": false },
-      { className: "bCol9", "targets": [8], "visible": false, "searchable": false },
-      { className: "bCol10", "targets": [9], "visible": false, "searchable": false },
-      { className: "bCol11", "targets": [10], "visible": true, "searchable": true },
-      { className: "bCol12", "targets": [11], "visible": true, "searchable": true },
-      { className: "bCol13", "targets": [12], "visible": true, "searchable": true },
-      { className: "bCol14", "targets": [13], "visible": true, "searchable": false },
-      { className: "bCol15", "targets": [14], "visible": false, "searchable": false },
-      { className: "bCol16", "targets": [15], "visible": false, "searchable": false },
-            ], //end of columnDefs, previously without visible and searchable options
-         
-         /* CHANGE123 */
-             bstateSave: true, //Seems to work even offline - restore table state on page reload
-                             "stateDuration": "16800", //seconds, 0 infinity, default 2 hours 200, -1 session only
-                             "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
-         /*
-             stateSave: true, //TURN OFF TO TEST OFFLINE - restore table state on page reload, previouslt without 'b', otherwise breaks, requires net/browser
-                             "stateDuration": "0", //seconds, 0 infinity, default 2 hours 200, -1 session only
-                             "stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
-         */
-             keepConditions: true, //Store the DataTable conditions within the URL hash every time a condition is changed
-         
-             orderCellsTop: false, //Moves the sorting icons to the first header row
-             mark: true, //highlights searches
-             autoWidth: false,
-             ordering: false, //disables column sorting
-             order: [
-                    [0, "asc"]
-                    ],
-         
-             //https://datatables.net/reference/option/lengthMenu - previously 1D, now 2D
-             lengthMenu: [[1, 2, 3, 5, 7, 10, 15, 20, -1], ["Show 1 Hadith", 2, 3, 5, 7, 10, 15, 20, "All"]], //display range of pages
-             
-             language: {
-                 buttons: {
-                     copyTitle: 'Copy',
-                     copySuccess: {
-                         1: "Copied 1 Hadith",
-                         _: "Copied %d Ahadith"
-                     }
-                 },
-                 paginate: {
-                     first:      "&lt;&lt; First",
-                     last:       "Last &gt;&gt;",
-                     next:       "Next &gt;",
-                     previous:   "&lt; Back"
-                     },
-                 infoEmpty:      "Found 0 Hadith",
-                 infoFiltered:   "(filtered from _MAX_ total)",
-                 zeroRecords:    "No matches",
-                 search: "",
-                 searchPlaceholder: "Search Bukhari",
-                 info: "_START_ to _END_ of _TOTAL_ Hadith",
-                 lengthMenu: "_MENU_"
-             }, //end of language
-         
-         
-         /*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
-          default: lpfrtip
-         l - length changing input control
-         f - filtering input
-         t - The table
-         i - Table information summary
-         p - pagination control
-         r - processing display element
-         B - Buttons
-         
-          'lBpfrtip',
-         
-< and > - div element
-<"class" and > - div with a class
-<"#id" and > - div with an ID
-<"#id.class" and > - div with an ID and a class
-
-         "<'row'<'col-sm-6'l><'col-sm-6'f>>" +
-         "<'row'<'col-sm-12'tr>>" +
-         "<'row'<'col-sm-5'i><'col-sm-7'p>>",
-         
-         "<'row'<'col-sm-4'l><'col-sm-4'f><'col-sm-4'B>>" +
-         "<'row'<'col-sm-12'tr>>" +
-         "<'row'<'col-sm-5'i><'col-sm-7'p>>"
-         */
-         //https://getbootstrap.com/docs/3.3/css/#responsive-utilities, hidden-xs, hidden-sm, hidden-md, hidden-lg
-
-dom: //previous dom setting broke the diactric included search
-
-
-      //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
-      //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
-         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
-
-      //mobile and tablet top
-      "<'hidden-md hidden-lg hidden-sm '"   +
-         "<'row'<'col-sm-12'p>>" +
-      ">"   +
-
-      //BOTH (table for desktop and mobile and tablet)
-         "<'row'<'col-sm-12'tr>>" +
-
-      //desktop bottom
-      "<'hidden-xs'"   +
-         "<'row'<'col-sm-12'p>>" +
-      ">"   +
-
-      //mobile and tablet bottom
-      "<'hidden-md hidden-lg hidden-sm '"   +
-         "<'row'<'col-sm-5'i><'col-sm-7'p>>"  +
-      ">",
-
-renderer: 'bootstrap',
-
-
-             buttons: [
-                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
-                  text: 'Options',
-                  key: {key: 'o', shiftKey: true},
-                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
-
-                  buttons: [
-         
-                       {extend: 'copy',
-                        key: {key: 'c', shiftKey: true},
-                        text: 'Copy',
-                        messageTop: 'hadithmv.com',
-                        title: 'Sahih Bukhari:',
-         
-         //=== edits clipboard regex, code to manipulate the data string as desired
-                       customize: function(data) {
-         /**/
-                               // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
-         //                       data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
-         
-                                data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
-         
-                                data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
-         
-                               // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
-                       data = data.replace( /\n#/g, '' );
-                       data = data.replace( /\tAr Book/g, '' );
-                       data = data.replace( /\tAr Chapter/g, '' );
-                       data = data.replace( /\tAr Heading/g, '' );
-                       data = data.replace( /\tEn Book/g, '' );
-                       data = data.replace( /\tEn Chapter/g, '' );
-                       data = data.replace( /\tEn Heading/g, '' );
-                       data = data.replace( /\tDv Book/g, '' );
-                       data = data.replace( /\tDv Chapter/g, '' );
-                       data = data.replace( /\tDv Heading/g, '' );
-                       data = data.replace( /\tArabic/g, '' );
-                       data = data.replace( /\tEnglish/g, '' );
-                       data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tAr Ref./g, '' );
-                       data = data.replace( /\tEn Ref./g, '' );
-                       data = data.replace( /\tDv Ref./g, '' );
-         
-                       data = data.replace( /\nAr Book/g, '' );
-                       data = data.replace( /\nAr Chapter/g, '' );
-                       data = data.replace( /\nAr Heading/g, '' );
-                       data = data.replace( /\nEn Book/g, '' );
-                       data = data.replace( /\nEn Chapter/g, '' );
-                       data = data.replace( /\nEn Heading/g, '' );
-                       data = data.replace( /\nDv Book/g, '' );
-                       data = data.replace( /\nDv Chapter/g, '' );
-                       data = data.replace( /\nDv Heading/g, '' );
-                       data = data.replace( /\nArabic/g, '' );
-                       data = data.replace( /\nEnglish/g, '' );
-                       data = data.replace( /\nDhivehi/g, '' );
-                       data = data.replace( /\nAr Ref./g, '' );
-                       data = data.replace( /\nEn Ref./g, '' );
-                       data = data.replace( /\nDv Ref./g, '' ); 
-         
-                                data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
-                                data = data.replace( /\t/g, '\n\n' ); //seperates rows
-         
-                                data = data.replace( /hadithmv.com\n/g, 'hadithmv.com\n\n' ); //adds new line on android
-         
-         /*
-                                data = data.replace( /\r/g, '' ); //rids windows platform newline
-                                data = data.replace( /\t/g, '\n\n' );
-         /**/
-         
-         
-                               console.log(JSON.stringify(data));
-                               return data;
-                             },
-         //=== edits clipboard regex end, customize: function(data) {
-         
-                       exportOptions: {columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
-                     },
-         //end of copy customization
-         
-         /*APKCHANGE123*/
-                                 { extend: 'colvis',
-                                   key: {key: 'h', shiftKey: true},
-                                   text: 'Show/Hide'
-                                 }, //end of colvis
-
-/*
-                                 { extend: 'print',
-                                   key: { key: 'p', shiftKey: true },
-                                   text: 'Print',
-                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
-                                 }, //end of print
-         
-                                 { extend: 'excel',
-                                   key: { key: 'x', shiftKey: true },
-                                   text: 'Excel',
-                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
-                                 }, //end of excel
-         
-                                 { extend: 'csv',
-                                   key: { key: 'v', shiftKey: true },
-                                   text: 'Csv',
-                                   exportOptions: { columns: [':visible'], rows: [':visible'] }
-                                 }, //end of csv
-         */
-
-         /*
-                                 //json button (export all)
-                                 { text: 'Json', //https://datatables.net/extensions/buttons/examples/html5/customFile.html
-                                   action: function ( e, dt, button, config ) {
-                                     var data = dt.buttons.exportData();
-          
-                                     $.fn.dataTable.fileSave(
-                                      new Blob( [ JSON.stringify( data ) ] ),
-                                         'Export.json'
-                                                            );
-                                                                               }
-                                 }, //json button end
-         */
-                                 //custom button
-         
-/*         
-                                 //share collection
-                 {extend: 'collection', //https://datatables.net/extensions/buttons/examples/initialisation/collections.html
-                  text: 'Share App',
-                  autoClose: false, //Buttons' collections will remain on screen when a sub-button is activated by default, but this behaviour isn't always desirable and can be controlled through the use of the autoClose option 
-                  buttons: [
-                                 {text: 'Telegram',
-                                         action: function ( e, dt, button, config ) {
-                                         window.location = 'https://telegram.me/share/url?url=https://play.google.com/store/apps/details?id=com.hadithmv.hmv';}
-                                 }, //custom button end
-                         ] },//end of share collection
-*/                         
-         
-                         ] }//end of inner buttons
-         
-                   ],
-         //=== end of outer buttons
-         
-          
-           }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
-         
-
-             //======================================== HammerJS - Swipe
-             delete Hammer.defaults.cssProps.userSelect;   //enables text selection, but that conflicts with swipe
-         
-         
-         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
-          /* empty */
-         } else { /* js media query on mobile, tablet */
-         
-                       Hammer(bTable).on("swipeleft", function() {
-                             table.page( 'next' ).draw( 'page' );  
-                       });
-                       Hammer(document.getElementById("bTable")).on("swiperight", function() {
-                             table.page( 'previous' ).draw( 'page' );  
-                       });
-         
-         } //===================end if else
-         
-         
-             // ScrollTop - If the user changes the page, scroll to the top
-             $(".dataTable").on("page.dt", function () {
-                 $("html, body").animate({ scrollTop: 0 }, "fast");
-                 $("th:first-child").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
-             });
-         
-         
-            // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-         //Remove accented character from global search input, other half at top, tableID followed by '_filter input'
-                         $('#bTable_filter input').keyup(function() {
-                             table
-                                 .search(
-                                     $.fn.DataTable.ext.type.search.string(this.value)
-                                 )
-                                 .draw();
-                         });
-         //End of Remove accented characters from global search input
-         
-         
-          // MUST BE WITHIN DATATABLES FUNCTION, previously above and below: "} );   });", had to add variable table name at top to make this work
-             // Apply the Individual column searching, other half at top
-             table.columns().every( function () {
-                 var that = this;
-          
-                 $( 'input', this.footer() ).on( 'keyup change', function () {
-                     if ( that.search() !== this.value ) {
-                         that
-                             .search( this.value )
-                             .draw();
-                     }
-                 } );
-             } );
-         // Individual column searching end
-         
-         // moves individual column searching to top, header, does not break fixedcolumnheaders
-         $('#bTable tfoot tr').appendTo('#bTable thead');
-         // moves individual column searching to top end
-         
-         // Apply S Buttons
-                         table.buttons().container()
-                         table.buttons(0, null).containers();
-                         /*table.buttons().container()
-                           .appendTo( $('div.eight.column:eq(0)', table.table().container()) ); // End of buttons
-                         */
-         
-         });
-      </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
 
 
 
