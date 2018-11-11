@@ -401,7 +401,7 @@ body > h1 {font-size: 20px;} /*print header font size*/
 /* @media screen and (max-width: 768px) {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
 } above mobile breakpoint */
-.dataTable tbody tr td.bCol14 {   /* Takhrij */
+.dataTable tbody tr td.bCol14 {   /* ar ref */
          direction: rtl;
          text-align: justify; text-align-last: center; /* justify and center */
          font-size: 145%;
@@ -411,27 +411,45 @@ body > h1 {font-size: 20px;} /*print header font size*/
   -webkit-text-size-adjust: 100%;
   line-height: 1.6;
   word-wrap: break-word; }
+        .dataTable tbody tr td.bCol15 {   /* en ref */
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Ubuntu','KFGQPCUthmanTahaNaskh','Faruma';
+            color: #205ca5;
+            font-size: 110%;  
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  word-wrap: break-word; }
+        .dataTable tbody tr td.bCol16 {  /* dv ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';
+            color: #205ca5;
+            font-size: 140%;  
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  word-wrap: break-word; }
 
-
-/* MAKES RAAWEE AND HADITH QUOTE STAND OUT 
+/* MAKES RAAWEE AND HADITH QUOTE STAND OUT */
 .rvtxt {  color: brown; text-shadow: 0.05px 0.05px 0px rgba(150, 150, 150, 1); font-size: 103%;   }
 .hdtxt {  color: green; text-shadow: 0.05px 0.05px 0px rgba(150, 150, 150, 1); font-size: 103%;   }
-*/
+
 
 /* === === */
-/* === RUWAATH MODALS CSS === 
+/* === RUWAATH MODALS CSS === */
   .modal-header { font-weight: bold; text-align: center; font-size: 21px;}
 
  .aMdl,.dMdl  { direction: rtl;
                  text-align: justify; padding: 17px; font-size: 18px;}
  .eMdl  { direction: ltr;
                  text-align: justify; padding: 17px; font-size: 15px;}
- .dMdl  {   font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';   }
-
+ .dMdl  {   font-family: 'Faruma','Ubuntu','KFGQPCUthmanTahaNaskh';   } /* otherwise lafzul jalaala is without alif */
+/* Fixes modal opening jump */
 .modal {overflow-y: auto;}
 .modal-open {overflow: auto;}
 .modal-open[style] {padding-right: 0px !important;}
-*/
+
 /* Prevents tabs from stacking */
 @media (max-width: 768px) {
   .nav-justified > li {
@@ -445,16 +463,16 @@ body > h1 {font-size: 20px;} /*print header font size*/
   }
 }
 
-/* makes modals higher - Mobile only
+/* makes modals higher - Mobile only*/
          @media screen and (max-width: 768px) {
 .modal-content {margin-top: 5px !important;}   }
 
- IOS modal fix, otherwise modal is not click activated, using span here also works 
+/* IOS modal fix, otherwise modal is not click activated, using span here also works */
 .rvtxt {   cursor:pointer;   }
-*/
 
-/* fixes Rawaahu Muslim number breaks, min 47
-#fnTable > tbody > tr > td.fnCol9 {min-width: 47px;}*/
+
+/* fixes Rawaahu Muslim number breaks, min 47*/
+#fnTable > tbody > tr > td.fnCol9 {min-width: 47px;}
 /* === RUWAATH MODALS CSS === */
 /* === === */
 
@@ -1167,7 +1185,7 @@ table unpadded too much, as if zoomed, readd padded around sides*/
              } );
          
          //Add footer search to table
-                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Takhrij</th></tr></tfoot>');
+                         $("#bTable").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
          
          //Setup - add a text input to each search footer cell
                          $('#bTable tfoot th').each(function() {
@@ -1249,7 +1267,9 @@ table unpadded too much, as if zoomed, readd padded around sides*/
                {title:"Arabic"},
                {title:"English"},
                {title:"Dhivehi"},
-               {title:"Takhrij"},
+               {title:"Ar Ref."},
+               {title:"En Ref."},
+               {title:"Dv Ref."},
              ],
          
              columnDefs: [  //classes columns for css in nweb view, but not print
@@ -1267,6 +1287,8 @@ table unpadded too much, as if zoomed, readd padded around sides*/
       { className: "bCol12", "targets": [11], "visible": true, "searchable": true },
       { className: "bCol13", "targets": [12], "visible": true, "searchable": true },
       { className: "bCol14", "targets": [13], "visible": true, "searchable": false },
+      { className: "bCol15", "targets": [14], "visible": false, "searchable": false },
+      { className: "bCol16", "targets": [15], "visible": false, "searchable": false },
             //], //end of columnDefs, previously without visible and searchable options
             //below strips html tags off keystable copy, second part with keys on
                { targets: "_all",
@@ -1420,7 +1442,9 @@ renderer: 'bootstrap',
                        data = data.replace( /\tArabic/g, '' );
                        data = data.replace( /\tEnglish/g, '' );
                        data = data.replace( /\tDhivehi/g, '' );
-                       data = data.replace( /\tTakhrij./g, '' );
+                       data = data.replace( /\tAr Ref./g, '' );
+                       data = data.replace( /\tEn Ref./g, '' );
+                       data = data.replace( /\tDv Ref./g, '' );
          
                        data = data.replace( /\nAr Book/g, '' );
                        data = data.replace( /\nAr Chapter/g, '' );
@@ -1434,7 +1458,9 @@ renderer: 'bootstrap',
                        data = data.replace( /\nArabic/g, '' );
                        data = data.replace( /\nEnglish/g, '' );
                        data = data.replace( /\nDhivehi/g, '' );
-                       data = data.replace( /\nTakhrij./g, '' );
+                       data = data.replace( /\nAr Ref./g, '' );
+                       data = data.replace( /\nEn Ref./g, '' );
+                       data = data.replace( /\nDv Ref./g, '' ); 
          
                                 data = data.replace( /\r\n\r\n\r/g, '\r\n\r' ); //rids empty space after title
                                 data = data.replace( /\t/g, '\n\n' ); //seperates rows

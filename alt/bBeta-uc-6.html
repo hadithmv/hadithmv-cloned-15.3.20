@@ -316,11 +316,24 @@ time, mark, audio, video {
         .dataTable tbody tr td.col4 {font-family: 'LatoLatin-Regular-mod','KFGQPCUthmanTahaNaskh-mod','Tharujamaanu-Light-mod';}
 } above mobile breakpoint */
 
-        .dataTable tbody tr td.col14 {   /* Takhrij */
+        .dataTable tbody tr td.col14 {   /* ar ref */
             direction: rtl;
             text-align: justify; text-align-last: center; /* justify and center */
             font-size: 140%;
             font-family: none;
+            color: red;
+        }
+        .dataTable tbody tr td.col15 {   /* en ref */
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            color: red;
+        }
+        .dataTable tbody tr td.col16 {  /* dv ref */
+            direction: rtl;
+            text-align: justify; text-align-last: center; /* justify and center */
+            font-family: "Tharujamaanu";
+            font-size: 120%;
             color: red;
         }
 
@@ -499,7 +512,9 @@ time, mark, audio, video {
             {"data":"arab",     "title":"Arabic"},
             {"data":"eng",      "title":"English"},
             {"data":"dhiv",     "title":"Dhivehi"},
-            {"data":"Takh",    "title":"Takhrij"},
+            {"data":"arTakh",    "title":"Ar Ref."},
+            {"data":"enTakh",    "title":"Ar Ref."},
+            {"data":"dvTakh",    "title":"Dv Ref."},
 
             ];
 
@@ -574,7 +589,7 @@ time, mark, audio, video {
 
 
 //Add footer search to table
-                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Takhrij</th></tr></tfoot>');
+                $("#table_id").append('<tfoot><tr><th>#</th><th>Ar Book</th><th>Ar Chapter</th><th>Ar Heading</th><th>En Book</th><th>En Chapter</th><th>En Heading</th><th>Dv Book</th><th>Dv Chapter</th><th>Dv Heading</th><th>Arabic</th><th>English</th><th>Dhivehi</th><th>Ar Ref.</th><th>En Ref.</th><th>Dv Ref.</th></tr></tfoot>');
 
          //Setup - add a text input to each search footer cell
                          $('#table_id tfoot th').each(function() {
@@ -623,6 +638,8 @@ time, mark, audio, video {
       { className: "col12", "targets": [11], "visible": true, "searchable": true },
       { className: "col13", "targets": [12], "visible": true, "searchable": true },
       { className: "col14", "targets": [13], "visible": true, "searchable": false },
+      { className: "col15", "targets": [14], "visible": false, "searchable": false },
+      { className: "col16", "targets": [15], "visible": false, "searchable": false },
    ], //end of columnDefs, previously without visible and searchable options
 
 
