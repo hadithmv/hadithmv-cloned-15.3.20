@@ -473,8 +473,10 @@ body > h1 {font-size: 20px;} /*print header font size*/
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(3),
          #fnTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-         /*moves show index a little to the right*/
-         #fnTable_info { margin-left: 10px;}
+         /*removes bottom pagination row padding, to touch evenly the ends of the sides*/
+         #fnTable_wrapper > div.hidden-xs > div {padding: 0px;}
+         /*moves show index a little to the left*/
+         #fnTable_info { margin-left: -35px;}
          /*moves show index a little to the bottom*/
          #fnTable_info { padding-top: 6.5px;}
          /* removes margin around table, especially top-bottom */
@@ -711,8 +713,10 @@ table unpadded too much, as if zoomed, readd padded around sides*/
          /* moves buttons and page length a little to right, by removing right padding of filler grid columns */
          #bTable_wrapper > div:nth-child(1) > div:nth-child(3),
          #bTable_wrapper > div:nth-child(1) > div:nth-child(5) {padding: 0px !important;}
-         /*moves show index a little to the right*/
-         #bTable_info { margin-left: 10px;}
+         /*removes bottom pagination row padding, to touch evenly the ends of the sides*/
+         #bTable_wrapper > div.hidden-xs > div {padding: 0px;}
+         /*moves show index a little to the left*/
+         #bTable_info { margin-left: -35px;}
          /*moves show index a little to the bottom*/
          #bTable_info { padding-top: 6.5px;}
          /* removes margin around table, especially top-bottom */
@@ -4001,10 +4005,14 @@ The companion, the blessing of Sham, the settler of Homs. He was a small compani
 
 dom: //previous dom setting broke the diactric included search
 
+/* previous top row dom:
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+*/
 
       //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
       //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
-         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-2 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>"+
 
       //mobile and tablet top
       "<'hidden-md hidden-lg hidden-sm '"   +
@@ -4598,10 +4606,14 @@ renderer: 'bootstrap',
 
 dom: //previous dom setting broke the diactric included search
 
+/* previous top row dom:
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+*/
 
       //BOTH (table for desktop and mobile and tablet) xs is mobile, sm is deskop, hidden-xs is desktop
       //four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops)
-         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-1 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1'><'col-xs-1 'l><'hidden-xs col-sm-1'i><'hidden-xs col-sm-6'p>>"+
+
+         "<'row'<'col-sm-1 col-xs-2'f><'col-sm-2 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>"+
 
       //mobile and tablet top
       "<'hidden-md hidden-lg hidden-sm '"   +
