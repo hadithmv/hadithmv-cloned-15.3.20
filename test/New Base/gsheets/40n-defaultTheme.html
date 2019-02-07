@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+    <!-- REMOVED !!!
+        BOOTSTRAP 3.3.7 JS -Originally 3.2.0
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <!-- BOOTSTRAP 3.3.7 CSS -Originally 3.2.0
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- bootstrap integration css 1.10.18 -Originally 1.10.3
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css"> -->
+    <!-- bootstrap integration js 1.10.18 -Originally 1.10.3
+            <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script> -->
+
+    <!-- JS LIBRARIES-->
+    <!-- JQUERY 3.3.1 -Originally 2.2.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+
+    <!-- DATATABLES JS 1.10.19 -Originally 1.10.3 -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!-- TableTop 1.5.4 -Originally 1.4.3 -->
+    <script type="text/javascript" src="https://rawcdn.githack.com/jsoma/tabletop/8c6998e36b27c8531abc8993abe5f43176df1aeb/src/tabletop.min.js"></script>
+
+    <style type="text/css">
+        html {
+            -webkit-text-size-adjust: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font: 14px/1.4 Arial, Helvetica, sans-serif;
+            color: black;
+        }
+
+        h1 {
+            margin: 0 0 6px 0;
+            font-size: 20px;
+            color: black;
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #666;
+            font-size: 14px;
+            margin: 0 0 22px 0;
+        }
+
+        .footnotes {
+            margin-bottom: 20px;
+        }
+
+        .footnotes h4 {
+            margin: 2px 0 7px 0;
+            color: #666;
+            font-size: 11px;
+        }
+
+        .footnotes p,
+        .footer p {
+            margin: 2px 0 0 0;
+            font-size: 11px;
+            line-height: 1.3;
+            color: #808080;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            color: #4774CC;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+            opacity: 0.7;
+        }
+
+        /*custom styles*/
+        table,
+        th {
+            text-align: center;
+        }
+
+        /*make odd rows lightblue*/
+        .table-striped>tbody>tr:nth-child(odd)>td {
+            background-color: #f4f7ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Top 100 California Companies by Wage Claims</h1>
+    <p>Workers that believe they were unpaid for hours worked can make a claim with the California Department of Labor.
+        This list is the top 100 California companies ranked by total amount awarded by the state. Only claims that
+        resulted in an award are listed here.</p>
+
+    <div id="graphic"></div>
+
+
+    <div class="footnotes">
+        <h4>Notes</h4>
+        <p>The list total award amount does not necessarily mean that amount was paid out to the worker. A lack of
+            enforcement in the wage dispute system means many workers never see any of their award.</p>
+    </div>
+
+    <div class="footer">
+        <p>Source: California Department of Labor</p>
+        <p>Credit: <a href="http://www.twitter.com/scottpham">Scott Pham</a>/NBC Bay Area</p>
+    </div>
+
+    <!-- External Js link originally here 
+    <script src="js/graphic.js" type="text/javascript"></script> -->
+    <!-- Inline Js -->
+    <script>
+        //Edit 'key' and 'columns' to connect your spreadsheet
+
+        //enter google sheets key here
+        var key = "1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs";
+
+        //"data" refers to the column name with no spaces and no capitals
+        //punctuation or numbers in your column name
+        //"title" is the column name you want to appear in the published table
+        var columns = [
+            {"data":"no",       "title":"#"},
+            {"data":"arNo",  "title":"Ar No."},
+            {"data":"arTitle",  "title":"Ar Title"},
+            {"data":"enTitle",  "title":"En Title"},
+            {"data":"dvTitle",  "title":"Dv Title"},
+            {"data":"arab",     "title":"Arabic"},
+            {"data":"eng",      "title":"English"},
+            {"data":"dhiv",     "title":"Dhivehi"},
+            {"data":"arRef",    "title":"Ar Ref."},
+            {"data":"enRef",    "title":"En Ref."},
+            {"data":"dvRef",    "title":"Dv Ref."},
+            {"data":"rsRef",    "title":"Rs Ref."},
+            ];
+      
+$(document).ready(function() {
+
+            function initializeTabletopObject() {
+                Tabletop.init({
+                    key: key,
+                    callback: function (data, tabletop) {
+                        writeTable(data); //call up datatables function
+                    },
+                    simpleSheet: true,
+                    debug: false
+                });
+            }
+
+  initializeTabletopObject();
+      
+  function writeTable(data) {
+            //select main div and put a table there
+            //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
+            $('#graphic').html(
+                '<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-condensed table-responsive" id="mySelection"></table>'
+            );
+
+        //initialize the DataTable object and put settings in
+        $("#mySelection").DataTable({
+            "autoWidth": false,
+        "data": data,
+        "columns": columns,
+        "order": [
+          [2, "desc"]
+        ], //order on second column
+        "pagingType": "simple" //no page numbers
+          //uncomment these options to simplify your table
+          //"paging": false,
+          //"searching": false,
+          //"info": false
+      });
+    }
+  });
+  //end of writeTable
+      </script>
+
+</body>
+
+</html>
