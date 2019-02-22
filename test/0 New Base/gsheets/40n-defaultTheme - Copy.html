@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
+
+    <!-- JS LIBRARIES-->
+    <!-- JQUERY 3.3.1 -Originally 2.2.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+
+    <!-- DATATABLES JS 1.10.19 -Originally 1.10.3 -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!-- TableTop 1.5.4 -Originally 1.4.3 -->
+    <script type="text/javascript" src="https://rawcdn.githack.com/jsoma/tabletop/8c6998e36b27c8531abc8993abe5f43176df1aeb/src/tabletop.min.js"></script>
+
+    <style type="text/css">
+        html {
+            -webkit-text-size-adjust: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font: 14px/1.4 Arial, Helvetica, sans-serif;
+            color: black;
+        }
+
+        h1 {
+            margin: 0 0 6px 0;
+            font-size: 20px;
+            color: black;
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #666;
+            font-size: 14px;
+            margin: 0 0 22px 0;
+        }
+
+        .footnotes {
+            margin-bottom: 20px;
+        }
+
+        .footnotes h4 {
+            margin: 2px 0 7px 0;
+            color: #666;
+            font-size: 11px;
+        }
+
+        .footnotes p,
+        .footer p {
+            margin: 2px 0 0 0;
+            font-size: 11px;
+            line-height: 1.3;
+            color: #808080;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            color: #4774CC;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+            opacity: 0.7;
+        }
+
+        /* === CUSTOM STYLES === */
+
+
+        /*vertically aligns column text to top*/
+        table.dataTable tbody td {
+            vertical-align: top;
+        }
+
+        /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. */
+        input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button; 
+        /* adds x */
+        border:4px solid transparent;   /*makes x a bit bigger*/ }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Hadithmv</h1>
+    <p>40 Nawawi Beta</p>
+
+    
+    <div id="FortyN"></div>
+
+
+    <div class="footer">
+        <p>Source: California Department of Labor</p>
+
+    </div>
+
+    <!-- External Js link originally here 
+    <script src="js/graphic.js" type="text/javascript"></script> -->
+    <!-- Inline Js -->
+    <script>
+        //Edit 'key' and 'columns' to connect your spreadsheet
+
+        //enter google sheets key here
+        var key = "1If9RREmbEsXbp-LikCSCDfrfk0CUkEGVEp5XdyrhYUs";
+
+        //"data" refers to the column name with no spaces and no capitals
+        //punctuation or numbers in your column name
+        //"title" is the column name you want to appear in the published table
+        var columns = [
+            {"data":"no",       "title":"#"},
+            {"data":"arNo",     "title":"Ar No."},
+            {"data":"arTitle",  "title":"Ar Title"},
+            {"data":"enTitle",  "title":"En Title"},
+            {"data":"dvTitle",  "title":"Dv Title"},
+            {"data":"arab",     "title":"Arabic"},
+            {"data":"eng",      "title":"English"},
+            {"data":"dhiv",     "title":"Dhivehi"},
+            {"data":"arRef",    "title":"Ar Ref."},
+            {"data":"enRef",    "title":"En Ref."},
+            {"data":"dvRef",    "title":"Dv Ref."},
+            {"data":"rsRef",    "title":"Rs Ref."},
+            ];
+      
+$(document).ready(function() {
+
+            function initializeTabletopObject() {
+                Tabletop.init({
+                    key: key,
+                    callback: function (data, tabletop) {
+                        writeTable(data);   //call up datatables function
+                    },
+                    simpleSheet: true,
+                    debug: false
+                });
+            }
+
+  initializeTabletopObject();
+      
+  function writeTable(data) {
+            //select main div and put a table there
+            //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
+            $('#FortyN').html(
+                '<table cellpadding="0" cellspacing="0" border="0" class="table stripe compact row-border" id="tableID"></table>'
+                /* DISPLAY: Short-hand for the stripe, hover, row-border and order-column classes.
+                CELL-BORDER: Border around all four sides of each cell.
+                COMPACT: Reduce the amount of white-space the default styling for the DataTable uses, increasing  information density.
+                HOVER: Row highlighting on mouse over.
+                NOWRAP: Disable wrapping of content in the table, so all text in the cells is on a single line.
+                ORDER-COLUMN: Highlight the column that the table data is currently ordered on.
+                ROW-BORDER: Border around only the top and bottom of each row. Note cell-border and row-border are mutually exclusive and cannot be used together.
+                STRIPE: Row striping. */
+            );
+
+        //initialize the DataTable object and put settings in
+        $("#tableID").DataTable({
+
+        "data": data,
+        "columns": columns,     //necessary to fetch, do not quote //define details about the way individual columns behave.
+
+        "autoWidth": false,     //Enable or disable automatic column width calculation. This can be disabled as an optimisation (it takes a finite amount of time to calculate the widths). Default: true.
+        "deferRender": true,    //By default, when DataTables loads data from an Ajax or Javascript data source (ajax and data respectively) it will create all HTML elements needed up-front. When working with large data sets, this operation can take a not-insignificant amount of time, particularly in older browsers such as IE6-8. This option allows DataTables to create the nodes (rows and cells in the table body) only when they are needed for a draw. As an example to help illustrate this, if you load a data set with 10,000 rows, but a paging display length of only 10 records, rather than create all 10,000 rows, when deferred rendering is enabled, DataTables will create only 10. When the end user then sorts, pages or filters the data the rows needed for the next display will be created automatically. This effectively spreads the load of creating the rows across the life time of the page.
+        "processing": true,     //Enable or disable the display of a 'processing' indicator when the table is being processed (e.g. a sort). This is particularly useful for tables with large amounts of data where it can take a noticeable amount of time to sort the entries. Default: false. DOESNT SHOW??
+        "order": [
+          [0, "desc"]
+        ], //order on second column
+        "pagingType": "simple" //no page numbers
+          //uncomment these options to simplify your table
+          //"paging": false,
+          //"searching": false,
+          //"info": false
+      });
+    }
+  });
+  //end of writeTable
+      </script>
+
+</body>
+
+</html>
