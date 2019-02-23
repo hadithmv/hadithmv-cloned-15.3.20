@@ -1,49 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="">
 
 <head>
-    <title>Table</title>
+  <meta charset="utf-8">
+  <title>40 Nawawi - beta</title>
+  <meta name="" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!--
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+Place favicon.ico in the root directory -->
+
+<!-- These are html5 boiletplate links, not necessary
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://raw.githack.com/h5bp/html5-boilerplate/master/dist/css/main.css">
+
+<script src="https://raw.githack.com/h5bp/html5-boilerplate/master/dist/js/vendor/modernizr-3.6.0.min.js"></script>
+ -->
+
+  <meta name="theme-color" content="#fafafa">
+
+
+
+
+
+
+
+
 
     <!-- === CSS LIBRARIES === -->
     <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
     <!-- CSS extensions -->
             <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css"/>
-            <link rel="stylesheet" href="https://cdn.datatables.net/keytable/2.5.0/css/keyTable.dataTables.min.css"/>
 
 
-
-    <!-- === JS LIBRARIES === -->
-    <!-- JQUERY 3.3.1 -Originally 2.2.1 -->
+    <!-- === JS LIBRARIES  - Move these to the beginning of body for production === -->
+    <!-- JQUERY 3.3.1   - Needed for Datatables, and Bootstrap if present. Originally 2.2.1 -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <!-- DATATABLES JS 1.10.19 -Originally 1.10.3 -->
+    <!-- DATATABLES JS 1.10.19  - DT Core. Originally 1.10.3 -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-    <!-- TableTop 1.5.4 -Originally 1.4.3 -->
+    <!-- TableTop 1.5.4 - Needed to pull data from google sheets. Originally 1.4.3 -->
     <script src="https://rawcdn.githack.com/jsoma/tabletop/8c6998e36b27c8531abc8993abe5f43176df1aeb/src/tabletop.min.js"></script>
 
     <!-- JS extensions -->
+            <!-- DT Buttons -->
             <script src="https://cdn.datatables.net/buttons/1.5.4/js/dataTables.buttons.min.js"></script>
+            <!-- DT Column Hide Show -->
             <script src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.colVis.min.js"></script>
+            <!-- DT Html5 Export -->
             <script src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.html5.min.js"></script>
+            <!-- DT Excel Export -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+            <!-- DT Pdf Export - Can be updated further -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
 
+            <!-- DT Keytable -->
             <script src="https://cdn.datatables.net/keytable/2.5.0/js/dataTables.keyTable.min.js"></script>
+
+            <!-- DT Mark Js - Css file content included with the header Css-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 
 
 
 
 
 <style>
+
+/* KeyTable Css - taken from external link. */
+    table.dataTable tbody th.focus,
+    table.dataTable tbody td.focus {
+        box-shadow: inset 0 0 1px 2px #3366ff;
+    }
+    div.dtk-focus-alt table.dataTable tbody th.focus,
+    div.dtk-focus-alt table.dataTable tbody td.focus {
+        box-shadow: inset 0 0 1px 2px #ff8b33;
+    }
+
+/* highlight color of markjs plugin - taken from external link.*/
+    mark {  
+        background: orange; color: black;
+    }
+
+
+
+
+
     html {
         -webkit-text-size-adjust: none;
     }
@@ -156,6 +203,7 @@ justify-content: space-between;   /* displays the flex items with space between 
         {"data":"enTitle",  "title":"En Title"},
         {"data":"dvTitle",  "title":"Dv Title"},
         {"data":"arab",     "title":"Arabic"},
+        {"data":"arPlain",  "title":"Ar Plain"},
         {"data":"eng",      "title":"English"},
         {"data":"dhiv",     "title":"Dhivehi"},
         {"data":"arRef",    "title":"Ar Ref."},
@@ -221,7 +269,7 @@ function writeTable(data) {
             "<'row'<t>>" ,
     //Default Value: lfrtip ie: "<'row'<lfrtip>>"  Results in: <div class="wrapper"> {length} {processing} {table} {information} {pagination} </div> */     https://datatables.net/reference/option/dom   Define the table control elements to appear on the page and in what order. DataTables will add a number of elements around the table to both control the table and show additional information about it. The position of these elements on screen are controlled by a combination of their order in the document (DOM) and the CSS applied to the elements. This parameter is used to control their ordering and additional mark-up surrounding them in the DOM. Each table control element in DataTables has a single letter associated with it, and that letter it used in this dom configuration option to indicate where that element will appear in the document order.                                                      The built-in table control elements in DataTables are: l - length changing input control f - filtering input t - The table! i - Table information summary p - pagination control r - processing display element. Each option can be specified multiple times (with the exception of the table itself), which can be used to have table controls both above and below the table. DataTables will automatically synchronise these multiple controls. Markup: Further to these options, you can also specify additional div elements to be inserted into the document, which can be used for styling / nesting of the control elements.                          To add tags, the following syntax is expected: < and > - div element <"class" and > - div with a class <"#id" and > - div with an ID <"#id.class" and > - div with an ID and a class. Plug-ins DataTables feature plug-ins can be developed to add additional features to DataTables and often will make use of this option, adding new letters to the DataTables core features. For example Buttons adds the B option to dom to specify where table control buttons should be inserted into the table. The following extensions can be initialised through the dom option: B - Buttons S - Select
 
-    lengthMenu: [ [5, 10, 20, 30, 40, -1, 1], [5, 10, 20, 30, 40, "All", 1] ],     //https://datatables.net/reference/option/lengthMenu   Default [ 10, 25, 50, 100 ]     Change the options in the page length select list. This parameter allows you to readily specify the entries in the length drop down select list that DataTables shows when pagination is enabled. It can be either: 1D array of integer values which will be used for both the displayed option and the value to use for the display length, or 2D array which will use the first inner array as the page length values and the second inner array as the displayed options. This is useful for language strings such as 'All'). The page length values must always be integer values > 0, with the sole exception of -1. When -1 is used as a value this tells DataTables to disable pagination (i.e. display all rows).
+    lengthMenu: [ [5, 10, 20, 30, 40, -1, 1], ["Show 5", 10, 20, 30, 40, "All", 1] ],     //https://datatables.net/reference/option/lengthMenu   Default [ 10, 25, 50, 100 ]     Change the options in the page length select list. This parameter allows you to readily specify the entries in the length drop down select list that DataTables shows when pagination is enabled. It can be either: 1D array of integer values which will be used for both the displayed option and the value to use for the display length, or 2D array which will use the first inner array as the page length values and the second inner array as the displayed options. This is useful for language strings such as 'All'). The page length values must always be integer values > 0, with the sole exception of -1. When -1 is used as a value this tells DataTables to disable pagination (i.e. display all rows).
     orderClasses: false,      //Highlight the columns being ordered in the table's body. DataTables highlight the columns which are used to order the content in the table's body by adding a class to the cells in that column, which in turn has CSS applied to those classes to highlight those cells. This is done by the addition of the classes sorting_1, sorting_2 and sorting_3 to the columns which are currently being ordered on. The integer value indicates the level of sorting when mutli-column sorting. If more than 3 columns are being ordered upon, the sorting_3 class is repeated. Please note that this feature can affect performance, particularly in old browsers and when there are a lot of rows to be displayed as it is manipulating a large number of DOM elements. As such, this option is available as a feature switch to allow this feature to be disabled with working with old browsers or large data sets.
     pagingType: "full_numbers",   //Default Value: simple_numbers         Pagination button display options. The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using dom and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.               DataTables has six built-in paging button arrangements: numbers - Page number buttons only (1.10.8) simple - 'Previous' and 'Next' buttons only simple_numbers - 'Previous' and 'Next' buttons, plus page numbers full - 'First', 'Previous', 'Next' and 'Last' buttons full_numbers - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers first_last_numbers - 'First' and 'Last' buttons, plus page numbers.
     searchDelay: 350,     //Default Value: null       Set a throttle frequency for searching. The built-in DataTables global search (by default at the top right of every DataTable) will instantly search the table on every keypress when in client-side processing mode and reduce the search call frequency automatically to 400mS when in server-side processing mode. This call frequency (throttling) can be controlled using the searchDelay parameter for both client-side and server-side processing. Being able to control the call frequency has a number of uses: Older browsers and slower computers can have their processing load reduced by reducing the search frequency Fewer table redraws while searching can be less distracting for the user Reduce the load on the server when using server-side processing by making fewer calls Conversely, you can speed up the search when using server-side processing by reducing the default of 400mS to instant (0). As with many other parts of DataTables, it is up to yourself how you configure it to suit your needs! The value given for searchDelay is an integer in milliseconds (mS). When given as null DataTables will automatically assign a value that is suitable for the processing mode that the DataTable is operating in: Instant - client-side processing 400mS - server-side processing.
@@ -234,12 +282,13 @@ function writeTable(data) {
   { className: "col4",  "targets": [3],     "visible": false,   "searchable": false },
   { className: "col5",  "targets": [4],     "visible": false,   "searchable": false },
   { className: "col6",  "targets": [5],     "visible": true,    "searchable": true },
-  { className: "col7",  "targets": [6],     "visible": true,    "searchable": true },
-  { className: "col8",  "targets": [7],     "visible": true,    "searchable": true }, 
-  { className: "col9",  "targets": [8],     "visible": true,    "searchable": true },
-  { className: "col10", "targets": [9],     "visible": false,   "searchable": false },
-  { className: "col11", "targets": [10],    "visible": false,   "searchable": false },
-  { className: "col12", "targets": [11],    "visible": false,   "searchable": false }
+  { className: "col7",  "targets": [6],     "visible": false,   "searchable": true },
+  { className: "col8",  "targets": [6],     "visible": true,    "searchable": true },
+  { className: "col9",  "targets": [7],     "visible": true,    "searchable": true }, 
+  { className: "col10", "targets": [8],     "visible": true,    "searchable": true },
+  { className: "col11", "targets": [9],     "visible": false,   "searchable": false },
+  { className: "col12", "targets": [10],    "visible": false,   "searchable": false },
+  { className: "col13", "targets": [11],    "visible": false,   "searchable": false }
     ], //end of columnDefs, previously without visible and searchable options. */
 
     //Internationalisation ===
@@ -250,15 +299,33 @@ function writeTable(data) {
             next:     "Next",
             last:     "Last"
             },
-        info: "Showing page _PAGE_ of _PAGES_",
-        infoFiltered: "(filtered from _MAX_ total entries)",
-        lengthMenu: "Display _MENU_ entries",
+        buttons: {
+            copyTitle: 'Copy',
+            copySuccess: {
+                    1: "Copied 1 Hadith",
+                    _: "Copied %d Hadith"
+            }
+        },
+
+        info: "_START_ to _END_ of _TOTAL_ Hadith",
+        infoFiltered: "(filtered from _MAX_ total)",
+        lengthMenu: "_MENU_",
         search: "",      //Originally 'Search:' leave this blank in production
-        searchPlaceholder: "Search...",
-        zeroRecords: "No matching entries found"
+        searchPlaceholder: "Search 40 Nawawi...",
+        zeroRecords: "No matches"
 
     }, //End of Internationalisation
 
+
+
+//Buttons within button - Collection
+buttons: [
+            {extend: 'collection',
+            text: 'Options',
+            key: {key: 'o', shiftKey: true},
+            autoClose: true, // Default is false - Buttons' collections will remain on screen when a sub-button is activated by default, but can be controlled through the use of the autoClose option 
+
+    //Start of inner buttons
     buttons: [
         {extend: 'copy',
                 key: {key: 'c', shiftKey: true},
@@ -303,9 +370,16 @@ function writeTable(data) {
                 }
         } //end of json
 
-    ],   //end of buttons ==
 
-    keys: true,
+    ] //end of inner buttons
+         
+    }],
+//=== end of outer buttons
+
+
+
+    keys: true, //keytable  -  adds keyboard navigation to DataTables, operating in exactly the same way as traditional spreadsheet applications. 
+    mark: true, //markjs    - a keyword highlighter for strings, arrays or regular expressions and works in any context (not just tables).
 
     
   });
@@ -313,6 +387,29 @@ function writeTable(data) {
 });
 //end of writeTable
   </script>
+
+
+
+
+
+<!-- These files were part of html5 boilerplate and may not be used
+<script src="js/plugins.js"></script>
+<script src="https://raw.githack.com/h5bp/html5-boilerplate/master/dist/js/plugins.js"></script>
+-->
+
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. 
+  <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+-->
+
+
+
 
 </body>
 
