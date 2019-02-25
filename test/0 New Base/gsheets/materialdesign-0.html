@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- Material CSS - You can also request individual packages’ JS and CSS, e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+    <!-- Material JS -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <!-- import Material Icons from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+
+    <style>
+        /* Custom CSS */
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .element-card {
+            width: 20em;
+            margin: 16px;
+        }
+
+        .element-card>.mdc-card__media {
+            height: 9em;
+        }
+
+        #demo-absolute-fab {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1;
+        }
+
+
+
+
+
+        .element-card.earth {
+            --mdc-theme-primary: #795548;
+            --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+        }
+
+        .element-card.wind {
+            --mdc-theme-primary: #9e9e9e;
+            --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-light);
+        }
+
+        .element-card.fire {
+            --mdc-theme-primary: #f44336;
+            --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-dark);
+        }
+
+        .element-card.water {
+            --mdc-theme-primary: #00bcd4;
+            --mdc-theme-on-primary: var(--mdc-theme-text-primary-on-light);
+        }
+
+
+        .accessible-button {
+            @include mdc-button-filled-accessible(blue);
+        }
+
+        /* End of Custom CSS */
+    </style>
+
+</head>
+
+<body class="mdc-typography">
+
+    <!-- Start Here -->
+
+
+
+
+
+    
+
+
+    <aside class="mdc-drawer">
+        <div class="mdc-drawer__content">
+          <nav class="mdc-list">
+            <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+              <span class="mdc-list-item__text">Inbox</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+              <span class="mdc-list-item__text">Outgoing</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+              <span class="mdc-list-item__text">Drafts</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+    
+      <div class="mdc-drawer-scrim"></div>
+      <div class="mdc-drawer-app-content">
+        <header class="mdc-top-app-bar">
+          <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+              <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+              <span class="mdc-top-app-bar__title">App Bar</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+              <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+            </section>
+          </div>
+        </header>
+    
+        <main class="main-content">
+          <div class="mdc-top-app-bar--fixed-adjust">
+            <h2>
+              An example using Material Components for the Web that changes the navigation drawer layout based on screen width
+            </h2>
+            <p>
+              This simple website template uses Material Components to implement a permanent navigation drawer for screen widths larger
+              than 900px, and a modal drawer for screen widths smaller than 900px. Check it out by resizing the width of your browser window!
+            </p>
+            <p>Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive layout grid</a>.</p>
+          </div>
+        </main>
+      </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <p>Hello World</p>
+    <button class="foo-button mdc-button">Button</button>
+
+    <!-- Apply Material headline3 style to this <h1> element -->
+    <h1 class="mdc-typography--headline3">Hello, Material Starter Kit!</h1>
+
+    <p>
+        A starter kit to get you up and running with Material Components for the Web. <a
+            href="https://glitch.com/~material-starter-kit">Remix and start theming.</a>
+    </p>
+
+    <br>
+
+    <button class="mdc-button mdc-button--raised">
+        Hello World
+    </button>
+
+    <div class="mdc-text-field">
+        <input class="mdc-text-field__input" type="text" id="input">
+        <label for="input" class="mdc-floating-label">Input Label</label>
+        <div class="mdc-line-ripple"></div>
+    </div>
+
+
+
+
+    <div class="cards">
+        <div class="mdc-card element-card earth">
+            <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary">
+                <div class="mdc-card__media-content">
+                    <h1 class="mdc-typography--headline4">Earth</h1>
+                    <h2 class="mdc-typography--headline6">A solid decision.</h2>
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+        <div class="mdc-card element-card wind">
+            <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary">
+                <div class="mdc-card__media-content">
+                    <h1 class="mdc-typography--headline4">Earth</h1>
+                    <h2 class="mdc-typography--headline6">A solid decision.</h2>
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+        <div class="mdc-card element-card fire">
+            <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary">
+                <div class="mdc-card__media-content">
+                    <h1 class="mdc-typography--headline4">Earth</h1>
+                    <h2 class="mdc-typography--headline6">A solid decision.</h2>
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+        <div class="mdc-card element-card water">
+            <div class="mdc-card__media mdc-theme--primary-bg mdc-theme--on-primary">
+                <div class="mdc-card__media-content">
+                    <h1 class="mdc-typography--headline4">Earth</h1>
+                    <h2 class="mdc-typography--headline6">A solid decision.</h2>
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+
+
+        <button class="mdc-fab" id="demo-absolute-fab" aria-label="Favorite">
+            <span class="mdc-fab__icon material-icons">favorite</span>
+        </button>
+
+
+        <button class="mdc-button accessible-button">
+            <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
+            Button
+        </button>
+
+
+
+
+
+
+
+
+
+        <!-- Internal JS -->
+        <script>
+            mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Material Responsive Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Material CSS - You can also request individual packages’ JS and CSS, e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css -->
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+    <!-- Material JS -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+    <!-- import Material Icons from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+
+
+/* Navigation drawer */
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+}
+.main-content {
+  overflow: auto;
+  height: 100%;
+  padding: 18px;
+}
+.app-bar {
+  position: absolute;
+}
+
+
+</style>
+  </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="mdc-typography">
+
+
+
+        <aside class="mdc-drawer mdc-drawer--dismissible">
+
+                <div class="mdc-drawer__header">
+                        <h3 class="mdc-drawer__title">Mail</h3>
+                        <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+                      </div>
+                      
+                <div class="mdc-drawer__content">
+                  <div class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                      <span class="mdc-list-item__text">Inbox</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                      <span class="mdc-list-item__text">Outgoing</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                      <span class="mdc-list-item__text">Drafts</span>
+                    </a>
+                  </div>
+                </div>
+              </aside>
+            
+              <div class="mdc-drawer-app-content">
+                <header class="mdc-top-app-bar app-bar" id="app-bar">
+                  <div class="mdc-top-app-bar__row">
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                      <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+                      <span class="mdc-top-app-bar__title">Dismissible Drawer</span>
+                    </section>
+                  </div>
+                </header>
+            
+                <main class="main-content" id="main-content">
+                  <div class="mdc-top-app-bar--fixed-adjust">
+                    App Content
+                  </div>
+                </main>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- import the Material javascript file -->
+    <script>
+
+/* Navigation drawer */
+mdc.autoInit();
+
+var drawer = new mdc.drawer.MDCDrawer(document.querySelector('.mdc-drawer'));
+const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+topAppBar.setScrollTarget(document.getElementById('main-content'));
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+
+
+
+
+
+
+</script>
+  </body>
+</html>

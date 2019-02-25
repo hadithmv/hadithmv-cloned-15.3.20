@@ -34,7 +34,17 @@ Place favicon.ico in the root directory -->
     <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
     <!-- CSS extensions -->
+            <!--Datatable Buttons Css -->
             <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css"/>
+
+            <!--Semantic UI table only component - NO JS -->
+            <link rel="stylesheet" type="text/css" href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css"/>
+            <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css"/>
+
+
+
+
 
 
     <!-- === JS LIBRARIES  - Move these to the beginning of body for production === -->
@@ -68,6 +78,15 @@ Place favicon.ico in the root directory -->
             <script src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 
 
+         
+
+
+
+            <!-- Material CSS - You can also request individual packages’ JS and CSS, e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css -->
+            <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+
+            <!-- Material JS -->
+            <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
 
 
@@ -131,6 +150,26 @@ Place favicon.ico in the root directory -->
         justify-content: space-between;   /* displays the flex items with space between the lines. horizontally distributes first row before table, evenly. */
     }
 /* === END OF DT TABLE CSS === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -289,15 +328,15 @@ Place favicon.ico in the root directory -->
 
 
 <body>
-<h1>Hadithmv</h1>
-<p>40 Nawawi Beta</p>
+<h2>Hadithmv - 40 Nawawi beta</h2>
+
 
 
 <div id="FortyN"></div>
 
 
 <div class="footer">
-    <p>Live Testing</p>
+    <p>.: Live Testing :.</p>
 
 </div>
 
@@ -354,7 +393,7 @@ function writeTable(data) {
         //select main div and put a table there
         //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
         $('#FortyN').html(
-            '<table class="table stripe row-border" id="tableID"></table>'
+            '<table class="table ui tablet stackable stripe row-border" id="tableID"></table>'
             // PREVIOUSLY '<table cellpadding="10" cellspacing="10" border="0" class="table stripe compact row-border" id="tableID"></table>'
             /* DISPLAY: Short-hand for the stripe, hover, row-border and order-column classes.
             CELL-BORDER: Border around all four sides of each cell.
@@ -364,6 +403,7 @@ function writeTable(data) {
             ORDER-COLUMN: Highlight the column that the table data is currently ordered on.
             ROW-BORDER: Border around only the top and bottom of each row. Note cell-border and row-border are mutually exclusive and cannot be used together.
             STRIPE: Row striping. */
+            /* ui and celled for Semantic UI */
         );
 
     //initialize the DataTable object and put settings in
@@ -378,7 +418,7 @@ function writeTable(data) {
     autoWidth: false,     //Automatic column width calculation. This can be disabled as an optimisation (it takes a finite amount of time to calculate the widths). Default: true.
     deferRender: true,    //By default, when DataTables loads data from an Ajax or Javascript data source (ajax and data respectively) it will create all HTML elements needed up-front. When working with large data sets, this operation can take a not-insignificant amount of time, particularly in older browsers such as IE6-8. This option allows DataTables to create the nodes (rows and cells in the table body) only when they are needed for a draw. As an example to help illustrate this, if you load a data set with 10,000 rows, but a paging display length of only 10 records, rather than create all 10,000 rows, when deferred rendering is enabled, DataTables will create only 10. When the end user then sorts, pages or filters the data the rows needed for the next display will be created automatically. This effectively spreads the load of creating the rows across the life time of the page.
     processing: true,     //Display a 'processing' indicator when the table is being processed (e.g. a sort). This is particularly useful for tables with large amounts of data where it can take a noticeable amount of time to sort the entries. Default: false. DOESNT SHOW??
-    ordering: true,   //Default: true == ordering of columns - DataTables, by default, allows end users to click on the header cell for each column, ordering the table by the data in that column. The ability to order data can be disabled using this option.
+    ordering: false,   //Default: true == ordering of columns - DataTables, by default, allows end users to click on the header cell for each column, ordering the table by the data in that column. The ability to order data can be disabled using this option.
     /*order: [ [0, "asc"] ],*/    //Default: [[0, 'asc']] orders by columns one, in acsending.
     stateSave: false,     //DOESNT WORK WITH JSON FETCHED FROM GSHEETS, SO TURNED OFF HERE, OTHERWISE GOOD TO USE     -restore table state on page reload. When enabled aDataTables will store state information such as pagination position, display length, filtering and sorting. When the end user reloads the page the table's state will be altered to match what they had previously set up.
     /*stateDuration: 60 * 60 * 24,*/  //Set state duration to 1 day. Use with above.  Default Value: 7200. Duration for which the saved state information is considered valid. After this period has elapsed the state will be returned to the default.
@@ -389,7 +429,7 @@ function writeTable(data) {
             "<'row'<t>>" ,
     */
             "<'row'<'flex-container'<l><B><f><r><i><p>>>" +
-            "<'row'<t>>" ,
+            "<'row'<'col-sm-12't>>" ,
     //Default Value: lfrtip ie: "<'row'<lfrtip>>"  Results in: <div class="wrapper"> {length} {processing} {table} {information} {pagination} </div> */     https://datatables.net/reference/option/dom   Define the table control elements to appear on the page and in what order. DataTables will add a number of elements around the table to both control the table and show additional information about it. The position of these elements on screen are controlled by a combination of their order in the document (DOM) and the CSS applied to the elements. This parameter is used to control their ordering and additional mark-up surrounding them in the DOM. Each table control element in DataTables has a single letter associated with it, and that letter it used in this dom configuration option to indicate where that element will appear in the document order.                                                      The built-in table control elements in DataTables are: l - length changing input control f - filtering input t - The table! i - Table information summary p - pagination control r - processing display element. Each option can be specified multiple times (with the exception of the table itself), which can be used to have table controls both above and below the table. DataTables will automatically synchronise these multiple controls. Markup: Further to these options, you can also specify additional div elements to be inserted into the document, which can be used for styling / nesting of the control elements.                          To add tags, the following syntax is expected: < and > - div element <"class" and > - div with a class <"#id" and > - div with an ID <"#id.class" and > - div with an ID and a class. Plug-ins DataTables feature plug-ins can be developed to add additional features to DataTables and often will make use of this option, adding new letters to the DataTables core features. For example Buttons adds the B option to dom to specify where table control buttons should be inserted into the table. The following extensions can be initialised through the dom option: B - Buttons S - Select
 
     lengthMenu: [ [5, 10, 20, 30, 40, -1, 1], ["Show 5", 10, 20, 30, 40, "All", 1] ],     //https://datatables.net/reference/option/lengthMenu   Default [ 10, 25, 50, 100 ]     Change the options in the page length select list. This parameter allows you to readily specify the entries in the length drop down select list that DataTables shows when pagination is enabled. It can be either: 1D array of integer values which will be used for both the displayed option and the value to use for the display length, or 2D array which will use the first inner array as the page length values and the second inner array as the displayed options. This is useful for language strings such as 'All'). The page length values must always be integer values > 0, with the sole exception of -1. When -1 is used as a value this tells DataTables to disable pagination (i.e. display all rows).

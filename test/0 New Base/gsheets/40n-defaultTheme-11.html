@@ -34,7 +34,17 @@ Place favicon.ico in the root directory -->
     <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
     <!-- CSS extensions -->
-            <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css"/>
+            <!--Datatable Buttons Css 
+            <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css"/>-->
+
+            <!--Semantic UI table only component - NO JS -->
+            <link rel="stylesheet" type="text/css" href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css"/>
+            <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css"/>
+
+
+
+
 
 
     <!-- === JS LIBRARIES  - Move these to the beginning of body for production === -->
@@ -68,7 +78,15 @@ Place favicon.ico in the root directory -->
             <script src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 
 
+         
 
+
+
+            <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css"/>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.material.min.css"/>
+            <!-- DT Mark Js - Css file content included with the header Css-->
+            <script src="https://cdn.datatables.net/1.10.19/js/dataTables.material.min.js"></script>
 
 
 <style>
@@ -289,15 +307,15 @@ Place favicon.ico in the root directory -->
 
 
 <body>
-<h1>Hadithmv</h1>
-<p>40 Nawawi Beta</p>
+<h2>Hadithmv - 40 Nawawi beta</h2>
+
 
 
 <div id="FortyN"></div>
 
 
 <div class="footer">
-    <p>Live Testing</p>
+    <p>.: Live Testing :.</p>
 
 </div>
 
@@ -354,7 +372,7 @@ function writeTable(data) {
         //select main div and put a table there
         //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
         $('#FortyN').html(
-            '<table class="table stripe row-border" id="tableID"></table>'
+            '<table class="table mdl-data-table stripe row-border" id="tableID"></table>'
             // PREVIOUSLY '<table cellpadding="10" cellspacing="10" border="0" class="table stripe compact row-border" id="tableID"></table>'
             /* DISPLAY: Short-hand for the stripe, hover, row-border and order-column classes.
             CELL-BORDER: Border around all four sides of each cell.
@@ -364,6 +382,7 @@ function writeTable(data) {
             ORDER-COLUMN: Highlight the column that the table data is currently ordered on.
             ROW-BORDER: Border around only the top and bottom of each row. Note cell-border and row-border are mutually exclusive and cannot be used together.
             STRIPE: Row striping. */
+            /* ui and celled for Semantic UI */
         );
 
     //initialize the DataTable object and put settings in
@@ -378,7 +397,7 @@ function writeTable(data) {
     autoWidth: false,     //Automatic column width calculation. This can be disabled as an optimisation (it takes a finite amount of time to calculate the widths). Default: true.
     deferRender: true,    //By default, when DataTables loads data from an Ajax or Javascript data source (ajax and data respectively) it will create all HTML elements needed up-front. When working with large data sets, this operation can take a not-insignificant amount of time, particularly in older browsers such as IE6-8. This option allows DataTables to create the nodes (rows and cells in the table body) only when they are needed for a draw. As an example to help illustrate this, if you load a data set with 10,000 rows, but a paging display length of only 10 records, rather than create all 10,000 rows, when deferred rendering is enabled, DataTables will create only 10. When the end user then sorts, pages or filters the data the rows needed for the next display will be created automatically. This effectively spreads the load of creating the rows across the life time of the page.
     processing: true,     //Display a 'processing' indicator when the table is being processed (e.g. a sort). This is particularly useful for tables with large amounts of data where it can take a noticeable amount of time to sort the entries. Default: false. DOESNT SHOW??
-    ordering: true,   //Default: true == ordering of columns - DataTables, by default, allows end users to click on the header cell for each column, ordering the table by the data in that column. The ability to order data can be disabled using this option.
+    ordering: false,   //Default: true == ordering of columns - DataTables, by default, allows end users to click on the header cell for each column, ordering the table by the data in that column. The ability to order data can be disabled using this option.
     /*order: [ [0, "asc"] ],*/    //Default: [[0, 'asc']] orders by columns one, in acsending.
     stateSave: false,     //DOESNT WORK WITH JSON FETCHED FROM GSHEETS, SO TURNED OFF HERE, OTHERWISE GOOD TO USE     -restore table state on page reload. When enabled aDataTables will store state information such as pagination position, display length, filtering and sorting. When the end user reloads the page the table's state will be altered to match what they had previously set up.
     /*stateDuration: 60 * 60 * 24,*/  //Set state duration to 1 day. Use with above.  Default Value: 7200. Duration for which the saved state information is considered valid. After this period has elapsed the state will be returned to the default.
