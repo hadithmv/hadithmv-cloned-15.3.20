@@ -27,6 +27,9 @@
 
 
     <style>
+        /*
+        add ripples and elevation to component classes
+        */
 
         .mdc-card-content {
   padding: 16px;
@@ -51,26 +54,26 @@
 
 <body>
 
-    <button class="mdc-button" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-button   mdc-elevation--z1" data-mdc-auto-init="MDCRipple">
         <span class="mdc-button__label">Button</span>
     </button>
-    <button class="mdc-button mdc-button--dense" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-button mdc-button--dense mdc-elevation--z2" data-mdc-auto-init="MDCRipple">
         <span class="mdc-button__label">dense</span>
     </button>
-    <button class="mdc-button   mdc-button--raised" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-button   mdc-button--raised  mdc-elevation--z3" data-mdc-auto-init="MDCRipple">
         <span class="mdc-button__label">raised</span>
     </button>
-    <button class="mdc-button mdc-button--unelevated" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-button mdc-button--unelevated    mdc-elevation--z4" data-mdc-auto-init="MDCRipple">
         <span class="mdc-button__label">unelevated</span>
     </button>
-    <button class="mdc-button mdc-button--outlined" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-button mdc-button--outlined  mdc-elevation--z5" data-mdc-auto-init="MDCRipple">
         <span class="mdc-button__label">outlined</span>
     </button>
-    <button class="mdc-button" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-button   mdc-elevation--z6" data-mdc-auto-init="MDCRipple">
         <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
         <span class="mdc-button__label">icon</span>
     </button>
-    </button> <button class="mdc-button" disabled>
+    </button> <button class="mdc-button mdc-elevation--z7" disabled>
         <span class="mdc-button__label">disabled</span>
     </button>
 
@@ -78,18 +81,18 @@
 
 
 
-    <button class="mdc-fab" aria-label="Favorite" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-fab  mdc-elevation--z8" aria-label="Favorite" data-mdc-auto-init="MDCRipple">
         <span class="mdc-fab__icon material-icons">favorite</span>
     </button>
-    <button class="mdc-fab mdc-fab--extended" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-fab mdc-fab--extended    mdc-elevation--z9" data-mdc-auto-init="MDCRipple">
         <span class="material-icons mdc-fab__icon">add</span>
         <span class="mdc-fab__label">Create</span>
     </button>
-    <button class="mdc-fab mdc-fab--extended mdc-fab__label" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-fab mdc-fab--extended mdc-fab__label mdc-elevation--z10" data-mdc-auto-init="MDCRipple">
         <span class="material-icons mdc-fab__icon">label</span>
         <span class="mdc-fab__label">Create</span>
     </button>
-    <button class="mdc-fab mdc-fab--mini" data-mdc-auto-init="MDCRipple">
+    <button class="mdc-fab mdc-fab--mini    mdc-elevation--z11" data-mdc-auto-init="MDCRipple">
         <span class="mdc-fab__label">Create</span>
     </button>
     <!--
@@ -283,6 +286,100 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
     </div>
 
 
+
+
+
+
+
+
+
+
+<!-- Have 4px padding in between themselves
+Have a 1x1 aspect ratio
+Have a one-line footer caption with no icon 
+
+The tile width is set to 200px by default. Overwrite using CSS variables
+.mdc-grid-tile {
+    --mdc-grid-list-tile-width: 300px;
+  }
+
+  or
+
+      .my-grid-list .mdc-grid-tile {
+      width : 300px;
+    }
+-->
+    <div class="mdc-grid-list   ">
+            <ul class="mdc-grid-list__tiles">
+              <li class="mdc-grid-tile">
+                <div class="mdc-grid-tile__primary">
+                  <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                </div>
+                <span class="mdc-grid-tile__secondary">
+                  <span class="mdc-grid-tile__title">Title</span>
+                </span>
+              </li>
+              <li class="mdc-grid-tile">
+                <div class="mdc-grid-tile__primary">
+                  <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                </div>
+                <span class="mdc-grid-tile__secondary">
+                  <span class="mdc-grid-tile__title">Title</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mdc-grid-list   mdc-grid-list--tile-gutter-1  mdc-grid-list--header-caption mdc-grid-list--twoline-caption    mdc-grid-list--with-icon-align-start    mdc-grid-list--tile-aspect-16x9"  dir="rtl">
+                <ul class="mdc-grid-list__tiles">
+                  <li class="mdc-grid-tile">
+                    <div class="mdc-grid-tile__primary">
+                      <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                    </div>
+                    <span class="mdc-grid-tile__secondary">
+                      <span class="mdc-grid-tile__title">Title</span>
+                    </span>
+                  </li>
+                  <li class="mdc-grid-tile">
+                    <div class="mdc-grid-tile__primary">
+                      <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                    </div>
+                    <span class="mdc-grid-tile__secondary">
+                      <span class="mdc-grid-tile__title">Title</span>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+
+
+
+
+
+
+
+
+              <ul class="mdc-image-list my-image-list">
+                    <li class="mdc-image-list__item">
+                      <div class="mdc-image-list__image-aspect-container">
+                        <img class="mdc-image-list__image" src="...">
+                      </div>
+                      <div class="mdc-image-list__supporting">
+                        <span class="mdc-image-list__label">Text label</span>
+                      </div>
+                    </li>
+                    ...
+                  </ul>
+
+                  <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+                        <li class="mdc-image-list__item">
+                          <img class="mdc-image-list__image" src="...">
+                          <div class="mdc-image-list__supporting">
+                            <span class="mdc-image-list__label">Text label</span>
+                          </div>
+                        </li>
+                        ...
+                      </ul>
 
 
 
