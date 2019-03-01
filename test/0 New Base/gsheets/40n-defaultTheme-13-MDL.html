@@ -34,15 +34,8 @@ Place favicon.ico in the root directory -->
     <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
     <!-- CSS extensions -->
-            <!--Datatable Buttons Css -->
-            <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css"/>
-
-            <!--Semantic UI table only component - NO JS -->
-            <link rel="stylesheet" type="text/css" href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css"/>
-            <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
-            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css"/>
-
-
+            <!--Datatable Buttons Css 
+            <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.4/css/buttons.dataTables.min.css"/>-->
 
 
 
@@ -70,24 +63,112 @@ Place favicon.ico in the root directory -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
 
-            <!-- DT Keytable -->
-            <script src="https://cdn.datatables.net/keytable/2.5.0/js/dataTables.keyTable.min.js"></script>
+            <!-- DT Keytable 
+            <script src="https://cdn.datatables.net/keytable/2.5.0/js/dataTables.keyTable.min.js"></script> -->
 
             <!-- DT Mark Js - Css file content included with the header Css-->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
 
-
+            <!-- DT Mark Js - Css file content included with the header Css-->
+            <script src="https://cdn.datatables.net/1.10.19/js/dataTables.material.min.js"></script>
          
 
 
 
-            <!-- Material CSS - You can also request individual packages’ JS and CSS, e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css -->
-            <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+            <!--Datatables - Material Design Lite Integration - NO JS NEEDED -->
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css"/>
+            
+<style> /*             <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.material.min.css"/>
+*/
+div.dataTables_wrapper div.dataTables_filter {
+  text-align: right;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+}
+div.dataTables_wrapper div.dataTables_info {
+  padding-top: 10px;
+  white-space: nowrap;
+}
+div.dataTables_wrapper div.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+  text-align: right;
+}
+div.dataTables_wrapper div.mdl-grid.dt-table {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.dataTables_wrapper div.mdl-grid.dt-table > div.mdl-cell {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-            <!-- Material JS -->
-            <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting,
+table.dataTable thead > tr > td.sorting_asc,
+table.dataTable thead > tr > td.sorting_desc,
+table.dataTable thead > tr > td.sorting {
+  padding-right: 30px;
+}
+table.dataTable thead > tr > th:active,
+table.dataTable thead > tr > td:active {
+  outline: none;
+}
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 11px;
+  display: block;
+  opacity: 0.3;
+  font-size: 1.3em;
+}
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:before {
+  right: 1em;
+  content: "\2191";
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+  right: 0.5em;
+  content: "\2193";
+}
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:after {
+  opacity: 1;
+}
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+  opacity: 0;
+}
+</style>
 
 
 <style>
@@ -150,26 +231,6 @@ Place favicon.ico in the root directory -->
         justify-content: space-between;   /* displays the flex items with space between the lines. horizontally distributes first row before table, evenly. */
     }
 /* === END OF DT TABLE CSS === */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -393,7 +454,7 @@ function writeTable(data) {
         //select main div and put a table there
         //use bootstrap css to customize table style: http://getbootstrap.com/css/#tables
         $('#FortyN').html(
-            '<table class="table ui tablet stackable stripe row-border" id="tableID"></table>'
+            '<table class="table mdl-data-table stripe row-border" id="tableID"></table>'
             // PREVIOUSLY '<table cellpadding="10" cellspacing="10" border="0" class="table stripe compact row-border" id="tableID"></table>'
             /* DISPLAY: Short-hand for the stripe, hover, row-border and order-column classes.
             CELL-BORDER: Border around all four sides of each cell.
@@ -429,7 +490,7 @@ function writeTable(data) {
             "<'row'<t>>" ,
     */
             "<'row'<'flex-container'<l><B><f><r><i><p>>>" +
-            "<'row'<'col-sm-12't>>" ,
+            "<'row'<t>>" ,
     //Default Value: lfrtip ie: "<'row'<lfrtip>>"  Results in: <div class="wrapper"> {length} {processing} {table} {information} {pagination} </div> */     https://datatables.net/reference/option/dom   Define the table control elements to appear on the page and in what order. DataTables will add a number of elements around the table to both control the table and show additional information about it. The position of these elements on screen are controlled by a combination of their order in the document (DOM) and the CSS applied to the elements. This parameter is used to control their ordering and additional mark-up surrounding them in the DOM. Each table control element in DataTables has a single letter associated with it, and that letter it used in this dom configuration option to indicate where that element will appear in the document order.                                                      The built-in table control elements in DataTables are: l - length changing input control f - filtering input t - The table! i - Table information summary p - pagination control r - processing display element. Each option can be specified multiple times (with the exception of the table itself), which can be used to have table controls both above and below the table. DataTables will automatically synchronise these multiple controls. Markup: Further to these options, you can also specify additional div elements to be inserted into the document, which can be used for styling / nesting of the control elements.                          To add tags, the following syntax is expected: < and > - div element <"class" and > - div with a class <"#id" and > - div with an ID <"#id.class" and > - div with an ID and a class. Plug-ins DataTables feature plug-ins can be developed to add additional features to DataTables and often will make use of this option, adding new letters to the DataTables core features. For example Buttons adds the B option to dom to specify where table control buttons should be inserted into the table. The following extensions can be initialised through the dom option: B - Buttons S - Select
 
     lengthMenu: [ [5, 10, 20, 30, 40, -1, 1], ["Show 5", 10, 20, 30, 40, "All", 1] ],     //https://datatables.net/reference/option/lengthMenu   Default [ 10, 25, 50, 100 ]     Change the options in the page length select list. This parameter allows you to readily specify the entries in the length drop down select list that DataTables shows when pagination is enabled. It can be either: 1D array of integer values which will be used for both the displayed option and the value to use for the display length, or 2D array which will use the first inner array as the page length values and the second inner array as the displayed options. This is useful for language strings such as 'All'). The page length values must always be integer values > 0, with the sole exception of -1. When -1 is used as a value this tells DataTables to disable pagination (i.e. display all rows).
@@ -439,19 +500,19 @@ function writeTable(data) {
     /*"tabIndex": 0,*/      //Tab index control for keyboard navigation. By default DataTables allows keyboard navigation of the table (sorting, paging, and filtering) by adding a tabindex attribute to the required elements. This allows the end user to tab through the controls and press the enter key to activate them, allowing the table controls to be accessible without a mouse. The default tabindex is 0, meaning that the tab follows the flow of the document. You can overrule this using this parameter if you wish. Use a value of -1 to disable built-in keyboard navigation, although this is not recommended for accessibility reasons.
 
     columnDefs: [   //https://datatables.net/reference/option/columnDefs                classes columns for css in nweb view, but not print.        Very similar to columns, this parameter allows you to assign specific options to columns in the table, although in this case the column options defined can be applied to one or more columns. Additionally, not every column need be specified, unlike columns. This parameter is an array of column definition objects, where the options available exactly match those for columns (see below for list of options in the related links). In addition to the column property options, columnDefs requires a targets property to be set in each definition object (columnDefs.targets). This targets property tells DataTables which column(s) the definition should be applied to.
-  { className: "fnCol1",  "targets": [0],     "visible": true,    "searchable": true},  // #
-  { className: "fnCol2",  "targets": [1],     "visible": false,   "searchable": false},  // Ar No
-  { className: "fnCol3",  "targets": [2],     "visible": true,    "searchable": false },  // Ar Title
-  { className: "fnCol4",  "targets": [3],     "visible": false,   "searchable": false },  // En Title
-  { className: "fnCol5",  "targets": [4],     "visible": false,   "searchable": false },  // Dv Title
-  { className: "fnCol6",  "targets": [5],     "visible": true,    "searchable": true },  // Ar Text
-  { className: "fnCol7",  "targets": [6],     "visible": false,   "searchable": true },  // Ar Plain
-  { className: "fnCol8",  "targets": [7],     "visible": true,    "searchable": true },  // Ar Ref
-  { className: "fnCol9",  "targets": [8],     "visible": true,    "searchable": true },   // Ar Ref
-  { className: "fnCol10", "targets": [9],     "visible": true,    "searchable": true },   // Ar Ref
-  { className: "fnCol11", "targets": [10],    "visible": false,   "searchable": false },   // En Ref
-  { className: "fnCol12", "targets": [11],    "visible": false,   "searchable": false },   // Dv Ref
-  { className: "fnCol13", "targets": [12],    "visible": true,    "searchable": false }   // Rs Ref
+  { className: "fnCol1  mdl-data-table__cell--non-numeric",  "targets": [0],     "visible": true,    "searchable": true},  // #
+  { className: "fnCol2  mdl-data-table__cell--non-numeric",  "targets": [1],     "visible": false,   "searchable": false},  // Ar No
+  { className: "fnCol3  mdl-data-table__cell--non-numeric",  "targets": [2],     "visible": true,    "searchable": false },  // Ar Title
+  { className: "fnCol4  mdl-data-table__cell--non-numeric",  "targets": [3],     "visible": false,   "searchable": false },  // En Title
+  { className: "fnCol5  mdl-data-table__cell--non-numeric",  "targets": [4],     "visible": false,   "searchable": false },  // Dv Title
+  { className: "fnCol6  mdl-data-table__cell--non-numeric",  "targets": [5],     "visible": true,    "searchable": true },  // Ar Text
+  { className: "fnCol7  mdl-data-table__cell--non-numeric",  "targets": [6],     "visible": false,   "searchable": true },  // Ar Plain
+  { className: "fnCol8  mdl-data-table__cell--non-numeric",  "targets": [7],     "visible": true,    "searchable": true },  // Ar Ref
+  { className: "fnCol9  mdl-data-table__cell--non-numeric",  "targets": [8],     "visible": true,    "searchable": true },   // Ar Ref
+  { className: "fnCol10 mdl-data-table__cell--non-numeric", "targets": [9],     "visible": true,    "searchable": true },   // Ar Ref
+  { className: "fnCol11 mdl-data-table__cell--non-numeric", "targets": [10],    "visible": false,   "searchable": false },   // En Ref
+  { className: "fnCol12 mdl-data-table__cell--non-numeric", "targets": [11],    "visible": false,   "searchable": false },   // Dv Ref
+  { className: "fnCol13 mdl-data-table__cell--non-numeric", "targets": [12],    "visible": true,    "searchable": false }   // Rs Ref
     ], //end of columnDefs, previously without visible and searchable options. 
 
     //Internationalisation ===
