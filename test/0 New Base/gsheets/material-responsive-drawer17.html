@@ -51,27 +51,52 @@
 
 <body>
 
-<!-- Can use drawer with top app bar, these are 2 components -->
 
-        <aside class="mdc-drawer"   >   <!-- Using MDCDrawer removes the ripple effect from other components -->
-                <div class="mdc-drawer__content" >
-                  <nav class="mdc-list" data-mdc-auto-init="MDCList"> <!-- Using MDCList lets the other components keep their ripple effect -->
-                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-                      <span class="mdc-list-item__text">Inbox</span>
-                    </a>
-                    <a class="mdc-list-item" href="#">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-                      <span class="mdc-list-item__text">Outgoing</span>
-                    </a>
-                    <a class="mdc-list-item" href="#">
-                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-                      <span class="mdc-list-item__text">Drafts</span>
-                    </a>
-                  </nav>
-                </div>
-              </aside>
+              <!-- Can use drawer with top app bar, these are 2 components -->
+              <aside class="mdc-drawer">   <!-- Using MDCDrawer removes the ripple effect from other components -->
 
+                  <div class="mdc-drawer__header">
+                      <h3 class="mdc-drawer__title">Mail</h3>
+                      <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+                    </div>
+                    
+                  <div class="mdc-drawer__content">
+                    <nav class="mdc-list">  <!-- Using MDCList lets the other components keep their ripple effect -->
+                      <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                        <span class="mdc-list-item__text">Inbox</span>
+                      </a>
+                      <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
+                        <span class="mdc-list-item__text">Star</span>
+                      </a>
+                      <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                        <span class="mdc-list-item__text">Sent Mail</span>
+                      </a>
+                      <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                        <span class="mdc-list-item__text">Drafts</span>
+                      </a>
+                
+                      <hr class="mdc-list-divider">
+                      <h6 class="mdc-list-group__subheader">Labels</h6>
+
+                      <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                        <span class="mdc-list-item__text">Family</span>
+                      </a>
+                      <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                        <span class="mdc-list-item__text">Friends</span>
+                      </a>
+                      <a class="mdc-list-item" href="#">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+                        <span class="mdc-list-item__text">Work</span>
+                      </a>
+                    </nav>
+                  </div>
+                </aside>
 
 
 
@@ -105,8 +130,8 @@
     <button class="mdc-button" data-mdc-auto-init="MDCRipple">
         <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
         <span class="mdc-button__label">icon</span>
-    </button>
-    </button> <button class="mdc-button" disabled>
+
+    </button>\ <button class="mdc-button" disabled>
         <span class="mdc-button__label">disabled</span>
     </button>
 
@@ -185,7 +210,7 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
     <div class="mdc-chip-set mdc-chip-set--filter" data-mdc-auto-init="MDCChipSet">
         <div class="mdc-chip">
             <div class="mdc-chip__checkmark">
-                <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
+                <svg class="mdc-chip__checkmark-svg" viewbox="-2 -3 30 30">
                     <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
                 </svg>
             </div>
@@ -272,10 +297,10 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
   <div class="mdc-dialog__container">
     <div class="mdc-dialog__surface">
       <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
-      <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+      <h2 class="mdc-dialog__title" id="my-dialog-title1"><!--
      -->Dialog Title<!--
    --></h2>
-      <div class="mdc-dialog__content" id="my-dialog-content">
+      <div class="mdc-dialog__content" id="my-dialog-content2">
         Dialog body text goes here.
       </div>
       <footer class="mdc-dialog__actions">
@@ -315,10 +340,10 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
   <div class="mdc-dialog__container">
     <div class="mdc-dialog__surface">
       <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
-      <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+      <h2 class="mdc-dialog__title" id="my-dialog-title3"><!--
      -->Choose a Ringtone<!--
    --></h2>
-      <div class="mdc-dialog__content" id="my-dialog-content">
+      <div class="mdc-dialog__content" id="my-dialog-content4">
         <ul class="mdc-list">
           <li class="mdc-list-item" tabindex="0">
             <span class="mdc-list-item__graphic">
@@ -459,7 +484,7 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
 
 
 
-</body>
+
 
 
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+
     <!-- Material Components for the Web CSS 0.44.1 - You can also request individual packages’ JS and CSS, e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css -->
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
@@ -73,7 +73,7 @@
         <i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i>
         <span class="mdc-button__label">icon</span>
     </button>
-        <button class="mdc-button mdc-elevation--z7" disabled>
+    <button class="mdc-button mdc-elevation--z7" disabled>
         <span class="mdc-button__label">disabled</span>
     </button>
 
@@ -172,38 +172,38 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
     <button class="mdc-button" id="open">Open</button>
     <br><br>
 
-<p id="message"></p>
+    <p id="message"></p>
 
-<div class="mdc-dialog" 
-     role="alertdialog"
-     aria-modal="true"
-     aria-labelledby="my-dialog-title"
-     aria-describedby="my-dialog-content">
-  <div class="mdc-dialog__container">
-    <div class="mdc-dialog__surface">
-      <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
-      <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
-     -->What is your name?<!--
-   --></h2>
-      <div class="mdc-dialog__content" id="my-dialog-content">
-        <form id="form" action="#">
-          <div class="mdc-text-field"   data-mdc-auto-init="MDCTextField">
-            <input type="text" id="my-text-field" name="name" class="mdc-text-field__input">
-            <label class="mdc-floating-label" for="my-text-field">Name</label>
-            <div class="mdc-line-ripple"></div>
-          </div>
-        </form>
-      </div>
-      <footer class="mdc-dialog__actions">
-        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">Cancel</button>
-        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">OK</button>
-      </footer>
+    <div class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+            <div class="mdc-dialog__surface">
+                <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                <h2 class="mdc-dialog__title" id="my-dialog-title">
+                    <!--
+     -->What is your name?
+                    <!--
+   -->
+                </h2>
+                <div class="mdc-dialog__content" id="my-dialog-content">
+                    <form id="form" action="#">
+                        <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+                            <input type="text" id="my-text-field" name="name" class="mdc-text-field__input">
+                            <label class="mdc-floating-label" for="my-text-field">Name</label>
+                            <div class="mdc-line-ripple"></div>
+                        </div>
+                    </form>
+                </div>
+                <footer class="mdc-dialog__actions">
+                    <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">Cancel</button>
+                    <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">OK</button>
+                </footer>
+            </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
     </div>
-  </div>
-  <div class="mdc-dialog__scrim"></div>
-</div>
 
-<script>    /* opens dialog on click */
+    <script>
+        /* opens dialog on click */
         var dialog = new mdc.dialog.MDCDialog(document.querySelector('.mdc-dialog'));
         
         document.getElementById('open').addEventListener('click', function() {
@@ -237,7 +237,7 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
 
 
     <div id="simple-dialog" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="simple-dialog-label"
-        aria-describedby="simple-dialog-description"     data-mdc-auto-init="MDCDialog">
+        aria-describedby="simple-dialog-description" data-mdc-auto-init="MDCDialog">
         <div class="mdc-dialog__scrim"></div>
         <div class="mdc-dialog__container">
             <div class="mdc-dialog__surface">
@@ -294,7 +294,7 @@ var toggleButton = new mdc.iconButton.MDCIconButtonToggle(document.getElementByI
 
 
 
-<!-- Have 4px padding in between themselves
+    <!-- Have 4px padding in between themselves
 Have a 1x1 aspect ratio
 Have a one-line footer caption with no icon 
 
@@ -310,83 +310,84 @@ The tile width is set to 200px by default. Overwrite using CSS variables
     }
 -->
     <div class="mdc-grid-list   ">
-            <ul class="mdc-grid-list__tiles">
-              <li class="mdc-grid-tile">
+        <ul class="mdc-grid-list__tiles">
+            <li class="mdc-grid-tile">
                 <div class="mdc-grid-tile__primary">
-                  <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
                 </div>
                 <span class="mdc-grid-tile__secondary">
-                  <span class="mdc-grid-tile__title">Title</span>
+                    <span class="mdc-grid-tile__title">Title</span>
                 </span>
-              </li>
-              <li class="mdc-grid-tile">
+            </li>
+            <li class="mdc-grid-tile">
                 <div class="mdc-grid-tile__primary">
-                  <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
                 </div>
                 <span class="mdc-grid-tile__secondary">
-                  <span class="mdc-grid-tile__title">Title</span>
+                    <span class="mdc-grid-tile__title">Title</span>
                 </span>
-              </li>
-            </ul>
-          </div>
+            </li>
+        </ul>
+    </div>
 
-          <div class="mdc-grid-list   mdc-grid-list--tile-gutter-1  mdc-grid-list--header-caption mdc-grid-list--twoline-caption    mdc-grid-list--with-icon-align-start    mdc-grid-list--tile-aspect-16x9"  dir="rtl">
-                <ul class="mdc-grid-list__tiles">
-                  <li class="mdc-grid-tile">
-                    <div class="mdc-grid-tile__primary">
-                      <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                    </div>
-                    <span class="mdc-grid-tile__secondary">
-                      <span class="mdc-grid-tile__title">Title</span>
-                    </span>
-                  </li>
-                  <li class="mdc-grid-tile">
-                    <div class="mdc-grid-tile__primary">
-                      <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                    </div>
-                    <span class="mdc-grid-tile__secondary">
-                      <span class="mdc-grid-tile__title">Title</span>
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-
-
+    <div class="mdc-grid-list   mdc-grid-list--tile-gutter-1  mdc-grid-list--header-caption mdc-grid-list--twoline-caption    mdc-grid-list--with-icon-align-start    mdc-grid-list--tile-aspect-16x9"
+        dir="rtl">
+        <ul class="mdc-grid-list__tiles">
+            <li class="mdc-grid-tile">
+                <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                </div>
+                <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Title</span>
+                </span>
+            </li>
+            <li class="mdc-grid-tile">
+                <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                </div>
+                <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Title</span>
+                </span>
+            </li>
+        </ul>
+    </div>
 
 
 
 
 
 
-              <ul class="mdc-image-list my-image-list">
-                    <li class="mdc-image-list__item">
-                      <div class="mdc-image-list__image-aspect-container">
-                        <img class="mdc-image-list__image" src="...">
-                      </div>
-                      <div class="mdc-image-list__supporting">
-                        <span class="mdc-image-list__label">Text label</span>
-                      </div>
-                    </li>
-                    ...
-                  </ul>
-
-                  <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
-                        <li class="mdc-image-list__item">
-                          <img class="mdc-image-list__image" src="...">
-                          <div class="mdc-image-list__supporting">
-                            <span class="mdc-image-list__label">Text label</span>
-                          </div>
-                        </li>
-                        ...
-                      </ul>
 
 
 
+    <ul class="mdc-image-list my-image-list">
+        <li class="mdc-image-list__item">
+            <div class="mdc-image-list__image-aspect-container">
+                <img class="mdc-image-list__image" src="...">
+            </div>
+            <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">Text label</span>
+            </div>
+        </li>
+        ...
+    </ul>
+
+    <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+        <li class="mdc-image-list__item">
+            <img class="mdc-image-list__image" src="...">
+            <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">Text label</span>
+            </div>
+        </li>
+        ...
+    </ul>
 
 
 
-    
+
+
+
+
 
     <div class="mdc-card">
         <div class="mdc-card__primary-action" data-mdc-auto-init="MDCRipple">
@@ -473,16 +474,16 @@ The tile width is set to 200px by default. Overwrite using CSS variables
 
 
 
-<script>
-    /* https://material.io/develop/web/components/auto-init/
+    <script>
+        /* https://material.io/develop/web/components/auto-init/
     If you are using mdc-auto-init as part of the material-components-web package, simply write the necessary DOM needed for a component, and attach a data-mdc-auto-init attribute to the root element with its value set to the component’s JavaScript class name (e.g., MDCTextField). Then, after writing the markup, simply insert a script tag that calls mdc.autoInit(). Make sure you call mdc.autoInit() after all scripts are loaded so it works properly. eg:
     <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
     This will attach an MDCTextField instance to the root <div> element.
     Once mdc.autoInit() is called, you can access the component instance via an MDCTextField property on that element. eg:
     document.querySelector('.mdc-text-field').MDCTextField.disabled = true;
     */
-    mdc.autoInit();
-</script>
+        mdc.autoInit();
+    </script>
 
 
 
