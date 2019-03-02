@@ -130,7 +130,7 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 <body class="mdc-typography">
 
-    <aside class="mdc-drawer mdc-drawer--dismissible">
+    <aside class="mdc-drawer mdc-drawer--dismissible    mdc-elevation--z2">
 
         <div class="mdc-drawer__header">
             <h3 class="mdc-drawer__title">Hadithmv</h3>
@@ -180,7 +180,7 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
       <div class="mdc-drawer-app-content">
 
-        <header class="mdc-top-app-bar app-bar" id="app-bar">
+        <header class="mdc-top-app-bar app-bar  mdc-elevation--z3" id="app-bar">
           <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
               <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon  mdc-ripple-surface" >menu</a>
@@ -199,6 +199,114 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
       <main class="main-content" id="main-content">
             <div class="mdc-top-app-bar--fixed-adjust">
               <p>App Content</p>
+
+
+
+
+
+              <div class="mdc-tab-bar" role="tablist"   data-mdc-auto-init="MDCTabBar">
+                    <div class="mdc-tab-scroller mdc-tab-scroller--align-center">
+                      <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                          
+                          <button id="overview-tab" class="mdc-tab mdc-tab--min-width mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                            <span class="mdc-tab__content">
+                              <span class="mdc-tab__text-label">Overview</span>
+                            </span>
+                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple"></span>
+                          </button>
+                          
+                          <button id="accounts-tab" class="mdc-tab mdc-tab--min-width" role="tab" tabindex="0">
+                            <span class="mdc-tab__content">
+                              <span class="mdc-tab__text-label">Accounts</span>
+                            </span>
+                            <span class="mdc-tab-indicator">
+                              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple"></span>
+                          </button>
+                          
+                          <button id="bills-tab" class="mdc-tab mdc-tab--min-width" role="tab" tabindex="0">
+                            <span class="mdc-tab__content">
+                              <span class="mdc-tab__text-label">Bills</span>
+                            </span>
+                            <span class="mdc-tab-indicator">
+                              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple"></span>
+                          </button>
+                          
+                          <button id="budget-tab" class="mdc-tab mdc-tab--min-width" role="tab" tabindex="0">
+                            <span class="mdc-tab__content">
+                              <span class="mdc-tab__text-label">Budget</span>
+                            </span>
+                            <span class="mdc-tab-indicator">
+                              <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                            </span>
+                            <span class="mdc-tab__ripple"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <section id="overview-content" class="tab-content">
+                        <h1 class="mdc-typography--headline3">
+                          An example of responsive tabs using Material Components for the Web 
+                        </h1>
+                        <p>
+                          This simple tab bar template uses Material Components to implement tabs which are centered for larger screen widths
+                          and scrollable for smaller screen widths. Check it out by resizing the width of your browser window!
+                        </p>
+                        <p>
+                          Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive layout grid</a>
+                          and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                        </p>
+                      </section>
+                      
+                      <section id="accounts-content" class="tab-content">
+                        <h1 class="mdc-typography--headline3">
+                          Accounts
+                        </h1>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </section>
+                      
+                      <section id="bills-content" class="tab-content">
+                        <h1 class="mdc-typography--headline3">
+                          Bills
+                        </h1>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </section>
+                      
+                      <section id="budget-content" class="tab-content">
+                        <h1 class="mdc-typography--headline3">
+                          Budget
+                        </h1>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </section>
+
+
+              
             </div>
           </main>
 
@@ -208,6 +316,10 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 
 
+
+
+
+        
         
 <!-- import the Material javascript file -->
 <script>
@@ -229,7 +341,16 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 
 
+// Switch content on tab activation
+Array.from(document.querySelectorAll('.mdc-tab')).forEach(
+  tab => tab.addEventListener('MDCTab:interacted', (e) => switchToTab(e.detail.tabId))
+);
 
+const switchToTab = (activatedTabId) => {
+  Array.from(document.querySelectorAll('.tab-content')).forEach(tabContent => {
+    tabContent.style.display = tabContent.id.slice(0, -1 * '-content'.length) == activatedTabId.slice(0, -1 * '-tab'.length) ? 'block' : 'none';
+  });
+}
 
 
 </script>

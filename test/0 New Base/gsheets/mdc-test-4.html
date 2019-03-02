@@ -172,40 +172,28 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
       
       <div class="app-drawer-layout mdc-top-app-bar--fixed-adjust">
         <!-- Drawer -->
-        <aside class="mdc-drawer mdc-drawer--dismissible demo-drawer">
-          <nav class="mdc-drawer__drawer">
-            <nav class="mdc-drawer__content mdc-list-group">
-              <div id="icon-with-text-demo" class="mdc-list">
-                <a class="mdc-list-item mdc-list-item--selected demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>Inbox
-                </a>
-                <a class="mdc-list-item demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>Star
-                </a>
-                <a class="mdc-list-item demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>Sent Mail
-                </a>
-                <a class="mdc-list-item demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>Drafts
-                </a>
-              </div>
-      
-              <hr class="mdc-list-divider">
-      
-              <div class="mdc-list">
-                <a class="mdc-list-item demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">email</i>All Mail
-                </a>
-                <a class="mdc-list-item demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">delete</i>Trash
-                </a>
-                <a class="mdc-list-item demo-drawer-list-item" href="#">
-                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">report</i>Spam
-                </a>
-              </div>
-            </nav>
-          </nav>
-        </aside>
+        <aside class="mdc-drawer">
+                <div class="mdc-drawer__header">
+                  <h3 class="mdc-drawer__title">Mail</h3>
+                  <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+                </div>
+                <div class="mdc-drawer__content">
+                  <nav class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                      <span class="mdc-list-item__text">Inbox</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                      <span class="mdc-list-item__text">Outgoing</span>
+                    </a>
+                    <a class="mdc-list-item" href="#">
+                      <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                      <span class="mdc-list-item__text">Drafts</span>
+                    </a>
+                  </nav>
+                </div>
+              </aside>
       
         <!-- Content -->
         <main class="mdc-drawer-app-content main-content">
