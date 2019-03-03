@@ -65,8 +65,15 @@
             /*    overflow: auto;   */
         }
 
+        .app-bar {
+            position: absolute;
+        }
 
-
+        /* only apply this style if below top app bar 
+.mdc-top-app-bar {
+  z-index: 7;
+}
+*/
 
         /*
 .mdc-top-app-bar {
@@ -134,6 +141,33 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
         .mdc-list-item.mdc-list-item--activated>.material-icons.mdc-list-item__graphic {
             color: #004c8c;
         }
+
+
+/*  hyperlinks */
+        a,
+        a:link,
+        a:visited {
+            color: grey;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:active {
+            opacity: 0.7;
+        }
+
+        .hmvDrawerLogo {
+            height: 100px;
+            width: 100px;
+            margin-top: 20px;
+            /* centers */
+            display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+        }
+
+        .navbar-brand img {height: 40px; width: 40px; margin:-10px !important; margin-left: 0.5px !important; margin-right: -0.5px!important; background-color: white; border-radius: 50%;}
     </style>
 </head>
 
@@ -160,8 +194,11 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
         <div class="mdc-drawer__header">
             <!-- mdc-drawer__header -->
+
+            <img class="hmvDrawerLogo imgGrow" src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" alt="hmv drawer logo">
+            <!-- src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" -->
             <h3 class="mdc-drawer__title">Hadithmv</h3>
-            <h6 class="mdc-drawer__subtitle">hadithmv@gmail.com</h6>
+            <h6 class="mdc-drawer__subtitle"><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank" rel="noopener">hadithmv@gmail.com</a></h6>
         </div> <!-- end mdc-drawer__header -->
 
         <hr class="mdc-list-divider">
@@ -173,7 +210,7 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
                 <!-- mdc-list -->
 
                 <a class="mdc-list-item mdc-list-item--activated mdc-ripple-surface" href="#" aria-selected="true"
-                    data-mdc-auto-init="MDCRipple">
+                    data-mdc-auto-init="MDCRipple"  onclick="opentab()">
                     <i class="material-icons mdc-list-item__graphic mdc-ripple-surface" aria-hidden="true">book</i>
                     <span class="mdc-list-item__text">40 Nawawi</span>
                 </a>
@@ -193,11 +230,11 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
                     <span class="mdc-list-item__text">About</span>
                 </a>
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item" href="https://hadithmv.com/alt/intro" target="_blank" rel="noopener"   data-mdc-auto-init="MDCRipple">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pages</i>
-                    <span class="mdc-list-item__text">Intro</span>
+                    <span class="mdc-list-item__text">Intro: 40 Nawawi</span>
                 </a>
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item" href="https://hadithmv.com/alt/docs" target="_blank" rel="noopener" data-mdc-auto-init="MDCRipple">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">folder</i>
                     <span class="mdc-list-item__text">Docs</span>
                 </a>
@@ -292,62 +329,167 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 
                 <section class="tab-content" id="overview-content">
-                    <!-- tab-content -->
-                    <h1 class="mdc-typography--headline3">
-                        An example of responsive tabs using Material Components for the Web
-                    </h1>
-                    <p>
-                        This simple tab bar template uses Material Components to implement tabs which are centered for
-                        larger screen widths
-                        and scrollable for smaller screen widths. Check it out by resizing the width of your browser
-                        window!
-                    </p>
-                    <p>
-                        Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
-                            layout grid</a>
-                        and <a href="https://material.io/design/components/tabs.html">tabs</a>.
-                    </p>
-                </section>
+                        <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <section id="accounts-content" class="tab-content">
+                            <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <section id="accounts-content" class="tab-content">
+                            <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <section id="accounts-content" class="tab-content">
+                            <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <section id="bills-content" class="tab-content">
+                            <h1 class="mdc-typography--headline3">
+                                Bills
+                            </h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </section>
 
-                <section id="accounts-content" class="tab-content">
-                    <h1 class="mdc-typography--headline3">
-                        An example of responsive tabs using Material Components for the Web
-                    </h1>
-                    <p>
-                        This simple tab bar template uses Material Components to implement tabs which are centered for
-                        larger screen widths
-                        and scrollable for smaller screen widths. Check it out by resizing the width of your browser
-                        window!
-                    </p>
-                    <p>
-                        Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
-                            layout grid</a>
-                        and <a href="https://material.io/design/components/tabs.html">tabs</a>.
-                    </p>
-                </section>
 
-                <section id="bills-content" class="tab-content">
-                    <h1 class="mdc-typography--headline3">
-                        Bills
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </section> <!-- end tab-content -->
+                        <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <section id="accounts-content" class="tab-content">
+                            <h1 class="mdc-typography--headline3">
+                                An example of responsive tabs using Material Components for the Web
+                            </h1>
+                            <p>
+                                This simple tab bar template uses Material Components to implement tabs which are centered for
+                                larger screen widths
+                                and scrollable for smaller screen widths. Check it out by resizing the width of your browser
+                                window!
+                            </p>
+                            <p>
+                                Read more about the Material Design <a href="https://material.io/design/layout/responsive-layout-grid.html">responsive
+                                    layout grid</a>
+                                and <a href="https://material.io/design/components/tabs.html">tabs</a>.
+                            </p>
+                        </section>
+        
+                        <section id="bills-content" class="tab-content">
+                            <h1 class="mdc-typography--headline3">
+                                40 Nawawi
+                            </h1>
+                            <p> Table
+                            </p>
+                        </section>
 
 
-
-
-            </div>  <!-- end mdc-top-app-bar--fixed-adjust -->
+            </div> <!-- end mdc-top-app-bar--fixed-adjust -->
         </main> <!-- end main-content -->
 
-    </div>  <!-- end mdc-drawer-app-content -->
+    </div> <!-- end mdc-drawer-app-content -->
 
 
 
@@ -384,6 +526,33 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
                     .slice(0, -1 * '-tab'.length) ? 'block' : 'none';
             });
         }
+
+
+
+
+        function opentab() {
+            console.log("opentab"); 
+
+            
+            
+            var draweritem = this;
+            var target = $(draweritem).attr('href');
+            $('.mdl-layout__obfuscator').click();
+            $('a[href='+target+'].mdl-layout__tab span').click();
+            return false;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 
