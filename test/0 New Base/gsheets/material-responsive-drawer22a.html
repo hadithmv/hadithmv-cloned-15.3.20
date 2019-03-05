@@ -291,7 +291,8 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
             <!-- mdc-drawer__header -->
 
             <button class="mdc-button hmvButton" data-mdc-auto-init="MDCRipple">
-                <img class="hmvDrawerLogo imgGrow" src="https://hadithmv.com/img/newLogo5/android-material-icon-generator/icon.svg" alt="hmv drawer logo">
+                <img class="hmvDrawerLogo imgGrow" src="https://hadithmv.com/img/newLogo5/android-material-icon-generator/icon.svg"
+                    alt="hmv drawer logo">
             </button>
             <!--<img class="hmvDrawerLogo imgGrow" src="https://hadithmv.com/img/newLogo5/android-material-icon-generator/icon.svg" alt="hmv drawer logo">-->
             <!-- src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg"
@@ -418,9 +419,10 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
                     <div class="tab-pane fade" id="about">
                         <!-- === === /about tab === === -->
-                        <img class="hmvDrawerLogo imgGrow" src="https://hadithmv.com/img/newLogo5/android-material-icon-generator/icon.svg" alt="hmv drawer logo" style="width: 300px;">
+                        <img class="hmvDrawerLogo imgGrow" src="https://hadithmv.com/img/newLogo5/android-material-icon-generator/icon.svg"
+                            alt="hmv drawer logo" style="width: 300px;">
                         <div class="jumbotron text-center">
-                            
+
                             <div class="container">
                                 <div class="col-lg-6">
                                     <!-- APKCHANGE123
@@ -664,23 +666,23 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
         // Basic tabs - https://www.w3schools.com/howto/howto_js_tabs.asp
         function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
 
-drawer.open = false; // addition - closes MDC drawer
+        drawer.open = false; // addition - closes MDC drawer
     </script>
 </body>
 
