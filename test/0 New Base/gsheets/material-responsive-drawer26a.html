@@ -694,7 +694,9 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
         };
 
         // Get the element with id="defaultOpen" and click on it
-        document.onload = document.getElementById("defaultOpen").click();
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById("defaultOpen").click();
+});
     </script>
 </body>
 
