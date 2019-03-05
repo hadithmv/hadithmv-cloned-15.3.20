@@ -31,11 +31,11 @@
     <!-- DATATABLES JS 1.10.19  - DT Core. Originally 1.10.3 -->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-    
-                <!--Semantic UI 2.4.2 table only component - NO JS -->
-                <link rel="stylesheet" type="text/css" href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css"/>
-                <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
-                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css"/>
+
+    <!--Semantic UI 2.4.2 table only component - NO JS -->
+    <link rel="stylesheet" type="text/css" href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css" />
+    <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css" />
 
 
     <!-- Forty Nawawi Json -->
@@ -212,6 +212,43 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 
 
+        /* === TABS === */
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
 
 
 
@@ -222,19 +259,19 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 
 
+        /* === DT TABLE CSS === */
+        /*vertically aligns column text to top*/
+        table.dataTable tbody td {
+            vertical-align: top;
+        }
 
-/* === DT TABLE CSS === */
-    /*vertically aligns column text to top*/
-    table.dataTable tbody td {
-        vertical-align: top;
-    }
-
-    /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. */
-    input[type="search"]::-webkit-search-cancel-button {
-        -webkit-appearance: searchfield-cancel-button; 
-    /* adds x */
-        border:4px solid transparent;   /*makes x a bit bigger*/
-    }
+        /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. */
+        input[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: searchfield-cancel-button;
+            /* adds x */
+            border: 4px solid transparent;
+            /*makes x a bit bigger*/
+        }
     </style>
 </head>
 
@@ -282,12 +319,12 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
             <nav class="mdc-list" data-mdc-auto-init="MDCList">
                 <!-- mdc-list -->
 
-                <a class="mdc-list-item mdc-list-item--activated mdc-ripple-surface" href="#" aria-selected="true"
-                    data-mdc-auto-init="MDCRipple" onclick="open40N()">
-                    <i class="material-icons mdc-list-item__graphic mdc-ripple-surface" aria-hidden="true">book</i>
+                <a class="mdc-list-item mdc-list-item--activated tablinks" href="#" aria-selected="true"
+                    data-mdc-auto-init="MDCRipple" onclick="openTab(event, '40nTab')" id="defaultOpen">
+                    <i class="material-icons mdc-list-item__graphic aria-hidden=" true">book</i>
                     <span class="mdc-list-item__text">40 Nawawi</span>
                 </a>
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple" onclick="openTab(event, 'bukhTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
                     <span class="mdc-list-item__text">Bukhari (beta)</span>
                 </a>
@@ -341,31 +378,53 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
                 <p>App Content</p>
 
 
-                <table id="fortyNawawi" class="ui striped table fnClass" width="100%"> <!--cellspacing="0" width="100%"-->
-                    <thead>
-                       <tr>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                          <th></th>
-                       </tr>
-                    </thead>
-                 </table>
+
+
+
+                <div id="40nTab" class="tabcontent">
+
+                    <table id="fortyNawawi" class="ui striped table fnClass" width="100%">
+                        <!--cellspacing="0" width="100%"-->
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                </div>
+
+                <div id="bukhTab" class="tabcontent">
+                    <h3>beta</h3>
+                    <p>In Development</p>
+                </div>
+
+                <div id="Tokyo" class="tabcontent">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
 
 
 
 
 
-            </div>  <!-- end mdc-top-app-bar--fixed-adjust -->
+
+
+
+
+            </div> <!-- end mdc-top-app-bar--fixed-adjust -->
         </main> <!-- end main-content -->
 
     </div> <!-- end mdc-drawer-app-content -->
@@ -413,26 +472,72 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
 
 
 
-        $(document).ready(function() {
-    $('#fortyNawawi').DataTable( {
-        data: FNdataSet,
-        columns: [
-        {title:"#"}, 
-               {title:"Ar No."},
-               {title:"Ar Title"},
-               {title:"En Title"},
-               {title:"Dv Title"},
-               {title:"Arabic"},
-               {title:"Ar Plain"},
-               {title:"English"},
-               {title:"Dhivehi"},
-               {title:"Ar Ref."},
-               {title:"En Ref."},
-               {title:"Dv Ref."},
-               {title:"Rs Ref."},
-        ]   //  columns [
-    } ); // $('#fortyNawawi').DataTable( {
-} );    // $(document).ready(function() {
+        $(document).ready(function () {
+            $('#fortyNawawi').DataTable({
+                data: FNdataSet,
+                columns: [{
+                        title: "#"
+                    },
+                    {
+                        title: "Ar No."
+                    },
+                    {
+                        title: "Ar Title"
+                    },
+                    {
+                        title: "En Title"
+                    },
+                    {
+                        title: "Dv Title"
+                    },
+                    {
+                        title: "Arabic"
+                    },
+                    {
+                        title: "Ar Plain"
+                    },
+                    {
+                        title: "English"
+                    },
+                    {
+                        title: "Dhivehi"
+                    },
+                    {
+                        title: "Ar Ref."
+                    },
+                    {
+                        title: "En Ref."
+                    },
+                    {
+                        title: "Dv Ref."
+                    },
+                    {
+                        title: "Rs Ref."
+                    },
+                ] //  columns [
+            }); // $('#fortyNawawi').DataTable( {
+        }); // $(document).ready(function() {
+
+
+
+        // Basic tabs - https://www.w3schools.com/howto/howto_js_tabs.asp
+        function openTab(evt, tabName) {
+
+            drawer.open = false; // addition - closes MDC drawer
+
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
 </body>
 
