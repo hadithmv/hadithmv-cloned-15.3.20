@@ -157,12 +157,19 @@ Place favicon.ico in the root directory -->
 
 
 
+/* === DT Pagination Desktop-Mobile Show and Hide === */
 
+/*hides desktop pagination buttons, mobile view only*/
+@media screen and (max-width: 768px) {
+        .deskOnlyP {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+}
 
+/*hides mobile pagination buttons, desktop view only*/
+@media screen and (min-width: 1200px) {
+        .mobOnlyP {position: absolute !important; top: -9999px !important; left: -9999px !important;}
+}
 
-
-
-
+S
 
 
 
@@ -409,8 +416,22 @@ function writeTable(data) {
             /* ui and celled for Semantic UI */
         );
 
+
+         if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full_numbers",
+                "keys": "true", //KeyTable extension 
+             } );
+         } else { /* js media query on mobile, tablet */
+             $.extend( true, $.fn.dataTable.defaults, {
+                "pagingType": "full",
+                                       //KeyTable extension "keys": "false",  no need, makes mobile jump on touch
+             } );
+         } //===================end if else
+
     //initialize the DataTable object and put settings in
-    $("#tableID").DataTable({
+    //$("#tableID").DataTable({
+        table = $("#tableID").DataTable({
 
 //necessary to fetch, do not quote 
     data: data,   //Data to use as the display data for the table. DataTables can obtain the data it is to display in the table's body from a number of sources, including being passed in as an array of row data using this initialisation parameter. As with other dynamic data sources, arrays or objects can be used for the data source for each row
@@ -431,7 +452,8 @@ function writeTable(data) {
             "<'row'<lfrip>>" +
             "<'row'<t>>" ,
     */
-            "<'row'<'flex-container'<l><B><f><r><i><p>>>" +
+            "<'row'<'flex-container'<l><B><f><r><i><'deskOnlyP'p>>>" +
+                "<'row mobOnlyP'<'col-sm-12'p>>" +
             "<'row'<'col-sm-12't>>" ,
     //Default Value: lfrtip ie: "<'row'<lfrtip>>"  Results in: <div class="wrapper"> {length} {processing} {table} {information} {pagination} </div> */     https://datatables.net/reference/option/dom   Define the table control elements to appear on the page and in what order. DataTables will add a number of elements around the table to both control the table and show additional information about it. The position of these elements on screen are controlled by a combination of their order in the document (DOM) and the CSS applied to the elements. This parameter is used to control their ordering and additional mark-up surrounding them in the DOM. Each table control element in DataTables has a single letter associated with it, and that letter it used in this dom configuration option to indicate where that element will appear in the document order.                                                      The built-in table control elements in DataTables are: l - length changing input control f - filtering input t - The table! i - Table information summary p - pagination control r - processing display element. Each option can be specified multiple times (with the exception of the table itself), which can be used to have table controls both above and below the table. DataTables will automatically synchronise these multiple controls. Markup: Further to these options, you can also specify additional div elements to be inserted into the document, which can be used for styling / nesting of the control elements.                          To add tags, the following syntax is expected: < and > - div element <"class" and > - div with a class <"#id" and > - div with an ID <"#id.class" and > - div with an ID and a class. Plug-ins DataTables feature plug-ins can be developed to add additional features to DataTables and often will make use of this option, adding new letters to the DataTables core features. For example Buttons adds the B option to dom to specify where table control buttons should be inserted into the table. The following extensions can be initialised through the dom option: B - Buttons S - Select
 
@@ -439,7 +461,7 @@ function writeTable(data) {
     orderClasses: false,      //Highlight the columns being ordered in the table's body. DataTables highlight the columns which are used to order the content in the table's body by adding a class to the cells in that column, which in turn has CSS applied to those classes to highlight those cells. This is done by the addition of the classes sorting_1, sorting_2 and sorting_3 to the columns which are currently being ordered on. The integer value indicates the level of sorting when mutli-column sorting. If more than 3 columns are being ordered upon, the sorting_3 class is repeated. Please note that this feature can affect performance, particularly in old browsers and when there are a lot of rows to be displayed as it is manipulating a large number of DOM elements. As such, this option is available as a feature switch to allow this feature to be disabled with working with old browsers or large data sets.
 
 
-    pagingType: "full_numbers",   //Default Value: simple_numbers         Pagination button display options. The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using dom and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.               DataTables has six built-in paging button arrangements: numbers - Page number buttons only (1.10.8) simple - 'Previous' and 'Next' buttons only simple_numbers - 'Previous' and 'Next' buttons, plus page numbers full - 'First', 'Previous', 'Next' and 'Last' buttons full_numbers - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers first_last_numbers - 'First' and 'Last' buttons, plus page numbers.
+    //pagingType: "full_numbers",   //Default Value: simple_numbers         Pagination button display options. The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using dom and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.               DataTables has six built-in paging button arrangements: numbers - Page number buttons only (1.10.8) simple - 'Previous' and 'Next' buttons only simple_numbers - 'Previous' and 'Next' buttons, plus page numbers full - 'First', 'Previous', 'Next' and 'Last' buttons full_numbers - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers first_last_numbers - 'First' and 'Last' buttons, plus page numbers.
     searchDelay: 500,     //Default Value: null       Set a throttle frequency for searching. The built-in DataTables global search (by default at the top right of every DataTable) will instantly search the table on every keypress when in client-side processing mode and reduce the search call frequency automatically to 400mS when in server-side processing mode. This call frequency (throttling) can be controlled using the searchDelay parameter for both client-side and server-side processing. Being able to control the call frequency has a number of uses: Older browsers and slower computers can have their processing load reduced by reducing the search frequency Fewer table redraws while searching can be less distracting for the user Reduce the load on the server when using server-side processing by making fewer calls Conversely, you can speed up the search when using server-side processing by reducing the default of 400mS to instant (0). As with many other parts of DataTables, it is up to yourself how you configure it to suit your needs! The value given for searchDelay is an integer in milliseconds (mS). When given as null DataTables will automatically assign a value that is suitable for the processing mode that the DataTable is operating in: Instant - client-side processing 400mS - server-side processing.
     /*"tabIndex": 0,*/      //Tab index control for keyboard navigation. By default DataTables allows keyboard navigation of the table (sorting, paging, and filtering) by adding a tabindex attribute to the required elements. This allows the end user to tab through the controls and press the enter key to activate them, allowing the table controls to be accessible without a mouse. The default tabindex is 0, meaning that the tab follows the flow of the document. You can overrule this using this parameter if you wish. Use a value of -1 to disable built-in keyboard navigation, although this is not recommended for accessibility reasons.
 
