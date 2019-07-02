@@ -552,14 +552,18 @@ buttons: [
 
          //=== edits clipboard regex, code to manipulate the data string as desired
          customize: function(data) {
-         /**/
+
+         /* https://www.rexegg.com/regex-quickstart.html
+         \t	Tab, \r	Carriage return character, \n	Line feed character, \r\n	Line separator on Windows
+         */
                 // data = data.replace( /\b([0-9]|[1-4][0-9]|50)\b/g, 'No:' ); //adds string to hadith
          //        data = data.replace( /\t\r\n/g, '\n\n\n' ); //fixes multiple row's lack of line break on desktop
                                 data = data.replace( /\n#/g, '\n\n#' ); //needed to make rnr work
                                 data = data.replace( /\n\n\n/g, '\n' ); //rids empty space after title
          
                                // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
-                                data = data.replace( /\n#/g, '' );
+
+
                                 data = data.replace( /\tAr No./g, '' );
                                 data = data.replace( /\tAr Title/g, '' );
                                 data = data.replace( /\tEn Title/g, '' );
@@ -571,6 +575,8 @@ buttons: [
                                 data = data.replace( /\tEn Ref./g, '' );
                                 data = data.replace( /\tDv Ref./g, '' );
                                 data = data.replace( /\tRs Ref./g, '' );
+
+                                data = data.replace( /\n#/g, 'Hadith No: ' );
 
                                 data = data.replace( /\nAr No./g, '' );
                                 data = data.replace( /\nAr Title/g, '' );
@@ -592,7 +598,9 @@ buttons: [
                                 data = data.replace( /\r/g, '' ); //rids windows platform newline
                                 data = data.replace( /\t/g, '\n\n' );
 
-                               /*console.log(JSON.stringify(data));*/
+                               /**/
+                               console.log(JSON.stringify(data));
+                               
                                return data;
                              },
          //=== edits clipboard regex end, customize: function(data) {
