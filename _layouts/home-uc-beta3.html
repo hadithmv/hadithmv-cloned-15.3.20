@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>40 Nawawi - beta</title>
+
+    <!-- === CSS LIBRARIES === -->
+    <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+
+    <!-- CSS extensions -->
+    <!--Datatable Buttons Css 1.5.6 -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" />
+    <!--Semantic UI table only component 2.4.2 - NO JS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css" />
+    <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css" />
+    <!-- === CSS LIBRARIES - END === -->
+
+    
+
+    <!-- === JS LIBRARIES  - Move these to the beginning of body for production === -->
+    <!-- JQUERY 3.4.1   - Needed for Datatables, and Bootstrap if present. Originally 2.2.1 
+    must remain at the top and not at the bottom -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- DATATABLES JS 1.10.19  - DT Core. Originally 1.10.3 -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <!-- JS extensions -->
+    <!-- DT Buttons -->
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <!-- DT Column Hide Show -->
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
+    <!-- DT Html5 Export -->
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+    <!-- DT Excel Export - jszip 3.2.0 - Originally 2.5.0 - gets bigger
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.0/jszip.min.js"></script>
+             -->
+    <!-- DT Pdf Export - pdfmake 0.1.57 - Originally 0.1.36  - gets bigger
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.57/pdfmake.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.57/vfs_fonts.js"></script>
+             -->
+    <!-- DT Mark Js - Css file content included with the header Css
+             Keep at 8.11.1 - Upgrading to 9 breaks highlight -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
+    <!-- DT Keytable -->
+    <script src="https://cdn.datatables.net/keytable/2.5.0/js/dataTables.keyTable.min.js"></script>
+    <!-- DT Keep Conditions -->
+    <script
+        src="https://raw.githack.com/jhyland87/DataTables-Keep-Conditions/master/dist/dataTables.keepConditions.min.js"></script>
+    <!-- Hammerjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+
+    <!-- Material CSS - You can also request individual packages’ JS and CSS, e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css 
+            <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+-->
+    <!-- Material JS 
+            <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+-->
+
+
+
+
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+
+
+
+
+    <script src="https://hadithmv.com/alt/json/40nJson.js"></script>
+
+
+</head>
+
+
+<body class="notranslate">
+
+
+        <table id="fnTable" class="ui celled compact striped table fnClass">
+            <!--cellspacing="0" width="100%"-->
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+
+
+        <!--=== === ===INLINE JS=== === ===-->
+        <script>
+
+            /* first used: http://www.convertcsv.com/csv-to-json.htm, Use the tool on this page to convert CSV data to JSON, load excel, CSV to Json first option output.
+            Remove trailing empty cells.
+            then used: http://myjson.com, A simple JSON store for your web or mobile apps*/
+
+            $(document).ready(function () { //no need to add this again for another table
+
+                var table = $("#fnTable").DataTable({ /* TABLECHANGE123 */
+                    data: FNdataSet,  //has to match javascript json
+
+
+
+                    //   data: data, previously without column titles TABLECHANGE123
+                    columns: [
+                        { title: "#" },
+                        { title: "Ar No." },
+                        { title: "Ar Title" },
+                        { title: "En Title" },
+                        { title: "Dv Title" },
+                        { title: "Arabic" },
+                        { title: "Ar Plain" },
+                        { title: "English" },
+                        { title: "Dhivehi" },
+                        { title: "Ar Ref." },
+                        { title: "En Ref." },
+                        { title: "Dv Ref." },
+                        { title: "Rs Ref." },
+                    ],
+
+
+                    columnDefs: [  //classes columns for css in nweb view, but not print
+                        { className: "fnCol1", "targets": [0], "visible": true, "searchable": true },
+                        { className: "fnCol2", "targets": [1], "visible": false, "searchable": false },
+                        { className: "fnCol3", "targets": [2], "visible": true, "searchable": false },
+                        { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },
+                        { className: "fnCol5", "targets": [4], "visible": false, "searchable": false },
+                        { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },
+                        { className: "fnCol7", "targets": [6], "visible": false, "searchable": true },
+                        { className: "fnCol8", "targets": [7], "visible": true, "searchable": true },
+                        { className: "fnCol9", "targets": [8], "visible": true, "searchable": true },
+                        { className: "fnCol10", "targets": [9], "visible": true, "searchable": false },
+                        { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },
+                        { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },
+                        { className: "fnCol13", "targets": [12], "visible": true, "searchable": false },
+                        //], //end of columnDefs, previously without visible and searchable options
+                        //below strips html tags off keystable copy, second part with keys on
+
+                    ],
+
+                    /* CHANGE123 */
+
+
+                    dom: //previous dom setting broke the diactric included search
+
+                        "<'row'<'col-sm-1 col-xs-2'f><'col-sm-2 col-xs-4'><'col-sm-1 col-xs-2 text-right'B><'col-xs-1 'l><'col-xs-1'><'hidden-xs col-sm-1'i><'hidden-xs col-sm-5'p>>" +
+
+                        //mobile and tablet top
+                        "<'hidden-md hidden-lg hidden-sm '" +
+                        "<'row'<'col-sm-12'p>>" +
+                        ">" +
+
+                        //BOTH (table for desktop and mobile and tablet)
+                        "<'row'<'col-sm-12'tr>>" +
+
+                        //desktop bottom
+                        "<'hidden-xs'" +
+                        "<'row'<'col-sm-12'p>>" +
+                        ">" +
+
+                        //mobile and tablet bottom
+                        "<'hidden-md hidden-lg hidden-sm '" +
+                        "<'row'<'col-sm-5'i><'col-sm-7'p>>" +
+                        ">",
+
+                    renderer: 'bootstrap',
+
+
+
+                }); //========================END OF INITIALIZE DATATABLE FUNCTION - var table = $('#fnTable').DataTable({
+
+
+
+            });
+        </script>
+
+
+
+
+
+
+</body>
+
+</html>
