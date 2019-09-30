@@ -379,12 +379,11 @@ FixedColumns supports right to left text layout, which is automatically detected
             margin-left: 16px;
         }
 
-        /* makes app bar only */
-        /*        .mdc-top-app-bar { direction: rtl;}         */
-        /* 'dir="rtl"' fixes rtl direction on both navbar and drawers */
-        }
+        /* makes only app bar rtl */
+        .mdc-top-app-bar { direction: rtl;}
 
-        */
+        /* 'dir="rtl"' fixes rtl direction for drawers as an attribute*/
+
     </style>
 </head>
 
@@ -477,7 +476,7 @@ FixedColumns supports right to left text layout, which is automatically detected
         <!-- mdc-drawer-app-content -->
 
         <!-- 'dir="rtl"' fixes rtl direction on navbar -->
-        <header class="mdc-top-app-bar app-bar  mdc-elevation--z3" id="app-bar" dir="rtl">
+        <header class="mdc-top-app-bar app-bar  mdc-elevation--z3" id="app-bar">
             <!-- mdc-top-app-bar app-bar -->
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">

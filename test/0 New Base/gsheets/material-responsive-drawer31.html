@@ -379,31 +379,12 @@ FixedColumns supports right to left text layout, which is automatically detected
             margin-left: 16px;
         }
 
-        /* makes mdc and body rtl direction */
-        body { direction: rtl;}
+        /* makes app bar only */
+        /*        .mdc-top-app-bar { direction: rtl;}         */
+        /* 'dir="rtl"' fixes rtl direction on both navbar and drawers */
+        }
 
-
-/* hides scrollbar absolutely, first removes scrollbar space, second makes scrollbar invisible */
-/*
-::-webkit-scrollbar {
-    width: 0px;  
-    background: transparent;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        */
     </style>
 </head>
 
@@ -424,8 +405,8 @@ FixedColumns supports right to left text layout, which is automatically detected
 <body class="mdc-typography">
     <!-- body -->
 
-
-    <aside class="mdc-drawer mdc-drawer--modal  ">
+    <!-- 'dir="rtl"' fixes rtl direction on drawers -->
+    <aside class="mdc-drawer mdc-drawer--modal" dir="rtl">
         <!-- mdc-drawer -->
 
         <div class="mdc-drawer__header">
@@ -495,7 +476,8 @@ FixedColumns supports right to left text layout, which is automatically detected
     <div class="mdc-drawer-app-content">
         <!-- mdc-drawer-app-content -->
 
-        <header class="mdc-top-app-bar app-bar  mdc-elevation--z3" id="app-bar">
+        <!-- 'dir="rtl"' fixes rtl direction on navbar -->
+        <header class="mdc-top-app-bar app-bar  mdc-elevation--z3" id="app-bar" dir="rtl">
             <!-- mdc-top-app-bar app-bar -->
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
