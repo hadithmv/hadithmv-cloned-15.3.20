@@ -13,70 +13,22 @@
     <title>40 Nawawi - beta</title>
 
     <!-- === CSS LIBRARIES === -->
-    <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+    <!-- DATATABLES CSS 1.10.19 -Originally 1.10.3 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" /> -->
 
     <!-- CSS extensions -->
     <!--Datatable Buttons Css 1.5.6
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" />
      -->
-    <!--Semantic UI table only component 2.4.2 - NO JS -->
+    <!--Semantic UI table only CSS component 2.4.2 - NO JS NEEDED -->
     <link rel="stylesheet" type="text/css"
         href="https://raw.githack.com/Semantic-Org/Semantic-UI/master/dist/components/table.min.css" />
-    <!--Datatables - Semantic UI Integration - NO JS NEEDED -->
+    <!--Datatables - Semantic UI Integration CSS - NO JS NEEDED -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css" />
     <!-- === CSS LIBRARIES - END === -->
 
 
-
-    <!-- === JS LIBRARIES  - Move these to the beginning of body for production === -->
-    <!-- JQUERY 3.4.1   - Needed for Datatables, and Bootstrap if present. Originally 2.2.1 
-    must remain at the top and not at the bottom -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- DATATABLES JS 1.10.19  - DT Core. Originally 1.10.3 -->
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-    <!-- JS extensions -->
-    <!-- DT Buttons
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-     -->
-    <!-- DT Column Hide Show
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
-     -->
-    <!-- DT Html5 Export
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-     -->
-    <!-- DT Excel Export - jszip 3.2.0 - Originally 2.5.0 - gets bigger
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.0/jszip.min.js"></script>
-             -->
-    <!-- DT Pdf Export - pdfmake 0.1.57 - Originally 0.1.36  - gets bigger
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.57/pdfmake.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.57/vfs_fonts.js"></script>
-             -->
-    <!-- DT Mark Js - Css file content included with the header Css
-             Keep at 8.11.1 - Upgrading to 9 breaks highlight 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/datatables.mark.js@2.0.1/dist/datatables.mark.min.js"></script>
--->
-    <!-- DT Keytable
-    <script src="https://cdn.datatables.net/keytable/2.5.0/js/dataTables.keyTable.min.js"></script>
--->
-    <!-- DT Keep Conditions
-    <script
-        src="https://raw.githack.com/jhyland87/DataTables-Keep-Conditions/master/dist/dataTables.keepConditions.min.js"></script>
-    -->
-    <!-- Hammerjs
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-    -->
-
-    <!-- Material CSS - You can also request individual packages’ JS and CSS,
-        e.g.: https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css-->
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <!-- Material JS -->
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 
@@ -133,10 +85,7 @@
             position: absolute;
         }
 
-        /* only apply this style if below top app bar*/
-        .mdc-top-app-bar {
-            z-index: 7;
-        }
+
 
         /*  ==== END MDC Dismissible Drawer Below Top App Bar === */
 
@@ -169,7 +118,6 @@
             border-radius: 50%;
             width: 150px;
             height: 150px;
-            margin-top: 10px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -227,6 +175,7 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                     </button>
 
                     <h3 class="mdc-drawer__title">Hadithmv</h3>
+                    <h6 class="mdc-drawer__subtitle">v1.3.0</h6>
                     <h6 class="mdc-drawer__subtitle"><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank"
                             rel="noopener">hadithmv@gmail.com</a></h6>
                 </div> <!-- END mdc-drawer__header -->
@@ -234,12 +183,22 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Hadith</h6>
 
-                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" data-mdc-auto-init="MDCRipple">
+
+
+
+
+
+                <!-- === 'tablinks' class for custom tabs
+    'onclick="openCity(event, 'London')"' for activation === 
+' id="defaultOpen"' for custom tabs to start with this -->
+                <a class="mdc-list-item mdc-list-item--activated tablinks" href="#" aria-current="page"
+                    data-mdc-auto-init="MDCRipple" onclick="openTab(event, '40nTab')"  id="defaultOpen">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
                     <span class="mdc-list-item__text">40 Nawawi</span>
                 </a>
 
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
+                    onclick="openTab(event, 'bukhTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
                     <span class="mdc-list-item__text">Bukhari (beta)</span>
                 </a>
@@ -247,10 +206,12 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Misc</h6>
 
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
+                    onclick="openTab(event, 'abouTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
                     <span class="mdc-list-item__text">About</span>
                 </a>
+
             </div>
         </div>
     </aside>
@@ -268,37 +229,51 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
 
 
 
+            <!-- custom tabs id="40nTab" class="tabcontent" -->
+            <div id="40nTab" class="tabcontent">
 
-
-            <table id="fnTable" class="ui celled compact striped table fnClass">
                 <!-- cellspacing="0" width="100%" -->
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-            </table>
+                <table id="fnTable" class="ui celled compact striped table fnClass">
 
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
 
+            </div> <!-- END id="40nTab" class="tabcontent" -->
 
-        </main> <!-- === End 'main-content' === -->
-    </div> <!-- === End MDC Drawer Content === -->
+            <!-- id="bukhTab" class="tabcontent" -->
+            <div id="bukhTab" class="tabcontent">
+                <h3>beta</h3>
+                <p>In Development</p>
+            </div> <!-- END id="bukhTab" class="tabcontent" -->
+
+            <!-- id="abouTab" class="tabcontent" -->
+            <div id="abouTab" class="tabcontent">
+            </div> <!-- END id="abouTab" class="tabcontent" -->
+
+        </div> <!-- END id="abouTab" class="tabcontent" -->
+
+        </main> <!-- === END 'main-content' === -->
+    </div> <!-- === END MDC Drawer Content === -->
 
 
 
@@ -354,7 +329,7 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
         });
 
 
-        // Switch content on tab activation
+        // Switch content on tab activation -drawer 
         Array.from(document.querySelectorAll('.mdc-tab')).forEach(
             tab => tab.addEventListener('MDCTab:interacted', (e) => switchToTab(e.detail.tabId))
         );
@@ -365,6 +340,41 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                     .slice(0, -1 * '-tab'.length) ? 'block' : 'none';
             });
         }
+
+
+        // Custom tabs - Get the element with id="defaultOpen" and click on it
+        // first line makes sure DOM is ready before running the code, alternatively insert in body
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById("defaultOpen").click();
+});
+        // Custom tabs - https://www.w3schools.com/howto/howto_js_tabs.asp
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            drawer.open = false; // addition - closes MDC drawer
+
+            
+        };
+
+
+
+
+
+
+
+
+
+
     </script>
 
 

@@ -133,10 +133,7 @@
             position: absolute;
         }
 
-        /* only apply this style if below top app bar*/
-        .mdc-top-app-bar {
-            z-index: 7;
-        }
+
 
         /*  ==== END MDC Dismissible Drawer Below Top App Bar === */
 
@@ -169,7 +166,6 @@
             border-radius: 50%;
             width: 150px;
             height: 150px;
-            margin-top: 10px;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -227,6 +223,7 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                     </button>
 
                     <h3 class="mdc-drawer__title">Hadithmv</h3>
+                    <h6 class="mdc-drawer__subtitle">v1.3.0</h6>
                     <h6 class="mdc-drawer__subtitle"><a href="https://goo.gl/forms/O0SLwVntIGRdhVGv2" target="_blank"
                             rel="noopener">hadithmv@gmail.com</a></h6>
                 </div> <!-- END mdc-drawer__header -->
@@ -234,12 +231,22 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Hadith</h6>
 
-                <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" data-mdc-auto-init="MDCRipple">
+
+
+
+
+
+                <!-- === 'tablinks' class for custom tabs
+    'onclick="openCity(event, 'London')"' for activation === 
+' id="defaultOpen"' for custom tabs to start with this -->
+                <a class="mdc-list-item mdc-list-item--activated tablinks" href="#" aria-current="page"
+                    data-mdc-auto-init="MDCRipple" onclick="openTab(event, '40nTab')"  id="defaultOpen">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
                     <span class="mdc-list-item__text">40 Nawawi</span>
                 </a>
 
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
+                    onclick="openTab(event, 'bukhTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
                     <span class="mdc-list-item__text">Bukhari (beta)</span>
                 </a>
@@ -247,10 +254,12 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">Misc</h6>
 
-                <a class="mdc-list-item" href="#" data-mdc-auto-init="MDCRipple">
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
+                    onclick="openTab(event, 'abouTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
                     <span class="mdc-list-item__text">About</span>
                 </a>
+
             </div>
         </div>
     </aside>
@@ -268,37 +277,51 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
 
 
 
+            <!-- custom tabs id="40nTab" class="tabcontent" -->
+            <div id="40nTab" class="tabcontent">
 
-
-            <table id="fnTable" class="ui celled compact striped table fnClass">
                 <!-- cellspacing="0" width="100%" -->
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-            </table>
+                <table id="fnTable" class="ui celled compact striped table fnClass">
 
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
 
+            </div> <!-- END id="40nTab" class="tabcontent" -->
 
-        </main> <!-- === End 'main-content' === -->
-    </div> <!-- === End MDC Drawer Content === -->
+            <!-- id="bukhTab" class="tabcontent" -->
+            <div id="bukhTab" class="tabcontent">
+                <h3>beta</h3>
+                <p>In Development</p>
+            </div> <!-- END id="bukhTab" class="tabcontent" -->
+
+            <!-- id="abouTab" class="tabcontent" -->
+            <div id="abouTab" class="tabcontent">
+            </div> <!-- END id="abouTab" class="tabcontent" -->
+
+        </div> <!-- END id="abouTab" class="tabcontent" -->
+
+        </main> <!-- === END 'main-content' === -->
+    </div> <!-- === END MDC Drawer Content === -->
 
 
 
@@ -354,7 +377,7 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
         });
 
 
-        // Switch content on tab activation
+        // Switch content on tab activation -drawer 
         Array.from(document.querySelectorAll('.mdc-tab')).forEach(
             tab => tab.addEventListener('MDCTab:interacted', (e) => switchToTab(e.detail.tabId))
         );
@@ -365,6 +388,41 @@ The mdc-top-app-bar--fixed-adjust helper class will adjust the position with top
                     .slice(0, -1 * '-tab'.length) ? 'block' : 'none';
             });
         }
+
+
+        // Custom tabs - Get the element with id="defaultOpen" and click on it
+        // first line makes sure DOM is ready before running the code, alternatively insert in body
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.getElementById("defaultOpen").click();
+});
+        // Custom tabs - https://www.w3schools.com/howto/howto_js_tabs.asp
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            drawer.open = false; // addition - closes MDC drawer
+
+            
+        };
+
+
+
+
+
+
+
+
+
+
     </script>
 
 
