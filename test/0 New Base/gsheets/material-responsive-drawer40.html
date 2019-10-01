@@ -995,10 +995,10 @@ FixedColumns supports right to left text layout, which is automatically detected
                 if (x.matches) { // If media query matches
                     // empty // document.body.style.backgroundColor = "pink";
                 } else {
-                    Hammer(fortyNawawi).on("swipeleft", function () {
+                    Hammer(fortyNawawi).on("swiperight", function () { //changed swipelef and swiperight for dhivehi
                         table.page('next').draw('page');
                     });
-                    Hammer(document.getElementById("fortyNawawi")).on("swiperight", function () {
+                    Hammer(document.getElementById("fortyNawawi")).on("swipeleft", function () {
                         table.page('previous').draw('page');
                     });
                 }
