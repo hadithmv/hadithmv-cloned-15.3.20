@@ -384,9 +384,11 @@ FixedColumns supports right to left text layout, which is automatically detected
         }
 
         /* makes only app bar rtl */
-        .mdc-top-app-bar { direction: rtl;}
+        /*.mdc-top-app-bar { direction: rtl;}*/
 
         /* 'dir="rtl"' fixes rtl direction for drawers as an attribute*/
+
+        .mdc-list { direction: rtl;}
 
     </style>
 </head>
@@ -431,7 +433,7 @@ FixedColumns supports right to left text layout, which is automatically detected
         </div> <!-- end mdc-drawer__header -->
 
         <hr class="mdc-list-divider">
-        <h6 class="mdc-list-group__subheader">Books</h6>
+        <h6 class="mdc-list-group__subheader">ފޮތްތަށް</h6>
 
         <div class="mdc-drawer__content">
             <!-- mdc-drawer__content -->
@@ -443,16 +445,16 @@ FixedColumns supports right to left text layout, which is automatically detected
                     <!-- for custom tab open, requires class: "tablinks" and onclick="openTab(event, '40nTab')"
                     default open id="defaultOpen"  -->
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
-                    <span class="mdc-list-item__text">40 Nawawi</span>
+                    <span class="mdc-list-item__text">ނަވަވީގެ 40 ޙަދީޘް</span>
                 </a>
                 <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
                     onclick="openTab(event, 'bukhTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
-                    <span class="mdc-list-item__text">Bukhari (beta)</span>
+                    <span class="mdc-list-item__text">ޞަޙީހު ބުޚާރީ (ބީޓާ)</span>
                 </a>
 
                 <hr class="mdc-list-divider">
-                <h6 class="mdc-list-group__subheader">Misc</h6>
+                <h6 class="mdc-list-group__subheader">އެހެނިހެން</h6>
 
                 <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
                     onclick="openTab(event, 'abouTab')">
@@ -483,15 +485,19 @@ FixedColumns supports right to left text layout, which is automatically detected
         <header class="mdc-top-app-bar app-bar  mdc-elevation--z3" id="app-bar">
             <!-- mdc-top-app-bar app-bar -->
             <div class="mdc-top-app-bar__row">
+
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                     <a href="#"
                         class="demo-menu material-icons mdc-top-app-bar__navigation-icon  mdc-ripple-surface">menu</a>
-                    <span class="mdc-top-app-bar__title">Hadithmv</span>
+                    <!--<span class="mdc-top-app-bar__title">ޙަދީޘްއެމްވީ</span>-->
                 </section>
+
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-                    <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download"
-                        alt="share">share</a>
+                    <!--<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download"
+                        alt="share">share</a>-->
+                        <span class="mdc-top-app-bar__title">ޙަދީޘްއެމްވީ</span>
                 </section>
+
             </div>
         </header> <!-- END mdc-top-app-bar app-bar -->
 
