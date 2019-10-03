@@ -95,25 +95,65 @@
 
 
 
-    
+
+
+
 
 
 
 
     <style>
-         @font-face {
-         font-family: 'mvtyper';
-         src: 
-         url('https://dhivehi.mv/fonts/data/df/mvtyper.ttf') format('ttf'),
-         }
+        @font-face {
+            font-family: 'mvtyper1';
+            src:
+                url('https://hadithmv.com/alt/mod-fonts/mvtyper.ttf') format('truetype');
+        }
 
-         
-/*.mdc-typography*/
-body {
-  font-family: 'mvtyper' !important; /* previously 'Roboto, sans-serif' */
+        .mdc-typography,
+        .mdc-top-app-bar__title,
+        .dt-button,
+        input,
+        select,
+        a {
+            font-family: 'mvtyper1', sans-serif;
+            /* previously 'Roboto, sans-serif' */
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
 
-}
 
+        .mdc-list-group__subheader,
+        .mdc-list-item,
+        .mdc-drawer__title {
+            font-family: 'mvtyper1', sans-serif !important;
+
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        #fortyNawawi>tbody>tr>td {
+            text-align: justify;
+            font-size: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            color: #24292e;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        #fortyNawawi>thead>tr>th {
+            font-size: 100%;
+            text-align: center;
+            /*color: #205ca5;*/
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+
+        /* .mdc-list-item  */
 
         body {
             background: #f5f5f5;
@@ -131,8 +171,9 @@ body {
             flex: auto;
             position: relative;
 
-            /* overflow: auto;      This breaks scrolltop js, yet removing it skews mobile view to one side */ 
-            width: 100%;  /* this fixed mobile skew an keeps scroll top*/
+            /* overflow: auto;      This breaks scrolltop js, yet removing it skews mobile view to one side */
+            width: 100%;
+            /* this fixed mobile skew an keeps scroll top*/
         }
 
 
@@ -404,26 +445,14 @@ FixedColumns supports right to left text layout, which is automatically detected
 
         /* 'dir="rtl"' fixes rtl direction for drawers as an attribute*/
 
-        .mdc-list { direction: rtl;}
-
+        /*.mdc-list { direction: rtl;}*/
     </style>
 </head>
 
 
 
+<body class="mdc-typography">
 
-
-
-
-
-
-
-
-
-
-
-
-<body> <!-- previously 'class="mdc-typography"' -->
     <!-- body -->
 
     <!-- 'dir="rtl"' fixes rtl direction on drawers -->
@@ -511,7 +540,7 @@ FixedColumns supports right to left text layout, which is automatically detected
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
                     <!--<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download"
                         alt="share">share</a>-->
-                        <span class="mdc-top-app-bar__title">ޙަދީޘްއެމްވީ</span>
+                    <span class="mdc-top-app-bar__title">ޙަދީޘްއެމްވީ</span>
                 </section>
 
             </div>
@@ -756,7 +785,7 @@ FixedColumns supports right to left text layout, which is automatically detected
 
             /*$('#fortyNawawi').DataTable({ */
             /* hammerjs doesnt work with the above, needs var below */
-           var table = $("#fortyNawawi").DataTable({
+            var table = $("#fortyNawawi").DataTable({
 
                 data: FNdataSet,
                 columns: [
@@ -765,10 +794,10 @@ FixedColumns supports right to left text layout, which is automatically detected
                     { title: "ޢަރަބި ސުރުޚީ" },
                     { title: "އިނގިރޭސި ސުރުޚީ" },
                     { title: "ދިވެހި ސުރުޚީ" },
-                    { title: "ޢަރަބި" },
+                    { title: "ޢަރަބި ޙަދީޘް" },
                     { title: "ޢަރަބި ފިިލިނުޖަހައި" },
                     { title: "އިނގިރޭސި" },
-                    { title: "ދިވެހި" },
+                    { title: "ދިވެހި ތަރުޖަމާ" },
                     { title: "މަސްދަރު ޢަރަބިން." },
                     { title: "މަސްދަރު އިނގިރޭސިން." },
                     { title: "މަސްދަރު ދިވެހިން." },
@@ -1029,7 +1058,7 @@ FixedColumns supports right to left text layout, which is automatically detected
             var x = window.matchMedia("(min-width: 1200px)")    // js media query on desktop
             myFunction(x) // Call listener function at run time
             x.addListener(myFunction) // Attach listener function on state changes
-//============================ END HammerJS - Swipe
+            //============================ END HammerJS - Swipe
 
 
 
@@ -1039,35 +1068,35 @@ FixedColumns supports right to left text layout, which is automatically detected
                 $("main-content").focus(); // need to set focus at the top so that dataTables bootstrap doesn't scroll back to the bottom
 
                 var tempScrollTop = $(window).scrollTop();
-  console.log("Scroll from Top: " + tempScrollTop.toString());
-  
+                console.log("Scroll from Top: " + tempScrollTop.toString());
+
             });
 
 
 
 
-/*
-$('#fortyNawawi').on( 'page.dt', function () {
-    $("html, body").animate({ scrollTop: 0 }, "fast");
-                        $("th:first-child").focus();
-} );
-*/
-/*
-// If the user changes the page, scroll to the top
-$(".dataTable").on("page.dt", function () {
-    $('html, body').animate({
-        scrollTop: 0
-    }, 200);
-    });
-*/
-/*
-    $('#{{ $tableId }}').on( 'page.dt', function () {
-    $('html, body').animate({
-        scrollTop: 0
-    }, 200);
-     
-});
-*/
+            /*
+            $('#fortyNawawi').on( 'page.dt', function () {
+                $("html, body").animate({ scrollTop: 0 }, "fast");
+                                    $("th:first-child").focus();
+            } );
+            */
+            /*
+            // If the user changes the page, scroll to the top
+            $(".dataTable").on("page.dt", function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 200);
+                });
+            */
+            /*
+                $('#{{ $tableId }}').on( 'page.dt', function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 200);
+                 
+            });
+            */
 
 
         }); // $(document).ready(function() {
