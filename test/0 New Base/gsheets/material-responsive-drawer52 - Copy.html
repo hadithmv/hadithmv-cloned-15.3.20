@@ -190,7 +190,7 @@
             position: relative;
 
             /* overflow: auto;      This breaks scrolltop js, yet removing it skews mobile view to one side */
-            width: 100%;
+            overflow: auto; 
             /* this fixed mobile skew an keeps scroll top*/
         }
 
@@ -473,6 +473,113 @@ FixedColumns supports right to left text layout, which is automatically detected
                 margin-left: 32px;
             }
 
+
+
+
+
+
+
+            div.dataTables_wrapper div.dataTables_filter {
+  text-align: right;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+}
+div.dataTables_wrapper div.dataTables_info {
+  padding-top: 10px;
+  white-space: nowrap;
+}
+div.dataTables_wrapper div.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+  text-align: right;
+}
+div.dataTables_wrapper div.mdl-grid.dt-table {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.dataTables_wrapper div.mdl-grid.dt-table > div.mdl-cell {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting,
+table.dataTable thead > tr > td.sorting_asc,
+table.dataTable thead > tr > td.sorting_desc,
+table.dataTable thead > tr > td.sorting {
+  padding-right: 30px;
+}
+table.dataTable thead > tr > th:active,
+table.dataTable thead > tr > td:active {
+  outline: none;
+}
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+  cursor: pointer;
+  position: relative;
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+  position: absolute;
+  bottom: 11px;
+  display: block;
+  opacity: 0.3;
+  font-size: 1.3em;
+}
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:before {
+  right: 1em;
+  content: "\2191";
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:after {
+  right: 0.5em;
+  content: "\2193";
+}
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:after {
+  opacity: 1;
+}
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after {
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#fortyNawawi > tbody {
+    white-space: normal;
+}
     </style>
 </head>
 
@@ -599,69 +706,28 @@ FixedColumns supports right to left text layout, which is automatically detected
                     <!-- id="40nTab" class="tabcontent" -->
 
                     <div class="mdc-data-table">
-                            <table class="mdc-data-table__table" aria-label="Dessert calories">
 
-                              <thead>
-                                <tr class="mdc-data-table__header-row">
-                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Dessert</th>
-                                  <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Carbs (g)</th>
-                                  <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Protein (g)</th>
-                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Comments</th>
-                                </tr>
-                              </thead>
-
-                              <tbody class="mdc-data-table__content">
-                                <tr class="mdc-data-table__row">
-                                  <td class="mdc-data-table__cell">Frozen yogurt</td>
-                                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
-                                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
-                                  <td class="mdc-data-table__cell">Super tasty</td>
-                                </tr>
-                              </tbody>
-
-                            </table>
-                          </div>
-
-
-                    <div class="mdc-data-table">
-
-                    <table id="fortyNawawi" class="ui striped table fnClass mdc-data-table__table" width="100%">
+                    
+                    <table id="fortyNawawi" class="ui mdc-data-table__table fnClass" width="100%">
                         <!--cellspacing="0" width="100%"-->
                         <thead>
-                                <tr class="mdc-data-table__header-row">
-                                  <th class="mdc-data-table__cell"></th>
-                                </tr>
-                              </thead>
-
-                        <thead>
-                                <tr class="mdc-data-table__row">
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
-                                        <th class="mdc-data-table__cell"></th>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
                             </tr>
-                            <tbody class="mdc-data-table__content">
-                                    <tr class="mdc-data-table__row">
-                                      <td class="mdc-data-table__cell">Frozen yogurt</td>
-                                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
-                                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
-                                      <td class="mdc-data-table__cell">Super tasty</td>
-                                    </tr>
-                                  </tbody>
-                                  
                         </thead>
                     </table>
-
-
 
                 </div>
                 </div> <!-- END id="40nTab" class="tabcontent" -->
@@ -949,13 +1015,13 @@ FixedColumns supports right to left text layout, which is automatically detected
 < and > - div element
 <"class" and > - div with a class
 <"#id" and > - div with an ID
-<"#id.class" and > - div with an ID and a class*/
+<"#id.class" and > - div with an ID and a class */
                 dom:
                     /*before use with flexbox to make double row single. CSS above html.
                             "<'row'<lfrip>>" +
                             "<'row'<t>>" ,
                     */
-                    "<'row'<'flex-container'<l><'mdc-button'B><f><r><'deskOnlyP'i><'deskOnlyP'p>>>" +
+                    "<'row'<'flex-container'<l><B><f><r><'deskOnlyP'i><'deskOnlyP'p>>>" +
                     "<'row mobOnlyP'<'col-sm-12'p>>" +
                     "<'row'<'col-sm-12't>>" +
                     "<'row '<'mobOnlyP'i><'deskOnlyP'p>>" +
@@ -1261,27 +1327,6 @@ FixedColumns supports right to left text layout, which is automatically detected
         document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("defaultOpen").click();
         });
-
-
-
-
-
-
-
-
-
-        function addButtonClass() {
-  var element = document.getElementByClass("dataTables_paginate paging_simple_numbers");
-  element.classList.add("mdc-button");
-}
-
-
-
-
-
-
-
-
     </script>
 </body>
 
