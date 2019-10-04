@@ -132,6 +132,7 @@
         }
 
 
+/* table data rows alignment */
         #fortyNawawi>tbody>tr>td {
             text-align: justify;
             font-size: 100%;
@@ -142,6 +143,7 @@
             word-wrap: break-word;
         }
 
+/* table header row alignment */
         #fortyNawawi>thead>tr>th {
             font-size: 100%;
             text-align: center;
@@ -151,6 +153,22 @@
             line-height: 1.5;
             word-wrap: break-word;
         }
+
+
+/* removes justify from riyadussaliheen table rows */
+        .dataTable tbody tr td.fnCol13 { /* ar ref */
+         text-align: right !important;
+}
+
+
+/*
+                    { className: "fnCol10", "targets": [9], "visible": true, "searchable": true },   // Ar Ref
+                    { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },   // En Ref
+                    { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },   // Dv Ref
+                    { className: "fnCol13", "targets": [12], "visible": true, "searchable": false }   // Rs Ref
+*/
+
+
 
 
         /* .mdc-list-item  */
@@ -323,9 +341,6 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
         /* === END Custom Tabs === */
 
 
-
-
-
         /* === DT TABLE CSS === */
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
@@ -446,6 +461,18 @@ FixedColumns supports right to left text layout, which is automatically detected
         /* 'dir="rtl"' fixes rtl direction for drawers as an attribute*/
 
         /*.mdc-list { direction: rtl;}*/
+
+/* aligns drawer text to right */
+        body > aside {
+            direction: rtl;
+            }
+            
+            /* aligns drawer icons to right */
+            .mdc-list-item__graphic {
+                margin-right: 0px;
+                margin-left: 32px;
+            }
+
     </style>
 </head>
 
@@ -497,6 +524,11 @@ FixedColumns supports right to left text layout, which is automatically detected
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
                     <span class="mdc-list-item__text">ޞަޙީހު ބުޚާރީ (ބީޓާ)</span>
                 </a>
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
+                    onclick="openTab(event, 'bukhTab')">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+                    <span class="mdc-list-item__text">ހުރިހައި ޙަދީޘްތައް (ބީޓާ)</span>
+                </a>
 
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">އެހެނިހެން</h6>
@@ -504,17 +536,22 @@ FixedColumns supports right to left text layout, which is automatically detected
                 <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
                     onclick="openTab(event, 'abouTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
-                    <span class="mdc-list-item__text">About</span>
+                    <span class="mdc-list-item__text">އިތުރު މައުލޫމާތު</span>
                 </a>
                 <a class="mdc-list-item" href="https://hadithmv.com/alt/intro" target="_blank" rel="noopener"
                     data-mdc-auto-init="MDCRipple">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pages</i>
-                    <span class="mdc-list-item__text">Intro: 40 Nawawi</span>
+                    <span class="mdc-list-item__text">40 ޙަދީޘްގެ ތަޢާރަފު</span>
+                </a>
+                <a class="mdc-list-item" href="https://hadithmv.com/alt/intro" target="_blank" rel="noopener"
+                    data-mdc-auto-init="MDCRipple">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pages</i>
+                    <span class="mdc-list-item__text">40 ޙަދީޘްގެ ރާވީން</span>
                 </a>
                 <a class="mdc-list-item" href="https://hadithmv.com/alt/docs" target="_blank" rel="noopener"
                     data-mdc-auto-init="MDCRipple">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">folder</i>
-                    <span class="mdc-list-item__text">Docs</span>
+                    <span class="mdc-list-item__text">ލިޔެކިޔުންތައް</span>
                 </a>
             </nav> <!-- END mdc-list -->
         </div> <!-- END mdc-drawer__content -->
@@ -533,7 +570,7 @@ FixedColumns supports right to left text layout, which is automatically detected
 
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                     <a href="#"
-                        class="demo-menu material-icons mdc-top-app-bar__navigation-icon  mdc-ripple-surface">menu</a>
+                        class="demo-menu material-icons mdc-top-app-bar__navigation-icon  mdc-ripple-surface">menu</a> <!-- hamburger button -->
                     <!--<span class="mdc-top-app-bar__title">ޙަދީޘްއެމްވީ</span>-->
                 </section>
 
@@ -561,27 +598,72 @@ FixedColumns supports right to left text layout, which is automatically detected
                 <div id="40nTab" class="tabcontent">
                     <!-- id="40nTab" class="tabcontent" -->
 
-                    <table id="fortyNawawi" class="ui striped table fnClass" width="100%">
+                    <div class="mdc-data-table">
+                            <table class="mdc-data-table__table" aria-label="Dessert calories">
+
+                              <thead>
+                                <tr class="mdc-data-table__header-row">
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Dessert</th>
+                                  <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Carbs (g)</th>
+                                  <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Protein (g)</th>
+                                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Comments</th>
+                                </tr>
+                              </thead>
+
+                              <tbody class="mdc-data-table__content">
+                                <tr class="mdc-data-table__row">
+                                  <td class="mdc-data-table__cell">Frozen yogurt</td>
+                                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
+                                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
+                                  <td class="mdc-data-table__cell">Super tasty</td>
+                                </tr>
+                              </tbody>
+
+                            </table>
+                          </div>
+
+
+                    <div class="mdc-data-table">
+
+                    <table id="fortyNawawi" class="ui striped table fnClass mdc-data-table__table" width="100%">
                         <!--cellspacing="0" width="100%"-->
                         <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
+                                <tr class="mdc-data-table__header-row">
+                                  <th class="mdc-data-table__cell"></th>
+                                </tr>
+                              </thead>
+
+                        <thead>
+                                <tr class="mdc-data-table__row">
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
+                                        <th class="mdc-data-table__cell"></th>
                             </tr>
+                            <tbody class="mdc-data-table__content">
+                                    <tr class="mdc-data-table__row">
+                                      <td class="mdc-data-table__cell">Frozen yogurt</td>
+                                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
+                                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
+                                      <td class="mdc-data-table__cell">Super tasty</td>
+                                    </tr>
+                                  </tbody>
+                                  
                         </thead>
                     </table>
 
+
+
+                </div>
                 </div> <!-- END id="40nTab" class="tabcontent" -->
 
 
@@ -851,12 +933,29 @@ FixedColumns supports right to left text layout, which is automatically detected
                 mark: true, //markjs    - a keyword highlighter for strings, arrays or regular expressions and works in any context (not just tables).
 
                 // DT CUSTOM DOM ====
+                         
+         /*DOM options, https://datatables.net/reference/option/dom, https://datatables.net/forums/discussion/33618/semantic-ui-with-dom-option
+          default: lpfrtip
+         l - length changing input control
+         f - filtering input
+         t - The table
+         i - Table information summary
+         p - pagination control
+         r - processing display element
+         B - Buttons
+         
+          'lBpfrtip',
+         
+< and > - div element
+<"class" and > - div with a class
+<"#id" and > - div with an ID
+<"#id.class" and > - div with an ID and a class*/
                 dom:
                     /*before use with flexbox to make double row single. CSS above html.
                             "<'row'<lfrip>>" +
                             "<'row'<t>>" ,
                     */
-                    "<'row'<'flex-container'<l><B><f><r><'deskOnlyP'i><'deskOnlyP'p>>>" +
+                    "<'row'<'flex-container'<l><'mdc-button'B><f><r><'deskOnlyP'i><'deskOnlyP'p>>>" +
                     "<'row mobOnlyP'<'col-sm-12'p>>" +
                     "<'row'<'col-sm-12't>>" +
                     "<'row '<'mobOnlyP'i><'deskOnlyP'p>>" +
@@ -1162,6 +1261,27 @@ FixedColumns supports right to left text layout, which is automatically detected
         document.addEventListener("DOMContentLoaded", function (event) {
             document.getElementById("defaultOpen").click();
         });
+
+
+
+
+
+
+
+
+
+        function addButtonClass() {
+  var element = document.getElementByClass("dataTables_paginate paging_simple_numbers");
+  element.classList.add("mdc-button");
+}
+
+
+
+
+
+
+
+
     </script>
 </body>
 

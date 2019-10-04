@@ -323,9 +323,6 @@ mdc-theme--secondary-bg	Sets the background color to the theme secondary color
         /* === END Custom Tabs === */
 
 
-
-
-
         /* === DT TABLE CSS === */
         /*vertically aligns column text to top*/
         table.dataTable tbody td {
@@ -446,6 +443,18 @@ FixedColumns supports right to left text layout, which is automatically detected
         /* 'dir="rtl"' fixes rtl direction for drawers as an attribute*/
 
         /*.mdc-list { direction: rtl;}*/
+
+/* aligns drawer text to right */
+        body > aside {
+            direction: rtl;
+            }
+            
+            /* aligns drawer icons to right */
+            .mdc-list-item__graphic {
+                margin-right: 0px;
+                margin-left: 32px;
+            }
+
     </style>
 </head>
 
@@ -497,6 +506,11 @@ FixedColumns supports right to left text layout, which is automatically detected
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
                     <span class="mdc-list-item__text">ޞަޙީހު ބުޚާރީ (ބީޓާ)</span>
                 </a>
+                <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
+                    onclick="openTab(event, 'bukhTab')">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">book</i>
+                    <span class="mdc-list-item__text">ހުރިހައި ޙަދީޘްތައް (ބީޓާ)</span>
+                </a>
 
                 <hr class="mdc-list-divider">
                 <h6 class="mdc-list-group__subheader">އެހެނިހެން</h6>
@@ -504,17 +518,22 @@ FixedColumns supports right to left text layout, which is automatically detected
                 <a class="mdc-list-item tablinks" href="#" data-mdc-auto-init="MDCRipple"
                     onclick="openTab(event, 'abouTab')">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
-                    <span class="mdc-list-item__text">About</span>
+                    <span class="mdc-list-item__text">އިތުރު މައުލޫމާތު</span>
                 </a>
                 <a class="mdc-list-item" href="https://hadithmv.com/alt/intro" target="_blank" rel="noopener"
                     data-mdc-auto-init="MDCRipple">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pages</i>
-                    <span class="mdc-list-item__text">Intro: 40 Nawawi</span>
+                    <span class="mdc-list-item__text">40 ޙަދީޘްގެ ތަޢާރަފު</span>
+                </a>
+                <a class="mdc-list-item" href="https://hadithmv.com/alt/intro" target="_blank" rel="noopener"
+                    data-mdc-auto-init="MDCRipple">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">pages</i>
+                    <span class="mdc-list-item__text">40 ޙަދީޘްގެ ރާވީން</span>
                 </a>
                 <a class="mdc-list-item" href="https://hadithmv.com/alt/docs" target="_blank" rel="noopener"
                     data-mdc-auto-init="MDCRipple">
                     <i class="material-icons mdc-list-item__graphic" aria-hidden="true">folder</i>
-                    <span class="mdc-list-item__text">Docs</span>
+                    <span class="mdc-list-item__text">ލިޔެކިޔުންތައް</span>
                 </a>
             </nav> <!-- END mdc-list -->
         </div> <!-- END mdc-drawer__content -->
@@ -533,7 +552,7 @@ FixedColumns supports right to left text layout, which is automatically detected
 
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
                     <a href="#"
-                        class="demo-menu material-icons mdc-top-app-bar__navigation-icon  mdc-ripple-surface">menu</a>
+                        class="demo-menu material-icons mdc-top-app-bar__navigation-icon  mdc-ripple-surface">menu</a> <!-- hamburger button -->
                     <!--<span class="mdc-top-app-bar__title">ޙަދީޘްއެމްވީ</span>-->
                 </section>
 
