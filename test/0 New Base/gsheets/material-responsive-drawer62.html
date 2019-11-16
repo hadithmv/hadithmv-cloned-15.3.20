@@ -197,7 +197,15 @@
             .dataTable tbody tr td.fnCol13 {
                 text-align: center !important;
             }
+
+/* bold headers for mobile */
+            .dataTable tbody tr td.fnCol3,
+            .dataTable tbody tr td.fnCol4,
+            .dataTable tbody tr td.fnCol5
+            { font-weight: bold;
+            }
         }
+
 
 
         /*
@@ -525,6 +533,13 @@ FixedColumns supports right to left text layout, which is automatically detected
             margin-right: 0px;
             margin-left: 32px;
         }
+
+
+        /* removes padding from mdc-layout-grid
+        #fortyNawawi_wrapper > div {
+            padding: 0px;
+        }*/
+
     </style>
 </head>
 
@@ -909,7 +924,7 @@ FixedColumns supports right to left text layout, which is automatically detected
 
 
  //=================== pagination change on media query, originally without this section
-            if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop */
+            if (window.matchMedia("(min-width: 1200px)").matches) {  /* js media query on desktop, needs to have quotes */
          $.extend( true, $.fn.dataTable.defaults, {
             "pagingType": "full_numbers",
             //"keys": "true",   /* KeyTable extension, old  */
