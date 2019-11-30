@@ -1,0 +1,448 @@
+/*!
+ * # Custom CSS
+ * site here
+ *
+ *
+ * license here
+ * link
+ *
+ */
+ 
+ 
+
+/* arabic */
+@font-face {
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Almarai'), local('Almarai-Regular'), url(https://fonts.gstatic.com/s/almarai/v2/tsstApxBaigK_hnnQ1iFo0C3.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  }
+  
+          @font-face {
+              font-family: 'mvtyper1';
+              src:
+                  url('https://hadithmv.com/alt/mod-fonts/mvtyper-mod2.1.woff2');
+          }
+  
+          .mdc-typography,
+          .mdc-top-app-bar__title,
+          .dt-button,
+          input,
+          select,
+          a {
+              font-family: 'mvtyper1', 'Almarai', sans-serif;
+              /* previously 'Roboto, sans-serif' */
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+          }
+  
+  
+          .mdc-list-group__subheader,
+          .mdc-list-item,
+          .mdc-drawer__title {
+              font-family: 'mvtyper1', sans-serif !important;
+  
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+          }
+  
+          /* fixes font for pagination buttons - if mdcweb - may be a bit too comprehensive */
+          .mdc-button {
+              font-family: 'mvtyper1', sans-serif !important;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  }
+  
+  
+          /* table data rows alignment */
+          #fortyNawawi>tbody>tr>td {
+              text-align: justify;
+              font-size: 100%;
+              -ms-text-size-adjust: 100%;
+              -webkit-text-size-adjust: 100%;
+              color: #24292e;
+              line-height: 1.5;
+              word-wrap: break-word;
+          }
+  
+          /* table header row alignment */
+          #fortyNawawi>thead>tr>th {
+              font-size: 100%;
+              text-align: center;
+              /*color: #205ca5;*/
+              -ms-text-size-adjust: 100%;
+              -webkit-text-size-adjust: 100%;
+              line-height: 1.5;
+              word-wrap: break-word;
+          }
+  
+  
+          /* removes justify from ar en dv rs refs table rows */
+          .dataTable tbody tr td.fnCol3,
+          .dataTable tbody tr td.fnCol4,
+          .dataTable tbody tr td.fnCol5,
+          .dataTable tbody tr td.fnCol10,
+          .dataTable tbody tr td.fnCol11,
+          .dataTable tbody tr td.fnCol12,
+          .dataTable tbody tr td.fnCol13 {
+              text-align: right !important;
+          }
+  
+  /* mobile only row centering */
+          @media screen and (max-width: 768px) {
+              .dataTable tbody tr td.fnCol1,
+              .dataTable tbody tr td.fnCol2,
+              .dataTable tbody tr td.fnCol3,
+              .dataTable tbody tr td.fnCol4,
+              .dataTable tbody tr td.fnCol5,
+              .dataTable tbody tr td.fnCol10,
+              .dataTable tbody tr td.fnCol11,
+              .dataTable tbody tr td.fnCol12,
+              .dataTable tbody tr td.fnCol13 {
+                  text-align: center !important;
+              }
+  
+  /* bold headers for mobile */
+              .dataTable tbody tr td.fnCol3,
+              .dataTable tbody tr td.fnCol4,
+              .dataTable tbody tr td.fnCol5
+              { font-weight: bold;
+              }
+          }
+  
+  
+  
+          /*
+                      { className: "fnCol1", "targets": [0], "visible": true, "searchable": true },  // #
+                      { className: "fnCol2", "targets": [1], "visible": false, "searchable": false },  // Ar No
+                      { className: "fnCol3", "targets": [2], "visible": true, "searchable": false },  // Ar Title
+                      { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },  // En Title
+                      { className: "fnCol5", "targets": [4], "visible": false, "searchable": false },  // Dv Title
+                      { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },  // Ar Text
+                      { className: "fnCol7", "targets": [6], "visible": false, "searchable": true },  // Ar Plain
+                      { className: "fnCol8", "targets": [7], "visible": false, "searchable": true },  // En Text
+                      { className: "fnCol9", "targets": [8], "visible": true, "searchable": true },   // Dv Text
+                      { className: "fnCol10", "targets": [9], "visible": true, "searchable": true },   // Ar Ref
+                      { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },   // En Ref
+                      { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },   // Dv Ref
+                      { className: "fnCol13", "targets": [12], "visible": true, "searchable": false }   // Rs Ref
+  */
+  
+  
+  
+  
+          /* .mdc-list-item  */
+  
+          body {
+              background: #f5f5f5;
+              display: flex;
+              /* Removes top gap between modal drawer and viewport */
+              height: 100vh;
+              /* Ensures that permanent drawer extends to bottom of viewport */
+              margin: 0;
+              /* Removes top gap between top app bar and viewport */
+          }
+  
+          /*  ==== MDC Dismissible Drawer Below Top App Bar === */
+  
+          .mdc-drawer-app-content {
+              flex: auto;
+              position: relative;
+  
+              /* overflow: auto;      This breaks scrolltop js, yet removing it skews mobile view to one side */
+              width: 100%;
+              /* this fixed mobile skew an keeps scroll top*/
+          }
+  
+  
+          .main-content {
+              padding: 18px;
+              /* space around main stuff */
+              height: 100%;
+              /*    overflow: auto;   */
+  
+          }
+  
+          .app-bar {
+              position: absolute;
+          }
+  
+          /*  ==== End - MDC Dismissible Drawer Below Top App Bar === */
+  
+  
+          /* define the theme color variables before importing any MDC Web components: */
+          :root {
+              /* https://github.com/material-components/material-components-web/tree/master/packages/mdc-theme#css-custom-properties */
+              --mdc-theme-primary: #0277bd;
+              /* The theme primary color */
+              --mdc-theme-secondary: #58a5f0;
+              /* The theme secondary color */
+          }
+  
+          /*  CSS Custom Properties
+  --mdc-theme-primary	The theme primary color
+  --mdc-theme-secondary	The theme secondary color
+  --mdc-theme-background	The theme background color
+  --mdc-theme-surface	The theme surface color
+  --mdc-theme-on-primary	Text color on top of a primary background   -like hamburger menu
+  --mdc-theme-on-secondary	Text color on top of a secondary background
+  --mdc-theme-on-surface	Text color on top of a surface background
+  --mdc-theme-text-<TEXT_STYLE>-on-light	Text color for TEXT_STYLE on top of light background
+  --mdc-theme-text-<TEXT_STYLE>-on-dark	Text color for TEXT_STYLE on top of dark background
+  */
+          /*  CSS Classes
+  mdc-theme--primary	Sets the text color to the theme primary color
+  mdc-theme--secondary	Sets the text color to the theme secondary color
+  mdc-theme--background	Sets the background color to the theme background color
+  mdc-theme--surface	Sets the surface color to the theme surface color
+  mdc-theme--on-primary	Sets the text color to the theme on-primary color
+  mdc-theme--on-secondary	Sets the text color to the theme on-secondary color
+  mdc-theme--on-surface	Sets the text color to the theme on-surface color
+  mdc-theme--primary-bg	Sets the background color to the theme primary color
+  mdc-theme--secondary-bg	Sets the background color to the theme secondary color
+  */
+  
+  
+          /*  ==== MDC Drawer change color on click === */
+          /*  Changes active drawer list item text color */
+          .mdc-list-item.mdc-list-item--activated {
+              color: #004c8c;
+          }
+  
+          /*  Changes active drawer list item icon color */
+          .mdc-list-item.mdc-list-item--activated>.material-icons.mdc-list-item__graphic {
+              color: #004c8c;
+          }
+  
+          /*  ==== END MDC Drawer change color on click === */
+  
+  
+          /*  ==== Links === */
+          a,
+          a:link,
+          a:visited {
+              color: grey;
+              text-decoration: none;
+          }
+  
+          a:hover,
+          a:active {
+              opacity: 0.7;
+          }
+  
+          /*  ==== END Links === */
+  
+          /*  ====  Drawer Logo === */
+          .hmvDrawerLogo {
+              width: 100%;
+              /*  width: 100px;
+              margin-top: 20px;   */
+              /* circular border 
+              background-color: white;
+              border-radius: 50%; */
+              /* centers */
+              /*
+              display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;*/
+          }
+  
+          .hmvButton {
+              border-radius: 50%;
+              width: 150px;
+              height: 150px;
+              margin-top: 20px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+          }
+  
+          .mdc-drawer__header {
+              text-align: center;
+          }
+  
+          /*  ====  END Drawer Logo === */
+  
+  /*  moves .mdc-top-app-bar__title and hamburger .demo-menu further away from edges */
+  .mdc-top-app-bar__row
+  {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  
+  
+          /* === Custom Tabs === */
+          /* Style the tab content */
+          .tabcontent {
+              animation: fadeEffect 0.5s;
+              /* Fading effect time */
+          }
+  
+          /* Go from zero to full opacity */
+          @keyframes fadeEffect {
+              from {
+                  opacity: 0;
+              }
+  
+              to {
+                  opacity: 1;
+              }
+          }
+  
+          /* Style the tab */
+          .tab {
+              overflow: hidden;
+              /*background-color: #f1f1f1;*/
+          }
+  
+          /* Style the tab content */
+          .tabcontent {
+              display: none;
+              /*padding: 6px 12px;*/
+  
+          }
+  
+          /* === END Custom Tabs === */
+  
+  
+          /* === DT TABLE CSS === */
+          /*vertically aligns column text to top*/
+          table.dataTable tbody td {
+              vertical-align: top;
+          }
+  
+          /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. */
+          input[type="search"]::-webkit-search-cancel-button {
+              -webkit-appearance: searchfield-cancel-button;
+              /* adds x */
+              border: 4px solid transparent;
+              /*makes x a bit bigger*/
+          }
+  
+          .flex-container {
+              /* effects table dom in js */
+              display: flex;
+              /* applies flexbox to dom div */
+              justify-content: space-between;
+              /* displays the flex items with space between the lines. horizontally distributes first row before table, evenly. */
+          }
+  
+          /* Keytable - Desktop only MQ */
+          @media screen and (min-width: 1200px) {
+  
+              table.dataTable tbody th.focus,
+              table.dataTable tbody td.focus {
+                  box-shadow: inset 0 0 1px 2px #337ab7
+              }
+          }
+  
+          /* Mark JS - padding: 0; removes useless padding */
+          mark {
+              background: #add1f2;
+              color: black;
+              padding: 0;
+          }
+  
+          /*hides table headers only on mobile, prev nth-child(2)
+           - Mobile only MQ */
+          @media screen and (max-width: 768px) {
+              thead tr:nth-child(1) {
+                  position: absolute !important;
+                  top: -9999px !important;
+                  left: -9999px !important;
+              }
+          }
+  
+          /* moves copied info in front, changes clipboard copied color, */
+          #datatables_buttons_info {
+              z-index: 9999 !important;
+          }
+  
+          #datatables_buttons_info>h2 {
+              background: #ADD1F2;
+          }
+  
+          /*hides table top border, mobile view only
+           @media screen and (max-width: 768px) {
+           .ui.table {border: none;}
+           }*/
+  
+  
+          /* === DT Pagination Desktop-Mobile Show and Hide === */
+          /*hides mobile pagination buttons, desktop view only*/
+          @media screen and (min-width: 768px) {
+              .mobOnlyP {
+                  position: absolute !important;
+                  top: -9999px !important;
+                  left: -9999px !important;
+                  font-size: 200%
+              }
+  
+  
+          }
+  
+          /*hides desktop pagination buttons, mobile view only*/
+          @media screen and (max-width: 1200px) {
+              .deskOnlyP {
+                  position: absolute !important;
+                  top: -9998px !important;
+                  left: -9998px !important;
+              }
+  
+              /* hides table header */
+              #tableID>thead {
+                  position: absolute !important;
+                  top: -9997px !important;
+                  left: -9997px !important;
+                  font-size: 200%
+              }
+          }
+  
+  
+  
+          /* Right-to-left text direction
+  FixedColumns supports right to left text layout, which is automatically detected by the CSS direction parameter that has been applied to the table. In this case, direction: rtl has been set for the whole table container. */
+          div.dataTables_wrapper {
+              direction: rtl;
+          }
+  
+  
+          /* top and bottom padding brings unwanted scrollbar, removing both fixes it, but then it goes within the nav bar */
+          #main-content {
+              padding: 0;
+          }
+  
+          /* pushes the content further below the nav bar, fix for above */
+          .tabcontent {
+              margin-top: 16px;
+              margin-right: 16px;
+              margin-left: 16px;
+          }
+  
+          /* makes only app bar rtl */
+          /*.mdc-top-app-bar { direction: rtl;}*/
+  
+          /* 'dir="rtl"' fixes rtl direction for drawers as an attribute*/
+  
+          /*.mdc-list { direction: rtl;}*/
+  
+          /* aligns drawer text to right */
+          body>aside {
+              direction: rtl;
+          }
+  
+          /* aligns drawer icons to right */
+          .mdc-list-item__graphic {
+              margin-right: 0px;
+              margin-left: 32px;
+          }
+  
+  
+          /* removes padding from mdc-layout-grid
+          #fortyNawawi_wrapper > div {
+              padding: 0px;
+          }*/
+  
