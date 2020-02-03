@@ -29,16 +29,16 @@
 </b></h3>
 <br>
 
-  <p align="center"><a href="https://hadithmv.com"><img src="https://hadithmv.com/img/newLogo5/newLogo5-compressor.svg" alt="" width=200 height=200></a></p>
+  <p align="center"><a href="https://hadithmv.github.io"><img src="https://hadithmv.github.io/img/newLogo5/newLogo5-compressor.svg" alt="" width=200 height=200></a></p>
 
   <h3 align="center">Hadithmv - Accessible and Sourced</h3>
 
   <p align="center">Dhivehi Hadith translations at your fingertips</p>
 
-  <p align="center"><a href="http://hadithmv.com"><strong>Web Version »</strong></a></p>
+  <p align="center"><a href="http://hadithmv.github.io"><strong>Web Version »</strong></a></p>
 <!--
     <br>
-    <a href="http://hadithmv.com">Web Version</a>
+    <a href="http://hadithmv.github.io">Web Version</a>
     ·
     <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv">Android Version</a>
     ·
@@ -46,7 +46,7 @@
     <br>
 -->
   <p align="center">
-  	<a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv"><img src="https://hadithmv.com/img/playstore-badge/en_badge_web_generic-compressor.png" alt="" width=250></a><a href="https://goo.gl/EyjC4v"><img src="https://hadithmv.com/img/windows-desktop-badge/windows-badge-compressor.png" alt="" width=250></a>
+  	<a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv"><img src="https://hadithmv.github.io/img/playstore-badge/en_badge_web_generic-compressor.png" alt="" width=250></a><a href="https://goo.gl/EyjC4v"><img src="https://hadithmv.github.io/img/windows-desktop-badge/windows-badge-compressor.png" alt="" width=250></a>
   </p>  
    
 <br><br>
