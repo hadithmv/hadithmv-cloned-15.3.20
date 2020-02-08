@@ -359,9 +359,9 @@
           }
 
           /* makes search bar text taller */
-        #fortyNawawi_filter > label > input {height: 37px;}
-        /* makes search bar stick to the top row on mobile */
-         #fortyNawawi_filter {height: 37px; margin-top: 0px;}
+#fortyNawawi_filter > label > input {height: 37px;}
+/* makes search bar stick to the top row on mobile */
+#fortyNawawi_filter {height: 37px; margin-top: 0px;}
 
   
           .flex-container {
