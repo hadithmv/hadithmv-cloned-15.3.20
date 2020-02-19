@@ -1,0 +1,68 @@
+
+
+/* makes table rtl */
+div.dataTables_wrapper {
+    direction: rtl;
+}
+
+          /* moves copied info in front, changes clipboard copied color, */
+          #datatables_buttons_info {
+            z-index: 9999 !important;
+        }
+
+        #datatables_buttons_info>h2 {
+            background: #ADD1F2;
+        }
+
+          /*hides table headers only on mobile, prev nth-child(2)
+           - Mobile only MQ */
+           @media screen and (max-width: 768px) {
+            thead tr:nth-child(1) {
+                position: absolute !important;
+                top: -9999px !important;
+                left: -9999px !important;
+            }
+        }
+
+          /* Keytable - Desktop only MQ */
+          @media screen and (min-width: 1200px) {
+  
+            table.dataTable tbody th.focus,
+            table.dataTable tbody td.focus {
+                box-shadow: inset 0 0 1px 2px #337ab7
+            }
+        }
+
+                  /* Mark JS - padding: 0; removes useless padding, donno if still needed? */
+                  mark {
+                    background: #add1f2;
+                    color: black;
+                    padding: 0;
+                }
+
+                
+
+
+
+
+                          /* table data rows alignment */
+          #fortyNawawi>tbody>tr>td {
+            text-align: justify;
+            font-size: 100%;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            color: #24292e;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        /* table header row alignment */
+        #fortyNawawi>thead>tr>th {
+            font-size: 100%;
+            text-align: center;
+            /*color: #205ca5;*/
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
