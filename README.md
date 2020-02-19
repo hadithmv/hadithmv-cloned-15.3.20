@@ -13,7 +13,7 @@
 <style type="text/css">
 		    @font-face {
     font-family: 'Tharujamaanu';
-    src: url('mvtyper-mod2.1.woff2');
+    src: url('hadithmv.github.io/alt/mod-fonts/mvtyper-mod2.1.woff2');
     }
 	/*
 	         @font-face {
