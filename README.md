@@ -6,8 +6,16 @@
       <meta http-equiv="content-language" content="en">
       <meta name="google" value="notranslate">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-	  <!--
+	  
+
+    
+	  
 <style type="text/css">
+		    @font-face {
+    font-family: 'Tharujamaanu';
+    src: url('mvtyper-mod2.1.woff2');
+    }
+	/*
 	         @font-face {
          font-family: 'Tharujamaanu';
          src: 
@@ -18,8 +26,9 @@
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
          }
+	*/
 </style>
-	  -->
+
 <body class="notranslate">
 
 <article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
