@@ -6,30 +6,20 @@
       <meta http-equiv="content-language" content="en">
       <meta name="google" value="notranslate">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-	  
-
-    
-	  
+	  <!--
 <style type="text/css">
-		    @font-face {
-    font-family: 'Tharujamaanu';
-    src: url('hadithmv.github.io/alt/mod-fonts/mvtyper-mod2.1.woff2');
-    }
-	/*
 	         @font-face {
          font-family: 'Tharujamaanu';
          src: 
-			CHANGE123
+		/*	CHANGE123
          url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
-         
+         */
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff2') format('woff2'),
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
          }
-	*/
 </style>
-
-</head>
+	  -->
 <body class="notranslate">
 
 <article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
@@ -65,7 +55,7 @@
 
 <p align="center"><i>- In the Name of Allah, the Entirely Merciful, the Especially Merciful -</i></p>
 
-<p align="justify">The <b>Hmv</b> project is a collaborated effort in making the sayings and teachings of Muhammad  ﷺ as accessible and understandable as possible for the Muslim Maldivian community. Once this work is complete, they will have a Hadith collection in their native language, Dhivehi. Any good is from Allah, and any shortcomings are from ourselves and Shaithan.</p>
+<p align="justify">The <b>Hmv</b> project is a collaborated effort in making the sayings and teachings of Muhammad  ﷺ as accessible and understandable as possible for the Muslim Maldivian community. Once this work is complete, they will have a Hadith collection in their native language, Dhivehi. Any good is from Allah, and any shortcomings are from ourselves and Shaithan.</p>
 
 <br>
 
@@ -99,25 +89,24 @@
 
 <br><br><br>
 
-<div dir="rtl" style="font-family: Tharujamaanu;">
 <h2 dir="rtl"><b>ޙަދީޘްއެމްވީ - ދިވެހިންނަށް ޙަދީޘް އެޕްލިކޭޝަނެއް އުފެއްދުން</b></h2>
 
-<p align="center">- ރަޙްމާނުވަންތަ ރަޙީމުވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ -</p>
+<p align="center" dir="rtl">- ރަޙްމާނުވަންތަ ރަޙީމުވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ -</p>
 
-<p align="justify">ޙަދީޘްއެމްވީ، މި މަޝްރޫޢަކީ އިސްލާމީ ދިވެހި މުޖުތަމަޢަށް ވީހާވެސް ފަސޭހަ ކަމާއިއެކު ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތަަކުގެ މާނަ އުނގަންނައިދީ ފޯރުކޮށް ދިނުމަށް ޓަކައި ވަސީލަތެއް ގާއިމު ކުރުމުގެ ގޮތުން ކުރެވޭ މަސައްކަތެކެވެ. މި މަސައްކަތް ފުރިހަމަ ވުމުން ގިނަ އަދަދެއްގެ ހަދީޘްތަކެއް ދިވެހި ބަހުން އެއްތަނަކުން ފަސޭހައިން ލިބެން ހުންނާނެއެވެ. މި ކަމުގައި އެއްވެސް ހެޔޮކަމެއް ވާނަމަ، އެއީ ﷲ ގެ ޙަޟްރަތުން އައި ކަމެކެވެ. އަދި މި ކަމުގައި އެއްވެސް އުނިކަމެއް ވާނަމަ އެއީ އަޅުގަނޑުމެންނާއި ޝައިޠާނާގެ ފަރާތުން އައި ކަމެކެވެ.</p>
+<p align="justify" dir="rtl" style="font-family: Tharujamaanu;">ޙަދީޘްއެމްވީ، މި މަޝްރޫޢަކީ އިސްލާމީ ދިވެހި މުޖުތަމަޢަށް ވީހާވެސް ފަސޭހަ ކަމާއިއެކު ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތަަކުގެ މާނަ އުނގަންނައިދީ ފޯރުކޮށް ދިނުމަށް ޓަކައި ވަސީލަތެއް ގާއިމު ކުރުމުގެ ގޮތުން ކުރެވޭ މަސައްކަތެކެވެ. މި މަސައްކަތް ފުރިހަމަ ވުމުން ގިނަ އަދަދެއްގެ ހަދީޘްތަކެއް ދިވެހި ބަހުން އެއްތަނަކުން ފަސޭހައިން ލިބެން ހުންނާނެއެވެ. މި ކަމުގައި އެއްވެސް ހެޔޮކަމެއް ވާނަމަ، އެއީ ﷲ ގެ ޙަޟްރަތުން އައި ކަމެކެވެ. އަދި މި ކަމުގައި އެއްވެސް އުނިކަމެއް ވާނަމަ އެއީ އަޅުގަނޑުމެންނާއި ޝައިޠާނާގެ ފަރާތުން އައި ކަމެކެވެ.</p>
 
 <br>
 
 <h3 dir="rtl"><b>އަމާޒު:</b></h3>
 <hr/>
-<ul align="justify">
+<ul align="justify" dir="rtl" font-family="Tharujamaanu">
 	<li>
 	<h3><b>ފޯރުކޮށްދިނުން</b></h3>
-	<p>ގެންގުޅޭ ވަޞީލަތްތަކާއި، އުޅޭ ތަނާއި، އުމުރާއި، ބަސްމޮށުންތެރިކަމާއި ތަނަވަސްކަން ނެތުމުގެ ސަބަބުން ކުރިމަތިވެފައިވާ ހުރަސްތައް ފަހަނަޅައ، ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތައް އެންމެންނާއި ހަމައަށް ފޯރުކޮށް ދިނުމެވެ. އަދި މި ޒަމާނަކީ ފޮތްތަކަށް ވުރެން ބޮޑަށް ފޯނާއި ކޮމްޕިޔުޓަރ ފަދަ ވަސީލަތްތަކަށް ދިވެހިން އަހުލުވެރި ވެފައިވާ ޒަމާނެއް ކަމުން، އަދުގެ ޓެކްނޮލަޖީގެ ޒަރިއްޔާއިން ސުންނަތް ފަތުރައި އެއާ އެއްގޮތަށް އުޅުމުގެ ލޯބި ހިތްތަކުގައި ޖެއްސުމެވެ.</p>
+	<p>ގެންގުޅޭ ވަޞީލަތްތަކާއި، އުޅޭ ތަނާއި، އުމުރާއި، ބަސްމޮށުންތެރިކަމާއި ތަނަވަސްކަން ނެތުމުގެ ސަބަބުން ކުރިމަތިވެފައިވާ ހުރަސްތައް ފަހަނަޅައ، ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތައް އެންމެންނާއި ހަމައަށް ފޯރުކޮށް ދިނުމެވެ. އަދި މި ޒަމާނަކީ ފޮތްތަކަށް ވުރެން ބޮޑަށް ފޯނާއި ކޮމްޕިޔުޓަރ ފަދަ ވަސީލަތްތަކަށް ދިވެހިން އަހުލުވެރި ވެފައިވާ ޒަމާނެއް ކަމުން، އަދުގެ ޓެކްނޮލަޖީގެ ޒަރިއްޔާއިން ސުންނަތް ފަތުރައި އެއާ އެއްގޮތަށް އުޅުމުގެ ލޯބި ހިތްތަކުގައި ޖެއްސުމެވެ.</p>
 	</li>
 	<li>
 	<h3><b>އުނގަންނައިދިނުން</b></h3>
-	<p>މި ކުޑަކުޑަ މުޖުތަމަޢުގެ ގިނަ މައްސަލަތަކުގެ މައިގަނޑު ސަބަބަކީ، މީސްތަކުން އިސްލާމް ދީނަށް ރަނގަޅަށް އަހުލުވެރިވެފައި ނުވުމެވެ. ވީމާ، މި ކަމަށް ޙައްލެއް ގެނައުމަށް ޓަކައި އަމިއްލައަށް އިސްލާމީ މަޢުލޫމާތު ބަލައި ހޯދޭނެ ފަސޭހަ މަގެއް އާންމުންނަށް ތަނަވަސްވެފައި އޮތުން މުހިންމެވެ. ހަމަ އެހެންމެ، މުދައްރިސުންނާއި ދަރިވަރުން މި މަސްދަރުތަކުގެ ބޭނުން ހިފައި، އެއް ޙަދީޘްތަކެއް ތަކުރާރުކޮށް ތަރުޖަމާ ކުރުމުގެ ބުރައިން ސަލާމަތް ވެގެން ދާނެއެވެ.</p>
+	<p>މި ކުޑަކުޑަ މުޖުތަމަޢުގެ ގިނަ މައްސަލަތަކުގެ މައިގަނޑު ސަބަބަކީ، މީސްތަކުން އިސްލާމް ދީނަށް ރަނގަޅަށް އަހުލުވެރިވެފައި ނުވުމެވެ. ވީމާ، މި ކަމަށް ޙައްލެއް ގެނައުމަށް ޓަކައި އަމިއްލައަށް އިސްލާމީ މަޢުލޫމާތު ބަލައި ހޯދޭނެ ފަސޭހަ މަގެއް އާންމުންނަށް ތަނަވަސްވެފައި އޮތުން މުހިންމެވެ. ހަމަ އެހެންމެ، މުދައްރިސުންނާއި ދަރިވަރުން މި މަސްދަރުތަކުގެ ބޭނުން ހިފައި، އެއް ޙަދީޘްތަކެއް ތަކުރާރުކޮށް ތަރުޖަމާ ކުރުމުގެ ބުރައިން ސަލާމަތް ވެގެން ދާނެއެވެ.</p>
 	</li>
 	<li>
 	<h3><b>ތަރައްޤީވުން</b></h3>
@@ -127,15 +116,13 @@
 
 <br>
 
-<h3><b>ލަނޑުދަނޑިތައް:</b></h3>
+<h3 dir="rtl"><b>ލަނޑުދަނޑިތައް:</b></h3>
 <hr/>
-<ul>
+<ul dir="rtl">
 	<li>
 		<b>40 ނަވަވީ</b>
 	</li>
 </ul>
-
-</div>
 </article>	<!-- END OF ARTICLE -->
 </body>
 </head>
