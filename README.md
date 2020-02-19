@@ -19,9 +19,9 @@
 	         @font-face {
          font-family: 'Tharujamaanu';
          src: 
-		/*	CHANGE123
+			CHANGE123
          url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
-         */
+
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff2') format('woff2'),
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
          url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
