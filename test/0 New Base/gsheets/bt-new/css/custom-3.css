@@ -1,0 +1,146 @@
+/* makes table rtl */
+
+div.dataTables_wrapper {
+    direction: rtl;
+}
+
+/* moves copied info in front, changes clipboard copied color, */
+
+#datatables_buttons_info {
+    z-index: 9999 !important;
+}
+
+#datatables_buttons_info>h2 {
+    background: #ADD1F2;
+}
+
+/*hides table headers only on mobile, prev nth-child(2)
+           - Mobile only MQ */
+
+@media screen and (max-width: 768px) {
+    thead tr:nth-child(1) {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+}
+
+/* Keytable - Desktop only MQ */
+
+@media screen and (min-width: 1200px) {
+    table.dataTable tbody th.focus, table.dataTable tbody td.focus {
+        box-shadow: inset 0 0 1px 2px #337ab7
+    }
+}
+
+/* Mark JS - padding: 0; removes useless padding, donno if still needed? */
+
+mark {
+    background: #add1f2;
+    color: black;
+    padding: 0;
+}
+
+/* DT Custom Column CSS === DT Custom Column CSS === DT Custom Column CSS ===  */
+
+/* Alignscell contents vertically */
+
+table.dataTable tbody td {
+    vertical-align: top;
+}
+
+/* table data rows alignment */
+
+#fortyNawawi>tbody>tr>td {
+    text-align: justify;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #24292e;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* table header row alignment */
+
+#fortyNawawi>thead>tr>th {
+    font-size: 100%;
+    text-align: center;
+    /*color: #205ca5;*/
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* removes justify from ar en dv rs refs table rows */
+
+.dataTable tbody tr td.fnCol3, .dataTable tbody tr td.fnCol4, .dataTable tbody tr td.fnCol5, .dataTable tbody tr td.fnCol10, .dataTable tbody tr td.fnCol11, .dataTable tbody tr td.fnCol12, .dataTable tbody tr td.fnCol13 {
+    text-align: right !important;
+}
+
+/* mobile only row centering, like rows with strings that are not long */
+
+@media screen and (max-width: 768px) {
+    .dataTable tbody tr td.fnCol1, .dataTable tbody tr td.fnCol2, .dataTable tbody tr td.fnCol3, .dataTable tbody tr td.fnCol4, .dataTable tbody tr td.fnCol5, .dataTable tbody tr td.fnCol10, .dataTable tbody tr td.fnCol11, .dataTable tbody tr td.fnCol12, .dataTable tbody tr td.fnCol13 {
+        text-align: center !important;
+    }
+    /* bold headers for mobile */
+    .dataTable tbody tr td.fnCol3, .dataTable tbody tr td.fnCol4, .dataTable tbody tr td.fnCol5 {
+        font-weight: bold;
+    }
+}
+
+/* DT Custom Column CSS - END === DT Custom Column CSS - END === DT Custom Column CSS - END ===  */
+
+
+          /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. */
+          input[type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: searchfield-cancel-button;
+            /* adds x */
+            border: 4px solid transparent;
+            /*makes x a bit bigger*/
+        }
+
+
+
+
+
+/* cards code == cards code == cards code == cards code == cards code == */
+        .cards tbody tr {
+            float: left;
+            width: 19rem;
+            margin: 0.5rem;
+            border: 0.0625rem solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+         }
+         
+         .cards tbody td {
+            display: block;
+         }
+         
+         .cards thead {
+            display: none;
+         }
+         
+         .cards td:before {
+            content: attr(data-label);
+            position: relative;
+            float: left;
+            color: #808080;
+            min-width: 4rem;
+            margin-left: 0;
+            margin-right: 1rem;
+            text-align: left;   
+         }
+         
+         tr.selected td:before {
+            color: #CCC;
+         }
+         
+         
+
+         /* cards code END == cards code  END == cards code END == cards code END == cards code END == */
+
+         
