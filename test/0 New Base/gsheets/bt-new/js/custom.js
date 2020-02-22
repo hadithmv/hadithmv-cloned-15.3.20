@@ -5,7 +5,7 @@
 $(document).ready(function () { //$(document).ready( function () { //$(document).ready( function () { //
     // from here to var table = $("#fortyNawawi").DataTable({ used to be empty
 
-    
+
     $.extend( true, $.fn.dataTable.defaults, {
         //"keys": "true",   /* KeyTable extension, old  */
         "keys": { clipboardOrthogonal: "export" }, // strips html tags off keystable copy
@@ -14,6 +14,8 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
 
     var table = $("#fortyNawawi").DataTable({ //var table = $("#fortyNawawi").DataTable({ //var table = $("#fortyNawawi").DataTable({
         // NOT DataTable();
+
+        
 
         data: FNdataSet,    //https://datatables.net/manual/ajax
         columns: [
@@ -61,13 +63,13 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
         bstateSave: true,  //DOESNT WORK WITH JSON FETCHED FROM GSHEETS, -restore table state on page reload. When enabled aDataTables will store state information such as pagination position, display length, filtering and sorting. When user reloads the page the table's state will be altered to match what they had previously set up.
 
         /*stateDuration: 60 * 60 * 24,*/  //Set state duration to 1 day. Use with above.  Default Value: 7200. Duration for which the saved state information is considered valid. After this period has elapsed the state will be returned to the default.
-        "stateDuration": "86400", //value is in seconds, 0 infinity, currently set to 1 day, -1 is that session only
+        stateDuration: "86400", //value is in seconds, 0 infinity, currently set to 1 day, -1 is that session only
 
         //"stateSaveParams": function (settings, data) { data.search.search = ""; }, //removes written search input upon state reload
 
         orderClasses: false,      //Highlight the columns being ordered in the table's body. DataTables highlight the columns which are used to order the content in the table's body by adding a class to the cells in that column, which in turn has CSS applied to those classes to highlight those cells. This is done by the addition of the classes sorting_1, sorting_2 and sorting_3 to the columns which are currently being ordered on. The integer value indicates the level of sorting when mutli-column sorting. If more than 3 columns are being ordered upon, the sorting_3 class is repeated. Please note that this feature can affect performance, particularly in old browsers and when there are a lot of rows to be displayed as it is manipulating a large number of DOM elements. As such, this option is available as a feature switch to allow this feature to be disabled with working with old browsers or large data sets.
 
-        "pagingType": "input",   //Default Value: simple_numbers, Pagination button display options. The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using dom and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.   DataTables has six built-in paging button arrangements: numbers - Page number buttons only (1.10.8) simple - 'Previous' and 'Next' buttons only simple_numbers - 'Previous' and 'Next' buttons, plus page numbers full - 'First', 'Previous', 'Next' and 'Last' buttons full_numbers - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers first_last_numbers - 'First' and 'Last' buttons, plus page numbers.
+        pagingType: "input",   //Default Value: simple_numbers, Pagination button display options. The pagination option of DataTables will display a pagination control below the table (by default, its position can be changed using dom and CSS) with buttons that the end user can use to navigate the pages of the table. Which buttons are shown in the pagination control are defined by the option given here.   DataTables has six built-in paging button arrangements: numbers - Page number buttons only (1.10.8) simple - 'Previous' and 'Next' buttons only simple_numbers - 'Previous' and 'Next' buttons, plus page numbers full - 'First', 'Previous', 'Next' and 'Last' buttons full_numbers - 'First', 'Previous', 'Next' and 'Last' buttons, plus page numbers first_last_numbers - 'First' and 'Last' buttons, plus page numbers.
 
         searchDelay: 500,     //Default Value: null,  Set a throttle frequency for searching. The built-in DataTables global search (by default at the top right of every DataTable) will instantly search the table on every keypress when in client-side processing mode and reduce the search call frequency automatically to 400mS when in server-side processing mode. This call frequency (throttling) can be controlled using the searchDelay parameter for both client-side and server-side processing. Being able to control the call frequency has a number of uses: Older browsers and slower computers can have their processing load reduced by reducing the search frequency Fewer table redraws while searching can be less distracting for the user Reduce the load on the server when using server-side processing by making fewer calls Conversely, you can speed up the search when using server-side processing by reducing the default of 400mS to instant (0). The value given for searchDelay is an integer in milliseconds (mS). When given as null DataTables will automatically assign a value that is suitable for the processing mode that the DataTable is operating in: Instant - client-side processing 400mS - server-side processing.
 
@@ -142,7 +144,8 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
 
 
 
-        dom: 'lBpfrtip',
+dom:
+'lBpfrtip',
         
         buttons: [
             //https://datatables.net/extensions/buttons/examples/initialisation/multiple
@@ -223,6 +226,21 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                 text: 'އިތުރު ކޮލަމްތައް'
             }, //end of colvis
 
+
+            // cards code
+            /*
+              {
+                'text': 'cards',
+                'action': function (e, dt, node) {
+                   $(dt.table().node()).toggleClass('cards');
+                },
+             },
+             */
+             // cards code END
+
+
+
+
         ],
 
     }); //$('#fortyNawawi').DataTable( { - END //$('#fortyNawawi').DataTable( { - END //$('#fortyNawawi').DataTable( { - END
@@ -249,6 +267,9 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
             function myFunction(x) {
                 if (x.matches) { // If media query matches
                     // empty // document.body.style.backgroundColor = "pink";
+                    
+
+
                 } else {
                     Hammer(fortyNawawi).on("swiperight", function () { //changed swipeleft and swiperight for dhivehi
                         table.page('next').draw('page');
@@ -256,6 +277,8 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                     Hammer(document.getElementById("fortyNawawi")).on("swipeleft", function () {
                         table.page('previous').draw('page');
                     });
+
+                    
                 }
             }
 
@@ -264,6 +287,13 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
             x.addListener(myFunction) // Attach listener function on state changes
             //============================ END HammerJS - Swipe
 
+
+
+            
+            function myFunction() {
+                var element = document.getElementById("fortyNawawi");
+                element.classList.add("cards");
+              }
 
 
 
