@@ -97,19 +97,17 @@ table.dataTable tbody td {
           /* The ::-webkit-search-cancel-button CSS pseudo-element represents a button (the "cancel button") at the edge of an <input> of type="search" which clears away the current value of the <input> element. */
           input[type="search"]::-webkit-search-cancel-button {
             -webkit-appearance: searchfield-cancel-button;
-            /* adds x */
+            /* adds x delete placeholder*/
             border: 4px solid transparent;
             /*makes x a bit bigger*/
         }
 
 
 
-
-
 /* cards code == cards code == cards code == cards code == cards code == */
         .cards tbody tr {
             float: left;
-            width: 19rem;
+            /*width: 190rem;*/ /* lets card fill width*/
             margin: 0.5rem;
             border: 0.0625rem solid rgba(0, 0, 0, .125);
             border-radius: .25rem;
