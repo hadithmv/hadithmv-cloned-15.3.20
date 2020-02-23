@@ -216,9 +216,14 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                 },
                 //=== edits clipboard regex end, customize: function(data) {
 
-                exportOptions: { columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
+                    exportOptions: { columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
+
+                //copies currently displayed columns and rows, 'exportOptions: { modifier: { columns: [':visible'], rows: [':visible']}' doesnt work after cards
+
 
             },  //end of copy customization
+
+
 
             {
                 extend: 'colvis',
@@ -308,7 +313,7 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
 
     // changes <input class="paginate_input" type="text"> type to search type, so that delete icon appears
     $('.paginate_input').prop('type', 'search');
-    
+
     // adds a placeholder to above <input class="paginate_input" type="text">
     $('.paginate_input').attr('placeholder', 'Placeholder text');
 
