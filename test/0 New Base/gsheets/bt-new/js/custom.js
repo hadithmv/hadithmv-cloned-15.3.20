@@ -157,7 +157,6 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                 text: 'ކޮޕީ',
                 messageTop: 'ނަވަވީގެ 40 ޙަދީޘް',
                 title: '', /*title: 'hadithmv.com',*/
-                /*exportOptions: {    columns: [':visible'], rows: [':visible']   }*/
 
                 //=== edits clipboard regex, code to manipulate the data string as desired
                 customize: function (data) {
@@ -216,7 +215,7 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                 },
                 //=== edits clipboard regex end, customize: function(data) {
 
-                    exportOptions: { columns: [':visible'], rows: [':visible'] } //copies currently displayed columns and rows
+                    exportOptions: { rows: [':visible'] } //copies currently displayed and rows
 
                 //copies currently displayed columns and rows, 'exportOptions: { modifier: { columns: [':visible'], rows: [':visible']}' doesnt work after cards
 

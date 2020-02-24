@@ -119,7 +119,7 @@ table.dataTable tbody td {
          }
          
          .cards thead {
-            display: none;
+            visibility:hidden;
          }
          
          .cards td:before {
