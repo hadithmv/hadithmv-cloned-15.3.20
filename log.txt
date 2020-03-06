@@ -1,0 +1,26 @@
+ToDos:
+make nav bar, responsive and drawer with icons and tabs
+get auto json to array set up
+
+Issues:
+copy bad for both select keytable and clipboard button
+
+align and resize input and buttons
+
+Using 'current' instead of 'visible' does allow the copy to clipboard function to work on card view, however it would copy cells hidden by colvis.
+card view breaks copy to clipboard for visible
+24/2/2020
+
+stopped at js placeholder last
+need to change page from input plugin
+2/22/2020
+
+=======================
+menu text shows for a moment in place of hamburger menu in mobile view
+2/15/20
+
+input pagination plugin breaks table on material
+2/15/20
+
+colvis menu is ugly
+2/15/20
