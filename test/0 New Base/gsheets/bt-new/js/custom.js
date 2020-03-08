@@ -8,7 +8,7 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
 
     $.extend(true, $.fn.dataTable.defaults, {
         //"keys": "true",   /* KeyTable extension, old  */
-        "keys": { clipboardOrthogonal: "export" }, // strips html tags off keystable copy
+        
     });
 
 
@@ -16,6 +16,7 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
         $.extend( true, $.fn.dataTable.defaults, {
             "pageLength": 3, //Number of rows to display on a single page when using pagination.
             "lengthMenu": [[1, 2, 3, 5, 7, 10, 15, 20, -1], [1, 2, "3 ޙަދީޘް ދައްކާ", 5, 7, 10, 15, 20, "ހުރިހައި"]], //display range of pages
+            "keys": { clipboardOrthogonal: "export" }, // strips html tags off keystable copy
 
         } );
     } else { /* js media query on mobile, tablet */
@@ -40,7 +41,7 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
             { title: "އިނގިރޭސި ސުރުޚީ" },
             { title: "ދިވެހި ސުރުޚީ" },
             { title: "ޢަރަބި ޙަދީޘް" },
-            { title: "ޢަރަބި ފިިލިނުޖަހައި" },
+            { title: "ޢަރަބި ފިލިނުޖަހައި" },
             { title: "އިނގިރޭސި" },
             { title: "ދިވެހި ތަރުޖަމާ" },
             { title: "މަސްދަރު ޢަރަބިން." },
@@ -55,14 +56,27 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
             { className: "fnCol3", "targets": [2], "visible": true, "searchable": false },  // Ar Title
             { className: "fnCol4", "targets": [3], "visible": false, "searchable": false },  // En Title
             { className: "fnCol5", "targets": [4], "visible": false, "searchable": false },  // Dv Title
-            { className: "fnCol6", "targets": [5], "visible": true, "searchable": true },  // Ar Text
+            { className: "fnCol6", "targets": [5], "visible": true, "searchable": true,  },  // Ar Text
             { className: "fnCol7", "targets": [6], "visible": false, "searchable": true },  // Ar Plain
             { className: "fnCol8", "targets": [7], "visible": false, "searchable": true },  // En Text
             { className: "fnCol9", "targets": [8], "visible": true, "searchable": true },   // Dv Text
             { className: "fnCol10", "targets": [9], "visible": true, "searchable": true },   // Ar Ref
             { className: "fnCol11", "targets": [10], "visible": false, "searchable": false },   // En Ref
             { className: "fnCol12", "targets": [11], "visible": false, "searchable": false },   // Dv Ref
-            { className: "fnCol13", "targets": [12], "visible": false, "searchable": false }   // Rs Ref
+            { className: "fnCol13", "targets": [12], "visible": false, "searchable": false },   // Rs Ref
+
+            //below strips html tags off keystable copy, second part with keys on
+            { targets: "_all",
+            render: function (data, type, row, meta) {
+                if (type === "export") {
+                   var div = document.createElement("div");
+                   div.innerHTML = data;
+                   return div.innerText;}
+                return data;
+                                                    }
+            }
+            // needed to make keytable strip html tags off copy
+                   
         ], //end of columnDefs, previously without visible and searchable options.
 
 
@@ -182,33 +196,35 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                     // data = data.replace( /\nNo.\tRef.\tArabic\tEnglish\tDhivehi/g, '' ); //prev normal
 
 
-                    data = data.replace(/\tAr No./g, '');
-                    data = data.replace(/\tAr Title/g, '');
-                    data = data.replace(/\tEn Title/g, '');
-                    data = data.replace(/\tDv Title/g, '');
-                    data = data.replace(/\tArabic/g, '');
-                    data = data.replace(/\tEnglish/g, '');
-                    data = data.replace(/\tDhivehi/g, '');
-                    data = data.replace(/\tAr Ref./g, '');
-                    data = data.replace(/\tEn Ref./g, '');
-                    data = data.replace(/\tDv Ref./g, '');
-                    data = data.replace(/\tRs Ref./g, '');
+                    data = data.replace(/\tވަނަ./g, '');
+                    data = data.replace(/\tޢަރަބި ސުރުޚީ/g, '');
+                    data = data.replace(/\tއިނގިރޭސި ސުރުޚީ/g, '');
+                    data = data.replace(/\tދިވެހި ސުރުޚީ/g, '');
+                    data = data.replace(/\tޢަރަބި ޙަދީޘް/g, '');
+                    data = data.replace(/\tޢަރަބި ފިލިނުޖަހައި/g, '');
+                    data = data.replace(/\tއިނގިރޭސި/g, '');
+                    data = data.replace(/\tދިވެހި ތަރުޖަމާ/g, '');
+                    data = data.replace(/\tމަސްދަރު ޢަރަބިން./g, '');
+                    data = data.replace(/\tމަސްދަރު އިނގިރޭސިން./g, '');
+                    data = data.replace(/\tމަސްދަރު ދިވެހިން./g, '');
+                    data = data.replace(/\tމަސްދަރު ރިޔާޟުއްޞާލިޙީނުން./g, '');
 
                     /*data = data.replace( /\n#/g, '' );*/
-                    data = data.replace(/\n#/g, 'Hadith No: ');
-                    data = data.replace(/\r\nHadith No: \r\nHadith No:/g, '\r\nHadith No:'); /* add string and fix empty space */
+                    data = data.replace(/\n#/g, '\n\nޙަދީޘްގެ އަދަދު: ');
+                    data = data.replace(/ނަވަވީގެ 40 ޙަދީޘް\r\n\r\n\n\nޙަދީޘްގެ އަދަދު: \r\n\n/g, 'ނަވަވީގެ 40 ޙަދީޘް\r\n'); /* add string and fix empty space، make sure to change the red too */
 
-                    data = data.replace(/\nAr No./g, '');
-                    data = data.replace(/\nAr Title/g, '');
-                    data = data.replace(/\nEn Title/g, '');
-                    data = data.replace(/\nDv Title/g, '');
-                    data = data.replace(/\nArabic/g, '');
-                    data = data.replace(/\nEnglish/g, '');
-                    data = data.replace(/\nDhivehi/g, '');
-                    data = data.replace(/\nAr Ref./g, '');
-                    data = data.replace(/\nEn Ref./g, '');
-                    data = data.replace(/\nDv Ref./g, '');
-                    data = data.replace(/\nRs Ref./g, '');
+                    data = data.replace(/\nވަނަ./g, '');
+                    data = data.replace(/\nޢަރަބި ސުރުޚީ/g, '');
+                    data = data.replace(/\nއިނގިރޭސި ސުރުޚީ/g, '');
+                    data = data.replace(/\nދިވެހި ސުރުޚީ/g, '');
+                    data = data.replace(/\nޢަރަބި ޙަދީޘް/g, '');
+                    data = data.replace(/\nޢަރަބި ފިލިނުޖަހައި/g, '');
+                    data = data.replace(/\nއިނގިރޭސި/g, '');
+                    data = data.replace(/\nދިވެހި ތަރުޖަމާ/g, '');
+                    data = data.replace(/\nމަސްދަރު ޢަރަބިން./g, '');
+                    data = data.replace(/\nމަސްދަރު އިނގިރޭސިން./g, '');
+                    data = data.replace(/\nމަސްދަރު ދިވެހިން./g, '');
+                    data = data.replace(/\nމަސްދަރު ރިޔާޟުއްޞާލިޙީނުން./g, '');
 
                     data = data.replace(/\r\n\r\n\r/g, '\r\n\r'); //rids empty space after title
                     data = data.replace(/\t/g, '\n\n'); //seperates rows
@@ -225,10 +241,11 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
                 },
                 //=== edits clipboard regex end, customize: function(data) {
 
-                    exportOptions: { rows: [':visible'] } //copies currently displayed and rows
+                    exportOptions:
+                    { columns: [':visible'], rows: [':visible']}, ////copies currently displayed and rows
 
                 //copies currently displayed columns and rows, 'exportOptions: { modifier: { columns: [':visible'], rows: [':visible']}' doesnt work after cards
-
+                // needs .cards thead { visibility: hidden; } to work
 
             },  //end of copy customization
 
