@@ -259,7 +259,7 @@ ul {
   z-index: 9998;
 }
 
-/* Footer */
+/* Footer
 
 .site-footer {
   position: relative;
@@ -269,6 +269,7 @@ ul {
   font-size: 0.8em;
   text-align: center;
 }
+*/
 
 /*# sourceMappingURL=demo.css.map */
 
@@ -297,13 +298,12 @@ html {
 /* buttons inside pushy content align */
 .pushy-content button {
   text-align: right;
-  text-indent: 1.5em;
 }
 
 
-/* moves pushy list items a little to the left */
+/* moves pushy list items a little to the left, indent effect */
 body > nav > div > ul > li.pushy-submenu.pushy-submenu-open > ul > li:nth-child(n) > a {
-  padding-right: 40px;
+  padding-right: 50px;
 }
 
 
@@ -325,3 +325,9 @@ left: 15px;
 }
 
 /* arrow flip code is above not here */
+
+
+/* experimenting with colors */
+.menu-btn, .site-header {
+  background: #23272A;
+}
