@@ -1,5 +1,6 @@
 ToDos:
-make nav bar, responsive and drawer with icons and tabs
+make nav bar, responsive and drawer with icons
+
 get auto json to array set up
 
 make cards more modern
@@ -11,8 +12,6 @@ fix tablet view
 add ripple effect
 
 add links to menu items
-
-make svg arrows go from left facing to down
 
 change hammerjs to something else, maybe swipe js, zingtouch, alloyfinger, or atleast remove unused code in hammer
 
