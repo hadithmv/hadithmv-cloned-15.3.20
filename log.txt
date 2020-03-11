@@ -2,6 +2,10 @@ ToDos:
 make nav bar, responsive and drawer with icons and tabs
 get auto json to array set up
 
+make cards more modern
+
+add modern about page
+
 fix tablet view
 
 add ripple effect
