@@ -47,11 +47,11 @@ svg {
   vertical-align: middle;
 }
 
-/* Remove the margin in all browsers. -but this may makes it ugly */
+/* Remove the margin in all browsers. -but this makes it ugly
 body {
     margin: 0;
   }
-  
+  */
 
   /* 1. Change the font styles in all browsers. 2. Remove the margin in Firefox and Safari. -also evens out input box size*/
 button,
@@ -111,13 +111,11 @@ input,
 /* search and input page */
 
 select,
-/* page lengthmenu */
+/* page lenghtmenu */
 
-button, .dt-button-info,
+button, .dt-button-info
 /* clipboard message */
 
-li, /* for pushy side bar */
-.site-header
     {
     font-family: 'mvtyper', 'Almarai', sans-serif;
     /*
