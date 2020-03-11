@@ -128,12 +128,12 @@
 }
 
 /* Submenu Appearance */
-
-.pushy-submenu {
+/*
+.pushy-submenu {*/
   /* Submenu Buttons */
-  /* Submenu Icon */
+  /* Submenu Icon *//*
 }
-
+*/
 .pushy-submenu>ul {
   padding-left: 15px;
   transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
@@ -161,7 +161,6 @@
 }
 
 .pushy-submenu>a::after, .pushy-submenu>button::after {
-  transform: ;
   content: '';
   display: block;
   height: 11px;
@@ -187,10 +186,10 @@
 .pushy-submenu-closed .pushy-link {
   opacity: 0;
 }
-
-.pushy-submenu-open {
-  /* Submenu Icon */
-}
+/*
+.pushy-submenu-open {*/
+  /* Submenu Icon *//*
+}*/
 
 .pushy-submenu-open>ul {
   max-height: 1000px;
