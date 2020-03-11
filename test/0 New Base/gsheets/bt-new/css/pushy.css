@@ -322,7 +322,6 @@ body > nav > div > ul > li.pushy-submenu.pushy-submenu-open > ul > li:nth-child(
 /* makes svg pushy arrows rtl */
 .pushy-submenu>a::after, .pushy-submenu>button::after {
 left: 15px;
-transform: translateY(-50%) rotate(180deg);
 }
 
 /* arrow flip code is above not here */
