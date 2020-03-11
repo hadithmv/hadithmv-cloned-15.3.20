@@ -161,6 +161,7 @@
 }
 
 .pushy-submenu>a::after, .pushy-submenu>button::after {
+  transform: ;
   content: '';
   display: block;
   height: 11px;
@@ -171,7 +172,7 @@
   background: url("../css/pushyarrow.svg") no-repeat;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%) rotate(180deg); /* previously without rotate(180deg), added to make it rtl */
   transition: transform 0.2s;
 }
 
@@ -321,7 +322,7 @@ body > nav > div > ul > li.pushy-submenu.pushy-submenu-open > ul > li:nth-child(
 /* makes svg pushy arrows rtl */
 .pushy-submenu>a::after, .pushy-submenu>button::after {
 left: 15px;
-
-
+transform: translateY(-50%) rotate(180deg);
 }
 
+/* arrow flip code is above not here */
