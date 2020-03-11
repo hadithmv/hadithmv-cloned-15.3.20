@@ -3,6 +3,8 @@ make nav bar, responsive and drawer with icons
 
 get auto json to array set up
 
+make jquery breakpoints realtime
+
 make cards more modern
 
 add modern about page

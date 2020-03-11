@@ -325,7 +325,7 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
             });
         }
     }
-    var x = window.matchMedia("(min-width: 1200px)")    // js media query on desktop
+    var x = window.matchMedia("(min-width: 900px)")    // js media query on desktop
     myFunction(x) // Call listener function at run time
     x.addListener(myFunction) // Attach listener function on state changes
     //============================ END HammerJS - Swipe
@@ -351,8 +351,8 @@ $(document).ready(function () { //$(document).ready( function () { //$(document)
         element.classList.add("cards");
       }
 */
-    if (window.matchMedia("(min-width: 1200px)").matches) {  // js media query on desktop 
-        $('#fortyNawawi').addClass('row-border');  //adds border class to table on desktop
+    if (window.matchMedia("(min-width: 900px)").matches) {  // js media query on desktop 
+        $('#fortyNawawi').addClass('row-border');  //adds row border class, line below every row to table on desktop
 
     } else { // js media query on mobile, tablet 
         $('#fortyNawawi').addClass('cards');
