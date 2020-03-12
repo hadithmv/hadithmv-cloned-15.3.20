@@ -1,7 +1,9 @@
 ToDos:
+darkmode toggle?
 make nav bar, responsive and drawer with icons??
 get plain arabic to generate without data
 get auto json to array set up
+pack up old files
 
 update root files, especially 404
 
