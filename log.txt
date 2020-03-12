@@ -1,6 +1,8 @@
 ToDos:
 make nav bar, responsive and drawer with icons
 
+get plain arabic to generate without data
+
 get auto json to array set up
 
 make jquery breakpoints realtime
