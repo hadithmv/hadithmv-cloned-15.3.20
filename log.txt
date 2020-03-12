@@ -1,9 +1,9 @@
 ToDos:
-make nav bar, responsive and drawer with icons
-
+make nav bar, responsive and drawer with icons??
 get plain arabic to generate without data
-
 get auto json to array set up
+
+update root files, especially 404
 
 make jquery breakpoints realtime
 
@@ -13,15 +13,11 @@ make cards more modern
 
 add modern about page
 
-fix tablet view
-
 add ripple effect
-
-add links to menu items
 
 change hammerjs to something else, maybe swipe js, zingtouch, alloyfinger, or atleast remove unused code in hammer
 
-remove eng stuff
+remove eng stuff, make all dhiv
 
 Issues:
 copy bad for both select keytable and clipboard button
