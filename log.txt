@@ -5,6 +5,8 @@ get auto json to array set up
 
 make jquery breakpoints realtime
 
+update menu link docs, like intro
+
 make cards more modern
 
 add modern about page
