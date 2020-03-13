@@ -1,7 +1,0 @@
-name: hadithmv
-markdown: kramdown
-gems:
-  - jekyll-sitemap
-url: "https://hadithmv.com/"
-plugins:
-  - jekyll-sitemap
