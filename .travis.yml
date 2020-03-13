@@ -1,4 +1,3 @@
-language: ruby
-rvm:
- - 2.7
- - jruby
+language: node_js
+node_js:
+  - 7
