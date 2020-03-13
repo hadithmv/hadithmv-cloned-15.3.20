@@ -1,11 +1,13 @@
 ====================
        TO DOS
 ====================
+Wait for ID 15.0.2.318 release
+
 add page about hadith history and faq
 
 clean up repo and tests
 
-Wait for ID 15.0.2.318 release
+hadithmv.github.io/blog/index.html???
 
 buttons are ugly, style them
 
@@ -157,3 +159,12 @@ input pagination plugin breaks table on material
 colvis menu is ugly
 2/15/20
 ----------------------------------------
+
+First thing I did:
+---
+layout: post
+title: "hadithmv site launched"
+date: 2017-07-17
+---
+
+Alhamdulillah. Finally got around to putting this website together. I ask Allah that He makes it easier as it goes along. Lots of work up ahead.
