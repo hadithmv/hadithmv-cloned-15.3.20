@@ -2,6 +2,9 @@
        TO DOS
 ====================
 
+get travis
+get github badges on readme
+
 customize form
 
 clean up alt folder in github
