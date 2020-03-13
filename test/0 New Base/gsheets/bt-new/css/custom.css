@@ -3,19 +3,16 @@
 /* arabic */
 
 @font-face {
+
     font-family: 'Almarai';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Almarai'), local('Almarai-Regular'), url(Almarai.woff2) format('woff2');
-    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+    src: url('Almarai.woff2');
 }
 
 /* dhivehi */
 
 @font-face {
     font-family: 'mvtyper';
-    src: url('mvtyper-mod2.1.woff2');
+    src: url('mvtyper-mod2.woff2');
 }
 
 /* BOILERPLATE =============================== */
@@ -264,12 +261,13 @@ table.dataTable tbody td {
 
 #fortyNawawi>tbody>tr>td {
     text-align: justify;
-    font-size: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    color: #24292e;
-    line-height: 1.5;
-    word-wrap: break-word;
+        /*word-spacing: -10px;*/
+        font-size: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        color: #24292e;
+        line-height: 1.5;
+        word-wrap: break-word;
 }
 
 /* table header row alignment */
