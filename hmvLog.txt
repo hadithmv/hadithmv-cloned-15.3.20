@@ -4,15 +4,11 @@
 
 customize form
 
-deal with dev, fonts, test and alt folders github
+clean up alt folder in github
 
 Wait for ID 15.0.2.318 release
 
 add page about hadith history and faq
-
-clean up repo and tests
-
-hadithmv.github.io/blog/index.html???
 
 buttons are ugly, style them
 
@@ -164,6 +160,9 @@ input pagination plugin breaks table on material
 colvis menu is ugly
 2/15/20
 ----------------------------------------
+
+
+
 
 First thing I did:
 ---
