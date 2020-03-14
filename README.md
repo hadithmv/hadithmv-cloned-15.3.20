@@ -1,30 +1,4 @@
-
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-  <meta name="google" value="notranslate">
-
-  <title>Hmv Docs</title>
-  <meta name="viewport" content="width=device-width" />
-
-
-  <!--
-    https://github.com/orderedlist/minimal
-    -->
-  
-</head>
-
-<body class="notranslate" style="background-color:#fff;padding-top:50px;padding-bottom:50px;padding-right:50px;padding-left:50px;font-style:normal;font-variant:normal;font-weight:400;font-size:14px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:1.5;color:#595959;" >
+ica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:1.5;color:#595959;" >
   <div class="wrapper" style="width:860px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
     <!-- 
       <header>
@@ -235,8 +209,3 @@
 
 
   </div>
-</body>
-
-</html>
-
-
