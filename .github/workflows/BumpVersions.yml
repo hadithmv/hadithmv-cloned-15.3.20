@@ -1,7 +1,5 @@
 
-
-      name: Bump version
-
+name: Bump
 on: push
 
 jobs:
