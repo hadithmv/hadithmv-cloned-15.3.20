@@ -31,9 +31,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        
-        - name: Bump Versions
-  uses: remorses/bump-version@v8
-  with:
-    # Version file to bump path
-    version_file: # optional, default is VERSION
+      

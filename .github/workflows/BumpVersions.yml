@@ -1,4 +1,4 @@
-- name: Bump version
+  name: Bump version
   uses: remorses/bump-version@js
   with:
       version_file: ./VERSION
