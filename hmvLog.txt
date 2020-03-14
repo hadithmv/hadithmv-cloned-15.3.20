@@ -1,15 +1,14 @@
 ====================
        TO DOS
 ====================
-
-get travis
-get github badges on readme
-
-customize form
+Wait for ID 15.0.2.318 release
 
 clean up alt folder in github
 
-Wait for ID 15.0.2.318 release
+get travis or circleci working???
+get github badges on readme???
+
+customize form
 
 add page about hadith history and faq
 
