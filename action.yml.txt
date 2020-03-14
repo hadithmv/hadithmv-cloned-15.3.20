@@ -1,0 +1,24 @@
+name: 'Bump Versions'
+description: 'A GitHub Action to easily bump version files'
+author: 'Tommaso De Rossi'
+branding:
+  icon: 'chevrons-up'
+  color: 'red'
+inputs: 
+  version_file:
+    description: 'Version file to bump path'
+    default: 'VERSION'
+  prefix:
+    description: 'how to prefix the tag'
+    default: ''
+outputs:
+  version:
+    description: New version
+  prefix:
+    description: Prefix if set
+runs:
+  using: 'node12'
+  main: 'lib/main.js'
+
+# [bump]
+# 2.0.12
