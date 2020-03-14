@@ -1,7 +1,0 @@
-language: node_js
-node_js:
- - "node" # use "latest" version of Node.js
-
- cache:
-  directories: # so subsequent builds run faster
-    - dev/rebuild/js
