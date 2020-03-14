@@ -1,4 +1,4 @@
-ica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';line-height:1.5;color:#595959;" >
+
   <div class="wrapper" style="width:860px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
     <!-- 
       <header>
