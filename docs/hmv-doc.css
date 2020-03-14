@@ -3,6 +3,7 @@
 @font-face {
   font-family: 'mvtyper';
   src: url('../fonts/mvtyper-mod2.woff2');
+}
   /* ../ is parent dir
   
   Starting with / returns to the root directory and starts there
@@ -13,7 +14,62 @@ Starting with ../../ moves two directories backward and starts there (and so on.
 
 To move forward, just start with the first sub directory and keep moving forward.
 */
+
+.hmv {
+  width: 200px;
+  height: 200px;
 }
+
+.badge {
+  width: 250px;
+}
+
+p {
+  text-align: justify;
+}
+
+.mid,
+.mid p {
+  text-align: center;
+}
+
+.dv {
+  direction: rtl;
+  font-family: 'mvtyper';
+  line-height: 2;
+}
+
+h2, h3 {
+  line-height: 2;
+}
+
+.dv blockquote {
+  border-left: none;
+  border-right: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 0 20px 0 0;
+}
+
+.dvTable th,
+.dvTable td {
+  text-align: right;
+  direction: rtl;
+  text-align: center;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+.ind {
+  text-indent: 2em;
+}
+
+
+/*==============END OF CUSTOM
+=============================*/
+
 
 body {
   background-color: #fff;
@@ -28,14 +84,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
-p, ul, ol, table, pre, dl {
+p, ul, ol, table,/* pre, dl*/ {
   margin: 0 0 20px;
 }
-
+/*
 h1, h2, h3 {
   line-height: 1.1;
 }
-
+*/
 h1 {
   font-size: 28px;
   font-weight: 500;
@@ -82,7 +138,7 @@ blockquote {
   padding: 0 0 0 20px;
   /*font-style: italic;*/
 }
-
+/*
 code, pre {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color: #333;
@@ -95,7 +151,7 @@ pre {
   border: 1px solid #e5e5e5;
   overflow-x: auto;
 }
-
+*/
 table {
   width: 100%;
   border-collapse: collapse;
@@ -195,11 +251,11 @@ float         :right;
 padding-bottom:50px;
 }
 */
-
+/*
 small {
   font-size: 11px;
 }
-
+*/
 hr {
   border: 0;
   background: #e5e5e5;
