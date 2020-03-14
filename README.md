@@ -1,30 +1,4 @@
 
-  <div class="wrapper" style="width:860px;margin-top:0;margin-bottom:0;margin-right:auto;margin-left:auto;" >
-    <!-- 
-      <header>
-        <h1 style="color:#222;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;font-size:28px;font-weight:500;" >Minimal</h1>
-        <p style="text-align:justify;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;" >A Theme for GitHub Pages</p>
-        <p class="view" style="text-align:justify;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;" ><a href="http://github.com/orderedlist/minimal" style="color:#39c;text-decoration:none;" >View the Project on GitHub <small style="font-size:11px;color:#777;margin-top:-0.3em;display:block;" >orderedlist/minimal</small></a></p>
-        <ul style="margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;" >
-          <li><a href="https://github.com/orderedlist/minimal/zipball/master" style="color:#39c;text-decoration:none;" >Download <strong style="color:#222;font-weight:500;" >ZIP File</strong></a></li>
-          <li><a href="https://github.com/orderedlist/minimal/tarball/master" style="color:#39c;text-decoration:none;" >Download <strong style="color:#222;font-weight:500;" >TAR Ball</strong></a></li>
-          <li><a href="http://github.com/orderedlist/minimal" style="color:#39c;text-decoration:none;" >Fork On <strong style="color:#222;font-weight:500;" >GitHub</strong></a></li>
-        </ul>
-	  </header>
-
-	  =======================moved stuff between here===================
-
-      <section>
-
-	</section>
-	<footer>
-	  <p style="text-align:justify;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;" >This project is maintained by <a href="http://github.com/orderedlist" style="color:#39c;text-decoration:none;" >Steve Smith</a></p>
-	  <p style="text-align:justify;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;" ><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" style="color:#39c;text-decoration:none;" >orderedlist</a></small></p>
-	</footer>
-
-      -->
-
-
     <div class="mid" style="text-align:center;" >
       <h1 style="color:#222;margin-top:0;margin-bottom:20px;margin-right:0;margin-left:0;font-size:28px;font-weight:500;" >بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
       <br />
@@ -205,7 +179,3 @@
 
 
     <br>
-
-
-
-  </div>
