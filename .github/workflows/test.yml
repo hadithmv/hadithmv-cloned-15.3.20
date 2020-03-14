@@ -1,6 +1,6 @@
 # https://www.pixelstech.net/article/1577096152-A-tutorial-on-Github-Actionss
 
-name: Greeting from Mona
+name: Greeting from Fulan
 on: push
 
 jobs:
@@ -11,8 +11,8 @@ jobs:
     - name: Print a greeting
       env:
         MY_VAR: Hi there! My name is
-        FIRST_NAME: Mona
+        FIRST_NAME: Fulan
         MIDDLE_NAME: The
-        LAST_NAME: Octocat
+        LAST_NAME: Fulan
       run: |
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
