@@ -5,125 +5,109 @@
   <meta name="viewport" content="width=device-width">
       <meta http-equiv="content-language" content="en">
       <meta name="google" value="notranslate">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+<body class="notranslate">
 
-<body class="notranslate" style="background-color: #fff;padding: 50px;font: 14px/1.5 -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;color: #595959;font-weight: 400;">
-  <div class="wrapper" style="width: 860px;margin: 0 auto;">
-    <div class="mid" style="text-align: center;">
-      <h1 style="color: #222;margin: 0 0 20px;font-size: 28px;font-weight: 500;">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+<article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
+	
+<h3 align="center"><b>
+بِسمِ اللَّهِ الرَّحمٰنِ الرَّحِيمِ
+</b></h3>
 <br>
-      <a href="https://hadithmv.github.io" style="color: #39c;text-decoration: none;"><img class="hmv" src="https://hadithmv.github.io/img/newLogo5/newLogo5-compressor.svg" style="max-width: 100%;width: 200px;height: 200px;"></a>
-      <br/><br/>
-      <h2 style="line-height: 2;color: #393939;margin: 0 0 20px;font-weight: 500;">Hadithmv - Accessible and Sourced</h2>
-      <p style="text-align: center;margin: 0 0 20px;">Dhivehi Hadith translations at your fingertips</p>
-      <p style="text-align: center;margin: 0 0 20px;">View the<strong style="color: #222;font-weight: 500;"><a href="http://hadithmv.github.io" style="color: #39c;text-decoration: none;"> web version</a></strong>, or</p>
-      <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv" style="color: #39c;text-decoration: none;"><img class="badge" src="https://hadithmv.github.io/img/playstore-badge/en_badge_web_generic-compressor.png" style="max-width: 100%;width: 250px;"></a>
-      <a href="https://github.com/hadithmv/hadithmv.github.io/raw/master/alt/Desktop/hmv-win.zip" style="color: #39c;text-decoration: none;"><img class="badge" src="https://hadithmv.github.io/img/windows-desktop-badge/windows-badge-compressor.png" style="max-width: 100%;width: 250px;"></a>
-    </div>
-    <br><br>
-    <p class="mid" style="text-align: center;margin: 0 0 20px;"><i>- In the Name of Allah, the Entirely Merciful, the Especially Merciful -</i></p>
+
+  <p align="center"><a href="https://hadithmv.github.io"><img src="https://hadithmv.github.io/img/newLogo5/newLogo5-compressor.svg" alt="" width=200 height=200></a></p>
+
+  <h3 align="center">Hadithmv - Accessible and Sourced</h3>
+
+  <p align="center">Dhivehi Hadith translations at your fingertips</p>
+
+  <p align="center"><a href="http://hadithmv.github.io"><strong>Web Version »</strong></a></p>
+<!--
     <br>
-    <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>Developing a Hadith App for Maldivians</b></h3>
-<p class="ind" style="text-align: justify;margin: 0 0 20px;text-indent: 2em;">The <b>Hmv</b> project is a collaborated effort in making the sayings and teachings of Muhammad ﷺ as accessible and understandable as possible for the Muslim Maldivian community. Once this work is complete, they will have a Hadith collection in their native language, Dhivehi. Any good is from Allah, and any shortcomings are from ourselves and shaithan.</p>
-        <br>
-    <h2 style="line-height: 2;color: #393939;margin: 0 0 20px;font-weight: 500;">Goals</h2>
-    <hr style="border: 0;background: #e5e5e5;height: 1px;margin: 0 0 20px;">
-    <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>Accessible</b></h3>
-    <blockquote style="border-left: 1px solid #e5e5e5;margin: 0;padding: 0 0 0 20px;">
-<p style="text-align: justify;margin: 0 0 20px;">Bring the Hadith of Allah's Prophet ﷺ within the reach of everyone, regardless of the barriers of medium,
-        location, portability, age, language or wealth. And use the platform of modern technology to help spread and
-        instill the love of living according to the Sunnah in the hearts, as today's Maldivians are closer to their
-        personal devices than they are to books.</p>
-            </blockquote>
+    <a href="http://hadithmv.github.io">Web Version</a>
+    ·
+    <a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv">Android Version</a>
+    ·
+    <a href="https://hadithmv.github.io/alt/Desktop/hmv-win.zip">Desktop Version</a>
     <br>
-    <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>Educational</b></h3>
-        <blockquote style="border-left: 1px solid #e5e5e5;margin: 0;padding: 0 0 0 20px;">
-      <p style="text-align: justify;margin: 0 0 20px;">The cause of most of our society's problems is due to people being uneducated about Islam. To solve this
-        redundant issue, they need a way to access Islamic material they can look up for themselves. Also, teachers and
-        students alike can benefit from these references, without having to repeat the translate process every time.</p>
-    </blockquote>
-    <br>
-        <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>Progressive</b></h3>
-    <blockquote style="border-left: 1px solid #e5e5e5;margin: 0;padding: 0 0 0 20px;">
-      <p style="text-align: justify;margin: 0 0 20px;">It is Allah who has subjected technology for us to use. We aim to provide a feature-rich yet user-friendly
-        product for everyone, while maintaining a compatible user experience over varying devices and configurations.
-        Hmv is designed to be mobile-first with minimal bloat. Currently both web and Android are supported.</p>
-    </blockquote>
-        <br>
-    <h2 style="line-height: 2;color: #393939;margin: 0 0 20px;font-weight: 500;">Milestones</h2>
-    <table style="margin: 0 0 20px;width: 100%;border-collapse: collapse;">
-      <tbody>
-        <tr>
-          <th style="text-align: left;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;color: #444;">Hadith</th>
-          <th style="text-align: left;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;color: #444;">Progress</th>
-          <th style="text-align: left;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;color: #444;">Date</th>
-        </tr>
-        <tr>
-          <td style="text-align: left;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;">40 Nawawi</td>
-          <td style="text-align: left;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;">Complete</td>
-          <td style="text-align: left;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;">2/3/2018</td>
-        </tr>
-      </tbody>
-    </table>
-        <br><br><br>
-    <div class="dv" style="direction: rtl;font-family: 'mvtyper';line-height: 2;">
-      <p class="mid" style="text-align: center;margin: 0 0 20px;">- ރަޙްމާން ވަންތަ ރަޙީމް ވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ -</p>
-      <br>
-            <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>ޙަދީޘް އެމް.ވީ. - ދިވެހިންނަށް ޙަދީޘް އެޕްލިކޭޝަނެއް އުފެއްދުން</b></h3>
-      <p class="ind" style="text-align: justify;margin: 0 0 20px;text-indent: 2em;">ޙަދީޘް އެމް.ވީ. މަޝްރޫޢަކީ އިސްލާމީ ދިވެހި މުޖުތަމަޢަށް ވީހާވެސް ފަސޭހަ ކަމާއިއެކު ރަސޫލު ﷲ ﷺ ގެ
-        ޙަދީޘްފުޅުތަަކުގެ މާނަ އުނގަންނައިދީ ފޯރުކޮށް ދިނުމަށް ޓަކައި ވަސީލަތެއް ގާއިމު ކުރުމުގެ ގޮތުން ކުރެވޭ
-        މަސައްކަތެކެވެ. މި މަސައްކަތް ފުރިހަމަ ވުމުން ގިނަ އަދަދެއްގެ ހަދީޘްތަކެއް ދިވެހި ބަހުން އެއްތަނަކުން ފަސޭހައިން
-        ލިބެން ހުންނާނެއެވެ. މި ކަމުގައި އެއްވެސް ހެޔޮކަމެއް ވާނަމަ، ފަހެ އެއީ ﷲ ގެ ޙަޟްރަތުން އައި ކަމެކެވެ. އަދި މި
-        ކަމުގައި އެއްވެސް އުނިކަމެއް ވާނަމަ އެއީ އަޅުގަނޑުމެންނާއި ޝައިޠާނާގެ ފަރާތުން އައި ކަމެކެވެ.</p>
-      <br>
-            <h2 style="line-height: 2;color: #393939;margin: 0 0 20px;font-weight: 500;">އަމާޒު</h2>
-      <hr style="border: 0;background: #e5e5e5;height: 1px;margin: 0 0 20px;">
-            <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>ފޯރުކޮށްދިނުން</b></h3>
-      <blockquote style="border-left: none;margin: 0;padding: 0 20px 0 0;border-right: 1px solid #e5e5e5;">
-        <p style="text-align: justify;margin: 0 0 20px;">ގެންގުޅޭ ވަޞީލަތްތަކާއި، އުޅޭ ތަނާއި، އުމުރާއި، ބަސްމޮށުންތެރިކަމާއި ތަނަވަސްކަން ނެތުމުގެ ސަބަބުން
-          ކުރިމަތިވެފައިވާ ހުރަސްތައް ފަހަނައަޅައި، ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތައް އެންމެންނާއި ހަމައަށް ފޯރުކޮށް
-          ދިނުމެވެ. އަދި މި ޒަމާނަކީ ފޮތްތަކަށް ވުރެން ބޮޑަށް ފޯނާއި ކޮމްޕިޔުޓަރ ފަދަ ވަސީލަތްތަކަށް ދިވެހިން
-          އަހުލުވެރި ވެފައިވާ ޒަމާނެއް ކަމުން، އަދުގެ ޓެކްނޮލަޖީގެ ޒަރިއްޔާއިން ސުންނަތް ފަތުރައި އެއާ އެއްގޮތަށް
-          އުޅުމުގެ ލޯބި ހިތްތަކުގައި ޖެއްސުމެވެ.</p>
-      </blockquote>
-      <br>
-            <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>އުނގަންނައިދިނުން</b></h3>
-      <blockquote style="border-left: none;margin: 0;padding: 0 20px 0 0;border-right: 1px solid #e5e5e5;">
-                <p style="text-align: justify;margin: 0 0 20px;">މި ކުޑަކުޑަ މުޖުތަމަޢުގެ ގިނަ މައްސަލަތަކުގެ މައިގަނޑު ސަބަބަކީ މީސްތަކުން އިސްލާމް ދީނަށް ރަނގަޅަށް
-          އަހުލުވެރި ވެފައި ނުވުމެވެ. ވީމާ މި ކަމަށް ޙައްލެއް ގެނައުމަށް ޓަކައި އަމިއްލައަށް އިސްލާމީ މަޢުލޫމާތު
-          ބަލައި ހޯދޭނެ ފަސޭހަ މަގެއް މީސްތަކުންނަށް ތަނަވަސްވެފައި އޮތުން މުހިންމެވެ. ހަމަ އެހެންމެ، މުދައްރިސުންނާއި
-          ދަރިވަރުން މި މަސްދަރުތަކުގެ ބޭނުން ހިފައި، އެއް ޙަދީޘްތަކެއް ތަކުރާރުކޮށް ތަރުޖަމާ ކުރުމުގެ ބުރައިން
-          ސަލާމަތް ވެގެން ދާނެއެވެ.</p>
-      </blockquote>
-      <br>
-            <h3 style="line-height: 2;color: #494949;margin: 0 0 20px;font-weight: 500;"><b>ތަރައްޤީވުން</b></h3>
-      <blockquote style="border-left: none;margin: 0;padding: 0 20px 0 0;border-right: 1px solid #e5e5e5;">
-        <p style="text-align: justify;margin: 0 0 20px;">އަޅުގަނޑުމެންނަށް ޓަކައި ޓެކްނޮލޮޖީގެ ޚިދުމަތް ލައްވައި އޭގެ ބޭނުން ކުރެވޭނެ ގޮތް މިންވަރު ކުރެއްވީ ﷲ އެވެ.
-          އަޅުގަނޑުމެންގެ އަމާޒަކީ ގިނަގުނަ ބޭނުންތައް ހިފޭ، ބޭނުން ކުރަން ފަސޭހަ އެޕްލިކޭޝަނެއް އެންމެންނަށް ފޯރުކޮށް
-          ދިނުމެވެ. އަދި ގެންގުޅޭ ވަސީލަތްތަކާއި އުސްލޫބު ތަފާތު ވިޔެއްކަމަކު، ބޭނުން ކުރާ ފަރާތްތަކަށް އެކަށީގެންވާ
-          ހިތްގައިމު މާހައުލެއް ޤާއިމުކޮށް ދިނުމެވެ. ޙަދީޘް އެމް.ވީ. ފަރުމާ ކުރެވިފައި ވަނީ ފޯނަށް އަހަންމިއްޔަތުކަން
-          ދެވި، ޖާގައަށް ބުރަ ނުވާ ގޮތަށެވެ. މި ވަގުތު އިންޓަރނެޓު އަދި އެންޑުރޮއިޑު ވަޞީލަތްތަކުގައި ބޭނުން
-          ކުރެވޭނެއެވެ.
-        </p>
-      </blockquote>
-      <br>
-            <h2 style="line-height: 2;color: #393939;margin: 0 0 20px;font-weight: 500;">ލަނޑުދަނޑިތައް</h2>
-      <table class="dvTable" style="margin: 0 0 20px;width: 100%;border-collapse: collapse;">
-        <tbody>
-          <tr>
-            <th style="text-align: center;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;color: #444;direction: rtl;">ޙަދީޘް</th>
-            <th style="text-align: center;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;color: #444;direction: rtl;">މަސައްކަތް</th>
-            <th style="text-align: center;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;color: #444;direction: rtl;">ތާރީޚު</th>
-          </tr>
-          <tr>
-            <td style="text-align: center;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;direction: rtl;">40 ނަވަވީ</td>
-            <td style="text-align: center;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;direction: rtl;">ނިމިފައި</td>
-            <td style="text-align: center;padding: 5px 10px;border-bottom: 1px solid #e5e5e5;direction: rtl;">2/3/2018</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-    <br>
-    </div>
+-->
+  <p align="center">
+  	<a href="https://play.google.com/store/apps/details?id=com.hadithmv.hmv"><img src="https://hadithmv.github.io/img/playstore-badge/en_badge_web_generic-compressor.png" alt="" width=250></a><a href="https://goo.gl/EyjC4v"><img src="https://hadithmv.github.io/img/windows-desktop-badge/windows-badge-compressor.png" alt="" width=250></a>
+  </p>  
+   
+<br><br>
+
+<h2><b>Developing a Hadith App for Maldivians</b></h2>
+
+<p align="center"><i>- In the Name of Allah, the Entirely Merciful, the Especially Merciful -</i></p>
+
+<p align="justify">The <b>Hmv</b> project is a collaborated effort in making the sayings and teachings of Muhammad  ﷺ as accessible and understandable as possible for the Muslim Maldivian community. Once this work is complete, they will have a Hadith collection in their native language, Dhivehi. Any good is from Allah, and any shortcomings are from ourselves and Shaithan.</p>
+
+<br>
+
+<h3><b>Goals:</b></h3>
+<hr/>
+<ul align="justify">
+	<li>
+	<h3><b>Accessibility</b></h3>
+	<p>Bring the Hadith of Allah's Prophet ﷺ within the reach of everyone, regardless of the barriers of medium, location, portability, age, language or wealth. And use the platform of modern technology to help spread and instill the love of living according to the Sunnah in the hearts, as today's Maldivians are closer to their personal devices than they are to books.</p>
+	</li>
+	<li>
+	<h3><b>Educational</b></h3>
+	<p>The cause of most of our society's problems is due to people being uneducated about Islam. To solve this redundant issue, they need a way to access Islamic material they can look up for themselves. Also, teachers and students alike can benefit from these references, without having to repeat the translate process every time.</p>
+	</li>
+	<li>
+	<h3><b>Progressive</b></h3>
+	<p>It is Allah who has subjected technology for us to use. We aim to provide a feature-rich yet user-friendly product for everyone, while maintaining a compatible user experience over varying devices and configurations. Hmv is designed to be mobile-first with minimal bloat. Currently supports web, Windows desktop and Android platforms.</p>
+	</li>
+</ul>
+
+<br>
+
+<h3><b>Milestones:</b></h3>
+<hr/>
+<ul>
+	<li>
+		<b>40 Nawawi</b>
+	</li>
+</ul>
+
+
+<br><br><br>
+
+<h2 dir="rtl"><b>ޙަދީޘްއެމްވީ - ދިވެހިންނަށް ޙަދީޘް އެޕްލިކޭޝަނެއް އުފެއްދުން</b></h2>
+
+<p align="center" dir="rtl">- ރަޙްމާނުވަންތަ ރަޙީމުވަންތަ ﷲ ގެ އިސްމުފުޅުން ފަށައިގަންނަމެވެ -</p>
+
+<p align="justify" dir="rtl" style="font-family: Tharujamaanu;">ޙަދީޘްއެމްވީ، މި މަޝްރޫޢަކީ އިސްލާމީ ދިވެހި މުޖުތަމަޢަށް ވީހާވެސް ފަސޭހަ ކަމާއިއެކު ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތަަކުގެ މާނަ އުނގަންނައިދީ ފޯރުކޮށް ދިނުމަށް ޓަކައި ވަސީލަތެއް ގާއިމު ކުރުމުގެ ގޮތުން ކުރެވޭ މަސައްކަތެކެވެ. މި މަސައްކަތް ފުރިހަމަ ވުމުން ގިނަ އަދަދެއްގެ ހަދީޘްތަކެއް ދިވެހި ބަހުން އެއްތަނަކުން ފަސޭހައިން ލިބެން ހުންނާނެއެވެ. މި ކަމުގައި އެއްވެސް ހެޔޮކަމެއް ވާނަމަ، އެއީ ﷲ ގެ ޙަޟްރަތުން އައި ކަމެކެވެ. އަދި މި ކަމުގައި އެއްވެސް އުނިކަމެއް ވާނަމަ އެއީ އަޅުގަނޑުމެންނާއި ޝައިޠާނާގެ ފަރާތުން އައި ކަމެކެވެ.</p>
+
+<br>
+
+<h3 dir="rtl"><b>އަމާޒު:</b></h3>
+<hr/>
+<ul align="justify" dir="rtl" font-family="Tharujamaanu">
+	<li>
+	<h3><b>ފޯރުކޮށްދިނުން</b></h3>
+	<p>ގެންގުޅޭ ވަޞީލަތްތަކާއި، އުޅޭ ތަނާއި، އުމުރާއި، ބަސްމޮށުންތެރިކަމާއި ތަނަވަސްކަން ނެތުމުގެ ސަބަބުން ކުރިމަތިވެފައިވާ ހުރަސްތައް ފަހަނަޅައ، ރަސޫލު ﷲ ﷺ ގެ ޙަދީޘްފުޅުތައް އެންމެންނާއި ހަމައަށް ފޯރުކޮށް ދިނުމެވެ. އަދި މި ޒަމާނަކީ ފޮތްތަކަށް ވުރެން ބޮޑަށް ފޯނާއި ކޮމްޕިޔުޓަރ ފަދަ ވަސީލަތްތަކަށް ދިވެހިން އަހުލުވެރި ވެފައިވާ ޒަމާނެއް ކަމުން، އަދުގެ ޓެކްނޮލަޖީގެ ޒަރިއްޔާއިން ސުންނަތް ފަތުރައި އެއާ އެއްގޮތަށް އުޅުމުގެ ލޯބި ހިތްތަކުގައި ޖެއްސުމެވެ.</p>
+	</li>
+	<li>
+	<h3><b>އުނގަންނައިދިނުން</b></h3>
+	<p>މި ކުޑަކުޑަ މުޖުތަމަޢުގެ ގިނަ މައްސަލަތަކުގެ މައިގަނޑު ސަބަބަކީ، މީސްތަކުން އިސްލާމް ދީނަށް ރަނގަޅަށް އަހުލުވެރިވެފައި ނުވުމެވެ. ވީމާ، މި ކަމަށް ޙައްލެއް ގެނައުމަށް ޓަކައި އަމިއްލައަށް އިސްލާމީ މަޢުލޫމާތު ބަލައި ހޯދޭނެ ފަސޭހަ މަގެއް އާންމުންނަށް ތަނަވަސްވެފައި އޮތުން މުހިންމެވެ. ހަމަ އެހެންމެ، މުދައްރިސުންނާއި ދަރިވަރުން މި މަސްދަރުތަކުގެ ބޭނުން ހިފައި، އެއް ޙަދީޘްތަކެއް ތަކުރާރުކޮށް ތަރުޖަމާ ކުރުމުގެ ބުރައިން ސަލާމަތް ވެގެން ދާނެއެވެ.</p>
+	</li>
+	<li>
+	<h3><b>ތަރައްޤީވުން</b></h3>
+	<p>އަޅުގަނޑުމެންނަށް ޓަކައި ޓެކްނޮލޮޖީގެ ޚިދުމަތް ލައްވައި، އޭގެ ބޭނުން ކުރެވޭނެ ގޮތް މިންވަރު ކުރެއްވީ ﷲ އެވެ. އަޅުގަނޑުމެންގެ އަމާޒަކީ ގިނަގުނަ ބޭނުންތައް ހިފޭ، ބޭނުން ކުރަން ފަސޭހަ އެޕްލިކޭޝަނެއް އެންމެންނަށް ފޯރުކޮށް ދިނުމެވެ. އަދި ގެންގުޅޭ ވަސީލަތްތަކާއި އުސްލޫބު ތަފާތު ވިޔެއްކަމަކު، ބޭނުން ކުރާ ފަރާތްތަކަށް އެކަށީގެންވާ ހިތްގައިމު މާހައުލެއް ޤާއިމުކޮށް ދިނުމެވެ. ޙަދީޘްއެމްވީ ފަރުމާ ކުރެވިފައި ވަނީ ފޯނަށް އަހަންމިއްޔަތުކަން ދެވި، ޖާގައަށް ބުރަ ނުވާ ގޮތަށެވެ. މި ވަގުތު ވެބް، ވިންޑޯސް ޑެސްކްޓޮޕް އަދި އެންޑުރޮއިޑު މަންސަތަކުގައި ބޭނުން ކުރެވޭނެއެވެ.</p>
+	</li>
+</ul>
+
+<br>
+
+<h3 dir="rtl"><b>ލަނޑުދަނޑިތައް:</b></h3>
+<hr/>
+<ul dir="rtl">
+	<li>
+		<b>40 ނަވަވީ</b>
+	</li>
+</ul>
+</article>	<!-- END OF ARTICLE -->
 </body>
 </html>
