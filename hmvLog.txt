@@ -5,10 +5,14 @@ Wait for ID 15.0.2.318 release
 
 clean up alt folder in github
 
+clean up readme.md
+
 get travis or circleci working???
 get github badges on readme???
 
 customize form
+
+moving js to end of body??
 
 add page about hadith history and faq
 
