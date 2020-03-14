@@ -5,21 +5,6 @@
   <meta name="viewport" content="width=device-width">
       <meta http-equiv="content-language" content="en">
       <meta name="google" value="notranslate">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-	  <!--
-<style type="text/css">
-	         @font-face {
-         font-family: 'Tharujamaanu';
-         src: 
-		/*	CHANGE123
-         url('file:///android_asset/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
-         */
-         url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/hadithmv/resc@1.2.3/Tharujamaanu-B-Regular-mod3.ttf') format('truetype');
-         }
-</style>
-	  -->
 <body class="notranslate">
 
 <article class="markdown-body">	<!-- ARTICLE CHANGE123 -->
@@ -63,7 +48,7 @@
 <hr/>
 <ul align="justify">
 	<li>
-	<h3><b>Accessibility</b></h3>
+	<h3><b>Accessible</b></h3>
 	<p>Bring the Hadith of Allah's Prophet ﷺ within the reach of everyone, regardless of the barriers of medium, location, portability, age, language or wealth. And use the platform of modern technology to help spread and instill the love of living according to the Sunnah in the hearts, as today's Maldivians are closer to their personal devices than they are to books.</p>
 	</li>
 	<li>
@@ -125,5 +110,4 @@
 </ul>
 </article>	<!-- END OF ARTICLE -->
 </body>
-</head>
 </html>
