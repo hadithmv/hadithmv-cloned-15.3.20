@@ -11,6 +11,8 @@ Wait for ID 15.0.2.318 release
 reduce js char line to 80
 pass jslint
 
+prune github
+
 clean up alt folder in github
 
 clean up readme.md
