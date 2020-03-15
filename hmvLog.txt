@@ -1,3 +1,8 @@
+remember to format, validate, lint and minify
+
+w3
+jslint
+kangax, csso, closure compiler
 ====================
        TO DOS
 ====================
