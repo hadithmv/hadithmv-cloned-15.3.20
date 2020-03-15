@@ -1,5 +1,5 @@
 remember to format, validate, lint and minify
-
+prettier, set as default in vscode; format on save
 w3
 jslint
 kangax, csso, closure compiler
@@ -7,6 +7,9 @@ kangax, csso, closure compiler
        TO DOS
 ====================
 Wait for ID 15.0.2.318 release
+
+reduce js char line to 80
+pass jslint
 
 clean up alt folder in github
 
